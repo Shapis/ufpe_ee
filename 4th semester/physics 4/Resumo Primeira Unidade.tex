@@ -1,0 +1,152 @@
+\documentclass[12pt,twoside, a4paper, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+
+
+
+\title{Resumo Fisica 4 Primeira Unidade}
+\author{Henrique da Silva \\ hpsilva@proton.me}
+\date{\today}
+\pgfplotsset{width = 10cm, compat = 1.9}
+
+
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+\newpage
+%pagenumbering{roman}
+\tableofcontents
+\newpage
+
+\newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
+
+\section{Primeira lei de Maxwell}
+\paragraph{Essa equacao vem da lei de Gauss e diz que o fluxo eletrico eh dado pela seguinte equacao:
+}
+\begin{equation}
+    \oint \vec{E} \, * \, \vec{dA} = \frac{q}{\epsilon_0}
+\end{equation}
+\paragraph*{Na qual $\vec{E}$ eh o campo eletrico, $q$ eh a quantidade de carga envolvida, $\epsilon_0$ eh a permeabilidade do espaco vacuo e $\vec{dA}$ eh a area da superficie.}
+\paragraph*{Se o campo eletrico for constante sobre a superficie entao podemos dizer que:}
+\begin{equation}
+    \vec{E} \, * \, A = \frac{q}{\epsilon_0}
+\end{equation}
+
+\section{Segunda lei de Maxwell}
+\paragraph*{Essa tambem eh uma forma da lei de Gauss mas para o fluxo magnetico, e eh dada por:}
+\begin{equation}
+    \oint  \vec{B} \, * \, \vec{dA} = 0
+\end{equation}
+\paragraph*{Na qual $\vec{B}$ eh o campo magnetico, $\vec{dA}$ eh a area da superficie.}
+\paragraph*{E tem que necessariamente ser igual a zero \emph{em superficies fechadas} ja que o fluxo magnetico deve sempre sair por um polo e inteiramente voltar pela outro}
+
+\section{Terceira lei de Maxwell}
+\paragraph*{Essa tem a ver com a lei de Faraday sobre inducao, porem um pouco diferente.}
+\paragraph*{A lei como tinhamos visto era dada por:}
+\begin{equation}
+    \varepsilon = - \deriv{\phi_B}{t}
+\end{equation}
+\paragraph*{No qual $\varepsilon$ eh a forca eletromotriz, $d\phi_B$ eh a mudanca no fluxo magnetico, e $dt$ eh a mudanca no tempo}
+\paragraph*{A lei de Faraday diz que um campo magnetico que muda com o tempo vai induzir uma forca eletromotriz em um fio enrolado}
+\paragraph*{A versao de Maxwell eh mais geral, simplificando a lei de Faraday}
+\begin{equation}
+    \oint \vec{E} * \vec{ds} = - \deriv{\phi_B}{t}
+\end{equation}
+\paragraph*{Na qual $\vec{E}$ eh o campo eletrico, $\vec{ds}$ eh um elemento infinitesimal do loop fechado, $d\phi_B$ eh a mudanca do fluxo magnetico, e $dt$ eh a mudanca no tempo}
+\paragraph*{Com essa equacao Maxwell mostra a relacao de um campo magnetico que muda no tempo e de uma forca eletrica induzida}
+
+\section{Quarta lei de Maxwell}
+\paragraph*{Essa tem a ver com a lei de Ampere que diz que uma corrente que passa por um fio induz um campo magnetico ao redor do caminho ao redor do fio }
+\paragraph*{A lei de Ampere como tinhamos visto era dada por:}
+\begin{equation}
+    \int \vec{B} * \vec{ds} = \mu_0 * I
+\end{equation}
+\paragraph*{No qual $\vec{B}$ eh o campo magnetico, $\vec{ds}$ um pedaco infinitesimal do elemento do loop fechado, $\mu_0$ eh a permeabilidade do espaco para campos magneticos e finalmente, $I$ eh a corrente}
+\paragraph*{O problema eh que ha uma geracao de campo magnetico induzido por uma descarga entre capacitores, onde nao ha fio nenhum conectando-os}
+\paragraph*{Maxwell resolveu isso pensando em algo que chamou de $I_D$, uma corrente de deslocamento, que na verdade nao eh exatamente uma corrente eletrica, mas eh apenas a mudanca das cargas dos capacitores no tempo, assim obtendo:}
+\begin{equation}
+    \int \vec{B} * \vec{ds} = \mu_0 * \left(I +I_D\right)
+\end{equation}
+\paragraph*{Com o $I_D$ sendo igual a mudanca do fluxo eletrico no tempo, ou seja, a carga que passa de um capacitor para o outro, e assim nosso $I_D$ eh:}
+\begin{equation}
+    I_D = \epsilon_0 * \deriv{\phi_E}{t}
+\end{equation}
+\paragraph*{Com $\epsilon_0$ a permeabilidade do espaco para campos electricos, e $\deriv{\phi_E}{t}$ a mudanca do fluxo eletrico no tempo}
+\paragraph*{Que finalmente nos da a forma integral da quarta equacao de Maxwell:}
+\begin{equation}
+    \int \vec{B} * \vec{ds} = \mu_0 * I + \epsilon_0 * \deriv{\phi_E}{t}
+\end{equation}
+
+\section{Velocidade de propagacao}
+\begin{equation}
+    v = \frac{E}{B} = c
+\end{equation}
+\paragraph*{Na qual $E$ eh o campo eletrico, $B$ eh o campo magnetico, $v$ eh a velocidade de propagacao e $c$ eh a velocidade da luz}
+\paragraph*{Que pode ser simplificada em:}
+\begin{equation}
+    v = \frac{1}{\sqrt[]{\epsilon_0 * \mu_0}} = c
+\end{equation}
+\paragraph*{com $\epsilon_0$ a permeabilidade do espaco para campos electricos, e $\mu_0$ a permeabilidade do espaco para campos magneticos, $v$ a velocidade de propagacao da onde, e c a velocidade da luz}
+
+\paragraph*{Tambem temos que ha uma relacao entre frequencia, comprimento de onda e velocidade de propagacao, e eh dado por:}
+
+\begin{equation}
+    v = f * \lambda = c
+\end{equation}
+
+\paragraph*{Na qual $f$ eh a frequencia, $\lambda$ eh o comprimento de onda, $v$ eh a velocidade de propagacao, e $c$ eh a velocidade da luz}
+\paragraph*{Ou seja facilmante conseguimos achar a frequencia dado o comprimento de onda e vice versa}
+
+\section{Energia da onda}
+\paragraph*{Para calcular a energia da onda precisamos da magnitude do campo eletrico e magnetico, e temos as seguintes equacoes:}
+
+\subparagraph*{Densidade de energia do campo eletrico:}
+\begin{equation}
+    \mu_E = \frac{1}{2} * \epsilon_0 * E^2
+\end{equation}
+
+\subparagraph*{Densidade de energia do campo magnetico:}
+\begin{equation}
+    \mu_B = \frac{1}{2} * \frac{B^2}{\mu_0}
+\end{equation}
+
+\paragraph{Nos quais $E$ eh o campo eletrico, $B$ eh o campo magnetico, $\mu_E$ a densidade de energia do campo eletrico, $\mu_B$ a densidade de energia do campo magnetico, $\epsilon_0$ a permeabilidade do espaco para campos electricos, $\mu_0$ a permeabilidade do espaco para campos magneticos}
+\paragraph{A energia da onda eh a soma das duas energias:}
+\begin{equation}
+    \mu = \mu_E + \mu_B
+\end{equation}
+\begin{equation}
+    \mu = \frac{1}{2} * \epsilon_0 * E^2 + \frac{1}{2} * \frac{B^2}{\mu_0}
+\end{equation}
+\paragraph{Eh importante de tirar disso que podemos substituir o $B$ e o $E$ ja que temos uma relacao direta entre os dois que eh dada pela velocidade nas equacoes $(10)$ e $(11)$}
+
+\section*{Intensidade}
+\begin{equation}
+    I = \frac{\Delta{U}}{A * \Delta{t}}
+\end{equation}
+\paragraph*{Na qual $\Delta{U}$ eh a energia de um elemento infinitesimal da onda, $A$ eh a area da superficie que a onda cobre, $\Delta{t}$ eh um elemento infinitesimal de tempo, e $I$ eh a intensidade}
+\paragraph*{Vale a pena lembrar que $\Delta{U} = \mu * \Delta{V}$, e temos maneiras simples de calcular este $\mu$ como vimos acima em $(10)$}
+\paragraph*{Vale lembrar que potencia eh justamente $\frac{\Delta{U}}{\Delta{t}}$. O que nos deixa re-escrever de forma mais simples como:}
+\begin{equation}
+    I = \frac{P}{A}
+\end{equation}
+\paragraph*{E muito comumente se consideramos a origem da onda como uma fonte pontual podemos dizer que a area eh a area da esfera que a envolve, ou seja $A = 4\pi * r^2$}
+\paragraph*{Simplificando finalmente chegamos em:}
+\begin{equation}
+    I = \mu_0 * c * E^2
+\end{equation}
+
+
+
+
+
+
+\end{document}
