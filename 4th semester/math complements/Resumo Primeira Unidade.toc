@@ -11,3 +11,9 @@
 \contentsline {subparagraph}{Para subtrair e adicionar basta subtrair e adicionar as partes imaginarias dos numeros complexos}{}{}%
 \contentsline {subsection}{\numberline {3.2}Multiplicacao}{}{}%
 \contentsline {subparagraph}{Vamos utilizar a distributividade e o fato que $i^2 = -1$}{}{}%
+\contentsline {subsection}{\numberline {3.3}Divisao}{}{}%
+\contentsline {subparagraph}{O conjugado de $Z$ eh $\overline {Z}$. Se $Z = a + ib$ entao $\overline {Z} = a - ib$}{}{}%
+\contentsline {subparagraph}{Algo interessante acontece quando fazemos $Z * \overline {Z}$:}{}{}%
+\contentsline {subparagraph}{Ou seja, essa operacao nos da um escalar. E vamos utilizar disso para poder fazer a divisao.}{}{}%
+\contentsline {subparagraph}{Para fazer a divisao de $Z$ por $\overline {Z}$ fazemos:}{}{}%
+\contentsline {subparagraph}{E transformamos a operacao de divisao de numeros complexos em uma multiplicacao de $Z$ por $\overline {W}$ divido por um escalar $W*\overline {W}$}{}{}%
