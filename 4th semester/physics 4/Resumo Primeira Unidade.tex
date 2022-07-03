@@ -39,7 +39,11 @@
 \begin{equation}
     E \, * \, A = \frac{q}{\epsilon_0}
 \end{equation}
-
+\paragraph*{E tambem que:}
+\begin{equation}
+    E = \frac{V}{d}
+\end{equation}
+\paragraph*{Este ultimo eh especialmente importante em questoes de corrente induzida}
 
 \section{Segunda Eq. de Maxwell}
 \paragraph*{Essa tambem eh uma forma da lei de Gauss mas para o fluxo magnetico, e eh dada por:}
@@ -51,15 +55,19 @@
 
 \paragraph*{Vale tambem lembrar que o fluxo magnetico:}
 \begin{equation}
-    \phi = B  *  A \cos{\theta}
+    \phi_B = B  *  A \cos{\theta}
 \end{equation}
 \paragraph*{E tambem que o campo magnetico para fios carregando corrente eh dado por:}
 \begin{equation}
     B = \frac{\mu_0 * I}{2 * \pi * r}
 \end{equation}
+\paragraph*{Lembrando que a corrente $I$ eh simplesmente o fluxo eletrico variando no tempo:}
+\begin{equation}
+    I = \deriv{\phi_E}{t}
+\end{equation}
 
 
-\section{Terceira lei de Maxwell}
+\section{Terceira Eq. de Maxwell}
 \paragraph*{Essa tem a ver com a lei de Faraday sobre inducao, porem um pouco diferente.}
 \paragraph*{A lei como tinhamos visto era dada por:}
 \begin{equation}
@@ -74,13 +82,13 @@
 \paragraph*{Na qual $\vec{E}$ eh o campo eletrico, $\vec{ds}$ eh um elemento infinitesimal do loop fechado, $d\phi_B$ eh a mudanca do fluxo magnetico, e $dt$ eh a mudanca no tempo}
 \paragraph*{Com essa equacao Maxwell mostra a relacao de um campo magnetico que muda no tempo e de uma forca eletrica induzida}
 
-\section{Quarta lei de Maxwell}
-\paragraph*{Essa tem a ver com a lei de Ampere que diz que uma corrente que passa por um fio induz um campo magnetico ao redor do caminho ao redor do fio }
-\paragraph*{A lei de Ampere como tinhamos visto era dada por:}
+\section{Quarta Eq. de Maxwell}
+\paragraph*{Essa tem a ver com a lei de Ampere que diz que uma corrente que passa por um fio induz um campo magnetico ao redor do caminho ao redor do fio. A lei de Ampere como tinhamos visto era dada por:}
 \begin{equation}
-    \int \vec{B} * \vec{ds} = \mu_0 * I
+    \oint \vec{B} * \vec{ds} = \mu_0 * I_{enc}
 \end{equation}
 \paragraph*{No qual $\vec{B}$ eh o campo magnetico, $\vec{ds}$ um pedaco infinitesimal do elemento do loop fechado, $\mu_0$ eh a permeabilidade do espaco para campos magneticos e finalmente, $I$ eh a corrente}
+\paragraph*{Eh importante lembrar que $I_{enc}$ eh a corrente dentro do loop fechado $\vec{ds}$, entao se for dado o fluxo total de um capacitor por exemplo. O fluxo que vamos considerar eh apenas o fluxo que esta dentra da superficie definida pelo loop fechado $\vec{ds}$}
 \paragraph*{O problema eh que ha uma geracao de campo magnetico induzido por uma descarga entre capacitores, onde nao ha fio nenhum conectando-os}
 \paragraph*{Maxwell resolveu isso pensando em algo que chamou de $I_D$, uma corrente de deslocamento, que na verdade nao eh exatamente uma corrente eletrica, mas eh apenas a mudanca das cargas dos capacitores no tempo, assim obtendo:}
 \begin{equation}
@@ -95,6 +103,7 @@
 \begin{equation}
     \int \vec{B} * \vec{ds} = \mu_0 * I + \mu_0 * \epsilon_0 * \deriv{\phi_E}{t}
 \end{equation}
+
 
 \section{Velocidade de propagacao}
 \begin{equation}
