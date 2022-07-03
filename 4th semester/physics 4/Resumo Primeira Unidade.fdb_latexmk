@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1656744597 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/physics 4/Resumo Primeira Unidade.tex" "Resumo Primeira Unidade.pdf" "Resumo Primeira Unidade" 1656744597
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/physics 4/Resumo Primeira Unidade.tex" 1656744596 7248 9c4bbc7ae1bfaadec67ce575b2e88760 ""
+["pdflatex"] 1656808831 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/physics 4/Resumo Primeira Unidade.tex" "Resumo Primeira Unidade.pdf" "Resumo Primeira Unidade" 1656808831
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/physics 4/Resumo Primeira Unidade.tex" 1656808830 7530 00ed4c66b0594c6ab4d9f2a5d62fdc39 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -196,9 +196,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Resumo Primeira Unidade.aux" 1656744597 1669 d11106598eefba20c0bbd6f388a46548 "pdflatex"
-  "Resumo Primeira Unidade.tex" 1656744596 7248 9c4bbc7ae1bfaadec67ce575b2e88760 ""
-  "Resumo Primeira Unidade.toc" 1656744597 1157 b5fe35ed0a1e728605a246fddc087aa9 "pdflatex"
+  "Resumo Primeira Unidade.aux" 1656808831 1669 b87422edaa16d61dbfa49721f8b8cd3f "pdflatex"
+  "Resumo Primeira Unidade.tex" 1656808830 7530 00ed4c66b0594c6ab4d9f2a5d62fdc39 ""
+  "Resumo Primeira Unidade.toc" 1656808831 1157 17394d140276bf16f3ec1c08674ab890 "pdflatex"
   (generated)
   "Resumo Primeira Unidade.aux"
   "Resumo Primeira Unidade.log"

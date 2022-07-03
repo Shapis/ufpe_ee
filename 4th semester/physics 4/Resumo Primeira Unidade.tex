@@ -28,7 +28,7 @@
 
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
 
-\section{Primeira lei de Maxwell}
+\section{Primeira Eq. de Maxwell}
 \paragraph{Essa equacao vem da lei de Gauss e diz que o fluxo eletrico eh dado pela seguinte equacao:
 }
 \begin{equation}
@@ -37,16 +37,27 @@
 \paragraph*{Na qual $\vec{E}$ eh o campo eletrico, $q$ eh a quantidade de carga envolvida, $\epsilon_0$ eh a permeabilidade do espaco vacuo e $\vec{dA}$ eh a area da superficie.}
 \paragraph*{Se o campo eletrico for constante sobre a superficie entao podemos dizer que:}
 \begin{equation}
-    \vec{E} \, * \, A = \frac{q}{\epsilon_0}
+    E \, * \, A = \frac{q}{\epsilon_0}
 \end{equation}
 
-\section{Segunda lei de Maxwell}
+
+\section{Segunda Eq. de Maxwell}
 \paragraph*{Essa tambem eh uma forma da lei de Gauss mas para o fluxo magnetico, e eh dada por:}
 \begin{equation}
     \oint  \vec{B} \, * \, \vec{dA} = 0
 \end{equation}
 \paragraph*{Na qual $\vec{B}$ eh o campo magnetico, $\vec{dA}$ eh a area da superficie.}
 \paragraph*{E tem que necessariamente ser igual a zero \emph{em superficies fechadas} ja que o fluxo magnetico deve sempre sair por um polo e inteiramente voltar pela outro}
+
+\paragraph*{Vale tambem lembrar que o fluxo magnetico:}
+\begin{equation}
+    \phi = B  *  A \cos{\theta}
+\end{equation}
+\paragraph*{E tambem que o campo magnetico para fios carregando corrente eh dado por:}
+\begin{equation}
+    B = \frac{\mu_0 * I}{2 * \pi * r}
+\end{equation}
+
 
 \section{Terceira lei de Maxwell}
 \paragraph*{Essa tem a ver com a lei de Faraday sobre inducao, porem um pouco diferente.}
@@ -82,7 +93,7 @@
 \paragraph*{Com $\epsilon_0$ a permeabilidade do espaco para campos electricos, e $\deriv{\phi_E}{t}$ a mudanca do fluxo eletrico no tempo}
 \paragraph*{Que finalmente nos da a forma integral da quarta equacao de Maxwell:}
 \begin{equation}
-    \int \vec{B} * \vec{ds} = \mu_0 * I + \epsilon_0 * \deriv{\phi_E}{t}
+    \int \vec{B} * \vec{ds} = \mu_0 * I + \mu_0 * \epsilon_0 * \deriv{\phi_E}{t}
 \end{equation}
 
 \section{Velocidade de propagacao}
