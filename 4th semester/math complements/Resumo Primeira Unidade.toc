@@ -1,0 +1,3 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Primeira Eq. de Maxwell}{}{}%
+\contentsline {paragraph}{Essa equacao vem da lei de Gauss e diz que o fluxo eletrico eh dado pela seguinte equacao: }{}{}%
