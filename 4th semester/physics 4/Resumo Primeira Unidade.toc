@@ -9,3 +9,4 @@
 \contentsline {paragraph}{Nos quais $E$ eh o campo eletrico, $B$ eh o campo magnetico, $\mu _E$ a densidade de energia do campo eletrico, $\mu _B$ a densidade de energia do campo magnetico, $\epsilon _0$ a permeabilidade do espaco para campos electricos, $\mu _0$ a permeabilidade do espaco para campos magneticos}{}{}%
 \contentsline {paragraph}{A energia da onda eh a soma das duas energias:}{}{}%
 \contentsline {paragraph}{Eh importante de tirar disso que podemos substituir o $B$ e o $E$ ja que temos uma relacao direta entre os dois que eh dada pela velocidade nas equacoes $(10)$ e $(11)$}{}{}%
+\contentsline {section}{\numberline {7}Vetor de Poynting}{}{}%
