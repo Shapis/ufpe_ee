@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  3 JUL 2022 07:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  3 JUL 2022 08:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -529,23 +529,30 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `"Resumo Primeira Unidade.toc"'.
 
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
+Underfull \hbox (badness 2990) in paragraph at lines 76--76
+ \OT1/cmr/bx/n/12 Dois nu-me-ros com-ple-xos sao iguais se
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+] [2
 
 ] (./Resumo Primeira Unidade.aux) ) 
 Here is how much of TeX's memory you used:
- 39003 strings out of 478238
- 1063323 string characters out of 5850457
- 1831627 words of memory out of 5000000
- 56776 multiletter control sequences out of 15000+600000
- 477715 words of font info for 61 fonts, out of 8000000 for 9000
+ 39004 strings out of 478238
+ 1063340 string characters out of 5850457
+ 1837628 words of memory out of 5000000
+ 56777 multiletter control sequences out of 15000+600000
+ 478022 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,9n,118p,799b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Resumo Primeira Unidade.pdf" (1 page, 76246 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Resumo Primeira Unidade.pdf" (2 pages, 86795 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 54 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
