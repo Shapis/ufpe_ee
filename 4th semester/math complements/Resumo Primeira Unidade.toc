@@ -1,3 +1,6 @@
 \babel@toc {brazil}{}\relax 
-\contentsline {section}{\numberline {1}Primeira Eq. de Maxwell}{}{}%
-\contentsline {paragraph}{Essa equacao vem da lei de Gauss e diz que o fluxo eletrico eh dado pela seguinte equacao: }{}{}%
+\contentsline {section}{\numberline {1}Potencias de i}{}{}%
+\contentsline {paragraph}{As potencias de i sao periodicas em 4. Da seguinte maneira: }{}{}%
+\contentsline {paragraph}{Com "\%" sendo resto da divisao inteira }{}{}%
+\contentsline {section}{\numberline {2}Forma algebrica de um numero complexo}{}{}%
+\contentsline {paragraph}{A forma algebrica de um numero complexo eh:}{}{}%

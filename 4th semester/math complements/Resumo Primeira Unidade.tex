@@ -3,6 +3,7 @@
 \usepackage[brazil]{babel}
 \usepackage[margin = 0.5in]{geometry}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{setspace}
@@ -28,12 +29,37 @@
 
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
 
-\section{Primeira Eq. de Maxwell}
-\paragraph{Essa equacao vem da lei de Gauss e diz que o fluxo eletrico eh dado pela seguinte equacao:
+\section{Potencias de i}
+\paragraph{As potencias de i sao periodicas em 4. Da seguinte maneira:
 }
+\begin{center}
+    \begin{tabular}{ |ccc| }
+        \hline
+        $i^0$ & $=$      & 1            \\
+        $i^1$ & $=$      & $i$          \\
+        $i^2$ & $=$      & -1           \\
+        $i^3$ & $=$      & $-i$         \\
+        $i^4$ & $=$      & 1            \\
+        $i^5$ & $=$      & $i$          \\
+        $i^6$ & $=$      & $-1$         \\
+              & $\vdots$ &              \\
+        $i^n$ & $=$      & $i^{n \% 4}$ \\
+        \hline
+    \end{tabular}
+\end{center}
+\paragraph{Com "\%" sendo resto da divisao inteira
+}
+% \begin{equation}
+%     \oint \vec{E} \, * \, \vec{dA} = \frac{q}{\epsilon_0}
+% \end{equation}
+
+\section{Forma algebrica de um numero complexo}
+\paragraph{A forma algebrica de um numero complexo eh:}
 \begin{equation}
-    \oint \vec{E} \, * \, \vec{dA} = \frac{q}{\epsilon_0}
+    z = a + ib
 \end{equation}
+% \paragraph{$a + ib \in \mathbb{C}$
+% }
 
 
 \end{document}
