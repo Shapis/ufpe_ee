@@ -17,3 +17,6 @@
 \contentsline {subparagraph}{Ou seja, essa operacao nos da um escalar. E vamos utilizar disso para poder fazer a divisao.}{}{}%
 \contentsline {subparagraph}{Para fazer a divisao de $Z$ por $\overline {Z}$ fazemos:}{}{}%
 \contentsline {subparagraph}{E transformamos a operacao de divisao de numeros complexos em uma multiplicacao de $Z$ por $\overline {W}$ divido por um escalar $W*\overline {W}$}{}{}%
+\contentsline {section}{\numberline {4}Representacao geometrica}{}{}%
+\contentsline {paragraph}{Na representacao geometrica de um numero complexo podemos ver o eixo $x$ como a parte real e o $y$ como a parte imaginaria, como no exemplo abaixo:}{}{}%
+\contentsline {section}{\numberline {5}Modulo}{}{}%

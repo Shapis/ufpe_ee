@@ -10,8 +10,31 @@
 \usepackage{circuitikz}
 \usepackage{lipsum}
 \usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+
+\pgfplotsset{compat=newest}
+
+%  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
+
+\newcommand{\drawvector} [9] [blue] {
+    \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+
+    
+
+\ifthenelse{\equal{#7}{true}}{
+    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+    }
+    {}
+
+% \ifthenelse{}{}{}\#7\undefined
+% \draw[line width=1pt,#1](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$}
+% \fi;}
+}
 
 
+\newcommand{\drawdashedline} [6] [gray] {\draw[line width=1pt,#1, dashed](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};}
 
 \title{Resumo Complementos de Matematica Primeira Unidade}
 \author{Henrique da Silva \\ hpsilva@proton.me}
@@ -119,5 +142,93 @@
     \end{aligned}
 \end{equation}
 \subparagraph{E transformamos a operacao de divisao de numeros complexos em uma multiplicacao de $Z$ por $\overline{W}$ divido por um escalar $W*\overline{W}$}
+
+
+\section{Representacao geometrica}
+
+\paragraph{Na representacao geometrica de um numero complexo podemos ver o eixo $x$ como a parte real e o $y$ como a parte imaginaria, como no exemplo abaixo:}
+\paragraph*{}
+
+
+\begin{adjustbox}{scale=0.9}
+    \begin{tikzpicture}
+        \begin{axis}[
+                clip = false,
+                xmin=0, xmax=2.5,
+                ymin=-1.5, ymax=1.5,
+                axis lines=center,
+                xlabel = $x \, REAL$, ylabel=$y \, IMAGINARIO$,
+                title={ Z = a + bi},
+                xtick={},
+                xticklabels={}
+                % xticklabel style = {anchor=south west},
+                % xmajorgrids=true,
+                % ymajorgrids=true,
+                % grid style=dashed,
+            ]
+
+
+            % \addplot[domain=0:2*pi,color=blue, samples=100]{sin(deg(x))}
+            % node[anchor=west, pos =0.7] {$3120$};
+
+
+
+            \drawvector{0}{0}{1}{1}{Z}{true}{a}{b}
+            \drawvector{0}{0}{1}{-1}{\overline{Z}}{true}{a}{-b}
+
+
+        \end{axis}
+    \end{tikzpicture}
+\end{adjustbox}
+
+\paragraph*{Eh interessante notar que $\overline{Z}$ eh o simetrico de $Z$, porem oposto no eixo imaginario}
+
+\section{Modulo}
+
+\paragraph*{Como temos uma representacao geometrica do numero complexo, podemos calcular o modulo do numero complexo por simplesmente a hipotenusa de $a$ e $b$ do mesmo jeito que fariamos com um vetor comum}
+\paragraph*{O modulo sera representado pela letra $\rho$ ou por $| Z |$}
+
+\begin{equation}
+    \begin{aligned}
+        \rho = | Z | = \sqrt{a^2 + b^2}
+    \end{aligned}
+\end{equation}
+
+% \begin{tikzpicture}
+
+%     \begin{axis}[
+%             clip = false,
+%             xmin=0, xmax=pi*2.5,
+%             ymin=0, ymax=2,
+%             axis lines=left,
+%             xlabel = $Voltage$, ylabel=$Time$,
+%             title={abc},
+%             xtick={0,pi/2,pi,3*pi/2, 2*pi},
+%             xticklabels={$0$,$\frac{\pi}{2}$,$\pi$,$\frac{3\pi}{2}$,$2\pi$},
+%             % xticklabel style = {anchor=south west},
+%             % xmajorgrids=true,
+%             % ymajorgrids=true,
+%             % grid style=dashed,
+%         ]
+
+%  
+
+%         \addplot[domain=0:2*pi,color=blue, samples=100]{sin(deg(x))}
+%         node[anchor=west, pos =0.7] {$3120$};
+
+%         \drawvector{0}{0}{1}{1}{}
+
+
+%     \end{axis}
+
+% \end{tikzpicture}
+
+% \begin{tikzpicture}
+%     \draw[thin,gray!40] (-2,-2) grid (2,2);
+%     \draw[<->] (-2,0)--(2,0) node[right]{$x$};
+%     \draw[<->] (0,-2)--(0,2) node[above]{$y$};
+%     \draw[line width=2pt,blue,-stealth](0,0)--(1,2) node[anchor=south west]{$\boldsymbol{u}$};
+%     \draw[line width=2pt,red,-stealth](0,0)--(-1,-1) node[anchor=north east]{$\boldsymbol{-u}$};
+% \end{tikzpicture}
 
 \end{document}
