@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1656926124 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/math complements/Resumo Primeira Unidade.tex" "Resumo Primeira Unidade.pdf" "Resumo Primeira Unidade" 1656926125
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/math complements/Resumo Primeira Unidade.tex" 1656926124 7602 0395510959f313f8560a73c5966c1d25 ""
+["pdflatex"] 1656932176 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/math complements/Resumo Primeira Unidade.tex" "Resumo Primeira Unidade.pdf" "Resumo Primeira Unidade" 1656932177
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/math complements/Resumo Primeira Unidade.tex" 1656932176 9403 685f4df375e6dc41aaa92e1366f76dad ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -204,9 +204,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Resumo Primeira Unidade.aux" 1656926125 3118 560bc2ea353757a4ff0f819b8f288184 "pdflatex"
-  "Resumo Primeira Unidade.tex" 1656926124 7602 0395510959f313f8560a73c5966c1d25 ""
-  "Resumo Primeira Unidade.toc" 1656926125 2112 83a1fe78bc5ad3c181f1324ae89b425d "pdflatex"
+  "Resumo Primeira Unidade.aux" 1656932177 3324 f0c548109626c3aff4a67a4aa635b16f "pdflatex"
+  "Resumo Primeira Unidade.tex" 1656932176 9403 685f4df375e6dc41aaa92e1366f76dad ""
+  "Resumo Primeira Unidade.toc" 1656932177 2236 ee02b650f45f07f09366cfe6acb811e8 "pdflatex"
   (generated)
   "Resumo Primeira Unidade.aux"
   "Resumo Primeira Unidade.log"

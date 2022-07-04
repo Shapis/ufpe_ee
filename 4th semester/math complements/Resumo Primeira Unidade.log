@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  4 JUL 2022 06:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  4 JUL 2022 07:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -493,20 +493,20 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 )) (./Resumo Primeira Unidade.aux)
 \openout1 = `"Resumo Primeira Unidade.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -563,11 +563,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./Resumo Primeira Unidade.toc)
@@ -575,7 +575,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `"Resumo Primeira Unidade.toc"'.
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 99--99
+Underfull \hbox (badness 2990) in paragraph at lines 95--95
  \OT1/cmr/bx/n/12 Dois nu-me-ros com-ple-xos sao iguais se
  []
 
@@ -583,24 +583,26 @@ Underfull \hbox (badness 2990) in paragraph at lines 99--99
 
 
 ]
-Overfull \hbox (4.2881pt too wide) in paragraph at lines 153--183
- [] 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[2] (./Resumo Primeira Unidade.aux) ) 
+ [2]
+Missing character: There is no ; in font nullfont!
+[3
+
+] (./Resumo Primeira Unidade.aux) ) 
 Here is how much of TeX's memory you used:
- 40529 strings out of 478238
- 1095082 string characters out of 5850457
+ 40592 strings out of 478238
+ 1096573 string characters out of 5850457
  1846627 words of memory out of 5000000
- 58265 multiletter control sequences out of 15000+600000
+ 58328 multiletter control sequences out of 15000+600000
  478022 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,11n,118p,818b,2030s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Resumo Primeira Unidade.pdf" (2 pages, 93928 bytes).
+Output written on "Resumo Primeira Unidade.pdf" (3 pages, 98471 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

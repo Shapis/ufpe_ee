@@ -20,3 +20,5 @@
 \contentsline {section}{\numberline {4}Representacao geometrica}{}{}%
 \contentsline {paragraph}{Na representacao geometrica de um numero complexo podemos ver o eixo $x$ como a parte real e o $y$ como a parte imaginaria, como no exemplo abaixo:}{}{}%
 \contentsline {section}{\numberline {5}Modulo}{}{}%
+\contentsline {section}{\numberline {6}Argumento}{}{}%
+\contentsline {section}{\numberline {7}Complexo na forma polar}{}{}%
