@@ -17,7 +17,7 @@
 
 %  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
 
-\newcommand{\drawvector} [9] [color=blue] {
+\newcommand{\drawvector} [9] [color=cyan] {
     \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
 
     
@@ -223,10 +223,10 @@
 
 
             \drawvector{0}{0}{1}{1}{Z}{true}{a}{b};
-            \draw[line width=0pt,blue,-stealth](axis cs: 0, 0)--(axis cs: 1, 1)  node[anchor= south east, pos =0.5] {$\rho$};
+            \draw[line width=0pt,cyan,-stealth](axis cs: 0, 0)--(axis cs: 1, 1)  node[anchor= south east, pos =0.5] {$\rho$};
 
 
-            \draw [blue](axis cs: 0.3, 0) arc[start angle=0, end angle=45, radius=30]
+            \draw [cyan](axis cs: 0.3, 0) arc[start angle=0, end angle=45, radius=30]
             node[anchor= west, pos =0.6] {$\theta$};
 
 
@@ -238,8 +238,8 @@
 
 \begin{equation}
     \begin{aligned}
-        \sin{\theta} & = \frac{b}{\rho} \\
-        \cos{\theta} & = \frac{a}{\rho}
+        \cos{\theta} & = \frac{a}{\rho} \\
+        \sin{\theta} & = \frac{b}{\rho}
     \end{aligned}
 \end{equation}
 
@@ -249,8 +249,8 @@
 
 \begin{equation}
     \begin{aligned}
-        \sin{\theta} & = \frac{b}{\rho} \rightarrow b =\rho sin{\theta} \\
-        \cos{\theta} & = \frac{a}{\rho} \rightarrow a =\rho cos{\theta}
+        \cos{\theta} & = \frac{a}{\rho} \rightarrow a =\rho cos{\theta} \\
+        \sin{\theta} & = \frac{b}{\rho} \rightarrow b =\rho sin{\theta}
     \end{aligned}
 \end{equation}
 
@@ -262,6 +262,63 @@
         Z & = \rho * \left(cos{\theta} +  sin{\theta} * i\right)
     \end{aligned}
 \end{equation}
+
+\section{Operacoes na forma polar}
+
+\paragraph*{As simplificacoes abaixo vem diretamente da multiplicacao e divisao de numeros complexos na forma polar, e simplificacao por regras de trigonometria.}
+\subsection{Multiplicacao}
+\begin{equation}
+    \begin{aligned}
+        Z_1 * Z_2 = \rho_1 \rho_2  \left[\cos(\theta_1+\theta_2) + i  \sin(\theta_1+\theta_2)\right] \\
+    \end{aligned}
+\end{equation}
+
+\subsection{Divisao}
+\begin{equation}
+    \begin{aligned}
+        \frac{Z_1}{Z_2} = \frac{\rho_1}{\rho_2}   \left[\cos(\theta_1-\theta_2) + i  \sin(\theta_1-\theta_2)\right] \\
+    \end{aligned}
+\end{equation}
+
+\section{Forma de Moivre}
+\paragraph{Com tudo que foi visto acima vamos agora fazer a seguinte definicao:}
+\subsection{Definicao}
+\begin{equation}
+    \begin{aligned}
+        e^{it} = \cos{t} + i \sin{t}
+    \end{aligned}
+\end{equation}
+\paragraph{Escrever nessa forma nos da varias propriedades uteis:}
+\subsection{Propriedades}
+\begin{equation*}
+    \begin{aligned}
+         & Z             = \rho * e^{it}                                         \\
+         & \overline{Z}  = \rho * e^{i * \left(-t\right)}                        \\
+         & | e^{it} |    = 1      \rightarrow \sqrt[]{\cos^2{t} + \sin^2{t}} = 1 \\
+         & \frac{1}{e^{it}  } = e^{-it} = \overline{e^{it}  }                    \\
+         & e^{it}  = e^{i*(t+2K\pi)}                                             \\
+         & e^{it}  * e^{ig} = e^{i* (t+g)}
+    \end{aligned}
+\end{equation*}
+
+\paragraph*{E por fim chegamos a uma forma mais simples de efetuar multiplicacoes e divisoes:}
+
+\subsection{Multiplicacao}
+\begin{equation}
+    Z_1 * Z_2  = \rho_1  \rho_2 \, e^{i(t_1 + t_2)}
+\end{equation}
+\subsection{Divisao}
+\begin{equation}
+    \frac{Z_1}{Z_2}  = \frac{\rho_1  }{\rho_2}  \, e^{i(t_1 - t_2)}
+\end{equation}
+
+\subsection{Radiciacao}
+
+\begin{equation}
+    \frac{Z_1}{Z_2}  = \frac{\rho_1  }{\rho_2}  \, e^{i(t_1 - t_2)}
+\end{equation}
+
+
 % \begin{tikzpicture}
 
 %     \begin{axis}[

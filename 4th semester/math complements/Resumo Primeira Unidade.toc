@@ -22,3 +22,14 @@
 \contentsline {section}{\numberline {5}Modulo}{}{}%
 \contentsline {section}{\numberline {6}Argumento}{}{}%
 \contentsline {section}{\numberline {7}Complexo na forma polar}{}{}%
+\contentsline {section}{\numberline {8}Operacoes na forma polar}{}{}%
+\contentsline {subsection}{\numberline {8.1}Multiplicacao}{}{}%
+\contentsline {subsection}{\numberline {8.2}Divisao}{}{}%
+\contentsline {section}{\numberline {9}Forma de Moivre}{}{}%
+\contentsline {paragraph}{Com tudo que foi visto acima vamos agora fazer a seguinte definicao:}{}{}%
+\contentsline {subsection}{\numberline {9.1}Definicao}{}{}%
+\contentsline {paragraph}{Escrever nessa forma nos da varias propriedades uteis:}{}{}%
+\contentsline {subsection}{\numberline {9.2}Propriedades}{}{}%
+\contentsline {subsection}{\numberline {9.3}Multiplicacao}{}{}%
+\contentsline {subsection}{\numberline {9.4}Divisao}{}{}%
+\contentsline {subsection}{\numberline {9.5}Radiciacao}{}{}%
