@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1657029595 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/Circuits 1/Resumo Primeira Unidade.tex" "Resumo Primeira Unidade.pdf" "Resumo Primeira Unidade" 1657029596
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/Circuits 1/Resumo Primeira Unidade.tex" 1657029594 4930 730d7777a0bfb96cd99aa49790e4aa88 ""
+["pdflatex"] 1657030991 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/Circuits 1/Resumo Primeira Unidade.tex" "Resumo Primeira Unidade.pdf" "Resumo Primeira Unidade" 1657030992
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/Circuits 1/Resumo Primeira Unidade.tex" 1657030989 5755 42b117afd819512e329c9e33fe9a37fe ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm" 1650183167 1536 12e8c510d3e158fdd0e9a42e75118bd9 ""
@@ -224,9 +224,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Resumo Primeira Unidade.aux" 1657029596 1677 b425000215942cbff6d1254d21da36ff "pdflatex"
-  "Resumo Primeira Unidade.tex" 1657029594 4930 730d7777a0bfb96cd99aa49790e4aa88 ""
-  "Resumo Primeira Unidade.toc" 1657029596 964 5149317a1ef2b8895f9624eaf5209dde "pdflatex"
+  "Resumo Primeira Unidade.aux" 1657030992 1994 790dc32f9c16aa9a1fa99d417d08bc70 "pdflatex"
+  "Resumo Primeira Unidade.tex" 1657030989 5755 42b117afd819512e329c9e33fe9a37fe ""
+  "Resumo Primeira Unidade.toc" 1657030992 1158 1ea9ef8ea7021ceeedc47f3d8dae79e6 "pdflatex"
   (generated)
   "Resumo Primeira Unidade.aux"
   "Resumo Primeira Unidade.log"

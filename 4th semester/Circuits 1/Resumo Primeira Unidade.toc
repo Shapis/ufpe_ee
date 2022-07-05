@@ -13,3 +13,6 @@
 \contentsline {subsection}{\numberline {3.2}Resistor}{}{}%
 \contentsline {subsection}{\numberline {3.3}Capacitor}{}{}%
 \contentsline {subsection}{\numberline {3.4}Indutor}{}{}%
+\contentsline {subsection}{\numberline {3.5}Diodo}{}{}%
+\contentsline {subsection}{\numberline {3.6}LED - Light Emitting Diode}{}{}%
+\contentsline {subsection}{\numberline {3.7}Transistor}{}{}%
