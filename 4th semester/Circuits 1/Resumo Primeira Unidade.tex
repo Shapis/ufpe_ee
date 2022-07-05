@@ -1,0 +1,359 @@
+\documentclass[12pt,twoside, a4paper, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+
+\pgfplotsset{compat=newest}
+
+%  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
+
+\newcommand{\drawvector} [9] [color=cyan] {
+    \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+
+    
+
+\ifthenelse{\equal{#7}{true}}{
+    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+    }
+    {}
+}
+
+
+
+
+\title{Resumo Complementos de Matematica Primeira Unidade}
+\author{Henrique da Silva \\ hpsilva@proton.me}
+\date{\today}
+\pgfplotsset{width = 10cm, compat = 1.9}
+
+
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+\newpage
+%pagenumbering{roman}
+\tableofcontents
+\newpage
+
+\newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
+
+\section{Potencias de i}
+\paragraph{As potencias de i sao periodicas em 4. Da seguinte maneira:
+}
+\begin{center}
+    \begin{tabular}{ |ccc| }
+        \hline
+        $i^0$ & $=$      & 1            \\
+        $i^1$ & $=$      & $i$          \\
+        $i^2$ & $=$      & -1           \\
+        $i^3$ & $=$      & $-i$         \\
+        $i^4$ & $=$      & 1            \\
+        $i^5$ & $=$      & $i$          \\
+        $i^6$ & $=$      & $-1$         \\
+              & $\vdots$ &              \\
+        $i^n$ & $=$      & $i^{n \% 4}$ \\
+        \hline
+    \end{tabular}
+\end{center}
+\paragraph{Com "\%" sendo resto da divisao inteira
+}
+% \begin{equation}
+%     \oint \vec{E} \, * \, \vec{dA} = \frac{q}{\epsilon_0}
+% \end{equation}
+
+\section{Forma algebrica de um numero complexo}
+\paragraph{A forma algebrica de um numero complexo eh:}
+\begin{equation}
+    Z = a + ib
+\end{equation}
+\paragraph{Onde $a$ eh a componente real de $Z$ e pode ser chamado de $Re(Z)$ e $b$ eh a componente imaginaria e pode ser chamado de $Im(Z)$ }
+
+\paragraph*{Podemos dizer que os numeros $\Re$ sao um subconjunto de $\mathbb{C}$, exceto que no caso de um numero $\Re$ a parte imaginaria $b$ seria 0, alguns exemplos:}
+\begin{center}
+    \begin{tabular}{ |c|c|c| }
+        \hline
+        $5 + i$    & $a = 5$  & $b = 1$  \\
+        $4 - 3i^2$ & $a = 4$  & $b = -3$ \\
+        $12$       & $a = 12$ & $b = 0$  \\
+        $7i^3$     & $a = 0$  & $b = 7$  \\
+        \hline
+    \end{tabular}
+\end{center}
+\paragraph{Dois numeros complexos sao iguais se seus componentes reais e imaginarios forem iguais}
+
+\section{Operacoes na forma algebrica}
+
+\paragraph*{Nos exemplos a seguir: $Z_n = a_n + ib_n$}
+
+\subsection{Adicao $\&$ Subtracao}
+\subparagraph{Para subtrair e adicionar basta subtrair e adicionar as partes imaginarias dos numeros complexos}
+
+\begin{equation}
+    Z_1 + Z_2 = (a_1+a_2) + (b_1+b_2)i
+\end{equation}
+\begin{equation}
+    Z_1 - Z_2 = (a_1-a_2) + (b_1-b_2)i
+\end{equation}
+
+\subsection{Multiplicacao}
+\subparagraph{Vamos utilizar a distributividade e o fato que $i^2 = -1$}
+\begin{equation*}
+    \begin{aligned}
+        Z_1 * Z_2 & = (a_1+b_1i)(a_2+b_2i)                    \\
+        Z_1 * Z_2 & = a_1a_2 + a_1 b_2i + b_1a_2i + b_1b_2i^2 \\
+    \end{aligned}
+\end{equation*}
+\subparagraph*{Como $i^2 = -1$ podemos entao simplificar em:}
+\begin{equation}
+    Z_1 * Z_2  = (a_1a_2- b_1b_2) + (a_1 b_2 + b_1a_2)i
+\end{equation}
+
+\subsection{Divisao}
+\subparagraph{O conjugado de $Z$ eh $\overline{Z}$. Se $Z = a + ib$ entao  $\overline{Z} = a - ib$}
+\subparagraph{Algo interessante acontece quando fazemos $Z * \overline{Z}$:}
+\begin{equation}
+    \begin{aligned}
+        Z_1 * \overline{Z} & = (a+bi)(a-bi) \\
+        Z_1 * \overline{Z} & = a^2 - (bi)^2 \\
+        Z_1 * \overline{Z} & = a^2 - b^2i^2 \\
+        Z_1 * \overline{Z} & = a^2 + b^2
+    \end{aligned}
+\end{equation}
+\subparagraph{Ou seja, essa operacao nos da um escalar. E vamos utilizar disso para poder fazer a divisao.}
+\subparagraph{Para fazer a divisao de $Z$ por $\overline{Z}$ fazemos:}
+\begin{equation}
+    \begin{aligned}
+        \frac{Z}{W} = \frac{Z}{W} * \frac{\overline{W}}{\overline{W}}
+    \end{aligned}
+\end{equation}
+\subparagraph{E transformamos a operacao de divisao de numeros complexos em uma multiplicacao de $Z$ por $\overline{W}$ divido por um escalar $W*\overline{W}$}
+
+
+\section{Representacao geometrica}
+
+\paragraph{Na representacao geometrica de um numero complexo podemos ver o eixo $x$ como a parte real e o $y$ como a parte imaginaria, como no exemplo abaixo:}
+\paragraph*{}
+
+
+\begin{adjustbox}{scale=0.9}
+    \begin{tikzpicture}
+        \begin{axis}[
+            clip = false,
+            xmin=0, xmax=2.5,
+            ymin=-1.5, ymax=1.5,
+            axis lines=center,
+            xlabel = $x \, REAL$, ylabel=$y \, IMAGINARIO$,
+            title={ Z = a + bi},
+            xtick={},
+            xticklabels={}
+            ytick={},
+            yticklabels={}
+            % xticklabel style = {anchor=south west},
+            % xmajorgrids=true,
+            % ymajorgrids=true,
+            % grid style=dashed,
+            ]
+
+
+            % \addplot[domain=0:2*pi,color=blue, samples=100]{sin(deg(x))}
+            % node[anchor=west, pos =0.7] {$3120$};
+
+
+
+            \drawvector{0}{0}{1}{1}{Z}{true}{a}{b}
+            \drawvector{0}{0}{1}{-1}{\overline{Z}}{true}{a}{-b}
+
+
+        \end{axis}
+    \end{tikzpicture}
+\end{adjustbox}
+
+\paragraph*{Eh interessante notar que $\overline{Z}$ eh o simetrico de $Z$, porem oposto no eixo imaginario}
+
+\section{Modulo}
+
+\paragraph*{Como temos uma representacao geometrica do numero complexo, podemos calcular o modulo do numero complexo por simplesmente a hipotenusa de $a$ e $b$ do mesmo jeito que fariamos com um vetor comum}
+\paragraph*{O modulo sera representado pela letra $\rho$ ou por $| Z |$}
+
+\begin{equation}
+    \begin{aligned}
+        \rho = | Z | = \sqrt{a^2 + b^2}
+    \end{aligned}
+\end{equation}
+\pagebreak
+\section{Argumento}
+
+\paragraph*{O argumento eh simplesmente o angulo entre o eixo real e o vetor complexo sera representado pela letra $\theta$ ou por $arg(Z)$ }
+\paragraph*{}
+
+\begin{adjustbox}{scale=0.9}
+    \begin{tikzpicture}
+        \begin{axis}[
+            clip = false,
+            xmin=0, xmax=2,
+            ymin=0, ymax=2,
+            axis lines=center,
+            xlabel = $x \, REAL$, ylabel=$y \, IMAGINARIO$,
+            title={ Z = a + bi},
+            xtick={},
+            xticklabels={}
+            ytick={},
+            yticklabels={}
+            % xticklabel style = {anchor=south west},
+            % xmajorgrids=true,
+            % ymajorgrids=true,
+            % grid style=dashed,
+            ]
+
+
+            % \addplot[domain=0:2*pi,color=blue, samples=100]{sin(deg(x))}
+            % node[anchor=west, pos =0.7] {$3120$};
+
+
+
+            \drawvector{0}{0}{1}{1}{Z}{true}{a}{b};
+            \draw[line width=0pt,cyan,-stealth](axis cs: 0, 0)--(axis cs: 1, 1)  node[anchor= south east, pos =0.5] {$\rho$};
+
+
+            \draw [cyan](axis cs: 0.3, 0) arc[start angle=0, end angle=45, radius=30]
+            node[anchor= west, pos =0.6] {$\theta$};
+
+
+        \end{axis}
+    \end{tikzpicture}
+\end{adjustbox}
+
+\paragraph*{Dai temos:}
+
+\begin{equation}
+    \begin{aligned}
+        \cos{\theta} & = \frac{a}{\rho} \\
+        \sin{\theta} & = \frac{b}{\rho}
+    \end{aligned}
+\end{equation}
+
+\section{Complexo na forma polar}
+
+\paragraph*{Entendendo o conceito de argumento, podemos entao naturalmente:}
+
+\begin{equation}
+    \begin{aligned}
+        \cos{\theta} & = \frac{a}{\rho} \rightarrow a =\rho cos{\theta} \\
+        \sin{\theta} & = \frac{b}{\rho} \rightarrow b =\rho sin{\theta}
+    \end{aligned}
+\end{equation}
+
+\paragraph*{Que nos da $a$ e $b$ no formato de coordenadas polares, entao podemos re-escrever o nosso $Z$ como:}
+
+\begin{equation}
+    \begin{aligned}
+        Z & = \rho * cos{\theta} + \rho * sin{\theta} * i        \\
+        Z & = \rho * \left(cos{\theta} +  sin{\theta} * i\right)
+    \end{aligned}
+\end{equation}
+
+\section{Operacoes na forma polar}
+
+\paragraph*{As simplificacoes abaixo vem diretamente da multiplicacao e divisao de numeros complexos na forma polar, e simplificacao por regras de trigonometria.}
+\subsection{Multiplicacao}
+\begin{equation}
+    \begin{aligned}
+        Z_1 * Z_2 = \rho_1 \rho_2  \left[\cos(\theta_1+\theta_2) + i  \sin(\theta_1+\theta_2)\right] \\
+    \end{aligned}
+\end{equation}
+
+\subsection{Divisao}
+\begin{equation}
+    \begin{aligned}
+        \frac{Z_1}{Z_2} = \frac{\rho_1}{\rho_2}   \left[\cos(\theta_1-\theta_2) + i  \sin(\theta_1-\theta_2)\right] \\
+    \end{aligned}
+\end{equation}
+
+\section{Forma de Moivre}
+\paragraph{Com tudo que foi visto acima vamos agora fazer a seguinte definicao:}
+\subsection{Definicao}
+\begin{equation}
+    \begin{aligned}
+        e^{it} = \cos{t} + i \sin{t}
+    \end{aligned}
+\end{equation}
+\paragraph{Escrever nessa forma nos da varias propriedades uteis:}
+\subsection{Propriedades}
+\begin{equation*}
+    \begin{aligned}
+         & Z             = \rho * e^{it}                                         \\
+         & \overline{Z}  = \rho * e^{i * \left(-t\right)}                        \\
+         & | e^{it} |    = 1      \rightarrow \sqrt[]{\cos^2{t} + \sin^2{t}} = 1 \\
+         & \frac{1}{e^{it}  } = e^{-it} = \overline{e^{it}  }                    \\
+         & e^{it}  = e^{i*(t+2K\pi)}                                             \\
+         & e^{it}  * e^{ig} = e^{i* (t+g)}
+    \end{aligned}
+\end{equation*}
+
+\paragraph*{E por fim chegamos a uma forma mais simples de efetuar multiplicacoes e divisoes:}
+
+\subsection{Multiplicacao}
+\begin{equation}
+    Z_1 * Z_2  = \rho_1  \rho_2 \, e^{i(t_1 + t_2)}
+\end{equation}
+\subsection{Divisao}
+\begin{equation}
+    \frac{Z_1}{Z_2}  = \frac{\rho_1  }{\rho_2}  \, e^{i(t_1 - t_2)}
+\end{equation}
+
+\subsection{Radiciacao}
+
+\begin{equation}
+    \frac{Z_1}{Z_2}  = \frac{\rho_1  }{\rho_2}  \, e^{i(t_1 - t_2)}
+\end{equation}
+
+
+% \begin{tikzpicture}
+
+%     \begin{axis}[
+%             clip = false,
+%             xmin=0, xmax=pi*2.5,
+%             ymin=0, ymax=2,
+%             axis lines=left,
+%             xlabel = $Voltage$, ylabel=$Time$,
+%             title={abc},
+%             xtick={0,pi/2,pi,3*pi/2, 2*pi},
+%             xticklabels={$0$,$\frac{\pi}{2}$,$\pi$,$\frac{3\pi}{2}$,$2\pi$},
+%             % xticklabel style = {anchor=south west},
+%             % xmajorgrids=true,
+%             % ymajorgrids=true,
+%             % grid style=dashed,
+%         ]
+
+%  
+
+%         \addplot[domain=0:2*pi,color=blue, samples=100]{sin(deg(x))}
+%         node[anchor=west, pos =0.7] {$3120$};
+
+%         \drawvector{0}{0}{1}{1}{}
+
+
+%     \end{axis}
+
+% \end{tikzpicture}
+
+% \begin{tikzpicture}
+%     \draw[thin,gray!40] (-2,-2) grid (2,2);
+%     \draw[<->] (-2,0)--(2,0) node[right]{$x$};
+%     \draw[<->] (0,-2)--(0,2) node[above]{$y$};
+%     \draw[line width=2pt,blue,-stealth](0,0)--(1,2) node[anchor=south west]{$\boldsymbol{u}$};
+%     \draw[line width=2pt,red,-stealth](0,0)--(-1,-1) node[anchor=north east]{$\boldsymbol{-u}$};
+% \end{tikzpicture}
+
+\end{document}
