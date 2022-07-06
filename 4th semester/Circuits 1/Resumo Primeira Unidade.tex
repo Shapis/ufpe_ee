@@ -35,7 +35,7 @@
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
 
 
-\title{Resumo Complementos de Circuitos 1 Primeira Unidade}
+\title{Resumo Circuitos 1 Primeira Unidade}
 \author{Henrique da Silva \\ hpsilva@proton.me}
 \date{\today}
 \pgfplotsset{width = 10cm, compat = 1.9}
@@ -184,14 +184,25 @@
 \end{center}
 
 \subsection{Transistor}
-\subparagraph*{Eh um elemento que quando a corrente passa por ele, ele emite luz}
+\subparagraph*{Ele eh utilizado como um switch ou como um amplificador de sinal}
 \subparagraph*{}
 \begin{center}
     \begin{circuitikz}
-        \draw
-        (0,0) to[led] (0,3.5) % l=5<\milli\volt>
-        ;
+        \draw (0,0) node[npn, rotate=180](Q){};
     \end{circuitikz}
 \end{center}
 
+\subsection{Transformador}
+\subparagraph*{Permite que uma corrente seja convertida em outra corrente dentro de um circuito}
+\subparagraph*{}
+\begin{center}
+    \begin{circuitikz}
+        (0,0) to[transformer] (0,3.5) % l=5<\milli\volt>
+    \end{circuitikz}
+\end{center}
+
+\section{Lei de Ohm}
+
+
 \end{document}
+
