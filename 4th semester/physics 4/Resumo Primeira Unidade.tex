@@ -9,7 +9,20 @@
 \usepackage{circuitikz}
 \usepackage{lipsum}
 \usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
 
+\newcommand{\drawvector} [9] [color=cyan] {
+    \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+
+    
+
+\ifthenelse{\equal{#7}{true}}{
+    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+    }
+    {}
+}
 
 
 \title{Resumo Fisica 4 Primeira Unidade}
@@ -28,113 +41,115 @@
 
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
 
-\section{Primeira Eq. de Maxwell}
-\paragraph{Essa equacao vem da lei de Gauss e diz que o fluxo eletrico eh dado pela seguinte equacao:
+\section{Equacoes de Maxwell}
+
+\subsection{Primeira Equacao}
+\subparagraph{Essa equacao vem da lei de Gauss e diz que o fluxo eletrico eh dado pela seguinte equacao:
 }
 \begin{equation}
     \oint \vec{E} \, * \, \vec{dA} = \frac{q}{\epsilon_0}
 \end{equation}
-\paragraph*{Na qual $\vec{E}$ eh o campo eletrico, $q$ eh a quantidade de carga envolvida, $\epsilon_0$ eh a permeabilidade do espaco vacuo e $\vec{dA}$ eh a area da superficie.}
-\paragraph*{Se o campo eletrico for constante sobre a superficie entao podemos dizer que:}
+\subparagraph*{Na qual $\vec{E}$ eh o campo eletrico, $q$ eh a quantidade de carga envolvida, $\epsilon_0$ eh a permeabilidade do espaco vacuo e $\vec{dA}$ eh a area da superficie.}
+\subparagraph*{Se o campo eletrico for constante sobre a superficie entao podemos dizer que:}
 \begin{equation}
     E \, * \, A = \frac{q}{\epsilon_0}
 \end{equation}
-\paragraph*{E tambem que:}
+\subparagraph*{E tambem que:}
 \begin{equation}
     E = \frac{V}{d}
 \end{equation}
-\paragraph*{Este ultimo eh especialmente importante em questoes de corrente de conducao}
+\subparagraph*{Este ultimo eh especialmente importante em questoes de corrente de conducao}
 \paragraph*{E tambem que:}
 \begin{equation}
     Capacitancia = \frac{\epsilon_0 * A}{d}
 \end{equation}
-\paragraph*{E tambem que:}
+\subparagraph*{E tambem que:}
 \begin{equation}
     E = \frac{\rho*I}{A}
 \end{equation}
 
-\section{Segunda Eq. de Maxwell}
-\paragraph*{Essa tambem eh uma forma da lei de Gauss mas para o fluxo magnetico, e eh dada por:}
+\subsection{Segunda equacao}
+\subparagraph*{Essa tambem eh uma forma da lei de Gauss mas para o fluxo magnetico, e eh dada por:}
 \begin{equation}
     \oint  \vec{B} \, * \, \vec{dA} = 0
 \end{equation}
-\paragraph*{Na qual $\vec{B}$ eh o campo magnetico, $\vec{dA}$ eh a area da superficie.}
-\paragraph*{E tem que necessariamente ser igual a zero \emph{em superficies fechadas} ja que o fluxo magnetico deve sempre sair por um polo e inteiramente voltar pela outro}
+\subparagraph*{Na qual $\vec{B}$ eh o campo magnetico, $\vec{dA}$ eh a area da superficie.}
+\subparagraph*{E tem que necessariamente ser igual a zero \emph{em superficies fechadas} ja que o fluxo magnetico deve sempre sair por um polo e inteiramente voltar pela outro}
 
-\paragraph*{Vale tambem lembrar que o fluxo magnetico:}
+\subparagraph*{Vale tambem lembrar que o fluxo magnetico:}
 \begin{equation}
     \phi_B = B  *  A \cos{\theta}
 \end{equation}
-\paragraph*{E tambem que o campo magnetico para fios carregando corrente eh dado por:}
+\subparagraph*{E tambem que o campo magnetico para fios carregando corrente eh dado por:}
 \begin{equation}
     B = \frac{\mu_0 * I}{2 * \pi * r}
 \end{equation}
-\paragraph*{Lembrando que a corrente $I$ eh simplesmente o fluxo eletrico variando no tempo:}
+\subparagraph*{Lembrando que a corrente $I$ eh simplesmente o fluxo eletrico variando no tempo:}
 \begin{equation}
     I = \deriv{\phi_E}{t}
 \end{equation}
 
 
-\section{Terceira Eq. de Maxwell}
-\paragraph*{Essa tem a ver com a lei de Faraday sobre inducao, porem um pouco diferente.}
-\paragraph*{A lei como tinhamos visto era dada por:}
+\subsection{Terceira equacao}
+\subparagraph*{Essa tem a ver com a lei de Faraday sobre inducao, porem um pouco diferente.}
+\subparagraph*{A lei como tinhamos visto era dada por:}
 \begin{equation}
     \varepsilon = - \deriv{\phi_B}{t}
 \end{equation}
-\paragraph*{No qual $\varepsilon$ eh a forca eletromotriz, $d\phi_B$ eh a mudanca no fluxo magnetico, e $dt$ eh a mudanca no tempo}
-\paragraph*{A lei de Faraday diz que um campo magnetico que muda com o tempo vai induzir uma forca eletromotriz em um fio enrolado}
-\paragraph*{A versao de Maxwell eh mais geral, simplificando a lei de Faraday}
+\subparagraph*{No qual $\varepsilon$ eh a forca eletromotriz, $d\phi_B$ eh a mudanca no fluxo magnetico, e $dt$ eh a mudanca no tempo}
+\subparagraph*{A lei de Faraday diz que um campo magnetico que muda com o tempo vai induzir uma forca eletromotriz em um fio enrolado}
+\subparagraph*{A versao de Maxwell eh mais geral, simplificando a lei de Faraday}
 \begin{equation}
     \oint \vec{E} * \vec{ds} = - \deriv{\phi_B}{t}
 \end{equation}
-\paragraph*{Na qual $\vec{E}$ eh o campo eletrico, $\vec{ds}$ eh um elemento infinitesimal do loop fechado, $d\phi_B$ eh a mudanca do fluxo magnetico, e $dt$ eh a mudanca no tempo}
-\paragraph*{Com essa equacao Maxwell mostra a relacao de um campo magnetico que muda no tempo e de uma forca eletrica induzida}
+\subparagraph*{Na qual $\vec{E}$ eh o campo eletrico, $\vec{ds}$ eh um elemento infinitesimal do loop fechado, $d\phi_B$ eh a mudanca do fluxo magnetico, e $dt$ eh a mudanca no tempo}
+\subparagraph*{Com essa equacao Maxwell mostra a relacao de um campo magnetico que muda no tempo e de uma forca eletrica induzida}
 
-\section{Quarta Eq. de Maxwell}
-\paragraph*{Essa tem a ver com a lei de Ampere que diz que uma corrente que passa por um fio induz um campo magnetico ao redor do caminho ao redor do fio. A lei de Ampere como tinhamos visto era dada por:}
+\subsection{Quarta equacao}
+\subparagraph*{Essa tem a ver com a lei de Ampere que diz que uma corrente que passa por um fio induz um campo magnetico ao redor do caminho ao redor do fio. A lei de Ampere como tinhamos visto era dada por:}
 \begin{equation}
     \oint \vec{B} * \vec{ds} = \mu_0 * I_{enc}
 \end{equation}
-\paragraph*{No qual $\vec{B}$ eh o campo magnetico, $\vec{ds}$ um pedaco infinitesimal do elemento do loop fechado, $\mu_0$ eh a permeabilidade do espaco para campos magneticos e finalmente, $I$ eh a corrente}
-\paragraph*{Eh importante lembrar que $I_{enc}$ eh a corrente dentro do loop fechado $\vec{ds}$, entao se for dado o fluxo total de um capacitor por exemplo. O fluxo que vamos considerar eh apenas o fluxo que esta dentra da superficie definida pelo loop fechado $\vec{ds}$}
-\paragraph*{O problema eh que ha uma geracao de campo magnetico induzido por uma descarga entre capacitores, onde nao ha fio nenhum conectando-os}
-\paragraph*{Maxwell resolveu isso pensando em algo que chamou de $I_D$, uma corrente de deslocamento, que na verdade nao eh exatamente uma corrente eletrica, mas eh apenas a mudanca das cargas dos capacitores no tempo, assim obtendo:}
+\subparagraph*{No qual $\vec{B}$ eh o campo magnetico, $\vec{ds}$ um pedaco infinitesimal do elemento do loop fechado, $\mu_0$ eh a permeabilidade do espaco para campos magneticos e finalmente, $I$ eh a corrente}
+\subparagraph*{Eh importante lembrar que $I_{enc}$ eh a corrente dentro do loop fechado $\vec{ds}$, entao se for dado o fluxo total de um capacitor por exemplo. O fluxo que vamos considerar eh apenas o fluxo que esta dentra da superficie definida pelo loop fechado $\vec{ds}$}
+\subparagraph*{O problema eh que ha uma geracao de campo magnetico induzido por uma descarga entre capacitores, onde nao ha fio nenhum conectando-os}
+\subparagraph*{Maxwell resolveu isso pensando em algo que chamou de $I_D$, uma corrente de deslocamento, que na verdade nao eh exatamente uma corrente eletrica, mas eh apenas a mudanca das cargas dos capacitores no tempo, assim obtendo:}
 \begin{equation}
     \int \vec{B} * \vec{ds} = \mu_0 * \left(I +I_D\right)
 \end{equation}
-\paragraph*{Com o $I_D$ sendo igual a mudanca do fluxo eletrico no tempo, ou seja, a carga que passa de um capacitor para o outro, e assim nosso $I_D$ eh:}
+\subparagraph*{Com o $I_D$ sendo igual a mudanca do fluxo eletrico no tempo, ou seja, a carga que passa de um capacitor para o outro, e assim nosso $I_D$ eh:}
 \begin{equation}
     I_D = \epsilon_0 * \deriv{\phi_E}{t}
 \end{equation}
-\paragraph*{Com $\epsilon_0$ a permeabilidade do espaco para campos electricos, e $\deriv{\phi_E}{t}$ a mudanca do fluxo eletrico no tempo}
-\paragraph*{Que finalmente nos da a forma integral da quarta equacao de Maxwell:}
+\subparagraph*{Com $\epsilon_0$ a permeabilidade do espaco para campos electricos, e $\deriv{\phi_E}{t}$ a mudanca do fluxo eletrico no tempo}
+\subparagraph*{Que finalmente nos da a forma integral da quarta equacao de Maxwell:}
 \begin{equation}
     \int \vec{B} * \vec{ds} = \mu_0 * I + \mu_0 * \epsilon_0 * \deriv{\phi_E}{t}
 \end{equation}
 
-
-\section{Velocidade de propagacao}
+\section{Ondas eletromagneticas}
+\subsection{Velocidade de propagacao}
 \begin{equation}
     v = \frac{E}{B} = c
 \end{equation}
-\paragraph*{Na qual $E$ eh o campo eletrico, $B$ eh o campo magnetico, $v$ eh a velocidade de propagacao e $c$ eh a velocidade da luz}
-\paragraph*{Que pode ser simplificada em:}
+\subparagraph*{Na qual $E$ eh o campo eletrico, $B$ eh o campo magnetico, $v$ eh a velocidade de propagacao e $c$ eh a velocidade da luz}
+\subparagraph*{Que pode ser simplificada em:}
 \begin{equation}
     v = \frac{1}{\sqrt[]{\epsilon_0 * \mu_0}} = c
 \end{equation}
-\paragraph*{com $\epsilon_0$ a permeabilidade do espaco para campos electricos, e $\mu_0$ a permeabilidade do espaco para campos magneticos, $v$ a velocidade de propagacao da onde, e c a velocidade da luz}
+\subparagraph*{com $\epsilon_0$ a permeabilidade do espaco para campos electricos, e $\mu_0$ a permeabilidade do espaco para campos magneticos, $v$ a velocidade de propagacao da onde, e c a velocidade da luz}
 
-\paragraph*{Tambem temos que ha uma relacao entre frequencia, comprimento de onda e velocidade de propagacao, e eh dado por:}
+\subparagraph*{Tambem temos que ha uma relacao entre frequencia, comprimento de onda e velocidade de propagacao, e eh dado por:}
 
 \begin{equation}
     v = f * \lambda = c
 \end{equation}
 
-\paragraph*{Na qual $f$ eh a frequencia, $\lambda$ eh o comprimento de onda, $v$ eh a velocidade de propagacao, e $c$ eh a velocidade da luz}
-\paragraph*{Ou seja facilmante conseguimos achar a frequencia dado o comprimento de onda e vice versa}
+\subparagraph*{Na qual $f$ eh a frequencia, $\lambda$ eh o comprimento de onda, $v$ eh a velocidade de propagacao, e $c$ eh a velocidade da luz}
+\subparagraph*{Ou seja facilmante conseguimos achar a frequencia dado o comprimento de onda e vice versa}
 
-\section{Energia da onda}
-\paragraph*{Para calcular a energia da onda precisamos da magnitude do campo eletrico e magnetico, e temos as seguintes equacoes:}
+\subsection{Energia da onda}
+\subparagraph*{Para calcular a energia da onda precisamos da magnitude do campo eletrico e magnetico, e temos as seguintes equacoes:}
 
 \subparagraph*{Densidade de energia do campo eletrico:}
 \begin{equation}
@@ -146,52 +161,164 @@
     \mu_B = \frac{1}{2} * \frac{B^2}{\mu_0}
 \end{equation}
 
-\paragraph{Nos quais $E$ eh o campo eletrico, $B$ eh o campo magnetico, $\mu_E$ a densidade de energia do campo eletrico, $\mu_B$ a densidade de energia do campo magnetico, $\epsilon_0$ a permeabilidade do espaco para campos electricos, $\mu_0$ a permeabilidade do espaco para campos magneticos}
-\paragraph{A energia da onda eh a soma das duas energias:}
+\subparagraph{Nos quais $E$ eh o campo eletrico, $B$ eh o campo magnetico, $\mu_E$ a densidade de energia do campo eletrico, $\mu_B$ a densidade de energia do campo magnetico, $\epsilon_0$ a permeabilidade do espaco para campos electricos, $\mu_0$ a permeabilidade do espaco para campos magneticos}
+\subparagraph{A energia da onda eh a soma das duas energias:}
 \begin{equation}
     \mu = \mu_E + \mu_B
 \end{equation}
 \begin{equation}
     \mu = \frac{1}{2} * \epsilon_0 * E^2 + \frac{1}{2} * \frac{B^2}{\mu_0}
 \end{equation}
-\paragraph{Eh importante de tirar disso que podemos substituir o $B$ e o $E$ ja que temos uma relacao direta entre os dois que eh dada pela velocidade nas equacoes $(10)$ e $(11)$}
+\subparagraph{Eh importante de tirar disso que podemos substituir o $B$ e o $E$ ja que temos uma relacao direta entre os dois que eh dada pela velocidade nas equacoes $(10)$ e $(11)$}
 
-\section*{Intensidade}
+\subsection*{Intensidade}
 \begin{equation}
     I = \frac{\Delta{U}}{A * \Delta{t}}
 \end{equation}
-\paragraph*{Na qual $\Delta{U}$ eh a energia de um elemento infinitesimal da onda, $A$ eh a area da superficie que a onda cobre, $\Delta{t}$ eh um elemento infinitesimal de tempo, e $I$ eh a intensidade}
-\paragraph*{Vale a pena lembrar que $\Delta{U} = \mu * \Delta{V}$, e temos maneiras simples de calcular este $\mu$ como vimos acima em $(10)$}
-\paragraph*{Vale lembrar que potencia eh justamente $\frac{\Delta{U}}{\Delta{t}}$. O que nos deixa re-escrever de forma mais simples como:}
+\subparagraph*{Na qual $\Delta{U}$ eh a energia de um elemento infinitesimal da onda, $A$ eh a area da superficie que a onda cobre, $\Delta{t}$ eh um elemento infinitesimal de tempo, e $I$ eh a intensidade}
+\subparagraph*{Vale a pena lembrar que $\Delta{U} = \mu * \Delta{V}$, e temos maneiras simples de calcular este $\mu$ como vimos acima em $(10)$}
+\subparagraph*{Vale lembrar que potencia eh justamente $\frac{\Delta{U}}{\Delta{t}}$. O que nos deixa re-escrever de forma mais simples como:}
 \begin{equation}
     I = \frac{P}{A}
 \end{equation}
-\paragraph*{E muito comumente se consideramos a origem da onda como uma fonte pontual podemos dizer que a area eh a area da esfera que a envolve, ou seja $A = 4\pi * r^2$}
-\paragraph*{Simplificando finalmente chegamos em:}
+\subparagraph*{E muito comumente se consideramos a origem da onda como uma fonte pontual podemos dizer que a area eh a area da esfera que a envolve, ou seja $A = 4\pi * r^2$}
+\subparagraph*{Simplificando finalmente chegamos em:}
 \begin{equation}
     I = \mu_0 * c * E^2
 \end{equation}
-\paragraph*{Forca eletromagnetica por um corpo complemanente absorvente eh dada por:}
+\subparagraph*{Forca eletromagnetica por um corpo complemanente absorvente eh dada por:}
 \begin{equation}
     F_{em} = \frac{I * A}{c}
 \end{equation}
 
 
-\section{Vetor de Poynting}
-\paragraph*{O vetor de Poynting aponta na direcao de propagacao da onda eletromagnetica, e eh dado por:}
+\subsection{Vetor de Poynting}
+\subparagraph*{O vetor de Poynting aponta na direcao de propagacao da onda eletromagnetica, e eh dado por:}
 \begin{equation}
     \vec{S} = \frac{\vec{E} \times \vec{B}}{\mu_0}
 \end{equation}
-\paragraph*{Ou seja:}
+\subparagraph*{Ou seja:}
 \begin{equation}
     S = \frac{E * B * \sin{\theta}}{\mu_0}
 \end{equation}
-\paragraph*{Sua magnitude varia no tempo, e atinge seu maximo no mesmo instante que $\vec{E}$ e $\vec{B}$ atingem seus maximos}
+\subparagraph*{Sua magnitude varia no tempo, e atinge seu maximo no mesmo instante que $\vec{E}$ e $\vec{B}$ atingem seus maximos}
+
+\subsection{Polarizacao}
+\paragraph*{Polarizacao acontece quando um raio eletromagnetico atravessa um campo magnetico polarizado, apenas deixando passar a as componentes do  raio eletromagnetico que estava na mesma polarizacao, o efeito disso eh que apenas metade do raio eletromagnetico passa pelo campo magnetico polarizado e a outra metade eh absorvida pelo filtro}
+
+\section{Interferencia, reflexao e difracao}
+\subsection{Lei da reflexao}
+\subparagraph*{O angulo de incidencia de um raio de luz eh igual ao angulo de reflexao}
+\subsection{Refracao e lei de Snell}
+\subparagraph*{Eh o fenomeno de um raio de luz mudar de angulo quando passa de um meio para outro}
+\subparagraph*{O angulo do raio incidente eh relacionado com o angulo do raio da refracao pela lei de Snell}
+\subparagraph*{}
+
+\begin{adjustbox}{scale=0.9}
+    \begin{tikzpicture}
+        \begin{axis}[
+            clip = false,
+            xmin=0, xmax=4,
+            ymin=-2, ymax=2,
+            axis lines=center,
+            xlabel = $x$, ylabel=$y$,
+            title={Lei de Snell},
+            xtick={},
+            xticklabels={}
+            ytick={},
+            yticklabels={}
+            % xticklabel style = {anchor=south west},
+            % xmajorgrids=true,
+            % ymajorgrids=true,
+            % grid style=dashed,
+            ]
+
+
+            % \addplot[domain=0:2*pi,color=blue, samples=100]{sin(deg(x))}
+            % node[anchor=west, pos =0.7] {$3120$};
 
 
 
+            \drawvector{0}{1}{1}{0}{}{false}{a}{b};
+
+            \draw[line width=0pt,gray, dashed](axis cs: 1, 2)--(axis cs: 1, -2)  node[anchor= south east, pos =0.5] {$\rho$};
+
+
+            \draw [cyan](axis cs: 1, 0.4) arc[start angle=90, end angle=135, radius=40]
+            node[anchor= south east, pos =0.4] {$\theta_0$};
+
+            \drawvector{1}{0}{1.5}{-1}{}{false}{a}{b};
+
+            \draw [cyan](axis cs: 1, -0.4) arc[start angle=270, end angle=292.5, radius=40]
+            node[anchor= north, pos =0.7] {$\theta_1$};
+
+
+        \end{axis}
+    \end{tikzpicture}
+\end{adjustbox}
 
 
 
+\begin{equation}
+    \begin{aligned}
+        \theta_0          & > \theta_1          \\
+        n_0\sin{\theta_0} & = n_1\sin{\theta_1}
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{O indice de refracao $n$ eh dado por:}
+
+\begin{equation}
+    \begin{aligned}
+        n = \frac{c}{v}
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Nos quais $c$ eh a velocidade da luz no vacuo e $v$ eh a velocidade da luz no meio}\
+
+\subparagraph*{O que equacao acima nos diz, eh que quanto maior o indice de refracao, menor o angulo desta refracao}
+
+\subparagraph*{Vale ressaltar, que essa mudanca ocorre em qualquer mudanca de meio com indice de refracao $n$ diferentes}
+
+\subsection{Imagens virtuais vs imagens reais}
+\subparagraph*{Uma imagem eh dita real se os raios saidos do objeto convergem em um local}
+
+\section{Lentes}
+
+\subsection{Lente convergente/convexa}
+
+\subparagraph*{Distancia focal $f$ de uma lente convexa esta a metade do raio de curvatura da lente}
+
+\subparagraph*{Poder $P$ da lente}
+
+\begin{equation}
+    \begin{aligned}
+        P = \frac{1}{f}
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{A imagem que passa por uma lente convergente sempre converge do lado oposto do objeto, e fica de cabeca pra baixo}
+
+\subparagraph*{Equacao da lente fina relaciona, a distancia focal $f$, distancia da imagem $d_i$ e a distancia do objeto $d_0$:}
+
+\begin{equation}
+    \begin{aligned}
+        \frac{1}{d_0} + \frac{1}{d_i} = \frac{1}{f}
+    \end{aligned}
+\end{equation}
+
+\subsection{Lente divergente/concava}
+
+\subparagraph*{Esse tipo de lente gera uma imagem virtual}
+\subparagraph*{Na lente concava a distancia focal esta do mesmo lado do objeto}
+
+
+\subsection{Equacao da magnificacao, relaciona a altura $h_i$ e $h_0$ do objeto com a distancia da imagem $d_i$ e a distancia do objecto $d_0$}
+
+\begin{equation}
+    \begin{aligned}
+        m = \frac{h_i}{h_0} = - \frac{d_i}{d_0}
+    \end{aligned}
+\end{equation}
 
 \end{document}
