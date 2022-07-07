@@ -18,3 +18,6 @@
 \contentsline {subsection}{\numberline {3.7}Transistor}{}{}%
 \contentsline {subsection}{\numberline {3.8}Transformador}{}{}%
 \contentsline {section}{\numberline {4}Lei de Ohm}{}{}%
+\contentsline {subsection}{\numberline {4.1}A lei de Ohm}{}{}%
+\contentsline {paragraph}{Eh uma relacao fundamental entre a corrente $I$ , resistencia $R$, e a voltagem $V$}{}{}%
+\contentsline {subsection}{\numberline {4.2}Potencias}{}{}%
