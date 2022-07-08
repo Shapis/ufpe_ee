@@ -319,19 +319,34 @@
 
 \begin{equation*}
     \begin{aligned}
-        Z        & = \rho * e^{i \theta}                \\
-        \sqrt{Z} & = W                                  \\
-        Z        & = W^n                                \\
-        W        & =  \left(\rho * e^{i\theta}\right)^n \\
-        W        & =\rho ^n e^{i \theta n}
+        Z                          & = \rho * e^{i (\theta + 2 K \pi)}        \\
+        \sqrt[n]{Z}                & = W                                      \\
+        Z                          & = W^n                                    \\
+        W^n                        & =  \left(\rho_k * e^{i\theta_k}\right)^n \\
+        W^n                        & =\rho_k ^n e^{i \theta_k n}              \\
+        \rho_k ^n e^{i \theta_k n} & = \rho * e^{i (\theta + 2 K \pi)}        \\
     \end{aligned}
 \end{equation*}
 
-\subparagraph*{entao das propriedades podemos tirar que:}
+\subparagraph*{Entao conseguimos algumas conclusoes interessantes, primeiro que o nosso $\rho_k ^n$ nao depende de $k$, ou seja. para todas raizes teremos o mesmo modulo, so o que vai se alterar eh o argumento, ou seja, o angulo}
 
 \begin{equation}
-    \rho^n e^{itn}
+    \begin{aligned}
+        \rho^n_k & = \rho           \\
+        \rho_k   & = \sqrt[n]{\rho} \\
+    \end{aligned}
 \end{equation}
+
+\subparagraph*{E segundo, concluimos que o nosso argumento varia de acordo com K da seguinte forma:}
+
+\begin{equation}
+    \begin{aligned}
+        \theta_k n & = \theta + 2 K \pi           \\
+        \theta_k   & = \frac{\theta + 2 K \pi}{n} \\
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Concluindo, para conseguir cada raiz, basta fazermos o $K$ variar de $0$ a $n-1$, e eh util notar que isso vai criar vetores de tamanho $\rho$ equidistantes no intervalo $[0,2\pi]$}
 
 
 % \begin{tikzpicture}
