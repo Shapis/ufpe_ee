@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  11 JUL 2022 11:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  11 JUL 2022 11:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -927,7 +927,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
 <to be read again> 
                    \relax 
 l.134 \subparagraph
-                   *{Tinhamos como valor esperado $n = 2$, e por um \emph{fi... [2 <./images//Grafico-1.jpg> <./images//Grafico-2.jpg> <./images//Grafico-3.jpg> <./images//Grafico-4.jpg>]
+                   *{Tínhamos como valor esperado $n = 2$, e por um \emph{f... [2 <./images//Grafico-1.jpg> <./images//Grafico-2.jpg> <./images//Grafico-3.jpg> <./images//Grafico-4.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 137.
@@ -974,18 +974,18 @@ l.232 \end{document}
 
 ] (./Primeiro Relatorio.aux)
 Package rerunfilecheck Info: File `"Primeiro Relatorio".out' has not changed.
-(rerunfilecheck)             Checksum: 0ADFB48C1F6BD8F96210BFAB72A33F67;1993.
+(rerunfilecheck)             Checksum: 1052E725FB5CED328DBED9E9D3896850;2035.
  ) 
 Here is how much of TeX's memory you used:
- 51022 strings out of 478238
- 1306672 string characters out of 5850457
- 1991616 words of memory out of 5000000
- 68566 multiletter control sequences out of 15000+600000
+ 51025 strings out of 478238
+ 1306697 string characters out of 5850457
+ 1992618 words of memory out of 5000000
+ 68569 multiletter control sequences out of 15000+600000
  478550 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,830b,770s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Primeiro Relatorio.pdf" (4 pages, 463226 bytes).
+Output written on "Primeiro Relatorio.pdf" (4 pages, 464134 bytes).
 PDF statistics:
  191 PDF objects out of 1000 (max. 8388607)
  157 compressed objects within 2 object streams
