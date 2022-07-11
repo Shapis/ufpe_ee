@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1657549080 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 1/Primeiro Relatorio.tex" "Primeiro Relatorio.pdf" "Primeiro Relatorio" 1657549081
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 1/Primeiro Relatorio.tex" 1657549079 6700 f9250af2e47c192335950f83fe8ba61f ""
+["pdflatex"] 1657549294 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 1/Primeiro Relatorio.tex" "Primeiro Relatorio.pdf" "Primeiro Relatorio" 1657549295
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 1/Primeiro Relatorio.tex" 1657549293 6706 c9c24d4b98dfbade9e049f479af252f0 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -245,10 +245,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Primeiro Relatorio.aux" 1657549081 2261 ed84014976e01fa8253ec997a97f227f "pdflatex"
-  "Primeiro Relatorio.out" 1657549081 2035 1052e725fb5ced328dbed9e9d3896850 "pdflatex"
-  "Primeiro Relatorio.tex" 1657549079 6700 f9250af2e47c192335950f83fe8ba61f ""
-  "Primeiro Relatorio.toc" 1657549081 1017 ee7fe155a6a3f353b8fbcf03d9bfc64c "pdflatex"
+  "Primeiro Relatorio.aux" 1657549295 2267 fb28def5cee9f7391863a19405e2337b "pdflatex"
+  "Primeiro Relatorio.out" 1657549295 2055 c78a38dfe4a096dae2d2e77ea2997e10 "pdflatex"
+  "Primeiro Relatorio.tex" 1657549293 6706 c9c24d4b98dfbade9e049f479af252f0 ""
+  "Primeiro Relatorio.toc" 1657549295 1023 29c69af6ec508b5eb1df9877130621d1 "pdflatex"
   "images//Grafico-0.jpg" 1657544562 50837 4c1f02f5b569b2466c6ba1bd4ed5f86b ""
   "images//Grafico-1.jpg" 1657544562 64431 d0fd004d8eb8847ca41fc958ebfc543e ""
   "images//Grafico-2.jpg" 1657544562 59543 e002c1ab99e8021fad936a168e0eac7e ""
