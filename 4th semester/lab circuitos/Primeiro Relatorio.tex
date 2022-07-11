@@ -1,0 +1,135 @@
+\documentclass[12pt,twoside, a4paper, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}
+\usepackage{hyperref}
+
+\pgfplotsset{compat=newest}
+
+
+
+%  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
+
+\newcommand{\drawvector} [9] [color=cyan] {
+    \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+
+    
+
+\ifthenelse{\equal{#7}{true}}{
+    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+    }
+    {}
+}
+
+\newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
+
+
+\title{Resumo Circuitos 1 Primeira Unidade}
+\author{Henrique da Silva \\ hpsilva@proton.me}
+\date{\today}
+\pgfplotsset{width = 10cm, compat = 1.9}
+
+
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+\newpage
+%pagenumbering{roman}
+\tableofcontents
+\newpage
+
+\section{Introdução}
+
+\subsection*{Neste relatório, vamos discutir a ponte de Wheatstone e um metodo experimental para obter uma resistencia desconhecida a partir de um circuito ja conhecido }
+
+\subsection{A ponte de Wheatstone}
+\subparagraph*{}
+\begin{center}
+    \begin{circuitikz}
+        \draw
+        (0,0) to[battery1=$V_{cc}$,  invert] (0,4) % l=5<\milli\volt>
+        -- (2,4) to[resistor=$R_1$] (2,2) to [resistor=$R_3$] (2,0)
+        (2,4) -- (4,4) to [resistor=$R_2$] (4,2) to [resistor=$R_4$] (4,0)
+        -- (0,0)
+        ;
+        \draw (0,-0.05)
+        node[rground]{};
+        \draw (2,2)
+        node[ocirc,  label=2:$V_{a}$]{};
+        \draw (4,2)
+        node[ocirc,  label=2:$V_{b}$]{};
+    \end{circuitikz}
+\end{center}
+
+\subparagraph*{Esta tem como função principal determinar uma resistencia desconhecida $R_4$ a partir de três resistencias e uma corrente previamente conhecidas, que vamos chamar aqui de $V_{cc}$ e $R_1$, $R_2$, e $R_3$.}
+
+\subsection{Obtendo $R_4$}
+
+\subparagraph*{Para obter essa resistencia desconhecida, o que faremos é inicialmente determinar as resistencias de $V_a$ e $V_b$ em função das resistencias e da tensão $Vcc$. E apartir dessas determinar uma expressão para $R_4$ }
+
+\subparagraph*{Montando o sistema e equações e lembrando da soma de resistores em série e em paralelos teremos: }
+
+\begin{equation}
+    \begin{aligned}
+        V_{a} & = \frac{R_3}{R_1+R_3}V_{cc} \\
+        V_{b} & = \frac{R_4}{R_2+R_4}V_{cc} \\
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Daí tiramos que o nosso $V_{ab}$ sendo este $V_a - V_b$ será:}
+
+\begin{equation}
+    \begin{aligned}
+        V_{ab} & = V_{a} - V_{b} = \left(\frac{R_3}{R_1+R_3} - \frac{R_4}{R_2+R_4}\right)V_{cc} \\
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Resolvendo isolando o $R_4$ teremos:}
+
+\begin{equation}
+    \begin{aligned}
+        R_4 = \frac{R2(R3(V_{cc} - V_{ab}) - R_1V_{ab})}{R_1 (V_{cc} + V_{ab}) +R_3V_{ab}} \\
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Com isso conseguimos facilmente isolar nossa resistencia desconhecida $R_4$ a partir de valores conhecidos do sistema}
+
+\subsection{Resultados preliminares}
+
+
+\subparagraph*{ Inicialmente montarei o sistema no simulador de circuitos online Falstad. \href{https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKADcQUAWKlPPTjxDFCUMULBUpUaAhYB3QVREhsCFMNGQFq9ZpBcuAldoBOBo-sMCwhaVwzwd18HYsCU3KC3MvPXd05+MUknRT9g7l5gs10NFTUNMAwtcEo4HUTwFLjOL1is-yUggV40DIAHXKK-LwgpFiqXWypagPrvIA}{Clique aqui para acessar}}
+
+\subparagraph*{Para o exemplo preliminar com o seguintes valores iniciais: }
+\subparagraph*{$V_{cc} = 10V$ , $R_1 = 15k\varOmega$ , $R_2 = 47k\varOmega$, $R_3 = 22k\varOmega$ e $R_4 = 10k\varOmega$}
+
+\subparagraph*{Resolvendo em python \href{https://www.online-python.com/AkfwEsRGU9}{(clique aqui para acessar)} as equacoes (1) e (2) teremos o seguinte valores para $V_{a}$  $V_b$ e $V_{ab}$:}
+
+\begin{equation*}
+    \begin{aligned}
+        V_{a}  & = 5.946V \\
+        V_{b}  & = 1.754V \\
+        V_{ab} & = 4.191V \\
+    \end{aligned}
+\end{equation*}
+
+
+\section{Descricao da pratica}
+
+\section{Resultados}
+
+\section{Conclusao}
+
+\end{document}
+

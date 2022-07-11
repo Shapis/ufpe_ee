@@ -1,0 +1,8 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {subsection}{\numberline {1.1}A ponte de Wheatstone}{}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Obtendo $R_4$}{}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Resultados preliminares}{}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Descricao da pratica}{}{section.2}%
+\contentsline {section}{\numberline {3}Resultados}{}{section.3}%
+\contentsline {section}{\numberline {4}Conclusao}{}{section.4}%
