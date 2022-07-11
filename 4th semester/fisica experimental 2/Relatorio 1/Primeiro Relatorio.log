@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  11 JUL 2022 11:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  11 JUL 2022 11:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -753,6 +753,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--62
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+\OT1/cmtt/m/n/12 main / 4thsemester / fisicaexperimental2 /
+ []
+
+
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 64.
 
@@ -844,7 +849,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 91.
 
-<./images//Grafico-2.jpg, id=85, 370.38374pt x 264.99pt>
+<./images//Grafico-2.jpg, id=86, 370.38374pt x 264.99pt>
 File: ./images//Grafico-2.jpg Graphic file (type jpg)
 <use ./images//Grafico-2.jpg>
 Package pdftex.def Info: ./images//Grafico-2.jpg  used on input line 102.
@@ -854,7 +859,7 @@ Overfull \hbox (20.16817pt too wide) in paragraph at lines 101--104
 [] 
  []
 
-<./images//Grafico-3.jpg, id=86, 370.38374pt x 264.99pt>
+<./images//Grafico-3.jpg, id=87, 370.38374pt x 264.99pt>
 File: ./images//Grafico-3.jpg Graphic file (type jpg)
 <use ./images//Grafico-3.jpg>
 Package pdftex.def Info: ./images//Grafico-3.jpg  used on input line 106.
@@ -867,7 +872,7 @@ Overfull \hbox (43.66792pt too wide) in paragraph at lines 105--108
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<./images//Grafico-4.jpg, id=87, 370.38374pt x 264.99pt>
+<./images//Grafico-4.jpg, id=88, 370.38374pt x 264.99pt>
 File: ./images//Grafico-4.jpg Graphic file (type jpg)
 <use ./images//Grafico-4.jpg>
 Package pdftex.def Info: ./images//Grafico-4.jpg  used on input line 110.
@@ -912,7 +917,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--129
 
  []
 
-<./images//Grafico-5.jpg, id=88, 370.38374pt x 264.99pt>
+<./images//Grafico-5.jpg, id=89, 370.38374pt x 264.99pt>
 File: ./images//Grafico-5.jpg Graphic file (type jpg)
 <use ./images//Grafico-5.jpg>
 Package pdftex.def Info: ./images//Grafico-5.jpg  used on input line 131.
@@ -985,10 +990,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,830b,770s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Primeiro Relatorio.pdf" (4 pages, 464134 bytes).
+Output written on "Primeiro Relatorio.pdf" (4 pages, 465009 bytes).
 PDF statistics:
- 191 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
+ 192 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
  52 named destinations out of 1000 (max. 500000)
  131 words of extra memory for PDF output out of 10000 (max. 10000000)
 
