@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  11 JUL 2022 07:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  12 JUL 2022 06:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Primeiro Relatorio.tex"
-(/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Primeiro Relatorio.tex
+**"/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 1/Primeiro Relatorio.tex"
+(/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 1/Primeiro Relatorio.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-10> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -739,58 +739,4 @@ LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./Primeiro Relatorio.toc)
-\tf@toc=\write5
-\openout5 = `"Primeiro Relatorio.toc"'.
-
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 59.
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-[]$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 80.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 80.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 80.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-
-]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.136 \end{document}
-                     [2
-
-] (./Primeiro Relatorio.aux)
-Package rerunfilecheck Info: File `"Primeiro Relatorio".out' has not changed.
-(rerunfilecheck)             Checksum: A50503FB7D561B1A5B2FC9453AF963D8;885.
- ) 
-Here is how much of TeX's memory you used:
- 51460 strings out of 478238
- 1319398 string characters out of 5850457
- 1999594 words of memory out of 5000000
- 69039 multiletter control sequences out of 15000+600000
- 478191 words of font info for 63 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 115i,8n,118p,810b,876s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Primeiro Relatorio.pdf" (2 pages, 107185 bytes).
-PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ (/usr/share/texmf-dist/
