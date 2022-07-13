@@ -36,7 +36,7 @@
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
 
 
-\title{Primeiro Relatorio de Lab de Circuitos}
+\title{Primeiro Relatório de Lab de Circuitos}
 \author{Henrique da Silva \\ hpsilva@proton.me}
 \date{\today}
 \pgfplotsset{width = 10cm, compat = 1.9}
@@ -52,9 +52,9 @@
 
 \section{Introdução}
 
-\paragraph*{Neste relatório, vamos discutir a ponte de Wheatstone e um metodo experimental para obter uma resistencia desconhecida a partir de um circuito ja conhecido }
+\paragraph*{Neste relatório, vamos discutir a ponte de Wheatstone e um método experimental para obter uma Resistencia desconhecida a partir de um circuito ja conhecido }
 
-\paragraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estao em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/lab circuitos}}
+\paragraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/lab circuitos}}
 
 \subsection{A ponte de Wheatstone}
 \subparagraph*{}
@@ -75,11 +75,11 @@
     \end{circuitikz}
 \end{center}
 
-\subparagraph*{Esta tem como função principal determinar uma resistencia desconhecida $R_4$ a partir de três resistencias e uma corrente previamente conhecidas, que vamos chamar aqui de $V_{cc}$ e $R_1$, $R_2$, e $R_3$.}
+\subparagraph*{Esta tem como função principal determinar uma resistência desconhecida $R_4$ a partir de três resistências e uma corrente previamente conhecidas, que vamos chamar aqui de $V_{cc}$ e $R_1$, $R_2$, e $R_3$.}
 
 \subsection{Obtendo $R_4$}
 
-\subparagraph*{Para obter essa resistencia desconhecida, o que faremos é inicialmente determinar as tensoes $V_a$ e $V_b$ em função das resistencias e da tensão $Vcc$. E apartir dessas determinar uma expressão para $R_4$ }
+\subparagraph*{Para obter essa resistência desconhecida, o que faremos é inicialmente determinar as tensões $V_a$ e $V_b$ em função das resistências e da tensão $Vcc$. E a partir dessas determinar uma expressão para $R_4$ }
 
 \subparagraph*{Montando o sistema e equações e lembrando da soma de resistores em série e em paralelos teremos: }
 
@@ -106,7 +106,7 @@
     \end{aligned}
 \end{equation}
 
-\subparagraph*{Com isso conseguimos facilmente isolar nossa resistencia desconhecida $R_4$ a partir de valores conhecidos do sistema}
+\subparagraph*{Com isso conseguimos facilmente isolar nossa resistência desconhecida $R_4$ a partir de valores conhecidos do sistema}
 
 \subsection{Resultados preliminares}
 
@@ -116,7 +116,7 @@
 \subparagraph*{Para o exemplo preliminar com o seguintes valores iniciais: }
 \subparagraph*{$V_{cc} = 10V$ , $R_1 = 15k\varOmega$ , $R_2 = 47k\varOmega$, $R_3 = 22k\varOmega$ e $R_4 = 10k\varOmega$}
 
-\subparagraph*{Resolvendo em python \href{https://www.online-python.com/AkfwEsRGU9}{(clique aqui para acessar)} as equacoes (1) e (2) teremos o seguinte valores para $V_{a}$  $V_b$ e $V_{ab}$:}
+\subparagraph*{Resolvendo em python \href{https://www.online-python.com/AkfwEsRGU9}{(clique aqui para acessar)} as equações (1) e (2) teremos o seguinte valores para $V_{a}$  $V_b$ e $V_{ab}$:}
 
 \begin{equation*}
     \begin{aligned}
@@ -127,11 +127,79 @@
 \end{equation*}
 
 
-\section{Descricao da pratica}
+\section{Descrição da pratica}
+
+\paragraph*{Nesta pratica montei o circuito descrito em (1.1). }
+
+\paragraph*{Coletei medições deste sistema com todos resistores conhecidos, e apos, com um desconhecido.}
+\paragraph*{Fiz uma analise comparando os resultados experimentais com os resultados experimentais.}
+
+
 
 \section{Resultados}
 
-\section{Conclusao}
+\subsection{Medições do sistema conhecido}
+
+\subparagraph*{Abaixo estão os valores experimentais dos elementos do sistema.}
+
+\subsubsection{Resistores}
+
+\begin{center}
+    \begin{tabular}{ |ccc| }
+        \hline
+        $R_1$ & $\rightarrow$ & $14.907\, m\varOmega$ \\
+        $R_2$ & $\rightarrow$ & $21.930\, m\varOmega$ \\
+        $R_3$ & $\rightarrow$ & $48.600\, m\varOmega$ \\
+        $R_4$ & $\rightarrow$ & $9.835\, m\varOmega$  \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection{Fontes de tensao}
+\subparagraph*{Abaixo estão os valores experimentais das fontes de tensão, e o modulo da diferença $d$ entre os valores experimentais e os esperados teóricos.}
+
+\begin{center}
+    \begin{tabular}{ |ccccc| }
+        \hline
+        $V_{cc}$   & $\rightarrow$ & $10.000\,V$ & $\rightarrow$ & $0\,V$      \\
+        $V_{a}$    & $\rightarrow$ & $5.945\, V$ & $\rightarrow$ & $0.001 \,V$ \\
+        $V_{b}\,$  & $\rightarrow$ & $1.681\, V$ & $\rightarrow$ & $0.073\,V$  \\
+        $V_{ab}\,$ & $\rightarrow$ & $4.262\, V$ & $\rightarrow$ & $0.071\,V$  \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Medições do sistema desconhecido}
+
+\subparagraph{Abaixo estao os $V_{cc}$ e o $V_{ab}$ experimentais, o modulo da diferença $d$ entre o $V_{ab}$ experimental e o teórico, e o $R_4$ conseguido a partir das medições experimentais.}
+
+
+\begin{center}
+    \begin{tabular}{ |ccccccc| }
+        \hline
+        $V_{cc}$   & $$            & $V_{ab}$    & $$            & $R_4$                & $\rightarrow$ & $d$ \\
+        $0.516\,V$ & $\rightarrow$ & $0.007\, V$ & $\rightarrow$ & $66.392\,m\varOmega$ & $\rightarrow$ & $0$ \\
+        $2.497\,V$ & $\rightarrow$ & $0.033\, V$ & $\rightarrow$ & $66.517\,m\varOmega$ & $\rightarrow$ & $0$ \\
+        $4.503\,V$ & $\rightarrow$ & $0.060\, V$ & $\rightarrow$ & $66.478\,m\varOmega$ & $\rightarrow$ & $0$ \\
+        $6.499\,V$ & $\rightarrow$ & $0.086\, V$ & $\rightarrow$ & $66.511\,m\varOmega$ & $\rightarrow$ & $0$ \\
+        $8.500\,V$ & $\rightarrow$ & $0.113\, V$ & $\rightarrow$ & $66.489\,m\varOmega$ & $\rightarrow$ & $0$ \\
+        $9.985\,V$ & $\rightarrow$ & $0.133\, V$ & $\rightarrow$ & $66.479\,m\varOmega$ & $\rightarrow$ & $0$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{equation}
+    \overline{R_4} = 66.478\, m\varOmega
+\end{equation}
+
+\subparagraph*{Creio que meu $d$ deu $0$ porque para consegui-lo eu preciso do $R_4$ que inicialmente é desconhecido. Então eu o calculo de acordo com (3). E (3) utiliza meu $V_{ab}$ experimental e resistências que foram obtidas experimentalmente. Logo quando re-calculo o $V_{ab}$ com o agora conhecido valor de $R_4$, este fica atrelado ao $V_{ab}$ experimental.}
+\subparagraph*{A alternativa seria utilizar resistências teóricas e $V_{cc}$ teóricos. Mas acho que isso não faz sentido porque o objetido do experimento em si é obter o $R_4$, entao a priori, eu não teria um valor teórico para o $R_4$}
+
+\section{Conclusão}
+
+\paragraph*{Utilizando um circuito de \emph{Wheatstone} posso medir pequenas alterações de $V_{ab}$ para descobrir uma resistência desconhecida com bastante precisão.}
+
+\subparagraph*{Esse sistema é bastante robusto para diferentes valores de tensões de fonte. E tambem é significantemente resistente a erros aleatórios de medição.}
 
 \end{document}
 

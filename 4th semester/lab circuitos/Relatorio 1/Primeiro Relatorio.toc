@@ -1,0 +1,13 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {subsection}{\numberline {1.1}A ponte de Wheatstone}{}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Obtendo $R_4$}{}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Resultados preliminares}{}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Descrição da pratica}{}{section.2}%
+\contentsline {section}{\numberline {3}Resultados}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Medições do sistema conhecido}{}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Resistores}{}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Fontes de tensao}{}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Medições do sistema desconhecido}{}{subsection.3.2}%
+\contentsline {subparagraph}{Abaixo estao os $V_{cc}$ e o $V_{ab}$ experimentais, o modulo da diferença $d$ entre o $V_{ab}$ experimental e o teórico, e o $R_4$ conseguido a partir das medições experimentais.}{}{section*.20}%
+\contentsline {section}{\numberline {4}Conclusão}{}{section.4}%
