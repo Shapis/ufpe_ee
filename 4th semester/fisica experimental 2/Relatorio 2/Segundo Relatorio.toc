@@ -1,0 +1,17 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Circuito simples}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Tabela de dados}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Gráfico de corrente por Tensão }{}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Averiguando resistência do Amperímetro}{}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Averiguando resistência do voltímetro}{}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Circuito com resistor e lâmpada}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Tabela de dados}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Comportamento da Lampada}{}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Gráficos I - V para resistor e lâmpada}{}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Conclusões}{}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Circuito com resistor e diodo}{}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Sentido do diodo}{}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Tabela de dados}{}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Gráficos I - V para resistor e diodo}{}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Conclusões}{}{subsection.4.4}%
