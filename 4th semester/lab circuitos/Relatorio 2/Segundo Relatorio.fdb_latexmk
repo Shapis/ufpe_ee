@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1658152689 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 2/Segundo Relatorio.tex" "Segundo Relatorio.pdf" "Segundo Relatorio" 1658152690
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 2/Segundo Relatorio.tex" 1658152688 3308 659b260711c9efc2b736e0928ac214b3 ""
+["pdflatex"] 1658152898 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 2/Segundo Relatorio.tex" "Segundo Relatorio.pdf" "Segundo Relatorio" 1658152899
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 2/Segundo Relatorio.tex" 1658152897 3394 b3e3d943298c99a7f96652a27ae3de9a ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -240,10 +240,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Segundo Relatorio.aux" 1658152689 1048 22d6bb80cc472c7908d1d491802927c6 "pdflatex"
-  "Segundo Relatorio.out" 1658152689 219 7b6d7f8bb6bf0ce3863d903f40cde773 "pdflatex"
-  "Segundo Relatorio.tex" 1658152688 3308 659b260711c9efc2b736e0928ac214b3 ""
-  "Segundo Relatorio.toc" 1658152689 173 835cfc911b1185c4268c36ac9e0011be "pdflatex"
+  "Segundo Relatorio.aux" 1658152898 1048 22d6bb80cc472c7908d1d491802927c6 "pdflatex"
+  "Segundo Relatorio.out" 1658152898 219 7b6d7f8bb6bf0ce3863d903f40cde773 "pdflatex"
+  "Segundo Relatorio.tex" 1658152897 3394 b3e3d943298c99a7f96652a27ae3de9a ""
+  "Segundo Relatorio.toc" 1658152898 173 835cfc911b1185c4268c36ac9e0011be "pdflatex"
   (generated)
   "Segundo Relatorio.aux"
   "Segundo Relatorio.log"

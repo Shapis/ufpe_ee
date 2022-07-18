@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  18 JUL 2022 10:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  18 JUL 2022 11:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -759,7 +759,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--59
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.104 \end{document}
+l.110 \end{document}
                      [2
 
 ] (./Segundo Relatorio.aux)
@@ -767,18 +767,18 @@ Package rerunfilecheck Info: File `"Segundo Relatorio".out' has not changed.
 (rerunfilecheck)             Checksum: 7B6D7F8BB6BF0CE3863D903F40CDE773;219.
  ) 
 Here is how much of TeX's memory you used:
- 51572 strings out of 478238
- 1322217 string characters out of 5850457
+ 51573 strings out of 478238
+ 1322229 string characters out of 5850457
  1999595 words of memory out of 5000000
  69165 multiletter control sequences out of 15000+600000
  478191 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,821b,960s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Segundo Relatorio.pdf" (2 pages, 67411 bytes).
+Output written on "Segundo Relatorio.pdf" (2 pages, 68040 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
+ 74 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
  29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
