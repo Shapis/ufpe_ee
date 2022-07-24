@@ -1,0 +1,9 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Relacoes trigonometricas}{}{section.1}%
+\contentsline {section}{\numberline {2}Metodos de integracao}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Fracoes parciais}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Por partes}{}{subsection.2.2}%
+\contentsline {section}{\numberline {3}EDOs de primeira ordem}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Separavel}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Fator integrante}{}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Exatas}{}{subsection.3.3}%

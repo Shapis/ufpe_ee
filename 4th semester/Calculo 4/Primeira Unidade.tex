@@ -1,0 +1,182 @@
+\documentclass[12pt,twoside, a4paper, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}
+\usepackage{hyperref}
+
+\pgfplotsset{compat=newest}
+
+
+
+%  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
+
+\newcommand{\drawvector} [9] [color=cyan] {
+    \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+
+    
+
+\ifthenelse{\equal{#7}{true}}{
+    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+    }
+    {}
+}
+
+\newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
+
+
+\title{Resumo Calculo 4 Primeira Unidade}
+\author{Henrique da Silva \\ hpsilva@proton.me}
+\date{\today}
+\pgfplotsset{width = 10cm, compat = 1.9}
+
+
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+\newpage
+%pagenumbering{roman}
+\tableofcontents
+\newpage
+
+\section{Relacoes trigonometricas}
+
+\subparagraph*{Todas relacoes trigonometricas podem ser tiradas destas 3 relacoes trigonometricas fundamentais:}
+\begin{equation}
+    \begin{aligned}
+         & \sin(x)^2 + \cos(x)^2  = 1                                 \\
+         & \sin(a+b)              = \sin(a) \cos(b) + \cos(a) \sin(b) \\
+         & \cos(a+b)              = \cos(a) \cos(b) - \sin(a) \sin(b) \\
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Vale a pena lembrar tambem que a funcao $\sin$ eh impar, e a funcao $\cos$ par. Ou seja:}
+
+\begin{equation}
+    \begin{aligned}
+        \sin{-a} & = - \sin{a} \\
+        \cos{-a} & = \cos{a}   \\
+    \end{aligned}
+\end{equation}
+
+\section{Metodos de integracao}
+
+\subsection{Fracoes parciais}
+\subsection{Por partes}
+
+\begin{equation}
+    \int {u dv} = u v - \int{v du}
+\end{equation}
+
+\section{EDOs de primeira ordem}
+
+\subparagraph*{Sao equacoes em que a incognita eh uma funcao de uma variavel, e a equacao involve a derivada da funcao}
+
+\subparagraph*{Por exemplo:}
+
+\begin{equation*}
+    \begin{aligned}
+        y'' - y' + y = x
+    \end{aligned}
+\end{equation*}
+
+\subsection{Separavel}
+\subparagraph*{Se conseguirmos separar a EDO de forma que Tudo que dependa de $y$ esteja de um lado e tudo que dependa de $x$ esteja do outro podemos resolver da seguinte forma:}
+
+\begin{equation}
+    \begin{aligned}
+        \deriv{y}{x}         & = f(x)g(y)    \\
+        \int \frac{dy}{g(y)} & = \int f(x)dx
+    \end{aligned}
+\end{equation}
+
+\subsection{Fator integrante}
+
+\subparagraph*{A ideia deste metodo eh achar um $\mu$ que multiplicando os dois lados da EDO, faca com que um lado vire uma regra do produto. }
+
+\begin{equation}
+    \begin{aligned}
+        a(x)y' + b(x)y          & = c(x)               \\
+        y' + \frac{b(x)}{a(x)}y & =  \frac{c(x)}{a(x)} \\
+        y' + p(x)y              & = q(x)               \\
+        \mu(y' + p(x)y          & = \mu q(x)           \\
+        \mu y' + \mu p(x)y      & = \mu q(x)           \\
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Para transformar o lado esquerdo em uma regra do produto no estilo $(fg)' = f' g + fg'$ precisamos que:}
+
+\begin{equation}
+    \begin{aligned}
+        \deriv{\mu}{x} & = \mu p(x) \\
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Que eh por si eh uma EDO separavel, etnao podemos resolve-la com o metodo das EDOs separaveis }
+
+\begin{equation}
+    \begin{aligned}
+        \int{\frac{d\mu}{\mu}} & = \int{p(x)dx}      \\
+        \ln{|\mu|}             & = \int{p(x)dx}  + C \\
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Porem so preciso de uma unica solucao para isso, e nao todas, ja que estou apenas utilizando essa EDO para resolver uma outra EDO, logo posso escolher uma unica solucao:}
+
+\begin{equation}
+    \begin{aligned}
+        \ln{\mu} & = \int{p(x)dx}                    \\
+        \mu      & = \exp{\left(\int{p(x)dx}\right)}
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{E finalmente temos que:}
+
+\begin{equation}
+    \begin{aligned}
+        \int{(\mu y)'} & = \int{\mu q} \\
+        \mu y          & = \int{\mu q}
+    \end{aligned}
+\end{equation}
+
+\subsection{Exatas}
+
+\subparagraph*{Considerando:}
+
+\begin{equation}
+    M dx + N dy = 0
+\end{equation}
+
+\subparagraph*{Para a EDO ser exata, eh necessario que:}
+
+\begin{equation}
+    \deriv{M}{y} = \deriv{N}{x}
+\end{equation}
+
+\subparagraph*{Neste caso as solucoes sao a funcao potencial da EDO}
+
+\subparagraph*{Por exemplo:}
+\begin{equation}
+    \begin{aligned}
+         & (2x + y^2) + 2xy \deriv{y}{x} = 0 \\
+         & (2x + y^2)\,dx + 2xy \,dy = 0     \\
+         & f_x = (2x + y^2)                  \\
+         & f_y = 2xy
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Daqui eh so tirar uma funcao potenciale a igualar a uma constante}
+
+\end{document}
+
