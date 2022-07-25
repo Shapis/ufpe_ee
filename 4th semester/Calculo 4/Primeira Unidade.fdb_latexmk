@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1657809185 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/Calculo 4/Primeira Unidade.tex" "Primeira Unidade.pdf" "Primeira Unidade" 1657809186
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/Calculo 4/Primeira Unidade.tex" 1657809184 5091 4110a6f731ff106f14b0d4beacb5c312 ""
+["pdflatex"] 1658741149 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/Calculo 4/Primeira Unidade.tex" "Primeira Unidade.pdf" "Primeira Unidade" 1658741150
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/Calculo 4/Primeira Unidade.tex" 1658741149 6013 2835cff595309330544626e15431e6b6 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -242,10 +242,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Primeira Unidade.aux" 1657809186 1764 f3b846dbd9d59cc0b97b7aa76368d2bf "pdflatex"
-  "Primeira Unidade.out" 1657809186 1061 b0c230a8543a35876448e57d6b6c24b6 "pdflatex"
-  "Primeira Unidade.tex" 1657809184 5091 4110a6f731ff106f14b0d4beacb5c312 ""
-  "Primeira Unidade.toc" 1657809186 643 6766cfb8e82d1f2e93aad34801434595 "pdflatex"
+  "Primeira Unidade.aux" 1658741150 2534 2a7b1300c4d7ec628a10c03dc193b767 "pdflatex"
+  "Primeira Unidade.out" 1658741150 2067 63a08bceb025ba65a721f2685c44eed9 "pdflatex"
+  "Primeira Unidade.tex" 1658741149 6013 2835cff595309330544626e15431e6b6 ""
+  "Primeira Unidade.toc" 1658741150 1167 e2977c7b1c3764d8206197a6c179bede "pdflatex"
   (generated)
   "Primeira Unidade.aux"
   "Primeira Unidade.log"

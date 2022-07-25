@@ -6,4 +6,10 @@
 \contentsline {section}{\numberline {3}EDOs de primeira ordem}{}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Separavel}{}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Fator integrante}{}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Exatas}{}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Variavel homogenea}{}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Exatas}{}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Fator integrante para exata}{}{subsection.3.5}%
+\contentsline {section}{\numberline {4}EDOs de segunda ordem}{}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Coefientes inteiros}{}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Equacoes homogenea}{}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Equacao nao homogenea}{}{subsubsection.4.1.2}%

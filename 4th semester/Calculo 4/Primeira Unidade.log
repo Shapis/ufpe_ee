@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  14 JUL 2022 11:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  25 JUL 2022 06:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -752,24 +752,24 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.181 \end{document}
+l.220 \end{document}
                      [2] (./Primeira Unidade.aux)
 Package rerunfilecheck Info: File `"Primeira Unidade".out' has not changed.
-(rerunfilecheck)             Checksum: B0C230A8543A35876448E57D6B6C24B6;1061.
+(rerunfilecheck)             Checksum: 63A08BCEB025BA65A721F2685C44EED9;2067.
  ) 
 Here is how much of TeX's memory you used:
- 50946 strings out of 478238
- 1304989 string characters out of 5850457
- 1990589 words of memory out of 5000000
- 68514 multiletter control sequences out of 15000+600000
+ 50964 strings out of 478238
+ 1305251 string characters out of 5850457
+ 1995599 words of memory out of 5000000
+ 68520 multiletter control sequences out of 15000+600000
  478022 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,9n,118p,804b,780s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "Primeira Unidade.pdf" (2 pages, 103366 bytes).
+Output written on "Primeira Unidade.pdf" (2 pages, 106025 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 181 PDF objects out of 1000 (max. 8388607)
+ 157 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
