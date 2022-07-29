@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1659082513 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 3/Terceiro Relatorio.tex" "Terceiro Relatorio.pdf" "Terceiro Relatorio" 1659082514
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 3/Terceiro Relatorio.tex" 1659082512 6964 41671a4ea3aaebf0f1a0361dd63fa904 ""
+["pdflatex"] 1659082879 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 3/Terceiro Relatorio.tex" "Terceiro Relatorio.pdf" "Terceiro Relatorio" 1659082880
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 3/Terceiro Relatorio.tex" 1659082878 7008 69d4cf9162cf08b0decc1534a9fc8ec0 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -246,10 +246,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Terceiro Relatorio.aux" 1659082514 3370 4bab53061ae2ce36872fb8361fd8bea2 "pdflatex"
-  "Terceiro Relatorio.out" 1659082514 3450 8565855c1edb5c176a58705bc4f1731b "pdflatex"
-  "Terceiro Relatorio.tex" 1659082512 6964 41671a4ea3aaebf0f1a0361dd63fa904 ""
-  "Terceiro Relatorio.toc" 1659082514 1839 f59c4f2d65f43b3cde0de928271e8295 "pdflatex"
+  "Terceiro Relatorio.aux" 1659082880 3381 1892d6acb775df69948b506e15be9a8d "pdflatex"
+  "Terceiro Relatorio.out" 1659082880 3470 a2da167647abf481aff64b769eecdcad "pdflatex"
+  "Terceiro Relatorio.tex" 1659082878 7008 69d4cf9162cf08b0decc1534a9fc8ec0 ""
+  "Terceiro Relatorio.toc" 1659082880 1850 752289274333d7032690262b6b75f942 "pdflatex"
   "images//Graph2.png" 1659081362 694285 a08a76e29f82159dd1819658e332b988 ""
   (generated)
   "Terceiro Relatorio.aux"

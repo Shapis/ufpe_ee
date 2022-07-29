@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  29 JUL 2022 05:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  29 JUL 2022 05:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -781,6 +781,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 112.
 
 
+Underfull \hbox (badness 2753) in paragraph at lines 130--130
+\OT1/cmr/bx/n/12 de-tec-tar este au-mento, por^^Sem se con-
+ []
+
+
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 130.
 
@@ -826,18 +831,18 @@ l.185 \end{document}
 
 ] (./Terceiro Relatorio.aux)
 Package rerunfilecheck Info: File `"Terceiro Relatorio".out' has not changed.
-(rerunfilecheck)             Checksum: 8565855C1EDB5C176A58705BC4F1731B;3450.
+(rerunfilecheck)             Checksum: A2DA167647ABF481AFF64B769EECDCAD;3470.
  ) 
 Here is how much of TeX's memory you used:
- 51598 strings out of 478238
- 1322426 string characters out of 5850457
- 2008620 words of memory out of 5000000
- 69153 multiletter control sequences out of 15000+600000
+ 51602 strings out of 478238
+ 1322459 string characters out of 5850457
+ 2008626 words of memory out of 5000000
+ 69157 multiletter control sequences out of 15000+600000
  478550 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,830b,913s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Terceiro Relatorio.pdf" (3 pages, 145778 bytes).
+Output written on "Terceiro Relatorio.pdf" (3 pages, 146867 bytes).
 PDF statistics:
  212 PDF objects out of 1000 (max. 8388607)
  181 compressed objects within 2 object streams

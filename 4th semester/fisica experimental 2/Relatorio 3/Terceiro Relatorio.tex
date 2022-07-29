@@ -17,31 +17,31 @@
 \usepackage{graphicx}
 \pgfplotsset{compat=newest}
 \graphicspath{ {./images/} }
-
-
+ 
+ 
 %  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
-
+ 
 \newcommand{\drawvector} [9] [color=cyan] {
-    \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
-
-    
-
+   \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+ 
+  
+ 
 \ifthenelse{\equal{#7}{true}}{
-    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
-    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
-    }
-    {}
+   \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+   \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+   }
+   {}
 }
-
+ 
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
-
-
-\title{Primeiro Relatório de Lab de Circuitos}
+ 
+ 
+\title{Terceiro Relatório de Física Experimental 2}
 \author{Henrique da Silva \\ hpsilva@proton.me}
 \date{\today}
 \pgfplotsset{width = 10cm, compat = 1.9}
-
-
+ 
+ 
 \begin{document}
 \maketitle
 \pagenumbering{gobble}
@@ -52,9 +52,9 @@
 
 \section{Introdução}
 
-\paragraph*{Neste relatório, vamos discutir a ponte de Wheatstone e um método experimental para obter uma resistência desconhecida a partir de um circuito ja conhecido }
+\paragraph*{Neste relatório, vamos discutir a ponte de Wheatstone e um método experimental para obter uma resistência desconhecida a partir de um circuito já conhecido }
 
-\paragraph*{Todos arquivos utilizados para criar este relatório, e o relatório em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/fisica experimental 2}}
+\paragraph*{Todos arquivos utilizados para criar este relatório, e o relatório em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/}}
 
 \subsection{A ponte de Wheatstone}
 \subparagraph*{}
@@ -84,11 +84,11 @@
 
 \subsection{Obtendo $R_x$}
 
-\subparagraph*{Para obter essa resistência desconhecida, o que faremos é inicialmente determinar a corrente $A$. E tentar modificar a resistencia $R_k$ ate esta corrente $A$ se aproximar de $0$}
+\subparagraph*{Para obter essa resistência desconhecida, o que faremos é inicialmente determinar a corrente $A$. E tentar modificar a resistência $R_k$ até esta corrente $A$ se aproximar de $0$}
 
-\subparagraph*{A ideia central disto eh que a corrente que esta saindo da fonte vai se dividir em $C$, e se $R_1 * R_x = R_k * R_2$ entao o sistema estara balanceado e a corrente $A$ sera 0.}
+\subparagraph*{A ideia central disso é que a corrente que está saindo da fonte vai se dividir em $C$, e se $R_1 * R_x = R_k * R_2$ então o sistema estará balanceado e a corrente $A$ será 0.}
 
-\subparagraph*{Ja que escolhemos o valor de $R_1$, $R_2$, e $R_k$, vamos poder determinar $R_x$ como a seguinte equacao:}
+\subparagraph*{Já que escolhemos o valor de $R_1$, $R_2$, e $R_k$, vamos poder determinar $R_x$ como a seguinte equação:}
 
 
 \begin{equation}
@@ -98,40 +98,40 @@
     \end{aligned}
 \end{equation}
 
-\subparagraph*{Apesar de termos escolhido $R_1$ e $R_2$ iguais, nao simplifiquei a equacao para $R_x = R_k$. Porque perderia as incertezas de $R_1$ e $R_2$. }
+\subparagraph*{Apesar de termos escolhido $R_1$ e $R_2$ iguais, não simplifiquei a equação para $R_x = R_k$. Porque perderia as incertezas de $R_1$ e $R_2$. }
 
 
 
 
 \section{Tarefas}
+a
+\subsection{Aumenta a tensão da fonte até a corrente em A atingir 9mA}
 
-\subsection{Aument a tensao da fonte ate a corrente em A atingir 9mA}
-
-\subparagraph*{Fizemos isto com um $R_k$ fixo em $0$. E conseguimos uma tensao de $0.9V \pm 0.1V$ nos terminais da fonte}
+\subparagraph*{Fizemos isto com um $R_k$ fixo em $0$. E conseguimos uma tensão de $0.9V \pm 0.1V$ nos terminais da fonte}
 
 \subsection{Varie a resistencia $R_k$ ate balancear a ponte de Wheatstone}
 
-\subparagraph*{Neste caso a resistencia $R_x$ se iguala a resistencia $R_k$, obedecendo as devidas regras de derivacao de erro a partir dos erros conhecidos conseguimos:}
+\subparagraph*{Neste caso a resistência $R_x$ se iguala a resistência $R_k$, obedecendo as devidas regras de derivação de erro a partir dos erros conhecidos conseguimos:}
 
 \begin{equation}
     R_k = (5.6 \pm 0.1) * 10^3 \varOmega
 \end{equation}
 
-\subsection{Com a ponte balanceada, aumente a tensao da fonte}
+\subsection{Com a ponte balanceada, aumente a tensão da fonte}
 
 \paragraph*{Ela se manteve em zero.}
 
-\paragraph*{O amperimetro vai estar medindo uma porcentagem de desbalanceamento na ponte. }
+\paragraph*{O amperímetro vai estar medindo uma porcentagem de desbalanceamento na ponte. }
 
-\paragraph*{Se a corrente que entra em $C$ aumenta, e a ponte esta desbalanceada. A corrente passando pelo amperimetro tambem aumenta.}
+\paragraph*{Se a corrente que entra em $C$ aumenta, e a ponte está desbalanceada. A corrente passando pelo amperímetro também aumenta.}
 
-\paragraph*{No nosso caso em particular, nao foi possivel detectar este aumento, porem se constinuassemos aumentando a tensao da fonte, eventualmente veriamos o residuo do desbalanceamento passando pelo amperimetro.}
+\paragraph*{No nosso caso em particular, não foi possível detectar este aumento, porém se continuássemos aumentando a tensão da fonte, eventualmente veríamos o resíduo do desbalanceamento passando pelo amperímetro.}
 
 \subsection{Verifique o funcionamento com um resistor de $12k \varOmega$}
 
-\paragraph*{Fizemos a verificacao, e conseguimos igualar o $R_k$ a $12k \varOmega$ resultando em uma corrente minima passando por $A$. }
+\paragraph*{Fizemos a verificação, e conseguimos igualar o $R_k$ a $12k \varOmega$ resultando em uma corrente mínima passando por $A$. }
 
-\paragraph*{Esta corrente minima estava na ordem de $10^-6 A$, ela existe por causa dos erros associados as medidas do circuito. Em um circuito ideal ela seria 0.}
+\paragraph*{Esta corrente mínima estava na ordem de $10^-6 A$, ela existe por causa dos erros associados às medidas do circuito. Em um circuito ideal ela seria 0.}
 
 \subsection{Medindo resistencia da lampada}
 
@@ -140,7 +140,7 @@
 \begin{center}
     \begin{tabular}{ |cc| }
         \hline
-        Tensão (V)       & Resistencia L ($\varOmega$) \\
+        Tensão (V)       & Resistência L ($\varOmega$) \\
         $2.00$ $\pm0.05$ & $9$ $\pm1$                  \\
         $4.00$ $\pm0.05$ & $13$ $\pm1$                 \\
         $6.00$ $\pm0.05$ & $15$ $\pm1$                 \\
@@ -154,33 +154,32 @@
     \includegraphics{Graph2.png}
 \end{adjustbox}
 
-\subsubsection{Interpretacao de resultados}
+\subsubsection{Interpretação de resultados}
 
-\subparagraph*{O resultado eh coerente com o esperado. Que seria o caso da lampada ser um caso de comportamento nao Ohmico, e que sua resistencia sobe de acordo com a tensao aplicada.}
+\subparagraph*{O resultado é coerente com o esperado. Que seria o caso da lâmpada ser um caso de comportamento não ôhmico, e que sua resistência sobe de acordo com a tensão aplicada.}
 
 
 \subsection{Comportamento do LDR}
 
-\subparagraph*{Aplicamos uma tensao de $1.00V \pm 0.05$ no circuito, que resultou em uma corrente de $10.06mA \pm 0.1mA$ entrando no LDR antes do balanceamento.}
+\subparagraph*{Aplicamos uma tensão de $1.00V \pm 0.05$ no circuito, que resultou em uma corrente de $10.06mA \pm 0.1mA$ entrando no LDR antes do balanceamento.}
 
 \subsubsection{Balanceamento com luz aplicada}
 
-\subparagraph*{Neste caso conseguimos uma resistencia de $1.7*10^{3} \varOmega \pm 10^2 \varOmega$}
+\subparagraph*{Neste caso conseguimos uma resistência de $1.7*10^{3} \varOmega \pm 10^2 \varOmega$}
 
 \subsubsection{Balanceamento sem luz aplicada}
 
-\subparagraph*{Neste caso conseguimos uma resistencia de $7*10^{4} \varOmega \pm 10^4 \varOmega$}
+\subparagraph*{Neste caso conseguimos uma resistência de $7*10^{4} \varOmega \pm 10^4 \varOmega$}
 
 \subsubsection{Interpretacao de resultados}
 
-\subparagraph*{Podemos observar que a resistencia aumenta uma ordem de magnitude quando a luz eh removida. }
+\subparagraph*{Podemos observar que a resistência aumenta uma ordem de magnitude quando a luz é removida. }
 
-\subparagraph{Tambem foi observado que o sistema eh extremamente sensivel a mudancas pequenas de luz. Uma "sombra" leve ja faz a resistencia variar significantemente.}
+\subparagraph{Também foi observado que o sistema é extremamente sensível a mudanças pequenas de luz. Uma "sombra" leve já faz a resistência variar significantemente.}
 
 \section{Conclusão}
 
 \subparagraph*{Utilizando um circuito de \emph{Wheatstone} posso medir pequenas alterações de $corrente$ para descobrir uma resistência desconhecida com bastante precisão.}
 
-\subparagraph*{Esse sistema é bastante robusto para diferentes valores de tensões de fonte. E tambem é significantemente resistente a erros aleatórios de medição.}
+\subparagraph*{Esse sistema é bastante robusto para diferentes valores de tensões de fonte. E também é significantemente resistente a erros aleatórios de medição.}
 \end{document}
-
