@@ -1,0 +1,19 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {subsection}{\numberline {1.1}A ponte de Wheatstone}{}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Obtendo $R_x$}{}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Tarefas}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Aument a tensao da fonte ate a corrente em A atingir 9mA}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Varie a resistencia $R_k$ ate balancear a ponte de Wheatstone}{}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Com a ponte balanceada, aumente a tensao da fonte}{}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Verifique o funcionamento com um resistor de $12k \varOmega $}{}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Medindo resistencia da lampada}{}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Tabela de dados}{}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Grafico}{}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.3}Interpretacao de resultados}{}{subsubsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.6}Comportamento do LDR}{}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Balanceamento com luz aplicada}{}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Balanceamento sem luz aplicada}{}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}Interpretacao de resultados}{}{subsubsection.2.6.3}%
+\contentsline {subparagraph}{Tambem foi observado que o sistema eh extremamente sensivel a mudancas pequenas de luz. Uma "sombra" leve ja faz a resistencia variar significantemente.}{}{section*.23}%
+\contentsline {section}{\numberline {3}Conclusão}{}{section.3}%
