@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1658152898 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 2/Segundo Relatorio.tex" "Segundo Relatorio.pdf" "Segundo Relatorio" 1658152899
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 2/Segundo Relatorio.tex" 1658152897 3394 b3e3d943298c99a7f96652a27ae3de9a ""
+["pdflatex"] 1659322534 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 2/Segundo Relatorio.tex" "Segundo Relatorio.pdf" "Segundo Relatorio" 1659322535
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 2/Segundo Relatorio.tex" 1659322534 6042 947aa457b1f162e23dddfee2ddab095f ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -23,9 +23,12 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm" 1650183167 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1650183167 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1650183167 36741 fa121aac0049305630cf160b86157ee4 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1650183167 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1650183167 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1650183167 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1650183167 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1650183167 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1650183167 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb" 1650183167 24252 1e4e051947e12dfb50fee0b7f4e26e3a ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1650183167 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1650183167 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -240,10 +243,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Segundo Relatorio.aux" 1658152898 1048 22d6bb80cc472c7908d1d491802927c6 "pdflatex"
-  "Segundo Relatorio.out" 1658152898 219 7b6d7f8bb6bf0ce3863d903f40cde773 "pdflatex"
-  "Segundo Relatorio.tex" 1658152897 3394 b3e3d943298c99a7f96652a27ae3de9a ""
-  "Segundo Relatorio.toc" 1658152898 173 835cfc911b1185c4268c36ac9e0011be "pdflatex"
+  "Segundo Relatorio.aux" 1659322535 1480 2b1ea1cf093bbea7f6bc05194dbe09ba "pdflatex"
+  "Segundo Relatorio.out" 1659322535 1002 38dee18fb0070c240efe97edfa750b08 "pdflatex"
+  "Segundo Relatorio.tex" 1659322534 6042 947aa457b1f162e23dddfee2ddab095f ""
+  "Segundo Relatorio.toc" 1659322535 482 ce26395b1f3cc857093099344e13c0e1 "pdflatex"
   (generated)
   "Segundo Relatorio.aux"
   "Segundo Relatorio.log"

@@ -50,11 +50,17 @@
 \tableofcontents
 \newpage
 
+
+
 \section{Introdução}
 
-\paragraph*{Neste relatório, vamos discutir transistores, e como controlar a passagem de corrente alta por um circuito a partir de uma corrente mais baixa conectada em um transistor. }
 
-\paragraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/lab circuitos}}
+\subparagraph*{Neste relatório, vamos discutir transistores, e como controlar a passagem de corrente alta por um circuito a partir de uma corrente mais baixa conectada em um transistor.}
+
+\subparagraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/lab circuitos}}
+
+
+
 
 \subsection{O Transistor}
 \subparagraph*{}
@@ -80,6 +86,8 @@
 
 \subparagraph*{Podemos tambem olhar pra ele da seguinte maneira:}
 
+
+
 \begin{center}
     \begin{circuitikz}
         \draw (2,2)
@@ -101,11 +109,89 @@
 
 \subparagraph*{Podemos ver entao $\beta$ como a proporcao entre a corrente no circuito principal e a corrente no circuito de ativacao.}
 
+
+
 \begin{equation}
     \begin{aligned}
         I_E = I_B + \beta I_B \\
     \end{aligned}
 \end{equation}
+
+\subsection{Obtendo a resistencia de Thevenin/Norton}
+
+
+\subparagraph*{Primeiro vale lembrar que a resisencia de Thevenin e a de Norton sao iguais. Logo obtendo uma tambem obteremos a outra.
+}
+
+\subparagraph*{Neste caso, resolvendo o sistema vamos obter que esta resistencia eh igual a $R_{c}$}
+
+\begin{equation}
+    \begin{aligned}
+        R_c = R_{th} = R_{no}
+    \end{aligned}
+\end{equation}
+
+\subsection{Obtendo a tensao de Thevenim e a corrente de Norton}
+
+\subparagraph*{Basta obtermos um deles, pois temos a seguinte relacao:}
+
+\begin{equation}
+    \begin{aligned}
+        V_{th} = I_{no} * R_{th/no}
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{E vou usar a convencao que a soma de todas correntes de saem de um no eh = a 0 para simplificar os calculos e minimizar erros de sinal}
+
+\subparagraph*{Isto me da as seguintes equacoes:}
+
+\begin{equation}
+    \begin{aligned}
+        \frac{V_b - V_{cc}}{R_1} + \frac{V_b}{R_2} - I_b & = 0 \\
+        \frac{V_e - V_{cc}}{R_e} + I_b + \beta*I_b       & = 0 \\
+        -\beta*I_b + \frac{V_c}{R_c}                     & = 0 \\
+        V_b + {V_be0} - V_e                              & = 0 \\
+    \end{aligned}
+\end{equation}
+
+\subsection{Resultados Preliminares}
+
+\subparagraph*{As simplificacoes e resolucoes das equacoes (4) foram feitas em python e estao dentro do zip enviado e na pasta do github mencionada na introducao}
+
+\subparagraph*{As resolucoes foram analisando o caso particular em que $V_{cc} = 10V$, $R_1 = 220 \varOmega$, $R_2 = 1500 \varOmega$, $R_e = 150\varOmega$, $R_c = 1500\varOmega$, $\beta = 100$, $V_{be0} = 0.7V$}
+
+\subparagraph*{Observacao: Na aula foi feito $R_1 = 200 \varOmega$, e no roteiro o $R_1 = 220 \varOmega$ entao resultados obtidos sao um pouco diferentes dos resultados de aula, porem testando com $R_1 = 200 \varOmega$ obtenho exatamente os mesmos valores obtidos em aula.}
+
+
+\subparagraph*{Resultados para potencia de Thevenim maxima}
+
+\begin{center}
+    \begin{tabular}{ |ccc| }
+        \hline
+        $V_{th}$     & $\rightarrow$ & $5.66V$          \\
+        $R_{th}$     & $\rightarrow$ & $1500 \varOmega$ \\
+        $I_{no}$     & $\rightarrow$ & $0.00377 A$      \\
+        $R_{no}$     & $\rightarrow$ & $1500 \varOmega$ \\
+        $G_{no}$     & $\rightarrow$ & $0.00067 S$      \\
+        $R_{max}$    & $\rightarrow$ & $1500 \varOmega$ \\
+        $P_{max}$    & $\rightarrow$ & $0.00534W$       \\
+        $P_{V_{cc}}$ & $\rightarrow$ & $0.1W$           \\
+
+        \hline
+    \end{tabular}
+\end{center}
+
+
+% \subparagraph*{Resultados para cargas de $100 \varOmega$, $1k \varOmega$, $2k \varOmega$ e $20k \varOmega$}
+
+
+
+
+
+
+
+
+
 
 \end{document}
 

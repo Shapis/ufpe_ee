@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  18 JUL 2022 11:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  31 JUL 2022 23:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -741,14 +741,19 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./Segundo Relatorio.toc)
+) (./Segundo Relatorio.toc
+Underfull \hbox (badness 1033) in paragraph at lines 4--4
+ [][] [][]\OT1/cmr/m/n/12 Obtendo a re-sis-ten-cia de The-ve- 
+ []
+
+)
 \tf@toc=\write5
 \openout5 = `"Segundo Relatorio.toc"'.
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 59.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 65.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
 []$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
  []
 
@@ -759,26 +764,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--59
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.110 \end{document}
-                     [2
-
-] (./Segundo Relatorio.aux)
+l.196 \end{document}
+                     [2] (./Segundo Relatorio.aux)
 Package rerunfilecheck Info: File `"Segundo Relatorio".out' has not changed.
-(rerunfilecheck)             Checksum: 7B6D7F8BB6BF0CE3863D903F40CDE773;219.
+(rerunfilecheck)             Checksum: 38DEE18FB0070C240EFE97EDFA750B08;1002.
  ) 
 Here is how much of TeX's memory you used:
- 51573 strings out of 478238
- 1322229 string characters out of 5850457
- 1999595 words of memory out of 5000000
- 69165 multiletter control sequences out of 15000+600000
+ 51591 strings out of 478238
+ 1322453 string characters out of 5850457
+ 2001596 words of memory out of 5000000
+ 69168 multiletter control sequences out of 15000+600000
  478191 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,8n,118p,821b,960s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Segundo Relatorio.pdf" (2 pages, 68040 bytes).
+ 115i,9n,118p,821b,960s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on "Segundo Relatorio.pdf" (2 pages, 104643 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 120 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
+ 28 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
