@@ -34,3 +34,4 @@
 \contentsline {subsection}{\numberline {9.4}Divisao}{}{}%
 \contentsline {subsection}{\numberline {9.5}Radiciacao}{}{}%
 \contentsline {section}{\numberline {10}Inversao complexa}{}{}%
+\contentsline {section}{\numberline {11}asds}{}{}%
