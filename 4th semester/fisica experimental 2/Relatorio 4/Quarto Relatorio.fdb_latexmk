@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1660297198 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 4/Quarto Relatorio.tex" "Quarto Relatorio.pdf" "Quarto Relatorio" 1660297205
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 4/Quarto Relatorio.tex" 1660297191 14325 dd2d46675ae63f2193ad95926d94ad43 ""
+["pdflatex"] 1660319399 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 4/Quarto Relatorio.tex" "Quarto Relatorio.pdf" "Quarto Relatorio" 1660319405
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 4/Quarto Relatorio.tex" 1660319397 14323 c049b98a05f51a406ebe379e9f28a2bb ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -244,10 +244,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Quarto Relatorio.aux" 1660297204 4044 e9f1cf904a633324b1ed44c7c2526dbf "pdflatex"
-  "Quarto Relatorio.out" 1660297204 6157 d1248734410fe9c948321c0743fbeff2 "pdflatex"
-  "Quarto Relatorio.tex" 1660297191 14325 dd2d46675ae63f2193ad95926d94ad43 ""
-  "Quarto Relatorio.toc" 1660297204 2390 16de07ae2c36d27e73d288349d33b05c "pdflatex"
+  "Quarto Relatorio.aux" 1660319405 4044 e9f1cf904a633324b1ed44c7c2526dbf "pdflatex"
+  "Quarto Relatorio.out" 1660319405 6157 d1248734410fe9c948321c0743fbeff2 "pdflatex"
+  "Quarto Relatorio.tex" 1660319397 14323 c049b98a05f51a406ebe379e9f28a2bb ""
+  "Quarto Relatorio.toc" 1660319405 2390 16de07ae2c36d27e73d288349d33b05c "pdflatex"
   "images//Graph2.png" 1660295268 694285 6efa806473e95d2a2061284377b0bab6 ""
   "images//Graph3.png" 1660295268 694285 84ba0ddb80a5ad314efbd79a2962126f ""
   (generated)
