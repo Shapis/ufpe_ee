@@ -1,0 +1,17 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Funcionamento basico de um osciloscopio}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Comparando as ondas geradas com a visualizacao no osciloscopio}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Graficos das ondas observadas}{}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Grafico da tensao $V_{ad}$ pelo tempo em milisegundos no acoplamento AC}{}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Grafico da tensao $V_{ad}$ pelo tempo em milisegundos no acoplamento DC}{}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Grafico da tensao $V_{bd}$ pelo tempo em milisegundos no acoplamento AC}{}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Grafico da tensao $V_{bd}$ pelo tempo em milisegundos no acoplamento DC}{}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Grafico da tensao $V_{cd}$ pelo tempo em milisegundos no acoplamento AC}{}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}Grafico da tensao $V_{cd}$ pelo tempo em milisegundos no acoplamento DC}{}{subsubsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.3}Medindo $V_{ab}$ , $V_{bd}$, e $V_{cd}$}{}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Papel do capacitor}{}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Equacoes das tensoes}{}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Medicoes no multimetro}{}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Diferenca entre valores medios e RMS}{}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Carga e descarga de um capacitor}{}{section.3}%
