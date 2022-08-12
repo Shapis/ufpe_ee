@@ -1168,6 +1168,16 @@ OUTPUT Quarto Relatorio.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT ./images//Graph2.png
+INPUT ./images//Graph2.png
+INPUT ./images//Graph2.png
+INPUT ./images//Graph2.png
+INPUT ./images//Graph2.png
+INPUT ./images//Graph3.png
+INPUT ./images//Graph3.png
+INPUT ./images//Graph3.png
+INPUT ./images//Graph3.png
+INPUT ./images//Graph3.png
 INPUT Quarto Relatorio.aux
 INPUT ./Quarto Relatorio.out
 INPUT ./Quarto Relatorio.out
@@ -1177,5 +1187,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb

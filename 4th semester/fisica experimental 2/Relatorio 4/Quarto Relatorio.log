@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  12 AUG 2022 05:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  12 AUG 2022 06:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -942,7 +942,7 @@ l.269 \clearpage
 
 
 ]
-Overfull \hbox (271.88206pt too wide) in paragraph at lines 323--324
+Overfull \hbox (268.93391pt too wide) in paragraph at lines 333--334
 [] 
  []
 
@@ -950,27 +950,68 @@ Overfull \hbox (271.88206pt too wide) in paragraph at lines 323--324
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.326 \end{document}
-                     [6
+l.337 \clearpage
+                 [6
+
+
+]
+<./images//Graph2.png, id=173, 370.38374pt x 264.99pt>
+File: ./images//Graph2.png Graphic file (type png)
+<use ./images//Graph2.png>
+Package pdftex.def Info: ./images//Graph2.png  used on input line 375.
+(pdftex.def)             Requested size: 370.38283pt x 264.98935pt.
+
+Overfull \hbox (1.6479pt too wide) in paragraph at lines 374--377
+[] 
+ []
+
+<./images//Graph3.png, id=175, 370.38374pt x 264.99pt>
+File: ./images//Graph3.png Graphic file (type png)
+<use ./images//Graph3.png>
+Package pdftex.def Info: ./images//Graph3.png  used on input line 379.
+(pdftex.def)             Requested size: 370.38283pt x 264.98935pt.
+
+Overfull \hbox (1.6479pt too wide) in paragraph at lines 378--381
+[] 
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.415 \clearpage
+                 [7
+
+ <./images//Graph2.png> <./images//Graph3.png>]
+Overfull \hbox (280.68379pt too wide) in paragraph at lines 475--476
+[][] 
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.479 \end{document}
+                     [8
 
 
 ] (./Quarto Relatorio.aux)
 Package rerunfilecheck Info: File `"Quarto Relatorio".out' has not changed.
-(rerunfilecheck)             Checksum: 05AA1F65594FE132F75BED0FA6CF7AF8;4671.
+(rerunfilecheck)             Checksum: 1316C32B3DE0BEB8BDC6926A67A6CB4F;6088.
  ) 
 Here is how much of TeX's memory you used:
- 51506 strings out of 478238
- 1320242 string characters out of 5850457
- 2431756 words of memory out of 5000000
- 69081 multiletter control sequences out of 15000+600000
+ 51563 strings out of 478238
+ 1321223 string characters out of 5850457
+ 2484893 words of memory out of 5000000
+ 69116 multiletter control sequences out of 15000+600000
  478191 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,9n,118p,828b,1920s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Quarto Relatorio.pdf" (6 pages, 219530 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on "Quarto Relatorio.pdf" (8 pages, 344468 bytes).
 PDF statistics:
- 186 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 256 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 191 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1660292616 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 4/Quarto Relatorio.tex" "Quarto Relatorio.pdf" "Quarto Relatorio" 1660292620
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 4/Quarto Relatorio.tex" 1660292615 9562 98588ef0c823027bda946b4f613952da ""
+["pdflatex"] 1660296940 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 4/Quarto Relatorio.tex" "Quarto Relatorio.pdf" "Quarto Relatorio" 1660296947
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 4/Quarto Relatorio.tex" 1660296940 14303 6569433e348574e8744a38782bfab17e ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -27,7 +27,9 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1650183167 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1650183167 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1650183167 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1650183167 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1650183167 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1650183167 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb" 1650183167 24252 1e4e051947e12dfb50fee0b7f4e26e3a ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1650183167 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1650183167 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -242,10 +244,12 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Quarto Relatorio.aux" 1660292620 3283 6e61cc3a0692e1aa58c5141b83d7e2ef "pdflatex"
-  "Quarto Relatorio.out" 1660292620 4671 05aa1f65594fe132f75bed0fa6cf7af8 "pdflatex"
-  "Quarto Relatorio.tex" 1660292615 9562 98588ef0c823027bda946b4f613952da ""
-  "Quarto Relatorio.toc" 1660292620 1834 8631ea1629da04663adedde10e4b4a74 "pdflatex"
+  "Quarto Relatorio.aux" 1660296946 4021 c043cb9c41736424bc078228f3dbb724 "pdflatex"
+  "Quarto Relatorio.out" 1660296946 6088 1316c32b3de0beb8bdc6926a67a6cb4f "pdflatex"
+  "Quarto Relatorio.tex" 1660296940 14303 6569433e348574e8744a38782bfab17e ""
+  "Quarto Relatorio.toc" 1660296946 2367 f8e18a4ac1c3f2335ed4ecd5ea9a29f7 "pdflatex"
+  "images//Graph2.png" 1660295268 694285 6efa806473e95d2a2061284377b0bab6 ""
+  "images//Graph3.png" 1660295268 694285 84ba0ddb80a5ad314efbd79a2962126f ""
   (generated)
   "Quarto Relatorio.aux"
   "Quarto Relatorio.log"

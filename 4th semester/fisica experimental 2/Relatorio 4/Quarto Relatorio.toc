@@ -15,3 +15,8 @@
 \contentsline {subsection}{\numberline {2.6}Medicoes no multimetro}{}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Diferenca entre valores medios e RMS}{}{subsection.2.7}%
 \contentsline {section}{\numberline {3}Carga e descarga de um capacitor}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Grafico de Tensao sobre tempo da carga e descarga de um capacitor sob acao de uma fonte de tensao quadratica}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Tabelas de estimativa}{}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Graficos das tabelas acima}{}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Discuta os resultados:}{}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Invertendo capacitor e resistor}{}{subsection.3.5}%

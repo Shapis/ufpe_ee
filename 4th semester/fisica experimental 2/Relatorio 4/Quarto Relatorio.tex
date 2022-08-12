@@ -270,12 +270,14 @@
 
 \section{Carga e descarga de um capacitor}
 
+\subsection{Grafico de Tensao sobre tempo da carga e descarga de um capacitor sob acao de uma fonte de tensao quadratica}
+
 \begin{tikzpicture}
     \begin{axis}[
             ylabel={Tensao $V$},
-            xlabel={Constante de tempo $\tau$ em ms},
-            xmin = 0, xmax = 10,
-            ymin = -4, ymax = 5.0,
+            xlabel={Temp $s$ em ms},
+            xmin = 0, xmax = 9,
+            ymin = -1, ymax = 5.0,
             xtick distance = 1,
             ytick distance = 1,
             grid = both,
@@ -285,42 +287,193 @@
             width = \textwidth,
             height = 0.5\textwidth]
         \addplot[
-            domain = 0:2,
+            domain = 0:1.5,
             samples = 400,
             smooth,
             thick,
             blue,
-        ] {4*(1-e^-x/0.4)};
+        ] {4*(1-e^-x/0.3)};
         \addplot[
-            domain = 2:4,
+            domain = 1.5:3,
             samples = 400,
             smooth,
             thick,
             blue,
-        ] {4*e^-(x-2)/0.4};
+        ] {4*e^-(x-1.5)/0.3};
         \addplot[
-            domain = 4:6,
+            domain = 3:4.5,
             samples = 400,
             smooth,
             thick,
             blue,
-        ] {4*(1-e^-(x-4)/0.4)};
+        ] {4*(1-e^-(x-3)/0.3)};
         \addplot[
-            domain = 6:8,
+            domain = 4.5:6,
             samples = 400,
             smooth,
             thick,
             blue,
-        ] {4*e^-(x-6)/0.4};
+        ] {4*e^-(x-4.5)/0.3};
         \addplot[
-            domain = 8:10,
+            domain = 6:7.5,
             samples = 400,
             smooth,
             thick,
             blue,
-        ] {4*(1-e^-(x-8)/0.4)};
+        ] {4*(1-e^-(x-6)/0.3)};
+        \addplot[
+            domain = 7.5:9,
+            samples = 400,
+            smooth,
+            thick,
+            blue,
+        ] {4*e^-(x-7.5)/0.3};
+
     \end{axis}
 \end{tikzpicture}
+
+\subparagraph*{Neste ponto seria interessante notar que a constante de tempo $RC = \tau$ eh igual a cinco vezes o tempo de decaimento ou de subida de tensao do capacitor. ou seja. $3ms/10$ ou seja. $0.3ms$}
+
+\clearpage
+
+\subsection{Tabelas de estimativa}
+
+
+\paragraph*{Tabela1: Carga}
+\begin{center}
+    \begin{tabular}{ |cc| }
+        \hline
+        $Tensao, V_{c} \pm 0.2V$ & $Tempo, t \pm 0.1ms$ \\
+        $2.5 V$                  & 0.3 ms               \\
+        $3.5 V$                  & 0.6 ms               \\
+        $3.8 V$                  & 0.9 ms               \\
+        $3.9 V$                  & 1.2 ms               \\
+        $4.0 V$                  & 1.5 ms               \\
+        \hline
+    \end{tabular}
+\end{center}
+
+
+
+\paragraph*{Tabela1: Descarga}
+\begin{center}
+    \begin{tabular}{ |cc| }
+        \hline
+        $Tensao, V_{c} \pm 0.2V$ & $Tempo, t \pm 0.1ms$ \\
+        $1.5 V$                  & 0.3 ms               \\
+        $0.5V$                   & 0.6 ms               \\
+        $0.2 V$                  & 0.9 ms               \\
+        $0.1 V$                  & 1.2 ms               \\
+        $0.0 V$                  & 1.5 ms               \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Graficos das tabelas acima}
+
+\begin{adjustbox}{scale=0.70}
+    \includegraphics{Graph2.png}
+\end{adjustbox}
+
+\begin{adjustbox}{scale=0.70}
+    \includegraphics{Graph3.png}
+\end{adjustbox}
+
+\subparagraph*{Pelo fit feito pelo SciDAVis estimamos um $\tau$ de $0.27 \pm 0.07 ms$}
+
+\subparagraph*{Que eh coerente com o estimado visualmente com o $tau = 0.3ms$ que foi estimado visualmente no item (3.1).}
+
+\subparagraph*{Interessantemente a amplitude estimada pelo fit do SciDAVis foi de $4.4 \pm 0.4V$, quando visualmente vemos que esta eh bem proxima de $4$ }
+
+\subparagraph*{Isto indica que a estimativa visual foi super estimada em media.}
+
+\subparagraph*{Para conseguir a Capacitancia vamos partir de:}
+
+\begin{equation}
+    \begin{aligned}
+        RC & = \tau           \\
+        C  & = \frac{\tau}{R}
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Resolvendo esta conta com os valores encontrados acima, e derivando parcialmente para conseguir os erros isto nos da:}
+
+\begin{equation*}
+    C = (2.5  \pm 0.8) * 10^{-8} F
+\end{equation*}
+
+\subsection{Discuta os resultados:}
+
+\subparagraph*{Eu estou achando um pouco estranho um resultado tao baixo de capacitancia, estou sobre a impressao que houve algum erro de conversao de unidade mas nao estou conseguindo identifica-lo.}
+
+\subparagraph*{Mas no mais. Os resultados foram dentro do esperado, a estimativa a partir do SciDAVis acrescentou uma nova fonte de erro, mas manteve o resultado de $tau$ dentro do esperado.}
+
+\subsection{Invertendo capacitor e resistor}
+
+\subparagraph*{Neste caso o que vamos medir eh a tensao no resistor, a medida que o capacitor eh carregado e descarregado. ou seja. Vamos ter um grafico do oposto do que esta acontecendo com a tensao do capacitor.}
+
+\clearpage
+
+\begin{tikzpicture}
+    \begin{axis}[
+            ylabel={Tensao $V$},
+            xlabel={Temp $s$ em ms},
+            xmin = 0, xmax = 9,
+            ymin = -5, ymax = 5.0,
+            xtick distance = 1,
+            ytick distance = 1,
+            grid = both,
+            minor tick num = 1,
+            major grid style = {lightgray},
+            minor grid style = {lightgray!25},
+            width = \textwidth,
+            height = 0.5\textwidth]
+        \addplot[
+            domain = 0:1.5,
+            samples = 400,
+            smooth,
+            thick,
+            blue,
+        ] {4*(e^-x/0.3)};
+        \addplot[
+            domain = 1.5:3,
+            samples = 400,
+            smooth,
+            thick,
+            blue,
+        ] {4*(1-e^-(x-1.5)/0.3)-4};
+        \addplot[
+            domain = 3:4.5,
+            samples = 400,
+            smooth,
+            thick,
+            blue,
+        ] {4*(e^-(x-3)/0.3)};
+        \addplot[
+            domain = 4.5:6,
+            samples = 400,
+            smooth,
+            thick,
+            blue,
+        ] {4*(1-e^-(x-4.5)/0.3)-4};
+        \addplot[
+            domain = 6:7.5,
+            samples = 400,
+            smooth,
+            thick,
+            blue,
+        ] {4*(e^-(x-6)/0.3)};
+        \addplot[
+            domain = 7.5:9,
+            samples = 400,
+            smooth,
+            thick,
+            blue,
+        ] {4*(1-e^-(x-7.5)/0.3)-4};
+
+    \end{axis}
+\end{tikzpicture}
+
 
 
 \end{document}
