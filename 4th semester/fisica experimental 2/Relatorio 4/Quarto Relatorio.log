@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  12 AUG 2022 06:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  12 AUG 2022 06:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -639,24 +639,24 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 ) (./Quarto Relatorio.aux)
 \openout1 = `"Quarto Relatorio.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -713,11 +713,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (/usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-brazil.trsl
 File: translations-basic-dictionary-brazil.trsl (brazil translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `brazil'. on input line 45.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `brazil'. on input line 34.
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
-Package hyperref Info: Link coloring OFF on input line 45.
+Package hyperref Info: Link coloring OFF on input line 34.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -727,18 +727,18 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count343
 )
-LaTeX Info: Redefining \ref on input line 45.
-LaTeX Info: Redefining \pageref on input line 45.
-LaTeX Info: Redefining \nameref on input line 45.
+LaTeX Info: Redefining \ref on input line 34.
+LaTeX Info: Redefining \pageref on input line 34.
+LaTeX Info: Redefining \nameref on input line 34.
  (./Quarto Relatorio.out) (./Quarto Relatorio.out)
 \@outlinefile=\write4
 \openout4 = `"Quarto Relatorio.out"'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 36.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 36.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./Quarto Relatorio.toc)
@@ -746,36 +746,41 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout5 = `"Quarto Relatorio.toc"'.
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 60.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 49.
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
 []$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
  []
 
 
-Underfull \hbox (badness 1320) in paragraph at lines 60--60
+Underfull \hbox (badness 1320) in paragraph at lines 49--49
 []\OT1/cmr/bx/n/17.28 Funcionamento ba-sico de
  []
 
 
-Underfull \hbox (badness 1163) in paragraph at lines 66--66
+Underfull \hbox (badness 2181) in paragraph at lines 51--51
+\OT1/cmr/bx/n/14.4 com a vi-su-a-liza^^Xc~ao no os-ci-
+ []
+
+
+Underfull \hbox (badness 1163) in paragraph at lines 55--55
  []\OT1/cmr/bx/n/12 Fizemos isto e ob-ser-va-mos o com-por-
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 68.
+(hyperref)                removing `math shift' on input line 57.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 68.
+(hyperref)                removing `subscript' on input line 57.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 68.
+(hyperref)                removing `math shift' on input line 57.
 
 
-Overfull \hbox (271.88206pt too wide) in paragraph at lines 92--93
+Overfull \hbox (271.88206pt too wide) in paragraph at lines 81--82
 [] 
  []
 
@@ -788,18 +793,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 94.
+(hyperref)                removing `math shift' on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 94.
+(hyperref)                removing `subscript' on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 94.
+(hyperref)                removing `math shift' on input line 83.
 
 
-Overfull \hbox (271.88206pt too wide) in paragraph at lines 118--119
+Overfull \hbox (271.88206pt too wide) in paragraph at lines 107--108
 [] 
  []
 
@@ -807,41 +812,41 @@ Overfull \hbox (271.88206pt too wide) in paragraph at lines 118--119
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.121 \clearpage
+l.110 \clearpage
                  [2
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 122.
+(hyperref)                removing `math shift' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 122.
+(hyperref)                removing `subscript' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 122.
+(hyperref)                removing `math shift' on input line 111.
 
 
-Overfull \hbox (271.88206pt too wide) in paragraph at lines 146--147
+Overfull \hbox (271.88206pt too wide) in paragraph at lines 135--136
 [] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 148.
+(hyperref)                removing `math shift' on input line 137.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 148.
+(hyperref)                removing `subscript' on input line 137.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 148.
+(hyperref)                removing `math shift' on input line 137.
 
 
-Overfull \hbox (271.88206pt too wide) in paragraph at lines 172--173
+Overfull \hbox (271.88206pt too wide) in paragraph at lines 161--162
 [] 
  []
 
@@ -849,42 +854,42 @@ Overfull \hbox (271.88206pt too wide) in paragraph at lines 172--173
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.174 \clearpage
+l.163 \clearpage
                  [3
 
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 175.
+(hyperref)                removing `math shift' on input line 164.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 175.
+(hyperref)                removing `subscript' on input line 164.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 175.
+(hyperref)                removing `math shift' on input line 164.
 
 
-Overfull \hbox (271.88206pt too wide) in paragraph at lines 198--199
+Overfull \hbox (271.88206pt too wide) in paragraph at lines 187--188
 [] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 200.
+(hyperref)                removing `math shift' on input line 189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 200.
+(hyperref)                removing `subscript' on input line 189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 200.
+(hyperref)                removing `math shift' on input line 189.
 
 
-Overfull \hbox (271.88206pt too wide) in paragraph at lines 224--225
+Overfull \hbox (271.88206pt too wide) in paragraph at lines 213--214
 [] 
  []
 
@@ -892,57 +897,67 @@ Overfull \hbox (271.88206pt too wide) in paragraph at lines 224--225
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.226 \clearpage
+l.215 \clearpage
                  [4
 
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 228.
+(hyperref)                removing `math shift' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 228.
+(hyperref)                removing `subscript' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 228.
+(hyperref)                removing `math shift' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 228.
+(hyperref)                removing `math shift' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 228.
+(hyperref)                removing `subscript' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 228.
+(hyperref)                removing `math shift' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 228.
+(hyperref)                removing `math shift' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 228.
+(hyperref)                removing `subscript' on input line 217.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 228.
+(hyperref)                removing `math shift' on input line 217.
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 250--250
+ []\OT1/cmr/bx/n/12 Indicando que es-ta-mos li-dando com
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 254--254
+ []\OT1/cmr/bx/n/12 Valores RMS n^^Sos le-va-mos em con-si-
+ []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.269 \clearpage
+l.258 \clearpage
                  [5
 
 
 ]
-Overfull \hbox (268.93391pt too wide) in paragraph at lines 333--334
+Overfull \hbox (268.93391pt too wide) in paragraph at lines 322--323
 [] 
  []
 
@@ -950,7 +965,7 @@ Overfull \hbox (268.93391pt too wide) in paragraph at lines 333--334
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.337 \clearpage
+l.326 \clearpage
                  [6
 
 
@@ -958,20 +973,20 @@ l.337 \clearpage
 <./images//Graph2.png, id=173, 370.38374pt x 264.99pt>
 File: ./images//Graph2.png Graphic file (type png)
 <use ./images//Graph2.png>
-Package pdftex.def Info: ./images//Graph2.png  used on input line 375.
+Package pdftex.def Info: ./images//Graph2.png  used on input line 364.
 (pdftex.def)             Requested size: 370.38283pt x 264.98935pt.
 
-Overfull \hbox (1.6479pt too wide) in paragraph at lines 374--377
+Overfull \hbox (1.6479pt too wide) in paragraph at lines 363--366
 [] 
  []
 
 <./images//Graph3.png, id=175, 370.38374pt x 264.99pt>
 File: ./images//Graph3.png Graphic file (type png)
 <use ./images//Graph3.png>
-Package pdftex.def Info: ./images//Graph3.png  used on input line 379.
+Package pdftex.def Info: ./images//Graph3.png  used on input line 368.
 (pdftex.def)             Requested size: 370.38283pt x 264.98935pt.
 
-Overfull \hbox (1.6479pt too wide) in paragraph at lines 378--381
+Overfull \hbox (1.6479pt too wide) in paragraph at lines 367--370
 [] 
  []
 
@@ -979,11 +994,11 @@ Overfull \hbox (1.6479pt too wide) in paragraph at lines 378--381
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.415 \clearpage
+l.404 \clearpage
                  [7
 
  <./images//Graph2.png> <./images//Graph3.png>]
-Overfull \hbox (280.68379pt too wide) in paragraph at lines 475--476
+Overfull \hbox (280.68379pt too wide) in paragraph at lines 464--465
 [][] 
  []
 
@@ -991,24 +1006,24 @@ Overfull \hbox (280.68379pt too wide) in paragraph at lines 475--476
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.479 \end{document}
+l.468 \end{document}
                      [8
 
 
 ] (./Quarto Relatorio.aux)
 Package rerunfilecheck Info: File `"Quarto Relatorio".out' has not changed.
-(rerunfilecheck)             Checksum: 1316C32B3DE0BEB8BDC6926A67A6CB4F;6088.
+(rerunfilecheck)             Checksum: D1248734410FE9C948321C0743FBEFF2;6157.
  ) 
 Here is how much of TeX's memory you used:
- 51563 strings out of 478238
- 1321223 string characters out of 5850457
- 2484893 words of memory out of 5000000
- 69116 multiletter control sequences out of 15000+600000
+ 51565 strings out of 478238
+ 1321239 string characters out of 5850457
+ 2486953 words of memory out of 5000000
+ 69118 multiletter control sequences out of 15000+600000
  478191 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,9n,118p,828b,1920s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Quarto Relatorio.pdf" (8 pages, 344468 bytes).
+Output written on "Quarto Relatorio.pdf" (8 pages, 345105 bytes).
 PDF statistics:
  256 PDF objects out of 1000 (max. 8388607)
  219 compressed objects within 3 object streams

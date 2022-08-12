@@ -4,12 +4,12 @@ SciDAVis 2.9.2 project file
 <table>
 4452
 <table creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="Table1" columns="4" rows="30"><comment><![CDATA[]]></comment><column creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.9999999999999999e-01</row><row type="TypeDouble" index="1" invalid="no">5.9999999999999998e-01</row><row type="TypeDouble" index="2" invalid="no">9.0000000000000002e-01</row><row type="TypeDouble" index="3" invalid="no">1.2000000000000000e+00</row><row type="TypeDouble" index="4" invalid="no">1.5000000000000000e+00</row></column><column creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.5000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">5.0000000000000000e-01</row><row type="TypeDouble" index="2" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="3" invalid="no">1.0000000000000001e-01</row><row type="TypeDouble" index="4" invalid="no">0.0000000000000000e+00</row></column><column creation_time="2022-12-08 06:03:09:153" caption_spec="%n%C{ - }%c" name="4" type="TypeDouble" mode="Numeric" plot_designation="yErr"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-12-08 06:03:09:153" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-12-08 06:03:09:153" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="1" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="2" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="3" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="4" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="5" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="6" invalid="no">2.0000000000000001e-01</row></column><column creation_time="2022-12-08 05:58:18:192" caption_spec="%n%C{ - }%c" name="3" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-12-08 05:58:18:192" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-12-08 05:58:18:192" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.5000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">3.5000000000000000e+00</row><row type="TypeDouble" index="2" invalid="no">3.7999999999999998e+00</row><row type="TypeDouble" index="3" invalid="no">3.8999999999999999e+00</row><row type="TypeDouble" index="4" invalid="no">4.0000000000000000e+00</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width><column_width column="2">512</column_width><column_width column="3">120</column_width></table>
-geometry	11	-2	1217	369	
+geometry	11	0	1217	369	
 
 </table>
 <multiLayer>
 Graph2	1	1	Friday, August 12, 2022 6:04:55 AM -03
-geometry	344	212	500	400	
+geometry	344	214	500	400	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -68,7 +68,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 Graph3	1	1	Friday, August 12, 2022 6:06:29 AM -03
-geometry	980	228	500	400	active
+geometry	980	230	500	400	active
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -110,6 +110,14 @@ y0=0.0127961415177233
 
 y0+A*exp(-x/t)
 </formula>
+FunctionCurve	0,ExpDecayFit2,x,0.3,1.5	100			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	0	1	16	64		2	0	-1321516128	22039	1
+<formula>
+A=4.37643307536978
+t=0.277448227709302
+y0=0.0127961389309796
+
+y0+A*exp(-x/t)
+</formula>
 scale	0	-0.5	2	0	8	5	0	0
 scale	1	-0.5	2	0	8	5	0	0
 scale	2	0.2	1.6	0	8	5	0	0
@@ -122,7 +130,7 @@ TicksLength	5	9
 DrawAxesBackbone	1
 AxesLineWidth	1
 LabelsRotation	0	0
-<legend>	0.232036613272311	1.92469879518072	Fira Sans Semi-Light	10	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{1}Table1_2	\c{3}ExpDecayFit1	</legend>
+<legend>	0.232036613272311	1.92469879518072	Fira Sans Semi-Light	10	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{1}Table1_2	\c{3}ExpDecayFit1	\c{4}ExpDecayFit2	</legend>
 </graph>
 </multiLayer>
 <log>
@@ -241,6 +249,21 @@ t (e-folding time) = 0.277448225248901 +/- 1.73979397296375
 y0 (offset) = 0.0127961415177233 +/- 0.182158788425671
 --------------------------------------------------------------------------------------
 Chi^2 = 0.0613181114564725
+R^2 = 0.998356082802776
+---------------------------------------------------------------------------------------
+Iterations = 6
+Status = success
+---------------------------------------------------------------------------------------
+[Friday, August 12, 2022 6:12:53 AM -03	Plot: ''Graph3'']
+Exponential decay fit of dataset: Table1_2, using function: y0+A*exp(-x/t)
+Y standard errors: Associated dataset (Table1_4)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.3 to x = 1.5
+A (amplitude) = 4.37643307536978 +/- 2.15072643506189
+t (e-folding time) = 0.277448227709302 +/- 1.73979395758949
+y0 (offset) = 0.0127961389309796 +/- 0.182158789840691
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0613181114564373
 R^2 = 0.998356082802776
 ---------------------------------------------------------------------------------------
 Iterations = 6

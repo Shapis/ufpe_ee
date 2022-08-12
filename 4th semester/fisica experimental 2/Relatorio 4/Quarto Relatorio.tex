@@ -17,31 +17,20 @@
 \usepackage{graphicx}
 \pgfplotsset{compat=newest}
 \graphicspath{ {./images/} }
- 
- 
 %  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
- 
 \newcommand{\drawvector} [9] [color=cyan] {
-   \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
- 
-  
- 
-\ifthenelse{\equal{#7}{true}}{
-   \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
-   \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
-   }
-   {}
+  \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+ \ifthenelse{\equal{#7}{true}}{
+  \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+  \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+  }
+  {}
 }
- 
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
- 
- 
 \title{Terceiro Relatório de Física Experimental 2}
 \author{Henrique da Silva \\ hpsilva@proton.me}
 \date{\today}
 \pgfplotsset{width = 10cm, compat = 1.9}
- 
- 
 \begin{document}
 \maketitle
 \pagenumbering{gobble}
@@ -52,20 +41,20 @@
 
 \section{Introdução}
 
-\paragraph*{Neste relatório, vamos discutir o capacitor. E como ele se se comporta sobre acao de correntes diretas e alternadas.}
+\paragraph*{Neste relatório, vamos discutir o capacitor. E como ele se comporta sobre a ação de correntes diretas e alternadas.}
 
 \paragraph*{Todos arquivos utilizados para criar este relatório, e o relatório em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/}}
 
 
 \section{Funcionamento basico de um osciloscopio}
 
-\subsection{Comparando as ondas geradas com a visualizacao no osciloscopio}
+\subsection{Comparando as ondas geradas com a visualização no osciloscópio}
 
-\subparagraph*{Fizemos isto e observamos o comportamento senoidal e quadratico respectivamente das ondas na tela do osciloscopio.}
+\subparagraph*{Fizemos isto e observamos o comportamento senoidal e quadratico respectivamente das ondas na tela do osciloscópio.}
 
-\subsection{Graficos das ondas observadas}
+\subsection{Gráficos das ondas observadas}
 
-\subsubsection{Grafico da tensao $V_{ad}$ pelo tempo em milisegundos no acoplamento AC}
+\subsubsection{Grafico da tensão $V_{ad}$ pelo tempo em milisegundos no acoplamento AC}
 
 \begin{tikzpicture}
     \begin{axis}[
@@ -91,7 +80,7 @@
     \end{axis}
 \end{tikzpicture}
 
-\subsubsection{Grafico da tensao $V_{ad}$ pelo tempo em milisegundos no acoplamento DC}
+\subsubsection{Grafico da tensão $V_{ad}$ pelo tempo em milisegundos no acoplamento DC}
 
 \begin{tikzpicture}
     \begin{axis}[
@@ -119,7 +108,7 @@
 
 
 \clearpage
-\subsubsection{Grafico da tensao $V_{bd}$ pelo tempo em milisegundos no acoplamento AC}
+\subsubsection{Gráfico da tensão $V_{bd}$ pelo tempo em milisegundos no acoplamento AC}
 
 \begin{tikzpicture}
     \begin{axis}[
@@ -145,7 +134,7 @@
     \end{axis}
 \end{tikzpicture}
 
-\subsubsection{Grafico da tensao $V_{bd}$ pelo tempo em milisegundos no acoplamento DC}
+\subsubsection{Grafico da tensão $V_{bd}$ pelo tempo em milisegundos no acoplamento DC}
 
 \begin{tikzpicture}
     \begin{axis}[
@@ -172,7 +161,7 @@
 \end{tikzpicture}
 
 \clearpage
-\subsubsection{Grafico da tensao $V_{cd}$ pelo tempo em milisegundos no acoplamento AC}
+\subsubsection{Gráfico da tensão $V_{cd}$ pelo tempo em milisegundos no acoplamento AC}
 
 \begin{tikzpicture}
     \begin{axis}[
@@ -197,7 +186,7 @@
     \end{axis}
 \end{tikzpicture}
 
-\subsubsection{Grafico da tensao $V_{cd}$ pelo tempo em milisegundos no acoplamento DC}
+\subsubsection{Gráfico da tensão $V_{cd}$ pelo tempo em milisegundos no acoplamento DC}
 
 \begin{tikzpicture}
     \begin{axis}[
@@ -227,14 +216,14 @@
 
 \subsection{Medindo $V_{ab}$ , $V_{bd}$, e $V_{cd}$}
 
-\subparagraph*{Nao podemos fazer estas medicoes diretamente pois estariamos alterando o circuito se encaixassemos o osciloscopio nos pontos AB, BD, e CD respectivamente.}
+\subparagraph*{Não podemos fazer estas medições diretamente pois estariamos alterando o circuito se encaixassem o osciloscópio nos pontos AB, BD, e CD respectivamente.}
 
 \subsection{Papel do capacitor}
 
-\subparagraph*{Este esta "bloqueando" a passagem da corrente direta. Isto acontece porque a medida que a corrente direta carrega o capacitor, a tensao nos terminais do capacitor se iguala. }
-\subparagraph*{Quando o capacitor esta completamente carregando, as tensoes nos seus terminais fica iguai, e nao ha passagem de corrente.}
+\subparagraph*{Este está "bloqueando" a passagem da corrente direta. Isto acontece porque a medida que a corrente direta carrega o capacitor, a tensão nos terminais do capacitor se iguala. }
+\subparagraph*{Quando o capacitor está completamente carregando, as tensões nos seus terminais ficam igual, e não há passagem de corrente.}
 
-\subsection{Equacoes das tensoes}
+\subsection{Equações das tensões}
 
 \begin{center}
     \begin{tabular}{ |ccc| }
@@ -256,21 +245,21 @@
 
 \subparagraph*{$DC = 0.855V$ e $AC = 2.069V$}
 
-\subparagraph*{Indicando que estamos lidando com medicoes rms}
+\subparagraph*{Indicando que estamos lidando com medições rms}
 
 \subsection{Diferenca entre valores medios e RMS}
 
-\subparagraph*{Valores RMS nos levamos em consideracao a raiz dos quadrados de todos valores. O que faz com que correntes alternadas somem ao valor. }
+\subparagraph*{Valores RMS nós levamos em consideração a raiz dos quadrados de todos valores. O que faz com que correntes alternadas somem ao valor. }
 
-\subparagraph*{Ja valor medio, o caso da corrente alternada somaria como 0. Ja que ha o mesmo numero de valores positivos que negativos}
+\subparagraph*{Já valor médio, o caso da corrente alternada somaria como 0. Já que há o mesmo número de valores positivos que negativos}
 
-\subparagraph*{O caso no qual rms = valor medio sera o caso no qual nao ha componente de corrente alternada no sistema.}
+\subparagraph*{O caso no qual rms = valor médio será o caso no qual não há componente de corrente alternada no sistema.}
 
 \clearpage
 
 \section{Carga e descarga de um capacitor}
 
-\subsection{Grafico de Tensao sobre tempo da carga e descarga de um capacitor sob acao de uma fonte de tensao quadratica}
+\subsection{Gráfico de Tensão sobre tempo da carga e descarga de um capacitor sob ação de uma fonte de tensão quadrática}
 
 \begin{tikzpicture}
     \begin{axis}[
@@ -332,7 +321,7 @@
     \end{axis}
 \end{tikzpicture}
 
-\subparagraph*{Neste ponto seria interessante notar que a constante de tempo $RC = \tau$ eh igual a cinco vezes o tempo de decaimento ou de subida de tensao do capacitor. ou seja. $3ms/10$ ou seja. $0.3ms$}
+\subparagraph*{Neste ponto seria interessante notar que a constante de tempo $RC = \tau$ é igual a cinco vezes o tempo de decaimento ou de subida de tensão do capacitor. ou seja. $3ms/10$ ou seja. $0.3ms$}
 
 \clearpage
 
@@ -369,7 +358,7 @@
     \end{tabular}
 \end{center}
 
-\subsection{Graficos das tabelas acima}
+\subsection{Gráficos das tabelas acima}
 
 \begin{adjustbox}{scale=0.70}
     \includegraphics{Graph2.png}
@@ -381,11 +370,11 @@
 
 \subparagraph*{Pelo fit feito pelo SciDAVis estimamos um $\tau$ de $0.27 \pm 0.07 ms$}
 
-\subparagraph*{Que eh coerente com o estimado visualmente com o $tau = 0.3ms$ que foi estimado visualmente no item (3.1).}
+\subparagraph*{Que é coerente com o estimado visualmente com o $tau = 0.3ms$ que foi estimado visualmente no item (3.1).}
 
 \subparagraph*{Interessantemente a amplitude estimada pelo fit do SciDAVis foi de $4.4 \pm 0.4V$, quando visualmente vemos que esta eh bem proxima de $4$ }
 
-\subparagraph*{Isto indica que a estimativa visual foi super estimada em media.}
+\subparagraph*{Isto indica que a estimativa visual foi superestimada em média.}
 
 \subparagraph*{Para conseguir a Capacitancia vamos partir de:}
 
@@ -396,7 +385,7 @@
     \end{aligned}
 \end{equation}
 
-\subparagraph*{Resolvendo esta conta com os valores encontrados acima, e derivando parcialmente para conseguir os erros isto nos da:}
+\subparagraph*{Resolvendo esta conta com os valores encontrados acima, e derivando parcialmente para conseguir os erros isto nos dá:}
 
 \begin{equation*}
     C = (2.5  \pm 0.8) * 10^{-8} F
@@ -404,13 +393,13 @@
 
 \subsection{Discuta os resultados:}
 
-\subparagraph*{Eu estou achando um pouco estranho um resultado tao baixo de capacitancia, estou sobre a impressao que houve algum erro de conversao de unidade mas nao estou conseguindo identifica-lo.}
+\subparagraph*{Eu estou achando um pouco estranho um resultado tão baixo de capacitancia, estou sobre a impressão que houve algum erro de conversão de unidade mas não estou conseguindo identificá-lo.}
 
 \subparagraph*{Mas no mais. Os resultados foram dentro do esperado, a estimativa a partir do SciDAVis acrescentou uma nova fonte de erro, mas manteve o resultado de $tau$ dentro do esperado.}
 
 \subsection{Invertendo capacitor e resistor}
 
-\subparagraph*{Neste caso o que vamos medir eh a tensao no resistor, a medida que o capacitor eh carregado e descarregado. ou seja. Vamos ter um grafico do oposto do que esta acontecendo com a tensao do capacitor.}
+\subparagraph*{Neste caso o que vamos medir é a tensão no resistor, a medida que o capacitor é carregado e descarregado. Vamos ter um gráfico do oposto do que está acontecendo com a tensão do capacitor.}
 
 \clearpage
 
