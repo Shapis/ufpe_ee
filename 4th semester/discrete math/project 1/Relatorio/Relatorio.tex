@@ -1,0 +1,151 @@
+\documentclass[12pt,twoside, a4paper, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}
+\usepackage{hyperref}
+
+\pgfplotsset{compat=newest}
+
+
+
+%  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
+
+\newcommand{\drawvector} [9] [color=cyan] {
+    \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+
+    
+
+\ifthenelse{\equal{#7}{true}}{
+    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+    }
+    {}
+}
+
+\newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
+
+
+\title{Primeiro Projeto de Matematica Discreta}
+\author{Henrique da Silva \\ hpsilva@proton.me}
+\date{\today}
+\pgfplotsset{width = 10cm, compat = 1.9}
+
+
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+\newpage
+%pagenumbering{roman}
+\tableofcontents
+\newpage
+
+
+
+\section{Introdução}
+
+
+\subparagraph*{Neste relatório, vamos discutir e implementar o sistema RSA.}
+
+\subparagraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/}}
+
+\section{O Codificador de texto}
+
+\subparagraph*{Este foi criado para transformar uma $string$ de texto em um $int$, Atravez de dois metodos. TextoParaInteiro(string) e InteiroParaTexto(int). }
+
+\subsection{TextoParaInteiro}
+
+\subparagraph*{Este metodo recebe um texto e o torna em um m do tipo $int$ da seguinte maneira:}
+
+\begin{equation}
+    m = \sum_{i=0}^{N - 1} cod(a_i)*27^i
+\end{equation}
+
+\subparagraph*{Com \emph{a} ate \emph{z} sendo definidos como 1 ate 26, "espaco" sendo definido como 27.}
+
+\subsection{InteiroParaTexto}
+
+\subparagraph*{Para retornar o texto, este metodo recebe um inteiro $m$ e faz a seguinte operacao:}
+
+\begin{equation}
+    a_i    = cod\left(\frac{m}{27^i} \pmod{27}\right)
+\end{equation}
+
+\subparagraph*{Para todo $i$ que nao faca $m$ ser menor que 1}
+
+\subsection{Restricoes e limitacoes}
+
+\subparagraph*{A principal restricao eh que isto foi implementado usando o tipo $int$ do $C\#$ que tem 32 bits. Porem, ja que ele contem tanto numeros positivos quanto negativos o valor maximo dele eh de:}
+
+\begin{equation}
+    \frac{2^{32}}{2} - 1 = 2147483647
+\end{equation}
+
+\subparagraph*{Estamos codificando o texto de maneira que cada digito ocupa ate: $2^N = 27$, $N = \frac{\log{27}}{\log{2}}$ bits}
+
+\subparagraph*{ Entao a quantidade maxima de bits ocupados eh simplesmente $N*L$}
+
+\subparagraph*{Para o nosso caso em especifico, que o tipo $int$ tem $2^{31} -1$ de tamanho, ou seja, seguramente ate $30$ bits. Temos que:}
+
+\begin{equation}
+    L * \frac{\log{27}}{\log{2}} \le 30
+\end{equation}
+
+\subparagraph*{Que nos da $L = 6$, ou seja, podemos seguramente converter ate $6$ caracteres para tipo $int$ e converte-los de volta.
+}
+
+\subparagraph*{Vale notar, que isto eh um limite inferior de seguranca. Na verdade temos $6.3$ digitos disponiveis, que nos permitiria por exemplo, guardar e recuperar, uma frase de sete digitos do tipo $zzzzzd$, Mas para ter certeza. Tem de ser 6 ou menos digitos.}
+
+\section{A classe \emph{BigNumber}}
+
+\subparagraph*{Esta sera uma classe que armazenara os numeros que utilizarei para a criacao do RSA. }
+\subparagraph*{Utilizarei como base para meu $BigNumber$ a classe $BigInteger$ do $C\#$, que tem limite de tamanho tao grande quanto couber na memoria do computador que o esta utilizando.}
+\subparagraph*{Para o nossos fins, queremos um $BigNumber$ que tenha no maximo $2048$ bits. Entao para todas operacoes de $BigNumber$ incluindo a sua propria criacao, criarei um $SafetySizeCheck$ que caso o $BigNumber$ exceda $2048$ bits, ele ira lancar uma excecao e parar o programa com a mensagem de erro apropriada.}
+\subparagraph*{Importante lembrar que inclui o zero no $BigNumber$, entao na verdade o limite superior dele fica da seguinte maneira:}
+
+\begin{equation}
+    BigNumber \le 2^{2048} - 1
+\end{equation}
+
+\subsection{Multiplicacao de \emph{BigNumber}}
+
+\subparagraph*{Aqui podemos observar o seguinte:}
+
+\begin{equation}
+    2^a * 2^b = 2^{a + b}
+\end{equation}
+
+\subparagraph*{Entao a multiplicacao de dois $BigNumber$ de tamanho $a$ e $b$, pode no maximo nos dar um $BigNumber$ de tamanho $a+b$}
+
+\subsection{Soma de \emph{BigNumber}}
+
+\subparagraph*{Neste caso temos o seguinte:}
+
+\begin{equation}
+    \begin{aligned}
+        2^a + 2^a = 2*(2^a) = 2^1 * 2^a = 2^{a + 1}
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Logo podemos concluir que no maximo a soma de dois numeros de tamanho $N$ bits dara um numero de tamanho $N+1$ bits.}
+
+\section{Aritmetica Modular}
+
+\subsection{AddMod}
+
+\subparagraph*{As limitacoes aqui sao as mesmas da soma de dois $BigNumber$ como vimos acima. Logo, a funcao AddMod pode no maximo dar um $BigNumber$ de tamanho $N+1$ bits.}
+
+
+
+\end{document}
+

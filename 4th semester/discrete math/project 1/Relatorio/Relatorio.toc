@@ -1,0 +1,11 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}O Codificador de texto}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}TextoParaInteiro}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}InteiroParaTexto}{}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Restricoes e limitacoes}{}{subsection.2.3}%
+\contentsline {section}{\numberline {3}A classe \emph {BigNumber}}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Multiplicacao de \emph {BigNumber}}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Soma de \emph {BigNumber}}{}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Aritmetica Modular}{}{section.4}%
+\contentsline {subsection}{\numberline {4.1}AddMod}{}{subsection.4.1}%
