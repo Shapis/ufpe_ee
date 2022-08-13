@@ -7,9 +7,12 @@ class Codificador
         {
             if ((int)texto[i] >= (int)'a' && (int)texto[i] <= (int)'z')
             {
-                numero += (int)texto[i] - (int)'A';
+                numero += (1 + (int)texto[i] - (int)'a') * (int)Math.Pow(27, i);
             }
-            // numero += (int)texto[i];
+            else if ((int)texto[i] == (int)' ')
+            {
+                numero += 27 * (int)Math.Pow(27, i);
+            }
         }
         return numero;
     }
@@ -19,8 +22,18 @@ class Codificador
         string texto = "";
         while (numero > 0)
         {
-            texto += (char)numero % 256;
-            numero /= 256;
+            var resto = numero % 27;
+            if (resto == 0)
+            {
+                texto += ' ';
+                numero -= 1;
+            }
+            else
+            {
+                texto += (char)(resto + (int)'a' - 1);
+            }
+
+            numero /= 27;
         }
         return texto;
     }
