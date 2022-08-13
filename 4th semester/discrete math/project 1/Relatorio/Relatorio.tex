@@ -162,6 +162,31 @@
 
 \subsection{InvMod}
 
+\subparagraph*{Para resolver a congruencia linear utilizamos uo algoritmo de euclides extendido. E a operacao de maxima ordem que utilizamos em todas operacoes eh a de multiplicacao de $BigNumber$ que descrevemos em $(6)$}
+
+\subparagraph*{Logo, nossa limitacao para garantir que nao vamos exceder os 2048 bits do $BigNumber$ eh que a soma em pares, de $a$, $b$, e $n$ nao exceda $2048$ bits.}
+
+\section{Busca por numeros primos}
+
+\subparagraph*{utilizarei o metodo de Miller Rabin para testar a primalidade dos numeros.}
+
+\subsection{Testando os numeros dados:}
+
+\begin{center}
+    \begin{tabular}{ |ccc| }
+        \hline
+        $2^{521}-1$ & $\rightarrow$ & primo     \\
+        $2^{523}-1$ & $\rightarrow$ & nao primo \\
+        $2^{607}-1$ & $\rightarrow$ & primo     \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Achando novos primos:}
+
+\subparagraph*{Para achar novos numeros primos criarei um novo $BigNumber$ de tamanho $n$, e testarei numeros impares maiores que este $BigNumber$ ate o teste de Miller Rabin me retornar que provavelmente eh um primo.}
+
+\subparagraph*{Para adicionar um elemento de aleatoriedade. Apos checar um numero, vamos adicionar a este $2*x$ com $x$ variando entre $0$ e $n$ aleatoriamente.}
 
 \end{document}
 

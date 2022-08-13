@@ -11,10 +11,10 @@ public class BigNumber
         SizeSafetyCheck();
     }
 
-    public BigNumber(int i, int n, int minus)
+    public BigNumber(int i, int n, int plus)
     {
         bigInteger = BigInteger.Pow(i, n);
-        bigInteger -= minus;
+        bigInteger += plus;
         SizeSafetyCheck();
     }
 
@@ -28,7 +28,7 @@ public class BigNumber
     {
         if (GetBitLength() > _maxBitSize)
         {
-            Console.WriteLine("The number is too big to be stored in a BigInteger.");
+            Console.WriteLine("Numero eh grande demais para ser guardado em um BigNumber.");
             throw new Exception("Bit size exceeded");
         }
     }
@@ -161,16 +161,28 @@ public class BigNumber
         }
 
         return bigNumbers;
+    }
 
-        // // Print all the answers
-        // for (
-        //     BigNumber i = new BigNumber(0);
-        //     i.GetValue() <= d.GetValue() - 1;
-        //     BigNumber.Add(i, new BigNumber(1))
-        // )
-        // {
+    public static BigNumber RetorneProximoPrimo(int n)
+    {
+        Random rng = new Random();
+        var bn = new BigNumber(2, n, +1);
+        var randomNumber = rng.Next(0, n);
+        var isPrime = false;
 
-        //     Console.Write(an.GetValue() + " ");
-        // }
+        while (!isPrime)
+        {
+            isPrime = MillerRabin.IsProbablePrime(bn.GetValue(), 2);
+
+            if (isPrime)
+            {
+                break;
+            }
+            else
+            {
+                bn = BigNumber.Add(bn, new BigNumber(2 * randomNumber));
+            }
+        }
+        return bn;
     }
 }
