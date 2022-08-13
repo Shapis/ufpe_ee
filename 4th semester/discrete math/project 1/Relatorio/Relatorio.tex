@@ -117,6 +117,10 @@
     BigNumber \le 2^{2048} - 1
 \end{equation}
 
+\subparagraph*{E tambem importante lembrar que todas operacoes de checagem de seguranca ocorreram \emph{apos} a operacao ser realizada.}
+
+\subparagraph*{Ou seja, o programa permitira operacoes inseguras, desde que o $BigNumber$ resultante desta operacao insegura nao exceda $2048$ bits.}
+
 \subsection{Multiplicacao de \emph{BigNumber}}
 
 \subparagraph*{Aqui podemos observar o seguinte:}
@@ -143,8 +147,20 @@
 
 \subsection{AddMod}
 
-\subparagraph*{As limitacoes aqui sao as mesmas da soma de dois $BigNumber$ como vimos acima. Logo, a funcao AddMod pode no maximo dar um $BigNumber$ de tamanho $N+1$ bits.}
+\subparagraph*{As limitacoes aqui sao as mesmas da soma de dois $BigNumber$ como vimos acima em $(7)$. }
+\subparagraph*{A funcao AddMod pode no maximo dar um $BigNumber$ de tamanho $N+1$ bits, $N$ sendo o tamanho do maior dos dois $BigNumber$.}
 
+\subsection{MulMod}
+
+\subparagraph*{Vimos acima em $(6)$ as limitacoes de multiplicacao de dois $BigNumber$.}
+
+\subparagraph*{Entao no maximo a soma dos tamanhos em bits dos nossos $BigNumber$ deve dar $2048$ que eh o tamanho que escolhemos para o nosso $BigNumber$}
+
+\subsection{ExpMod}
+
+\subparagraph*{No caso da exponenciacao precisamos que o produto dos tamanhos dos dois $BigNumber$ seja menor que $2048$ }
+
+\subsection{InvMod}
 
 
 \end{document}

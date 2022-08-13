@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  13 AUG 2022 08:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  13 AUG 2022 09:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -781,27 +781,39 @@ Underfull \hbox (badness 2635) in paragraph at lines 114--114
  []
 
 
+Underfull \hbox (badness 1152) in paragraph at lines 153--153
+\OT1/cmr/bx/n/12 um $\OML/cmm/m/it/12 BigNumber$ \OT1/cmr/bx/n/12 de ta-ma-nho $\OML/cmm/m/it/12 N \OT1/cmr/m/n/12 + 1$ \OT1/cmr/bx/n/12 bits,
+ []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.150 \end{document}
-                     [2] (./Relatorio.aux)
+l.159 \subsection
+                 {ExpMod} [2]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.166 \end{document}
+                     [3
+
+] (./Relatorio.aux)
 Package rerunfilecheck Info: File `Relatorio.out' has not changed.
-(rerunfilecheck)             Checksum: 026FAAEC693988D3E1D201373407C524;1417.
+(rerunfilecheck)             Checksum: 531D1FF578F16529A5AFC7614F894C35;1681.
  ) 
 Here is how much of TeX's memory you used:
- 50968 strings out of 478238
- 1305114 string characters out of 5850457
- 1988559 words of memory out of 5000000
- 68529 multiletter control sequences out of 15000+600000
+ 50980 strings out of 478238
+ 1305270 string characters out of 5850457
+ 1989559 words of memory out of 5000000
+ 68532 multiletter control sequences out of 15000+600000
  479615 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,821b,788s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Relatorio.pdf (2 pages, 137347 bytes).
+Output written on Relatorio.pdf (3 pages, 139253 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 142 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

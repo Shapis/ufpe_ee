@@ -3,6 +3,10 @@
 // Console.WriteLine(textoCodificado);
 // Console.WriteLine(Codificador.InteiroParaTexto(textoCodificado));
 
-BigNumber bigNumber = new BigNumber(3, 2);
+BigNumber bigNumber = new BigNumber(16);
 
-Console.WriteLine(BigNumber.Mod(bigNumber, new BigNumber(2, 2)).GetValue());
+Console.WriteLine(
+    BigNumber.CongruenciaLinear(new BigNumber(15), new BigNumber(9), new BigNumber(18))[
+        4
+    ].GetValue()
+);
