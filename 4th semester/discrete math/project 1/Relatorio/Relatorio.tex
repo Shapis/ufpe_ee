@@ -59,6 +59,10 @@
 
 \subparagraph*{Para ter as ferramentas necessarias para construi-lo, primeiro precisamos construir algumas ferramentas, estas serao discutidas nas secoes 2, 3, 4, e 5.}
 
+\subparagraph*{A inspiracao para escolha do projeto de chaves RSA eh que algo que eu ja utilizo diariamente, a autenticacao feita pelo \emph{git} utiliza um par privado e publico de chaves $RSA$. }
+
+\subparagraph*{Objetivo do projeto eh conseguir gerar um par seguro de chaves \emph{RSA} e utiliza-lo para fazer minha autenticacao no \emph{git}.}
+
 \subparagraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/}}
 
 \section{O Codificador de texto}
@@ -145,6 +149,16 @@
 
 \subparagraph*{Logo podemos concluir que no maximo a soma de dois numeros de tamanho $N$ bits dara um numero de tamanho $N+1$ bits.}
 
+\subsection{Codificando numeros grandes}
+
+\subparagraph*{Inicialmente, notemos que o \emph{Codificador de Texto} discutido na secao dois, tinha limitacao de utilizar o tipo $int$ de $31$ bits. Que nao sera suficiente para nossos propositos. }
+
+\subparagraph*{Entao escrevi dois novos metodos \emph{TextoParaBigNumber}, e \emph{BigNumberParaTexto} }
+
+\subparagraph*{Estes tendo as mesmas limitacoes porem alterando tamanho do nosso numero de $31$ bits para $2048$ bits.}
+
+\subparagraph*{Resolvendo a equacao (4) para $2048$, teremos que o nosso $L$ deve se limitar a no maximo $430$ caracteres.}
+
 \section{Aritmetica Modular}
 
 \subsection{AddMod}
@@ -164,9 +178,11 @@
 
 \subsection{InvMod}
 
-\subparagraph*{Para resolver a congruencia linear utilizamos uo algoritmo de euclides extendido. E a operacao de maxima ordem que utilizamos em todas operacoes eh a de multiplicacao de $BigNumber$ que descrevemos em $(6)$}
+\subparagraph*{Para resolver a congruencia linear utilizamos o algoritmo de euclides extendido. E a operacao de maxima ordem que utilizamos em todas operacoes eh a de multiplicacao de $BigNumber$ que descrevemos em $(6)$}
 
 \subparagraph*{Logo, nossa limitacao para garantir que nao vamos exceder os 2048 bits do $BigNumber$ eh que a soma em pares, de $a$, $b$, e $n$ nao exceda $2048$ bits.}
+
+
 
 \section{Busca por numeros primos}
 
@@ -194,19 +210,111 @@
 
 \subparagraph*{Com alguns testes numeros, tive a chance de aproxidamente $1$ em $5000$ de obter dois numeros primos identicos. O que para um sistema que sofra ataques com certeza nao seria aleatoriedade suficiente. Mas para nossos propositos de testar a criacao de um sistema $RSA$ que nao vai sofrer ataques. Sera o suficiente.}
 
+
+
 \section{O Sistema RSA}
 
 \subparagraph*{Vamos utilizar de todas ferramentas que criamos acima para montar o nosso sistema.}
 
-\subsection{Codificando numeros grandes}
 
-\subparagraph*{Inicialmente, notemos que o \emph{Codificador de Texto} discutido na secao dois, tinha limitacao de utilizar o tipo $int$ de $31$ bits. Que nao sera suficiente para nossos propositos. }
 
-\subparagraph*{Entao escrevi dois novos metodos \emph{TextoParaBigNumber}, e \emph{BigNumberParaTexto} }
+\subsection{Geracao do par de chaves RSA}
 
-\subparagraph*{Estes tendo as mesmas limitacoes porem alterando tamanho do nosso numero de $31$ bits para $2048$ bits.}
+\subparagraph*{Inicialmente vamos achar dois numeros primos, $p$, e $q$ de $512$ bits aleatorios.}
 
-\subparagraph*{Resolvendo a equacao (4) para $2048$, teremos que o nosso $L$ deve se limitar a no maximo $430$ caracteres.}
+\subparagraph*{Vamos definir $n = pq$ e $\phi(n) = (p-1)(q-1)$}
+
+\subparagraph*{Vamos tambem escolher um $\epsilon$ tal que $MDC(\epsilon, \phi(n)) = 1$. Para simplicidade, escolhi o menor $\epsilon$ para qual esse $MDC$ seja 1.}
+
+\subparagraph*{E atravez do sistema de resolucao de congruencias lineares que criamos na secao 4.4, vamos computar um $d$ da seguinte maneira:}
+
+\begin{equation}
+    \epsilon d \equiv 1 (mod \phi(n))
+\end{equation}
+
+\subparagraph*{Entao, afinal temos um $\epsilon$ e um $n$ que serao nossa chave publica, e um $d$ que sera nossa chave privada.}
+
+\subparagraph*{Ambos chaves privadas e publicas serao salvas em arquivo.}
+
+\subsection{Codificando e decodificando}
+
+\subparagraph*{Vamos utilizar do nosso \emph{Codificador de Texto} nesta etapa.}
+
+\subparagraph*{Com tudo que temos em maos, os passos para codificacao e decodificacao sao simples como veremos a seguir:}
+
+\subsubsection{Codificacao}
+
+\begin{equation}
+    Y \equiv X^{\epsilon} \pmod{n}
+\end{equation}
+
+\subparagraph*{Onde X eh a mensagem em texto limpo. Y a mensagem criptografada, e $\epsilon$ e $n$ sao a chave publica.}
+
+\subparagraph*{Isto foi implementado na classe $RSA$, e para simplificar, $RSA.Codificar$ recebe textos limpos e a chave publica, e retorna textos criptografados ao invez de cifrar o $BigNumber$}
+
+\subsubsection{Decodificando}
+
+\begin{equation}
+    Z \equiv Y^{d} \pmod{n}
+\end{equation}
+
+\subparagraph*{Onde Z eh a mensagem em decodificada. Y a mensagem criptografada, e $d$ eh a chave privada.}
+
+\subparagraph*{Importante de notar que o seguinte eh verdade:}
+
+\begin{equation}
+    Z \equiv X \pmod{n}
+\end{equation}
+
+\subparagraph*{Isto foi implementado na classe $RSA$, e para simplificar, $RSA.Decodificar$ recebe textos cifrados e a chave privada, e retorna textos limpos}
+
+\subsection{Testando para um texto pre-determinado}
+
+\subparagraph*{Quando executado o programa ira mostrar um texto ao usuario, codifica-lo, mostrar o texto codificado, e apos isso decodificar e mostrar o texto decodificado. O texto decodificado deve ser o mesmo que o texto original.}
+
+\subparagraph*{O embasamento teorico disto esta descrito na secao 6.2.}
+
+\subsection{Testado para texto arbitrario Y}
+
+\subparagraph*{O programa ira pedir do usuario um texto, vamos codificar este texto, exibi-lo codificado, e apos isso decodificar e exibi-lo novamente. O texto decodificado deve ser o mesmo que o texto original.}
+
+\subparagraph*{Lembrando que ha limitacao de tamanho do texto em $430$ caracteres como visto na secao 3.3}
+
+\subsection{Assinatura digital}
+
+\subparagraph*{Para assinar um documento $X$, basta divulgar o $Y$ de:}
+
+\begin{equation}
+    Y \equiv X^{d} \pmod{n}
+\end{equation}
+
+\subparagraph*{E para verificar, fazemos o oposto que eh:}
+
+\begin{equation}
+    Z \equiv Y^{ d} \pmod{n}
+\end{equation}
+
+\subparagraph*{Lembrando da equacao (10) que nos da que $Z \equiv X$ ja que:}
+
+\begin{equation}
+    Z \equiv X^{de} \equiv X \pmod{n}
+    asdas
+\end{equation}
+
+\subparagraph*{Nesta etapa. o programa ira assinar o texto que o usuario escreveu anteriormente, e verificar a assinatura.}
+
+\subparagraph*{Importante notar que assinatura eh um caso parecido com o de codificacao de texto. Exceto que neste caso vamos cifrar o texto limpo com nossa chave privada, e decodificar o texto cifrado com a chave publica.}
+
+\subsection{Autenticacao de remetente e destinatario}
+
+\subparagraph*{Neste caso, temos dois usuarios $A$ e $B$. }
+
+\subparagraph*{O usuario $A$ fara a codificacao da mensagem com a chave publica de $B$, assim garantido que so $B$ lera a mensagem, e enviara junto com a mensagem a sua assinatura digital.}
+
+\subparagraph*{O usuario $B$ usara sua chave privada para decodificar a mensagem, e usara a chave publica de $A$ para verificar a assinatura digital.}
+
+\subparagraph*{O programa vai guiar o usuario A em enviar uma mensagem assinada para o usuario B, e o usuario B verificara que a mensagem foi assinada por A.}
+
 
 \end{document}
 

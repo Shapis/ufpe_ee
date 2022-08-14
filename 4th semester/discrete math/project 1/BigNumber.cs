@@ -71,6 +71,13 @@ public class BigNumber
         return temp;
     }
 
+    public static BigNumber ExpMod(BigNumber a, BigNumber b, BigNumber n)
+    {
+        var temp = new BigNumber(BigInteger.ModPow(a.bigInteger, b.bigInteger, n.bigInteger));
+        temp.SizeSafetyCheck();
+        return temp;
+    }
+
     public static BigNumber Mod(BigNumber a, BigNumber n)
     {
         var temp = new BigNumber(a.bigInteger % n.bigInteger);

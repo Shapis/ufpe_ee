@@ -3,7 +3,6 @@ using System.Security.Cryptography;
 
 // Achado em: https://rosettacode.org/wiki/Miller%E2%80%93Rabin_primality_test#C.23
 // Miller-Rabin primality test as an extension method on the BigInteger type.
-// Based on the Ruby implementation on this page.
 public static class MillerRabin
 {
     public static bool IsProbablePrime(this BigInteger source, int certainty)

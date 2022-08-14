@@ -24,9 +24,9 @@ class Codificador
         BigInteger numero = new BigInteger(0);
         for (int i = 0; i < texto.Length; i++)
         {
-            if ((int)texto[i] >= (int)'a' && (int)texto[i] <= (int)'z')
+            if ((BigInteger)texto[i] >= (BigInteger)'a' && (BigInteger)texto[i] <= (BigInteger)'z')
             {
-                numero += (1 + (int)texto[i] - (int)'a') * BigInteger.Pow(27, i);
+                numero += (1 + (BigInteger)texto[i] - (BigInteger)'a') * BigInteger.Pow(27, i);
             }
             else if ((int)texto[i] == (int)' ')
             {
@@ -50,7 +50,7 @@ class Codificador
             }
             else
             {
-                texto += (char)((int)'a' + numero % 27 - 1);
+                texto += (char)((BigInteger)'a' + numero % 27 - 1);
             }
             numero /= 27;
         }
