@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "NPLkajwejeo8jUSaIvpTEtNAVcyXfW+jsQXpMvzx18kawGGwj7nRoZOsQdwqqKZm1B5tNMtPWob/OcCEPXL6Jg==",
+  "dgSpecHash": "S//wa9cix8vBpHdmrnry+SMAaM5mZxAAV2C9BYCSK0bpe/4pE2uvwDedUW/v3jRMzz3lZVHp64Xy9srRGLRn7Q==",
   "success": true,
   "projectFilePath": "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 1/project 1.csproj",
   "expectedPackageFiles": [
-    "/home/hpsilva/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.8/microsoft.aspnetcore.app.ref.6.0.8.nupkg.sha512"
+    "/home/hpsilva/.nuget/packages/microsoft.netcore.app.runtime.win-x64/6.0.8/microsoft.netcore.app.runtime.win-x64.6.0.8.nupkg.sha512",
+    "/home/hpsilva/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.8/microsoft.aspnetcore.app.ref.6.0.8.nupkg.sha512",
+    "/home/hpsilva/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/6.0.8/microsoft.aspnetcore.app.runtime.win-x64.6.0.8.nupkg.sha512",
+    "/home/hpsilva/.nuget/packages/microsoft.netcore.app.host.win-x64/6.0.8/microsoft.netcore.app.host.win-x64.6.0.8.nupkg.sha512"
   ],
   "logs": []
 }

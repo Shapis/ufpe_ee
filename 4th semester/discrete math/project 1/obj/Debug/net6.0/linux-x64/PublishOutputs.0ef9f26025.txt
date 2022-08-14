@@ -1,0 +1,2 @@
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 1/bin/Debug/net6.0/linux-x64/publish/project 1.pdb
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 1/bin/Debug/net6.0/linux-x64/publish/project 1

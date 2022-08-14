@@ -106,7 +106,7 @@ Console.WriteLine(
 );
 
 Console.WriteLine(
-    "Ousuario A enviara uma mensagem para o usuario B, codificada com a chave publica de B, e assinada com a chave privada de A."
+    "O usuario A enviara uma mensagem para o usuario B, codificada com a chave publica de B, e assinada com a chave privada de A."
 );
 
 Console.WriteLine(
