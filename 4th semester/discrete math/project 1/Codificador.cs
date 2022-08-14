@@ -1,3 +1,5 @@
+using System.Numerics;
+
 class Codificador
 {
     public int TextoParaInteiro(string texto)
@@ -19,22 +21,40 @@ class Codificador
 
     public BigNumber TextoParaBigNumber(string texto)
     {
-        BigNumber numero = new BigNumber(0);
+        BigInteger numero = new BigInteger(0);
         for (int i = 0; i < texto.Length; i++)
         {
             if ((int)texto[i] >= (int)'a' && (int)texto[i] <= (int)'z')
             {
-                numero = BigNumber.Add(
-                    numero,
-                    new BigNumber((1 + (int)texto[i] - (int)'a') * (int)Math.Pow(27, i))
-                );
+                numero += (1 + (int)texto[i] - (int)'a') * BigInteger.Pow(27, i);
             }
             else if ((int)texto[i] == (int)' ')
             {
-                numero = BigNumber.Add(numero, new BigNumber(27 * (int)Math.Pow(27, i)));
+                numero += 27 * BigInteger.Pow(27, i);
             }
         }
-        return numero;
+        return new BigNumber(numero);
+    }
+
+    //Converts BigNumber to text
+    public string BigNumberParaTexto(BigNumber bigNumber)
+    {
+        string texto = "";
+        BigInteger numero = bigNumber.GetValue();
+        while (numero > 0)
+        {
+            if (numero % 27 == 0)
+            {
+                texto += " ";
+                numero -= 1;
+            }
+            else
+            {
+                texto += (char)((int)'a' + numero % 27 - 1);
+            }
+            numero /= 27;
+        }
+        return texto;
     }
 
     public string InteiroParaTexto(int numero)

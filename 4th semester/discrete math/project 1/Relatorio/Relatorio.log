@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  13 AUG 2022 12:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  14 AUG 2022 04:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -746,14 +746,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout5 = `Relatorio.toc'.
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 62.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 64.
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--62
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
 []$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 66--66
+Underfull \hbox (badness 1194) in paragraph at lines 68--68
  []\OT1/cmr/bx/n/12 Este foi cri-ado para trans-for-mar uma
  []
 
@@ -761,27 +761,27 @@ Underfull \hbox (badness 1194) in paragraph at lines 66--66
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
+Underfull \hbox (badness 10000) in paragraph at lines 116--116
  []\OT1/cmr/bx/n/12 Para o nos-sos fins, que-re-mos um
  []
 
 
-Underfull \hbox (badness 2671) in paragraph at lines 114--114
+Underfull \hbox (badness 2671) in paragraph at lines 116--116
 \OML/cmm/m/it/12 BigNumber$ \OT1/cmr/bx/n/12 que te-nha no ma-ximo $\OT1/cmr/m/n/12 2048$
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 114--114
+Underfull \hbox (badness 2245) in paragraph at lines 116--116
 \OT1/cmr/bx/n/12 bits. En-tao para to-das ope-ra-coes de
  []
 
 
-Underfull \hbox (badness 2635) in paragraph at lines 114--114
+Underfull \hbox (badness 2635) in paragraph at lines 116--116
 \OT1/cmr/bx/n/12 cri-a-rei um $\OML/cmm/m/it/12 SafetySizeCheck$ \OT1/cmr/bx/n/12 que caso o
  []
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 153--153
+Underfull \hbox (badness 1152) in paragraph at lines 155--155
 \OT1/cmr/bx/n/12 um $\OML/cmm/m/it/12 BigNumber$ \OT1/cmr/bx/n/12 de ta-ma-nho $\OML/cmm/m/it/12 N \OT1/cmr/m/n/12 + 1$ \OT1/cmr/bx/n/12 bits,
  []
 
@@ -789,9 +789,9 @@ Underfull \hbox (badness 1152) in paragraph at lines 153--153
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.159 \subsection
-                 {ExpMod} [2]
-Underfull \hbox (badness 6016) in paragraph at lines 169--169
+l.155 \subsection
+                 {MulMod} [2]
+Underfull \hbox (badness 6016) in paragraph at lines 171--171
  []\OT1/cmr/bx/n/12 Logo, nossa li-mi-ta-cao para ga-ran-tir
  []
 
@@ -799,26 +799,24 @@ Underfull \hbox (badness 6016) in paragraph at lines 169--169
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.191 \end{document}
-                     [3
-
-] (./Relatorio.aux)
+l.211 \end{document}
+                     [3] (./Relatorio.aux)
 Package rerunfilecheck Info: File `Relatorio.out' has not changed.
-(rerunfilecheck)             Checksum: 041EB9CE422381942E291E0C02AB2BBA;2220.
+(rerunfilecheck)             Checksum: E9662739D435FBFF058C25CDB729B8B2;2534.
  ) 
 Here is how much of TeX's memory you used:
- 50991 strings out of 478238
- 1305405 string characters out of 5850457
- 1991562 words of memory out of 5000000
- 68535 multiletter control sequences out of 15000+600000
+ 51003 strings out of 478238
+ 1305543 string characters out of 5850457
+ 1992564 words of memory out of 5000000
+ 68537 multiletter control sequences out of 15000+600000
  479615 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,821b,788s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Relatorio.pdf (3 pages, 142687 bytes).
+Output written on Relatorio.pdf (3 pages, 147314 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 188 compressed objects within 2 object streams
- 59 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 240 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

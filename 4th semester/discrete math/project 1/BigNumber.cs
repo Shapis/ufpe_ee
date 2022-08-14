@@ -166,12 +166,14 @@ public class BigNumber
     public static BigNumber RetorneProximoPrimo(int n)
     {
         Random rng = new Random();
-        var bn = new BigNumber(2, n, +1);
-        var randomNumber = rng.Next(0, n);
+        var bn = new BigNumber(2, n, -1);
+
+        var randomNumber = rng.Next(1, n);
         var isPrime = false;
 
         while (!isPrime)
         {
+            randomNumber = rng.Next(1, n);
             isPrime = MillerRabin.IsProbablePrime(bn.GetValue(), 2);
 
             if (isPrime)
@@ -180,7 +182,7 @@ public class BigNumber
             }
             else
             {
-                bn = BigNumber.Add(bn, new BigNumber(2 * randomNumber));
+                bn = BigNumber.Subtract(bn, new BigNumber(2 * randomNumber));
             }
         }
         return bn;

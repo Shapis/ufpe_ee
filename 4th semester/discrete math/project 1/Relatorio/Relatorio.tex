@@ -57,6 +57,8 @@
 
 \subparagraph*{Neste relatório, vamos discutir e implementar o sistema RSA.}
 
+\subparagraph*{Para ter as ferramentas necessarias para construi-lo, primeiro precisamos construir algumas ferramentas, estas serao discutidas nas secoes 2, 3, 4, e 5.}
+
 \subparagraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/}}
 
 \section{O Codificador de texto}
@@ -95,10 +97,10 @@
 
 \subparagraph*{ Entao a quantidade maxima de bits ocupados eh simplesmente $N*L$}
 
-\subparagraph*{Para o nosso caso em especifico, que o tipo $int$ tem $2^{31} -1$ de tamanho, ou seja, seguramente ate $30$ bits. Temos que:}
+\subparagraph*{Para o nosso caso em especifico, que o tipo $int$ tem $2^{31} -1$ de tamanho, ou seja, seguramente ate $31$ bits. Temos que:}
 
 \begin{equation}
-    L * \frac{\log{27}}{\log{2}} \le 30
+    L * \frac{\log{27}}{\log{2}} \le 31
 \end{equation}
 
 \subparagraph*{Que nos da $L = 6$, ou seja, podemos seguramente converter ate $6$ caracteres para tipo $int$ e converte-los de volta.
@@ -184,9 +186,27 @@
 
 \subsection{Achando novos primos:}
 
-\subparagraph*{Para achar novos numeros primos criarei um novo $BigNumber$ de tamanho $n$, e testarei numeros impares maiores que este $BigNumber$ ate o teste de Miller Rabin me retornar que provavelmente eh um primo.}
+\subparagraph*{Para achar novos numeros primos criarei um novo $BigNumber$ de tamanho $n$, e testarei numeros impares menores que este $BigNumber$ ate o teste de Miller Rabin me retornar que provavelmente eh um primo.}
 
-\subparagraph*{Para adicionar um elemento de aleatoriedade. Apos checar um numero, vamos adicionar a este $2*x$ com $x$ variando entre $0$ e $n$ aleatoriamente.}
+\subparagraph*{Para adicionar um elemento de aleatoriedade. Apos checar um numero, vamos subtrair a este $2*x$ com $x$ variando entre $0$ e $n$ aleatoriamente.}
+
+\subparagraph*{Esta maneira de gerar numeros aleatorios, me garante que todo numero gerado tera tamanho menor do que $n$ bits. Porem, ela me retorna numeros primos repetidos com alguma frequencia.}
+
+\subparagraph*{Com alguns testes numeros, tive a chance de aproxidamente $1$ em $5000$ de obter dois numeros primos identicos. O que para um sistema que sofra ataques com certeza nao seria aleatoriedade suficiente. Mas para nossos propositos de testar a criacao de um sistema $RSA$ que nao vai sofrer ataques. Sera o suficiente.}
+
+\section{O Sistema RSA}
+
+\subparagraph*{Vamos utilizar de todas ferramentas que criamos acima para montar o nosso sistema.}
+
+\subsection{Codificando numeros grandes}
+
+\subparagraph*{Inicialmente, notemos que o \emph{Codificador de Texto} discutido na secao dois, tinha limitacao de utilizar o tipo $int$ de $31$ bits. Que nao sera suficiente para nossos propositos. }
+
+\subparagraph*{Entao escrevi dois novos metodos \emph{TextoParaBigNumber}, e \emph{BigNumberParaTexto} }
+
+\subparagraph*{Estes tendo as mesmas limitacoes porem alterando tamanho do nosso numero de $31$ bits para $2048$ bits.}
+
+\subparagraph*{Resolvendo a equacao (4) para $2048$, teremos que o nosso $L$ deve se limitar a no maximo $430$ caracteres.}
 
 \end{document}
 

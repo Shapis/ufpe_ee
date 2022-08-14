@@ -1,10 +1,25 @@
 ﻿var codificador = new Codificador();
-var textoCodificado = codificador.TextoParaBigNumber("aaaaaaaa");
+var textoCodificado = codificador.TextoParaBigNumber("ola estou testando essa bagaca");
 Console.WriteLine(textoCodificado.GetValue());
-// Console.WriteLine(Codificador.InteiroParaTexto(textoCodificado));
+Console.WriteLine(codificador.BigNumberParaTexto(textoCodificado));
+
+// List<BigNumber> abc = new List<BigNumber>();
+// for (int i = 0; i < 1000; i++)
+// {
+//     abc.Add(BigNumber.RetorneProximoPrimo(256));
+// }
+
+// if (abc.Distinct().Count() != abc.Count())
+// {
+//     Console.WriteLine("Repetidos");
+// }
+
+// foreach (var item in abc)
+// {
+//     Console.WriteLine(item.GetValue());
+// }
 
 
-// Console.WriteLine(BigNumber.RetorneProximoPrimo(512).GetValue());
 
 // BigNumber bigNumber = new BigNumber(16);
 
