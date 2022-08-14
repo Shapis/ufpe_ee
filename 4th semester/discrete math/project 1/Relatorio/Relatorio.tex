@@ -14,34 +14,34 @@
 \usepackage{adjustbox}
 \usepackage[section]{placeins}
 \usepackage{hyperref}
-
+ 
 \pgfplotsset{compat=newest}
-
-
-
+ 
+ 
+ 
 %  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
-
+ 
 \newcommand{\drawvector} [9] [color=cyan] {
-    \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
-
-    
-
+   \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+ 
+  
+ 
 \ifthenelse{\equal{#7}{true}}{
-    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
-    \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
-    }
-    {}
+   \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+   \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+   }
+   {}
 }
-
+ 
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
-
-
-\title{Primeiro Projeto de Matematica Discreta}
+ 
+ 
+\title{Primeiro Projeto de Matemática Discreta}
 \author{Henrique da Silva \\ hpsilva@proton.me}
 \date{\today}
 \pgfplotsset{width = 10cm, compat = 1.9}
-
-
+ 
+ 
 \begin{document}
 \maketitle
 \pagenumbering{gobble}
@@ -57,21 +57,21 @@
 
 \subparagraph*{Neste relatório, vamos discutir e implementar o sistema RSA.}
 
-\subparagraph*{Para ter as ferramentas necessarias para construi-lo, primeiro precisamos construir algumas ferramentas, estas serao discutidas nas secoes 2, 3, 4, e 5.}
+\subparagraph*{Para ter as ferramentas necessárias para construí-lo, primeiro precisamos construir algumas ferramentas, estas serao discutidas nas seções 2, 3, 4, e 5.}
 
-\subparagraph*{A inspiracao para escolha do projeto de chaves RSA eh que algo que eu ja utilizo diariamente, a autenticacao feita pelo \emph{git} utiliza um par privado e publico de chaves $RSA$. }
+\subparagraph*{A inspiração para escolha do projeto de chaves RSA é que algo que eu já utilizo diariamente, a autenticação feita pelo \emph{git} utiliza um par privado e público de chaves $RSA$. }
 
-\subparagraph*{Objetivo do projeto eh conseguir gerar um par seguro de chaves \emph{RSA} e utiliza-lo para fazer minha autenticacao no \emph{git}.}
+\subparagraph*{Objetivo do projeto é conseguir gerar um par seguro de chaves \emph{RSA} e utilizá-lo para fazer minha autenticação no \emph{git}.}
 
-\subparagraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/}}
+\subparagraph*{Todos arquivos utilizados para criar este relatório, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/}}
 
 \section{O Codificador de texto}
 
-\subparagraph*{Este foi criado para transformar uma $string$ de texto em um $int$, Atravez de dois metodos. TextoParaInteiro(string) e InteiroParaTexto(int). }
+\subparagraph*{Este foi criado para transformar uma $string$ de texto em um $int$, através de dois métodos. TextoParaInteiro(string) e InteiroParaTexto(int). }
 
 \subsection{TextoParaInteiro}
 
-\subparagraph*{Este metodo recebe um texto e o torna em um m do tipo $int$ da seguinte maneira:}
+\subparagraph*{Este método recebe um texto e o torna em um m do tipo $int$ da seguinte maneira:}
 
 \begin{equation}
     m = \sum_{i=0}^{N - 1} cod(a_i)*27^i
@@ -81,7 +81,7 @@
 
 \subsection{InteiroParaTexto}
 
-\subparagraph*{Para retornar o texto, este metodo recebe um inteiro $m$ e faz a seguinte operacao:}
+\subparagraph*{Para retornar o texto, este método recebe um inteiro $m$ e faz a seguinte operação:}
 
 \begin{equation}
     a_i    = cod\left(\frac{m}{27^i} \pmod{27}\right)
@@ -89,43 +89,43 @@
 
 \subparagraph*{Para todo $i$ que nao faca $m$ ser menor que 1}
 
-\subsection{Restricoes e limitacoes}
+\subsection{Restrições e limitações}
 
-\subparagraph*{A principal restricao eh que isto foi implementado usando o tipo $int$ do $C\#$ que tem 32 bits. Porem, ja que ele contem tanto numeros positivos quanto negativos o valor maximo dele eh de:}
+\subparagraph*{A principal restrição é que isto foi implementado usando o tipo $int$ do $C\#$ que tem 32 bits. Porém, já que ele contém tanto números positivos quanto negativos o valor máximo dele é de:}
 
 \begin{equation}
     \frac{2^{32}}{2} - 1 = 2147483647
 \end{equation}
 
-\subparagraph*{Estamos codificando o texto de maneira que cada digito ocupa ate: $2^N = 27$, $N = \frac{\log{27}}{\log{2}}$ bits}
+\subparagraph*{Estamos codificando o texto de maneira que cada dígito ocupa ate: $2^N = 27$, $N = \frac{\log{27}}{\log{2}}$ bits}
 
-\subparagraph*{ Entao a quantidade maxima de bits ocupados eh simplesmente $N*L$}
+\subparagraph*{Então a quantidade máxima de bits ocupados eh simplesmente $N*L$}
 
-\subparagraph*{Para o nosso caso em especifico, que o tipo $int$ tem $2^{31} -1$ de tamanho, ou seja, seguramente ate $31$ bits. Temos que:}
+\subparagraph*{Para o nosso caso em específico, que o tipo $int$ tem $2^{31} -1$ de tamanho, ou seja, seguramente ate $31$ bits. Temos que:}
 
 \begin{equation}
     L * \frac{\log{27}}{\log{2}} \le 31
 \end{equation}
 
-\subparagraph*{Que nos da $L = 6$, ou seja, podemos seguramente converter ate $6$ caracteres para tipo $int$ e converte-los de volta.
+\subparagraph*{Que nos dá $L = 6$, ou seja, podemos seguramente converter ate $6$ caracteres para tipo $int$ e convertê-los de volta.
 }
 
-\subparagraph*{Vale notar, que isto eh um limite inferior de seguranca. Na verdade temos $6.3$ digitos disponiveis, que nos permitiria por exemplo, guardar e recuperar, uma frase de sete digitos do tipo $zzzzzd$, Mas para ter certeza. Tem de ser 6 ou menos digitos.}
+\subparagraph*{Vale notar, que isto é um limite inferior de seguranca. Na verdade temos $6.3$ dígitos disponíveis, que nos permitiria por exemplo, guardar e recuperar, uma frase de sete dígitos do tipo $zzzzzd$, Mas para ter certeza. Tem de ser 6 ou menos dígitos.}
 
 \section{A classe \emph{BigNumber}}
 
-\subparagraph*{Esta sera uma classe que armazenara os numeros que utilizarei para a criacao do RSA. }
-\subparagraph*{Utilizarei como base para meu $BigNumber$ a classe $BigInteger$ do $C\#$, que tem limite de tamanho tao grande quanto couber na memoria do computador que o esta utilizando.}
-\subparagraph*{Para o nossos fins, queremos um $BigNumber$ que tenha no maximo $2048$ bits. Entao para todas operacoes de $BigNumber$ incluindo a sua propria criacao, criarei um $SafetySizeCheck$ que caso o $BigNumber$ exceda $2048$ bits, ele ira lancar uma excecao e parar o programa com a mensagem de erro apropriada.}
+\subparagraph{Esta será uma classe que armazenará os números que utilizarei para a criação do RSA. }
+\subparagraph*{Utilizarei como base para meu $BigNumber$ a classe $BigInteger$ do $C\#$, que tem limite de tamanho tão grande quanto couber na memória do computador que o está utilizando.}
+\subparagraph*{Para o nossos fins, queremos um $BigNumber$ que tenha no maximo $2048$ bits. Então para todas operações de $BigNumber$ incluindo a sua própria criação, criarei um $SafetySizeCheck$ que caso o $BigNumber$ exceda $2048$ bits, ele irá lançar uma exceção e parar o programa com a mensagem de erro apropriada.}
 \subparagraph*{Importante lembrar que inclui o zero no $BigNumber$, entao na verdade o limite superior dele fica da seguinte maneira:}
 
 \begin{equation}
     BigNumber \le 2^{2048} - 1
 \end{equation}
 
-\subparagraph*{E tambem importante lembrar que todas operacoes de checagem de seguranca ocorreram \emph{apos} a operacao ser realizada.}
+\subparagraph*{É também importante lembrar que todas operações de checagem de segurança ocorreram \emph{após} a operação ser realizada.}
 
-\subparagraph*{Ou seja, o programa permitira operacoes inseguras, desde que o $BigNumber$ resultante desta operacao insegura nao exceda $2048$ bits.}
+\subparagraph*{Ou seja, o programa permitirá operações inseguras, desde que o $BigNumber$ resultante desta operação insegura não exceda $2048$ bits.}
 
 \subsection{Multiplicacao de \emph{BigNumber}}
 
@@ -135,7 +135,7 @@
     2^a * 2^b = 2^{a + b}
 \end{equation}
 
-\subparagraph*{Entao a multiplicacao de dois $BigNumber$ de tamanho $a$ e $b$, pode no maximo nos dar um $BigNumber$ de tamanho $a+b$}
+\subparagraph*{Então a multiplicação de dois $BigNumber$ de tamanho $a$ e $b$, pode no máximo nos dar um $BigNumber$ de tamanho $a+b$}
 
 \subsection{Soma de \emph{BigNumber}}
 
@@ -147,48 +147,48 @@
     \end{aligned}
 \end{equation}
 
-\subparagraph*{Logo podemos concluir que no maximo a soma de dois numeros de tamanho $N$ bits dara um numero de tamanho $N+1$ bits.}
+\subparagraph*{Logo podemos concluir que no máximo a soma de dois números de tamanho $N$ bits dará um numero de tamanho $N+1$ bits.}
 
 \subsection{Codificando numeros grandes}
 
-\subparagraph*{Inicialmente, notemos que o \emph{Codificador de Texto} discutido na secao dois, tinha limitacao de utilizar o tipo $int$ de $31$ bits. Que nao sera suficiente para nossos propositos. }
+\subparagraph*{Inicialmente, notamos que o \emph{Codificador de Texto} discutido na seção dois, tinha limitação de utilizar o tipo $int$ de $31$ bits. Que não será suficiente para nossos propósitos. }
 
-\subparagraph*{Entao escrevi dois novos metodos \emph{TextoParaBigNumber}, e \emph{BigNumberParaTexto} }
+\subparagraph*{Então escrevi dois novos métodos \emph{TextoParaBigNumber}, e \emph{BigNumberParaTexto} }
 
-\subparagraph*{Estes tendo as mesmas limitacoes porem alterando tamanho do nosso numero de $31$ bits para $2048$ bits.}
+\subparagraph*{Estes tendo as mesmas limitações porém alterando o tamanho do nosso número de $31$ bits para $2048$ bits.}
 
-\subparagraph*{Resolvendo a equacao (4) para $2048$, teremos que o nosso $L$ deve se limitar a no maximo $430$ caracteres.}
+\subparagraph*{Resolvendo a equação (4) para $2048$, teremos que o nosso $L$ deve se limitar a no máximo $430$ caracteres.}
 
 \section{Aritmetica Modular}
 
 \subsection{AddMod}
 
-\subparagraph*{As limitacoes aqui sao as mesmas da soma de dois $BigNumber$ como vimos acima em $(7)$. }
-\subparagraph*{A funcao AddMod pode no maximo dar um $BigNumber$ de tamanho $N+1$ bits, $N$ sendo o tamanho do maior dos dois $BigNumber$.}
+\subparagraph*{As limitações aqui sao as mesmas da soma de dois $BigNumber$ como vimos acima em $(7)$. }
+\subparagraph*{A função AddMod pode no máximo dar um $BigNumber$ de tamanho $N+1$ bits, $N$ sendo o tamanho do maior dos dois $BigNumber$.}
 
 \subsection{MulMod}
 
-\subparagraph*{Vimos acima em $(6)$ as limitacoes de multiplicacao de dois $BigNumber$.}
+\subparagraph*{Vimos acima em $(6)$ as limitações de multiplicação de dois $BigNumber$.}
 
-\subparagraph*{Entao no maximo a soma dos tamanhos em bits dos nossos $BigNumber$ deve dar $2048$ que eh o tamanho que escolhemos para o nosso $BigNumber$}
+\subparagraph*{Então no máximo a soma dos tamanhos em bits dos nossos $BigNumber$ deve dar $2048$ que eh o tamanho que escolhemos para o nosso $BigNumber$}
 
 \subsection{ExpMod}
 
-\subparagraph*{No caso da exponenciacao precisamos que o produto dos tamanhos dos dois $BigNumber$ seja menor que $2048$ }
+\subparagraph*{No caso da exponencial precisamos que o produto dos tamanhos dos dois $BigNumber$ seja menor que $2048$ }
 
 \subsection{InvMod}
 
-\subparagraph*{Para resolver a congruencia linear utilizamos o algoritmo de euclides extendido. E a operacao de maxima ordem que utilizamos em todas operacoes eh a de multiplicacao de $BigNumber$ que descrevemos em $(6)$}
+\subparagraph*{Para resolver a congruência linear utilizamos o algoritmo de euclides estendido. E a operação de máxima ordem que utilizamos em todas operações eh a de multiplicação de $BigNumber$ que descrevemos em $(6)$}
 
-\subparagraph*{Logo, nossa limitacao para garantir que nao vamos exceder os 2048 bits do $BigNumber$ eh que a soma em pares, de $a$, $b$, e $n$ nao exceda $2048$ bits.}
+\subparagraph*{Logo, nossa limitação para garantir que não vamos exceder os 2048 bits do $BigNumber$ eh que a soma em pares, de $a$, $b$, e $n$ não exceda $2048$ bits.}
 
 
 
-\section{Busca por numeros primos}
+\section{Busca por números primos}
 
-\subparagraph*{utilizarei o metodo de Miller Rabin para testar a primalidade dos numeros.}
+\subparagraph*{utilizarei o método de Miller Rabin para testar a primalidade dos números.}
 
-\subsection{Testando os numeros dados:}
+\subsection{Testando os números dados:}
 
 \begin{center}
     \begin{tabular}{ |ccc| }
@@ -202,13 +202,13 @@
 
 \subsection{Achando novos primos:}
 
-\subparagraph*{Para achar novos numeros primos criarei um novo $BigNumber$ de tamanho $n$, e testarei numeros impares menores que este $BigNumber$ ate o teste de Miller Rabin me retornar que provavelmente eh um primo.}
+\subparagraph*{Para achar novos números primos criarei um novo $BigNumber$ de tamanho $n$, e testarei numeros impares menores que este $BigNumber$ ate o teste de Miller Rabin me retorna que provavelmente é um primo.}
 
-\subparagraph*{Para adicionar um elemento de aleatoriedade. Apos checar um numero, vamos subtrair a este $2*x$ com $x$ variando entre $0$ e $n$ aleatoriamente.}
+\subparagraph*{Para adicionar um elemento de aleatoriedade. Após checar um número, vamos subtrair a este $2*x$ com $x$ variando entre $0$ e $n$ aleatoriamente.}
 
-\subparagraph*{Esta maneira de gerar numeros aleatorios, me garante que todo numero gerado tera tamanho menor do que $n$ bits. Porem, ela me retorna numeros primos repetidos com alguma frequencia.}
+\subparagraph*{Esta maneira de gerar números aleatórios, me garante que todo número gerado terá tamanho menor do que $n$ bits. Porém, ela me retorna números primos repetidos com alguma frequência.}
 
-\subparagraph*{Com alguns testes numeros, tive a chance de aproxidamente $1$ em $5000$ de obter dois numeros primos identicos. O que para um sistema que sofra ataques com certeza nao seria aleatoriedade suficiente. Mas para nossos propositos de testar a criacao de um sistema $RSA$ que nao vai sofrer ataques. Sera o suficiente.}
+\subparagraph*{Com alguns testes de números, tive a chance de aproximadamente $1$ em $5000$ de obter dois números primos idênticos. O que para um sistema que sofre ataques com certeza não seria aleatoriedade suficiente. Mas para nossos propósitos de testar a criação de um sistema $RSA$ que não vai sofrer ataques. Será o suficiente.}
 
 
 
@@ -218,29 +218,29 @@
 
 
 
-\subsection{Geracao do par de chaves RSA}
+\subsection{Geração do par de chaves RSA}
 
-\subparagraph*{Inicialmente vamos achar dois numeros primos, $p$, e $q$ de $512$ bits aleatorios.}
+\subparagraph*{Inicialmente vamos achar dois números primos, $p$, e $q$ de $512$ bits aleatórios.}
 
 \subparagraph*{Vamos definir $n = pq$ e $\phi(n) = (p-1)(q-1)$}
 
-\subparagraph*{Vamos tambem escolher um $\epsilon$ tal que $MDC(\epsilon, \phi(n)) = 1$. Para simplicidade, escolhi o menor $\epsilon$ para qual esse $MDC$ seja 1.}
+\subparagraph*{Vamos também escolher um $\epsilon$ tal que $MDC(\epsilon, \phi(n)) = 1$. Para simplicidade, escolhi o menor $\epsilon$ para qual esse $MDC$ seja 1.}
 
-\subparagraph*{E atravez do sistema de resolucao de congruencias lineares que criamos na secao 4.4, vamos computar um $d$ da seguinte maneira:}
+\subparagraph*{E através do sistema de resolução de congruências lineares que criamos na seção 4.4, vamos computar um $d$ da seguinte maneira:}
 
 \begin{equation}
     \epsilon d \equiv 1 (mod \phi(n))
 \end{equation}
 
-\subparagraph*{Entao, afinal temos um $\epsilon$ e um $n$ que serao nossa chave publica, e um $d$ que sera nossa chave privada.}
+\subparagraph*{Então, afinal temos um $\epsilon$ e um $n$ que serão nossa chave pública, e um $d$ que será nossa chave privada.}
 
-\subparagraph*{Ambos chaves privadas e publicas serao salvas em arquivo.}
+\subparagraph*{Ambos chaves privadas e públicas serão salvas em arquivo.}
 
 \subsection{Codificando e decodificando}
 
 \subparagraph*{Vamos utilizar do nosso \emph{Codificador de Texto} nesta etapa.}
 
-\subparagraph*{Com tudo que temos em maos, os passos para codificacao e decodificacao sao simples como veremos a seguir:}
+\subparagraph*{Com tudo que temos em mãos, os passos para codificação e decodificação são simples como veremos a seguir:}
 
 \subsubsection{Codificacao}
 
@@ -248,9 +248,9 @@
     Y \equiv X^{\epsilon} \pmod{n}
 \end{equation}
 
-\subparagraph*{Onde X eh a mensagem em texto limpo. Y a mensagem criptografada, e $\epsilon$ e $n$ sao a chave publica.}
+\subparagraph*{Onde X é a mensagem em texto limpo. Y a mensagem criptografada, e $\epsilon$ e $n$ são a chave pública.}
 
-\subparagraph*{Isto foi implementado na classe $RSA$, e para simplificar, $RSA.Codificar$ recebe textos limpos e a chave publica, e retorna textos criptografados ao invez de cifrar o $BigNumber$}
+\subparagraph*{Isto foi implementado na classe $RSA$, e para simplificar, $RSA.Codificar$ recebe textos limpos e a chave pública, e retorna textos criptografados ao invés de cifrar o $BigNumber$}
 
 \subsubsection{Decodificando}
 
@@ -258,7 +258,7 @@
     Z \equiv Y^{d} \pmod{n}
 \end{equation}
 
-\subparagraph*{Onde Z eh a mensagem em decodificada. Y a mensagem criptografada, e $d$ eh a chave privada.}
+\subparagraph*{Onde Z é a mensagem em decodificada. Y a mensagem criptografada, e $d$ é a chave privada.}
 
 \subparagraph*{Importante de notar que o seguinte eh verdade:}
 
@@ -268,17 +268,17 @@
 
 \subparagraph*{Isto foi implementado na classe $RSA$, e para simplificar, $RSA.Decodificar$ recebe textos cifrados e a chave privada, e retorna textos limpos}
 
-\subsection{Testando para um texto pre-determinado}
+\subsection{Testando para um texto pré-determinado}
 
-\subparagraph*{Quando executado o programa ira mostrar um texto ao usuario, codifica-lo, mostrar o texto codificado, e apos isso decodificar e mostrar o texto decodificado. O texto decodificado deve ser o mesmo que o texto original.}
+\subparagraph*{Quando executado o programa irá mostrar um texto ao usuário, codificá-lo, mostrar o texto codificado, e após isso decodificar e mostrar o texto decodificado. O texto decodificado deve ser o mesmo que o texto original.}
 
 \subparagraph*{O embasamento teorico disto esta descrito na secao 6.2.}
 
 \subsection{Testado para texto arbitrario Y}
 
-\subparagraph*{O programa ira pedir do usuario um texto, vamos codificar este texto, exibi-lo codificado, e apos isso decodificar e exibi-lo novamente. O texto decodificado deve ser o mesmo que o texto original.}
+\subparagraph*{O programa irá pedir ao usuário um texto, vamos codificar este texto, exibi-lo codificado, e após isso decodificar e exibi-lo novamente. O texto decodificado deve ser o mesmo que o texto original.}
 
-\subparagraph*{Lembrando que ha limitacao de tamanho do texto em $430$ caracteres como visto na secao 3.3}
+\subparagraph*{Lembrando que há limitação de tamanho do texto em $430$ caracteres como visto na seção 3.3}
 
 \subsection{Assinatura digital}
 
@@ -288,33 +288,47 @@
     Y \equiv X^{d} \pmod{n}
 \end{equation}
 
-\subparagraph*{E para verificar, fazemos o oposto que eh:}
+\subparagraph*{E para verificar, fazemos o oposto que é:}
 
 \begin{equation}
     Z \equiv Y^{ d} \pmod{n}
 \end{equation}
 
-\subparagraph*{Lembrando da equacao (10) que nos da que $Z \equiv X$ ja que:}
+\subparagraph*{Lembrando da equação (10) que nos dá que $Z \equiv X$ já que:}
 
 \begin{equation}
     Z \equiv X^{de} \equiv X \pmod{n}
     asdas
 \end{equation}
 
-\subparagraph*{Nesta etapa. o programa ira assinar o texto que o usuario escreveu anteriormente, e verificar a assinatura.}
+\subparagraph*{Nesta etapa, o programa irá assinar o texto que o usuário escreveu anteriormente, e verificar a assinatura.}
 
-\subparagraph*{Importante notar que assinatura eh um caso parecido com o de codificacao de texto. Exceto que neste caso vamos cifrar o texto limpo com nossa chave privada, e decodificar o texto cifrado com a chave publica.}
+\subparagraph*{Importante notar que assinatura é um caso parecido com o de codificação de texto. Exceto que neste caso vamos cifrar o texto limpo com nossa chave privada, e decodificar o texto cifrado com a chave pública.}
 
-\subsection{Autenticacao de remetente e destinatario}
+\subsection{Autenticação de remetente e destinatário}
 
-\subparagraph*{Neste caso, temos dois usuarios $A$ e $B$. }
+\subparagraph*{Neste caso, temos dois usuários $A$ e $B$. }
 
-\subparagraph*{O usuario $A$ fara a codificacao da mensagem com a chave publica de $B$, assim garantido que so $B$ lera a mensagem, e enviara junto com a mensagem a sua assinatura digital.}
+\subparagraph*{O usuário $A$ fará a codificação da mensagem com a chave pública de $B$, assim garantido que só $B$ lerá a mensagem, e envia junto com a mensagem a sua assinatura digital.}
 
-\subparagraph*{O usuario $B$ usara sua chave privada para decodificar a mensagem, e usara a chave publica de $A$ para verificar a assinatura digital.}
+\subparagraph*{O usuário $B$ usara sua chave privada para decodificar a mensagem, e usara a chave pública de $A$ para verificar a assinatura digital.}
 
-\subparagraph*{O programa vai guiar o usuario A em enviar uma mensagem assinada para o usuario B, e o usuario B verificara que a mensagem foi assinada por A.}
+\subparagraph*{O programa vai guiar o usuário A em enviar uma mensagem assinada para o usuário B, e o usuário B verificará que a mensagem foi assinada por A.}
+
+\section{Conclusões}
+
+\subparagraph*{Neste projeto conseguimos criar um sistema simples que criptografa, descriptografa mensagens de texto, e assina mensagens.}
+
+\subparagraph*{As maiores vulnerabilidades que enxergamos no projeto sao a geração dos números primos, ja que o método "aleatório" que usamos não foi um método extremamente robusto, havendo a possibilidade de repetição de números primos com probabilidade em torno de $1/5000$}
+
+\subparagraph*{Também há problemas com a segurança do arquivo de texto que contém as chaves privadas. Qualquer acesso indevido a ele, permitiria leitura das mensagens por terceiros.}
+
+\subparagraph*{Mas em geral, creio que atingimos os objetivos que foram descritos na introdução do projeto.}
+
+\subparagraph*{Alterei as chaves que uso para acesso a git por ssh para chaves geradas por este programa, mesmo que haja estes problemas descritos acima. }
+
+\subparagraph*{Creio que o maior ganho de segurança será trabalhando na
+    aleatoriedade dos primos gerados.}
 
 
 \end{document}
-

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  14 AUG 2022 08:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  14 AUG 2022 09:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -742,8 +742,8 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./Relatorio.toc
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
- [][] [][]\OT1/cmr/m/n/12 Testando para um texto pre- 
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+ [][] [][]\OT1/cmr/m/n/12 Testando para um texto pr^^Se- 
  []
 
 )
@@ -776,8 +776,8 @@ Underfull \hbox (badness 2671) in paragraph at lines 120--120
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 120--120
-\OT1/cmr/bx/n/12 bits. En-tao para to-das ope-ra-coes de
+Underfull \hbox (badness 2302) in paragraph at lines 120--120
+\OT1/cmr/bx/n/12 bits. Ent~ao para to-das opera^^Xc~oes de
  []
 
 
@@ -789,51 +789,49 @@ Underfull \hbox (badness 2635) in paragraph at lines 120--120
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.158 \subparagraph
-                   *{Estes tendo as mesmas limitacoes porem alterando tamanh... [2]
+l.156 \subparagraph
+                   *{Então escrevi dois novos métodos \emph{TextoParaBigNu... [2]
 Underfull \hbox (badness 1152) in paragraph at lines 169--169
 \OT1/cmr/bx/n/12 um $\OML/cmm/m/it/12 BigNumber$ \OT1/cmr/bx/n/12 de ta-ma-nho $\OML/cmm/m/it/12 N \OT1/cmr/m/n/12 + 1$ \OT1/cmr/bx/n/12 bits,
  []
 
 
 Underfull \hbox (badness 6016) in paragraph at lines 187--187
- []\OT1/cmr/bx/n/12 Logo, nossa li-mi-ta-cao para ga-ran-tir
+ []\OT1/cmr/bx/n/12 Logo, nossa li-mita^^Xc~ao para ga-ran-tir
  []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.229 \subparagraph
-                   *{E atravez do sistema de resolucao de congruencias linea... [3]
+l.225 \subparagraph
+                   *{Vamos definir $n = pq$ e $\phi(n) = (p-1)(q-1)$} [3]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.312 \subparagraph
-                   *{O usuario $A$ fara a codificacao da mensagem com a chav... [4]
+l.308 \subsection
+                 {Autenticação de remetente e destinatário} [4]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.319 \end{document}
-                     [5
-
-] (./Relatorio.aux)
+l.334 \end{document}
+                     [5] (./Relatorio.aux)
 Package rerunfilecheck Info: File `Relatorio.out' has not changed.
-(rerunfilecheck)             Checksum: 133CD2CA85CC43EC90C491AB5BE7F33C;4108.
+(rerunfilecheck)             Checksum: 7275AA1C5B9B737B157EE09BAC001A9A;4241.
  ) 
 Here is how much of TeX's memory you used:
- 51054 strings out of 478238
- 1306200 string characters out of 5850457
- 1997568 words of memory out of 5000000
- 68545 multiletter control sequences out of 15000+600000
+ 51069 strings out of 478238
+ 1306359 string characters out of 5850457
+ 1998564 words of memory out of 5000000
+ 68553 multiletter control sequences out of 15000+600000
  479615 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,821b,780s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Relatorio.pdf (5 pages, 159396 bytes).
+Output written on Relatorio.pdf (5 pages, 162086 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 298 compressed objects within 3 object streams
- 112 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 345 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
+ 119 named destinations out of 1000 (max. 500000)
+ 229 words of extra memory for PDF output out of 10000 (max. 10000000)
 

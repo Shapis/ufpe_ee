@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1660478378 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 1/Relatorio/Relatorio.tex" "Relatorio.pdf" "Relatorio" 1660478379
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 1/Relatorio/Relatorio.tex" 1660478378 13155 b8dee8494cf5333c3faae958edcd9dac ""
+["pdflatex"] 1660479775 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 1/Relatorio/Relatorio.tex" "Relatorio.pdf" "Relatorio" 1660479775
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 1/Relatorio/Relatorio.tex" 1660479774 14389 17080514907b1add84d9e54086ed9e6b ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -248,10 +248,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Relatorio.aux" 1660478379 4074 6acc2c20f2c8bb7da6899b33e2a23782 "pdflatex"
-  "Relatorio.out" 1660478379 4108 133cd2ca85cc43ec90c491ab5be7f33c "pdflatex"
-  "Relatorio.tex" 1660478378 13155 b8dee8494cf5333c3faae958edcd9dac ""
-  "Relatorio.toc" 1660478379 2212 f1af2dad6c9ea3d13220376e4dd11451 "pdflatex"
+  "Relatorio.aux" 1660479775 4371 4c8fbf77ae7c64fad95c4cbe6e3d843c "pdflatex"
+  "Relatorio.out" 1660479775 4241 7275aa1c5b9b737b157ee09bac001a9a "pdflatex"
+  "Relatorio.tex" 1660479774 14389 17080514907b1add84d9e54086ed9e6b ""
+  "Relatorio.toc" 1660479775 2427 03c3c558fba324e5b7b48f10d82991a6 "pdflatex"
   (generated)
   "Relatorio.aux"
   "Relatorio.log"
