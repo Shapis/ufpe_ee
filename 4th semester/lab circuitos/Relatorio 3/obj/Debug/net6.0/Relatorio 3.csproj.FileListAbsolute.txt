@@ -1,0 +1,15 @@
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/bin/Debug/net6.0/Relatorio 3
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/bin/Debug/net6.0/Relatorio 3.deps.json
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/bin/Debug/net6.0/Relatorio 3.runtimeconfig.json
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/bin/Debug/net6.0/Relatorio 3.dll
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/bin/Debug/net6.0/ref/Relatorio 3.dll
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/bin/Debug/net6.0/Relatorio 3.pdb
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/obj/Debug/net6.0/Relatorio 3.csproj.AssemblyReference.cache
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/obj/Debug/net6.0/Relatorio 3.GeneratedMSBuildEditorConfig.editorconfig
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/obj/Debug/net6.0/Relatorio 3.AssemblyInfoInputs.cache
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/obj/Debug/net6.0/Relatorio 3.AssemblyInfo.cs
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/obj/Debug/net6.0/Relatorio 3.csproj.CoreCompileInputs.cache
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/obj/Debug/net6.0/Relatorio 3.dll
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/obj/Debug/net6.0/ref/Relatorio 3.dll
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/obj/Debug/net6.0/Relatorio 3.pdb
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/obj/Debug/net6.0/Relatorio 3.genruntimeconfig.cache
