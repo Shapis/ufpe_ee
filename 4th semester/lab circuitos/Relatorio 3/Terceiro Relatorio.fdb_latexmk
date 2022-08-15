@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1660542423 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/Terceiro Relatorio.tex" "Terceiro Relatorio.pdf" "Terceiro Relatorio" 1660542423
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/Terceiro Relatorio.tex" 1660542422 5711 0d79dd1c236630f688befd29aefd474a ""
+["pdflatex"] 1660545493 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/Terceiro Relatorio.tex" "Terceiro Relatorio.pdf" "Terceiro Relatorio" 1660545494
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/Terceiro Relatorio.tex" 1660545492 5851 dde742edfd187b521ebbd0bffc4d7c58 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1650183167 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1650183167 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -257,10 +257,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Terceiro Relatorio.aux" 1660542423 1532 bc7407c246396bb013f160b10b4c6cfb "pdflatex"
-  "Terceiro Relatorio.out" 1660542423 843 be316ba4b57ec75d40f8a7f66354c377 "pdflatex"
-  "Terceiro Relatorio.tex" 1660542422 5711 0d79dd1c236630f688befd29aefd474a ""
-  "Terceiro Relatorio.toc" 1660542423 493 6a50a54c2835799c066b680ae290315b "pdflatex"
+  "Terceiro Relatorio.aux" 1660545494 1532 bc7407c246396bb013f160b10b4c6cfb "pdflatex"
+  "Terceiro Relatorio.out" 1660545494 843 be316ba4b57ec75d40f8a7f66354c377 "pdflatex"
+  "Terceiro Relatorio.tex" 1660545492 5851 dde742edfd187b521ebbd0bffc4d7c58 ""
+  "Terceiro Relatorio.toc" 1660545494 493 6a50a54c2835799c066b680ae290315b "pdflatex"
   (generated)
   "Terceiro Relatorio.aux"
   "Terceiro Relatorio.log"
