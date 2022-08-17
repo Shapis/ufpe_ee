@@ -1,0 +1,20 @@
+def para(params):
+    total = 0
+    for i in params:
+        total += 1/i
+    return 1/total
+
+
+print(para([12, 2, 3, 4]))
+
+
+def deltay():
+    for i in range(5):
+        print(i)
+
+
+def ydelta(params):
+    return params[1] - params[0]
+
+
+deltay()

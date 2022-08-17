@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  13 JUL 2022 08:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  15 AUG 2022 00:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -791,13 +791,13 @@ Package rerunfilecheck Info: File `"Primeiro Relatorio".out' has not changed.
 Here is how much of TeX's memory you used:
  51481 strings out of 478238
  1319720 string characters out of 5850457
- 2001603 words of memory out of 5000000
+ 2001601 words of memory out of 5000000
  69044 multiletter control sequences out of 15000+600000
  478550 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,822b,876s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Primeiro Relatorio.pdf" (3 pages, 124181 bytes).
+Output written on "Primeiro Relatorio.pdf" (3 pages, 124286 bytes).
 PDF statistics:
  177 PDF objects out of 1000 (max. 8388607)
  148 compressed objects within 2 object streams
