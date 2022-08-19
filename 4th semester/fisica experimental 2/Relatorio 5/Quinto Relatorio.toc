@@ -1,0 +1,4 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Montando o experimento}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Comparando as ondas geradas com a visualização no osciloscópio}{}{subsection.2.1}%
