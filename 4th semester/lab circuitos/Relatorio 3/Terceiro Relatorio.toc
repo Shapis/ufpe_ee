@@ -5,3 +5,6 @@
 \contentsline {section}{\numberline {3}Resultados preliminares}{}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Montando o circuito}{}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Valores esperados}{}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Medicoes no laboratorio}{}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Valores experimentais}{}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Conclusões}{}{section.5}%

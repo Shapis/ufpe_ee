@@ -1043,6 +1043,21 @@ INPUT /usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 INPUT /usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 INPUT /usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 INPUT /usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/share/texmf-dist/tex/latex/setspace/setspace.sty
+INPUT /usr/share/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+INPUT /usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
+INPUT /usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+INPUT /usr/share/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+INPUT /usr/share/texmf-dist/tex/latex/placeins/placeins.sty
+INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 INPUT ./Terceiro Relatorio.aux
 INPUT Terceiro Relatorio.aux
 INPUT Terceiro Relatorio.aux
@@ -1179,6 +1194,11 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT ./images//circuito.png
+INPUT ./images//circuito.png
+INPUT ./images//circuito.png
+INPUT ./images//circuito.png
+INPUT ./images//circuito.png
 INPUT Terceiro Relatorio.aux
 INPUT ./Terceiro Relatorio.out
 INPUT ./Terceiro Relatorio.out
