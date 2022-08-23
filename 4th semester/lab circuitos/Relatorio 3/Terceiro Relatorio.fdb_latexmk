@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1661165353 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/Terceiro Relatorio.tex" "Terceiro Relatorio.pdf" "Terceiro Relatorio" 1661165354
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/Terceiro Relatorio.tex" 1661165352 7903 a8d5115f0dd64ec68297b5d3454f8fe3 ""
+["pdflatex"] 1661249827 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/Terceiro Relatorio.tex" "Terceiro Relatorio.pdf" "Terceiro Relatorio" 1661249828
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/Terceiro Relatorio.tex" 1661249826 8404 edc9b6ff6eef71ccfea71134a3d644a9 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1650183167 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1650183167 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -257,10 +257,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Terceiro Relatorio.aux" 1661165353 1885 95343e019caca824e9194440241145e3 "pdflatex"
-  "Terceiro Relatorio.out" 1661165353 1268 d419816e82ae01d2f49ba05572062bc2 "pdflatex"
-  "Terceiro Relatorio.tex" 1661165352 7903 a8d5115f0dd64ec68297b5d3454f8fe3 ""
-  "Terceiro Relatorio.toc" 1661165353 723 ba3cfd0216db164ebf5afb0d10e1bb03 "pdflatex"
+  "Terceiro Relatorio.aux" 1661249828 1885 95343e019caca824e9194440241145e3 "pdflatex"
+  "Terceiro Relatorio.out" 1661249828 1268 d419816e82ae01d2f49ba05572062bc2 "pdflatex"
+  "Terceiro Relatorio.tex" 1661249826 8404 edc9b6ff6eef71ccfea71134a3d644a9 ""
+  "Terceiro Relatorio.toc" 1661249828 723 ba3cfd0216db164ebf5afb0d10e1bb03 "pdflatex"
   "images//circuito.png" 1661157524 662401 c9224a7bd15fb33f64280d59eeee150e ""
   (generated)
   "Terceiro Relatorio.aux"

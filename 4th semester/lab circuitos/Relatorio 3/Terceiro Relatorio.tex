@@ -214,11 +214,11 @@
     \begin{tabular}{ |c|ccccc| }
         \hline
         $V_2 \downarrow / V_1 \rightarrow $ & $-1.2V$ & $-0.6V$ & $0.0V$  & $0.6V$  & $1.2V$  \\
-        $-1.2V$                             & $8.26$  & $6.94$  & $5.62$  & $4.30$  & $2.98$  \\
-        $ -0.6V$                            & $5.45$  & $4.13$  & $2.81$  & $1.49$  & $0.17$  \\
-        $0.0V$                              & $2.64$  & $1.32$  & $0$     & $-1.32$ & $-2.64$ \\
-        $ 0.6V$                             & $-0.17$ & $-1.49$ & $-2.81$ & $-4.13$ & $-5.45$ \\
-        $ 1.2V$                             & $-2.98$ & $-4.30$ & $-5.62$ & $-6.94$ & $-8.26$ \\
+        $-1.2V$                             & $8.37$  & $7.03$  & $5.72$  & $4.31$  & $3.01$  \\
+        $ -0.6V$                            & $5.48$  & $4.18$  & $2.85$  & $1.45$  & $0.23$  \\
+        $0.0V$                              & $2.67$  & $1.36$  & $0.04$  & $-1.31$ & $-2.62$ \\
+        $ 0.6V$                             & $-0.21$ & $-1.54$ & $-2.84$ & $-4.18$ & $-5.53$ \\
+        $ 1.2V$                             & $-3.03$ & $-4.36$ & $-5.67$ & $-7$    & $-8.32$ \\
         \hline
     \end{tabular}
 \end{center}
@@ -229,7 +229,15 @@
     V_1^n A_1^n + V_2^n A_2^n = V_0^n \\
 \end{equation}
 
+
 \subparagraph*{Temos que o ganho $A_1$ real é $-2.2$ e o ganho $A_2$ real é $-4.7$}
+
+\subparagraph*{Pelo método dos mínimos quadrados. O que fiz foi o seguinte: Fixei o $V_2$ em um valor específico, e variei o $V_1$ para cada valor $V_0$ obtido.}
+
+\subparagraph*{Isto me deu cinco retas aproximadas pelo método dos mínimos quadrados.}
+
+\subparagraph*{Com as cinco equações em mãos fiz o mesmo passo que utilizei para conseguir o ganho real não aproximado por este método de $A_1$ e $A_2$ e obtive os mesmos ganhos que havia obtido anteriormente. $A_1 = -4.7$ e $A_2 -2.2$}
+
 
 
 \section{Conclusões}
