@@ -1,0 +1,4 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Lei da inducao de Faraday}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Inducao de corrente por campo magnetico}{}{subsection.2.1}%

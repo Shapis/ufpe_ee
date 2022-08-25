@@ -1,8 +1,8 @@
-PWD /home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 5
+PWD /home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 6
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 5/Quinto Relatorio.tex
-OUTPUT Quinto Relatorio.log
+INPUT /home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 6/Sexto Relatorio.tex
+OUTPUT Sexto Relatorio.log
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
@@ -1045,10 +1045,10 @@ INPUT /usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 INPUT /usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/share/texmf-dist/tex/latex/adjustbox/adjustbox.sty
-INPUT ./Quinto Relatorio.aux
-INPUT Quinto Relatorio.aux
-INPUT Quinto Relatorio.aux
-OUTPUT Quinto Relatorio.aux
+INPUT ./Sexto Relatorio.aux
+INPUT Sexto Relatorio.aux
+INPUT Sexto Relatorio.aux
+OUTPUT Sexto Relatorio.aux
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1110,18 +1110,18 @@ INPUT /usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 INPUT /usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-INPUT ./Quinto Relatorio.out
-INPUT Quinto Relatorio.out
-INPUT ./Quinto Relatorio.out
-INPUT Quinto Relatorio.out
-INPUT ./Quinto Relatorio.out
-INPUT Quinto Relatorio.out
-INPUT ./Quinto Relatorio.out
-INPUT Quinto Relatorio.out
-OUTPUT Quinto Relatorio.pdf
-INPUT ./Quinto Relatorio.out
-INPUT ./Quinto Relatorio.out
-OUTPUT Quinto Relatorio.out
+INPUT ./Sexto Relatorio.out
+INPUT Sexto Relatorio.out
+INPUT ./Sexto Relatorio.out
+INPUT Sexto Relatorio.out
+INPUT ./Sexto Relatorio.out
+INPUT Sexto Relatorio.out
+INPUT ./Sexto Relatorio.out
+INPUT Sexto Relatorio.out
+OUTPUT Sexto Relatorio.pdf
+INPUT ./Sexto Relatorio.out
+INPUT ./Sexto Relatorio.out
+OUTPUT Sexto Relatorio.out
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -1144,9 +1144,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./Quinto Relatorio.toc
-INPUT Quinto Relatorio.toc
-INPUT Quinto Relatorio.toc
+INPUT ./Sexto Relatorio.toc
+INPUT Sexto Relatorio.toc
+INPUT Sexto Relatorio.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -1165,25 +1165,15 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT Quinto Relatorio.toc
+OUTPUT Sexto Relatorio.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT ./images//Graph1.png
-INPUT ./images//Graph1.png
-INPUT ./images//Graph1.png
-INPUT ./images//Graph1.png
-INPUT ./images//Graph1.png
-INPUT Quinto Relatorio.aux
-INPUT ./Quinto Relatorio.out
-INPUT ./Quinto Relatorio.out
+INPUT Sexto Relatorio.aux
+INPUT ./Sexto Relatorio.out
+INPUT ./Sexto Relatorio.out
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb

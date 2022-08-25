@@ -1,0 +1,54 @@
+\documentclass[12pt,twoside, a4paper, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\pgfplotsset{compat=newest}
+\graphicspath{ {./images/} }
+%  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
+\newcommand{\drawvector} [9] [color=cyan] {
+ \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+\ifthenelse{\equal{#7}{true}}{
+ \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+ \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+ }
+ {}
+}
+\newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
+\title{Sexto Relatório de Física Experimental 2}
+\author{Henrique da Silva \\ hpsilva@proton.me}
+\date{\today}
+\pgfplotsset{width = 10cm, compat = 1.9}
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+\newpage
+%pagenumbering{roman}
+\tableofcontents
+\newpage
+
+\section{Introdução}
+
+\paragraph*{Neste relatório, vamos discutir o funcionamento de um circuito $RC$, em particular suas funcoes como filtro de sinais e integrador de sinais.}
+
+\paragraph*{Todos arquivos utilizados para criar este relatório, e o relatório em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/}}
+
+
+\section{Lei da inducao de Faraday}
+
+\subsection{Inducao de corrente por campo magnetico}
+
+\end{document}

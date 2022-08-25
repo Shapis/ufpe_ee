@@ -1,4 +1,16 @@
 \babel@toc {brazil}{}\relax 
 \contentsline {section}{\numberline {1}Introdução}{}{section.1}%
-\contentsline {section}{\numberline {2}Montando o experimento}{}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Comparando as ondas geradas com a visualização no osciloscópio}{}{subsection.2.1}%
+\contentsline {section}{\numberline {2}Lei da inducao de Faraday}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Inducao de corrente por campo magnetico}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Montando o circuito}{}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Transferencia de campo magnético}{}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Gráficos das ondas observadas}{}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Grafico para $V_0$ Senoidal}{}{subsubsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.5}Grafico para $V_0$ Triangular}{}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Grafico para $V_0$ Quadratico}{}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Conclusões sobre os graficos}{}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Tabela com fonte em modo onda Senoidal}{}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Tensão e corrente em elementos reativos}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Fasores}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Medicoes $V_{ac}$ e $V_{bc}$}{}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Gráfico para tensão no indutor e corrente no indutor}{}{subsubsection.3.2.1}%

@@ -1,0 +1,272 @@
+SciDAVis 2.9.2 project file
+<scripting-lang>	muParser
+<windows>	3
+<table>
+4452
+<table creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="Table1" columns="4" rows="30"><comment><![CDATA[]]></comment><column creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.9999999999999999e-01</row><row type="TypeDouble" index="1" invalid="no">5.9999999999999998e-01</row><row type="TypeDouble" index="2" invalid="no">9.0000000000000002e-01</row><row type="TypeDouble" index="3" invalid="no">1.2000000000000000e+00</row><row type="TypeDouble" index="4" invalid="no">1.5000000000000000e+00</row></column><column creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-12-08 05:58:05:610" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.5000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">5.0000000000000000e-01</row><row type="TypeDouble" index="2" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="3" invalid="no">1.0000000000000001e-01</row><row type="TypeDouble" index="4" invalid="no">0.0000000000000000e+00</row></column><column creation_time="2022-12-08 06:03:09:153" caption_spec="%n%C{ - }%c" name="4" type="TypeDouble" mode="Numeric" plot_designation="yErr"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-12-08 06:03:09:153" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-12-08 06:03:09:153" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="1" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="2" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="3" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="4" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="5" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="6" invalid="no">2.0000000000000001e-01</row></column><column creation_time="2022-12-08 05:58:18:192" caption_spec="%n%C{ - }%c" name="3" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-12-08 05:58:18:192" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-12-08 05:58:18:192" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.5000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">3.5000000000000000e+00</row><row type="TypeDouble" index="2" invalid="no">3.7999999999999998e+00</row><row type="TypeDouble" index="3" invalid="no">3.8999999999999999e+00</row><row type="TypeDouble" index="4" invalid="no">4.0000000000000000e+00</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width><column_width column="2">512</column_width><column_width column="3">120</column_width></table>
+geometry	11	0	1217	369	
+
+</table>
+<multiLayer>
+Graph2	1	1	Friday, August 12, 2022 6:04:55 AM -03
+geometry	344	214	500	400	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	431	278
+Alignement	0	0
+<graph>
+ggeometry	5	5	481	341
+PlotTitle	Grafico de Tensao por Tempo<br>Autor: Henrique Pedro da Silva	#ff000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffffff	255
+Margin	0
+Border	0	#ff000000
+grid	0	0	0	0	#ff0000ff	0	0	#ffa0a0a4	2	0	#ff0000ff	0	0	#ffa0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Tempo (ms)	Tensao (V)			
+AxesTitleColors	#ff000000	#ff000000	#ff000000	#ff000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Fira Sans Semi-Light	12	75	0	0	0
+ScaleFont0	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont1	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont2	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont3	Fira Sans Semi-Light	10	75	0	0	0
+AxisFont0	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont1	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont2	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont3	Fira Sans Semi-Light	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesNumberColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffffff	255
+curve	Table1_1	Table1_3	1	0	#ff000000	0	1	7	1	#ff000000	#ff000000	0	#ff000000	0	1	0	64		2	0	0	29	1
+ErrorBars	1	Table1_1	Table1_3	Table1_4	1	8	#ff000000	1	1	1
+FunctionCurve	0,ExpDecayFit1,x,0.3,1.5	100			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	0	1	16	64		2	0	-1323759824	22039	1
+<formula>
+A=-4.376429287825
+t=0.277448477880468
+y0=3.98720412400089
+
+y0+A*exp(-x/t)
+</formula>
+scale	0	2	4.5	0	8	5	0	0
+scale	1	2	4.5	0	8	5	0	0
+scale	2	0.2	1.6	0	8	5	0	0
+scale	3	0.2	1.6	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	0.231746031746032	4.42469879518072	Fira Sans Semi-Light	10	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{1}Table1_3	\c{3}ExpDecayFit1	</legend>
+</graph>
+</multiLayer>
+<multiLayer>
+Graph3	1	1	Friday, August 12, 2022 6:06:29 AM -03
+geometry	980	230	500	400	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	427	278
+Alignement	0	0
+<graph>
+ggeometry	5	5	481	341
+PlotTitle	Grafico de Tensao por Tempo<br>Autor: Henrique Pedro da Silva	#ff000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffffff	255
+Margin	0
+Border	0	#ff000000
+grid	0	0	0	0	#ff0000ff	0	0	#ffa0a0a4	2	0	#ff0000ff	0	0	#ffa0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Tempo (ms)	Tensao (V)			
+AxesTitleColors	#ff000000	#ff000000	#ff000000	#ff000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Fira Sans Semi-Light	12	75	0	0	0
+ScaleFont0	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont1	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont2	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont3	Fira Sans Semi-Light	10	75	0	0	0
+AxisFont0	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont1	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont2	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont3	Fira Sans Semi-Light	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesNumberColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffffff	255
+curve	Table1_1	Table1_2	1	0	#ff000000	0	1	7	1	#ff000000	#ff000000	0	#ff000000	0	1	0	64		2	0	0	29	1
+ErrorBars	1	Table1_1	Table1_2	Table1_4	1	8	#ff000000	1	1	1
+FunctionCurve	0,ExpDecayFit1,x,0.3,1.5	100			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	0	1	16	64		2	0	-1320949568	22039	1
+<formula>
+A=4.37643311261305
+t=0.277448225248901
+y0=0.0127961415177233
+
+y0+A*exp(-x/t)
+</formula>
+FunctionCurve	0,ExpDecayFit2,x,0.3,1.5	100			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	0	1	16	64		2	0	-1321516128	22039	1
+<formula>
+A=4.37643307536978
+t=0.277448227709302
+y0=0.0127961389309796
+
+y0+A*exp(-x/t)
+</formula>
+scale	0	-0.5	2	0	8	5	0	0
+scale	1	-0.5	2	0	8	5	0	0
+scale	2	0.2	1.6	0	8	5	0	0
+scale	3	0.2	1.6	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	0.232036613272311	1.92469879518072	Fira Sans Semi-Light	10	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{1}Table1_2	\c{3}ExpDecayFit1	\c{4}ExpDecayFit2	</legend>
+</graph>
+</multiLayer>
+<log>
+[Friday, August 12, 2022 6:01:18 AM -03	Plot: ''Graph1'']
+Exponential decay fit of dataset: Table1_2, using function: y0+A*exp(-x/t)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.3 to x = 1.5
+A (amplitude) = 4.37643311261305 +/- 0.376586345206959
+t (e-folding time) = 0.277448225248901 +/- 0.304633183805924
+y0 (offset) = 0.0127961415177232 +/- 0.0318955074788606
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0024527244582589
+R^2 = 0.999038147271271
+---------------------------------------------------------------------------------------
+Iterations = 6
+Status = success
+---------------------------------------------------------------------------------------
+[Friday, August 12, 2022 6:03:56 AM -03	Plot: ''Graph1'']
+Exponential decay fit of dataset: Table1_2, using function: y0+A*exp(-x/t)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.3 to x = 1.5
+A (amplitude) = 4.37643520025277 +/- 0.376586741001413
+t (e-folding time) = 0.277448087319517 +/- 0.304633334740298
+y0 (offset) = 0.0127962865562925 +/- 0.0318954935899406
+--------------------------------------------------------------------------------------
+Chi^2 = 0.00245272445837882
+R^2 = 0.999038147271224
+---------------------------------------------------------------------------------------
+Iterations = 5
+Status = success
+---------------------------------------------------------------------------------------
+[Friday, August 12, 2022 6:05:07 AM -03	Plot: ''Graph2'']
+Exponential decay fit of dataset: Table1_3, using function: y0+A*exp(-x/t)
+Y standard errors: Associated dataset (Table1_4)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.3 to x = 1.5
+A (amplitude) = 283,871.491879893 +/- 74,528,965,318.6375
+t (e-folding time) = -250,476.652527086 +/- 1.04817669818321
+y0 (offset) = -283,868.971877748 +/- 74,528,965,319.0117
+--------------------------------------------------------------------------------------
+Chi^2 = 8.40002036195555
+R^2 = 0.774798381717009
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[Friday, August 12, 2022 6:05:27 AM -03	Plot: ''Graph2'']
+Exponential decay fit of dataset: Table1_3, using function: y0+A*exp(-x/t)
+Y standard errors: Associated dataset (Table1_4)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.3 to x = 1.5
+A (amplitude) = 283,871.491879893 +/- 74,528,965,318.6375
+t (e-folding time) = -250,476.652527086 +/- 1.04817669818321
+y0 (offset) = -283,868.971877748 +/- 74,528,965,319.0117
+--------------------------------------------------------------------------------------
+Chi^2 = 8.40002036195555
+R^2 = 0.774798381717009
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[Friday, August 12, 2022 6:05:28 AM -03	Plot: ''Graph2'']
+Exponential decay fit of dataset: Table1_3, using function: y0+A*exp(-x/t)
+Y standard errors: Associated dataset (Table1_4)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.3 to x = 1.5
+A (amplitude) = 1,107,742.01076952 +/- 1,134,055,104,319.19
+t (e-folding time) = -977,420.589378512 +/- 1.0474026007578
+y0 (offset) = -1,107,739.49076897 +/- 1,134,055,104,319.57
+--------------------------------------------------------------------------------------
+Chi^2 = 8.40000521191823
+R^2 = 0.77479878788423
+---------------------------------------------------------------------------------------
+Iterations = 508
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[Friday, August 12, 2022 6:05:39 AM -03	Plot: ''Graph2'']
+Exponential growth fit of dataset: Table1_3, using function: y0+A*exp(x/t)
+Y standard errors: Associated dataset (Table1_4)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.3 to x = 1.5
+A (amplitude) = 301,400.527518053 +/- 84,006,272,605.4874
+t (lifetime) = 265,943.432936984 +/- 1.04803784866841
+y0 (offset) = -301,398.007516032 +/- 84,006,272,605.8616
+--------------------------------------------------------------------------------------
+Chi^2 = 8.40001917883701
+R^2 = 0.774798413436005
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[Friday, August 12, 2022 6:05:55 AM -03	Plot: ''Graph2'']
+Exponential decay fit of dataset: Table1_3, using function: y0+A*exp(-x/t)
+Y standard errors: Associated dataset (Table1_4)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.3 to x = 1.5
+A (amplitude) = -4.376429287825 +/- 2.15072233529244
+t (e-folding time) = 0.277448477880468 +/- 1.739792394627
+y0 (offset) = 3.98720412400089 +/- 0.182158933718665
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0613181114561773
+R^2 = 0.998356082802783
+---------------------------------------------------------------------------------------
+Iterations = 5
+Status = success
+---------------------------------------------------------------------------------------
+[Friday, August 12, 2022 6:06:37 AM -03	Plot: ''Graph3'']
+Exponential decay fit of dataset: Table1_2, using function: y0+A*exp(-x/t)
+Y standard errors: Associated dataset (Table1_4)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.3 to x = 1.5
+A (amplitude) = 4.37643311261305 +/- 2.15072647538266
+t (e-folding time) = 0.277448225248901 +/- 1.73979397296375
+y0 (offset) = 0.0127961415177233 +/- 0.182158788425671
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0613181114564725
+R^2 = 0.998356082802776
+---------------------------------------------------------------------------------------
+Iterations = 6
+Status = success
+---------------------------------------------------------------------------------------
+[Friday, August 12, 2022 6:12:53 AM -03	Plot: ''Graph3'']
+Exponential decay fit of dataset: Table1_2, using function: y0+A*exp(-x/t)
+Y standard errors: Associated dataset (Table1_4)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.3 to x = 1.5
+A (amplitude) = 4.37643307536978 +/- 2.15072643506189
+t (e-folding time) = 0.277448227709302 +/- 1.73979395758949
+y0 (offset) = 0.0127961389309796 +/- 0.182158789840691
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0613181114564373
+R^2 = 0.998356082802776
+---------------------------------------------------------------------------------------
+Iterations = 6
+Status = success
+---------------------------------------------------------------------------------------
+</log>

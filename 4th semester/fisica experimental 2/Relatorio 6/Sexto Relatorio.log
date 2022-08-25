@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  19 AUG 2022 19:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  25 AUG 2022 07:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 5/Quinto Relatorio.tex"
-(/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 5/Quinto Relatorio.tex
+**"/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 6/Sexto Relatorio.tex"
+(/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 6/Sexto Relatorio.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-10> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -636,8 +636,8 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip57
-) (./Quinto Relatorio.aux)
-\openout1 = `"Quinto Relatorio.aux"'.
+) (./Sexto Relatorio.aux)
+\openout1 = `"Sexto Relatorio.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
@@ -730,9 +730,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 35.
 LaTeX Info: Redefining \pageref on input line 35.
 LaTeX Info: Redefining \nameref on input line 35.
- (./Quinto Relatorio.out) (./Quinto Relatorio.out)
+ (./Sexto Relatorio.out) (./Sexto Relatorio.out)
 \@outlinefile=\write4
-\openout4 = `"Quinto Relatorio.out"'.
+\openout4 = `"Sexto Relatorio.out"'.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -741,14 +741,14 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./Quinto Relatorio.toc
+) (./Sexto Relatorio.toc
 Underfull \hbox (badness 2343) in paragraph at lines 4--4
  [][] [][]\OT1/cmr/m/n/12 Inducao de cor-rente por campo 
  []
 
 )
 \tf@toc=\write5
-\openout5 = `"Quinto Relatorio.toc"'.
+\openout5 = `"Sexto Relatorio.toc"'.
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 50.
@@ -757,170 +757,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--50
 []$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
  []
 
-
-Underfull \hbox (badness 2617) in paragraph at lines 66--66
-\OT1/cmr/bx/n/12 r^^Sapido (maior frequ^encia), te-re-mos um
- []
-
-
-Underfull \hbox (badness 1442) in paragraph at lines 66--66
-\OT1/cmr/bx/n/12 campo magn^^Setico va-ri-ando mais ra-pi-da-
- []
-
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-[]\OT1/cmr/bx/n/14.4 Transferencia de campo
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 122.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 122.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 122.
-
-
-Overfull \hbox (7.13156pt too wide) in paragraph at lines 124--157
-[] 
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 158.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 158.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 158.
-
-
-Overfull \hbox (7.13156pt too wide) in paragraph at lines 160--228
-[] 
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 229.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 229.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 229.
-
-
-Overfull \hbox (7.13156pt too wide) in paragraph at lines 231--348
-[] 
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.349 \subsection
-                 {Conclusões sobre os graficos} [2]
-Underfull \hbox (badness 1735) in paragraph at lines 357--357
-[]\OT1/cmr/bx/n/14.4 Tabela com fonte em modo
- []
-
-<./images//Graph1.png, id=123, 370.38374pt x 264.99pt>
-File: ./images//Graph1.png Graphic file (type png)
-<use ./images//Graph1.png>
-Package pdftex.def Info: ./images//Graph1.png  used on input line 379.
-(pdftex.def)             Requested size: 370.38283pt x 264.98935pt.
-
-Overfull \hbox (1.6479pt too wide) in paragraph at lines 378--381
-[] 
- []
-
-
-Underfull \vbox (badness 1715) has occurred while \output is active []
-
-
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-
-Overfull \hbox (69.93901pt too wide) in paragraph at lines 389--434
-[] 
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 435.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 435.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 435.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 435.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 435.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 435.
-
-
-Underfull \hbox (badness 1028) in paragraph at lines 439--439
- []\OT1/cmr/bx/n/12 Para al-tas frequ^encias toda tens~ao do
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.446 \subparagraph
-                   *{} [3 <./images//Graph1.png>]
-Overfull \hbox (30.63132pt too wide) in paragraph at lines 468--501
- [] [] 
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.505 \end{document}
-                     [4
-
-] (./Quinto Relatorio.aux)
-Package rerunfilecheck Info: File `"Quinto Relatorio".out' has not changed.
-(rerunfilecheck)             Checksum: 608A7CD118734248F34C44472964A821;3076.
+] (./Sexto Relatorio.aux)
+Package rerunfilecheck Info: File `"Sexto Relatorio".out' has not changed.
+(rerunfilecheck)             Checksum: 0E783D1C0E25C829A6A6C0083A931F43;546.
  ) 
 Here is how much of TeX's memory you used:
- 52085 strings out of 478238
- 1336246 string characters out of 5850457
- 3222972 words of memory out of 5000000
- 69636 multiletter control sequences out of 15000+600000
+ 50918 strings out of 478238
+ 1304684 string characters out of 5850457
+ 1979600 words of memory out of 5000000
+ 68515 multiletter control sequences out of 15000+600000
  478191 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,11n,118p,828b,2026s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Quinto Relatorio.pdf" (4 pages, 374476 bytes).
+ 115i,8n,118p,827b,768s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on "Sexto Relatorio.pdf" (1 page, 56314 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 176 compressed objects within 2 object streams
- 51 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 65 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
