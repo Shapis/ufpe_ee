@@ -1,4 +1,13 @@
 \babel@toc {brazil}{}\relax 
 \contentsline {section}{\numberline {1}Introdução}{}{section.1}%
-\contentsline {section}{\numberline {2}Lei da inducao de Faraday}{}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Inducao de corrente por campo magnetico}{}{subsection.2.1}%
+\contentsline {section}{\numberline {2}Tarefas}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Diagrama Fasorial}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Equações para impedancia, função transferência e ângulo de defasagem}{}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Tabela de dados}{}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Frequência de corte}{}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Amplitude no resistor.}{}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Gráficos}{}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Grafico para $V_e$ de forma quadrática}{}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Grafico para $V_e$ de triangular}{}{subsubsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.7}Filtro passa baixa e filtro passa alta}{}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Graficos de $V_0/V_e$ e $\phi $ para frequências de entrada}{}{subsection.2.8}%
