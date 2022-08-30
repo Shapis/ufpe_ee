@@ -1,0 +1,95 @@
+\documentclass[12pt,twoside, a4paper, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+ 
+\pgfplotsset{compat=newest}
+ 
+\graphicspath{ {./images/} }
+ 
+%  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
+ 
+\newcommand{\drawvector} [9] [color=cyan] {
+   \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+ 
+  
+ 
+\ifthenelse{\equal{#7}{true}}{
+   \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+   \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+   }
+   {}
+}
+ 
+\newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
+ 
+ 
+\title{Quarto Relatório de Lab de Circuitos}
+\author{Henrique da Silva \\ hpsilva@proton.me}
+\date{\today}
+\pgfplotsset{width = 10cm, compat = 1.9}
+ 
+ 
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+\newpage
+%pagenumbering{roman}
+\tableofcontents
+\newpage
+
+
+
+\section{Introdução}
+
+
+\subparagraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/lab circuitos}}
+
+\subparagraph*{Com entrada da fonte de $10V$}
+
+\subparagraph*{Para o divisor de tensao teremos $Vth = 21.3mV$ e $Rth = R1+R2 = 6.9k\varOmega$ para $R1 = 2.2k\varOmega$ e $R2 = 4.7k\varOmega$}
+
+\subparagraph*{Para o buffer, $Vth$ eh o mesmo do divisor de tensao, entao $21.3mV$, e a $Rtv$ do buffer tambem eh igual a $Rth$ do divisor de tensao. Entao $Rtv = 6.9k\varOmega$}
+
+
+\begin{center}
+    \begin{tabular}{ |c|ccccc| }
+        \hline
+        $R_1 \downarrow / R_2 \rightarrow $ & $220\varOmega$ & $470\varOmega$ & $1k\varOmega$ & $3.3k\varOmega$ & $6.8k\varOmega$ \\
+        $220\varOmega$                      & $5.00$         & $6.81$         & $8.2$         & $9.38$          & $9.69$          \\
+        $470\varOmega$                      & $3.19$         & $5.00$         & $6.80$        & $8.75$          & $9.35$          \\
+        $1k\varOmega$                       & $1.80$         & $3.20$         & $5.00$        & $7.67$          & $8.72$          \\
+        $3.3k\varOmega$                     & $0.63$         & $1.25$         & $2.33$        & $5.00$          & $6.73$          \\
+        $6.8k\varOmega$                     & $0.31$         & $0.65$         & $1.28$        & $3.27$          & $5.00$          \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\end{document}
