@@ -1,0 +1,23 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Filtro Passa Banda}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Tabela de dados}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Grafico MonoLog de $Ve/V0$ sobre $f$}{}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Diferença de fase}{}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Figuras de Lissajous}{}{subsection.2.4}%
+\contentsline {paragraph}{Nos casos de baixa e alta frequência a tensão $V_0$ vermelha está amplificada em 10 vezes para melhor visualização.}{}{section*.6}%
+\contentsline {subsubsection}{\numberline {2.4.1}Baixa Frequência}{}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Frequência de Ressonância}{}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Alta frequência}{}{subsubsection.2.4.3}%
+\contentsline {section}{\numberline {3}Retificador de meia onda}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Gráficos}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Papel do resistor}{}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Processo de retificação}{}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Retificador de onda completa}{}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Efeitos do sobre a tensão antes de adicionar capacitor}{}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Sistema sem capacitor}{}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.2}Efeitos sobre a tensão após adicionar o capacitor}{}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Capacitor de 1 $\mu F$}{}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Capacitor de 10 $\mu F$}{}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Capacitor de 100 $\mu F$}{}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}Processo com o capacitor}{}{subsection.4.3}%

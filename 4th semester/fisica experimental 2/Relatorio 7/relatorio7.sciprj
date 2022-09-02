@@ -1,0 +1,62 @@
+SciDAVis 2.9.2 project file
+<scripting-lang>	muParser
+<windows>	2
+<table>
+6676
+<table creation_time="2022-02-09 01:29:19:929" caption_spec="%n%C{ - }%c" name="Table1" columns="3" rows="20"><comment><![CDATA[]]></comment><column creation_time="2022-02-09 01:29:19:929" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-02-09 01:29:19:929" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-02-09 01:29:19:929" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.0000000000000000e+02</row><row type="TypeDouble" index="1" invalid="no">2.0000000000000000e+02</row><row type="TypeDouble" index="2" invalid="no">4.0000000000000000e+02</row><row type="TypeDouble" index="3" invalid="no">6.0000000000000000e+02</row><row type="TypeDouble" index="4" invalid="no">7.0000000000000000e+02</row><row type="TypeDouble" index="5" invalid="no">1.0000000000000000e+03</row><row type="TypeDouble" index="6" invalid="no">1.5000000000000000e+03</row><row type="TypeDouble" index="7" invalid="no">2.0000000000000000e+03</row><row type="TypeDouble" index="8" invalid="no">3.0000000000000000e+03</row><row type="TypeDouble" index="9" invalid="no">4.0000000000000000e+03</row><row type="TypeDouble" index="10" invalid="no">5.0000000000000000e+03</row><row type="TypeDouble" index="11" invalid="no">6.0000000000000000e+03</row><row type="TypeDouble" index="12" invalid="no">8.0000000000000000e+03</row><row type="TypeDouble" index="13" invalid="no">1.0000000000000000e+04</row><row type="TypeDouble" index="14" invalid="no">1.5000000000000000e+04</row><row type="TypeDouble" index="15" invalid="no">2.0000000000000000e+04</row><row type="TypeDouble" index="16" invalid="no">3.0000000000000000e+04</row><row type="TypeDouble" index="17" invalid="no">9.0000000000000000e+04</row><row type="TypeDouble" index="18" invalid="no">1.5000000000000000e+05</row><row type="TypeDouble" index="19" invalid="no">5.0000000000000000e+05</row></column><column creation_time="2022-02-09 01:29:45:011" caption_spec="%n%C{ - }%c" name="3" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-02-09 01:29:45:011" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-02-09 01:29:45:011" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">5.9999999999999998e-02</row><row type="TypeDouble" index="1" invalid="no">1.7000000000000001e-01</row><row type="TypeDouble" index="2" invalid="no">2.2000000000000000e-01</row><row type="TypeDouble" index="3" invalid="no">3.4000000000000002e-01</row><row type="TypeDouble" index="4" invalid="no">3.7000000000000000e-01</row><row type="TypeDouble" index="5" invalid="no">4.6999999999999997e-01</row><row type="TypeDouble" index="6" invalid="no">6.2000000000000000e-01</row><row type="TypeDouble" index="7" invalid="no">6.8999999999999995e-01</row><row type="TypeDouble" index="8" invalid="no">7.5000000000000000e-01</row><row type="TypeDouble" index="9" invalid="no">8.1000000000000005e-01</row><row type="TypeDouble" index="10" invalid="no">8.1999999999999995e-01</row><row type="TypeDouble" index="11" invalid="no">7.9000000000000004e-01</row><row type="TypeDouble" index="12" invalid="no">7.8000000000000003e-01</row><row type="TypeDouble" index="13" invalid="no">7.2999999999999998e-01</row><row type="TypeDouble" index="14" invalid="no">6.3000000000000000e-01</row><row type="TypeDouble" index="15" invalid="no">5.5000000000000004e-01</row><row type="TypeDouble" index="16" invalid="no">4.2999999999999999e-01</row><row type="TypeDouble" index="17" invalid="no">1.4999999999999999e-01</row><row type="TypeDouble" index="18" invalid="no">8.9999999999999997e-02</row><row type="TypeDouble" index="19" invalid="no">8.0000000000000002e-02</row></column><column creation_time="2022-02-09 01:29:45:012" caption_spec="%n%C{ - }%c" name="4" type="TypeDouble" mode="Numeric" plot_designation="yErr"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-02-09 01:29:45:012" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-02-09 01:29:45:012" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><formula start_row="0" end_row="19">0.05</formula><row type="TypeDouble" index="0" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="1" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="2" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="3" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="4" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="5" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="6" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="7" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="8" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="9" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="10" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="11" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="12" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="13" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="14" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="15" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="16" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="17" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="18" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="19" invalid="no">5.0000000000000003e-02</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width><column_width column="2">505</column_width></table>
+geometry	0	0	1210	369	
+
+</table>
+<multiLayer>
+Graph1	1	1	Friday, September 2, 2022 1:37:07 AM -03
+geometry	1124	139	500	400	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	430	278
+Alignement	0	0
+<graph>
+ggeometry	5	5	481	340
+PlotTitle	Grafico MonoLog de V0/Ve e Frequencia<br>Autor: Henrique Pedro da Silva	#ff000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffffff	255
+Margin	0
+Border	0	#ff000000
+grid	0	0	0	0	#ff0000ff	0	0	#ffa0a0a4	2	0	#ff0000ff	0	0	#ffa0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Log Frequencia Hz	V0/Ve			
+AxesTitleColors	#ff000000	#ff000000	#ff000000	#ff000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Fira Sans Semi-Light	12	75	0	0	0
+ScaleFont0	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont1	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont2	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont3	Fira Sans Semi-Light	10	75	0	0	0
+AxisFont0	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont1	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont2	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont3	Fira Sans Semi-Light	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesNumberColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffffff	255
+curve	Table1_1	Table1_3	1	0	#ff000000	0	1	7	1	#ff000000	#ff000000	0	#ff000000	0	1	0	64		2	0	0	19	1
+ErrorBars	1	Table1_1	Table1_3	Table1_4	1	8	#ff000000	1	1	1
+scale	0	1e-100	1	0	3	5	0	0
+scale	1	1e-100	1	0	8	5	0	0
+scale	2	100	600000	0	2	5	1	0
+scale	3	100	600000	0	8	5	1	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	122.365819146207	0.963235294117647	Fira Sans Semi-Light	10	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{1}Table1_3	</legend>
+</graph>
+</multiLayer>
+<log>
+</log>

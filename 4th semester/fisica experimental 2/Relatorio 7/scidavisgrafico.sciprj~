@@ -1,0 +1,93 @@
+SciDAVis 2.9.2 project file
+<scripting-lang>	muParser
+<windows>	2
+<table>
+3714
+<table creation_time="2022-29-07 04:22:36:501" caption_spec="%n%C{ - }%c" name="Table1" columns="4" rows="4"><comment><![CDATA[]]></comment><column creation_time="2022-29-07 04:22:36:501" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-29-07 04:22:36:501" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-29-07 04:22:36:501" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">4.0000000000000000e+00</row><row type="TypeDouble" index="2" invalid="no">6.0000000000000000e+00</row></column><column creation_time="2022-29-07 04:53:16:393" caption_spec="%n%C{ - }%c" name="3" type="TypeDouble" mode="Numeric" plot_designation="xErr"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-29-07 04:53:16:393" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-29-07 04:53:16:393" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="1" invalid="no">5.0000000000000003e-02</row><row type="TypeDouble" index="2" invalid="no">5.0000000000000003e-02</row></column><column creation_time="2022-29-07 04:22:36:501" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-29-07 04:22:36:501" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-29-07 04:22:36:501" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">9.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">1.3000000000000000e+01</row><row type="TypeDouble" index="2" invalid="no">1.5000000000000000e+01</row></column><column creation_time="2022-29-07 04:53:16:393" caption_spec="%n%C{ - }%c" name="4" type="TypeDouble" mode="Numeric" plot_designation="yErr"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-29-07 04:53:16:393" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-29-07 04:53:16:393" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="2" invalid="no">1.0000000000000000e+00</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width><column_width column="2">120</column_width><column_width column="3">257</column_width></table>
+geometry	1	0	941	369	
+
+</table>
+<multiLayer>
+Graph2	1	1	Friday, July 29, 2022 4:53:40 AM -03
+geometry	488	134	500	400	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	436	278
+Alignement	0	0
+<graph>
+ggeometry	5	5	481	341
+PlotTitle	Gráfico de Resistência  por Tensao<br>Autor: Henrique Pedro da Silva	#ff000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffffff	255
+Margin	0
+Border	0	#ff000000
+grid	0	0	0	0	#ff0000ff	0	0	#ffa0a0a4	2	0	#ff0000ff	0	0	#ffa0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Tensão (V)	Resistência  (Ohm)			
+AxesTitleColors	#ff000000	#ff000000	#ff000000	#ff000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Fira Sans Semi-Light	12	75	0	0	0
+ScaleFont0	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont1	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont2	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont3	Fira Sans Semi-Light	10	75	0	0	0
+AxisFont0	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont1	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont2	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont3	Fira Sans Semi-Light	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesNumberColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffffff	255
+curve	Table1_1	Table1_2	1	0	#ff000000	0	1	7	1	#ff000000	#ff000000	0	#ff000000	0	1	0	64		2	0	0	3	1
+ErrorBars	0	Table1_1	Table1_2	Table1_3	1	8	#ff000000	1	1	1
+ErrorBars	1	Table1_1	Table1_2	Table1_4	1	8	#ff000000	1	1	1
+FunctionCurve	0,PolyFit1,x,2,6	100			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	0	1	16	64		2	0	-516926320	21866	1
+<formula>
+a0=3
+a1=3.5
+a2=-0.25
+
+a0+a1*x+a2*x^2
+</formula>
+scale	0	8	16	0	8	5	0	0
+scale	1	8	16	0	8	5	0	0
+scale	2	1	7	0	8	5	0	0
+scale	3	1	7	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	1.1330376940133	15.7590361445783	Fira Sans Semi-Light	10	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{1}Table1_2	\c{4}PolyFit1	</legend>
+</graph>
+</multiLayer>
+<log>
+[Friday, July 29, 2022 4:25:49 AM -03	Plot: ''Graph1'']
+Polynomial fit of dataset: Table1_2, using function: a0+a1*x+a2*x^2
+Y standard errors: Unknown
+From x = 2 to x = 6
+a0  = 3 +/- nan
+a1  = 3.5 +/- nan
+a2  = -0.25 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = 0
+R^2 = 1
+---------------------------------------------------------------------------------------
+[Friday, July 29, 2022 4:54:34 AM -03	Plot: ''Graph2'']
+Polynomial fit of dataset: Table1_2, using function: a0+a1*x+a2*x^2
+Y standard errors: Associated dataset (Table1_4)
+From x = 2 to x = 6
+a0  = 3 +/- 4.35889894354067
+a1  = 3.5 +/- 2.47487373415291
+a2  = -0.25 +/- 0.306186217847897
+--------------------------------------------------------------------------------------
+Chi^2 = 0
+R^2 = 1
+---------------------------------------------------------------------------------------
+</log>
