@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+const float vcc = 10;
 const float r1 = 100000;
 const float r2 = 47000;
 const float r3 = 220000;

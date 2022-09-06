@@ -1,2 +1,7 @@
 \babel@toc {brazil}{}\relax 
 \contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Analise do circuito}{}{section.2}%
+\contentsline {section}{\numberline {3}Medições no laboratório}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Valores de Thevenin para divisor de tensão}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}MMEQ}{}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Conclusões}{}{section.4}%

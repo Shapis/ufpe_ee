@@ -9,21 +9,20 @@ from scipy import optimize
 # cada RL.  As arrays devem ter as mesmas dimensões.
 #
 # Os valores abaixo são apenas um exemplo.  Você deve apagá-los e
-# colocar os valores que você obteve.
-RL_med = np.array([100, 500, 1000, 2000, 10000, 50000])
-V_med = np.array([0.486527, 1.92541, 3.08569, 4.63854, 7.85423, 9.01642])
+# colocar os valores que você obteve.  A variável RL_med é um array
+# com os valores medidos das resistências de carga, e a variável V_med
+# contém os valores das respectivas tensões de saída.
+RL_med = np.array([217, 470, 1000, 3260, 6670])
+V_med = np.array([0.86, 1.64, 2.71, 4.69, 5.59])
 
-# VOCÊ NÃO PRECISA MODIFICAR NADA DO CÓDIGO ALÉM DOS VALORES ACIMA.
+# Você não precisa modificar nada do código além dos valores acima.
 
 # Obtenção da corrente sobre a resistência de carga
 I_med = V_med/RL_med
 
 # Geração de um vetor de correntes com mais pontos
-I = np.linspace(0, 0.0049)
+I = np.linspace(0, 0.0045)
 
-# Definimos a matriz A e o vetor coluna B como especificado na ficha
-# da prática.
-#
 # O valor de retorno da função lstsq() é uma array cujo primeiro
 # elemento é uma outra array com os valores ótimos das incógnitas.
 # Comoa ficha da prática menciona, estas incógnitas em nosso caso são
@@ -42,7 +41,4 @@ print(f"Rth = {thevenin[1]}")
 # aumenta devido à queda de tensão no resistor de Thevenin
 plt.plot(I, thevenin[0] - thevenin[1]*I)
 plt.scatter(I_med, V_med, color="red")
-plt.title("Curva da tensão de saída Vo pela corrente Io")
-plt.xlabel("Io (mA)")
-plt.ylabel("Vo (V)")
 plt.show()
