@@ -9,7 +9,7 @@ geometry	0	0	1267	480
 </table>
 <multiLayer>
 Graph1	1	1	Friday, August 26, 2022 5:54:29 AM -03
-geometry	1267	0	500	400	
+geometry	1267	0	500	400	active
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -43,10 +43,17 @@ AxesBaseline	0	0	0	0
 CanvasBackground	#ffffffff	255
 curve	Table1_f	Table1_V0/Ve	1	0	#ff000000	0	1	7	1	#ff000000	#ff000000	0	#ff000000	0	1	0	64		2	0	0	19	1
 ErrorBars	1	Table1_f	Table1_V0/Ve	Table1_Erro V0/Ve	1	8	#ff000000	1	1	1
-scale	0	0.1	4	0	2	5	1	0
-scale	1	0.1	4	0	8	5	1	0
-scale	2	100	100000	0	4	5	1	0
-scale	3	100	100000	0	8	5	1	0
+FunctionCurve	0,LinearFit1,x,50,50000	2			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	0	1	16	64		2	0	-1138396416	21861	1
+<formula>
+B=0.734099877052213
+A=-1.79709946943982e-05
+
+A*x+B
+</formula>
+scale	0	1e-100	1e+100	0	2	5	1	0
+scale	1	0.01	10	0	8	5	1	0
+scale	2	10	100000	0	4	5	1	0
+scale	3	10	100000	0	8	5	1	0
 LabelsFormat	0	4	0	4	0	4	0	4	
 AxisType	0	0	0	0	
 MajorTicks	1	1	1	1	
@@ -55,12 +62,12 @@ TicksLength	5	9
 DrawAxesBackbone	1
 AxesLineWidth	1
 LabelsRotation	0	0
-<legend>	118.205919377965	3.50125619742068	Fira Sans Semi-Light	10	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{1}Table1_V0/Ve	</legend>
+<legend>	12.546487766673	7.61067058946639	Fira Sans Semi-Light	10	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{1}Table1_V0/Ve	\c{3}PolyFit1	\c{3}LinearFit1	</legend>
 </graph>
 </multiLayer>
 <multiLayer>
 Graph2	1	1	Friday, August 26, 2022 6:02:44 AM -03
-geometry	763	0	500	400	active
+geometry	763	0	500	400	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -110,4 +117,40 @@ LabelsRotation	0	0
 </graph>
 </multiLayer>
 <log>
+[Friday, August 26, 2022 6:07:49 AM -03	Plot: ''Graph1'']
+Polynomial fit of dataset: Table1_V0/Ve, using function: a0+a1*x+a2*x^2
+Y standard errors: Associated dataset (Table1_Erro V0/Ve)
+From x = 50 to x = 50,000
+a0  = 0.795570837746965 +/- 0.0133804516510095
+a1  = -5.49919847109049e-05 +/- 3.05484032203043e-06
+a2  = 8.56362554950956e-10 +/- 6.76046331854326e-11
+--------------------------------------------------------------------------------------
+Chi^2 = 181.574963511244
+R^2 = 0.75807745851543
+---------------------------------------------------------------------------------------
+[Friday, August 26, 2022 6:08:09 AM -03	Plot: ''Graph1'']
+Exponential decay fit of dataset: Table1_V0/Ve, using function: y0+A*exp(-x/t)
+Y standard errors: Associated dataset (Table1_Erro V0/Ve)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 50 to x = 50,000
+A (amplitude) = 1.46690250040998e+23 +/- 0
+t (e-folding time) = 4.03322639152229e-22 +/- 0
+y0 (offset) = 0.6225 +/- 0.0111803398874989
+--------------------------------------------------------------------------------------
+Chi^2 = 750.55
+R^2 = 0
+---------------------------------------------------------------------------------------
+Iterations = 2
+Status = cannot reach the specified tolerance in X
+---------------------------------------------------------------------------------------
+[Friday, August 26, 2022 6:08:29 AM -03	Plot: ''Graph1'']
+Linear Regression fit of dataset: Table1_V0/Ve, using function: A*x+B
+Y standard errors: Associated dataset (Table1_Erro V0/Ve)
+From x = 50 to x = 50,000
+B (y-intercept) = 0.734099877052213 +/- 0.0124694510330752
+A (slope) = -1.79709946943982e-05 +/- 8.89134033885127e-07
+--------------------------------------------------------------------------------------
+Chi^2 = 342.03334860694
+R^2 = 0.544289722727414
+---------------------------------------------------------------------------------------
 </log>
