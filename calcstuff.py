@@ -95,19 +95,6 @@ def ydelta(Ra, Rb, Rc):
     return [R1, R3, R2]
 
 
-def rcserie(R, C):
-    Xc = 1 / (2 * math.pi * C)
-    return Xc
-
-
-def rlcserie(R, L, C):
-    Xc = 1 / (2 * math.pi * C)
-    Xl = 2 * math.pi * L
-    X = Xc * Xl / (Xc + Xl)
-    return X
-
-
-# caso 1,2,3 , superamortecido, critico, subamortecido
 def rlcpara(r, l, c):
     alpha = 1 / (2 * r * c)
     omega = 1 / math.sqrt(l * c)
@@ -118,7 +105,7 @@ def rlcpara(r, l, c):
         print('v(t) = D1*t*e^(', -alpha, 't) + D2*e^(', -alpha, 't)')
         print('v(0) = D2')
         print('dv(0)/dt = D1 + ', -alpha, '*D2')
-        print('C dv/dt  = Ic/C')
+        print('dv/dt  = Ic/C')
         print('Ic = -IL - Ir')
     elif alpha > omega:
         raiz1 = -alpha + math.sqrt((alpha**2) - (omega**2))
@@ -128,7 +115,7 @@ def rlcpara(r, l, c):
         print('v(t) = A1*e^(', raiz1, 't) + A2*e^(', raiz2, 't)')
         print('v(0) = A1 + A2')
         print('dv(0)/dt = A1*(', raiz1, ') + A2*(', raiz2, ')')
-        print('C dv/dt  = Ic/C')
+        print('dv/dt  = Ic/C')
         print('Ic = -IL - Ir')
     elif alpha < omega:
         raiz = math.sqrt((omega**2) - (alpha**2))
@@ -137,8 +124,8 @@ def rlcpara(r, l, c):
         print('v(t) = B1*cos(', raiz, 't)*e^(', -alpha,
               't) + B2*sin^(', raiz, 't)*e^(', -alpha, 't)')
         print('v(0) = B1')
-        print('dv(0)/dt =  -', alpha, '*B1 + ', raiz, '*B2')
-        print('C dv/dt  = Ic/C')
+        print('dv(0)/dt =  ', -alpha, '*B1 + ', raiz, '*B2')
+        print('dv/dt  = Ic/C')
         print('Ic = -IL - Ir')
 
     return
@@ -152,30 +139,30 @@ def rlcserie(r, l, c):
         print('Se alpha:', alpha, '= omega:', omega,
               'entao o sistema é criticamente amortecido')
         print('v(t) = D1*t*e^(', -alpha, 't) + D2*e^(', -alpha, 't)')
-        print('v(0) = D2')
-        print('dv(0)/dt = D1 + ', -alpha, '*D2')
-        print('C dv/dt  = Ic/C')
-        print('Ic = -IL - Ir')
+        print('I(0) = D2')
+        print('dI(0)/dt = D1 + ', -alpha, '*D2')
+        print('dI/dt  = V(L) / L')
+        print('V(R) + V(C) + V(L) = 0')
     elif alpha > omega:
         raiz1 = -alpha + math.sqrt((alpha**2) - (omega**2))
         raiz2 = -alpha - math.sqrt((alpha**2) - (omega**2))
         print('Se alpha:', alpha, '> omega:', omega,
               'entao o sistema é superamortecido')
         print('v(t) = A1*e^(', raiz1, 't) + A2*e^(', raiz2, 't)')
-        print('v(0) = A1 + A2')
-        print('dv(0)/dt = A1*(', raiz1, ') + A2*(', raiz2, ')')
-        print('C dv/dt  = Ic/C')
-        print('Ic = -IL - Ir')
+        print('I(0) = A1 + A2')
+        print('dI(0)/dt = A1*(', raiz1, ') + A2*(', raiz2, ')')
+        print('dI/dt  = V(L) / L')
+        print('V(R) + V(C) + V(L) = 0')
     elif alpha < omega:
-        raiz = math.sqrt((omega**2) - (alpha**2))
+        parteImaginaria = math.sqrt((omega**2) - (alpha**2))
         print('Se alpha:', alpha, '< omega:', omega,
               'entao o sistema é subamortecido')
-        print('v(t) = B1*cos(', raiz, 't)*e^(', -alpha,
-              't) + B2*sin^(', raiz, 't)*e^(', -alpha, 't)')
-        print('v(0) = B1')
-        print('dv(0)/dt =  -', alpha, '*B1 + ', raiz, '*B2')
-        print('C dv/dt  = Ic/C')
-        print('Ic = -IL - Ir')
+        print('v(t) = B1*cos(', parteImaginaria, 't)*e^(', -alpha,
+              't) + B2*sin^(', parteImaginaria, 't)*e^(', -alpha, 't)')
+        print('I(0) = B1')
+        print('dI(0)/dt =  ', -alpha, '*B1 + ', parteImaginaria, '*B2')
+        print('dI/dt  = V(L) / L')
+        print('V(R) + V(C) + V(L) = 0')
     return
 
 
