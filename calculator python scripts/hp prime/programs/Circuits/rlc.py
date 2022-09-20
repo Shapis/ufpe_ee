@@ -1,3 +1,5 @@
+# PYTHON EXPORT RLC()
+
 def rlc():
     print('Responda as perguntas com o numero correspondente.')
     print('O sistema esta em resposta natural ou forcada?')
@@ -10,3 +12,12 @@ def rlc():
     else:
         print('Numero invalido')
         return
+
+
+def pergunta():
+    return
+
+
+rlc()
+
+# end
