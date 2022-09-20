@@ -1,0 +1,12 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Reflexão interna total}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Tabela de dados}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Media dos erros}{}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Angulo critico}{}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Erro absoluto e relativo}{}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Polarização da luz}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Verificacao do angulo de Brewster}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Sentido da polarização}{}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Obtendo o coeficiente de refracao}{}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Polarizadores em serie}{}{subsection.3.4}%

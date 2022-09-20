@@ -1,0 +1,151 @@
+\documentclass[12pt,twoside, a4paper, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\pgfplotsset{compat=newest}
+\graphicspath{ {./images/} }
+%  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
+\newcommand{\drawvector} [9] [color=cyan] {
+\draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+\ifthenelse{\equal{#7}{true}}{
+\draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+\draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+}
+{}
+}
+\newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
+\title{Sétimo  Relatório de Física Experimental 2}
+\author{Henrique da Silva \\ hpsilva@proton.me}
+\date{\today}
+\pgfplotsset{width = 10cm, compat = 1.9}
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+\newpage
+%pagenumbering{roman}
+\tableofcontents
+\newpage
+
+\section{Introdução}
+
+\paragraph*{Neste relatório, vamos discutir a refração da luz, e sua polarização após incidencia sobre superfícies.}
+
+\paragraph*{Também discutiremos alguns circuitos retificadores com diodos.}
+
+\paragraph*{Todos arquivos utilizados para criar este relatório, e o relatório em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/}}
+
+
+\section{Reflexão interna total}
+
+\subsection{Tabela de dados}
+
+\begin{center}
+  \begin{tabular}{ |c|c|c|c|c| }
+    \hline
+    $\theta_1$   & $\theta_2$     & $-\theta_2$ & $\theta_{2-m}$  & $n$ \\
+                 &                &             &                 &     \\
+    $10 \pm 0.5$ & $7.0 \pm 0.5
+    $            & $6.5 \pm 0.5$  & $7 \pm 1$   & $1.48 \pm 0.05$       \\
+    $20 \pm 0.5$ & $13.0 \pm 0.5
+    $            & $13 \pm 0.5$   & $13 \pm 1$  & $1.52 \pm 0.05$       \\
+    $30 \pm 0.5$ & $19.5 \pm 0.5
+    $            & $19.5 \pm 0.5$ & $ 20 \pm 1$ & $1.50 \pm 0.05$       \\
+    $40 \pm 0.5$ & $25.5 \pm 0.5
+    $            & $25.5 \pm 0.5$ & $25 \pm 1$  & $1.49 \pm 0.05$       \\
+    $50 \pm 0.5$ & $30.5 \pm 0.5
+    $            & $30.5 \pm 0.5$ & $ 30 \pm 1$ & $1.51 \pm 0.05$       \\
+    $60 \pm 0.5$ & $35.5 \pm 0.5
+    $            & $35 \pm 0.5$   & $ 35 \pm 1$ & $1.50 \pm 0.05$       \\
+    $70 \pm 0.5$ & $39.0 \pm 0.5
+    $            & $38.5 \pm 0.5$ & $ 39 \pm 1$ & $1.50 \pm 0.05$       \\
+    $80 \pm 0.5$ & $41.0 \pm 0.5
+    $            & $40.5 \pm 0.5$ & $ 41 \pm 1$ & $1.51 \pm 0.05$       \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\subsection{Media dos erros}
+
+\subparagraph*{Obtivemos o $n$ medio e seu respectivo erro da seguinte maneira:}
+
+\begin{equation*}
+  \begin{aligned}
+     & n_m = \frac{(1.48 + 1.52 + 1.49 + 1.51 + 1.5 + 1.5 + 1.51)}{8} \\
+     & n_m = 1.5
+  \end{aligned}
+\end{equation*}
+
+\begin{equation*}
+  \begin{aligned}
+     & \varDelta_n = \sum{\sqrt{\frac{1.5 - n_i}{8}}} = 0.01
+  \end{aligned}
+\end{equation*}
+
+\subparagraph*{Que nos da $n = 1.50 \pm 0.01$}
+
+\subsection{Angulo critico}
+
+\subparagraph*{Obtivemos o ângulo crítico $+43 \pm 1$ e $-43 \pm 1$ que nos dá a média $43 \pm 2$}
+
+\subparagraph*{Para conseguirmos o ângulo de refração lembramos da \emph{Lei de Snell}, e a utilizando obtemos: $\sin{43} = \frac{1}{n_2}$}
+
+\subparagraph*{Que nos da $n_2 = 1.47 \pm 0.08$}
+
+\subsection{Erro absoluto e relativo}
+
+\subparagraph*{Temos que o erro absoluto foi de $0.03$ e o relativo de $2\%$}
+
+\section{Polarização da luz}
+
+
+\subsection{Verificacao do angulo de Brewster}
+\subparagraph*{Obtivemos $\theta_1 = 56$ e $\theta_2 = 34$, e por lei de refração $\theta_1 = \theta_b$. Logo:}
+
+\begin{equation}
+  \theta_b + \theta_2 = 90
+\end{equation}
+
+\subsection{Sentido da polarização}
+
+\subparagraph*{A luz refletida no ângulo de Brewster é polarizada perpendicularmente ao plano de incidência.}
+
+\subsection{Obtendo o coeficiente de refracao}
+
+\subparagraph*{Partirei da equação (1), e aplicarei a \emph{Lei de Snell}, utilizando $1$ como índice de refração do ar.}
+
+\begin{equation*}
+  \begin{aligned}
+     & \sin{\theta_b} = n \sin{\theta_2}                              \\
+     & \sin{\theta_b} = n \sin{\left(\frac{\pi}{2} - \theta_b\right)} \\
+     & \tan{\theta_b} = n                                             \\
+     & \arctan{n} = 56                                                \\
+     & n = 1.48                                                       \\
+  \end{aligned}
+\end{equation*}
+
+\subparagraph*{Observamos que o valor encontrado está coerente com os encontrados anteriormente.}
+
+\subsection{Polarizadores em serie}
+
+\subparagraph*{A luz que passa pelo nosso polarizador fica polarizada em uma direção específica. Se aplicarmos um polarizador ortogonal a este em série, este segundo bloqueará toda luz do primeiro e não observaremos nada após o segundo. }
+
+\subparagraph*{Porém se utilizarmos um terceiro polarizador entre estes dois com ângulo de $pi/4$, ou seja um ângulo médio entre eles. Permitiremos alguma luz do primeiro passar pelo segundo, e alguma luz do segundo passar pelo terceiro.}
+
+\subparagraph*{O efeito interessante é que se tivermos infinitos polarizadores em série, variando ângulo infinitesimalmente entre si, toda luz passará por todos eles. Porque a variação infinitesimal não bloqueia luz alguma em nenhum deles.}
+
+
+\end{document}
