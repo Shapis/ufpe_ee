@@ -1,0 +1,11 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Formação de imagens}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Análise de distância com imagens nítidas}{}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Teoria}{}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Explicacao}{}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Amplificacao}{}{subsubsection.2.1.3}%
+\contentsline {section}{\numberline {3}Telescopios}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Diametro do laser}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Telescopios Kepleriano e Galileano}{}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Representacoes}{}{subsection.3.3}%
