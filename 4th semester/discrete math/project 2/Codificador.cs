@@ -2,6 +2,34 @@ using System.Numerics;
 
 class Codificador
 {
+    public BigNumber BigNumberParaBinario(BigNumber bigNumber)
+    {
+        var binario = new BigNumber(0);
+        var potencia = new BigNumber(1);
+        while (bigNumber.GetValue() > 0)
+        {
+            var resto = BigNumber.Mod(bigNumber, new BigNumber(2));
+            binario = BigNumber.Add(binario, BigNumber.Multiply(resto, potencia));
+            bigNumber = BigNumber.Divide(bigNumber, new BigNumber(2));
+            potencia = BigNumber.Multiply(potencia, new BigNumber(10));
+        }
+        return binario;
+    }
+
+    public BigNumber BinarioParaBigNumber(BigNumber binario)
+    {
+        var bigNumber = new BigNumber(0);
+        var potencia = new BigNumber(1);
+        while (binario.GetValue() > 0)
+        {
+            var resto = BigNumber.Mod(binario, new BigNumber(10));
+            bigNumber = BigNumber.Add(bigNumber, BigNumber.Multiply(resto, potencia));
+            binario = BigNumber.Divide(binario, new BigNumber(10));
+            potencia = BigNumber.Multiply(potencia, new BigNumber(2));
+        }
+        return bigNumber;
+    }
+
     public int TextoParaInteiro(string texto)
     {
         int numero = 0;

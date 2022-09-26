@@ -1,5 +1,10 @@
 class HammingBlock
 {
+    private string _data;
 
-    // Hamming code generator matrix
+    // Constructor
+    public HammingBlock(string data, int blockLength)
+    {
+        _data = data;
+    }
 }
