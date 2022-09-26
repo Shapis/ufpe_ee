@@ -1,0 +1,29 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}O Codificador de texto}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}TextoParaInteiro}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}InteiroParaTexto}{}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Restrições e limitações}{}{subsection.2.3}%
+\contentsline {section}{\numberline {3}A classe \emph {BigNumber}}{}{section.3}%
+\contentsline {subparagraph}{Esta será uma classe que armazenará os números que utilizarei para a criação do RSA. }{}{section*.18}%
+\contentsline {subsection}{\numberline {3.1}Multiplicacao de \emph {BigNumber}}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Soma de \emph {BigNumber}}{}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Codificando numeros grandes}{}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Aritmetica Modular}{}{section.4}%
+\contentsline {subsection}{\numberline {4.1}AddMod}{}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}MulMod}{}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}ExpMod}{}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}InvMod}{}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Busca por números primos}{}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Testando os números dados:}{}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Achando novos primos:}{}{subsection.5.2}%
+\contentsline {section}{\numberline {6}O Sistema RSA}{}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Geração do par de chaves RSA}{}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Codificando e decodificando}{}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Codificacao}{}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Decodificando}{}{subsubsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.3}Testando para um texto pré-determinado}{}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Testado para texto arbitrario Y}{}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Assinatura digital}{}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Autenticação de remetente e destinatário}{}{subsection.6.6}%
+\contentsline {section}{\numberline {7}Conclusões}{}{section.7}%

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "OBeYaBnSAg0Opz95P72cOleeUHqPjmWH9Yrq8mRwvOWUZzbmn5JBZ+sNc14YgUduIECp76ZRJuOg2hixOmHcgA==",
+  "success": true,
+  "projectFilePath": "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/project 1.csproj",
+  "expectedPackageFiles": [
+    "/home/hpsilva/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.9/microsoft.aspnetcore.app.ref.6.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
