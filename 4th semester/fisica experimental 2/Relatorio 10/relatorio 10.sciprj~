@@ -1,11 +1,90 @@
 SciDAVis 2.9.2 project file
 <scripting-lang>	muParser
-<windows>	1
+<windows>	2
 <table>
-3641
-<table creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="Table1" columns="4" rows="6"><comment><![CDATA[]]></comment><column creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.0000000000000000e+01</row><row type="TypeDouble" index="1" invalid="no">5.0000000000000000e+00</row><row type="TypeDouble" index="2" invalid="no">3.2999999999999998e+00</row><row type="TypeDouble" index="3" invalid="no">2.5000000000000000e+00</row><row type="TypeDouble" index="4" invalid="no">2.0000000000000000e+00</row></column><column creation_time="2022-30-09 02:48:14:385" caption_spec="%n%C{ - }%c" name="3" type="TypeDouble" mode="Numeric" plot_designation="xErr"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-30-09 02:48:14:385" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-30-09 02:48:14:385" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter></column><column creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">7.1000000000000004e-03</row><row type="TypeDouble" index="1" invalid="no">5.3000000000000000e-03</row><row type="TypeDouble" index="2" invalid="no">2.3000000000000000e-03</row><row type="TypeDouble" index="3" invalid="no">1.8000000000000000e-03</row><row type="TypeDouble" index="4" invalid="no">1.6000000000000001e-03</row></column><column creation_time="2022-30-09 02:48:14:385" caption_spec="%n%C{ - }%c" name="4" type="TypeDouble" mode="Numeric" plot_designation="yErr"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-30-09 02:48:14:385" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-30-09 02:48:14:386" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="yes">0.0000000000000000e+00</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width><column_width column="2">120</column_width><column_width column="3">269</column_width></table>
-geometry	0	0	953	381	active
+4432
+<table creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="Table1" columns="4" rows="6"><comment><![CDATA[]]></comment><column creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.0000000000000000e+01</row><row type="TypeDouble" index="1" invalid="no">5.0000000000000000e+00</row><row type="TypeDouble" index="2" invalid="no">3.2999999999999998e+00</row><row type="TypeDouble" index="3" invalid="no">2.5000000000000000e+00</row><row type="TypeDouble" index="4" invalid="no">2.0000000000000000e+00</row></column><column creation_time="2022-30-09 02:48:14:385" caption_spec="%n%C{ - }%c" name="3" type="TypeDouble" mode="Numeric" plot_designation="xErr"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-30-09 02:48:14:385" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-30-09 02:48:14:385" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">2.0000000000000000e+00</row><row type="TypeDouble" index="2" invalid="no">2.0000000000000000e+00</row><row type="TypeDouble" index="3" invalid="no">2.0000000000000000e+00</row><row type="TypeDouble" index="4" invalid="no">2.0000000000000000e+00</row><row type="TypeDouble" index="5" invalid="yes">0.0000000000000000e+00</row></column><column creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-30-09 02:47:12:530" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">7.1000000000000004e-03</row><row type="TypeDouble" index="1" invalid="no">5.3000000000000000e-03</row><row type="TypeDouble" index="2" invalid="no">2.3000000000000000e-03</row><row type="TypeDouble" index="3" invalid="no">1.8000000000000000e-03</row><row type="TypeDouble" index="4" invalid="no">1.6000000000000001e-03</row></column><column creation_time="2022-30-09 02:48:14:385" caption_spec="%n%C{ - }%c" name="4" type="TypeDouble" mode="Numeric" plot_designation="yErr"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2022-30-09 02:48:14:385" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2022-30-09 02:48:14:386" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><formula start_row="0" end_row="4">0.0005</formula><row type="TypeDouble" index="0" invalid="no">5.0000000000000001e-04</row><row type="TypeDouble" index="1" invalid="no">5.0000000000000001e-04</row><row type="TypeDouble" index="2" invalid="no">5.0000000000000001e-04</row><row type="TypeDouble" index="3" invalid="no">5.0000000000000001e-04</row><row type="TypeDouble" index="4" invalid="no">5.0000000000000001e-04</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width><column_width column="2">120</column_width><column_width column="3">269</column_width></table>
+geometry	0	0	953	381	
 
 </table>
+<multiLayer>
+Graph1	1	1	Friday, September 30, 2022 3:00:56 AM -03
+geometry	1070	150	500	400	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	417	278
+Alignement	0	0
+<graph>
+ggeometry	5	5	481	341
+PlotTitle	Grafico de Sen(theta) por 1/a<br>Autor: Henrique Pedro da Silva	#ff000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffffff	255
+Margin	0
+Border	0	#ff000000
+grid	0	0	0	0	#ff0000ff	0	0	#ffa0a0a4	2	0	#ff0000ff	0	0	#ffa0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	(1/a) mm^-1	Sen(theta)			
+AxesTitleColors	#ff000000	#ff000000	#ff000000	#ff000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Fira Sans Semi-Light	12	75	0	0	0
+ScaleFont0	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont1	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont2	Fira Sans Semi-Light	10	75	0	0	0
+ScaleFont3	Fira Sans Semi-Light	10	75	0	0	0
+AxisFont0	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont1	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont2	Fira Sans Semi-Light	10	50	0	0	0
+AxisFont3	Fira Sans Semi-Light	10	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesNumberColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffffff	255
+curve	Table1_1	Table1_2	1	0	#ff000000	0	1	7	1	#ff000000	#ff000000	0	#ff000000	0	1	0	64		2	0	0	5	1
+ErrorBars	0	Table1_1	Table1_2	Table1_3	1	8	#ff000000	1	1	1
+ErrorBars	1	Table1_1	Table1_2	Table1_4	1	8	#ff000000	1	1	1
+FunctionCurve	0,LinearFit1,x,2,10	2			0	1	#ffff0000	0	1	0	0	#ff000000	#ffa0a0a4	0	#ff000000	0	1	16	64		2	0	-476027648	21992	1
+<formula>
+B=0.000348676847197193
+A=0.00071739542824623
+
+A*x+B
+</formula>
+scale	0	0.001	0.008	0	8	5	0	0
+scale	1	0.001	0.008	0	8	5	0	0
+scale	2	0	12	0	7	5	0	0
+scale	3	0	12	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	0.292682926829268	0.0077244094488189	Fira Sans Semi-Light	10	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{1}Table1_2	\c{4}LinearFit1	</legend>
+</graph>
+</multiLayer>
 <log>
+[Friday, September 30, 2022 2:48:56 AM -03	Plot: ''Graph1'']
+Linear Regression fit of dataset: Table1_2, using function: A*x+B
+Y standard errors: Unknown
+From x = 2 to x = 10
+B (y-intercept) = 0.000348676847197192 +/- 0.000738997709679096
+A (slope) = 0.00071739542824623 +/- 0.00013669214011713
+--------------------------------------------------------------------------------------
+Chi^2 = 2.36391871383857e-06
+R^2 = 0.973614033777893
+---------------------------------------------------------------------------------------
+[Friday, September 30, 2022 3:01:06 AM -03	Plot: ''Graph1'']
+Linear Regression fit of dataset: Table1_2, using function: A*x+B
+Y standard errors: Associated dataset (Table1_4)
+From x = 2 to x = 10
+B (y-intercept) = 0.000348676847197193 +/- 0.00041625307494779
+A (slope) = 0.00071739542824623 +/- 7.69941813076219e-05
+--------------------------------------------------------------------------------------
+Chi^2 = 9.45567485535426
+R^2 = 0.901781672185534
+---------------------------------------------------------------------------------------
 </log>

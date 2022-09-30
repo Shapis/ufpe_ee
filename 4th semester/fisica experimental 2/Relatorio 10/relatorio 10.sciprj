@@ -24,9 +24,9 @@ Margin	0
 Border	0	#ff000000
 grid	0	0	0	0	#ff0000ff	0	0	#ffa0a0a4	2	0	#ff0000ff	0	0	#ffa0a0a4	2	0	0	0	2	0
 EnabledAxes	1	0	1	0	
-AxesTitles	X Axis Title	Y Axis Title			
+AxesTitles	(1/a) mm^-1	Sen(theta)			
 AxesTitleColors	#ff000000	#ff000000	#ff000000	#ff000000	
-AxesTitleAlignment	5124	4	5124	4
+AxesTitleAlignment	4	4	4	4
 TitleFont	Fira Sans Semi-Light	12	75	0	0	0
 ScaleFont0	Fira Sans Semi-Light	10	75	0	0	0
 ScaleFont1	Fira Sans Semi-Light	10	75	0	0	0
@@ -53,7 +53,7 @@ A*x+B
 </formula>
 scale	0	0.001	0.008	0	8	5	0	0
 scale	1	0.001	0.008	0	8	5	0	0
-scale	2	0	12	0	8	5	0	0
+scale	2	0	12	0	7	5	0	0
 scale	3	0	12	0	8	5	0	0
 LabelsFormat	0	4	0	4	0	4	0	4	
 AxisType	0	0	0	0	
@@ -63,7 +63,7 @@ TicksLength	5	9
 DrawAxesBackbone	1
 AxesLineWidth	1
 LabelsRotation	0	0
-<legend>	0.27972027972028	0.00778915662650602	Fira Sans Semi-Light	10	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{1}Table1_2	\c{4}LinearFit1	</legend>
+<legend>	0.292682926829268	0.0077244094488189	Fira Sans Semi-Light	10	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{1}Table1_2	\c{4}LinearFit1	</legend>
 </graph>
 </multiLayer>
 <log>
