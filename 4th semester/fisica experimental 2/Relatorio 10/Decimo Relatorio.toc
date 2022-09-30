@@ -1,0 +1,7 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Difracao de Fraunhofer}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Tabela de dados inicial}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Analise Teorica}{}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Tabela de dados extendida}{}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Grafico de $\qopname \relax o{sin}{\theta }$ vs $1/a$}{}{subsection.2.4}%
