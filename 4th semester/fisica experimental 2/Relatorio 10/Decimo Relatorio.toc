@@ -9,3 +9,4 @@
 \contentsline {section}{\numberline {3}Redes de difracao}{}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Sistema com rede de difracao conhecida}{}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Sistema utilizando CD como rede de difracao}{}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Decomposicao espectral}{}{section.4}%

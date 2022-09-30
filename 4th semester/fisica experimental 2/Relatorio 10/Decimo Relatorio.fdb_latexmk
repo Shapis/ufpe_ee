@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1664521585 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 10/Decimo Relatorio.tex" "Decimo Relatorio.pdf" "Decimo Relatorio" 1664521586
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 10/Decimo Relatorio.tex" 1664521584 5971 219c4fd37e833d02a9017b565bd7981b ""
+["pdflatex"] 1664522204 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 10/Decimo Relatorio.tex" "Decimo Relatorio.pdf" "Decimo Relatorio" 1664522205
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/fisica experimental 2/Relatorio 10/Decimo Relatorio.tex" 1664522203 6415 a368e64b55ab5d549cbc3f77cd4f6ab3 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -243,10 +243,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Decimo Relatorio.aux" 1664521586 2132 dbe780b0e642a556b558c1dda810475f "pdflatex"
-  "Decimo Relatorio.out" 1664521586 1847 08f0f6338423fb7e4c858baea35b9de5 "pdflatex"
-  "Decimo Relatorio.tex" 1664521584 5971 219c4fd37e833d02a9017b565bd7981b ""
-  "Decimo Relatorio.toc" 1664521586 928 3e8d4ca330e6ae2596447849f2a0bf0d "pdflatex"
+  "Decimo Relatorio.aux" 1664522205 2250 b85c9981f7665d0b54c997b3b17d2b76 "pdflatex"
+  "Decimo Relatorio.out" 1664522205 2004 270109f964d90ed3e01f780daa46ea0c "pdflatex"
+  "Decimo Relatorio.tex" 1664522203 6415 a368e64b55ab5d549cbc3f77cd4f6ab3 ""
+  "Decimo Relatorio.toc" 1664522205 1005 2375d88dc3fbdbb1ee1c23112e2d0559 "pdflatex"
   "images//Graph1.png" 1664517917 694285 1e8ea6bafbb979cfffa9c10042397dfc ""
   (generated)
   "Decimo Relatorio.aux"
