@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  30 SEP 2022 04:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  30 SEP 2022 04:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -815,6 +815,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
                    \relax 
 l.118 \newpage
                [2 <./images//Graph1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 120--120
+[]\OT1/cmr/bx/n/14.4 Difracao de ob-jeto mi-
+ []
+
+
 Underfull \hbox (badness 1205) in paragraph at lines 180--180
 []\OT1/cmr/bx/n/14.4 Sistema uti-li-zando CD como
  []
@@ -827,29 +832,29 @@ l.195 \newpage
                [3]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 208.
+(hyperref)                than one, level fixed on input line 207.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.233 \end{document}
+l.232 \end{document}
                      [4
 
 ] (./Decimo Relatorio.aux)
 Package rerunfilecheck Info: File `"Decimo Relatorio".out' has not changed.
-(rerunfilecheck)             Checksum: FC83C7BC52481863998F4C6EA1BBD299;2148.
+(rerunfilecheck)             Checksum: 66419424198CF6F7B36D6EA72976BCA8;2163.
  ) 
 Here is how much of TeX's memory you used:
- 50981 strings out of 478238
- 1305557 string characters out of 5850457
- 1987618 words of memory out of 5000000
- 68534 multiletter control sequences out of 15000+600000
+ 50982 strings out of 478238
+ 1305565 string characters out of 5850457
+ 1987619 words of memory out of 5000000
+ 68535 multiletter control sequences out of 15000+600000
  478191 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,829b,768s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Decimo Relatorio.pdf" (4 pages, 137627 bytes).
+Output written on "Decimo Relatorio.pdf" (4 pages, 137973 bytes).
 PDF statistics:
  190 PDF objects out of 1000 (max. 8388607)
  160 compressed objects within 2 object streams
