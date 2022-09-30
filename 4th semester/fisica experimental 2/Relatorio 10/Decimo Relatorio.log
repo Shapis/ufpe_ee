@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  30 SEP 2022 04:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  30 SEP 2022 04:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -797,7 +797,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 104.
 
-<./images//Graph1.png, id=85, 370.38374pt x 264.99pt>
+<./images//Graph1.png, id=90, 370.38374pt x 264.99pt>
 File: ./images//Graph1.png Graphic file (type png)
 <use ./images//Graph1.png>
 Package pdftex.def Info: ./images//Graph1.png  used on input line 107.
@@ -826,29 +826,34 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
                    \relax 
 l.196 \newpage
                [3]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 209.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.205 \end{document}
+l.234 \end{document}
                      [4
 
 ] (./Decimo Relatorio.aux)
 Package rerunfilecheck Info: File `"Decimo Relatorio".out' has not changed.
-(rerunfilecheck)             Checksum: 270109F964D90ED3E01F780DAA46EA0C;2004.
+(rerunfilecheck)             Checksum: FC83C7BC52481863998F4C6EA1BBD299;2148.
  ) 
 Here is how much of TeX's memory you used:
- 50975 strings out of 478238
- 1305472 string characters out of 5850457
- 1995605 words of memory out of 5000000
- 68533 multiletter control sequences out of 15000+600000
+ 50982 strings out of 478238
+ 1305568 string characters out of 5850457
+ 1996618 words of memory out of 5000000
+ 68534 multiletter control sequences out of 15000+600000
  478191 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,829b,833s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Decimo Relatorio.pdf" (4 pages, 126907 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on "Decimo Relatorio.pdf" (4 pages, 137403 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 191 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
