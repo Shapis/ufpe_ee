@@ -4,17 +4,21 @@ var codificador = new Codificador();
 
 var textoCodificado = codificador.TextoParaBinario("abcd");
 
-var HammingCode = new HammingCode(textoCodificado, 16);
+var hammingCode = new HammingCode(textoCodificado, 16);
 
 Console.WriteLine(textoCodificado);
 
-// Prints a list of Hamming Blocks
-foreach (var block in HammingCode.HammingBlocks)
-{
-    foreach (var bit in block)
-    {
-        Console.Write(bit);
-    }
-    Console.WriteLine();
-}
-// 01100001011 00010011000 1101100100
+// // Prints a list of Hamming Blocks
+// foreach (var block in hammingCode.HammingBlocks)
+// {
+//     foreach (var bit in block)
+//     {
+//         Console.Write(bit);
+//     }
+//     Console.WriteLine();
+// }
+
+hammingCode.WriteHammingBlockAsMatrix(hammingCode.HammingBlocks[1]);
+
+Console.WriteLine(hammingCode.DecodeToBinary());
+//
