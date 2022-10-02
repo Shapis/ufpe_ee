@@ -1,0 +1,15 @@
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/bin/Debug/net6.0/project 2
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/bin/Debug/net6.0/project 2.deps.json
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/bin/Debug/net6.0/project 2.runtimeconfig.json
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/bin/Debug/net6.0/project 2.dll
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/bin/Debug/net6.0/ref/project 2.dll
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/bin/Debug/net6.0/project 2.pdb
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/obj/Debug/net6.0/project 2.csproj.AssemblyReference.cache
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/obj/Debug/net6.0/project 2.GeneratedMSBuildEditorConfig.editorconfig
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/obj/Debug/net6.0/project 2.AssemblyInfoInputs.cache
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/obj/Debug/net6.0/project 2.AssemblyInfo.cs
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/obj/Debug/net6.0/project 2.csproj.CoreCompileInputs.cache
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/obj/Debug/net6.0/project 2.dll
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/obj/Debug/net6.0/ref/project 2.dll
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/obj/Debug/net6.0/project 2.pdb
+/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/obj/Debug/net6.0/project 2.genruntimeconfig.cache
