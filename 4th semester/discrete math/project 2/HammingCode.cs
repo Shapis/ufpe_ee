@@ -113,18 +113,6 @@ class HammingCode
         }
     }
 
-    // Detects which power of two a number is
-    private int GetPowerOfTwo(int n)
-    {
-        int power = 0;
-        while (n != 1)
-        {
-            n = n / 2;
-            power++;
-        }
-        return power;
-    }
-
     // Write Hamming Block as Matrix
     public void WriteHammingBlockAsMatrix(int[] block)
     {
@@ -146,6 +134,18 @@ class HammingCode
                 Console.Write(block[j + (i * width)] + "\t");
             }
             Console.WriteLine();
+        }
+
+        // Detects which power of two a number is
+        int GetPowerOfTwo(int n)
+        {
+            int power = 0;
+            while (n != 1)
+            {
+                n = n / 2;
+                power++;
+            }
+            return power;
         }
     }
 

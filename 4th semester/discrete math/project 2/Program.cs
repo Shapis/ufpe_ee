@@ -1,6 +1,4 @@
-﻿using System.Numerics;
-
-var codificador = new Codificador();
+﻿var codificador = new Codificador();
 
 var textoCodificado = codificador.TextoParaBinario("abcd");
 
