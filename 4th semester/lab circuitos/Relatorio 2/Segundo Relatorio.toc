@@ -7,5 +7,6 @@
 \contentsline {section}{\numberline {4}Resultados Preliminares}{}{section.4}%
 \contentsline {section}{\numberline {5}Resultados experimentais}{}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Tabela de dados}{}{subsection.5.1}%
-\contentsline {section}{\numberline {6}Convergencia para o limite de $R_L \rightarrow \infty \varOmega $}{}{section.6}%
+\contentsline {subsection}{\numberline {5.2}Convergencia para o limite de $R_L \rightarrow \infty \varOmega $}{}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Grafico teoricos}{}{section.6}%
 \contentsline {section}{\numberline {7}Conclusoes}{}{section.7}%

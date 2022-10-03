@@ -14,7 +14,11 @@
 \usepackage{adjustbox}
 \usepackage[section]{placeins}
 \usepackage{hyperref}
-
+\usepackage{graphicx}
+\usepackage{adjustbox}
+ 
+\pgfplotsset{compat=newest}
+\graphicspath{ {./images/} }
 \pgfplotsset{compat=newest}
 
 
@@ -221,7 +225,7 @@
 
 \subparagraph*{Que de fato, é o comportamento esperado.}
 
-\section{Convergencia para o limite de $R_L \rightarrow \infty\varOmega$}
+\subsection{Convergencia para o limite de $R_L \rightarrow \infty\varOmega$}
 
 \subparagraph*{Também podemos observar que a tensão sobre $R_L$ converge para $V_{th}$ conforme $R_L$ cresce. E isto é dado por:}
 
@@ -235,6 +239,15 @@
     V_{L} = 6 * \frac{22150}{23650} = 5.6V
 \end{equation}
 
+\section{Grafico teoricos}
+
+\subparagraph*{Por esta analise obtivemos $V_{th} = 5.84V$, $R_{th} = 1346.2\varOmega$}
+\subparagraph*{Que estao bem proximos dos valores encontrados experimentalmente, $V_{th} = 6V$ e $R_{th} = 1500\varOmega$}
+\paragraph*{}
+\begin{adjustbox}{scale=0.60}
+    \includegraphics{Figure_1.png}
+\end{adjustbox}
+
 \section{Conclusoes}
 
 \subparagraph*{Vimos que podemos um controlador de corrente, utilizando um transistor e um sistema de corrente mais baixa.}
@@ -242,8 +255,6 @@
 \subparagraph*{Este circuito tem propriedades bastante convenientes, como por exemplo a sua resistência de Thevenin se resume a ser igual a resistência $R_c$.}
 
 \subparagraph*{E podemos limitar a corrente de saída do circuito, utilizando um resistor $R_L$ de valor adequado.}
-
-
 
 \end{document}
 
