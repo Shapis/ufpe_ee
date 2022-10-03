@@ -3,8 +3,8 @@ R1 = 220
 R2 = 1500
 Re = 150
 Rc = 1500
-beta = 100
-Vbe0 = 0.7
+beta = 250
+Vbe0 = 0.68
 
 Rth = Rc
 Rno = Rth
