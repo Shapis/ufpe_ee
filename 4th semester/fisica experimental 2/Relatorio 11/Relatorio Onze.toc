@@ -1,0 +1,11 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Analise spectral de gases}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Tabela de dados inicial}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Fator de correcao}{}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Constante de Rydberg}{}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Tabela de Dados}{}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Achando R}{}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Motivo das linhas espectrais}{}{subsection.2.6}%
+\contentsline {section}{\numberline {3}O interferometro de Michelson}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Medicoes}{}{subsection.3.1}%
