@@ -29,17 +29,16 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{adjustbox}
- 
 \pgfplotsset{compat=newest}
 \graphicspath{ {./images/} }
 %  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
 \newcommand{\drawvector} [9] [color=cyan] {
-  \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
- \ifthenelse{\equal{#7}{true}}{
-  \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
-  \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
-  }
-  {}
+ \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+\ifthenelse{\equal{#7}{true}}{
+ \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+ \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+ }
+ {}
 }
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
 \title{Quinto Relatório de Lab de Circuitos}
@@ -58,118 +57,276 @@
 
 \section{Introdução}
 
-\subparagraph*{Neste relatório vamos discutir novamente o Amp Op. Desta vez em uma configuração que tenha um capacitor no circuito.}
+\subparagraph*{Neste relatório vamos discutir novamente o Amp Op. Desta vez em uma configuração que tenha um capacitor no circuito, e veremos que ele se comporta como um circuito RC.}
 
 \subparagraph*{Todos arquivos utilizados para criar este relatório, é o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/4th semester/lab circuitos}}
 
 
-\section{Analise do circuito}
+\section{Análise dos circuitos}
+
+\subsection*{Capacitor em paralelo na realimentação}
 
 \subparagraph*{Podemos fazer a seguinte análise no nosso circuito:}
 
 \begin{equation}
     \begin{aligned}
-         & V_n                                   = V_0 \\
-         & V_p                                   = V_s \\
-         & \frac{V_0 - A*(V_p - V_n)}{R_0 - Il}  = 0   \\
+        V_c = Va - V_0
     \end{aligned}
 \end{equation}
 
-\subparagraph*{Que nos da:}
-
+\subparagraph*{Porém $V_a$ está em curto virtual com o terra do circuito. Então $V_a = 0$}
 
 \begin{equation}
     \begin{aligned}
-         & V_0 = \left(\frac{A V_s + Il R_0}{A+1}\right)                                         \\
-         & V_n =          \left(\frac{A V_s + Il R_0}{A+1}\right)                          = V_s \\
-         & V_p  = V_s                                                                            \\
+        V_c = - V_0
     \end{aligned}
 \end{equation}
 
-\subparagraph*{Fazendo agora $Il = \frac{V_0}{R_l}$, temos:}
+\subparagraph*{Daqui faremos análise nodal para determinar a EDO que precisaremos resolver.}
 
 \begin{equation}
-    \lim_{A \to \infty} \frac{A V_s + \frac{R_0 V_0}{R_l}}{(A+1) V_s} = 1
+    \begin{aligned}
+         & \frac{-V_i}{R_1} + \frac{-V_0}{R_2} + C \deriv{V_c}{t} = 0              \\
+         & \deriv{V_c}{t} + \frac{V_0}{R_2 C} = \frac{\frac{-V_i R_2}{R_1}}{C R_2} \\
+         & V_0(t) = V_0 e^{\frac{-t}{A}} + B(1- e^{\frac{-t}{A}})                  \\
+         & I_c = C \deriv{V_c}{t}                                                  \\
+         & A = C R_2 , B = \frac{-V_i R_2}{R_1}                                    \\
+    \end{aligned}
 \end{equation}
 
-\subparagraph*{Podemos então observar que o ganho de $A_v = \frac{V_0}{V_s}$ quando $A \to \infty$ é igual a 1. }
+\subparagraph*{Então por fim obtemos uma equação que rege o comportamento da tensão no capacitor:}
 
+\begin{equation}
+    V_0(t) = V_0 e^{\frac{-t}{C R_2}} + \frac{-V_i R_2}{R_1}(1- e^{\frac{-t}{C R_2}})
+\end{equation}
 
+\subsection{Segundo circuito}
 
+\subparagraph*{Neste teremos um capacitor em série com a resistência de entrada $R_1$.}
 
+\subparagraph*{Similarmente o amp op deixará o no $V_a$ em curto virtual então teremos:}
 
+\begin{equation}
+    \begin{aligned}
+         & \frac{-V_0}{R_2} + I_c = 0                    \\
+         & -V_0 = C \deriv{V_c}{t}                       \\
+         & V_0(0) = R2 * I_c                             \\
+         & I_c = \frac{V_r}{R_1} = \frac{V_i - V_c}{R_1} \\
+         & V_i = R_1 C \deriv{V_c}{t} + V_c              \\
+         & \deriv{V_0}{t} + \frac{V_0}{C R_1} = 0        \\
+         & A = C R_1 , B = 0                             \\
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Neste caso, muito convenientemente nosso B é zero, a equação que rege a tensão no tempo fica:}
+
+\begin{equation}
+    V_0(t) = V_0 e^{\frac{-t}{C R_1}}
+\end{equation}
 
 
 \section{Medições no laboratório}
 
+\paragraph*{Utilizaremos as seguintes resistências e tensões na montagem dos circuitos:}
+
+\begin{equation*}
+    \begin{aligned}
+         & R_1 = 32.37 k\varOmega \\
+         & R_2 = 46.70 k\varOmega \\
+         & V_{c0} = -7.25 V       \\
+         & V_1 = 5 V              \\
+         & C = 100nf              \\
+    \end{aligned}
+\end{equation*}
+
+\subsection{Primeiro circuito}
+
+\subparagraph*{Para o primeiro circuito haviamos concluído que a constante de tempo era $C R_2$, logo:}
+
+\begin{equation}
+    f = \frac{1}{15*C R_2} = \frac{1}{ 0.0705} = 14.2 Hz
+\end{equation}
 
 
-\subparagraph*{Divisor de Tensão sem o Buffer}
-
+\paragraph*{Comportamento no carregamento:}
 \begin{center}
-    \begin{tabular}{ |c|c|c|c| }
+    \begin{tabular}{ |ccc| }
         \hline
-        $R_L (teorico) $  & $R_L (real)$     & $V_0 (teorico)$ & $V_0 (real)$ \\
-        $ 220 \varOmega$  & $217 \varOmega$  & $0.87V$         & $0.86V$      \\
-        $ 470 \varOmega$  & $470 \varOmega$  & $1.63V$         & $1.64V$      \\
-        $ 1k \varOmega$   & $1k \varOmega$   & $2.73V$         & $2.71V$      \\
-        $ 3.3k \varOmega$ & $3.26 \varOmega$ & $4.68V$         & $4.69V$      \\
-        $ 6.8k \varOmega$ & $6.67 \varOmega$ & $5.58V$         & $5.59V$      \\
+        $Porcentagem$ & $Tensao$  & $Tempo$  \\
+        $90\%$        & $-6.525V$ & $10.5ms$ \\
+        $36.8\%$      & $-2.668V$ & $2.0ms$  \\
+        $10\%$        & $-0.725$  & $0.5ms$  \\
         \hline
     \end{tabular}
 \end{center}
 
-\subparagraph*{Sistema com o Buffer}
-
+\paragraph*{Comportamento no descarregamento:}
 \begin{center}
-    \begin{tabular}{ |c|c|c| }
+    \begin{tabular}{ |ccc| }
         \hline
-        $R_L (ideal) $    & $R_L (real)$     & $V_0 (teorico)$ \\
-        $ 220 \varOmega$  & $217 \varOmega$  & $6.8V$          \\
-        $ 470 \varOmega$  & $470 \varOmega$  & $6.7V$          \\
-        $ 1k \varOmega$   & $1k \varOmega$   & $6.7V$          \\
-        $ 3.3k \varOmega$ & $3.26 \varOmega$ & $6.8V$          \\
-        $ 6.8k \varOmega$ & $6.67 \varOmega$ & $6.7V$          \\
+        $Porcentagem$ & $Tensao$  & $Tempo$   \\
+        $90\%$        & $-6.525V$ & $0.35ms$  \\
+        $36.8\%$      & $-2.668V$ & $2.10ms$  \\
+        $10\%$        & $-0.725$  & $10.50ms$ \\
         \hline
     \end{tabular}
 \end{center}
 
-\section*{Atividades pós laboratoriais}
+\subsubsection{Grafico do comportamento do circuito}
 
-\subsection{Valores de Thevenin para divisor de tensão}
+\begin{adjustbox}{scale=0.5}
 
-\subparagraph*{Vamos ter que $V_{th}$ teórico será $6.8V$. Já o medido sem o Buffer foi de $6.84V$ e com o buffer $6.81V$}
-
-\subparagraph*{É importante mencionar que a tensão de thévenin na saída do buffer de corrente e na saída do divisor de tensão é a mesma.}
-
-\subparagraph*{Para $R_1$ e $R_2$ $2.2k$ e $4.7k$ respectivamente teremos $R_{th}= 1.5k \varOmega$ sem Buffer e $1.6k\varOmega$ com o Buffer.}
-
-\subsection{MMEQ}
-
-\subparagraph*{Com o método de MMEQ, obtivemos $V_{th} = 6.85$ e $R_th = 1507$.}
-
-\subparagraph*{Os valores estão próximos ao esperado. }
-
-\begin{adjustbox}{scale=0.6}
-    \includegraphics{Figure_1.png}
+    \begin{tikzpicture}
+        \begin{axis}[
+                ylabel={Tensao $V$},
+                xlabel={Tempo $10^2 ms$},
+                xmin = 0, xmax = 10,
+                ymin = -1, ymax = 9.0,
+                xtick distance = 2,
+                ytick distance = 2,
+                grid = both,
+                minor tick num = 1,
+                major grid style = {lightgray},
+                minor grid style = {lightgray!25},
+                width = 1\textwidth,
+                height = 1\textwidth]
+            \addplot[
+                domain = -1:1,
+                samples = 400,
+                smooth,
+                thick,
+                red,
+            ] {(7.25*(e^-(x+1)/0.3))};
+            \addplot[
+                domain = 1:3,
+                samples = 400,
+                smooth,
+                thick,
+                red,
+            ] {(7.25*(1-e^-(x-1)/0.3))};
+            \addplot[
+                domain = 3:5,
+                samples = 400,
+                smooth,
+                thick,
+                red,
+            ] {(7.25*(0+e^-(x-3)/0.3))};
+            \addplot[
+                domain = 5:7,
+                samples = 400,
+                smooth,
+                thick,
+                red,
+            ] {(7.25*(1-e^-(x-5)/0.3))};
+            \addplot[
+                domain = 7:9,
+                samples = 400,
+                smooth,
+                thick,
+                red,
+            ] {(7.25*(e^-(x-7)/0.3))};
+            \addplot[
+                domain = 9:10,
+                samples = 400,
+                smooth,
+                thick,
+                red,
+            ] {(6*(1-e^-(x-9)/0.3))};
+        \end{axis}
+    \end{tikzpicture}
 \end{adjustbox}
 
-\section{Conclusões}
+\subsection{Segundo circuito}
 
-\subparagraph*{Os resultados foram dentro do esperado. O buffer de tensão manteve a tensão de saída igual a tensão de entrada.}
+\subparagraph*{Para o segundo circuito haviamos concluído que a constante de tempo era $C R_1$, logo seguindo a mesma lógica para achar a frequência que vamos utilizar, obtemos $20Hz$.}
 
-\subparagraph*{Algo que fiquei em dúvida foi sobre a resistência de Thévenin do buffer.}
-
-\subparagraph*{A minha ideia eh montando o circuito com o buffer da seguinte maneira:}
-
+\paragraph*{Comportamento no carregamento:}
 \begin{center}
-    \begin{circuitikz}
-        \draw (0,0) to[battery1, invert] (0,3) to[resistor=$R_{th}$] (3,3) to[resistor=$R_L$] (3,0) -- (0,0);
-    \end{circuitikz}
+    \begin{tabular}{ |ccc| }
+        \hline
+        $Porcentagem$ & $Tensao$ & $Tempo$ \\
+        $90\%$        & $4.5V$   & $7.4ms$ \\
+        $36.8\%$      & $3.16V$  & $3.1ms$ \\
+        $10\%$        & $0.5$    & $0.5ms$ \\
+        \hline
+    \end{tabular}
 \end{center}
 
-\subparagraph*{Teríamos que a tensão em $R_L$ é igual a tensão da fonte. Isto quer dizer que a resistência de thévenin do buffer é $0$ ?}
+\paragraph*{Comportamento no descarregamento:}
+\begin{center}
+    \begin{tabular}{ |ccc| }
+        \hline
+        $Porcentagem$ & $Tensao$  & $Tempo$  \\
+        $90\%$        & $-6.525V$ & $0.35ms$ \\
+        $36.8\%$      & $-2.668V$ & $3.20ms$ \\
+        $10\%$        & $-0.725$  & $7.45ms$ \\
+        \hline
+    \end{tabular}
+\end{center}
 
+\subsubsection{Grafico do comportamento do circuito}
+
+\begin{adjustbox}{scale=0.5}
+
+    \begin{tikzpicture}
+        \begin{axis}[
+                ylabel={Tensao $V$},
+                xlabel={Tempo $10^2 ms$},
+                xmin = 0, xmax = 10,
+                ymin = -1, ymax = 9.0,
+                xtick distance = 2,
+                ytick distance = 2,
+                grid = both,
+                minor tick num = 1,
+                major grid style = {lightgray},
+                minor grid style = {lightgray!25},
+                width = 1\textwidth,
+                height = 1\textwidth]
+            \addplot[
+                domain = -1:1,
+                samples = 400,
+                smooth,
+                thick,
+                red,
+            ] {(7.25*(e^-(x+1)/0.3))};
+            \addplot[
+                domain = 1:3,
+                samples = 400,
+                smooth,
+                thick,
+                red,
+            ] {(7.25*(1-e^-(x-1)/0.3))};
+            \addplot[
+                domain = 3:5,
+                samples = 400,
+                smooth,
+                thick,
+                red,
+            ] {(7.25*(0+e^-(x-3)/0.3))};
+            \addplot[
+                domain = 5:7,
+                samples = 400,
+                smooth,
+                thick,
+                red,
+            ] {(7.25*(1-e^-(x-5)/0.3))};
+            \addplot[
+                domain = 7:9,
+                samples = 400,
+                smooth,
+                thick,
+                red,
+            ] {(7.25*(e^-(x-7)/0.3))};
+            \addplot[
+                domain = 9:10,
+                samples = 400,
+                smooth,
+                thick,
+                red,
+            ] {(6*(1-e^-(x-9)/0.3))};
+        \end{axis}
+    \end{tikzpicture}
+\end{adjustbox}
 
 
 \end{document}
