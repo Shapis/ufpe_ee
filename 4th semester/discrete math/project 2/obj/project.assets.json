@@ -24,7 +24,8 @@
         "/home/hpsilva/.local/share/godot/mono/GodotNuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/hpsilva/.nuget/NuGet/NuGet.Config"
+        "/home/hpsilva/.nuget/NuGet/NuGet.Config",
+        "/home/hpsilva/.nuget/NuGet/config/Godot.Offline.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"

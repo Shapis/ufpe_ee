@@ -1,3 +1,5 @@
+using System.Text;
+
 class HammingCode
 {
     public List<int[]> HammingBlocks { get; } = new();
@@ -152,6 +154,7 @@ class HammingCode
     // Decode to binary
     public string DecodeToBinary()
     {
+        FixErrors();
         string binaryData = "";
         foreach (var block in HammingBlocks)
         {
@@ -169,5 +172,46 @@ class HammingCode
         }
         binaryData = binaryData.Substring(0, binaryData.Length - _trim);
         return binaryData;
+    }
+
+    public void FixErrors()
+    {
+        foreach (var block in HammingBlocks)
+        {
+            List<string> binaryParity = new();
+            for (int i = 1; i < block.Length; i++)
+            {
+                if (block[i] == 1)
+                {
+                    var binaryPosition = Convert.ToString(i, 2).PadLeft(_parityBits.Count, '0');
+                    binaryParity.Add(binaryPosition);
+                }
+            }
+
+            int[] parityBits = new int[_parityBits.Count];
+            for (int i = 0; i < _parityBits.Count; i++)
+            {
+                int sum = 0;
+                foreach (var item in binaryParity)
+                {
+                    sum += int.Parse(item[i].ToString());
+                }
+                parityBits[i] = sum % 2;
+            }
+
+            // Console.WriteLine("Parity bits: " + string.Join(", ", parityBits));
+
+            int errorPosition = 0;
+            for (int i = 0; i < parityBits.Length; i++)
+            {
+                errorPosition += parityBits[i] * (int)Math.Pow(2, parityBits.Length - i - 1);
+            }
+
+            if (errorPosition != 0)
+            {
+                block[errorPosition] = block[errorPosition] == 0 ? 1 : 0;
+            }
+            break;
+        }
     }
 }
