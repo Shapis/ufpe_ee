@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "t1PdNrzwVGhujQTYEhVVytWP6YQ466F3RNBKlTGfyZHq8A7ShHo5maMI6PHeWhSYF93n4z2S8dZKlpz1xel0KQ==",
+  "dgSpecHash": "oex6evknd9k1aWWwDq3H4DIqf2VC0B65ZJ5qIhYEW+ucyqkkC3H49IkwHc7x//DXQqlPc1px6mfa4gVXr098Yw==",
   "success": true,
   "projectFilePath": "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/discrete math/project 2/project 1.csproj",
   "expectedPackageFiles": [
-    "/home/hpsilva/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.9/microsoft.aspnetcore.app.ref.6.0.9.nupkg.sha512"
+    "/home/hpsilva/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.10/microsoft.aspnetcore.app.ref.6.0.10.nupkg.sha512"
   ],
   "logs": []
 }
