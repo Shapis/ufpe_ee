@@ -2,7 +2,7 @@
 using System.Text;
 
 // Probabilidade de erro em cada bit apos passar pela funcao NoiseItUp()
-float p = 0.01f;
+float p = 0f;
 
 // Inicializa a lista de SNRdb com valores entre 3 e 10 em incrementos de 0.35, para obtermos 20 valores no total.
 List<float> SNRdb = new List<float>();
@@ -36,36 +36,33 @@ var textoCodificado = codificador.TextoParaBinario(textoParaCodificar);
 
 // testRunner.TestarPorcentagemDeErroPorBitHamming(7, 4, SNRdb, SNR, p, textoCodificado);
 
-testRunner.TestarPorcentagemDeErroPorBitSemCodigo(SNRdb, SNR, p, textoCodificado);
+// testRunner.TestarPorcentagemDeErroPorBitSemCodigo(SNRdb, SNR, p, textoCodificado);
 
 
-// // Cria o codigo de repeticao, com repeticao tamanho 5.
-// var repetitionCode = new RepetitionCode(textoCodificado, 5);
+p = 0.01f;
 
-// // Cria o codigo de hamming com tamanho (16-1) = 15
-// var hammingCode15 = new HammingCode(textoCodificado, 16);
+// Cria o codigo de repeticao, com repeticao tamanho 5.
+var repetitionCode = new RepetitionCode(textoCodificado, 5);
 
-// // Cria o codigo de hamming com tamanho (8-1) = 7
-// var hammingCode7 = new HammingCode(textoCodificado, 8);
+// Cria o codigo de hamming com tamanho (16-1) = 15
+var hammingCode15 = new HammingCode(textoCodificado, 16);
 
-// // Guardar as codificacoes originais antes de passarem pelo noise para podermos comparar depois.
-// var copiaRCBinaryData = repetitionCode.BinaryData;
-// var copiaHCBinaryData15 = hammingCode15.BinaryData;
-// var copiaHCBinaryData7 = hammingCode7.BinaryData;
+// Cria o codigo de hamming com tamanho (8-1) = 7
+var hammingCode7 = new HammingCode(textoCodificado, 8);
 
-// var textoCodificadoNoiseado = noise.NoiseItUp(textoCodificado, p);
-// repetitionCode.BinaryData = noise.NoiseItUp(repetitionCode.BinaryData, p);
-// hammingCode15.BinaryData = noise.NoiseItUp(hammingCode15.BinaryData, p);
-// hammingCode7.BinaryData = noise.NoiseItUp(hammingCode7.BinaryData, p);
+var noise = new Noise();
 
+var textoCodificadoNoiseado = noise.NoiseItUp(textoCodificado, p);
+repetitionCode.BinaryData = noise.NoiseItUp(repetitionCode.BinaryData, p);
+hammingCode15.BinaryData = noise.NoiseItUp(hammingCode15.BinaryData, p);
+hammingCode7.BinaryData = noise.NoiseItUp(hammingCode7.BinaryData, p);
 
-
-// // Imprime os resultados
-// Console.WriteLine("Resultado para o texto sem correcao de erros:");
-// Console.WriteLine(codificador.BinarioParaTexto(textoCodificado));
-// Console.WriteLine("Resultado do teste de repeticao R(5,1,3):");
-// Console.WriteLine(codificador.BinarioParaTexto(repetitionCode.DecodeToBinary()));
-// Console.WriteLine("Resultado do teste de hamming C(15,11,3):");
-// Console.WriteLine(codificador.BinarioParaTexto(hammingCode15.DecodeToBinary()));
-// Console.WriteLine("Resultado do teste de hamming C(11,7,3):");
-// Console.WriteLine(codificador.BinarioParaTexto(hammingCode7.DecodeToBinary()));
+// Imprime os resultados
+Console.WriteLine("Resultado para o texto sem correcao de erros:");
+Console.WriteLine(codificador.BinarioParaTexto(textoCodificadoNoiseado));
+Console.WriteLine("Resultado do teste de repeticao R(5,1,3):");
+Console.WriteLine(codificador.BinarioParaTexto(repetitionCode.DecodeToBinary()));
+Console.WriteLine("Resultado do teste de hamming C(15,11,3):");
+Console.WriteLine(codificador.BinarioParaTexto(hammingCode15.DecodeToBinary()));
+Console.WriteLine("Resultado do teste de hamming C(11,7,3):");
+Console.WriteLine(codificador.BinarioParaTexto(hammingCode7.DecodeToBinary()));
