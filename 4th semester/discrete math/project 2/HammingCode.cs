@@ -24,7 +24,6 @@ class HammingCode
                 _parityBits.Add(i);
             }
         }
-        Console.WriteLine(_parityBits.Count);
         var effectiveLength = blockLength - _parityBits.Count - 1;
         _trim = (effectiveLength - binaryData.Length % effectiveLength);
 
