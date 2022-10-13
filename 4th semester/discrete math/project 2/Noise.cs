@@ -8,7 +8,7 @@ class Noise
     {
         for (int i = 0; i < data.Length; i++)
         {
-            if (rng.NextDouble() <= p)
+            if (rng.NextDouble() < p)
             {
                 StringBuilder sb = new StringBuilder(data);
                 sb[i] = data[i] == '0' ? '1' : '0';
