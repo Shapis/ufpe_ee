@@ -17,6 +17,7 @@ class Codificador
         string texto = "";
         for (int i = 0; i < binario.Length; i += 8)
         {
+            Console.WriteLine(binario.Length % 8);
             texto += System.Convert.ToChar(System.Convert.ToByte(binario.Substring(i, 8), 2));
         }
         return texto;

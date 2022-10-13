@@ -1,33 +1,17 @@
-﻿using System.Text;
-
+﻿// Cria o codificador de texto, que vai passar as mensagems de binario para string e vice versa.
 var codificador = new Codificador();
 
-var textoCodificado = codificador.TextoParaBinario("Ola como vai voce");
+var textoCodificado = codificador.TextoParaBinario(
+    "Ola somos alunos de matematica discreta e estamos codificando esta mensagem e atuando varios niveis de ruido nela, e apos isso tentando corrigir os erros e a decodificar."
+);
 
-Console.WriteLine(textoCodificado);
-
+// Cria o codigo de repeticao, com repeticao tamanho 5.
 var repetitionCode = new RepetitionCode(textoCodificado, 5);
 
-var hammingCode = new HammingCode(textoCodificado, 16);
+// Cria o codigo de hamming com tamanho (16-1) = 15
+var hammingCode16 = new HammingCode(textoCodificado, 16);
 
-var noise = new Noise();
-noise.NoiseRepetition(repetitionCode, 0.15f);
-noise.NoiseHamming(hammingCode, 0.35f);
+// Cria o codigo de hamming com tamanho (16-1) = 7
+var hammingCode8 = new HammingCode(textoCodificado, 16);
 
-// replace char at index in repetition binary data
-Console.WriteLine(repetitionCode.DecodeToBinary());
-
-var textoDecodificado = codificador.BinarioParaTexto(repetitionCode.DecodeToBinary());
-
-Console.WriteLine(textoDecodificado);
-
-textoDecodificado = codificador.BinarioParaTexto(hammingCode.DecodeToBinary());
-Console.WriteLine(textoDecodificado);
-
-
-
-// hammingCode.WriteHammingBlockAsMatrix(hammingCode.HammingBlocks[1]);
-
-// Console.WriteLine(repetitionCode.DecodeToBinary());
-
-//
+Console.WriteLine("Texto codificado: " + textoCodificado);

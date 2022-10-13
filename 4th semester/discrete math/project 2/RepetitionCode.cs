@@ -1,6 +1,6 @@
 class RepetitionCode
 {
-    public string RepetitionBinaryData = "";
+    public string BinaryData = "";
 
     public RepetitionCode(string binaryData, int repetitionNumber)
     {
@@ -8,7 +8,7 @@ class RepetitionCode
         {
             for (int i = 0; i < repetitionNumber; i++)
             {
-                RepetitionBinaryData += item;
+                BinaryData += item;
             }
         }
     }
@@ -16,9 +16,9 @@ class RepetitionCode
     public string DecodeToBinary()
     {
         string decodedData = "";
-        for (int i = 0; i < RepetitionBinaryData.Length; i += 5)
+        for (int i = 0; i < BinaryData.Length; i += 5)
         {
-            var block = RepetitionBinaryData.Substring(i, 5);
+            var block = BinaryData.Substring(i, 5);
             var sum = 0;
             foreach (var item in block)
             {
