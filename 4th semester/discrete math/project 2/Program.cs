@@ -1,4 +1,6 @@
-﻿// Probabilidade de erro em cada bit apos passar pela funcao NoiseItUp()
+﻿using System.Text;
+
+// Probabilidade de erro em cada bit apos passar pela funcao NoiseItUp()
 float p = 0.01f;
 
 // Inicializa a lista de SNRdb com valores entre 3 e 10 em incrementos de 0.35, para obtermos 20 valores no total.
@@ -78,3 +80,28 @@ Console.WriteLine("Resultado do teste de hamming C(15,11,3):");
 Console.WriteLine(codificador.BinarioParaTexto(hammingCode15.DecodeToBinary()));
 Console.WriteLine("Resultado do teste de hamming C(11,7,3):");
 Console.WriteLine(codificador.BinarioParaTexto(hammingCode7.DecodeToBinary()));
+
+// Decodificacao e recodificacao de imagem
+
+byte[] b = File.ReadAllBytes("sprite.png");
+
+string binaryImg = "";
+
+foreach (var item in b)
+{
+    binaryImg += Convert.ToString(item, 2).PadLeft(8, '0');
+}
+
+var hamCode = new HammingCode(binaryImg, 16);
+hamCode.BinaryData = noise.NoiseItUp(hamCode.BinaryData, p);
+
+var decoded = hamCode.DecodeToBinary();
+
+// convert binaryImg to byte array
+byte[] bytes = new byte[decoded.Length / 8];
+for (int i = 0; i < bytes.Length; i++)
+{
+    bytes[i] = Convert.ToByte(decoded.Substring(i * 8, 8), 2);
+}
+
+File.WriteAllBytes("sprite2.png", bytes);
