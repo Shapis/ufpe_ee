@@ -9,7 +9,7 @@ geometry	0	0	1832	381
 </table>
 <multiLayer>
 C-7-4-3	1	1	Wednesday, October 12, 2022 11:44:58 PM -03
-geometry	588	866	196	24	minimized	
+geometry	588	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -58,7 +58,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 C-15-11-3	1	1	Wednesday, October 12, 2022 11:48:12 PM -03
-geometry	392	866	196	24	minimized	
+geometry	392	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -107,7 +107,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 C-5-1-5	1	1	Wednesday, October 12, 2022 11:50:46 PM -03
-geometry	784	866	196	24	minimized	
+geometry	784	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -156,7 +156,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 C-1-1-0	1	1	Wednesday, October 12, 2022 11:52:46 PM -03
-geometry	980	866	196	24	minimized	
+geometry	980	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -205,7 +205,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 ComparaodosR	1	1	Wednesday, October 12, 2022 11:58:52 PM -03
-geometry	255	208	679	543	
+geometry	148	222	679	543	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -307,7 +307,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 C-7-4-3-erro-snrdb	1	1	Thursday, October 13, 2022 12:51:26 AM -03
-geometry	196	866	196	24	minimized	
+geometry	196	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -356,7 +356,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 C-1-1-0-erro-snrdb	1	1	Thursday, October 13, 2022 12:56:52 AM -03
-geometry	0	866	196	24	minimized	
+geometry	0	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -405,7 +405,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 C-5-1-5-erro-snrdb	1	1	Thursday, October 13, 2022 1:02:51 AM -03
-geometry	1176	866	196	24	minimized	
+geometry	1176	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -454,33 +454,33 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 ComparacaoProbErro	1	1	Thursday, October 13, 2022 1:05:08 AM -03
-geometry	1372	866	196	24	minimized	
+geometry	558	4	682	543	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
 LayerCanvasSize	428	278
 Alignement	0	0
 <graph>
-ggeometry	5	5	771	559
-PlotTitle	Comparação das probabilidades de erro	#ff000000	4
+ggeometry	5	5	664	485
+PlotTitle	Comparação das probabilidades de erro no pacote	#ff000000	4
 <Antialiasing>1</Antialiasing>
 Background	#ffffffff	255
 Margin	0
 Border	0	#ff000000
 grid	0	0	0	0	#ff0000ff	0	0	#ffa0a0a4	2	0	#ff0000ff	0	0	#ffa0a0a4	2	0	0	0	2	0
 EnabledAxes	1	0	1	0	
-AxesTitles	Relação Sinal-Ruído - SNR_db	Probabilidade de erro em um codigo<br>			
+AxesTitles	Relação Sinal-Ruído - SNR_db	Probabilidade de erro em um pacote<br>			
 AxesTitleColors	#ff000000	#ff000000	#ff000000	#ff000000	
 AxesTitleAlignment	4	4	4	4
-TitleFont	Fira Sans Semi-Light	20	75	0	0	0
-ScaleFont0	Fira Sans Semi-Light	16	75	0	0	0
-ScaleFont1	Fira Sans Semi-Light	16	75	0	0	0
-ScaleFont2	Fira Sans Semi-Light	16	75	0	0	0
-ScaleFont3	Fira Sans Semi-Light	16	75	0	0	0
-AxisFont0	Fira Sans Semi-Light	16	50	0	0	0
-AxisFont1	Fira Sans Semi-Light	16	50	0	0	0
-AxisFont2	Fira Sans Semi-Light	16	50	0	0	0
-AxisFont3	Fira Sans Semi-Light	16	50	0	0	0
+TitleFont	Fira Sans Semi-Light	17	75	0	0	0
+ScaleFont0	Fira Sans Semi-Light	14	75	0	0	0
+ScaleFont1	Fira Sans Semi-Light	14	75	0	0	0
+ScaleFont2	Fira Sans Semi-Light	14	75	0	0	0
+ScaleFont3	Fira Sans Semi-Light	14	75	0	0	0
+AxisFont0	Fira Sans Semi-Light	14	50	0	0	0
+AxisFont1	Fira Sans Semi-Light	14	50	0	0	0
+AxisFont2	Fira Sans Semi-Light	14	50	0	0	0
+AxisFont3	Fira Sans Semi-Light	14	50	0	0	0
 EnabledTickLabels	1	1	1	1	
 AxesColors	#ff000000	#ff000000	#ff000000	#ff000000
 AxesNumberColors	#ff000000	#ff000000	#ff000000	#ff000000
@@ -502,19 +502,19 @@ TicksLength	5	9
 DrawAxesBackbone	1
 AxesLineWidth	1
 LabelsRotation	0	0
-<legend>	7.70441176470588	0.706060606060606	Fira Sans Semi-Light	16	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{4}C(1,1,0)	\c{3}C(5,1,5)	\c{2}C(7,4,3)	\c{1}C(15,11,3)</legend>
+<legend>	7.70441176470588	0.706060606060606	Fira Sans Semi-Light	14	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{4}C(1,1,0)	\c{3}C(5,1,5)	\c{2}C(7,4,3)	\c{1}C(15,11,3)</legend>
 </graph>
 </multiLayer>
 <multiLayer>
-Graph1	1	1	Thursday, October 13, 2022 8:24:19 PM -03
-geometry	1134	306	500	400	active
+ComparacaoErroPorBit	1	1	Thursday, October 13, 2022 8:24:19 PM -03
+geometry	1123	248	679	541	active
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
 LayerCanvasSize	420	278
 Alignement	0	0
 <graph>
-ggeometry	5	5	481	341
+ggeometry	5	5	660	482
 PlotTitle	Probabilidade de erro em cada bit por SNR_db	#ff000000	4
 <Antialiasing>1</Antialiasing>
 Background	#ffffffff	255
@@ -525,15 +525,15 @@ EnabledAxes	1	0	1	0
 AxesTitles	Relação Sinal-Ruído - SNR_db	log probabilidade de erro em cada bit			
 AxesTitleColors	#ff000000	#ff000000	#ff000000	#ff000000	
 AxesTitleAlignment	4	4	4	4
-TitleFont	Fira Sans Semi-Light	12	75	0	0	0
-ScaleFont0	Fira Sans Semi-Light	10	75	0	0	0
-ScaleFont1	Fira Sans Semi-Light	10	75	0	0	0
-ScaleFont2	Fira Sans Semi-Light	10	75	0	0	0
-ScaleFont3	Fira Sans Semi-Light	10	75	0	0	0
-AxisFont0	Fira Sans Semi-Light	10	50	0	0	0
-AxisFont1	Fira Sans Semi-Light	10	50	0	0	0
-AxisFont2	Fira Sans Semi-Light	10	50	0	0	0
-AxisFont3	Fira Sans Semi-Light	10	50	0	0	0
+TitleFont	Fira Sans Semi-Light	17	75	0	0	0
+ScaleFont0	Fira Sans Semi-Light	14	75	0	0	0
+ScaleFont1	Fira Sans Semi-Light	14	75	0	0	0
+ScaleFont2	Fira Sans Semi-Light	14	75	0	0	0
+ScaleFont3	Fira Sans Semi-Light	14	75	0	0	0
+AxisFont0	Fira Sans Semi-Light	14	50	0	0	0
+AxisFont1	Fira Sans Semi-Light	14	50	0	0	0
+AxisFont2	Fira Sans Semi-Light	14	50	0	0	0
+AxisFont3	Fira Sans Semi-Light	14	50	0	0	0
 EnabledTickLabels	1	1	1	1	
 AxesColors	#ff000000	#ff000000	#ff000000	#ff000000
 AxesNumberColors	#ff000000	#ff000000	#ff000000	#ff000000
@@ -555,7 +555,7 @@ TicksLength	5	9
 DrawAxesBackbone	1
 AxesLineWidth	1
 LabelsRotation	0	0
-<legend>	2.13399503722084	9.03740939001818e-07	Fira Sans Semi-Light	10	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{3}R=1/5	\c{2}R=4/7	\c{1}R=11/15	\c{4}R=1	</legend>
+<legend>	2.13399503722084	9.03740939001818e-07	Fira Sans Semi-Light	14	50	0	0	0	#ff000000	1	0	#00ffffff	0	\c{3}R=1/5	\c{2}R=4/7	\c{1}R=11/15	\c{4}R=1	</legend>
 </graph>
 </multiLayer>
 <log>

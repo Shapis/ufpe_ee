@@ -9,7 +9,7 @@ geometry	0	0	1832	381
 </table>
 <multiLayer>
 C-7-4-3	1	1	Wednesday, October 12, 2022 11:44:58 PM -03
-geometry	588	866	196	24	minimized	
+geometry	588	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -58,7 +58,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 C-15-11-3	1	1	Wednesday, October 12, 2022 11:48:12 PM -03
-geometry	392	866	196	24	minimized	
+geometry	392	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -107,7 +107,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 C-5-1-5	1	1	Wednesday, October 12, 2022 11:50:46 PM -03
-geometry	784	866	196	24	minimized	
+geometry	784	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -156,7 +156,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 C-1-1-0	1	1	Wednesday, October 12, 2022 11:52:46 PM -03
-geometry	980	866	196	24	minimized	
+geometry	980	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -307,7 +307,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 C-7-4-3-erro-snrdb	1	1	Thursday, October 13, 2022 12:51:26 AM -03
-geometry	196	866	196	24	minimized	
+geometry	196	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -356,7 +356,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 C-1-1-0-erro-snrdb	1	1	Thursday, October 13, 2022 12:56:52 AM -03
-geometry	0	866	196	24	minimized	
+geometry	0	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -405,7 +405,7 @@ LabelsRotation	0	0
 </multiLayer>
 <multiLayer>
 C-5-1-5-erro-snrdb	1	1	Thursday, October 13, 2022 1:02:51 AM -03
-geometry	1176	866	196	24	minimized	
+geometry	1176	626	196	24	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
