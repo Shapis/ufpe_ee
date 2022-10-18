@@ -1,0 +1,11 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Analise do circuito}{}{section.2}%
+\contentsline {section}{\numberline {3}Medições no laboratório}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Valores reais das partes.}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Imagem da onda}{}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Medicoes para o regime permanente}{}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Resposta natural}{}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Tempo de subida e descida}{}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Overshoot}{}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Atividades pós laboratoriais}{}{section.4}%
