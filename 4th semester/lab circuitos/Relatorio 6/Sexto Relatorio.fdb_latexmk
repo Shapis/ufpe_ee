@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1666065364 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex" "Sexto Relatorio.pdf" "Sexto Relatorio" 1666065365
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex" 1666065363 5515 3b24b9a441edb07bfa885ab494f48d9e ""
+["pdflatex"] 1666065530 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex" "Sexto Relatorio.pdf" "Sexto Relatorio" 1666065531
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex" 1666065529 5514 7158550cebe09721f0fa2306c8c7a025 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -244,10 +244,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656729983 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656729974 2927660 0bdb6439e42bf3f71fc181c244974d31 ""
-  "Sexto Relatorio.aux" 1666065365 2050 441c59b51e5caf6fadd3682a3ecc4adb "pdflatex"
-  "Sexto Relatorio.out" 1666065365 1603 5165c72ea9b93728f32e126fb83c1064 "pdflatex"
-  "Sexto Relatorio.tex" 1666065363 5515 3b24b9a441edb07bfa885ab494f48d9e ""
-  "Sexto Relatorio.toc" 1666065365 847 09d217d31fb65676e8e3925c4a21a453 "pdflatex"
+  "Sexto Relatorio.aux" 1666065531 2050 441c59b51e5caf6fadd3682a3ecc4adb "pdflatex"
+  "Sexto Relatorio.out" 1666065531 1603 5165c72ea9b93728f32e126fb83c1064 "pdflatex"
+  "Sexto Relatorio.tex" 1666065529 5514 7158550cebe09721f0fa2306c8c7a025 ""
+  "Sexto Relatorio.toc" 1666065531 847 09d217d31fb65676e8e3925c4a21a453 "pdflatex"
   "images//Figure_1.png" 1666065224 568248 3d2cb060ee2b80af864739abe11e956c ""
   (generated)
   "Sexto Relatorio.aux"
