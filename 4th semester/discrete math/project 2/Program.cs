@@ -36,8 +36,7 @@ var textoCodificado = codificador.TextoParaBinario(textoParaCodificar);
 
 // testRunner.TestarPorcentagemDeErroPorBitHamming(7, 4, SNRdb, SNR, p, textoCodificado);
 
-// testRunner.TestarPorcentagemDeErroPorBitSemCodigo(SNRdb, SNR, p, textoCodificado);
-
+testRunner.TestarPorcentagemDeErroPorBitSemCodigo(SNRdb, SNR, p, textoCodificado);
 
 p = 0.01f;
 
@@ -64,5 +63,5 @@ Console.WriteLine("Resultado do teste de repeticao R(5,1,3):");
 Console.WriteLine(codificador.BinarioParaTexto(repetitionCode.DecodeToBinary()));
 Console.WriteLine("Resultado do teste de hamming C(15,11,3):");
 Console.WriteLine(codificador.BinarioParaTexto(hammingCode15.DecodeToBinary()));
-Console.WriteLine("Resultado do teste de hamming C(11,7,3):");
+Console.WriteLine("Resultado do teste de hamming C(7,4,3)%:");
 Console.WriteLine(codificador.BinarioParaTexto(hammingCode7.DecodeToBinary()));
