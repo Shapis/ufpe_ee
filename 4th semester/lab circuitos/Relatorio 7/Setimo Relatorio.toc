@@ -1,0 +1,4 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Análise dos Circuitos}{}{section.2}%
+\contentsline {section}{\numberline {3}Resultados Experimentais}{}{section.3}%
