@@ -2,11 +2,19 @@
 \contentsline {section}{\numberline {1}Introdução}{}{section.1}%
 \contentsline {section}{\numberline {2}Analise do circuito}{}{section.2}%
 \contentsline {section}{\numberline {3}Analisando um exemplo}{}{section.3}%
-\contentsline {section}{\numberline {4}Medições no laboratório}{}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Valores reais das partes.}{}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Imagem da onda}{}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Medicoes para o regime permanente}{}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Resposta natural}{}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Tempo de subida e descida}{}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Overshoot}{}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Atividades pós laboratoriais}{}{section.5}%
+\contentsline {section}{\numberline {4}Resultados que deveria ter levado para o Lab}{}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Porcentagem de $V_i$ para $t \rightarrow \infty $}{}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Curva de resposta natural para 8 vezes inverso de alpha}{}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Curva de resposta forcada para 8 vezes inverso de alpha}{}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Tempos de subida da resposta forcada:}{}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Tempo de descida da resposta natural:}{}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Overshoot natural}{}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Overshoot Forcado}{}{subsection.4.7}%
+\contentsline {section}{\numberline {5}Medições no laboratório}{}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Valores reais das partes.}{}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Imagem da onda}{}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Medicoes para o regime permanente}{}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Resposta natural}{}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Tempo de subida e descida}{}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Overshoot}{}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Conclusoes}{}{section.6}%
