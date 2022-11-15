@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1668521132 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex" "Sexto Relatorio.pdf" "Sexto Relatorio" 1668521132
-  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex" 1668521130 10018 28552fae9d4bd99519ca0d4190f3b879 ""
+["pdflatex"] 1668531015 "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex" "Sexto Relatorio.pdf" "Sexto Relatorio" 1668531016
+  "/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex" 1668531014 10025 6699da57aa834058fbaa1f77ad9e09e9 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -245,9 +245,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1667889239 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1667889235 2927665 9a170224b42c5e557bbcae78cf0359d3 ""
-  "Sexto Relatorio.aux" 1668521132 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "Sexto Relatorio.out" 0 -1 0 "pdflatex"
-  "Sexto Relatorio.tex" 1668521130 10018 28552fae9d4bd99519ca0d4190f3b879 ""
+  "Sexto Relatorio.aux" 1668531016 3300 6746efb167e1ebfc7b7a63535bfedc5c "pdflatex"
+  "Sexto Relatorio.out" 1668531016 3679 906a786ff9b1e8a0ebeca84f184e4ec6 "pdflatex"
+  "Sexto Relatorio.tex" 1668531014 10025 6699da57aa834058fbaa1f77ad9e09e9 ""
+  "Sexto Relatorio.toc" 1668531016 1728 389328acf5adaaf98993d5d712d7d941 "pdflatex"
   "images//Figure_1.png" 1666065224 568248 3d2cb060ee2b80af864739abe11e956c ""
   "images/figure_2.png" 1668414507 22417 693eb478583db2b8c08704374cbbf0a8 ""
   "images/figure_3.png" 1668518815 15045 49c08e82906b1034702b5052862aac0e ""

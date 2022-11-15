@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.8)  15 NOV 2022 11:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.8)  15 NOV 2022 13:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -730,6 +730,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 48.
 LaTeX Info: Redefining \pageref on input line 48.
 LaTeX Info: Redefining \nameref on input line 48.
+ (./Sexto Relatorio.out) (./Sexto Relatorio.out)
 \@outlinefile=\write4
 \openout4 = `"Sexto Relatorio.out"'.
 
@@ -740,6 +741,11 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (./Sexto Relatorio.toc
+Underfull \hbox (badness 1533) in paragraph at lines 5--5
+ [] [][]\OT1/cmr/bx/n/12 Resultados que de-ve-ria ter le-vado 
+ []
+
 )
 \tf@toc=\write5
 \openout5 = `"Sexto Relatorio.toc"'.
@@ -751,7 +757,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--65
 []$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
  []
 
-<./images//Figure_2.png, id=8, 435.6275pt x 186.6975pt>
+<./images//Figure_2.png, id=103, 435.6275pt x 186.6975pt>
 File: ./images//Figure_2.png Graphic file (type png)
 <use ./images//Figure_2.png>
 Package pdftex.def Info: ./images//Figure_2.png  used on input line 68.
@@ -760,17 +766,6 @@ Package pdftex.def Info: ./images//Figure_2.png  used on input line 68.
 Overfull \hbox (3.75957pt too wide) in paragraph at lines 67--70
 [] 
  []
-
-Runaway argument?
-{Fazendo análise nodal no circuito chegamos as seguintes equações:\ETC.
-/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex:72: Paragraph ended before \@ssect was complete.
-<to be read again> 
-                   \par 
-l.72 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
 
 
 Overfull \hbox (2.07843pt too wide) detected at line 99
@@ -813,7 +808,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 175.
 
-<./images//Figure_3.png, id=35, 481.8pt x 361.35pt>
+<./images//Figure_3.png, id=132, 481.8pt x 361.35pt>
 File: ./images//Figure_3.png Graphic file (type png)
 <use ./images//Figure_3.png>
 Package pdftex.def Info: ./images//Figure_3.png  used on input line 181.
@@ -823,7 +818,7 @@ Overfull \hbox (7.37187pt too wide) in paragraph at lines 180--183
 [] 
  []
 
-<./images//Figure_4.png, id=36, 481.8pt x 361.35pt>
+<./images//Figure_4.png, id=133, 481.8pt x 361.35pt>
 File: ./images//Figure_4.png Graphic file (type png)
 <use ./images//Figure_4.png>
 Package pdftex.def Info: ./images//Figure_4.png  used on input line 188.
@@ -839,59 +834,6 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
                    \relax 
 l.191 \subsection
                  {Tempos de subida da resposta forcada:} [2 <./images/figure_3.png (PNG copy)>]
-
-/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex:197: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.197     \end{align*}
-                      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex:206: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.206     \end{align*}
-                      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex:215: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.215     \end{align*}
-                      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex:224: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.224     \end{align*}
-                      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -899,23 +841,11 @@ l.229 \clearpage
                  [3
 
  <./images/figure_4.png (PNG copy)>]
-<./images//Figure_1.png, id=72, 962.59625pt x 582.175pt>
+<./images//Figure_1.png, id=161, 962.59625pt x 582.175pt>
 File: ./images//Figure_1.png Graphic file (type png)
 <use ./images//Figure_1.png>
 Package pdftex.def Info: ./images//Figure_1.png  used on input line 252.
 (pdftex.def)             Requested size: 962.5939pt x 582.17358pt.
-
-
-LaTeX Warning: Command \~ invalid in math mode on input line 291.
-
-/home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 6/Sexto Relatorio.tex:291: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.291 ...    $\,$             & $Tempo$  e $Tensã
-                                                  o$              \\
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
@@ -924,28 +854,22 @@ l.302 \end{document}
                      [4
 
  <./images//Figure_1.png>] (./Sexto Relatorio.aux)
-
-Package rerunfilecheck Warning: File `"Sexto Relatorio".out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `"Sexto Relatorio".out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  906A786FF9B1E8A0EBECA84F184E4EC6;3679.
+Package rerunfilecheck Info: File `"Sexto Relatorio".out' has not changed.
+(rerunfilecheck)             Checksum: 906A786FF9B1E8A0EBECA84F184E4EC6;3679.
  ) 
 Here is how much of TeX's memory you used:
- 50987 strings out of 478238
- 1305787 string characters out of 5850456
- 1994392 words of memory out of 5000000
- 68541 multiletter control sequences out of 15000+600000
+ 51016 strings out of 478238
+ 1306256 string characters out of 5850456
+ 2002594 words of memory out of 5000000
+ 68563 multiletter control sequences out of 15000+600000
  478191 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,9n,118p,819b,780s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,8n,118p,819b,780s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Sexto Relatorio.pdf" (4 pages, 1007642 bytes).
+Output written on "Sexto Relatorio.pdf" (4 pages, 1012935 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
- 51 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 232 PDF objects out of 1000 (max. 8388607)
+ 196 compressed objects within 2 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 185 words of extra memory for PDF output out of 10000 (max. 10000000)
 

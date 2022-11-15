@@ -1123,8 +1123,18 @@ INPUT /usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 INPUT /usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-OUTPUT Sexto Relatorio.out
+INPUT ./Sexto Relatorio.out
+INPUT Sexto Relatorio.out
+INPUT ./Sexto Relatorio.out
+INPUT Sexto Relatorio.out
+INPUT ./Sexto Relatorio.out
+INPUT Sexto Relatorio.out
+INPUT ./Sexto Relatorio.out
+INPUT Sexto Relatorio.out
 OUTPUT Sexto Relatorio.pdf
+INPUT ./Sexto Relatorio.out
+INPUT ./Sexto Relatorio.out
+OUTPUT Sexto Relatorio.out
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -1147,9 +1157,10 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-OUTPUT Sexto Relatorio.toc
+INPUT ./Sexto Relatorio.toc
+INPUT Sexto Relatorio.toc
+INPUT Sexto Relatorio.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -1167,6 +1178,8 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+OUTPUT Sexto Relatorio.toc
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT ./images/figure_2.png
 INPUT ./images/figure_2.png
 INPUT ./images/figure_2.png
