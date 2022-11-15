@@ -29,17 +29,16 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{adjustbox}
- 
 \pgfplotsset{compat=newest}
 \graphicspath{ {./images/} }
 %  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
 \newcommand{\drawvector} [9] [color=cyan] {
-  \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
- \ifthenelse{\equal{#7}{true}}{
-  \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
-  \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
-  }
-  {}
+ \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+\ifthenelse{\equal{#7}{true}}{
+ \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+ \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+ }
+ {}
 }
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
 \title{Sexto Relatório de Lab de Circuitos}
@@ -69,7 +68,7 @@
     \includegraphics{Figure_2.png}
 \end{adjustbox}
 
-\subparagraph*{Fazendo analise nodal no circuito chegamos as seguintes equacoes:}
+\subparagraph*{Fazendo análise nodal no circuito chegamos as seguintes equações:)
 
 \begin{equation}
     \begin{aligned}
@@ -99,7 +98,7 @@
     \end{aligned}
 \end{equation}
 
-\subparagraph*{E tiramos as seguintes condicoes iniciais do circuito:}
+\subparagraph*{E tiramos as seguintes condições iniciais do circuito:}
 
 \begin{equation}
     \begin{aligned}
@@ -131,7 +130,7 @@
     s^2 + 2 \alpha s + w_0{^2} = 0
 \end{equation*}
 
-\subparagraph*{Podemos utilizar a equacao (3) e chegar nas seguintes conclusoes:}
+\subparagraph*{Podemos utilizar a equação (3) e chegar às seguintes conclusoes:}
 
 \begin{equation}
     \begin{aligned}
@@ -140,7 +139,7 @@
     \end{aligned}
 \end{equation}
 
-\subparagraph*{Que nos indica que estamos num sistema subamortecido ja que $w_0 > \alpha$, e que tem como solucao a seguinte equacao:}
+\subparagraph*{Que nos indica que estamos num sistema subamortecido já que $w_0 > \alpha$, e que tem como solução a seguinte equacao:}
 
 \begin{equation}
     \begin{aligned}
@@ -149,7 +148,7 @@
     \end{aligned}
 \end{equation}
 
-\subparagraph*{E podemos resolver para a condicao inicial e conseguir o seguinte sistema de equacoes:}
+\subparagraph*{E podemos resolver para a condição inicial e conseguir o seguinte sistema de equações:}
 
 \begin{equation}
     \begin{aligned}
@@ -158,7 +157,7 @@
     \end{aligned}
 \end{equation}
 
-\subparagraph*{Resolvendo numericamente na calculadora obtive a seguinte solucao:}
+\subparagraph*{Resolvendo numericamente na calculadora obtive a seguinte solução:}
 
 \subparagraph*{$((0.702 V_i - V_{C20})*\cos{(2084.82t)}+3.18*e^{-58}*(2.01*e^{58}*V_i-1.27*10^{60}*V_{C10}-2.867*10^{58}*V_{C20})*sin(2084.82t))*e^{(-331.43t)} - 0.7021 * V_i$}
 
@@ -169,12 +168,12 @@
     V(t) = e^{-331.43t} - 0.7021 * V_i
 \end{equation}
 
-\subparagraph*{Estou na duvida se isso deveria ter sinal invertido, as equacoes ficaram grandes e dificil de passar de um meio (calculadora) para outro (computador no Wolfram) para simplificar, eu chequei bastante e nao achei erro, mas intuitivamente eu imaginaria que o sinal de $V_i$ deveria ser positivo.}
+\subparagraph*{Estou na duvida se isso deveria ter sinal invertido, as equações ficam grandes e difícil de passar de um meio (calculadora) para outro (computador no Wolfram) para simplificar, eu chequei bastante e não achei erro, mas intuitivamente eu imaginaria que o sinal de $V_i$ deveria ser positivo.}
 
 \section{Resultados que deveria ter levado para o Lab}
 
 \subsection{Porcentagem de $V_i$ para $t \rightarrow \infty$}
-\subparagraph*{Como vimos an equacao (8), para t tendendo a infinito teremos $V(t) = -0.7021 Vi$, ou seja, a tensao em modulo sera de 70.21\% da tensao de entrada.}
+\subparagraph*{Como vimos na equação (8), para t tendendo a infinito teremos $V(t) = -0.7021 Vi$, ou seja, a tensão em módulo será de 70.21\% da tensão de entrada.}
 
 \subsection{Curva de resposta natural para 8 vezes inverso de alpha}
 
@@ -183,7 +182,7 @@
 \end{adjustbox}
 
 
-\subsection{Curva de resposta forcada para 8 vezes inverso de alpha}
+\subsection{Curva de resposta forçada para 8 vezes inverso de alpha}
 
 \begin{adjustbox}{scale=0.55}
     \includegraphics{Figure_4.png}
@@ -232,7 +231,7 @@
 \section{Medições no laboratório}
 
 \subsection{Valores reais das partes.}
-\subparagraph*{Abaixo estao os valores medidos das partes utilizadas no experimento:}
+\subparagraph*{Abaixo estão os valores medidos das partes utilizadas no experimento:}
 
 \begin{center}
     \begin{tabular}{ |ccc| }
@@ -253,9 +252,9 @@
     \includegraphics{Figure_1.png}
 \end{adjustbox}
 
-\subsection{Medicoes para o regime permanente}
+\subsection{Medições para o regime permanente}
 
-\subparagraph*{Inicialmente medimos as tensoes nos capacitores para tempos longos, ou seja. Quando estao em regime permanente, e obtivemos o seguinte:}
+\subparagraph*{Inicialmente medimos as tensões nos capacitores para tempos longos, ou seja. Quando estão em regime permanente, e obtivemos o seguinte:}
 
 \begin{equation*}
     \begin{aligned}
@@ -266,13 +265,13 @@
 
 \subsection{Resposta natural}
 
-\subparagraph*{Obtivemos que em resposta natural, o capacitor $C_1$ em $t_0$ tem uma tensao de $-3.5V$, ele oscila de maneira subamortecida ate tender a $0V$ em $t = \infty$.}
+\subparagraph*{Obtivemos que em resposta natural, o capacitor $C_1$ em $t_0$ tem uma tensão de $-3.5V$, ele oscila de maneira subamortecida até tender a $0V$ em $t = \infty$.}
 
-\subparagraph*{Ja o mesmo capacitor $C_1$ em resposta forcada, inicia em $0V$ e oscila de maneira subamortecida ate tender a $-3.5V$ em $t = \infty$.}
+\subparagraph*{Já o mesmo capacitor $C_1$ em resposta forçada, inicia em $0V$ e oscila de maneira subamortecida até tender a $-3.5V$ em $t = \infty$.}
 
 \subsection{Tempo de subida e descida}
 
-\paragraph*{Utilizarei a frequencia $f = \frac{1}{8} \alpha = 41.4$ para todos experimentos a seguir. Isto nos dara tempo suficiente para a tensao estabilizar.}
+\paragraph*{Utilizarei a frequência $f = \frac{1}{8} \alpha = 41.4$ para todos experimentos a seguir. Isto nos dará tempo suficiente para a tensão estabilizar.}
 
 \begin{center}
     \begin{tabular}{ |ccc| }
@@ -289,15 +288,15 @@
 \begin{center}
     \begin{tabular}{ |ccc| }
         \hline
-        $\,$             & $Tempo$  & $Tensao$   \\
-        $T_{overshootN}$ & $1.45ms$ & $2.15V$    \\
-        $T_{overshootF}$ & $1.4ms$  & $-2.0625V$ \\
+        $\,$             & $Tempo$  e $Tensão$              \\
+        $T_{overshootN}$ & $1.45ms$            & $2.15V$    \\
+        $T_{overshootF}$ & $1.4ms$             & $-2.0625V$ \\
         \hline
     \end{tabular}
 \end{center}
 
 \section{Conclusoes}
 
-\subparagraph*{Os resultados obtidos em laboratorio foram coerentes com os resultados teoricos. Algo que nao bateu exatamente como eu esperava foi a medicao da proporcao entre a tensao no tempo infinito e a tensao de entrada. O modulo deste valor estava coerente, mas eu sinto que o sinal ficou invertido do que deveria ser.}
+\subparagraph*{Os resultados obtidos em laboratório foram coerentes com os resultados teóricos. Algo que não bateu exatamente como eu esperava foi a medição da proporção entre a tensão no tempo infinito e a tensão de entrada. O módulo deste valor estava coerente, mas eu sinto que o sinal ficou invertido do que deveria ser.}
 
 \end{document}
