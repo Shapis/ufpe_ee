@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.7.1)  18 OCT 2022 00:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.8)  15 NOV 2022 09:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -752,17 +752,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--66
 []$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
  []
 
+<./images//Figure_2.png, id=63, 435.6275pt x 186.6975pt>
+File: ./images//Figure_2.png Graphic file (type png)
+<use ./images//Figure_2.png>
+Package pdftex.def Info: ./images//Figure_2.png  used on input line 69.
+(pdftex.def)             Requested size: 435.62643pt x 186.69704pt.
+
+Overfull \hbox (3.75957pt too wide) in paragraph at lines 68--71
+[] 
+ []
+
+
+Overfull \hbox (2.07843pt too wide) detected at line 100
+[][][][]
+ []
+
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
-<./images//Figure_1.png, id=79, 962.59625pt x 582.175pt>
+ <./images/figure_2.png>]
+Underfull \hbox (badness 1642) in paragraph at lines 163--163
+ []\OT1/cmr/bx/n/12 Resolvendo nu-me-ri-ca-mente na cal-cu-la-
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.174 \newpage
+               [2]
+<./images//Figure_1.png, id=110, 962.59625pt x 582.175pt>
 File: ./images//Figure_1.png Graphic file (type png)
 <use ./images//Figure_1.png>
-Package pdftex.def Info: ./images//Figure_1.png  used on input line 115.
+Package pdftex.def Info: ./images//Figure_1.png  used on input line 197.
 (pdftex.def)             Requested size: 962.5939pt x 582.17358pt.
 
-Overfull \hbox (127.41273pt too wide) in paragraph at lines 114--117
+Overfull \hbox (127.41273pt too wide) in paragraph at lines 196--199
 [] 
  []
 
@@ -770,31 +795,31 @@ Overfull \hbox (127.41273pt too wide) in paragraph at lines 114--117
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.161 \newpage
-               [2 <./images//Figure_1.png>]
+l.243 \newpage
+               [3 <./images//Figure_1.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.164 \end{document}
-                     [3
+l.246 \end{document}
+                     [4
 
 ] (./Sexto Relatorio.aux)
 Package rerunfilecheck Info: File `"Sexto Relatorio".out' has not changed.
-(rerunfilecheck)             Checksum: 5165C72EA9B93728F32E126FB83C1064;1603.
+(rerunfilecheck)             Checksum: 8DF2DF1152412022CFA5F703494D0844;1758.
  ) 
 Here is how much of TeX's memory you used:
- 50950 strings out of 478238
- 1305145 string characters out of 5850457
- 1995590 words of memory out of 5000000
- 68530 multiletter control sequences out of 15000+600000
+ 50979 strings out of 478238
+ 1305581 string characters out of 5850456
+ 1996591 words of memory out of 5000000
+ 68538 multiletter control sequences out of 15000+600000
  478191 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,9n,118p,819b,770s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Sexto Relatorio.pdf" (3 pages, 945653 bytes).
+ 115i,8n,118p,819b,780s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on "Sexto Relatorio.pdf" (4 pages, 969157 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 178 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

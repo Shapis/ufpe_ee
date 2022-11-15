@@ -65,29 +65,111 @@
 
 \section{Analise do circuito}
 
-\subparagraph*{Podemos fazer a seguinte análise no nosso circuito:}
+\begin{adjustbox}{scale=0.6}
+    \includegraphics{Figure_2.png}
+\end{adjustbox}
 
-\begin{equation*}
+\subparagraph*{Fazendo analise nodal no circuito chegamos as seguintes equacoes:}
+
+\begin{equation}
     \begin{aligned}
-         & \frac{V_a - V_i}{R_1} + \frac{V_a-V_0}{R_2} + \frac{V_a}{R_3}  + C1 \deriv{V_a}{t} = 0                                  \\
-         & \frac{-V_a}{R_3} - C_2 \frac{V_0}{t} = 0                                                                                \\
-         & V_a = -R_3 C_2 \deriv{V_0}{t}                                                                                           \\
+         & \frac{V_a - V_i}{R_1} + \frac{V_a - V_0}{R_2} + \frac{V_a}{R_3} + C_1 \deriv{V_a}{t} = 0 \\
+         & \frac{-V_a}{R_3} - C_2 \deriv{V_0}{t} = 0                                                \\
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Dai segue que:}
+
+\begin{equation}
+    \begin{aligned}
+         & V_a = - R_3 C_2 \deriv{V_0}{t}                                                                                          \\
          & V_a \left(\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}\right) + C_1 \deriv{V_a}{t} - \frac{V_0}{R_2} = \frac{V_i}{R_1} \\
-         & R_3 C_2 \deriv{V_0}{t} K_1 + C_1 C_2 R_3 \deriv{\deriv{V_0}{t}}{t} + \frac{V_0}{R_2} = \frac{-V_i}{R_i}                 \\
+         & K = \left(\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}\right)                                                          \\
+         & K V_a  + C_1 \deriv{V_a}{t} - \frac{V_0}{R_2} =\frac{V_i}{R_1}                                                          \\
     \end{aligned}
-\end{equation*}
+\end{equation}
 
-\subparagraph*{Que segue:}
+\subparagraph*{Substituindo $V_a$ temos:}
 
+\begin{equation}
+    \begin{aligned}
+         & C_1 C_2 R_3 \frac{d^2 V_0}{dt} + R_3 C_2 K \deriv{V_0}{t}    + \frac{V_0}{R_2} = -\frac{V_i}{R_1}              \\
+         & \frac{d^2 V_0}{dt} + \frac{K}{C1} \frac{V_0}{dt} + \frac{V_0}{R_2 C_1 C_2 R_3} = - \frac{V_i}{R_1 C_1 C_2 R_3} \\
+         & \frac{d^2 V_0}{dt} + 662.86 \frac{V_0}{dt} + 4456327.98 V_0 = - 3128911.14 V_i                                 \\
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{E tiramos as seguintes condicoes iniciais do circuito:}
+
+\begin{equation}
+    \begin{aligned}
+         & V_0(0)  = - V_{C20}                          \\
+         & \frac{V_0}{dt}(0) = -\frac{V_{C10}}{R_3 C_2}
+    \end{aligned}
+\end{equation}
+
+\section{Analisando um exemplo}
+
+\paragraph*{Para analisar um exemplo vamos usar os seguintes valores:}
+
+\begin{center}
+    \begin{tabular}{ |ccc| }
+        \hline
+        $R_1$ & $\rightarrow$ & $47K\varOmega$ \\
+        $R_2$ & $\rightarrow$ & $33K\varOmega$ \\
+        $R_3$ & $\rightarrow$ & $68K\varOmega$ \\
+        $C_1$ & $\rightarrow$ & $100nF$        \\
+        $C_2$ & $\rightarrow$ & $1nF$          \\
+
+        \hline
+    \end{tabular}
+\end{center}
+
+\subparagraph*{Sabendo que a solucao eh da forma:}
 
 \begin{equation*}
-    \begin{aligned}
-         & V_0(0) = - V_{C20}                                                             \\
-         & \deriv{V_0}{t} = - \frac{V_{C10}}{R_3 C_2}                                     \\
-         & V_a(t) = V_{C_1}(t) \rightarrow V_a(0) = V_{C10} = - R_3 C_2 \deriv{V_0}{t}(0) \\
-         & V_{C_2}(t) = - V_0(t) \rightarrow V_0(0) = -V_{C20}                            \\
-    \end{aligned}
+    s^2 + 2 \alpha s + w_0{^2} = 0
 \end{equation*}
+
+\subparagraph*{Podemos utilizar a equacao (3) e chegar nas seguintes conclusoes:}
+
+\begin{equation}
+    \begin{aligned}
+         & \alpha = \frac{R_3 C_2 K }{2 C_1 C_2 R_3} = 331.43 \\
+         & w_0 = \sqrt{ \frac{1}{R_2 C_1 C_2 R_3}}= 2111.00   \\
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Que nos indica que estamos num sistema subamortecido ja que $w_0 > \alpha$, e que tem como solucao a seguinte equacao:}
+
+\begin{equation}
+    \begin{aligned}
+         & V_0(t) = K_1 e^{-\alpha} \cos{w_d t} + K_2 e^{-\alpha} \sin{w_d t} \\
+         & w_d = \sqrt{w_0^2 - \alpha^2} = 2087.90                            \\
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{E podemos resolver para a condicao inicial e conseguir o seguinte sistema de equacoes:}
+
+\begin{equation}
+    \begin{aligned}
+         & V_0(0) = -V_{C20} = K_1 e^{-\alpha}              \\
+         & V_0'(0) = -V_{C10} = K_2 e^{-\alpha} w_d R_3 C_2
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Resolvendo numericamente na calculadora obtive a seguinte solucao:}
+
+\subparagraph*{$((0.702 V_i - V_{C20})*\cos{(2084.82t)}+3.18*e^{-58}*(2.01*e^{58}*V_i-1.27*10^{60}*V_{C10}-2.867*10^{58}*V_{C20})*sin(2084.82t))*e^{(-331.43t)} - 0.7021 * V_i$}
+
+
+\subparagraph*{Simplificando com Wolfram Alpha na seguinte url \url{shorturl.at/adnEU} obtenho a seguinte equacao:}
+
+\begin{equation}
+    V(t) = e^{-331.43t} - 0.7021 * V_i
+\end{equation}
+
+\subparagraph*{Estou na duvida se isso deveria ter sinal invertido, as equacoes ficaram grandes e dificil de passar de um meio (calculadora) para outro (computador no Wolfram) para simplificar, eu chequei bastante e nao achei erro, mas intuitivamente eu imaginaria que o sinal de $V_i$ deveria ser positivo.}
 
 \newpage
 
