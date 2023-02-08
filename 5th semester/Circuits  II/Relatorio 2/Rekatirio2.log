@@ -1,4 +1,4 @@
-Circuit: * Z:\home\hpsilva\Documents\ufpe_ee\5th semester\Circuits II\Relatorio 2\Rekatirio2.asc
+Circuit: * Z:\home\hpsilva\Documents\coding_projects\ufpe_ee\5th semester\Circuits II\Relatorio 2\Rekatirio2.asc
 
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
@@ -57,20 +57,20 @@ Source Step = 93.9394%
 Source stepping succeeded in finding the operating point.
 
 
-Date: Tue Feb 07 13:34:10 2023
-Total elapsed time: 0.867 seconds.
+Date: Wed Feb 08 18:17:24 2023
+Total elapsed time: 0.294 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 44515
-traniter = 35703
-tranpoints = 17798
-accept = 11887
-rejected = 5911
+totiter = 16128
+traniter = 7316
+tranpoints = 3659
+accept = 2454
+rejected = 1205
 matrix size = 12
 fillins = 2
 solver = Normal
-Matrix Compiler1:      42 opcodes  0.7/[0.4]/0.4
-Matrix Compiler2: 1.09 KB object code size  0.5/0.5/[0.4]
+Matrix Compiler1: 736 bytes object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 1.09 KB object code size  0.4/0.4/[0.3]
 
