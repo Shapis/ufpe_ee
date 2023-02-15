@@ -5,9 +5,7 @@
 \contentsline {subsection}{\numberline {2.1}Resistor}{}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Capacitor}{}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Medicoes no Laboratorio}{}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Tabela de medicoes}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Tabelas de medicoes}{}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Resistores}{}{subsubsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.2}Graficos dos dados}{}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Erro absoluto por frequencia}{}{subsubsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.3}Analise da onda dente de serra}{}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.2}Capacitores}{}{subsubsection.3.1.2}%
 \contentsline {section}{\numberline {4}Conclusoes}{}{section.4}%
