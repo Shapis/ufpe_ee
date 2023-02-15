@@ -1,8 +1,8 @@
-PWD /home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3
+PWD /home/hpsilva/Documents/ufpe_ee/5th semester/Electromagnetic Measurements/Relatorios/Relatorio 1
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/hpsilva/Documents/coding_projects/ufpe_ee/4th semester/lab circuitos/Relatorio 3/Terceiro Relatorio.tex
-OUTPUT Terceiro Relatorio.log
+INPUT /home/hpsilva/Documents/ufpe_ee/5th semester/Electromagnetic Measurements/Relatorios/Relatorio 1/Primeiro Relatorio.tex
+OUTPUT Primeiro Relatorio.log
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
@@ -1058,10 +1058,10 @@ INPUT /usr/share/texmf-dist/tex/latex/placeins/placeins.sty
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/share/texmf-dist/tex/latex/adjustbox/adjustbox.sty
-INPUT ./Terceiro Relatorio.aux
-INPUT Terceiro Relatorio.aux
-INPUT Terceiro Relatorio.aux
-OUTPUT Terceiro Relatorio.aux
+INPUT ./Primeiro Relatorio.aux
+INPUT Primeiro Relatorio.aux
+INPUT Primeiro Relatorio.aux
+OUTPUT Primeiro Relatorio.aux
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1123,18 +1123,18 @@ INPUT /usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 INPUT /usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-INPUT ./Terceiro Relatorio.out
-INPUT Terceiro Relatorio.out
-INPUT ./Terceiro Relatorio.out
-INPUT Terceiro Relatorio.out
-INPUT ./Terceiro Relatorio.out
-INPUT Terceiro Relatorio.out
-INPUT ./Terceiro Relatorio.out
-INPUT Terceiro Relatorio.out
-OUTPUT Terceiro Relatorio.pdf
-INPUT ./Terceiro Relatorio.out
-INPUT ./Terceiro Relatorio.out
-OUTPUT Terceiro Relatorio.out
+INPUT ./Primeiro Relatorio.out
+INPUT Primeiro Relatorio.out
+INPUT ./Primeiro Relatorio.out
+INPUT Primeiro Relatorio.out
+INPUT ./Primeiro Relatorio.out
+INPUT Primeiro Relatorio.out
+INPUT ./Primeiro Relatorio.out
+INPUT Primeiro Relatorio.out
+OUTPUT Primeiro Relatorio.pdf
+INPUT ./Primeiro Relatorio.out
+INPUT ./Primeiro Relatorio.out
+OUTPUT Primeiro Relatorio.out
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -1157,9 +1157,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./Terceiro Relatorio.toc
-INPUT Terceiro Relatorio.toc
-INPUT Terceiro Relatorio.toc
+INPUT ./Primeiro Relatorio.toc
+INPUT Primeiro Relatorio.toc
+INPUT Primeiro Relatorio.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -1178,32 +1178,13 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT Terceiro Relatorio.toc
+OUTPUT Primeiro Relatorio.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT ./images//circuito.png
-INPUT ./images//circuito.png
-INPUT ./images//circuito.png
-INPUT ./images//circuito.png
-INPUT ./images//circuito.png
-INPUT Terceiro Relatorio.aux
-INPUT ./Terceiro Relatorio.out
-INPUT ./Terceiro Relatorio.out
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+INPUT Primeiro Relatorio.aux
+INPUT ./Primeiro Relatorio.out
+INPUT ./Primeiro Relatorio.out
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
