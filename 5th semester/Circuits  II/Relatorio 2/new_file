@@ -1,0 +1,97 @@
+C1  104.89nF
+C2  101.28nF
+R1  465.1 omega
+R2  473.7 omega
+R3  46.25 omega
+
+(dT/T)*-360
+
+40Hz
+
+Vo:     0.092V
+Vi:     0.565V
+Fase:   6.3ms
+
+
+100Hz
+
+Vo:     0.09425V
+Vi:     1.52V
+Fase:   2.5ms
+
+
+200Hz
+
+Vo:     0.097V
+Vi:     3.5425V
+Fase:   1.24ms
+
+
+400Hz
+
+Vo:     0.106V
+Vi:     21.5V
+Fase:   790us
+
+
+480Hz
+
+Vo:     0.1V
+Vi:     36.75V
+Fase:   1.13ms
+
+
+550Hz
+
+Vo:     0.082V
+Vi:     16.8V
+Fase:   -600us
+
+
+1100Hz
+
+Vo:     0.088V
+Vi:     3.3175V
+Fase:   -230us
+
+
+2200Hz
+
+Vo:     0.8925V
+Vi:     1.4675V
+Fase:   -120us
+
+
+5500Hz
+
+Vo:     0.09V
+Vi:     0.7V
+Fase:   -40us
+
+
+11000Hz
+
+Vo:     0.09V
+Vi:     0.04325V
+Fase:   -18us
+
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.numeric.all;
+
+entity exemploProva is
+port
+(
+ehkey : in std_logic_vector(0 to 3) ;
+d7seg : out std_logic_vector(1 to 7)
+);
+end exemploProva;
+
+architecture behaviourExemplo of exemploProva is
+begin
+	with ehkey(0 to 3) select
+	d7seg(1 to 7) <= "1111110" when "0000",
+			"0110000" when "0001",
+end
+
+
