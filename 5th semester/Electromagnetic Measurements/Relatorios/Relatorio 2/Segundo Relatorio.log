@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.15)  15 FEB 2023 18:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.15)  15 FEB 2023 20:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -745,21 +745,29 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `"Segundo Relatorio.toc"'.
 
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 80.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
-[]$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
+Underfull \hbox (badness 2401) in paragraph at lines 88--88
+\OT1/cmr/bx/n/12 nente, e cal-cu-la-re-mos a m^^Sedia, des-vio
+ []
+
+
+Underfull \hbox (badness 1033) in paragraph at lines 98--98
+ []\OT1/cmr/bx/n/12 Isso ocor-reu por des-gaste dos com-po-
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \vbox (badness 2150) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (3.57129pt too wide) in paragraph at lines 152--163
+Overfull \hbox (34.82864pt too wide) in paragraph at lines 150--161
+ [] 
+ []
+
+
+Overfull \hbox (24.13918pt too wide) in paragraph at lines 196--205
  [] 
  []
 
@@ -767,31 +775,31 @@ Overfull \hbox (3.57129pt too wide) in paragraph at lines 152--163
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.207 \end{center}
+l.205 \end{center}
                    [2]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.216 \end{document}
+l.214 \end{document}
                      [3
 
 ] (./Segundo Relatorio.aux)
 Package rerunfilecheck Info: File `"Segundo Relatorio".out' has not changed.
-(rerunfilecheck)             Checksum: 095021A1F990D97DCB2D51508E6490A4;1249.
+(rerunfilecheck)             Checksum: AE3D0A7711310E4C3913B4969FFD2336;1270.
  ) 
 Here is how much of TeX's memory you used:
  50948 strings out of 478238
- 1305120 string characters out of 5850456
- 2002620 words of memory out of 5000000
- 68521 multiletter control sequences out of 15000+600000
- 478191 words of font info for 63 fonts, out of 8000000 for 9000
+ 1305109 string characters out of 5850456
+ 2002621 words of memory out of 5000000
+ 68523 multiletter control sequences out of 15000+600000
+ 478381 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,8n,118p,831b,827s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Segundo Relatorio.pdf" (3 pages, 76895 bytes).
+ 115i,8n,118p,831b,829s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on "Segundo Relatorio.pdf" (3 pages, 81241 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
