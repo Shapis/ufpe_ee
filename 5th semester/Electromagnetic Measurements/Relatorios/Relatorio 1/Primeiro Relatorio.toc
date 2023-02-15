@@ -1,10 +1,14 @@
 \babel@toc {brazil}{}\relax 
 \contentsline {section}{\numberline {1}Introdução}{}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Analise preliminar}{}{subsection.1.1}%
-\contentsline {section}{\numberline {2}Medicoes no Laboratorio}{}{section.2}%
-\contentsline {section}{\numberline {3}Resultados preliminares}{}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Montando o circuito}{}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Valores esperados}{}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Medicoes no laboratorio}{}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Valores experimentais}{}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Conclusões}{}{section.5}%
+\contentsline {section}{\numberline {2}Resultados esperados}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Onda senoidal}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Onda dente de serra}{}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Medicoes no Laboratorio}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Tabela de medicoes}{}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Resultados preliminares}{}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Montando o circuito}{}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Valores esperados}{}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Medicoes no laboratorio}{}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Valores experimentais}{}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Conclusões}{}{section.6}%
