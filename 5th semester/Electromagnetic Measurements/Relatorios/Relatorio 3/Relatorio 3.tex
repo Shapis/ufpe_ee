@@ -51,7 +51,7 @@
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
  
  
-\title{Terceiro Relatório de Medidas Eletromagneticas}
+\title{Terceiro Relatório de Medidas Eletromagnéticas}
 \author{Gabriel Soares \\ Henrique da Silva}
 \date{\today}
 \pgfplotsset{width = 10cm, compat = 1.9}
@@ -70,7 +70,7 @@
 \section{Introdução}
 
 
-\subparagraph*{Neste relatório, vamos medir a capacitancia de um capacitor utilizando um filtro $RC$.}
+\subparagraph*{Neste relatório, vamos medir a capacitância de um capacitor em um filtro $RC$.}
 
 %\subparagraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/5th semester/lab circuitos}}
 
@@ -79,9 +79,9 @@
 
 \subsection{Análise preliminar}
 
-\subparagraph*{Construiremos um circuito $RC$ e mediremos a tensao com um osciloscópio em paralelo com o capacitor.}
+\subparagraph*{Construíremos um circuito $RC$ e mediremos a tensão com um osciloscópio com as pontas de prova sobre o capacitor.}
 
-\subparagraph*{E utilizaremos da seguinte relacao para medir a capacitancia:}
+\subparagraph*{Utilizaremos da seguinte relação para medir a capacitância:}
 
 \begin{equation}
     \begin{aligned}
@@ -90,32 +90,32 @@
     \end{aligned}
 \end{equation}
 
-\subparagraph*{Logo utilizaremos uma fonte geradora de onda quadrada com periodo de aproximadamente 4 $\tau$ para podermos observar claramente o padrao de carregamento e descarregamento do capacitor}
+\subparagraph*{Logo utilizaremos uma fonte geradora de onda quadrada com período de aproximadamente 4$\tau$ para podermos observar claramente o padrão de carregamento e descarregamento do capacitor.}
 
-\subparagraph*{Entao mediremos o tempo necessario para que a tensao atinja $63.2\%$ do seu valor de pico para obtermos o $\tau$.}
+\subparagraph*{Entao mediremos o tempo necessário para que a tensão atinja $63.2\%$ do seu valor de pico para obtermos o $\tau$.}
 
 \section{Resultados esperados}
 
-\subparagraph*{Esperamos que os valores de capacitancia que obteremos seja coerente com o valor real e que a maior fonte de imprecisao vira da nossa medicao por cursores no osciloscopio.}
+\subparagraph*{Esperamos que os valores de capacitância que obteremos sejam coerentes com o valor real e que a maior fonte de imprecisão virá pelos cursores no osciloscópio.}
 
 \section{Medições no laboratório}
 
-\subparagraph*{Vamos utilizar o osciloscópio para gerar uma onda quadrada que passara por um circuito \emph{RC}. E mediremos a tensao no capacitor para fazermos a analise de tempo de subida e descida.}
+\subparagraph*{Vamos utilizar o osciloscópio para gerar uma onda quadrada que passará por um circuito $RC$. Mediremos a tensão no capacitor para fazermos a análise de tempo de subida e descida.}
 
-\subparagraph*{Faremos isto tres vezes para tres valores de $R$ previamente conhecidos, respectivamente $14800 \varOmega$, $8200 \varOmega$ e $15 \varOmega$.}
+\subparagraph*{Faremos isso três vezes para três valores de $R$ previamente conhecidos, respectivamente $14800 \varOmega$, $8200 \varOmega$ e $15 \varOmega$.}
 
-\subparagraph*{Com estes em maos determinaremos a capacitancia do nosso capacitor.}
+\subparagraph*{Com estes em mãos, determinaremos a capacitância do nosso capacitor.}
 
-\subparagraph*{Apos isso, mediremos a capacitancia diretamente com um multimetro para podermos fazer a analise das discrepancias entre as duas medidas.}
+\subparagraph*{Após isso, mediremos a capacitância diretamente com um multimetro para podermos fazer a analise das discrepâncias entre as duas medidas.}
 
 \subsection{Tabela de medições}
 
-\subsubsection{Medicoes utilizando circuito RC}
+\subsubsection{Medições utilizando circuito RC}
 
 \begin{center}
     \begin{tabular}{ |c|c|c| }
         \hline
-        $R \varOmega$ & $\tau (s)$ & $C nF$  \\
+        $R (\varOmega)$ & $\tau (s)$ & $C (nF)$  \\
         $15$          & 0.0000045  & $300.0$ \\
         $8200$        & 0.00054    & $65.8$  \\
         $14800$       & 0.00076    & $51.3$  \\
@@ -124,12 +124,12 @@
 \end{center}
 
 
-\subsubsection{Medicoes utilizando multimetro}
+\subsubsection{Medições utilizando multímetro}
 
 \begin{center}
     \begin{tabular}{ |cc| }
         \hline
-        $ C (nF)$         \\
+        $ C (nF)$ &       \\
         $62.37$ & $62.42$ \\
         $62.16$ & $62.27$ \\
         $62.8$  & $63.1$  \\
@@ -147,15 +147,15 @@
 \begin{center}
     \begin{tabular}{ |cc| }
         \hline
-        Media         & $63.107$ \\
-        Desvio padrão & 0.5104   \\
+        Média         & $63.107 nF$ \\
+        Desvio padrão & $0.5104 nF$  \\
         \hline
     \end{tabular}
 \end{center}
 
 \section{Circuito RL}
 
-\subparagraph*{Para um hipotetico circuito $RL$, teriamos:}
+\subparagraph*{Para um hipotético circuito $RL$, teríamos:}
 
 \begin{equation}
     \begin{aligned}
@@ -164,13 +164,13 @@
     \end{aligned}
 \end{equation}
 
-\subparagraph*{Que tambem nos permitiria determinar a indutancia, a diferenca seria que neste caso multiplicariamos o $\tau$ encontrado experimentalmente por $R$ para obtermos a indutancia.}
+\subparagraph*{Que também nos permitiria determinar a indutância, a diferença seria que nesse caso multiplicaríamos o $\tau$ encontrado experimentalmente por $R$ para obtermos a indutância.}
 
-\section{Conclusoes}
+\section{Conclusões}
 
-\subparagraph*{Conseguimos determinar a capacitancia com mais precisao com um resistor intermediario.}
+\subparagraph*{Conseguimos determinar a capacitância com mais precisão com um resistor intermediário. Isso ocorre devido à maior facilidade de observação das curvas de subida e descida da tensão no capacitor vistos no osciloscópio.}
 
-\subparagraph*{Isto ocorre devido a maior facilidade de observacao das curvas de subida e descida da tensao no capacitor vistos no osciloscopio.}
+\subparagraph*{Mediu-se, portanto, uma capacitância usando um engenhoso método. É por meio de engenhosos pensamentos como esses que surgem e desenvolvem-se os sistemas de medição.}
 
 
 
