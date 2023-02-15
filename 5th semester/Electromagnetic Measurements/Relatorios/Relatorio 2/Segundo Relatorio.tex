@@ -51,7 +51,7 @@
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
  
  
-\title{Segundo Relatório de Medidas Eletromagneticas}
+\title{Segundo Relatório de Medidas Eletromagnéticas}
 \author{Gabriel Soares \\ Henrique da Silva}
 \date{\today}
 \pgfplotsset{width = 10cm, compat = 1.9}
@@ -70,79 +70,77 @@
 \section{Introdução}
 
 
-\subparagraph*{Neste relatório, vamos medir os valores de resistencia $\varOmega$ e capacitancia $F$ de resistores e capacitores, e calcularemos alguns de seus parametros estatisticos.}
+\subparagraph*{Neste relatório, vamos medir os valores de resistência $\varOmega$ e capacitância $F$ de resistores e capacitores, a fim de compararmos com os valores verdadeiros convencionais, e calcularemos alguns de seus parâmetros estatísticos.}
 
-\subparagraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/5th semester/lab circuitos}}
-
-
+%\subparagraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/5th semester/lab circuitos}}
 
 
-\subsection{Analise preliminar}
+
+
+\subsection{Análise preliminar}
 \subparagraph*{}
 
 
-\subparagraph*{Utilizaremos um multimetro para medir as propriedades de alguns componentes.}
+\subparagraph*{Utilizaremos um multímetro para medir as capacitâncias e resistências de alguns componentes.}
 
-\subparagraph*{Faremos $20$ medicoes em cada componente, e calcularemos a media, desvio padrao, tendencia, e correcao de cada um deles.}
+\subparagraph*{Faremos $20$ medições em cada componente, e calcularemos a média, desvio padrão, tendência e correção de cada um deles.}
 
-\subparagraph*{Apos isto discutiremos os nossos achados.}
+\subparagraph*{Após isso discutiremos os nossos resultados.}
 
 \section{Resultados esperados}
 
 \subsection{Resistor}
 
-\subparagraph*{Esperamos resultados consistentes entre as medidas, porem, tambem esperamos que a resistencia seja diferente da resistencia de fabrica.}
+\subparagraph*{Esperamos resultados consistentes entre as medidas, porém também esperamos que a resistência seja diferente da resistência de fábrica.}
 
-\subparagraph*{Isto ocorrera por desgaste dos componentes devido a seu uso de laboratorio, e tambem pela qualidade dos componentes.}
+\subparagraph*{Isso ocorreu por desgaste dos componentes devido a seu uso de laboratório, e também pela qualidade dos componentes.}
 
-\subparagraph*{Muito provavelmente estamos fora dos padroes de confiabilidades de fabrica. Mas precisariamos ver o datasheet dos resistores em especifico para confirmar isto.}
+\subparagraph*{Muito provavelmente estamos fora dos padrões de confiabilidades de fábrica. Mas precisaríamos ver o \emph{datasheet} dos resistores em específico para confirmar isso.}
 
 \subsection{Capacitor}
 
-\subparagraph*{Tudo que falamos a cima se aplica aos capacitores, mas com dois diferenciais.}
+\subparagraph*{Tudo o que falamos acima se aplica aos capacitores, mas com dois diferenciais.}
 
-\subparagraph*{O primeiro eh que estes sao mais sensiveis ao uso, logo esperaremos discrepancias maiores entre os valores de fabrica e os de fato.}
+\subparagraph*{O primeiro é que estes sao mais sensíveis ao uso, logo esperaremos discrepâncias maiores entre os valores de fábrica e os de fato.}
 
-\subparagraph*{E tambem que durante as medidas, os carregaremos e os descarregaremos, que implicara tambem em um erro sistematico adicional.}
+\subparagraph*{E também que, durante as medidas, os carregaremos e descarregaremos, o que implica também em um erro sistemático adicional.}
 
 
-\section{Medicoes no Laboratorio}
+\section{Medições no laboratório}
 
-\subparagraph*{Utilizando um multimetro, mediremos resistencias de resistores, e capacitancias de capacitores.}
+\subparagraph*{Para reduzir erros, encaixaremos todos componentes em um \emph{protoboard}.}
 
-\subparagraph*{Para reduzir erros sistematicos, os encaixaremos todos componentes em um protoboard.}
+\subparagraph*{Antes de fazer as medidas dos capacitores, vamos criar um circuito com um capacitor e um resistor em série para descarregá-los. Apos alguns segundos com esse circuito formado, o desconectaremos e faremos a medição da capacitância.}
 
-\subparagraph*{E antes de fazer as medidas dos capacitores, vamos criar um circuito com um capacitor e um resistor em serie para descarregalos. Apos alguns segundos com este circuito formado, desconectaremos o circuito e faremos a medicao de fato.}
-
-\subsection{Tabelas de medicoes}
+\subsection{Tabelas de medições}
 
 \subsubsection{Resistores}
 
-\subparagraph*{Mediremos tres resistores, com valores de fabrica respectivamente de: $R_1 = 10k \varOmega$, $R_2 = 22k \varOmega$, $R_3 = 15k \varOmega$.}
+\subparagraph*{Mediremos três resistores com valores de fabrica respectivamente de: $R_1 = 10k\varOmega$, $R_2 = 22k\varOmega$, $R_3 = 15k\varOmega$.}
 \begin{center}
     \begin{tabular}{ |c|c|c| }
         \hline
         $R_1$ $10k\varOmega$ & $R_2$ $22k\varOmega$ & $R_3$ $15k\varOmega$ \\
-        10037 $\varOmega$    & 21932 $\varOmega$    & 14848 $\varOmega$    \\
-        10037 $\varOmega$    & 21932 $\varOmega$    & 14849 $\varOmega$    \\
-        10038 $\varOmega$    & 21932 $\varOmega$    & 14850 $\varOmega$    \\
-        10038 $\varOmega$    & 21932 $\varOmega$    & 14849 $\varOmega$    \\
-        10038 $\varOmega$    & 21932 $\varOmega$    & 14850 $\varOmega$    \\
-        10037 $\varOmega$    & 21933 $\varOmega$    & 14849 $\varOmega$    \\
-        10037 $\varOmega$    & 21933 $\varOmega$    & 14849 $\varOmega$    \\
-        10037 $\varOmega$    & 21931 $\varOmega$    & 14850 $\varOmega$    \\
-        10037 $\varOmega$    & 21931 $\varOmega$    & 14850 $\varOmega$    \\
-        10037 $\varOmega$    & 21930 $\varOmega$    & 14848 $\varOmega$    \\
-        10036 $\varOmega$    & 21932 $\varOmega$    & 14849 $\varOmega$    \\
-        10037 $\varOmega$    & 21932 $\varOmega$    & 14849 $\varOmega$    \\
-        10037 $\varOmega$    & 21932 $\varOmega$    & 14849 $\varOmega$    \\
-        10037 $\varOmega$    & 21932 $\varOmega$    & 14849 $\varOmega$    \\
-        10038 $\varOmega$    & 21934 $\varOmega$    & 14849 $\varOmega$    \\
-        10036 $\varOmega$    & 21934 $\varOmega$    & 14850 $\varOmega$    \\
-        10036 $\varOmega$    & 21934 $\varOmega$    & 14849 $\varOmega$    \\
-        10037 $\varOmega$    & 21933 $\varOmega$    & 14849 $\varOmega$    \\
-        10036 $\varOmega$    & 21934 $\varOmega$    & 14849 $\varOmega$    \\
-        10036 $\varOmega$    & 21932 $\varOmega$    & 14848 $\varOmega$    \\
+        10,370 k$\varOmega$    & 21,932 k$\varOmega$    & 14,848 k$\varOmega$    \\
+        10,370 k$\varOmega$    & 21,932 k$\varOmega$    & 14,849 k$\varOmega$    \\
+        10,380 k$\varOmega$    & 21,932 k$\varOmega$    & 14,850 k$\varOmega$    \\
+        10,380 k$\varOmega$    & 21,932 k$\varOmega$    & 14,849 k$\varOmega$    \\
+        10,380 k$\varOmega$    & 21,932 k$\varOmega$    & 14,850 k$\varOmega$    \\
+        10,370 k$\varOmega$    & 21,933 k$\varOmega$    & 14,849 k$\varOmega$    \\
+        10,370 k$\varOmega$    & 21,933 k$\varOmega$    & 14,849 k$\varOmega$    \\
+        10,370 k$\varOmega$    & 21,931 k$\varOmega$    & 14,850 k$\varOmega$    \\
+        10,370 k$\varOmega$    & 21,931 k$\varOmega$    & 14,850 k$\varOmega$    \\
+        10,370 k$\varOmega$    & 21,930 k$\varOmega$    & 14,848 k$\varOmega$    \\
+        10,360 k$\varOmega$    & 21,932 k$\varOmega$    & 14,849 k$\varOmega$    \\
+        10,370 k$\varOmega$    & 21,932 k$\varOmega$    & 14,849 k$\varOmega$    \\
+        10,370 k$\varOmega$    & 21,932 k$\varOmega$    & 14,849 k$\varOmega$    \\
+        10,370 k$\varOmega$    & 21,932 k$\varOmega$    & 14,849 k$\varOmega$    \\
+        10,380 k$\varOmega$    & 21,934 k$\varOmega$    & 14,849 k$\varOmega$    \\
+        10,360 k$\varOmega$    & 21,934 k$\varOmega$    & 14,850 k$\varOmega$    \\
+        10,360 k$\varOmega$    & 21,934 k$\varOmega$    & 14,849 k$\varOmega$    \\
+        10,370 k$\varOmega$    & 21,933 k$\varOmega$    & 14,849 k$\varOmega$    \\
+        10,360 k$\varOmega$    & 21,934 k$\varOmega$    & 14,849 k$\varOmega$    \\
+        10,360 k$\varOmega$    & 21,932 k$\varOmega$    & 14,848 k$\varOmega$    \\
 
         \hline
     \end{tabular}
@@ -152,10 +150,10 @@
     \begin{tabular}{ |c|c|c|c| }
         \hline
                       & $R_1$ $10k\varOmega$ & $R_2$ $22k\varOmega$ & $R_3$ $15k\varOmega$ \\
-        Media         & 10037                & 21932                & 14849                \\
-        Desvio Padrao & 0.68633              & 1.0954               & 0.64072              \\
-        Tendencia     & 36.950               & -67.600              & -150.90              \\
-        Correcao      & -36.950              & 67.600               & 150.90               \\
+        Média         & 10,37 k$\varOmega$   & 21,932 k$\varOmega$  & 14,849 k$\varOmega$ \\
+        Desvio padrão & 0,00069 k$\varOmega$ & 0,0011 k$\varOmega$ & 0,00064 k$\varOmega$ \\
+        Tendência     & 0,37 k$\varOmega$    & -0,068 k$\varOmega$ & -0,151 k$\varOmega$ \\
+        Correção      & -0,37 k$\varOmega$   & 0,068 k$\varOmega$ & 0,151 k$\varOmega$ \\
 
 
         \hline
@@ -164,31 +162,31 @@
 
 \subsubsection{Capacitores}
 
-\subparagraph*{Mediremos tres capacitores, com valores de fabrica respectivamente de: $C_1 = 100 nF$, $C_2 = 47 nF$, $R_3 = 10 nF$.}
+\subparagraph*{Mediremos três capacitores com valores de fábrica respectivamente de: $C_1 = 100 nF$, $C_2 = 47 nF$, $R_3 = 10 nF$.}
 \begin{center}
     \begin{tabular}{ |c|c|c| }
         \hline
         $C_1 = 100 nF$ & $C_2 = 47 nF$ & $R_3 = 10 nF$ \\
-        46.31 $nF$     & 55.92 $nF$    & 12.74 $nF$    \\
-        46.45 $nF$     & 55.70 $nF$    & 12.72 $nF$    \\
-        46.34 $nF$     & 55.66 $nF$    & 12.77 $nF$    \\
-        46.34 $nF$     & 55.87 $nF$    & 12.76 $nF$    \\
-        46.25 $nF$     & 56.09 $nF$    & 12.78 $nF$    \\
-        46.36 $nF$     & 55.85 $nF$    & 12.77 $nF$    \\
-        46.21 $nF$     & 55.90 $nF$    & 12.74 $nF$    \\
-        46.32 $nF$     & 55.76 $nF$    & 12.80 $nF$    \\
-        46.30 $nF$     & 55.94 $nF$    & 12.83 $nF$    \\
-        46.54 $nF$     & 55.72 $nF$    & 12.84 $nF$    \\
-        46.54 $nF$     & 55.69 $nF$    & 12.79 $nF$    \\
-        47.01 $nF$     & 55.78 $nF$    & 12.81 $nF$    \\
-        46.70 $nF$     & 55.75 $nF$    & 12.78 $nF$    \\
-        46.82 $nF$     & 55.85 $nF$    & 12.80 $nF$    \\
-        46.75 $nF$     & 55.82 $nF$    & 12.81 $nF$    \\
-        46.64 $nF$     & 55.43 $nF$    & 12.79 $nF$    \\
-        46.71 $nF$     & 55.40 $nF$    & 12.76 $nF$    \\
-        46.76 $nF$     & 55.39 $nF$    & 12.73 $nF$    \\
-        46.85 $nF$     & 55.64 $nF$    & 12.69 $nF$    \\
-        46.81 $nF$     & 55.68 $nF$    & 12.68 $nF$    \\
+        46,31 $nF$     & 55,92 $nF$    & 12,74 $nF$    \\
+        46,45 $nF$     & 55,70 $nF$    & 12,72 $nF$    \\
+        46,34 $nF$     & 55,66 $nF$    & 12,77 $nF$    \\
+        46,34 $nF$     & 55,87 $nF$    & 12,76 $nF$    \\
+        46,25 $nF$     & 56,09 $nF$    & 12,78 $nF$    \\
+        46,36 $nF$     & 55,85 $nF$    & 12,77 $nF$    \\
+        46,21 $nF$     & 55,90 $nF$    & 12,74 $nF$    \\
+        46,32 $nF$     & 55,76 $nF$    & 12,80 $nF$    \\
+        46,30 $nF$     & 55,94 $nF$    & 12,83 $nF$    \\
+        46,54 $nF$     & 55,72 $nF$    & 12,84 $nF$    \\
+        46,54 $nF$     & 55,69 $nF$    & 12,79 $nF$    \\
+        47,01 $nF$     & 55,78 $nF$    & 12,81 $nF$    \\
+        46,70 $nF$     & 55,75 $nF$    & 12,78 $nF$    \\
+        46,82 $nF$     & 55,85 $nF$    & 12,80 $nF$    \\
+        46,75 $nF$     & 55,82 $nF$    & 12,81 $nF$    \\
+        46,64 $nF$     & 55,43 $nF$    & 12,79 $nF$    \\
+        46,71 $nF$     & 55,40 $nF$    & 12,76 $nF$    \\
+        46,76 $nF$     & 55,39 $nF$    & 12,73 $nF$    \\
+        46,85 $nF$     & 55,64 $nF$    & 12,69 $nF$    \\
+        46,81 $nF$     & 55,68 $nF$    & 12,68 $nF$    \\
 
         \hline
     \end{tabular}
@@ -198,19 +196,19 @@
     \begin{tabular}{ |c|c|c|c| }
         \hline
                       & $C_1 100 nF$ & $C_2 47 nF$ & $C_3 10 nF$ \\
-        Media         & 46.55        & 55.74       & 12.77       \\
-        Desvio Padrao & 0.2401       & 0.1819      & 0.0430      \\
-        Tendencia     & -53.45       & 8.742       & 2.770       \\
-        Correcao      & 53.45        & -8.742      & -2.770      \\
+        Média         & 46,55 $nF$        & 55,74 $nF$       & 12,77 $nF$       \\
+        Desvio padrão & 0,2401 $nF$       & 0,1819 $nF$      & 0,0430 $nF$      \\
+        Tendência     & -53,45 $nF$       & 8,742 $nF$       & 2,770 $nF$       \\
+        Correção      & 53,45 $nF$        & -8,742 $nF$      & -2,770 $nF$      \\
         \hline
     \end{tabular}
 \end{center}
 
-\section{Conclusoes}
+\section{Conclusões}
 
-\subparagraph*{Obtivemos desvios padroes baixos para nossos componentes. Porem espeficiamente no caso dos capacitores as tendencias foram bastante elevadas.}
+\subparagraph*{Obtivemos desvios padrões baixos para nossos componentes. Porém, especificamente no caso dos capacitores, as tendências foram bastante elevadas, o que indica que uma calibração é necessária.}
 
-\subparagraph*{O que indica que uma calibracao seja necessaria.}
+\subparagraph*{A realização de sucessivas medições e obtenção de parâmetros como média e desvio padrão é de grande interesse para maximização da confiança na obtenção de grandezas. Com os valores verdadeiros convencionais delas, é possível obter também tendência e correção.}
 
 
 \end{document}
