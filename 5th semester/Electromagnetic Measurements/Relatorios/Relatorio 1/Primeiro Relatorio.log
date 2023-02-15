@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.15)  15 FEB 2023 17:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.15)  15 FEB 2023 18:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -745,34 +745,34 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `"Primeiro Relatorio.toc"'.
 
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 80.
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
-[]$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
- []
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-<./images//Grafico1.png, id=89, 889.07156pt x 889.07156pt>
+Overfull \hbox (2.13713pt too wide) in paragraph at lines 109--144
+ [] 
+ []
+
+<./images//Grafico1.png, id=85, 889.07156pt x 889.07156pt>
 File: ./images//Grafico1.png Graphic file (type png)
 <use ./images//Grafico1.png>
-Package pdftex.def Info: ./images//Grafico1.png  used on input line 153.
+Package pdftex.def Info: ./images//Grafico1.png  used on input line 151.
 (pdftex.def)             Requested size: 889.0694pt x 889.0694pt.
 
-Overfull \hbox (9.10458pt too wide) in paragraph at lines 152--155
+Overfull \hbox (9.10458pt too wide) in paragraph at lines 150--153
 [] 
  []
 
-<./images//Grafico2.png, id=91, 889.07156pt x 889.07156pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<./images//Grafico2.png, id=87, 889.07156pt x 889.07156pt>
 File: ./images//Grafico2.png Graphic file (type png)
 <use ./images//Grafico2.png>
-Package pdftex.def Info: ./images//Grafico2.png  used on input line 159.
+Package pdftex.def Info: ./images//Grafico2.png  used on input line 157.
 (pdftex.def)             Requested size: 889.0694pt x 889.0694pt.
 
-Overfull \hbox (9.10458pt too wide) in paragraph at lines 158--161
+Overfull \hbox (9.10458pt too wide) in paragraph at lines 156--159
 [] 
  []
 
@@ -780,29 +780,29 @@ Overfull \hbox (9.10458pt too wide) in paragraph at lines 158--161
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.169 \subparagraph
-                   *{Logo as senoides decompostas de alta frequencia e baixa... [2 <./images//Grafico1.png> <./images//Grafico2.png>]
+l.167 \subparagraph
+                   *{Logo, as senoides decompostas de alta frequência e bai... [2 <./images//Grafico1.png> <./images//Grafico2.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.181 \end{document}
+l.179 \end{document}
                      [3] (./Primeiro Relatorio.aux)
 Package rerunfilecheck Info: File `"Primeiro Relatorio".out' has not changed.
-(rerunfilecheck)             Checksum: 810AA6CF49103EFBA48217B4D7322B86;1911.
+(rerunfilecheck)             Checksum: AD8DE1BAC64DEB81A892BE50D238C868;1944.
  ) 
 Here is how much of TeX's memory you used:
- 50971 strings out of 478238
- 1305630 string characters out of 5850456
+ 50968 strings out of 478238
+ 1305587 string characters out of 5850456
  1988626 words of memory out of 5000000
  68539 multiletter control sequences out of 15000+600000
- 478550 words of font info for 64 fonts, out of 8000000 for 9000
+ 478381 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,832b,770s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Primeiro Relatorio.pdf" (3 pages, 245709 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on "Primeiro Relatorio.pdf" (3 pages, 239938 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
+ 140 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
  119 words of extra memory for PDF output out of 10000 (max. 10000000)
 
