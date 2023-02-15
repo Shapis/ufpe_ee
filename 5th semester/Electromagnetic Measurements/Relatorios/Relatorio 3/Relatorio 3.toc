@@ -1,0 +1,10 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Análise preliminar}{}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Resultados esperados}{}{section.2}%
+\contentsline {section}{\numberline {3}Medições no laboratório}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Tabela de medições}{}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Medicoes utilizando circuito RC}{}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Medicoes utilizando multimetro}{}{subsubsection.3.1.2}%
+\contentsline {section}{\numberline {4}Circuito RL}{}{section.4}%
+\contentsline {section}{\numberline {5}Conclusoes}{}{section.5}%
