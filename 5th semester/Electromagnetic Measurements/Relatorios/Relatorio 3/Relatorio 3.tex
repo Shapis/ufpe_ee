@@ -1,0 +1,177 @@
+\documentclass[12pt,twoside, a4paper, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+ 
+\pgfplotsset{compat=newest}
+ 
+\graphicspath{ {./images/} }
+ 
+%  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
+ 
+\newcommand{\drawvector} [9] [color=cyan] {
+   \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+ 
+  
+ 
+\ifthenelse{\equal{#7}{true}}{
+   \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+   \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+   }
+   {}
+}
+ 
+\newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
+ 
+ 
+\title{Terceiro Relatório de Medidas Eletromagneticas}
+\author{Gabriel Soares \\ Henrique da Silva}
+\date{\today}
+\pgfplotsset{width = 10cm, compat = 1.9}
+ 
+ 
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+\newpage
+%pagenumbering{roman}
+\tableofcontents
+\newpage
+
+
+
+\section{Introdução}
+
+
+\subparagraph*{Neste relatório, vamos medir a capacitancia de um capacitor utilizando um filtro $RC$.}
+
+%\subparagraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/5th semester/lab circuitos}}
+
+
+
+
+\subsection{Análise preliminar}
+
+\subparagraph*{Construiremos um circuito $RC$ e mediremos a tensao com um osciloscópio em paralelo com o capacitor.}
+
+\subparagraph*{E utilizaremos da seguinte relacao para medir a capacitancia:}
+
+\begin{equation}
+    \begin{aligned}
+        \tau = RC \\
+        C = \frac{\tau}{R}
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Logo utilizaremos uma fonte geradora de onda quadrada com periodo de aproximadamente 4 $\tau$ para podermos observar claramente o padrao de carregamento e descarregamento do capacitor}
+
+\subparagraph*{Entao mediremos o tempo necessario para que a tensao atinja $63.2\%$ do seu valor de pico para obtermos o $\tau$.}
+
+\section{Resultados esperados}
+
+\subparagraph*{Esperamos que os valores de capacitancia que obteremos seja coerente com o valor real e que a maior fonte de imprecisao vira da nossa medicao por cursores no osciloscopio.}
+
+\section{Medições no laboratório}
+
+\subparagraph*{Vamos utilizar o osciloscópio para gerar uma onda quadrada que passara por um circuito \emph{RC}. E mediremos a tensao no capacitor para fazermos a analise de tempo de subida e descida.}
+
+\subparagraph*{Faremos isto tres vezes para tres valores de $R$ previamente conhecidos, respectivamente $14800 \varOmega$, $8200 \varOmega$ e $15 \varOmega$.}
+
+\subparagraph*{Com estes em maos determinaremos a capacitancia do nosso capacitor.}
+
+\subparagraph*{Apos isso, mediremos a capacitancia diretamente com um multimetro para podermos fazer a analise das discrepancias entre as duas medidas.}
+
+\subsection{Tabela de medições}
+
+\subsubsection{Medicoes utilizando circuito RC}
+
+\begin{center}
+    \begin{tabular}{ |c|c|c| }
+        \hline
+        $R \varOmega$ & $\tau (s)$ & $C nF$  \\
+        $15$          & 0.0000045  & $300.0$ \\
+        $8200$        & 0.00054    & $65.8$  \\
+        $14800$       & 0.00076    & $51.3$  \\
+        \hline
+    \end{tabular}
+\end{center}
+
+
+\subsubsection{Medicoes utilizando multimetro}
+
+\begin{center}
+    \begin{tabular}{ |cc| }
+        \hline
+        $ C (nF)$         \\
+        $62.37$ & $62.42$ \\
+        $62.16$ & $62.27$ \\
+        $62.8$  & $63.1$  \\
+        $62.99$ & $62.95$ \\
+        $63.38$ & $62.97$ \\
+        $63.3$  & $63.4$  \\
+        $63.45$ & $63.61$ \\
+        $64.24$ & $63.82$ \\
+        $63.32$ & $63.26$ \\
+        $63.24$ & $63.09$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ |cc| }
+        \hline
+        Media         & $63.107$ \\
+        Desvio padrão & 0.5104   \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\section{Circuito RL}
+
+\subparagraph*{Para um hipotetico circuito $RL$, teriamos:}
+
+\begin{equation}
+    \begin{aligned}
+        \tau = \frac{L}{R} \\
+        L = \tau R
+    \end{aligned}
+\end{equation}
+
+\subparagraph*{Que tambem nos permitiria determinar a indutancia, a diferenca seria que neste caso multiplicariamos o $\tau$ encontrado experimentalmente por $R$ para obtermos a indutancia.}
+
+\section{Conclusoes}
+
+\subparagraph*{Conseguimos determinar a capacitancia com mais precisao com um resistor intermediario.}
+
+\subparagraph*{Isto ocorre devido a maior facilidade de observacao das curvas de subida e descida da tensao no capacitor vistos no osciloscopio.}
+
+
+
+\end{document}
