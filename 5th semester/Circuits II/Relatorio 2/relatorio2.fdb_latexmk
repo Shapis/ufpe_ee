@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1676523209 "/home/hpsilva/Documents/ufpe_ee/5th semester/Circuits II/Relatorio 2/relatorio2.tex" "relatorio2.pdf" "relatorio2" 1676523211
-  "/home/hpsilva/Documents/ufpe_ee/5th semester/Circuits II/Relatorio 2/relatorio2.tex" 1676523207 15124 78551396da5424f85aebdd02138e70f5 ""
+["pdflatex"] 1676523985 "/home/hpsilva/Documents/ufpe_ee/5th semester/Circuits II/Relatorio 2/relatorio2.tex" "relatorio2.pdf" "relatorio2" 1676523987
+  "/home/hpsilva/Documents/ufpe_ee/5th semester/Circuits II/Relatorio 2/relatorio2.tex" 1676523983 15308 6393092002f78917df58fc53dcaa4745 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -272,10 +272,10 @@
   "images//substituicao.png" 1676512290 27608 3ef8911b55fc5c77095e1414a376003a ""
   "images//v0.png" 1676511597 12293 b7dee50be9d64f480bf94f38985388e0 ""
   "images//va.png" 1676511590 10213 45159b24c74d003e68cdb6d76b24f884 ""
-  "relatorio2.aux" 1676523211 5415 cf8a3839c37f971c32e58e42e264b1df "pdflatex"
-  "relatorio2.out" 1676523211 5355 ce578aa2759b10b99f5eb67d0d31fab1 "pdflatex"
-  "relatorio2.tex" 1676523207 15124 78551396da5424f85aebdd02138e70f5 ""
-  "relatorio2.toc" 1676523211 3187 e2e76da0b51757f608858769bf803339 "pdflatex"
+  "relatorio2.aux" 1676523987 5421 1aaa8952b4e2e66994861efbdc5769ce "pdflatex"
+  "relatorio2.out" 1676523987 5365 c75350f50462c62245a22e7019db2a2c "pdflatex"
+  "relatorio2.tex" 1676523983 15308 6393092002f78917df58fc53dcaa4745 ""
+  "relatorio2.toc" 1676523987 3193 43164e14caea012e0ab1036b37eb91fc "pdflatex"
   (generated)
   "relatorio2.aux"
   "relatorio2.log"

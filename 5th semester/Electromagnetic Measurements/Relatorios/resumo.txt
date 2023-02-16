@@ -1,0 +1,101 @@
+Mensurando = objeto de medição
+
+indicação = valor de uma grandeza fornecido pelo sistema de medição
+
+indicação direta = valor fornecido pelo sistema de medição
+
+resultado da medição = faixa de valores dentro da qual deve estar o valor verdadeiro do mensurando
+RM = RB +/- IM (RM = Resultado da Medição, RB = Resultado Base, IM = Incerteza de Medição)
+
+Resultado Base = estimativa do valor do mensurando que, acredita-se, mais se aproximar do seu valor verdadeiro.
+                 posição central do resultado da medição
+
+Incerteza de Medição = parcela de dúvida associada à medição.
+                       metade do comprimento do resultado da medição.
+
+CAP 2
+
+unidades de base = unidades primárias como: metro, segundo, quilograma.
+
+unidades derivadas = unidades formadas por unidades de base como: metro quadrado (área), metro por segundo (velocidade).
+
+unidades suplementares = unidades puramente matemáticas para medir ângulos planos e sólidos: radianos e esterradianos.
+
+grafia correta:
+letra minúscula Ex: volt, kelvin e newton. Única exceção: grau Celsius.
+prefixo sem plural,
+adicionar um 's' no final para colocar no plural,
+não adiciona 's' no plural se terminar em 's', 'x' ou 'z'. Ex: siemens, lux e hertz.
+não adiciona 's' no plural se for divisão. Ex: metros por segundo.
+
+CAP 3
+
+Erro sistemático = parcela previsível do erro. Erro médio
+
+Erro aleatório = parcela imprevisível do erro. Repetições levam a resultados diferentes.
+
+Exatidão = sem erros!
+
+Precisão = pouca dispersão
+
+Erro de medição = diferença entre o valor indicado pelo sistema e o valor verdadeiro do mensurando.
+E = I - VV (Erro de medição = Indicação do sistema de medição - Valor Verdadeiro do mensurando).
+
+Tendência = estimativa do erro sistemático.
+
+Valor Verdadeiro Convencional = estimativa suficientemente próxima do valor verdadeiro do mensurando.
+
+Correção = simétrico da Tendência. C = -Td
+
+Indicação Corrigida = indicação de um sistema de medição após a compensação dos erros sistemáticos.
+
+Repetitividade = faixa de valores simétrica em torno do valor médio, dentro do qual o erro aleatório de um sistema de medição é esperado com uma certa probabilidade.
+
+Distribuição de probabilidade uniforme ou retangular = cada evento possível de um experimento possui a mesma probabilidade de ocorrer.
+
+Desvio-padrão = medida do grau de dispersão.
+
+Incerteza-padrão = Medida da intensidade da componente aleatória do erro de medição.
+                   Desvio padrão dos erros de medição.
+
+desvio-padrão = o limite do número de medições tendendo a infinito da raiz do somatório de 1 até o número de medições do valor da indicação menos a média das indicações, ao quadrado, sobre o número de medições
+
+desvio-padrão da amostra = estimativa do desvio-padrão da população.
+
+graus de liberdade = grau com que a incerteza-padrão é estimada, corresponde ao número de medições menos um.
+
+Repetitividade = metade do valor da largura da faixa simétrica em torno do zero, dentro da qual, para uma dada probabilidade, o erro aleatório é esperado.
+                 calculada pelo produto da incerteza-padrão pelo respectivo coeficiente t de Student.
+
+desvio-padrão das médias = desvio-padrão / raiz( número de medidas )
+
+curva de erros = gráfico que representa a distribuição dos erros sistemáticos e aleatórios ao longo da faixa de medição do sistema de medição.
+
+erro máximo = erro com maior valor absoluto que pode ser cometido pelo sistema de medição nas condições em que foi avaliado.
+
+incerteza de medição = parâmetro, associado ao resultado de uma medição, que caracteriza a dispersão de valores que podem fundamentadamente ser atribuídos ao mensurando.
+
+fonte de erros = qualquer fator que, agindo sobre o processo de medição, dá origem a erros de medição.
+
+dilatação térmica = propriedade de os materiais modificarem suas dimensões em função das variações de temperatura a que estão sujeitos.
+
+delta L = alfa . L . delta T
+
+20ºC = temperatura de referência.
+
+cap 4
+
+medida materializada = dispositivo destinado a reproduzir ou fornecer de maneira permanente durante seu uso, um ou mais valores conhecidos de uma dada grandeza.
+                       Ex: massas-padrão, resistor elétrico-padrão, bloco-padrão ou material de referência.
+
+Transdutor = módulo do sistema de medição que gera um sinal de medição geralmente proporcional ao valor do mensurando.
+
+unidade de tratamento do sinal = processa o sinal de medição do transdutor e normalmente amplifica sua potência.
+
+dispositivo registrador = módulo do sistema de medição que representa graficamente as variações do sinal de medição.
+
+características metrológicas = são parâmetros que descrevem o comportamento e o desempenho de sistemas de medição.
+
+Resolução = menor diferença entre indicações que pode ser significativamente percebida.
+
+tempo de resposta = intervalo de tempo entre o instante em que o sistema de medição é submetido a um estímulo com uma variação brisca e o instante em que a resposta atinge e permanece dentro de limites especificados em torno do seu valor final estável.

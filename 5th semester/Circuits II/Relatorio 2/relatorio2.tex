@@ -29,34 +29,22 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{adjustbox}
- 
 \pgfplotsset{compat=newest}
- 
 \graphicspath{ {./images/} }
- 
 %  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
- 
 \newcommand{\drawvector} [9] [color=cyan] {
-   \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
- 
-  
- 
-\ifthenelse{\equal{#7}{true}}{
-   \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
-   \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
-   }
-   {}
+  \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+ \ifthenelse{\equal{#7}{true}}{
+  \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+  \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+  }
+  {}
 }
- 
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
- 
- 
 \title{Segundo Relatório de Lab de Circuitos II}
 \author{Henrique da Silva \\ hpsilva@proton.me}
 \date{\today}
 \pgfplotsset{width = 10cm, compat = 1.9}
- 
- 
 \begin{document}
 \maketitle
 \pagenumbering{gobble}
@@ -67,21 +55,34 @@
 
 
 
+
+
+
 \section{Introdução}
 
 
-\subparagraph*{Neste relatório, vamos discutir a funcao transferencia na resposta em regime permanente senoidal de um circuito.}
 
-\subparagraph*{Todos arquivos utilizados para criar este relatorio, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/5th semester/Electromagnetic Measurements/Relatorios}}
+
+\subparagraph*{Neste relatório, vamos discutir a função transferência na resposta em regime permanente senoidal de um circuito.}
+
+
+\subparagraph*{Todos arquivos utilizados para criar este relatório, é o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/5th semester/Electromagnetic Measurements/Relatorios}}
+
+
+
+
 
 
 
 
 \section{Análise preliminar}
 
-\paragraph*{Utilizarei o WxMaxima e LTSpice para fazer a analise teorica do circuito antes de monta-lo fisicamente.}
 
-\paragraph*{Apos terminar as analises compararei os resultados obtidos entre os dois para ver se os resultados sao coerentes.}
+\paragraph*{Utilizarei o WxMaxima e LTSpice para fazer a análise teórica do circuito antes de montá-lo fisicamente.}
+
+
+\paragraph*{Após terminar as análises compararei os resultados obtidos entre os dois para ver se os resultados são coerentes.}
+
 
 \subsection{O Circuito}
 \begin{adjustbox}{scale=0.30}
@@ -90,84 +91,112 @@
 \newpage
 \subsection{WxMaxima}
 
-\subparagraph*{Primeiro fiz manualmente a analise nodal do circuito que vamos construir, e passei ele para o dominio da frequencia.}
+
+\subparagraph*{Primeiro fiz manualmente a análise nodal do circuito que vamos construir, e passei ele para o domínio da frequência.}
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.26}
     \includegraphics{eqs.png}
 \end{adjustbox}
 
-\subparagraph*{Apos isso resolvi para $Va$ e $V_0$}
+
+\subparagraph*{Após isso resolvi para $Va$ e $V_0$}
+
 
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.33}
     \includegraphics{linsolve.png}
 \end{adjustbox}
 
+
 \begin{adjustbox}{scale=0.33}
     \includegraphics{va.png}
 \end{adjustbox}
+
 
 \begin{adjustbox}{scale=0.33}
     \includegraphics{v0.png}
 \end{adjustbox}
 
-\subparagraph*{Daqui criamos nossa funcao transferencia $H$.}
+
+\subparagraph*{Daqui criamos nossa função transferência $H$.}
+
 
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.33}
     \includegraphics{H.png}
 \end{adjustbox}
 
-\subparagraph*{Apos isso fiz a substituicao $S = iw$ para poder calcular a magnitude e seu angulo de fase.}
+
+\subparagraph*{Após isso fiz a substituição $S = iw$ para poder calcular a magnitude e seu ângulo de fase.}
+
 
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=.17}
     \includegraphics{sjw.png}
 \end{adjustbox}
 
-\subparagraph*{Agora com a funcao $Hw$ em maos podemos substituir os valores dos resistores e do capacitor pelos que utilizaremos.}
+
+\subparagraph*{Agora com a função $Hw$ em mãos podemos substituir os valores dos resistores e do capacitor pelos que utilizaremos.}
+
 
 \begin{adjustbox}{scale=0.30}
     \includegraphics{substituicao.png}
 \end{adjustbox}
 
-\subparagraph*{Como nosso objetivo eh analisar a magnitude e o angulo de fase da funcao transferencia, podemos extrair disto a parte real e imaginaria da equacao acima.}
+
+\subparagraph*{Como nosso objetivo é analisar a magnitude e o ângulo de fase da função transferência, podemos extrair disto a parte real e imaginária da equacao acima.}
+
 
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.21}
     \includegraphics{modarg.png}
 \end{adjustbox}
 
-\subparagraph*{E Finalmente com estas funcoes em maos, substitui a frequencia com as frequencias pedidas.}
+
+\subparagraph*{E Finalmente com estas funções em mãos, substitui a frequência com as frequências perdidas.}
+
 
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.30}
     \includegraphics{resultados.png}
 \end{adjustbox}
 
-\subparagraph*{Com isto temos em maos as magnitudes e angulos de fase da funcao transferencia para um gama de frequencias.}
+
+\subparagraph*{Com isto temos em mãos as magnitudes e ângulos de fase da função transferência para um gama de frequências.}
+
 
 \newpage
 
+
 \subsection{LTSpice}
 
-\paragraph*{No LTSpice montaremos o circuito e mediremos novamente o angulo de fase e sua magnitude.}
+
+\paragraph*{No LTSpice montaremos o circuito e mediremos novamente o ângulo de fase e sua magnitude.}
 \subparagraph*{}
 \begin{adjustbox}{scale=0.09}
     \includegraphics{ltspicecirc.png}
 \end{adjustbox}
 
+
 \subsubsection{Analise em $40Hz$}
+
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{ltfreq40.png}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -178,11 +207,14 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $100Hz$}
+
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{ltfreq100.png}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -194,11 +226,15 @@
 \end{equation*}
 
 
+
+
 \subsubsection{Analise em $200Hz$}
+
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{ltfreq200.png}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -209,11 +245,14 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $400Hz$}
+
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{ltfreq400.png}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -224,11 +263,14 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $480Hz$}
+
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{ltfreq480.png}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -239,11 +281,14 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $550Hz$}
+
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{ltfreq550.png}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -254,11 +299,14 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $1100Hz$}
+
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{ltfreq1100.png}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -269,11 +317,14 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $2200Hz$}
+
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{ltfreq2200.png}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -284,11 +335,14 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $5500Hz$}
+
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{ltfreq5500.png}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -299,11 +353,14 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $11000Hz$}
+
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{ltfreq11000.png}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -314,11 +371,16 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Tabela de resultados}
 
 
 
+
+
+
 \subparagraph*{}
+
 
 \begin{center}
     \begin{tabular}{ |c|c|c| }
@@ -340,9 +402,12 @@
 \newpage
 \section{Medicoes em laboratorio}
 
-\paragraph{Vamos inicialmente fazer as medicoes dos componentes a serem usados.}
+
+\paragraph{Vamos inicialmente fazer as medições dos componentes a serem usados.}
+
 
 \subsection{Tabela de componentes}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -354,14 +419,18 @@
     \end{aligned}
 \end{equation*}
 
-\subsection{Medicoes no osciloscopio}
+
+\subsection{Médicos no osciloscopio}
+
 
 \subsubsection*{Analise em $40Hz$}
 \subparagraph*{}
 
+
 \begin{adjustbox}{scale=0.18}
     \includegraphics{freq40.jpeg}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -373,12 +442,16 @@
 \end{equation*}
 
 
+
+
 \subsubsection{Analise em $100Hz$}
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.18}
     \includegraphics{freq100.jpeg}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -389,12 +462,15 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $200Hz$}
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.18}
     \includegraphics{freq200.jpeg}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -405,12 +481,15 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $400Hz$}
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.18}
     \includegraphics{freq400.jpeg}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -421,12 +500,15 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $480Hz$}
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.18}
     \includegraphics{freq480.jpeg}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -437,12 +519,15 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $550Hz$}
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.18}
     \includegraphics{freq550.jpeg}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -453,12 +538,15 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $1100Hz$}
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.18}
     \includegraphics{freq1100.jpeg}
 \end{adjustbox}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -471,10 +559,15 @@
 
 
 
+
+
+
 \subsubsection{Analise em $2200Hz$}
 \subparagraph*{}
 
-\paragraph*{Eu achei que tinha tirado fotos das frequencias $2200Hz$ e $11000Hz$ mas nao consegui acha-las na confecção do relatorio.}
+
+\paragraph*{Eu achei que tinha tirado fotos das frequências $2200Hz$ e $11000Hz$ mas não consegui achá-las na confecção do relatório.}
+
 
 \begin{equation*}
     \begin{aligned}
@@ -485,8 +578,11 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Analise em $5500Hz$}
 \subparagraph*{}
+
+
 
 
 \begin{equation*}
@@ -499,8 +595,12 @@
 \end{equation*}
 
 
+
+
 \subsubsection{Analise em $11000Hz$}
 \subparagraph*{}
+
+
 
 
 \begin{equation*}
@@ -512,9 +612,12 @@
     \end{aligned}
 \end{equation*}
 
+
 \subsubsection{Tabela de resultados}
 
+
 \subparagraph*{}
+
 
 \begin{center}
     \begin{tabular}{ |c|c|c| }
@@ -534,35 +637,49 @@
     \end{tabular}
 \end{center}
 
-\subsection{Comparacao com valores teoricos}
 
-\subparagraph*{Podemos ver que os valores de magnitude ficaram coerentes com ambas analises teoricas, e os de fases pra frequencias baixas tambem, mas tive problemas pra entender o sentido do sinal da fase a medida que a frequencia subia.}
+\subsection{Comparação com valores teóricos}
 
-\subsection{Graficos}
+
+\subparagraph*{Podemos ver que os valores de magnitude ficaram coerentes com ambas análises teóricas, e os de fases para frequências baixas também, mas tive problemas para entender o sentido do sinal da fase a medida que a frequência subia.}
+
+
+\subsection{Gráficos}
+
 
 \subsubsection{Escala log-log da magnitude de H(jw) e f}
+
 
 \begin{adjustbox}{scale=0.70}
     \includegraphics{Graph1.jpeg}
 \end{adjustbox}
+
 
 \subsubsection{Escala semilog da fase de H(jw) e f}
 \begin{adjustbox}{scale=0.70}
     \includegraphics{Graph2.jpeg}
 \end{adjustbox}
 
+
 \section{Conclusões}
 
-\subparagraph*{Conseguimos com sucesso fazer a analise numerica por dois meios, utilizando o LTSpice e WxMaxima, e comparamos os resultados.}
 
-\subparagraph*{Nos resultados praticos, a magnitude da funcao transferencia foi coerente com os resultados esperados, porem a fase em frequencias baixas se manteve coerente, porem em frequencias altas ela se tornou inconsistente.}
+\subparagraph*{Conseguimos com sucesso fazer a análise numérica por dois meios, utilizando o LTSpice e WxMaxima, e comparamos os resultados.}
 
-\subparagraph*{Creio que por erros das minhas medidas, eu nao fui consistente em usar o mesmo cursor na mesma onda de entrada ou saida.}
 
-\subparagraph*{A frequencia de saida comecou adiantada em relacao a frequencia de entrada, e a medida que aumentamos a frequencia ela se atrasa ate que eh ultrapassada pela entrada.}
+\subparagraph*{Nos resultados práticos, a magnitude da função transferência foi coerente com os resultados esperados, porém a fase em frequências baixas se manteve coerente, porém em frequências altas ela se tornou inconsistente.}
+
+
+\subparagraph*{Creio que por erros das minhas medidas, eu não fui consistente em usar o mesmo cursor na mesma onda de entrada ou saída.}
+
+
+\subparagraph*{A frequência de saída começou adiantada em relação a frequência de entrada, e à medida que aumentamos a frequência ela se atrasa até que é ultrapassada pela entrada.}
+
 
 \subparagraph*{Creio que isso faria com que a fase se inverta.}
 
-\subparagraph*{Mas em suma creio que tivemos sucesso em nos familizariar com as ferramentas de analise de circuitos eletricos numericos.}
+
+\subparagraph*{Mas em suma creio que tivemos sucesso em nos familiarizar com as ferramentas de análise de circuitos elétricos numéricos.}
+
 
 \end{document}

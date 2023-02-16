@@ -16,9 +16,9 @@
 \contentsline {subsubsection}{\numberline {2.3.10}Analise em $11000Hz$}{}{subsubsection.2.3.10}%
 \contentsline {subsubsection}{\numberline {2.3.11}Tabela de resultados}{}{subsubsection.2.3.11}%
 \contentsline {section}{\numberline {3}Medicoes em laboratorio}{}{section.3}%
-\contentsline {paragraph}{Vamos inicialmente fazer as medicoes dos componentes a serem usados.}{}{section*.23}%
+\contentsline {paragraph}{Vamos inicialmente fazer as medições dos componentes a serem usados.}{}{section*.23}%
 \contentsline {subsection}{\numberline {3.1}Tabela de componentes}{}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Medicoes no osciloscopio}{}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Médicos no osciloscopio}{}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Analise em $100Hz$}{}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Analise em $200Hz$}{}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Analise em $400Hz$}{}{subsubsection.3.2.3}%
@@ -29,8 +29,8 @@
 \contentsline {subsubsection}{\numberline {3.2.8}Analise em $5500Hz$}{}{subsubsection.3.2.8}%
 \contentsline {subsubsection}{\numberline {3.2.9}Analise em $11000Hz$}{}{subsubsection.3.2.9}%
 \contentsline {subsubsection}{\numberline {3.2.10}Tabela de resultados}{}{subsubsection.3.2.10}%
-\contentsline {subsection}{\numberline {3.3}Comparacao com valores teoricos}{}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Graficos}{}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.3}Comparação com valores teóricos}{}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Gráficos}{}{subsection.3.4}%
 \contentsline {subsubsection}{\numberline {3.4.1}Escala log-log da magnitude de H(jw) e f}{}{subsubsection.3.4.1}%
 \contentsline {subsubsection}{\numberline {3.4.2}Escala semilog da fase de H(jw) e f}{}{subsubsection.3.4.2}%
 \contentsline {section}{\numberline {4}Conclusões}{}{section.4}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.15)  16 FEB 2023 01:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.15)  16 FEB 2023 02:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -639,24 +639,24 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 ) (./relatorio2.aux)
 \openout1 = `relatorio2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -713,11 +713,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (/usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-brazil.trsl
 File: translations-basic-dictionary-brazil.trsl (brazil translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `brazil'. on input line 60.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `brazil'. on input line 48.
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
-Package hyperref Info: Link coloring OFF on input line 60.
+Package hyperref Info: Link coloring OFF on input line 48.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -727,18 +727,18 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count343
 )
-LaTeX Info: Redefining \ref on input line 60.
-LaTeX Info: Redefining \pageref on input line 60.
-LaTeX Info: Redefining \nameref on input line 60.
+LaTeX Info: Redefining \ref on input line 48.
+LaTeX Info: Redefining \pageref on input line 48.
+LaTeX Info: Redefining \nameref on input line 48.
  (./relatorio2.out) (./relatorio2.out)
 \@outlinefile=\write4
 \openout4 = `relatorio2.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./relatorio2.toc)
@@ -746,31 +746,31 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout5 = `relatorio2.toc'.
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 80.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 78.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
  []\OT1/cmr/bx/n/12 Todos ar-qui-vos uti-li-za-dos para
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
-\OT1/cmr/bx/n/12 criar este re-la-to-rio, e o re-la-to-rio
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+\OT1/cmr/bx/n/12 criar este re-lat^^Sorio, ^^Se o re-la-to-rio
  []
 
 
-Underfull \hbox (badness 5607) in paragraph at lines 80--80
+Underfull \hbox (badness 5607) in paragraph at lines 78--78
 \OT1/cmr/bx/n/12 em si est~ao em: []$\OT1/cmtt/m/n/12 https : / / github . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
 \OT1/cmtt/m/n/12 Shapis / ufpe _ ee / tree / main / 5thsemester /
  []
 
 <./images//AnaliseNodal.png, id=178, 648.4225pt x 391.4625pt>
 File: ./images//AnaliseNodal.png Graphic file (type png)
 <use ./images//AnaliseNodal.png>
-Package pdftex.def Info: ./images//AnaliseNodal.png  used on input line 88.
+Package pdftex.def Info: ./images//AnaliseNodal.png  used on input line 89.
 (pdftex.def)             Requested size: 648.42091pt x 391.46153pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -779,183 +779,183 @@ Package pdftex.def Info: ./images//AnaliseNodal.png  used on input line 88.
 <./images//eqs.png, id=201, 951.555pt x 288.07625pt>
 File: ./images//eqs.png Graphic file (type png)
 <use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 97.
+Package pdftex.def Info: ./images//eqs.png  used on input line 100.
 (pdftex.def)             Requested size: 951.55267pt x 288.07553pt.
 
-Overfull \hbox (13.27928pt too wide) in paragraph at lines 96--99
+Overfull \hbox (13.27928pt too wide) in paragraph at lines 99--102
  [] [] 
  []
 
 <./images//linsolve.png, id=202, 528.97626pt x 53.19875pt>
 File: ./images//linsolve.png Graphic file (type png)
 <use ./images//linsolve.png>
-Package pdftex.def Info: ./images//linsolve.png  used on input line 105.
+Package pdftex.def Info: ./images//linsolve.png  used on input line 111.
 (pdftex.def)             Requested size: 528.97496pt x 53.19861pt.
 <./images//va.png, id=203, 630.355pt x 118.4425pt>
 File: ./images//va.png Graphic file (type png)
 <use ./images//va.png>
-Package pdftex.def Info: ./images//va.png  used on input line 109.
+Package pdftex.def Info: ./images//va.png  used on input line 116.
 (pdftex.def)             Requested size: 630.35345pt x 118.4422pt.
 <./images//v0.png, id=204, 678.535pt x 120.45pt>
 File: ./images//v0.png Graphic file (type png)
 <use ./images//v0.png>
-Package pdftex.def Info: ./images//v0.png  used on input line 113.
+Package pdftex.def Info: ./images//v0.png  used on input line 121.
 (pdftex.def)             Requested size: 678.53334pt x 120.44969pt.
 <./images//H.png, id=205, 653.44125pt x 208.78pt>
 File: ./images//H.png Graphic file (type png)
 <use ./images//H.png>
-Package pdftex.def Info: ./images//H.png  used on input line 121.
+Package pdftex.def Info: ./images//H.png  used on input line 132.
 (pdftex.def)             Requested size: 653.43965pt x 208.77946pt.
 <./images//sjw.png, id=206, 1405.25pt x 645.41125pt>
 File: ./images//sjw.png Graphic file (type png)
 <use ./images//sjw.png>
-Package pdftex.def Info: ./images//sjw.png  used on input line 129.
+Package pdftex.def Info: ./images//sjw.png  used on input line 143.
 (pdftex.def)             Requested size: 1405.24658pt x 645.40968pt.
 
-Overfull \hbox (4.77016pt too wide) in paragraph at lines 128--131
+Overfull \hbox (4.77016pt too wide) in paragraph at lines 142--145
  [] [] 
  []
 
 <./images//substituicao.png, id=207, 780.9175pt x 238.8925pt>
 File: ./images//substituicao.png Graphic file (type png)
 <use ./images//substituicao.png>
-Package pdftex.def Info: ./images//substituicao.png  used on input line 135.
+Package pdftex.def Info: ./images//substituicao.png  used on input line 151.
 (pdftex.def)             Requested size: 780.91559pt x 238.8919pt.
 
-Underfull \hbox (badness 1348) in paragraph at lines 134--137
+Underfull \hbox (badness 1348) in paragraph at lines 150--153
 \OT1/cmr/bx/n/12 de-mos subs-ti-tuir os va-lo-res dos re-sis-to-
  []
 
 <./images//modarg.png, id=208, 1240.635pt x 527.9725pt>
 File: ./images//modarg.png Graphic file (type png)
 <use ./images//modarg.png>
-Package pdftex.def Info: ./images//modarg.png  used on input line 143.
+Package pdftex.def Info: ./images//modarg.png  used on input line 162.
 (pdftex.def)             Requested size: 1240.63197pt x 527.9712pt.
 
-Overfull \hbox (26.42184pt too wide) in paragraph at lines 142--145
+Overfull \hbox (26.42184pt too wide) in paragraph at lines 161--164
  [] [] 
  []
 
 <./images//resultados.png, id=209, 781.92125pt x 858.20625pt>
 File: ./images//resultados.png Graphic file (type png)
 <use ./images//resultados.png>
-Package pdftex.def Info: ./images//resultados.png  used on input line 151.
+Package pdftex.def Info: ./images//resultados.png  used on input line 173.
 (pdftex.def)             Requested size: 781.91934pt x 858.20416pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.156 \newpage
+l.180 \newpage
                [2 <./images//eqs.png> <./images//linsolve.png> <./images//va.png> <./images//v0.png> <./images//H.png> <./images//sjw.png> <./images//substituicao.png> <./images//modarg.png> <./images//resultados.png>]
 <./images//ltspicecirc.png, id=237, 2525.435pt x 1337.99875pt>
 File: ./images//ltspicecirc.png Graphic file (type png)
 <use ./images//ltspicecirc.png>
-Package pdftex.def Info: ./images//ltspicecirc.png  used on input line 163.
+Package pdftex.def Info: ./images//ltspicecirc.png  used on input line 189.
 (pdftex.def)             Requested size: 2525.42886pt x 1337.9955pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 166.
+(hyperref)                removing `math shift' on input line 193.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 166.
+(hyperref)                removing `math shift' on input line 193.
 
 <./images//ltfreq40.png, id=238, 2554.54375pt x 649.42625pt>
 File: ./images//ltfreq40.png Graphic file (type png)
 <use ./images//ltfreq40.png>
-Package pdftex.def Info: ./images//ltfreq40.png  used on input line 169.
+Package pdftex.def Info: ./images//ltfreq40.png  used on input line 197.
 (pdftex.def)             Requested size: 2554.53754pt x 649.42467pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 181.
+(hyperref)                removing `math shift' on input line 211.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 181.
+(hyperref)                removing `math shift' on input line 211.
 
 <./images//ltfreq100.png, id=239, 2538.48375pt x 676.5275pt>
 File: ./images//ltfreq100.png Graphic file (type png)
 <use ./images//ltfreq100.png>
-Package pdftex.def Info: ./images//ltfreq100.png  used on input line 184.
+Package pdftex.def Info: ./images//ltfreq100.png  used on input line 215.
 (pdftex.def)             Requested size: 2538.47758pt x 676.52583pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 197.
+(hyperref)                removing `math shift' on input line 231.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 197.
+(hyperref)                removing `math shift' on input line 231.
 
 <./images//ltfreq200.png, id=240, 2538.48375pt x 676.5275pt>
 File: ./images//ltfreq200.png Graphic file (type png)
 <use ./images//ltfreq200.png>
-Package pdftex.def Info: ./images//ltfreq200.png  used on input line 200.
+Package pdftex.def Info: ./images//ltfreq200.png  used on input line 235.
 (pdftex.def)             Requested size: 2538.47758pt x 676.52583pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 212.
+(hyperref)                removing `math shift' on input line 249.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 212.
+(hyperref)                removing `math shift' on input line 249.
 
 <./images//ltfreq400.png, id=241, 2544.50626pt x 639.38875pt>
 File: ./images//ltfreq400.png Graphic file (type png)
 <use ./images//ltfreq400.png>
-Package pdftex.def Info: ./images//ltfreq400.png  used on input line 215.
+Package pdftex.def Info: ./images//ltfreq400.png  used on input line 253.
 (pdftex.def)             Requested size: 2544.50008pt x 639.38718pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 227.
+(hyperref)                removing `math shift' on input line 267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 227.
+(hyperref)                removing `math shift' on input line 267.
 
 <./images//ltfreq480.png, id=242, 2544.50626pt x 639.38875pt>
 File: ./images//ltfreq480.png Graphic file (type png)
 <use ./images//ltfreq480.png>
-Package pdftex.def Info: ./images//ltfreq480.png  used on input line 230.
+Package pdftex.def Info: ./images//ltfreq480.png  used on input line 271.
 (pdftex.def)             Requested size: 2544.50008pt x 639.38718pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 242.
+(hyperref)                removing `math shift' on input line 285.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 242.
+(hyperref)                removing `math shift' on input line 285.
 
 <./images//ltfreq550.png, id=243, 2544.50626pt x 639.38875pt>
 File: ./images//ltfreq550.png Graphic file (type png)
 <use ./images//ltfreq550.png>
-Package pdftex.def Info: ./images//ltfreq550.png  used on input line 245.
+Package pdftex.def Info: ./images//ltfreq550.png  used on input line 289.
 (pdftex.def)             Requested size: 2544.50008pt x 639.38718pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 257.
+(hyperref)                removing `math shift' on input line 303.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 257.
+(hyperref)                removing `math shift' on input line 303.
 
 <./images//ltfreq1100.png, id=244, 2544.50626pt x 639.38875pt>
 File: ./images//ltfreq1100.png Graphic file (type png)
 <use ./images//ltfreq1100.png>
-Package pdftex.def Info: ./images//ltfreq1100.png  used on input line 260.
+Package pdftex.def Info: ./images//ltfreq1100.png  used on input line 307.
 (pdftex.def)             Requested size: 2544.50008pt x 639.38718pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 272.
+(hyperref)                removing `math shift' on input line 321.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 272.
+(hyperref)                removing `math shift' on input line 321.
 
 <./images//ltfreq2200.png, id=245, 2544.50626pt x 639.38875pt>
 File: ./images//ltfreq2200.png Graphic file (type png)
 <use ./images//ltfreq2200.png>
-Package pdftex.def Info: ./images//ltfreq2200.png  used on input line 275.
+Package pdftex.def Info: ./images//ltfreq2200.png  used on input line 325.
 (pdftex.def)             Requested size: 2544.50008pt x 639.38718pt.
 
 Underfull \vbox (badness 1043) has occurred while \output is active []
@@ -964,51 +964,51 @@ Underfull \vbox (badness 1043) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.278 \begin{equation*}
+l.329 \begin{equation*}
                         [3 <./images//ltspicecirc.png> <./images//ltfreq40.png> <./images//ltfreq100.png> <./images//ltfreq200.png> <./images//ltfreq400.png> <./images//ltfreq480.png> <./images//ltfreq550.png> <./images//ltfreq1100.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 287.
+(hyperref)                removing `math shift' on input line 339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 287.
+(hyperref)                removing `math shift' on input line 339.
 
 <./images//ltfreq5500.png, id=261, 2544.50626pt x 639.38875pt>
 File: ./images//ltfreq5500.png Graphic file (type png)
 <use ./images//ltfreq5500.png>
-Package pdftex.def Info: ./images//ltfreq5500.png  used on input line 290.
+Package pdftex.def Info: ./images//ltfreq5500.png  used on input line 343.
 (pdftex.def)             Requested size: 2544.50008pt x 639.38718pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 302.
+(hyperref)                removing `math shift' on input line 357.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 302.
+(hyperref)                removing `math shift' on input line 357.
 
 <./images//ltfreq11000.png, id=262, 2544.50626pt x 639.38875pt>
 File: ./images//ltfreq11000.png Graphic file (type png)
 <use ./images//ltfreq11000.png>
-Package pdftex.def Info: ./images//ltfreq11000.png  used on input line 305.
+Package pdftex.def Info: ./images//ltfreq11000.png  used on input line 361.
 (pdftex.def)             Requested size: 2544.50008pt x 639.38718pt.
 <./images//freq40.jpeg, id=263, 1204.5pt x 1606.0pt>
 File: ./images//freq40.jpeg Graphic file (type jpg)
 <use ./images//freq40.jpeg>
-Package pdftex.def Info: ./images//freq40.jpeg  used on input line 363.
+Package pdftex.def Info: ./images//freq40.jpeg  used on input line 431.
 (pdftex.def)             Requested size: 1204.49707pt x 1605.99611pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 376.
+(hyperref)                removing `math shift' on input line 447.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 376.
+(hyperref)                removing `math shift' on input line 447.
 
 <./images//freq100.jpeg, id=264, 1204.5pt x 1606.0pt>
 File: ./images//freq100.jpeg Graphic file (type jpg)
 <use ./images//freq100.jpeg>
-Package pdftex.def Info: ./images//freq100.jpeg  used on input line 380.
+Package pdftex.def Info: ./images//freq100.jpeg  used on input line 452.
 (pdftex.def)             Requested size: 1204.49707pt x 1605.99611pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1017,20 +1017,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.383 \begin{equation*}
+l.456 \begin{equation*}
                         [4 <./images//ltfreq2200.png> <./images//ltfreq5500.png> <./images//ltfreq11000.png> <./images//freq40.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 392.
+(hyperref)                removing `math shift' on input line 466.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 392.
+(hyperref)                removing `math shift' on input line 466.
 
 <./images//freq200.jpeg, id=275, 1204.5pt x 1606.0pt>
 File: ./images//freq200.jpeg Graphic file (type jpg)
 <use ./images//freq200.jpeg>
-Package pdftex.def Info: ./images//freq200.jpeg  used on input line 396.
+Package pdftex.def Info: ./images//freq200.jpeg  used on input line 471.
 (pdftex.def)             Requested size: 1204.49707pt x 1605.99611pt.
 
 Underfull \vbox (badness 6252) has occurred while \output is active []
@@ -1038,29 +1038,29 @@ Underfull \vbox (badness 6252) has occurred while \output is active []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 408.
+(hyperref)                removing `math shift' on input line 485.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 408.
+(hyperref)                removing `math shift' on input line 485.
 
 <./images//freq400.jpeg, id=276, 1204.5pt x 1606.0pt>
 File: ./images//freq400.jpeg Graphic file (type jpg)
 <use ./images//freq400.jpeg>
-Package pdftex.def Info: ./images//freq400.jpeg  used on input line 412.
+Package pdftex.def Info: ./images//freq400.jpeg  used on input line 490.
 (pdftex.def)             Requested size: 1204.49707pt x 1605.99611pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 504.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 504.
 
 <./images//freq480.jpeg, id=277, 1204.5pt x 1606.0pt>
 File: ./images//freq480.jpeg Graphic file (type jpg)
 <use ./images//freq480.jpeg>
-Package pdftex.def Info: ./images//freq480.jpeg  used on input line 428.
+Package pdftex.def Info: ./images//freq480.jpeg  used on input line 509.
 (pdftex.def)             Requested size: 1204.49707pt x 1605.99611pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1069,20 +1069,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.431 \begin{equation*}
+l.513 \begin{equation*}
                         [5 <./images//freq100.jpeg> <./images//freq200.jpeg> <./images//freq400.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 440.
+(hyperref)                removing `math shift' on input line 523.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 440.
+(hyperref)                removing `math shift' on input line 523.
 
 <./images//freq550.jpeg, id=284, 1204.5pt x 1606.0pt>
 File: ./images//freq550.jpeg Graphic file (type jpg)
 <use ./images//freq550.jpeg>
-Package pdftex.def Info: ./images//freq550.jpeg  used on input line 444.
+Package pdftex.def Info: ./images//freq550.jpeg  used on input line 528.
 (pdftex.def)             Requested size: 1204.49707pt x 1605.99611pt.
 
 Underfull \vbox (badness 6252) has occurred while \output is active []
@@ -1090,57 +1090,67 @@ Underfull \vbox (badness 6252) has occurred while \output is active []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 456.
+(hyperref)                removing `math shift' on input line 542.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 456.
+(hyperref)                removing `math shift' on input line 542.
 
 <./images//freq1100.jpeg, id=285, 1204.5pt x 1606.0pt>
 File: ./images//freq1100.jpeg Graphic file (type jpg)
 <use ./images//freq1100.jpeg>
-Package pdftex.def Info: ./images//freq1100.jpeg  used on input line 460.
+Package pdftex.def Info: ./images//freq1100.jpeg  used on input line 547.
 (pdftex.def)             Requested size: 1204.49707pt x 1605.99611pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 474.
+(hyperref)                removing `math shift' on input line 565.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 474.
+(hyperref)                removing `math shift' on input line 565.
+
+
+Underfull \hbox (badness 5189) in paragraph at lines 572--572
+ []\OT1/cmr/bx/n/12 Eu achei que ti-nha ti-rado fo-tos das
+ []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 488.
+(hyperref)                removing `math shift' on input line 582.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 488.
+(hyperref)                removing `math shift' on input line 582.
 
 
-Underfull \vbox (badness 3029) has occurred while \output is active []
+Underfull \vbox (badness 3009) has occurred while \output is active []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.499 \end{equation*}
+l.595 \end{equation*}
                       [6 <./images//freq480.jpeg> <./images//freq550.jpeg> <./images//freq1100.jpeg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 502.
+(hyperref)                removing `math shift' on input line 600.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 502.
+(hyperref)                removing `math shift' on input line 600.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 641--641
+[]\OT1/cmr/bx/n/14.4 Compara^^Xc~ao com va-lo-res
+ []
 
 <./images//Graph1.jpeg, id=294, 370.38374pt x 264.99pt>
 File: ./images//Graph1.jpeg Graphic file (type jpg)
 <use ./images//Graph1.jpeg>
-Package pdftex.def Info: ./images//Graph1.jpeg  used on input line 546.
+Package pdftex.def Info: ./images//Graph1.jpeg  used on input line 654.
 (pdftex.def)             Requested size: 370.38283pt x 264.98935pt.
 
-Overfull \hbox (1.6479pt too wide) in paragraph at lines 545--548
+Overfull \hbox (1.6479pt too wide) in paragraph at lines 653--656
 [] 
  []
 
@@ -1150,39 +1160,49 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <./images//Graph2.jpeg, id=295, 370.38374pt x 264.99pt>
 File: ./images//Graph2.jpeg Graphic file (type jpg)
 <use ./images//Graph2.jpeg>
-Package pdftex.def Info: ./images//Graph2.jpeg  used on input line 551.
+Package pdftex.def Info: ./images//Graph2.jpeg  used on input line 660.
 (pdftex.def)             Requested size: 370.38283pt x 264.98935pt.
 
-Overfull \hbox (1.6479pt too wide) in paragraph at lines 550--553
+Overfull \hbox (1.6479pt too wide) in paragraph at lines 659--662
 [] 
+ []
+
+
+Underfull \hbox (badness 1783) in paragraph at lines 673--673
+\OT1/cmr/bx/n/12 re-sul-ta-dos es-pe-ra-dos, por^^Sem a fase em
+ []
+
+
+Underfull \hbox (badness 1681) in paragraph at lines 673--673
+\OT1/cmr/bx/n/12 frequ^encias bai-xas se man-teve co-e-rente,
  []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.564 \subparagraph
+l.679 \subparagraph
                    *{Creio que isso faria com que a fase se inverta.} [7 <./images//Graph1.jpeg> <./images//Graph2.jpeg>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.568 \end{document}
+l.685 \end{document}
                      [8
 
 ] (./relatorio2.aux)
 Package rerunfilecheck Info: File `relatorio2.out' has not changed.
-(rerunfilecheck)             Checksum: CE578AA2759B10B99F5EB67D0D31FAB1;5355.
+(rerunfilecheck)             Checksum: C75350F50462C62245A22E7019DB2A2C;5365.
  ) 
 Here is how much of TeX's memory you used:
- 51260 strings out of 478238
- 1311915 string characters out of 5850456
- 1999583 words of memory out of 5000000
- 68753 multiletter control sequences out of 15000+600000
+ 51265 strings out of 478238
+ 1311956 string characters out of 5850456
+ 1999580 words of memory out of 5000000
+ 68758 multiletter control sequences out of 15000+600000
  478191 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,796b,778s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on relatorio2.pdf (8 pages, 2914956 bytes).
+Output written on relatorio2.pdf (8 pages, 2915892 bytes).
 PDF statistics:
  369 PDF objects out of 1000 (max. 8388607)
  289 compressed objects within 3 object streams

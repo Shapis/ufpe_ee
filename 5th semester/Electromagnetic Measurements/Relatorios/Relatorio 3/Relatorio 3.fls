@@ -1180,8 +1180,8 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 OUTPUT Relatorio 3.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT Relatorio 3.aux
 INPUT ./Relatorio 3.out
 INPUT ./Relatorio 3.out
