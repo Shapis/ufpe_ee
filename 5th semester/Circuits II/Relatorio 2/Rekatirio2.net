@@ -1,0 +1,14 @@
+* C:\users\hpsilva\Documents\ufpe_ee\5th semester\Circuits II\Relatorio 2\Rekatirio2.asc
+R1 N004 N003 470
+C1 N005 N004 100n
+R2 N004 0 470
+C2 N001 N004 100n
+R3 N001 N005 47000
+V2 N002 0 22
+V3 0 N006 22
+V1 N003 0 SINE(0 100m 40)
+XU1 0 N005 N002 N006 N001 LT1001
+.tran 0 2 0 0.1
+.lib LTC.lib
+.backanno
+.end

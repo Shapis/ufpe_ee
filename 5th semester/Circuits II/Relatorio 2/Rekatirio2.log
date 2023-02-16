@@ -1,0 +1,76 @@
+Circuit: * C:\users\hpsilva\Documents\ufpe_ee\5th semester\Circuits II\Relatorio 2\Rekatirio2.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+Gmin = 1.12184
+vernier = 0.03125
+vernier = 0.015625
+Gmin = 1.05425
+vernier = 0.0078125
+Gmin = 1.03188
+vernier = 0.0104167
+vernier = 0.00520833
+vernier = 0.00694444
+vernier = 0.00347222
+Gmin = 1.02429
+vernier = 0.00462963
+vernier = 0.00231481
+Gmin = 1.01839
+vernier = 0.00308642
+vernier = 0.00154321
+vernier = 0.00205761
+Gmin = 1.01479
+vernier = 0.00102881
+vernier = 0.00137174
+Gmin = 1.01227
+vernier = 0.00068587
+vernier = 0.000914493
+Gmin = 1.01048
+vernier = 0.000457247
+Gmin = 1.0091
+vernier = 0.000609662
+vernier = 0.000812882
+vernier = 0.000406441
+Gmin = 1.00796
+vernier = 0.000541921
+vernier = 0.000406441
+Gmin = 1.0071
+vernier = 0.000541921
+vernier = 0.000406441
+vernier = 0.000541921
+Gmin = 1.00625
+vernier = 0.000406441
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 93.9394%
+Source stepping succeeded in finding the operating point.
+
+
+Date: Thu Feb 16 01:52:36 2023
+Total elapsed time: 0.175 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 16128
+traniter = 7316
+tranpoints = 3659
+accept = 2454
+rejected = 1205
+matrix size = 12
+fillins = 2
+solver = Normal
+Matrix Compiler1:      42 opcodes  0.2/[0.1]/0.1
+Matrix Compiler2: off  [0.2]/0.2/0.3
+
