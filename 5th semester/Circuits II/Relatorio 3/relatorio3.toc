@@ -1,0 +1,30 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Análise preliminar}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}O Circuito}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}WxMaxima}{}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Analise geral do circuito}{}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Analise do circuito 1}{}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Analise do circuito 2}{}{subsubsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3}LTSpice}{}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Analise em $40Hz$}{}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Analise em $100Hz$}{}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Analise em $200Hz$}{}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Analise em $400Hz$}{}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}Analise em $480Hz$}{}{subsubsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.6}Analise em $550Hz$}{}{subsubsection.2.3.6}%
+\contentsline {subsubsection}{\numberline {2.3.7}Analise em $1100Hz$}{}{subsubsection.2.3.7}%
+\contentsline {subsubsection}{\numberline {2.3.8}Tabela de resultados}{}{subsubsection.2.3.8}%
+\contentsline {section}{\numberline {3}Medicoes em laboratorio}{}{section.3}%
+\contentsline {paragraph}{Vamos inicialmente fazer as medições dos componentes a serem usados.}{}{section*.50}%
+\contentsline {subsection}{\numberline {3.1}Tabela de componentes}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Médicos no osciloscopio}{}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Analise em $100Hz$}{}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Analise em $200Hz$}{}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Analise em $400Hz$}{}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Tabela de resultados}{}{subsubsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3}Comparação com valores teóricos}{}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Gráficos}{}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Escala log-log da magnitude de H(jw) e f}{}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Escala semilog da fase de H(jw) e f}{}{subsubsection.3.4.2}%
+\contentsline {section}{\numberline {4}Conclusões}{}{section.4}%
