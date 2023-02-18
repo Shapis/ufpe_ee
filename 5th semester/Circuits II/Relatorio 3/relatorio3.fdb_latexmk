@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1676762097 "/home/hpsilva/Documents/ufpe_ee/5th semester/Circuits II/Relatorio 3/relatorio3.tex" "relatorio3.pdf" "relatorio3" 1676762098
-  "/home/hpsilva/Documents/ufpe_ee/5th semester/Circuits II/Relatorio 3/relatorio3.tex" 1676762097 16258 1aed033ab8dacfa594db0c404f536c01 ""
+["pdflatex"] 1676762788 "/home/hpsilva/Documents/ufpe_ee/5th semester/Circuits II/Relatorio 3/relatorio3.tex" "relatorio3.pdf" "relatorio3" 1676762789
+  "/home/hpsilva/Documents/ufpe_ee/5th semester/Circuits II/Relatorio 3/relatorio3.tex" 1676762787 16570 da6844ce4114ea4d0e970b806c2db329 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -262,10 +262,10 @@
   "images/H2bodephase.png" 1676759360 20990 5a7faffedf17104babcdd85c34e476fd ""
   "images/graficoH1t.png" 1676757667 17415 8cbf65e37057967382fb6141d4eea723 ""
   "images/graficoH2t.png" 1676760630 13717 7ca5f1a7db7ca0417887732fc30f452a ""
-  "relatorio3.aux" 1676762098 5461 0b65f8bf708e95db0b01b800d1251d8b "pdflatex"
-  "relatorio3.out" 1676762098 4497 4f694cae0ac16f89be74905e8980b2e1 "pdflatex"
-  "relatorio3.tex" 1676762097 16258 1aed033ab8dacfa594db0c404f536c01 ""
-  "relatorio3.toc" 1676762098 2633 6f2139899d8e24530062a9db7497231a "pdflatex"
+  "relatorio3.aux" 1676762789 5475 68d6c12000d5d3039b15b6043a679d5d "pdflatex"
+  "relatorio3.out" 1676762789 4533 0f4547f6e30abfbf190e0fce5c71f0ff "pdflatex"
+  "relatorio3.tex" 1676762787 16570 da6844ce4114ea4d0e970b806c2db329 ""
+  "relatorio3.toc" 1676762789 2645 aca669cc3e8e5e4bb31179d0cf85634e "pdflatex"
   (generated)
   "relatorio3.aux"
   "relatorio3.log"

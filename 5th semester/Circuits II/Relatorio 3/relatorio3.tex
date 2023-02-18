@@ -33,12 +33,12 @@
 \graphicspath{ {./images/} }
 %  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
 \newcommand{\drawvector} [9] [color=cyan] {
-  \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
- \ifthenelse{\equal{#7}{true}}{
-  \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
-  \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
-  }
-  {}
+ \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+\ifthenelse{\equal{#7}{true}}{
+ \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+ \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+ }
+ {}
 }
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
 \title{Terceiro Relatório de Lab de Circuitos II}
@@ -53,10 +53,15 @@
 \tableofcontents
 \newpage
 
+
 \section{Introdução}
 
 
-\subparagraph*{Neste relatório, vamos discutir calcular graficos de Bode de dois circuitos de segunda ordem e medir suas caracteristicas.}
+
+
+\subparagraph*{Neste relatório, vamos discutir calcular gráficos de Bode de dois circuitos de segunda ordem e medir suas características.}
+
+
 
 
 \subparagraph*{Todos arquivos utilizados para criar este relatório, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/5th semester/Circuits II/}}
@@ -68,13 +73,27 @@
 
 
 
+
+
+
+
+
+
+
+
 \section{Análise preliminar}
+
+
 
 
 \paragraph*{Utilizarei o WxMaxima e LTSpice para fazer a análise teórica do circuito antes de montá-lo fisicamente.}
 
 
-\paragraph*{Após terminar as análises compararei os resultados obtidos nas analises numericas e em laboratorio para verificar sua coerencia.}
+
+
+\paragraph*{Após terminar as análises compararei os resultados obtidos nas análises numéricas e em laboratório para verificar sua coerência.}
+
+
 
 
 \subsection{O Circuito}
@@ -84,11 +103,16 @@
 \newpage
 \subsection{WxMaxima}
 
-\subsubsection{Analise geral do circuito}
+
+\subsubsection{Análise geral do circuito}
+
+
 
 
 \subparagraph*{Primeiro fiz manualmente a análise nodal do circuito que vamos construir, e passei ele para o domínio da frequência.}
 \subparagraph*{}
+
+
 
 
 \begin{adjustbox}{scale=0.4}
@@ -96,33 +120,49 @@
 \end{adjustbox}
 
 
+
+
 \subparagraph*{Após isso resolvi para $Va$ e $V_0$}
 
 
+
+
 \subparagraph*{}
+
+
 
 
 \begin{adjustbox}{scale=0.4}
     \includegraphics{linsolve.png}
 \end{adjustbox}
 
+
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.4}
     \includegraphics{va.png}
 \end{adjustbox}
 
+
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.4}
     \includegraphics{v0.png}
 \end{adjustbox}
 
 
+
+
 \subparagraph*{Daqui criamos nossa função transferência $H$.}
 
 
+
+
 \subparagraph*{}
+
+
 
 
 \begin{adjustbox}{scale=0.4}
@@ -130,11 +170,17 @@
 \end{adjustbox}
 
 
+
+
 \subparagraph*{Agora com a função $H$ em mãos podemos substituir os valores dos resistores e do capacitor pelos que utilizaremos nos circuitos a serem analisados.}
 
-\subsubsection{Analise do circuito 1}
 
-\subparagraph*{Fazemos a substituicao em $H$ dos valores que utilizaremos no circuito 1.}
+\subsubsection{Análise do circuito 1}
+
+
+\subparagraph*{Fazemos a substituição em $H$ dos valores que utilizaremos no circuito 1.}
+
+
 
 
 \begin{equation*}
@@ -148,7 +194,11 @@
 \end{equation*}
 
 
+
+
 \subparagraph*{}
+
+
 
 
 \begin{adjustbox}{scale=0.34}
@@ -156,9 +206,13 @@
 \end{adjustbox}
 
 
-\subparagraph*{Analisamos os polos e zeros da função transferência e vemos que nao ha zeros. E os polos estao abaixo:}
+
+
+\subparagraph*{Analisamos os pólos e zeros da função transferência e vemos que não há zeros. E os polos estão abaixo:}
+
 
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.5}
     \includegraphics{H1denom.png}
@@ -167,9 +221,15 @@
 
 
 
-\subparagraph*{Agora faremos graficos de Bode para analisar o comportamento da magnitude da funcao transferencia e o angulo de fase entre as saidas e entradas do circuito.}
+
+
+
+
+\subparagraph*{Agora faremos gráficos de Bode para analisar o comportamento da magnitude da função transferência e o ângulo de fase entre as saídas e entradas do circuito.}
+
 
 \subparagraph*{}
+
 
 \begin{figure}[h]
     \centering
@@ -177,50 +237,68 @@
     \caption{Magnitude de H(s) do circuito 1.}
 \end{figure}
 
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\columnwidth]{images/H1bodephase.png}
     \caption{Fase de H(s) do circuito 1.}
 \end{figure}
 
+
 \subparagraph*{}
 
-\subparagraph*{Daqui retornei para o dominio do tempo para ter a funcao que descreve completamente o comportamento  da resposta do circuito.}
+
+\subparagraph*{Daqui retornei para o domínio do tempo para ter a função que descreve completamente o comportamento  da resposta do circuito.}
 \pagebreak
 \subparagraph*{}
+
+
 
 
 \begin{adjustbox}{scale=0.35}
     \includegraphics{iltH1.png}
 \end{adjustbox}
 
-\subparagraph*{Podemos ver que ja que todos termos exceto o $-8$ dependem de uma exponencial negativa em $t$, entao se nosso tempo tende a infinito, a resposta do circuito tende a $-8$.}
 
-\subparagraph*{Fazendo esta analise numericamente abaixo verificamos este resultado.}
+\subparagraph*{Podemos ver que já que todos termos exceto o $-8$ dependem de uma exponencial negativa em $t$, então se nosso tempo tende a infinito, a resposta do circuito tende a $-8$.}
+
+
+\subparagraph*{Fazendo esta análise numericamente abaixo verificamos este resultado.}
+
 
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.35}
     \includegraphics{limH1.png}
 \end{adjustbox}
 
-\subparagraph*{Com a funcao que descreve o comportamento do circuito no tempo em mãos podemos montar seu grafico e analisar seu comportamento para qualquer tempo.}
+
+\subparagraph*{Com a função que descreve o comportamento do circuito no tempo em mãos, podemos montar seu gráfico e analisar seu comportamento a qualquer tempo.}
 \subparagraph*{}
+
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\columnwidth]{images/graficoH1t.png}
-    \caption{Grafico de $V_0$(t) do circuito 1.}
+    \caption{Gráfico de $V_0$(t) do circuito 1.}
 \end{figure}
 
 
-\subparagraph*{Observamos que a funcao atinge valor final de $-8V$.}
+
+
+\subparagraph*{Observamos que a função atinge valor final de $-8V$.}
+
 
 \subparagraph*{E chega a $10\%$ deste valor em $9.2ms$ e $90\%$ em $122.2ms$.}
 
-\subsubsection{Analise do circuito 2}
 
-\subparagraph*{Fazemos a substituicao em $H$ dos valores que utilizaremos no circuito 1.}
+\subsubsection{Análise do circuito 2}
+
+
+\subparagraph*{Fazemos a substituição em $H$ dos valores que utilizaremos no circuito 1.}
+
+
 
 
 \begin{equation*}
@@ -234,7 +312,11 @@
 \end{equation*}
 
 
+
+
 \subparagraph*{}
+
+
 
 
 \begin{adjustbox}{scale=0.34}
@@ -242,9 +324,13 @@
 \end{adjustbox}
 
 
-\subparagraph*{Analisamos os polos e zeros da função transferência e vemos que nao ha zeros. E os polos estao abaixo:}
+
+
+\subparagraph*{Analisamos os pólos e zeros da função transferência e vemos que não há zeros. E os polos estão abaixo:}
+
 
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.5}
     \includegraphics{H2denom.png}
@@ -253,9 +339,15 @@
 
 
 
-\subparagraph*{Agora faremos graficos de Bode para analisar o comportamento da magnitude da funcao transferencia e o angulo de fase entre as saidas e entradas do circuito.}
+
+
+
+
+\subparagraph*{Agora faremos gráficos de Bode para analisar o comportamento da magnitude da função transferência e o ângulo de fase entre as saídas e entradas do circuito.}
+
 
 \subparagraph*{}
+
 
 \begin{figure}[h]
     \centering
@@ -263,17 +355,23 @@
     \caption{Magnitude de H(s) do circuito 2.}
 \end{figure}
 
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\columnwidth]{images/H2bodephase.png}
     \caption{Fase de H(s) do circuito 2.}
 \end{figure}
 
+
 \pagebreak
 
-\subparagraph*{Daqui retornei para o dominio do tempo para ter a funcao que descreve completamente o comportamento  da resposta do circuito.}
+
+\subparagraph*{Daqui retornei para o domínio do tempo para ter a função que descreve completamente o comportamento  da resposta do circuito.}
+
 
 \subparagraph*{}
+
+
 
 
 \begin{adjustbox}{scale=0.35}
@@ -281,56 +379,82 @@
 \end{adjustbox}
 
 
-\subparagraph*{Podemos ver que ja que todos termos exceto o $-5$ dependem de uma exponencial negativa em $t$, entao se nosso tempo tende a infinito, a resposta do circuito tende a $-5$.}
 
-\subparagraph*{Fazendo esta analise numericamente abaixo verificamos este resultado.}
+
+\subparagraph*{Podemos ver que já que todos termos exceto o $-5$ dependem de uma exponencial negativa em $t$, então se nosso tempo tende a infinito, a resposta do circuito tende a $-5$.}
+
+
+\subparagraph*{Fazendo esta análise numericamente abaixo verificamos este resultado.}
+
 
 \subparagraph*{}
+
 
 \begin{adjustbox}{scale=0.4}
     \includegraphics{limH2.png}
 \end{adjustbox}
 
-\subparagraph*{Com a funcao que descreve o comportamento do circuito no tempo em mãos podemos montar seu grafico e analisar seu comportamento para qualquer tempo.}
+
+\subparagraph*{Com a função que descreve o comportamento do circuito no tempo em mãos, podemos montar seu gráfico e analisar seu comportamento para qualquer tempo.}
+
 
 \newpage
+
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\columnwidth]{images/graficoH2t.png}
-    \caption{Grafico de $V_0$(t) do circuito 2.}
+    \caption{Gráfico de $V_0$(t) do circuito 2.}
 \end{figure}
 
-\subparagraph*{Observamos que a funcao atinge valor final de $-5V$.}
+
+\subparagraph*{Observamos que a função atinge valor final de $-5V$.}
+
 
 \subparagraph*{E chega a $10\%$ deste valor em $2.4ms$ e $90\%$ em $10.9ms$.}
 
-\subparagraph*{A partir de $10.9ms$ a funcao estara contida entre $90\%$ e $110\%$ do valor final.}
+
+\subparagraph*{A partir de $10.9ms$ a função estará contida entre $90\%$ e $110\%$ do valor final.}
+
+
+
 
 
 
 \newpage
+
+
+
+
 
 
 
 
 \subsection{LTSpice}
 
+
 \subsubsection*{Montagem do circuito}
 
-\paragraph*{No LTSpice montaremos o circuito e mediremos seu angulo de fase e a magnitude a funcao transferenecia, com estes valores criaremos um grafico e compararemos com o grafico de Bode.}
+
+\paragraph*{No LTSpice montaremos o circuito e mediremos seu ângulo de fase e a magnitude da função transferência, com estes valores criaremos um gráfico e compararemos com o gráfico de Bode.}
 \subparagraph*{}
 \begin{adjustbox}{scale=0.09}
     \includegraphics{eqs.png}
 \end{adjustbox}
 
 
+
+
 \subsubsection{Analise em $40Hz$}
+
+
 
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{eqs.png}
 \end{adjustbox}
+
+
 
 
 \begin{equation*}
@@ -343,12 +467,18 @@
 \end{equation*}
 
 
-\subsubsection{Analise em $100Hz$}
+
+
+\subsubsection{Análise em $100Hz$}
+
+
 
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{eqs.png}
 \end{adjustbox}
+
+
 
 
 \begin{equation*}
@@ -363,12 +493,20 @@
 
 
 
-\subsubsection{Analise em $200Hz$}
+
+
+
+
+\subsubsection{Análise em $200Hz$}
+
+
 
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{eqs.png}
 \end{adjustbox}
+
+
 
 
 \begin{equation*}
@@ -381,12 +519,18 @@
 \end{equation*}
 
 
-\subsubsection{Analise em $400Hz$}
+
+
+\subsubsection{Análise em $400Hz$}
+
+
 
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{eqs.png}
 \end{adjustbox}
+
+
 
 
 \begin{equation*}
@@ -399,12 +543,18 @@
 \end{equation*}
 
 
+
+
 \subsubsection{Analise em $480Hz$}
+
+
 
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{eqs.png}
 \end{adjustbox}
+
+
 
 
 \begin{equation*}
@@ -417,12 +567,18 @@
 \end{equation*}
 
 
+
+
 \subsubsection{Analise em $550Hz$}
+
+
 
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{eqs.png}
 \end{adjustbox}
+
+
 
 
 \begin{equation*}
@@ -435,12 +591,18 @@
 \end{equation*}
 
 
+
+
 \subsubsection{Analise em $1100Hz$}
+
+
 
 
 \begin{adjustbox}{scale=0.09}
     \includegraphics{eqs.png}
 \end{adjustbox}
+
+
 
 
 \begin{equation*}
@@ -454,6 +616,9 @@
 
 
 
+
+
+
 \subsubsection{Tabela de resultados}
 
 
@@ -461,7 +626,15 @@
 
 
 
+
+
+
+
+
+
 \subparagraph*{}
+
+
 
 
 \begin{center}
@@ -482,13 +655,19 @@
     \end{tabular}
 \end{center}
 \newpage
-\section{Medicoes em laboratorio}
+\section{Medições em laboratório}
+
+
 
 
 \paragraph{Vamos inicialmente fazer as medições dos componentes a serem usados.}
 
 
+
+
 \subsection{Tabela de componentes}
+
+
 
 
 \begin{equation*}
@@ -502,16 +681,24 @@
 \end{equation*}
 
 
+
+
 \subsection{Médicos no osciloscopio}
 
 
-\subsubsection*{Analise em $40Hz$}
+
+
+\subsubsection*{Análise em $40Hz$}
 \subparagraph*{}
+
+
 
 
 \begin{adjustbox}{scale=0.18}
     \includegraphics{eqs.png}
 \end{adjustbox}
+
+
 
 
 \begin{equation*}
@@ -526,13 +713,21 @@
 
 
 
-\subsubsection{Analise em $100Hz$}
+
+
+
+
+\subsubsection{Análise em $100Hz$}
 \subparagraph*{}
+
+
 
 
 \begin{adjustbox}{scale=0.18}
     \includegraphics{eqs.png}
 \end{adjustbox}
+
+
 
 
 \begin{equation*}
@@ -545,13 +740,19 @@
 \end{equation*}
 
 
-\subsubsection{Analise em $200Hz$}
+
+
+\subsubsection{Análise em $200Hz$}
 \subparagraph*{}
+
+
 
 
 \begin{adjustbox}{scale=0.18}
     \includegraphics{eqs.png}
 \end{adjustbox}
+
+
 
 
 \begin{equation*}
@@ -564,13 +765,19 @@
 \end{equation*}
 
 
-\subsubsection{Analise em $400Hz$}
+
+
+\subsubsection{Análise em $400Hz$}
 \subparagraph*{}
+
+
 
 
 \begin{adjustbox}{scale=0.18}
     \includegraphics{eqs.png}
 \end{adjustbox}
+
+
 
 
 \begin{equation*}
@@ -583,6 +790,8 @@
 \end{equation*}
 
 
+
+
 \begin{equation*}
     \begin{aligned}
          & V_f =          & 0.09V       \\
@@ -593,10 +802,16 @@
 \end{equation*}
 
 
+
+
 \subsubsection{Tabela de resultados}
 
 
+
+
 \subparagraph*{}
+
+
 
 
 \begin{center}
@@ -618,21 +833,33 @@
 \end{center}
 
 
+
+
 \subsection{Comparação com valores teóricos}
+
+
 
 
 \subparagraph*{Podemos ver que os valores de magnitude ficaram coerentes com ambas análises teóricas, e os de fases para frequências baixas também, mas tive problemas para entender o sentido do sinal da fase a medida que a frequência subia.}
 
 
+
+
 \subsection{Gráficos}
+
+
 
 
 \subsubsection{Escala log-log da magnitude de H(jw) e f}
 
 
+
+
 \begin{adjustbox}{scale=0.70}
     \includegraphics{eqs.png}
 \end{adjustbox}
+
+
 
 
 \subsubsection{Escala semilog da fase de H(jw) e f}
@@ -641,25 +868,41 @@
 \end{adjustbox}
 
 
+
+
 \section{Conclusões}
+
+
 
 
 \subparagraph*{Conseguimos com sucesso fazer a análise numérica por dois meios, utilizando o LTSpice e WxMaxima, e comparamos os resultados.}
 
 
+
+
 \subparagraph*{Nos resultados práticos, a magnitude da função transferência foi coerente com os resultados esperados, porém a fase em frequências baixas se manteve coerente, porém em frequências altas ela se tornou inconsistente.}
+
+
 
 
 \subparagraph*{Creio que por erros das minhas medidas, eu não fui consistente em usar o mesmo cursor na mesma onda de entrada ou saída.}
 
 
+
+
 \subparagraph*{A frequência de saída começou adiantada em relação a frequência de entrada, e à medida que aumentamos a frequência ela se atrasa até que é ultrapassada pela entrada.}
+
+
 
 
 \subparagraph*{Creio que isso faria com que a fase se inverta.}
 
 
+
+
 \subparagraph*{Mas em suma creio que tivemos sucesso em nos familiarizar com as ferramentas de análise de circuitos elétricos numéricos.}
+
+
 
 
 \end{document}
