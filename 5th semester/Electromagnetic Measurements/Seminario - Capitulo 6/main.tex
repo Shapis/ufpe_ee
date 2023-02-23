@@ -1,0 +1,182 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+\documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}
+\usetheme{SimplePlusAIC}
+
+\usepackage[brazil]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and  \bottomrule in tables
+\usepackage{svg} %allows using svg figures
+\usepackage{tikz}
+\usepackage{makecell}
+\newcommand*{\defeq}{\stackrel{\text{def}}{=}}
+
+%Select the Epilogue font (requires luaLatex or XeLaTex compilers)
+\usepackage{fontspec}
+\setsansfont{Epilogue}[
+    Path=./epilogueFont/,
+    Scale=0.9,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic
+    ]
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[short title]{Resultados de Medições Diretas} % The short title appears at the bottom of every slide, the full title is only on the title page
+\subtitle{Capítulo 6}
+
+\author[Surname]{Gabriel Soares // Henrique da Silva}
+\institute[UFPE]{Centro de Tecnologia e Geociências \newline Curso de Engenharia Eletrônica\newline Universidade Federal de Pernambuco}
+% Your institution as it will appear on the bottom of every slide, maybe shorthand to save space
+
+
+\date{23/02/2023} % Date, can be changed to a custom date
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{frame}[plain]
+    % Print the title page as the first slide
+    \titlepage
+\end{frame}
+
+\begin{frame}{Sumário}
+    % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+    \tableofcontents
+\end{frame}
+
+%------------------------------------------------
+\section{Medições diretas e indiretas}
+%------------------------------------------------
+
+\begin{frame}{Medições diretas e indiretas}
+    \begin{itemize}
+   	 \item Medição direta
+   	 \item Medição indireta
+
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Processo de medição}
+%------------------------------------------------
+
+\begin{frame}{Processo de medição}
+    \begin{itemize}
+   	 \item Condições ambientais
+   	 \item Definição do mensurando
+   	 \item Operador
+   	 \item Procedimento de medição
+   	 \item Sistema de medições
+   	 \item Fontes de incerteza
+    \end{itemize}
+\end{frame}
+
+
+%------------------------------------------------
+\section{Variabilidade do mensurando}
+%------------------------------------------------
+
+\begin{frame}{Variabilidade do mensurando}
+    \begin{itemize}
+   	 \item Mensurando invariável
+   	 \item Mensurando variável
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Incerteza de mensurando invariável}
+%------------------------------------------------
+
+\begin{frame}{Incerteza de mensurando invariável}
+    \begin{itemize}
+   	 \item Particularidades do processo de medição
+   	 \item Dificuldade de quantificar separadamente fontes de incerteza
+   	 \item Fonte de incerteza dominante
+   	 \item Corrigindo erros sistemáticos
+    \end{itemize}
+\end{frame}
+
+%-------------------------
+\section{Grafia correta dos resultados da medição}
+%------------------------------------------------
+
+\begin{frame}{Grafia correta dos resultados da medição}
+    \begin{itemize}
+   	 \item Algarismos significativos
+   	 \item Regras de arredondamento
+   	 \item Arredondamentos nos cálculos
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Incerteza de mensurando variável}
+%------------------------------------------------
+
+\begin{frame}{Incerteza de mensurando variável}
+    \begin{itemize}
+   	 \item Altura de um muro variável
+   	 \item Corrigindo erros sistemáticos
+
+\\
+	\begin{equation}
+   	RM = \left(I + C)\right \pm \left(t * u\right)
+	\end{equation}
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Fontes de incerteza múltiplas}
+%------------------------------------------------
+
+\begin{frame}{Fontes de incerteza múltiplas}
+    \begin{itemize}
+   	 \item Identificação das fontes  de incerteza
+    	\item Interdependência e correção combinada
+    	\item Procedimentos não estatísticos - "Tipo B"
+    	\item Graus de liberdade efetivos
+
+    	\begin{equation}
+    	\begin{aligned}
+    	&u^2_c = u^2_1 + ... + u^2_n \\
+      	&\frac{u^4_c }{v_{ef}} = \frac{u^4_1 }{v_{1}} + ... + \frac{u^4_n }{v_{n}}
+    	\end{aligned}   	 
+	\end{equation}
+	\item Incerteza expandida
+
+	\begin{equation}
+    	U = t * u_c
+	\end{equation}
+   	 
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\section{Procedimento passo a passo}
+%------------------------------------------------
+
+\begin{frame}{Procedimento passo a passo}
+    \begin{itemize}
+   	 \item Análise do processo de medição
+    	\item Identificação das fontes de incerteza
+    	\item Quantificação dos efeitos sistemáticos
+    	\item Quantificação dos efeitos aleatórios
+    	\item Cálculo da correção combinada
+    	\item Cálculo da incerteza combinada e número de graus de liberdade efetivos
+    	\item Cálculo da incerteza expandida
+    	\item Expressão do resultado da medição
+   	 
+    \end{itemize}
+\end{frame}
+
+\end{document}
+
