@@ -1,0 +1,210 @@
+
+\documentclass[12pt,twoside, a4paper, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\pgfplotsset{compat=newest}
+\graphicspath{ {./images/} }
+%  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
+\newcommand{\drawvector} [9] [color=cyan] {
+  \draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+ \ifthenelse{\equal{#7}{true}}{
+  \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+  \draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+  }
+  {}
+}
+\newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
+\title{Quarto Relatório de Medidas Eletromagnéticas}
+\author{Gabriel Soares \\ Henrique da Silva}
+\date{\today}
+\pgfplotsset{width = 10cm, compat = 1.9}
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+\newpage
+%pagenumbering{roman}
+\tableofcontents
+\newpage
+
+
+
+
+
+
+\section{Introdução}
+
+
+
+
+\subparagraph*{Neste relatório, vamos tentar obter uma indutância de um indutor a partir de medições de capacitância e frequência conhecidas.}
+
+
+\subparagraph*{Todos arquivos utilizados para criar este relatório, é o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/5th semester/Electromagnetic Measurements/Relatorios}}
+
+
+
+
+
+
+
+
+\section{Análise preliminar}
+
+
+\subparagraph*{Para isso construímos um circuito $RLC$ e mediremos as diferenças de fase entre as entradas e as saídas.}
+
+
+\subparagraph*{Utilizaremos da seguinte relação para medir a indutância:}
+
+
+\begin{equation}
+    f = \frac{1}{2 \pi \sqrt[]{LC}}
+\end{equation}
+
+
+\subparagraph*{Buscaremos valores de $C$ e $R$ que nos deem uma diferença de fase entre $1ms$ e $1\mu s$ entre o sinal de entrada e o de saída.}
+
+
+\subparagraph*{Com isto utilizaremos da relação que o período é o inverso da frequência e obteremos a frequência a ser utilizada.}
+
+
+\begin{equation}
+    f = \frac{1}{T}
+\end{equation}
+
+
+\section{Resultados esperados}
+
+
+\subparagraph*{Como nós vamos utilizar capacitores e resistores de magnitude arbitrária, há algumas coisas que vamos esperar que sejam verdade.}
+
+
+\subparagraph*{A frequência não será alterada se dividirmos o valor de $C$ e de $L$ por uma mesma constante.}
+
+
+\subparagraph*{O ganho não será alterado se multiplicarmos o valor de $C$ e de $R$ por uma mesma constante.}
+\subparagraph*{}
+\begin{equation}
+    \begin{aligned}
+        R' & = k_m R             \\
+        L' & = \frac{k_m}{k_f} L \\
+        C' & = \frac{C}{k_m k_f}
+    \end{aligned}
+\end{equation}
+
+
+\subparagraph*{Ou seja, o que deveríamos ter feito, é fixado um $R$ e alterado o $C$ até que o período desejado fosse obtido.}
+
+
+\subparagraph*{Porém. Não sabíamos desta relação no dia da aula. Só aprendemos na aula de Circuitos II seguinte. Então, o que de fato fizemos, foi alterar o $R$ e $C$ arbitrariamente até obter uma frequência que nos desse resultados legíveis no osciloscópio.}
+
+
+\section{Medições no laboratório}
+
+
+\subparagraph*{Vamos utilizar o osciloscópio para gerar uma onda quadrada pulsada que passará por um circuito $RLC$. Mediremos a tensão no indutor para fazermos a análise.}
+
+
+\subparagraph*{Faremos isso cinco vezes para cada indutor para obter a média e desvio padrão das medidas.}
+
+
+\subparagraph*{Com estes em mãos, determinaremos a indutância do nosso indutor.}
+
+
+\subsection{Componentes utilizados}
+
+
+\begin{equation}
+    \begin{aligned}
+        C & = 4.88nF          \\
+        R & = 138.8 \varOmega \\
+    \end{aligned}
+\end{equation}
+
+
+\subsection{Medições dos circuitos}
+
+\subsubsection{Circuito 1}
+
+
+\begin{center}
+    \begin{tabular}{ |c|c|c|}
+        \hline
+                      & $f (Hertz)$ & $ L (Henry) $         \\
+        Medida $1$    & $490000$    & $21.6186 *  10^{-6} $ \\
+        Medida $2$    & $490000$    & $21.6186 *  10^{-6} $ \\
+        Medida $3$    & $490000$    & $21.6186 *  10^{-6} $ \\
+        Medida $4$    & $480000$    & $22.5288 *  10^{-6} $ \\
+        Medida $5$    & $490000$    & $21.6186 *  10^{-6} $ \\
+        Media         & $488000$    & $21.8006 *  10^{-6} $ \\
+        Desvio Padrão & $4472.136$  & $4.07 * 10^{-7} $     \\
+        \hline
+    \end{tabular}
+\end{center}
+
+
+\subsubsection{Circuito 2}
+
+
+\begin{center}
+    \begin{tabular}{ |c|c|c|}
+        \hline
+                      & $f (Hertz)$ & $ L (Henry) $ \\
+        Medida $1$    & $$          & $$            \\
+        Medida $2$    & $$          & $$            \\
+        Medida $3$    & $$          & $$            \\
+        Medida $4$    & $$          & $$            \\
+        Medida $5$    & $$          & $$            \\
+        Media         & $$          & $$            \\
+        Desvio Padrão & $$          & $$            \\
+        \hline
+    \end{tabular}
+\end{center}
+
+
+
+
+\subparagraph*{Esquecemos de fazer as medições do segundo circuito. Mas a ideia e procedimento são os mesmos.}
+
+
+\section{Conclusões}
+
+
+\subparagraph*{Conseguimos determinar a indutância }
+
+
+
+
+
+
+
+
+\end{document}
