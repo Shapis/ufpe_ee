@@ -64,7 +64,7 @@
 
 
 
-\subparagraph*{Neste relatório, vamos tentar obter uma indutância de um indutor a partir de medições de capacitância e frequência conhecidas.}
+\subparagraph*{Neste relatório, uma indutância será obtida em um filtro RLC passa-faixa a partir de medições de capacitância e frequência conhecidas.}
 
 
 \subparagraph*{Todos arquivos utilizados para criar este relatório, é o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/5th semester/Electromagnetic Measurements/Relatorios}}
@@ -79,10 +79,10 @@
 \section{Análise preliminar}
 
 
-\subparagraph*{Para isso construímos um circuito $RLC$ e mediremos as diferenças de fase entre as entradas e as saídas.}
+\subparagraph*{Constrói-se o circuito $RLC$ e observa-se os sinais das entradas e das saídas no osciloscópio. Em certa faixa de frequências, o sinal da saída é alto. Fora dela, esse mesmo sinal é baixo, considerando o sinal da entrada sempre constante.}
 
 
-\subparagraph*{Utilizaremos da seguinte relação para medir a indutância:}
+\subparagraph*{Utiliza-se a seguinte relação para medir a indutância:}
 
 
 \begin{equation}
@@ -90,10 +90,10 @@
 \end{equation}
 
 
-\subparagraph*{Buscaremos valores de $C$ e $R$ que nos deem uma diferença de fase entre $1ms$ e $1\mu s$ entre o sinal de entrada e o de saída.}
+\subparagraph*{Buscam-se valores de $C$ e $R$ que fornecem um alto sinal de saída para um período entre $1ms$ e $1\mu s$, enquanto para os demais períodos o sinal é baixo.}
 
 
-\subparagraph*{Com isto utilizaremos da relação que o período é o inverso da frequência e obteremos a frequência a ser utilizada.}
+\subparagraph*{Com isso, ao utilizar a relação que diz que o período é o inverso da frequência, obtém-se a frequência central.}
 
 
 \begin{equation}
@@ -104,13 +104,13 @@
 \section{Resultados esperados}
 
 
-\subparagraph*{Como nós vamos utilizar capacitores e resistores de magnitude arbitrária, há algumas coisas que vamos esperar que sejam verdade.}
+\subparagraph*{Como são utilizados capacitores e resistores de magnitude arbitrária, há algumas coisas que esperam-se que sejam verdade.}
 
 
-\subparagraph*{A frequência não será alterada se dividirmos o valor de $C$ e de $L$ por uma mesma constante.}
+\subparagraph*{A frequência não é alterada ao dividir os valores de $C$ e de $L$ por uma mesma constante.}
 
 
-\subparagraph*{O ganho não será alterado se multiplicarmos o valor de $C$ e de $R$ por uma mesma constante.}
+\subparagraph*{O ganho não é alterado ao multiplicar o valores de $C$ e de $R$ por uma mesma constante.}
 \subparagraph*{}
 \begin{equation}
     \begin{aligned}
@@ -121,22 +121,22 @@
 \end{equation}
 
 
-\subparagraph*{Ou seja, o que deveríamos ter feito, é fixado um $R$ e alterado o $C$ até que o período desejado fosse obtido.}
+\subparagraph*{Porém, o que deveria ter sido feito é fixar uma resistência $R$ e alterar a capacitância $C$ até que o período desejado fosse obtido.}
 
 
-\subparagraph*{Porém. Não sabíamos desta relação no dia da aula. Só aprendemos na aula de Circuitos II seguinte. Então, o que de fato fizemos, foi alterar o $R$ e $C$ arbitrariamente até obter uma frequência que nos desse resultados legíveis no osciloscópio.}
+\subparagraph*{Os autores deste relatório não sabiam dessa relação no dia da aula. Só a aprenderam na aula de Circuitos II no dia seguinte. O que de fato foi feito foi alterar o $R$ e $C$ arbitrariamente até obter uma frequência que desse resultados legíveis no osciloscópio.}
 
 
 \section{Medições no laboratório}
 
 
-\subparagraph*{Vamos utilizar o osciloscópio para gerar uma onda quadrada pulsada que passará por um circuito $RLC$. Mediremos a tensão no indutor para fazermos a análise.}
+\subparagraph*{Utilizou-se o osciloscópio para gerar uma onda quadrada pulsada que passou pelo circuito $RLC$. Mediu-se a tensão no indutor para fazer a análise.}
 
 
-\subparagraph*{Faremos isso cinco vezes para cada indutor para obter a média e desvio padrão das medidas.}
+\subparagraph*{Fez-se isso cinco vezes para o indutor para obter a média e desvio padrão das medidas.}
 
 
-\subparagraph*{Com estes em mãos, determinaremos a indutância do nosso indutor.}
+\subparagraph*{Com estes em mãos, determinou-se a indutância do componente. A mesma lógica será futuramente aplicada para um outro circuito de mesma configuração, mas com outro valor de indutância. Chama-se esse circuito de 2, enquanto o já trabalhado de circuito 1. As medições do circuito 2 não foram feitas devido a esquecimento. Pensou-se que deveria-se escolher um dos indutores fornecidos em sala de aula, não trabalhar com os dois.}
 
 
 \subsection{Componentes utilizados}
@@ -164,7 +164,7 @@
         Medida $3$    & $490000$    & $21.6186 *  10^{-6} $ \\
         Medida $4$    & $480000$    & $22.5288 *  10^{-6} $ \\
         Medida $5$    & $490000$    & $21.6186 *  10^{-6} $ \\
-        Media         & $488000$    & $21.8006 *  10^{-6} $ \\
+        Média         & $488000$    & $21.8006 *  10^{-6} $ \\
         Desvio Padrão & $4472.136$  & $4.07 * 10^{-7} $     \\
         \hline
     \end{tabular}
@@ -183,28 +183,17 @@
         Medida $3$    & $$          & $$            \\
         Medida $4$    & $$          & $$            \\
         Medida $5$    & $$          & $$            \\
-        Media         & $$          & $$            \\
+        Média         & $$          & $$            \\
         Desvio Padrão & $$          & $$            \\
         \hline
     \end{tabular}
 \end{center}
 
-
-
-
-\subparagraph*{Esquecemos de fazer as medições do segundo circuito. Mas a ideia e procedimento são os mesmos.}
-
-
 \section{Conclusões}
 
 
-\subparagraph*{Conseguimos determinar a indutância }
+\subparagraph*{A indutância foi determinada com satisfatória precisão. O erro relativo percentual entre o valor encontrado e o valor nominal é de aproximadamente 0,91\%.}
 
-
-
-
-
-
-
+\subparagraph*{A tabela referente ao circuito 2 será no futuro preenchida.}
 
 \end{document}
