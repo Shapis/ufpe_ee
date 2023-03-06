@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.25)  6 MAR 2023 16:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.25)  6 MAR 2023 17:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -745,11 +745,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `"Relatorio 4.toc"'.
 
-
-Underfull \hbox (badness 2269) in paragraph at lines 70--70
-\OT1/cmr/bx/n/12 in-dut^ancia de um in-du-tor a par-tir de
- []
-
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 79.
 
@@ -779,7 +774,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--79
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.210 \end{document}
+l.199 \end{document}
                      [2] (./Relatorio 4.aux)
 Package rerunfilecheck Info: File `"Relatorio 4".out' has not changed.
 (rerunfilecheck)             Checksum: D1433D4C3B9484EB672FB1DDAA1FA416;1242.
@@ -787,13 +782,13 @@ Package rerunfilecheck Info: File `"Relatorio 4".out' has not changed.
 Here is how much of TeX's memory you used:
  50952 strings out of 478238
  1304995 string characters out of 5850456
- 1989581 words of memory out of 5000000
+ 1991581 words of memory out of 5000000
  68524 multiletter control sequences out of 15000+600000
  478191 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,825b,770s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Relatorio 4.pdf" (2 pages, 105261 bytes).
+Output written on "Relatorio 4.pdf" (2 pages, 106456 bytes).
 PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
  118 compressed objects within 2 object streams
