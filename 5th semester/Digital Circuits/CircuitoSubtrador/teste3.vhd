@@ -21,7 +21,7 @@ end teste3;
 
 
 architecture behaviorOfTest of teste3 is
-signal temp: std_logic_vector(3 downto 0);
+signal temp: std_logic_vector(2 downto 0);
 
 begin
 
@@ -31,7 +31,7 @@ begin
 --que deseja utilizar..
 
 SOMADOR1: entity work.programa_secundario3
-port map (A => ehkey(0), B => ehkey(1), C => ehkey(2), D => ehkey(3), I => temp(0), J => temp(1), K = temp(2));
+port map (A => ehkey(0), B => ehkey(1), C => ehkey(2), D => ehkey(3), I => temp(0), J => temp(1), K => temp(2));
 
 
 

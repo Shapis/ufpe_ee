@@ -11,6 +11,6 @@ architecture comportamento of programa_secundario2 is
 begin
  
 S<= (A xor B) xor Cin;
-Cout<= (A nand Cin) nand (B nand Cin);
+Cout<= not ((A nand Cin) and (B nand Cin) and (A nand B));
 
 end comportamento;
