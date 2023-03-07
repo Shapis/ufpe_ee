@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.18)  18 FEB 2023 20:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.25)  6 MAR 2023 21:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -741,121 +741,131 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./relatorio3.toc)
+) (./relatorio3.toc
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+ [][] [][]\OT1/cmr/m/n/12 Estimativas ex-pe-ri-men-tais 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+ [][] [][]\OT1/cmr/m/n/12 Estimativas ex-pe-ri-men-tais 
+ []
+
+)
 \tf@toc=\write5
 \openout5 = `relatorio3.toc'.
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 84.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 110.
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--84
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
 []$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
  []
 
-<./images//AnaliseNodal.png, id=148, 648.4225pt x 391.4625pt>
+<./images//AnaliseNodal.png, id=128, 648.4225pt x 391.4625pt>
 File: ./images//AnaliseNodal.png Graphic file (type png)
 <use ./images//AnaliseNodal.png>
-Package pdftex.def Info: ./images//AnaliseNodal.png  used on input line 101.
+Package pdftex.def Info: ./images//AnaliseNodal.png  used on input line 139.
 (pdftex.def)             Requested size: 648.42091pt x 391.46153pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./images//AnaliseNodal.png>]
-<./images//eqs.png, id=170, 513.41812pt x 209.28188pt>
+<./images//eqs.png, id=150, 513.41812pt x 209.28188pt>
 File: ./images//eqs.png Graphic file (type png)
 <use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 119.
+Package pdftex.def Info: ./images//eqs.png  used on input line 167.
 (pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
-<./images//linsolve.png, id=171, 356.83313pt x 36.135pt>
+<./images//linsolve.png, id=151, 356.83313pt x 36.135pt>
 File: ./images//linsolve.png Graphic file (type png)
 <use ./images//linsolve.png>
-Package pdftex.def Info: ./images//linsolve.png  used on input line 136.
+Package pdftex.def Info: ./images//linsolve.png  used on input line 196.
 (pdftex.def)             Requested size: 356.83224pt x 36.13489pt.
-<./images//va.png, id=172, 551.81157pt x 79.79813pt>
+<./images//va.png, id=152, 551.81157pt x 79.79813pt>
 File: ./images//va.png Graphic file (type png)
 <use ./images//va.png>
-Package pdftex.def Info: ./images//va.png  used on input line 144.
+Package pdftex.def Info: ./images//va.png  used on input line 208.
 (pdftex.def)             Requested size: 551.81023pt x 79.79791pt.
-<./images//v0.png, id=173, 564.60938pt x 88.07906pt>
+<./images//v0.png, id=153, 564.60938pt x 88.07906pt>
 File: ./images//v0.png Graphic file (type png)
 <use ./images//v0.png>
-Package pdftex.def Info: ./images//v0.png  used on input line 152.
+Package pdftex.def Info: ./images//v0.png  used on input line 220.
 (pdftex.def)             Requested size: 564.60799pt x 88.07883pt.
-<./images//H.png, id=174, 527.72156pt x 130.98938pt>
+<./images//H.png, id=154, 527.72156pt x 130.98938pt>
 File: ./images//H.png Graphic file (type png)
 <use ./images//H.png>
-Package pdftex.def Info: ./images//H.png  used on input line 169.
+Package pdftex.def Info: ./images//H.png  used on input line 249.
 (pdftex.def)             Requested size: 527.72028pt x 130.98904pt.
-<./images//H1.png, id=175, 675.27281pt x 158.84344pt>
+<./images//H1.png, id=155, 675.27281pt x 158.84344pt>
 File: ./images//H1.png Graphic file (type png)
 <use ./images//H1.png>
-Package pdftex.def Info: ./images//H1.png  used on input line 205.
+Package pdftex.def Info: ./images//H1.png  used on input line 305.
 (pdftex.def)             Requested size: 675.27116pt x 158.84305pt.
-<./images//H1denom.png, id=176, 426.09187pt x 116.68594pt>
+<./images//H1denom.png, id=156, 426.09187pt x 116.68594pt>
 File: ./images//H1denom.png Graphic file (type png)
 <use ./images//H1denom.png>
-Package pdftex.def Info: ./images//H1denom.png  used on input line 218.
+Package pdftex.def Info: ./images//H1denom.png  used on input line 326.
 (pdftex.def)             Requested size: 426.09082pt x 116.68564pt.
-<images/H1bodegain.png, id=177, 481.8pt x 361.35pt>
+<images/H1bodegain.png, id=157, 481.8pt x 361.35pt>
 File: images/H1bodegain.png Graphic file (type png)
 <use images/H1bodegain.png>
-Package pdftex.def Info: images/H1bodegain.png  used on input line 236.
+Package pdftex.def Info: images/H1bodegain.png  used on input line 356.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
-<images/H1bodephase.png, id=178, 481.8pt x 361.35pt>
+<images/H1bodephase.png, id=158, 481.8pt x 361.35pt>
 File: images/H1bodephase.png Graphic file (type png)
 <use images/H1bodephase.png>
-Package pdftex.def Info: images/H1bodephase.png  used on input line 243.
+Package pdftex.def Info: images/H1bodephase.png  used on input line 365.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.253 \subparagraph
+l.379 \subparagraph
                    *{} [2 <./images//eqs.png (PNG copy)> <./images//linsolve.png (PNG copy)> <./images//va.png (PNG copy)> <./images//v0.png (PNG copy)> <./images//H.png (PNG copy)> <./images//H1.png (PNG copy)> <./images//H1denom.png (PNG copy)> <./images/H1bodegain.png> <./images/H1bodephase.png>]
-<./images//iltH1.png, id=203, 678.28406pt x 232.61906pt>
+<./images//iltH1.png, id=184, 678.28406pt x 232.61906pt>
 File: ./images//iltH1.png Graphic file (type png)
 <use ./images//iltH1.png>
-Package pdftex.def Info: ./images//iltH1.png  used on input line 259.
+Package pdftex.def Info: ./images//iltH1.png  used on input line 389.
 (pdftex.def)             Requested size: 678.2824pt x 232.61848pt.
 
-Overfull \hbox (3.28378pt too wide) in paragraph at lines 258--261
+Overfull \hbox (3.28378pt too wide) in paragraph at lines 388--391
  [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--269
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
  []\OT1/cmr/bx/n/12 Fazendo esta an^^Salise nu-me-ri-ca-mente
  []
 
-<./images//limH1.png, id=204, 536.75531pt x 72.27pt>
+<./images//limH1.png, id=185, 536.75531pt x 72.27pt>
 File: ./images//limH1.png Graphic file (type png)
 <use ./images//limH1.png>
-Package pdftex.def Info: ./images//limH1.png  used on input line 273.
+Package pdftex.def Info: ./images//limH1.png  used on input line 411.
 (pdftex.def)             Requested size: 536.75398pt x 72.2698pt.
-<images/graficoH1t.png, id=205, 481.8pt x 361.35pt>
+<images/graficoH1t.png, id=186, 481.8pt x 361.35pt>
 File: images/graficoH1t.png Graphic file (type png)
 <use images/graficoH1t.png>
-Package pdftex.def Info: images/graficoH1t.png  used on input line 283.
+Package pdftex.def Info: images/graficoH1t.png  used on input line 425.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
-<./images//H2.png, id=206, 676.77844pt x 164.11313pt>
+<./images//H2.png, id=187, 676.77844pt x 164.11313pt>
 File: ./images//H2.png Graphic file (type png)
 <use ./images//H2.png>
-Package pdftex.def Info: ./images//H2.png  used on input line 323.
+Package pdftex.def Info: ./images//H2.png  used on input line 487.
 (pdftex.def)             Requested size: 676.7768pt x 164.11272pt.
-<./images//H2denom.png, id=207, 383.93437pt x 116.68594pt>
+<./images//H2denom.png, id=188, 383.93437pt x 116.68594pt>
 File: ./images//H2denom.png Graphic file (type png)
 <use ./images//H2denom.png>
-Package pdftex.def Info: ./images//H2denom.png  used on input line 336.
+Package pdftex.def Info: ./images//H2denom.png  used on input line 508.
 (pdftex.def)             Requested size: 383.93343pt x 116.68564pt.
-<images/H2bodegain.png, id=208, 481.8pt x 361.35pt>
+<images/H2bodegain.png, id=189, 481.8pt x 361.35pt>
 File: images/H2bodegain.png Graphic file (type png)
 <use images/H2bodegain.png>
-Package pdftex.def Info: images/H2bodegain.png  used on input line 354.
+Package pdftex.def Info: images/H2bodegain.png  used on input line 538.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
-<images/H2bodephase.png, id=209, 481.8pt x 361.35pt>
+<images/H2bodephase.png, id=190, 481.8pt x 361.35pt>
 File: images/H2bodephase.png Graphic file (type png)
 <use images/H2bodephase.png>
-Package pdftex.def Info: images/H2bodephase.png  used on input line 361.
+Package pdftex.def Info: images/H2bodephase.png  used on input line 547.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -864,232 +874,135 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.367 
+l.555 
        [3 <./images//iltH1.png (PNG copy)> <./images//limH1.png (PNG copy)> <./images/graficoH1t.png> <./images//H2.png (PNG copy)> <./images//H2denom.png (PNG copy)> <./images/H2bodegain.png>]
-<./images//iltH2.png, id=232, 552.56438pt x 198.7425pt>
+<./images//iltH2.png, id=212, 552.56438pt x 198.7425pt>
 File: ./images//iltH2.png Graphic file (type png)
 <use ./images//iltH2.png>
-Package pdftex.def Info: ./images//iltH2.png  used on input line 378.
+Package pdftex.def Info: ./images//iltH2.png  used on input line 574.
 (pdftex.def)             Requested size: 552.56302pt x 198.742pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--390
+Underfull \hbox (badness 10000) in paragraph at lines 594--594
  []\OT1/cmr/bx/n/12 Fazendo esta an^^Salise nu-me-ri-ca-mente
  []
 
-<./images//limH2.png, id=233, 170.88844pt x 78.2925pt>
+<./images//limH2.png, id=213, 170.88844pt x 78.2925pt>
 File: ./images//limH2.png Graphic file (type png)
 <use ./images//limH2.png>
-Package pdftex.def Info: ./images//limH2.png  used on input line 394.
+Package pdftex.def Info: ./images//limH2.png  used on input line 600.
 (pdftex.def)             Requested size: 170.88802pt x 78.2923pt.
-<images/graficoH2t.png, id=234, 481.8pt x 361.35pt>
+<images/graficoH2t.png, id=214, 481.8pt x 361.35pt>
 File: images/graficoH2t.png Graphic file (type png)
 <use images/graficoH2t.png>
-Package pdftex.def Info: images/graficoH2t.png  used on input line 406.
+Package pdftex.def Info: images/graficoH2t.png  used on input line 618.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.424 \newpage
+l.648 \newpage
                [4 <./images/H2bodephase.png> <./images//iltH2.png (PNG copy)> <./images//limH2.png (PNG copy)> <./images/graficoH2t.png>]
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 442.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
+<./images//LTSPicecircuit.png, id=232, 1918.91907pt x 996.72375pt>
+File: ./images//LTSPicecircuit.png Graphic file (type png)
+<use ./images//LTSPicecircuit.png>
+Package pdftex.def Info: ./images//LTSPicecircuit.png  used on input line 678.
+(pdftex.def)             Requested size: 1918.9144pt x 996.72133pt.
+<images/LTSpiceH1.png, id=233, 1913.64937pt x 996.72375pt>
+File: images/LTSpiceH1.png Graphic file (type png)
+<use images/LTSpiceH1.png>
+Package pdftex.def Info: images/LTSpiceH1.png  used on input line 687.
+(pdftex.def)             Requested size: 257.61894pt x 134.17168pt.
+<images/LTSPiceH2.png, id=234, 1912.14375pt x 996.72375pt>
+File: images/LTSPiceH2.png Graphic file (type png)
+<use images/LTSPiceH2.png>
+Package pdftex.def Info: images/LTSPiceH2.png  used on input line 697.
+(pdftex.def)             Requested size: 257.61894pt x 134.27814pt.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 448.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 448.
-
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 454.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 472.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 472.
-
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 478.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 500.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 500.
-
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 506.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 524.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 524.
-
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 530.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 548.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 548.
-
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 554.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 572.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 572.
-
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 578.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 596.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 596.
-
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 602.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.657 \newpage
-               [5]
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 698.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 720.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 720.
-
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 727.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 745.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 745.
-
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 752.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 770.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 770.
-
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 777.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 838--838
-[]\OT1/cmr/bx/n/14.4 Compara^^Xc~ao com va-lo-res
+Overfull \hbox (4.24974pt too wide) in paragraph at lines 753--770
+ [] 
  []
 
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 859.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
+<images/H1valoresreais.png, id=235, 775.39688pt x 123.46124pt>
+File: images/H1valoresreais.png Graphic file (type png)
+<use images/H1valoresreais.png>
+Package pdftex.def Info: images/H1valoresreais.png  used on input line 778.
+(pdftex.def)             Requested size: 257.61894pt x 41.01926pt.
 
-Overfull \hbox (101.77129pt too wide) in paragraph at lines 858--861
-[] 
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 783.
 
-File: ./images//eqs.png Graphic file (type png)
-<use ./images//eqs.png>
-Package pdftex.def Info: ./images//eqs.png  used on input line 867.
-(pdftex.def)             Requested size: 513.41685pt x 209.28134pt.
 
-Overfull \hbox (101.77129pt too wide) in paragraph at lines 866--869
-[] 
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 783.
+
+
+Underfull \vbox (badness 4518) has occurred while \output is active []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.873 \section
-              {Conclusões} [6]
-Underfull \hbox (badness 1783) in paragraph at lines 888--888
-\OT1/cmr/bx/n/12 re-sul-ta-dos es-pe-ra-dos, por^^Sem a fase em
+l.804 \end{center}
+                   [5 <./images/LTSpicecircuit.png (PNG copy)> <./images/LTSpiceH1.png (PNG copy)> <./images/LTSpiceH2.png (PNG copy)> <./images/H1valoresreais.png (PNG copy)>]
+<images/H1loglog.png, id=246, 763.35187pt x 618.81187pt>
+File: images/H1loglog.png Graphic file (type png)
+<use images/H1loglog.png>
+Package pdftex.def Info: images/H1loglog.png  used on input line 812.
+(pdftex.def)             Requested size: 257.61894pt x 208.83527pt.
+
+Overfull \hbox (4.24974pt too wide) in paragraph at lines 848--865
+ [] 
  []
 
+<images/H2valoresreais.png, id=247, 773.13844pt x 124.96687pt>
+File: images/H2valoresreais.png Graphic file (type png)
+<use images/H2valoresreais.png>
+Package pdftex.def Info: images/H2valoresreais.png  used on input line 873.
+(pdftex.def)             Requested size: 257.61894pt x 41.63962pt.
 
-Underfull \hbox (badness 1681) in paragraph at lines 888--888
-\OT1/cmr/bx/n/12 frequ^encias bai-xas se man-teve co-e-rente,
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 878.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 878.
+
+
+Underfull \vbox (badness 2418) has occurred while \output is active []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.908 \end{document}
-                     [7
+l.901 
+       [6 <./images/H1loglog.png (PNG copy)> <./images/H2valoresreais.png (PNG copy)>]
+<images/H2loglog.png, id=258, 758.08218pt x 622.57594pt>
+File: images/H2loglog.png Graphic file (type png)
+<use images/H2loglog.png>
+Package pdftex.def Info: images/H2loglog.png  used on input line 908.
+(pdftex.def)             Requested size: 257.61894pt x 211.56851pt.
 
-] (./relatorio3.aux)
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.949 \end{document}
+                     [7 <./images/H2loglog.png (PNG copy)>] (./relatorio3.aux)
 Package rerunfilecheck Info: File `relatorio3.out' has not changed.
-(rerunfilecheck)             Checksum: 0F4547F6E30ABFBF190E0FCE5C71F0FF;4533.
+(rerunfilecheck)             Checksum: 7E5542D92E1D6AF1DC5FA218D035EE5F;3742.
  ) 
 Here is how much of TeX's memory you used:
- 51194 strings out of 478238
- 1309536 string characters out of 5850456
- 1999583 words of memory out of 5000000
- 68677 multiletter control sequences out of 15000+600000
+ 51238 strings out of 478238
+ 1310661 string characters out of 5850456
+ 1995583 words of memory out of 5000000
+ 68716 multiletter control sequences out of 15000+600000
  478191 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,8n,118p,796b,770s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,8n,118p,796b,827s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on relatorio3.pdf (7 pages, 603105 bytes).
+Output written on relatorio3.pdf (7 pages, 994367 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
- 99 named destinations out of 1000 (max. 500000)
- 337 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 329 PDF objects out of 1000 (max. 8388607)
+ 267 compressed objects within 3 object streams
+ 97 named destinations out of 1000 (max. 500000)
+ 340 words of extra memory for PDF output out of 10000 (max. 10000000)
 
