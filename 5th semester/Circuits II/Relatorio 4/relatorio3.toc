@@ -1,0 +1,26 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Análise preliminar}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}O Circuito}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}WxMaxima}{}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Análise geral do circuito}{}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Análise do circuito 1}{}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Análise do circuito 2}{}{subsubsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3}LTSpice}{}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Montagem do circuito}{}{subsubsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.4}Circuito 1}{}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Circuito 2}{}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Medições em laboratório}{}{section.3}%
+\contentsline {paragraph}{Vamos inicialmente fazer as medições dos componentes a serem usados.}{}{section*.48}%
+\contentsline {subsection}{\numberline {3.1}Tabela de componentes}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Circuito 1}{}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Tabela de valores}{}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Função transferência}{}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Estimativas experimentais de $ | H(jw) | $}{}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Valores de corte}{}{subsubsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3}Circuito 2}{}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Tabela de valores}{}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Função transferência}{}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Estimativas experimentais de $ | H(jw) | $}{}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Valores de corte}{}{subsubsection.3.3.4}%
+\contentsline {section}{\numberline {4}Conclusões}{}{section.4}%
