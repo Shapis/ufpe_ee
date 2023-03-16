@@ -205,10 +205,10 @@ def Solve_V_x(_I, _A, _N):
 
 
 print("0 - Sair")
-print("Que grandeza voce quer?")
 print("1 - E_f: Energia de Fermi")
 print("2 - V_f: Velocidade de Fermi")
 print("3 - V_d: Velocidade de Deriva")
+print("Que grandeza voce quer?")
 userInput = int(input())
 match userInput:
     case 0:
@@ -221,5 +221,6 @@ match userInput:
         Solve_V_x(0, 0, 0)
     case _:
         EscolhaInvalida()
+
 
 FimDoPrograma()
