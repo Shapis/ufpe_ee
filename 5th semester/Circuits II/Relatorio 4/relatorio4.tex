@@ -65,7 +65,7 @@
 
 
 
-\subparagraph*{Neste relatório, vamos discutir calcular gráficos de Bode de dois circuitos de segunda ordem e medir suas características.}
+\subparagraph*{Neste relatório, vamos discutir filtros passa-baixa, e como utilizar um amp op como buffer de corrente para reduzir o efeito do filtro na carga.}
 
 
 
@@ -116,7 +116,7 @@
 
 
 
-\paragraph*{Utilizarei o WxMaxima e LTSpice para fazer a análise teórica do circuito antes de montá-lo fisicamente.}
+\paragraph*{Utilizarei o Maxima para fazer a análise teórica do circuito antes de montá-lo fisicamente.}
 
 
 
@@ -135,128 +135,11 @@
 
 
 \subsection{O Circuito}
-\begin{adjustbox}{scale=0.30}
+\begin{adjustbox}{scale=0.6}
     \includegraphics{AnaliseNodal.png}
 \end{adjustbox}
 \newpage
-\subsection{WxMaxima}
-
-
-
-
-\subsubsection{Análise geral do circuito}
-
-
-
-
-
-
-
-
-\subparagraph*{Primeiro fiz manualmente a análise nodal do circuito que vamos construir, e passei ele para o domínio da frequência.}
-\subparagraph*{}
-
-
-
-
-
-
-
-
-\begin{adjustbox}{scale=0.4}
-    \includegraphics{eqs.png}
-\end{adjustbox}
-
-
-
-
-
-
-
-
-\subparagraph*{Após isso resolvi para $Va$ e $V_0$}
-
-
-
-
-
-
-
-
-\subparagraph*{}
-
-
-
-
-
-
-
-
-\begin{adjustbox}{scale=0.4}
-    \includegraphics{linsolve.png}
-\end{adjustbox}
-
-
-
-
-\subparagraph*{}
-
-
-
-
-\begin{adjustbox}{scale=0.4}
-    \includegraphics{va.png}
-\end{adjustbox}
-
-
-
-
-\subparagraph*{}
-
-
-
-
-\begin{adjustbox}{scale=0.4}
-    \includegraphics{v0.png}
-\end{adjustbox}
-
-
-
-
-
-
-
-
-\subparagraph*{Daqui criamos nossa função transferência $H$.}
-
-
-
-
-
-
-
-
-\subparagraph*{}
-
-
-
-
-
-
-
-
-\begin{adjustbox}{scale=0.4}
-    \includegraphics{H.png}
-\end{adjustbox}
-
-
-
-
-
-
-
-
-\subparagraph*{Agora com a função $H$ em mãos podemos substituir os valores dos resistores e do capacitor pelos que utilizaremos nos circuitos a serem analisados.}
+\subsection{Maxima}
 
 
 
@@ -265,441 +148,127 @@
 
 
 
+\subparagraph*{Primeiro fiz manualmente a análise circuito que vamos construir, utilizei um divisor de tensao, passei o circuito para o domínio da frequência e fiz a funcao transferencia.}
+\subparagraph*{}
 
-\subparagraph*{Fazemos a substituição em $H$ dos valores que utilizaremos no circuito 1.}
+\begin{adjustbox}{scale=0.4}
+    \includegraphics{eqs1.png}
+\end{adjustbox}
 
 
+\subparagraph*{Para obter o ganho vi o que acontecia com a funcao transferencia quando a frequencia tendia a zero.}
+\subparagraph*{}
+\begin{adjustbox}{scale=0.4}
+    \includegraphics{ganho1.png}
+\end{adjustbox}
+\subparagraph*{Podemos ver que quando o $s$ tender a $0$, o ganho tenderá a $1$.}
 
+\subparagraph*{Ja da funcao transferencia observamos que a frequencia de corte eh $\frac{1}{RC}$}
 
-
-
-
+\subparagraph*{Logo para projetar um filtro que tenha frequencia de corte $50Hz$ fazemos:}
 
 \begin{equation*}
     \begin{aligned}
-         & C_1  = 100nF          \\
-         & C_2  = 10nF           \\
-         & R_1  = 47k \varOmega  \\
-         & R_2  = 470k \varOmega \\
-         & R_3  = 470k \varOmega
+         &  & 2  \pi f = \frac{1}{RC} \\
+         &  & f = 2 \frac{1}{RC \pi}
     \end{aligned}
 \end{equation*}
 
-
-
-
-
-
-
-
+\subparagraph*{Resolvendo para $f = 50Hz$ e $C = 100nF$ temos:}
 \subparagraph*{}
-
-
-
-
-
-
-
-
-\begin{adjustbox}{scale=0.34}
-    \includegraphics{H1.png}
+\begin{adjustbox}{scale=0.4}
+    \includegraphics{freqcorte1.png}
 \end{adjustbox}
 
+\subparagraph*{O valor da resistencia esta proximo ao resistor comercial de $33k \varOmega$.}
+
+\subparagraph*{Utilizando o resistor de $33k \varOmega$, obtemos uma nova frequencia de corte de $f = 48Hz$.}
 
 
-
-
-
-
-
-\subparagraph*{Analisamos os pólos e zeros da função transferência e vemos que não há zeros. E os polos estão abaixo:}
-
-
-
-
-\subparagraph*{}
-
-
-
-
-\begin{adjustbox}{scale=0.5}
-    \includegraphics{H1denom.png}
-\end{adjustbox}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subparagraph*{Agora faremos gráficos de Bode para analisar o comportamento da magnitude da função transferência e o ângulo de fase entre as saídas e entradas do circuito.}
-
-
-
-
-\subparagraph*{}
-
-
-
+\subparagraph*{E por fim, geramos o diagrama de Bode do ganho do circuito}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\columnwidth]{images/H1bodegain.png}
+    \includegraphics[width=1\columnwidth]{images/bodegain1.png}
     \caption{Magnitude de H(s) do circuito 1.}
 \end{figure}
-
-
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\columnwidth]{images/H1bodephase.png}
-    \caption{Fase de H(s) do circuito 1.}
-\end{figure}
-
-
-
-
-\subparagraph*{}
-
-
-
-
-\subparagraph*{Daqui retornei para o domínio do tempo para ter a função que descreve completamente o comportamento  da resposta do circuito.}
-\pagebreak
-\subparagraph*{}
-
-
-
-
-
-
-
-
-\begin{adjustbox}{scale=0.35}
-    \includegraphics{iltH1.png}
-\end{adjustbox}
-
-
-
-
-\subparagraph*{Podemos ver que já que todos termos exceto o $-8$ dependem de uma exponencial negativa em $t$, então se nosso tempo tende a infinito, a resposta do circuito tende a $-8$.}
-
-
-
-
-\subparagraph*{Fazendo esta análise numericamente abaixo verificamos este resultado.}
-
-
-
-
-\subparagraph*{}
-
-
-
-
-\begin{adjustbox}{scale=0.35}
-    \includegraphics{limH1.png}
-\end{adjustbox}
-
-
-
-
-\subparagraph*{Com a função que descreve o comportamento do circuito no tempo em mãos, podemos montar seu gráfico e analisar seu comportamento a qualquer tempo.}
-\subparagraph*{}
-
-
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\columnwidth]{images/graficoH1t.png}
-    \caption{Gráfico de $V_0$(t) do circuito 1.}
-\end{figure}
-
-
-
-
-
-
-
-
-\subparagraph*{Observamos que a função atinge valor final de $-8V$.}
-
-
-
-
-\subparagraph*{E chega a $10\%$ deste valor em $9.2ms$ e $90\%$ em $122.2ms$.}
-
-
 
 
 \subsubsection{Análise do circuito 2}
 
 
 
+\subparagraph*{Primeiro fiz manualmente a análise nodal do circuito que vamos construir, passei o circuito para o domínio da frequência e fiz a funcao transferencia.}
+\subparagraph*{}
 
-\subparagraph*{Fazemos a substituição em $H$ dos valores que utilizaremos no circuito 1.}
+\begin{adjustbox}{scale=0.4}
+    \includegraphics{eqs2.png}
+\end{adjustbox}
 
 
+\subparagraph*{Para obter o ganho vi o que acontecia com a funcao transferencia quando a frequencia tendia a zero.}
+\subparagraph*{}
+\begin{adjustbox}{scale=0.4}
+    \includegraphics{ganho2.png}
+\end{adjustbox}
+\subparagraph*{Podemos ver que quando o $s$ tender a $0$, o ganho tenderá a $\frac{2}{5}$.}
 
-
-
-
-
+\subparagraph*{Com o ganho em maos podemos achar a frequencia $w$, fazendo o seguinte:}
 
 \begin{equation*}
-    \begin{aligned}
-         & C_1  = 100nF          \\
-         & C_2  = 10nF           \\
-         & R_1  = 470k \varOmega \\
-         & R_2  = 470k \varOmega \\
-         & R_3  = 47k \varOmega
-    \end{aligned}
+    Ganho = \frac{ | H(jw) |}{\sqrt[]{2}} = \frac{2}{5}
 \end{equation*}
 
-
-
-
-
-
-
-
-\subparagraph*{}
-
-
-
-
-
-
-
-
-\begin{adjustbox}{scale=0.34}
-    \includegraphics{H2.png}
+\begin{adjustbox}{scale=0.4}
+    \includegraphics{freqcorte2.png}
 \end{adjustbox}
 
+\subparagraph*{Achamos uma nova frequencia de corte de $120Hz$, podemos observar que adicionando a carga, a nossa frequencia de corte foi alterada.}
 
-
-
-
-
-
-
-\subparagraph*{Analisamos os pólos e zeros da função transferência e vemos que não há zeros. E os polos estão abaixo:}
-
-
-
-
-\subparagraph*{}
-
-
-
-
-\begin{adjustbox}{scale=0.5}
-    \includegraphics{H2denom.png}
-\end{adjustbox}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subparagraph*{Agora faremos gráficos de Bode para analisar o comportamento da magnitude da função transferência e o ângulo de fase entre as saídas e entradas do circuito.}
-
-
-
-
-\subparagraph*{}
-
-
-
+\subparagraph*{E por fim, geramos o diagrama de Bode do ganho do circuito}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\columnwidth]{images/H2bodegain.png}
+    \includegraphics[width=1\columnwidth]{images/bodegain2.png}
     \caption{Magnitude de H(s) do circuito 2.}
 \end{figure}
 
+\subsubsection{Análise do circuito 3}
 
+\subparagraph*{Observamos que neste caso, as equacoes que regem o circuito, sao as mesmas do circuito 1. Ja que o terra virtual, isola as duas partes do circuito. Insulando a carga de afetar o seu comportamento. Logo, nao havera $R_L$ na sua funcao transferencia.}
 
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\columnwidth]{images/H2bodephase.png}
-    \caption{Fase de H(s) do circuito 2.}
-\end{figure}
-
-
-
-
-\pagebreak
-
-
-
-
-\subparagraph*{Daqui retornei para o domínio do tempo para ter a função que descreve completamente o comportamento  da resposta do circuito.}
-
-
-
-
+\subparagraph*{Fiz manualmente a análise circuito que vamos construir, utilizei um divisor de tensao, passei o circuito para o domínio da frequência e fiz a funcao transferencia.}
 \subparagraph*{}
-
-
-
-
-
-
-
-
-\begin{adjustbox}{scale=0.35}
-    \includegraphics{iltH2.png}
-\end{adjustbox}
-
-
-
-
-
-
-
-
-\subparagraph*{Podemos ver que já que todos termos exceto o $-5$ dependem de uma exponencial negativa em $t$, então se nosso tempo tende a infinito, a resposta do circuito tende a $-5$.}
-
-
-
-
-\subparagraph*{Fazendo esta análise numericamente abaixo verificamos este resultado.}
-
-
-
-
-\subparagraph*{}
-
-
-
 
 \begin{adjustbox}{scale=0.4}
-    \includegraphics{limH2.png}
+    \includegraphics{eqs1.png}
 \end{adjustbox}
 
 
-
-
-\subparagraph*{Com a função que descreve o comportamento do circuito no tempo em mãos, podemos montar seu gráfico e analisar seu comportamento a qualquer tempo.}
-
-
-
-
-\newpage
-
-
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\columnwidth]{images/graficoH2t.png}
-    \caption{Gráfico de $V_0$(t) do circuito 2.}
-\end{figure}
-
-
-
-
-\subparagraph*{Observamos que a função atinge valor final de $-5V$.}
-
-
-
-
-\subparagraph*{E chega a $10\%$ deste valor em $2.4ms$ e $90\%$ em $10.9ms$.}
-
-
-
-
-\subparagraph*{A partir de $10.9ms$ a função estará contida entre $90\%$ e $110\%$ do valor final.}
-
-
-
-
-
-
-
-
-
-
-
-
-\newpage
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection{LTSpice}
-
-
-
-
-\subsubsection{Montagem do circuito}
-
-
-
-
-\paragraph*{No LTSpice montaremos o circuito e geramos seus gráficos de Bode.}
+\subparagraph*{Para obter o ganho vi o que acontecia com a funcao transferencia quando a frequencia tendia a zero.}
 \subparagraph*{}
-\begin{adjustbox}{scale=0.11}
-    \includegraphics{LTSPicecircuit.png}
+\begin{adjustbox}{scale=0.4}
+    \includegraphics{ganho1.png}
 \end{adjustbox}
+\subparagraph*{Podemos ver que quando o $s$ tender a $0$, o ganho tenderá a $1$.}
+
+\subparagraph*{Ja da funcao transferencia observamos que a frequencia de corte eh $\frac{1}{RC}$}
 
 
-\subsection{Circuito 1}
+\subparagraph*{Observamos que este circuito  tem exatamente a mesma frequencia de corte e ganho do circuito 1.}
 
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\columnwidth]{images/LTSpiceH1.png}
-    \caption{Gráficos de Bode do circuito 1.}
-\end{figure}
-
-
-\subsection{Circuito 2}
-
+\subparagraph*{E por fim, geramos o diagrama de Bode do ganho do circuito}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\columnwidth]{images/LTSPiceH2.png}
-    \caption{Gráficos de Bode do circuito 2.}
+    \includegraphics[width=1\columnwidth]{images/bodegain1.png}
+    \caption{Magnitude de H(s) do circuito 3.}
 \end{figure}
-
 
 \newpage
+
+
 \section{Medições em laboratório}
 
 
