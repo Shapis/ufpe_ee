@@ -1,22 +1,41 @@
 \babel@toc {brazil}{}\relax 
 \contentsline {section}{\numberline {1}Introdução}{}{section.1}%
 \contentsline {section}{\numberline {2}Análise preliminar}{}{section.2}%
-\contentsline {subsection}{\numberline {2.1}O Circuito}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.1}Os circuitos}{}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Circuito 1}{}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Circuito 2}{}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Circuito 3}{}{subsubsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.2}Maxima}{}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Análise do circuito 1}{}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Análise do circuito 2}{}{subsubsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Análise do circuito 3}{}{subsubsection.2.2.3}%
 \contentsline {section}{\numberline {3}Medições em laboratório}{}{section.3}%
-\contentsline {paragraph}{Vamos inicialmente fazer as medições dos componentes a serem usados.}{}{section*.35}%
-\contentsline {subsection}{\numberline {3.1}Tabela de componentes}{}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Circuito 1}{}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Tabela de valores}{}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Função transferência}{}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Estimativas experimentais de $ | H(jw) | $}{}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Valores de corte}{}{subsubsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.3}Circuito 2}{}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Tabela de valores}{}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Função transferência}{}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Estimativas experimentais de $ | H(jw) | $}{}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Valores de corte}{}{subsubsection.3.3.4}%
-\contentsline {section}{\numberline {4}Conclusões}{}{section.4}%
+\contentsline {subsection}{\numberline {3.1}O Circuito 1}{}{subsection.3.1}%
+\contentsline {paragraph}{Vamos inicialmente fazer as medições dos componentes a serem usados.}{}{section*.36}%
+\contentsline {subsection}{\numberline {3.2}Tabela de componentes}{}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Ganho em frequências baixas}{}{subsection.3.3}%
+\contentsline {subparagraph}{Podemos observar que o ganho do circuito 1 foi $1$.}{}{section*.37}%
+\contentsline {subsection}{\numberline {3.4}Frequência de corte}{}{subsection.3.4}%
+\contentsline {subparagraph}{Sua frequência de corte foi $51Hz$, já que esta será obtida quando tivermos aproximadamente $\frac {V_i * ganho}{\sqrt []{2}} = 3.53V$ que é próximo do valor esperado da análise numérica que foi de $50Hz$.}{}{section*.38}%
+\contentsline {subsection}{\numberline {3.5}Resultados das medidas}{}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}O Circuito 2}{}{subsection.3.6}%
+\contentsline {paragraph}{Vamos inicialmente fazer as medições dos componentes a serem usados.}{}{section*.39}%
+\contentsline {subsection}{\numberline {3.7}Tabela de componentes}{}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Ganho em frequências baixas}{}{subsection.3.8}%
+\contentsline {subparagraph}{Podemos observar que o ganho do circuito 2 foi $0.4$.}{}{section*.40}%
+\contentsline {subsection}{\numberline {3.9}Frequência de corte}{}{subsection.3.9}%
+\contentsline {subparagraph}{Sua frequência de corte foi $120Hz$, já que esta será obtida quando tivermos aproximadamente $\frac {V_i * ganho}{\sqrt []{2}} = 1.42V$ que é próximo do valor esperado da análise numérica que foi de $120Hz$.}{}{section*.41}%
+\contentsline {subsection}{\numberline {3.10}Resultados das medidas}{}{subsection.3.10}%
+\contentsline {subsection}{\numberline {3.11}O Circuito 3}{}{subsection.3.11}%
+\contentsline {paragraph}{Vamos inicialmente fazer as medições dos componentes a serem usados.}{}{section*.42}%
+\contentsline {subsection}{\numberline {3.12}Tabela de componentes}{}{subsection.3.12}%
+\contentsline {subsection}{\numberline {3.13}Ganho em frequências baixas}{}{subsection.3.13}%
+\contentsline {subparagraph}{Podemos observar que o ganho do circuito 3 foi $1$.}{}{section*.43}%
+\contentsline {subsection}{\numberline {3.14}Frequência de corte}{}{subsection.3.14}%
+\contentsline {subparagraph}{Sua frequência de corte foi $53Hz$, já que esta será obtida quando tivermos aproximadamente $\frac {V_i * ganho}{\sqrt []{2}} = 3.56V$ que é próximo do valor esperado da análise numérica que foi de $50Hz$.}{}{section*.44}%
+\contentsline {subsection}{\numberline {3.15}Resultados das medidas}{}{subsection.3.15}%
+\contentsline {section}{\numberline {4}Pós-laboratorial}{}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Circuito 1}{}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Circuito 2}{}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Circuito 3}{}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Conclusões}{}{section.5}%

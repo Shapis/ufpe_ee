@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.3.8)  19 MAR 2023 19:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.3.8)  22 MAR 2023 19:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -741,190 +741,274 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./relatorio4.toc
-Underfull \hbox (badness 10000) in paragraph at lines 15--15
- [][] [][]\OT1/cmr/m/n/12 Estimativas ex-pe-ri-men-tais 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
- [][] [][]\OT1/cmr/m/n/12 Estimativas ex-pe-ri-men-tais 
- []
-
-)
+) (./relatorio4.toc)
 \tf@toc=\write5
 \openout5 = `relatorio4.toc'.
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 77--77
+Underfull \hbox (badness 1946) in paragraph at lines 63--63
  []\OT1/cmr/bx/n/12 Neste re-lat^^Sorio, va-mos dis-cu-tir fil-tros
  []
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 110.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 68.
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--110
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
 []$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
  []
 
-<./images//AnaliseNodal.png, id=108, 409.53pt x 209.28188pt>
-File: ./images//AnaliseNodal.png Graphic file (type png)
-<use ./images//AnaliseNodal.png>
-Package pdftex.def Info: ./images//AnaliseNodal.png  used on input line 139.
+<./images//circuito1.png, id=163, 214.55156pt x 146.79843pt>
+File: ./images//circuito1.png Graphic file (type png)
+<use ./images//circuito1.png>
+Package pdftex.def Info: ./images//circuito1.png  used on input line 82.
+(pdftex.def)             Requested size: 214.55103pt x 146.79807pt.
+<./images//circuito2.png, id=164, 261.97874pt x 151.3153pt>
+File: ./images//circuito2.png Graphic file (type png)
+<use ./images//circuito2.png>
+Package pdftex.def Info: ./images//circuito2.png  used on input line 88.
+(pdftex.def)             Requested size: 261.9781pt x 151.31493pt.
+<./images//circuito3.png, id=165, 409.53pt x 209.28188pt>
+File: ./images//circuito3.png Graphic file (type png)
+<use ./images//circuito3.png>
+Package pdftex.def Info: ./images//circuito3.png  used on input line 96.
 (pdftex.def)             Requested size: 409.52899pt x 209.28134pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./images//AnaliseNodal.png (PNG copy)>]
-<./images//eqs1.png, id=128, 460.72125pt x 304.13625pt>
+ <./images//circuito1.png (PNG copy)> <./images//circuito2.png (PNG copy)>]
+<./images//eqs1.png, id=182, 460.72125pt x 304.13625pt>
 File: ./images//eqs1.png Graphic file (type png)
 <use ./images//eqs1.png>
-Package pdftex.def Info: ./images//eqs1.png  used on input line 155.
+Package pdftex.def Info: ./images//eqs1.png  used on input line 114.
 (pdftex.def)             Requested size: 460.72012pt x 304.1355pt.
-<./images//ganho1.png, id=129, 235.63031pt x 63.98906pt>
+<./images//ganho1.png, id=183, 235.63031pt x 63.98906pt>
 File: ./images//ganho1.png Graphic file (type png)
 <use ./images//ganho1.png>
-Package pdftex.def Info: ./images//ganho1.png  used on input line 162.
+Package pdftex.def Info: ./images//ganho1.png  used on input line 123.
 (pdftex.def)             Requested size: 235.62973pt x 63.98889pt.
-<./images//freqcorte1.png, id=130, 405.01312pt x 219.82124pt>
+<./images//freqcorte1.png, id=184, 405.01312pt x 219.82124pt>
 File: ./images//freqcorte1.png Graphic file (type png)
 <use ./images//freqcorte1.png>
-Package pdftex.def Info: ./images//freqcorte1.png  used on input line 180.
+Package pdftex.def Info: ./images//freqcorte1.png  used on input line 145.
 (pdftex.def)             Requested size: 405.01212pt x 219.8207pt.
-<images/bodegain1.png, id=131, 481.8pt x 361.35pt>
+<images/bodegain1.png, id=185, 481.8pt x 361.35pt>
 File: images/bodegain1.png Graphic file (type png)
 <use images/bodegain1.png>
-Package pdftex.def Info: images/bodegain1.png  used on input line 192.
+Package pdftex.def Info: images/bodegain1.png  used on input line 162.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
-<./images//eqs2.png, id=133, 532.99126pt x 222.07968pt>
+<./images//eqs2.png, id=187, 532.99126pt x 222.07968pt>
 File: ./images//eqs2.png Graphic file (type png)
 <use ./images//eqs2.png>
-Package pdftex.def Info: ./images//eqs2.png  used on input line 205.
+Package pdftex.def Info: ./images//eqs2.png  used on input line 181.
 (pdftex.def)             Requested size: 532.98996pt x 222.07913pt.
-<./images//ganho2.png, id=134, 536.0025pt x 139.27031pt>
+<./images//ganho2.png, id=188, 536.0025pt x 139.27031pt>
 File: ./images//ganho2.png Graphic file (type png)
 <use ./images//ganho2.png>
-Package pdftex.def Info: ./images//ganho2.png  used on input line 212.
+Package pdftex.def Info: ./images//ganho2.png  used on input line 190.
 (pdftex.def)             Requested size: 536.00119pt x 139.26996pt.
-<./images//freqcorte2.png, id=135, 620.3175pt x 351.56343pt>
-File: ./images//freqcorte2.png Graphic file (type png)
-<use ./images//freqcorte2.png>
-Package pdftex.def Info: ./images//freqcorte2.png  used on input line 223.
-(pdftex.def)             Requested size: 620.316pt x 351.56256pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.226 \subparagraph
-                   *{Achamos uma nova frequencia de corte de $120Hz$, podemo... [2 <./images//eqs1.png (PNG copy)> <./images//ganho1.png (PNG copy)> <./images//freqcorte1.png (PNG copy)> <./images/bodegain1.png> <./images//eqs2.png (PNG copy)> <./images//ganho2.png (PNG copy)>]
-<images/bodegain2.png, id=161, 481.8pt x 361.35pt>
+l.192 \subparagraph
+                   *{Podemos ver que quando o $s$ tender a $0$, o ganho tend... [2 <./images//circuito3.png (PNG copy)> <./images//eqs1.png (PNG copy)> <./images//ganho1.png (PNG copy)> <./images//freqcorte1.png (PNG copy)> <./images/bodegain1.png> <./images//eqs2.png (PNG copy)>]
+<./images//freqcorte2.png, id=213, 620.3175pt x 351.56343pt>
+File: ./images//freqcorte2.png Graphic file (type png)
+<use ./images//freqcorte2.png>
+Package pdftex.def Info: ./images//freqcorte2.png  used on input line 204.
+(pdftex.def)             Requested size: 620.316pt x 351.56256pt.
+<images/bodegain2.png, id=214, 481.8pt x 361.35pt>
 File: images/bodegain2.png Graphic file (type png)
 <use images/bodegain2.png>
-Package pdftex.def Info: images/bodegain2.png  used on input line 232.
+Package pdftex.def Info: images/bodegain2.png  used on input line 216.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
 File: ./images//eqs1.png Graphic file (type png)
 <use ./images//eqs1.png>
-Package pdftex.def Info: ./images//eqs1.png  used on input line 244.
+Package pdftex.def Info: ./images//eqs1.png  used on input line 232.
 (pdftex.def)             Requested size: 460.72012pt x 304.1355pt.
 File: ./images//ganho1.png Graphic file (type png)
 <use ./images//ganho1.png>
-Package pdftex.def Info: ./images//ganho1.png  used on input line 251.
+Package pdftex.def Info: ./images//ganho1.png  used on input line 241.
 (pdftex.def)             Requested size: 235.62973pt x 63.98889pt.
 File: images/bodegain1.png Graphic file (type png)
 <use images/bodegain1.png>
-Package pdftex.def Info: images/bodegain1.png  used on input line 265.
+Package pdftex.def Info: images/bodegain1.png  used on input line 261.
+(pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.266 \newpage
+               [3 <./images//ganho2.png (PNG copy)> <./images//freqcorte2.png (PNG copy)> <./images/bodegain2.png>]
+<images/osciloscopio/circuito1_ganho.png, id=235, 4047.12pt x 3035.34pt>
+File: images/osciloscopio/circuito1_ganho.png Graphic file (type png)
+<use images/osciloscopio/circuito1_ganho.png>
+Package pdftex.def Info: images/osciloscopio/circuito1_ganho.png  used on input line 296.
+(pdftex.def)             Requested size: 257.61894pt x 193.18195pt.
+
+Underfull \hbox (badness 4013) in paragraph at lines 297--297
+[]\OT1/cmr/m/n/12 Figura 4: []Ganho do Cir-cuito 1 a bai-xas
+ []
+
+<images/osciloscopio/circuito1_freqcorte.png, id=236, 4047.12pt x 3035.34pt>
+File: images/osciloscopio/circuito1_freqcorte.png Graphic file (type png)
+<use images/osciloscopio/circuito1_freqcorte.png>
+Package pdftex.def Info: images/osciloscopio/circuito1_freqcorte.png  used on input line 312.
+(pdftex.def)             Requested size: 257.61894pt x 193.18195pt.
+
+Overfull \hbox (4.24974pt too wide) in paragraph at lines 322--338
+ [] 
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.341 \newpage
+               [4 <./images/osciloscopio/circuito1_ganho.png> <./images/osciloscopio/circuito1_freqcorte.png>]
+<images/osciloscopio/circuito2_ganho.png, id=248, 4047.12pt x 3035.34pt>
+File: images/osciloscopio/circuito2_ganho.png Graphic file (type png)
+<use images/osciloscopio/circuito2_ganho.png>
+Package pdftex.def Info: images/osciloscopio/circuito2_ganho.png  used on input line 367.
+(pdftex.def)             Requested size: 257.61894pt x 193.18195pt.
+
+Underfull \hbox (badness 4013) in paragraph at lines 368--368
+[]\OT1/cmr/m/n/12 Figura 6: []Ganho do Cir-cuito 2 a bai-xas
+ []
+
+<images/osciloscopio/circuito2_freqcorte.png, id=249, 4047.12pt x 3035.34pt>
+File: images/osciloscopio/circuito2_freqcorte.png Graphic file (type png)
+<use images/osciloscopio/circuito2_freqcorte.png>
+Package pdftex.def Info: images/osciloscopio/circuito2_freqcorte.png  used on input line 382.
+(pdftex.def)             Requested size: 257.61894pt x 193.18195pt.
+
+Overfull \hbox (4.24974pt too wide) in paragraph at lines 392--408
+ [] 
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.411 \newpage
+               [5 <./images/osciloscopio/circuito2_ganho.png> <./images/osciloscopio/circuito2_freqcorte.png>]
+<images/osciloscopio/circuito3_ganho.png, id=258, 4047.12pt x 3035.34pt>
+File: images/osciloscopio/circuito3_ganho.png Graphic file (type png)
+<use images/osciloscopio/circuito3_ganho.png>
+Package pdftex.def Info: images/osciloscopio/circuito3_ganho.png  used on input line 437.
+(pdftex.def)             Requested size: 257.61894pt x 193.18195pt.
+
+Underfull \hbox (badness 4013) in paragraph at lines 438--438
+[]\OT1/cmr/m/n/12 Figura 8: []Ganho do Cir-cuito 3 a bai-xas
+ []
+
+<images/osciloscopio/circuito3_freqcorte.png, id=259, 4047.12pt x 3035.34pt>
+File: images/osciloscopio/circuito3_freqcorte.png Graphic file (type png)
+<use images/osciloscopio/circuito3_freqcorte.png>
+Package pdftex.def Info: images/osciloscopio/circuito3_freqcorte.png  used on input line 452.
+(pdftex.def)             Requested size: 257.61894pt x 193.18195pt.
+
+Underfull \hbox (badness 3679) in paragraph at lines 463--463
+ []\OT1/cmr/bx/n/12 Interessantemente, esta frequ^encia de
+ []
+
+
+Overfull \hbox (4.24974pt too wide) in paragraph at lines 465--481
+ [] 
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.484 \newpage
+               [6 <./images/osciloscopio/circuito3_ganho.png> <./images/osciloscopio/circuito3_freqcorte.png>]
+<images/circuito1_freqreal.png, id=269, 545.03625pt x 813.79031pt>
+File: images/circuito1_freqreal.png Graphic file (type png)
+<use images/circuito1_freqreal.png>
+Package pdftex.def Info: images/circuito1_freqreal.png  used on input line 500.
+(pdftex.def)             Requested size: 257.61894pt x 384.64214pt.
+<images/circuito1wx.png, id=270, 481.8pt x 361.35pt>
+File: images/circuito1wx.png Graphic file (type png)
+<use images/circuito1wx.png>
+Package pdftex.def Info: images/circuito1wx.png  used on input line 510.
+(pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1783) in paragraph at lines 516--516
+ []\OT1/cmr/bx/n/12 Da^^S^^P ve-mos que te-mos ga-nho de $\OT1/cmr/m/n/12 1$ \OT1/cmr/bx/n/12 e
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.516 \newpage
+               [7 <./images/circuito1_freqreal.png (PNG copy)> <./images/circuito1wx.png>]
+<images/circuito2_freqreal.png, id=280, 730.98094pt x 895.09406pt>
+File: images/circuito2_freqreal.png Graphic file (type png)
+<use images/circuito2_freqreal.png>
+Package pdftex.def Info: images/circuito2_freqreal.png  used on input line 524.
+(pdftex.def)             Requested size: 257.61894pt x 315.45923pt.
+<images/circuito2wx.png, id=281, 481.8pt x 361.35pt>
+File: images/circuito2wx.png Graphic file (type png)
+<use images/circuito2wx.png>
+Package pdftex.def Info: images/circuito2wx.png  used on input line 534.
+(pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.540 \newpage
+               [8 <./images/circuito2_freqreal.png (PNG copy)> <./images/circuito2wx.png>]
+Underfull \hbox (badness 1838) in paragraph at lines 549--549
+ []\OT1/cmr/bx/n/12 Como j^^Sa hav^^S^^Pamos dis-cu-tido an-te-ri-or-
+ []
+
+<images/circuito3wx.png, id=290, 481.8pt x 361.35pt>
+File: images/circuito3wx.png Graphic file (type png)
+<use images/circuito3wx.png>
+Package pdftex.def Info: images/circuito3wx.png  used on input line 554.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.269 \newpage
-               [3 <./images//freqcorte2.png (PNG copy)> <./images/bodegain2.png>]
-Overfull \hbox (4.24974pt too wide) in paragraph at lines 322--339
- [] 
- []
-
-<images/H1valoresreais.png, id=180, 775.39688pt x 123.46124pt>
-File: images/H1valoresreais.png Graphic file (type png)
-<use images/H1valoresreais.png>
-Package pdftex.def Info: images/H1valoresreais.png  used on input line 347.
-(pdftex.def)             Requested size: 257.61894pt x 41.01926pt.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 352.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 352.
-
-
-Underfull \vbox (badness 4518) has occurred while \output is active []
-
-<images/H1loglog.png, id=181, 763.35187pt x 618.81187pt>
-File: images/H1loglog.png Graphic file (type png)
-<use images/H1loglog.png>
-Package pdftex.def Info: images/H1loglog.png  used on input line 381.
-(pdftex.def)             Requested size: 257.61894pt x 208.83527pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.404 \newpage
-               [4 <./images/H1valoresreais.png (PNG copy)> <./images/H1loglog.png (PNG copy)>]
-Overfull \hbox (4.24974pt too wide) in paragraph at lines 417--434
- [] 
- []
-
-<images/H2valoresreais.png, id=192, 773.13844pt x 124.96687pt>
-File: images/H2valoresreais.png Graphic file (type png)
-<use images/H2valoresreais.png>
-Package pdftex.def Info: images/H2valoresreais.png  used on input line 442.
-(pdftex.def)             Requested size: 257.61894pt x 41.63962pt.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 447.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 447.
-
-
-Underfull \vbox (badness 2418) has occurred while \output is active []
-
-<images/H2loglog.png, id=193, 758.08218pt x 622.57594pt>
-File: images/H2loglog.png Graphic file (type png)
-<use images/H2loglog.png>
-Package pdftex.def Info: images/H2loglog.png  used on input line 477.
-(pdftex.def)             Requested size: 257.61894pt x 211.56851pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.490 \newpage
-               [5 <./images/H2valoresreais.png (PNG copy)> <./images/H2loglog.png (PNG copy)>]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.518 \end{document}
-                     [6
-
-] (./relatorio4.aux)
+l.579 \end{document}
+                     [9 <./images/circuito3wx.png>] (./relatorio4.aux)
 Package rerunfilecheck Info: File `relatorio4.out' has not changed.
-(rerunfilecheck)             Checksum: 50F8DB0F9A4D6153CB0E26E56811D55F;3223.
+(rerunfilecheck)             Checksum: CE948D9815874C9E74C7066374DCFDAC;4597.
  ) 
 Here is how much of TeX's memory you used:
- 51105 strings out of 478238
- 1307993 string characters out of 5850457
- 1992580 words of memory out of 5000000
- 68619 multiletter control sequences out of 15000+600000
+ 51208 strings out of 478238
+ 1310897 string characters out of 5850457
+ 1998581 words of memory out of 5000000
+ 68686 multiletter control sequences out of 15000+600000
  478191 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,8n,118p,796b,770s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on relatorio4.pdf (6 pages, 702757 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on relatorio4.pdf (9 pages, 94168860 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
- 75 named destinations out of 1000 (max. 500000)
- 238 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 369 PDF objects out of 1000 (max. 8388607)
+ 307 compressed objects within 4 object streams
+ 101 named destinations out of 1000 (max. 500000)
+ 371 words of extra memory for PDF output out of 10000 (max. 10000000)
 

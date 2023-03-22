@@ -1,0 +1,22 @@
+/* Circuito 1 */;
+
+load("bode");;
+
+eq1: Vo = Vi*(1/(S*C))/(R+(1/(S*C)));;
+
+sols1: solve([eq1],[Vo,Vi]);;
+
+H1: at(Vo/Vi, eq1);;
+
+H1: ratsimp(H1);;
+
+freq1: (1/(R*C))/(2*%pi);;
+
+var: at(freq1, C=100 * 10^-9);;
+
+R1: float(solve(50 = var, R));;
+
+H1: at(H1, [C=100*10^-9, R=31830.98861837907]);;
+
+bode_gain(H1, [S, 1, 10^8]);;
+

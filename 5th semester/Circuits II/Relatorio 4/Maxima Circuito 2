@@ -1,0 +1,25 @@
+load("bode");;
+
+eq1: 0 = (Vo-Vi)/R + Vo/(1/(s*C)) + Vo / R_L;;
+
+sols: solve(eq1,[Vo]);;
+
+H: at(Vo/Vi, sols);;
+
+Hmax : at(H, s = 0);;
+
+ganho: at(Hmax, [R_L =22*10^3, R = 33*10^3]);;
+
+Hw: at(H, [s = %i*w]);
+Hw: at(Hw, [R_L =22*10^3, R = 33*10^3, C=100*10^-9]);;
+
+eq2: cabs(Hw) = ganho/(sqrt(2));;
+
+float(solve(solve(eq2,w),w));;
+
+757.5757575757/(2*3.141592);;
+
+H: at(H, [C=100*10^-9, R=31830.98861837907, R_L = 22000]);;
+
+bode_gain(H, [S, 1, 10^8]);;
+

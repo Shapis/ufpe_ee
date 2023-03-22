@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" office:version="1.3" office:mimetype="application/vnd.oasis.opendocument.spreadsheet">
- <office:meta><meta:creation-date>2023-03-16T08:16:52.814793225</meta:creation-date><dc:date>2023-03-16T09:42:33.801545419</dc:date><meta:editing-duration>PT1H25M36S</meta:editing-duration><meta:editing-cycles>12</meta:editing-cycles><meta:generator>LibreOffice/7.5.1.2$Linux_X86_64 LibreOffice_project/50$Build-2</meta:generator><meta:document-statistic meta:table-count="3" meta:cell-count="175" meta:object-count="0"/></office:meta>
+ <office:meta><meta:creation-date>2023-03-16T08:16:52.814793225</meta:creation-date><dc:date>2023-03-22T19:38:36.255139512</dc:date><meta:editing-duration>PT1H31M41S</meta:editing-duration><meta:editing-cycles>14</meta:editing-cycles><meta:generator>LibreOffice/7.5.1.2$Linux_X86_64 LibreOffice_project/50$Build-2</meta:generator><meta:document-statistic meta:table-count="3" meta:cell-count="197" meta:object-count="0"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
    <config:config-item config:name="VisibleAreaTop" config:type="int">0</config:config-item>
    <config:config-item config:name="VisibleAreaLeft" config:type="int">0</config:config-item>
    <config:config-item config:name="VisibleAreaWidth" config:type="int">33867</config:config-item>
-   <config:config-item config:name="VisibleAreaHeight" config:type="int">3161</config:config-item>
+   <config:config-item config:name="VisibleAreaHeight" config:type="int">3612</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view1</config:config-item>
@@ -28,8 +28,8 @@
        <config:config-item config:name="LegacySingleLineFontwork" config:type="boolean">false</config:config-item>
       </config:config-item-map-entry>
       <config:config-item-map-entry config:name="Sheet2">
-       <config:config-item config:name="CursorPositionX" config:type="int">0</config:config-item>
-       <config:config-item config:name="CursorPositionY" config:type="int">0</config:config-item>
+       <config:config-item config:name="CursorPositionX" config:type="int">14</config:config-item>
+       <config:config-item config:name="CursorPositionY" config:type="int">7</config:config-item>
        <config:config-item config:name="ActiveSplitRange" config:type="short">2</config:config-item>
        <config:config-item config:name="PositionLeft" config:type="int">0</config:config-item>
        <config:config-item config:name="PositionRight" config:type="int">0</config:config-item>
@@ -43,7 +43,7 @@
        <config:config-item config:name="LegacySingleLineFontwork" config:type="boolean">false</config:config-item>
       </config:config-item-map-entry>
       <config:config-item-map-entry config:name="Sheet3">
-       <config:config-item config:name="CursorPositionX" config:type="int">14</config:config-item>
+       <config:config-item config:name="CursorPositionX" config:type="int">4</config:config-item>
        <config:config-item config:name="CursorPositionY" config:type="int">7</config:config-item>
        <config:config-item config:name="ActiveSplitRange" config:type="short">2</config:config-item>
        <config:config-item config:name="PositionLeft" config:type="int">0</config:config-item>
@@ -106,9 +106,9 @@
    <config:config-item config:name="IsSnapToRaster" config:type="boolean">false</config:config-item>
    <config:config-item config:name="LinkUpdateMode" config:type="short">3</config:config-item>
    <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrinterName" config:type="string"/>
+   <config:config-item config:name="PrinterName" config:type="string">Generic Printer</config:config-item>
    <config:config-item config:name="PrinterPaperFromSetup" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrinterSetup" config:type="base64Binary"/>
+   <config:config-item config:name="PrinterSetup" config:type="base64Binary">zQH+/0dlbmVyaWMgUHJpbnRlcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAU0dFTlBSVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWAAMAuQAAAAAAAAAIAFZUAAAkbQAASm9iRGF0YSAxCnByaW50ZXI9R2VuZXJpYyBQcmludGVyCm9yaWVudGF0aW9uPVBvcnRyYWl0CmNvcGllcz0xCmNvbGxhdGU9ZmFsc2UKbWFyZ2luYWRqdXN0bWVudD0wLDAsMCwwCmNvbG9yZGVwdGg9MjQKcHNsZXZlbD0wCnBkZmRldmljZT0xCmNvbG9yZGV2aWNlPTAKUFBEQ29udGV4dERhdGEKUGFnZVNpemU6TGV0dGVyAAASAENPTVBBVF9EVVBMRVhfTU9ERQ8ARHVwbGV4TW9kZTo6T2ZmDABQUklOVEVSX05BTUUPAEdlbmVyaWMgUHJpbnRlcgsARFJJVkVSX05BTUUHAFNHRU5QUlQ=</config:config-item>
    <config:config-item config:name="RasterIsVisible" config:type="boolean">false</config:config-item>
    <config:config-item config:name="RasterResolutionX" config:type="int">1270</config:config-item>
    <config:config-item config:name="RasterResolutionY" config:type="int">1270</config:config-item>
@@ -120,6 +120,7 @@
    <config:config-item config:name="ShowNotes" config:type="boolean">true</config:config-item>
    <config:config-item config:name="ShowPageBreaks" config:type="boolean">true</config:config-item>
    <config:config-item config:name="ShowZeroValues" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="SyntaxStringRef" config:type="short">7</config:config-item>
    <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
    <config:config-item-map-named config:name="ScriptConfiguration">
     <config:config-item-map-entry config:name="Sheet1">
@@ -577,6 +578,42 @@
       <text:p>0.15</text:p>
      </table:table-cell>
     </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:number-columns-repeated="4"/>
+     <table:table-cell table:formula="of:=[.E7]/5.07" office:value-type="float" office:value="0.408284023668639" calcext:value-type="float">
+      <text:p>0.408284023668639</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.F7]/5.07" office:value-type="float" office:value="0.394477317554241" calcext:value-type="float">
+      <text:p>0.394477317554241</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.G7]/5.07" office:value-type="float" office:value="0.372781065088757" calcext:value-type="float">
+      <text:p>0.372781065088757</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.H7]/5.07" office:value-type="float" office:value="0.337278106508876" calcext:value-type="float">
+      <text:p>0.337278106508876</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.I7]/5.07" office:value-type="float" office:value="0.254437869822485" calcext:value-type="float">
+      <text:p>0.254437869822485</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.J7]/5.07" office:value-type="float" office:value="0.216962524654832" calcext:value-type="float">
+      <text:p>0.216962524654832</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.K7]/5.07" office:value-type="float" office:value="0.164694280078895" calcext:value-type="float">
+      <text:p>0.164694280078895</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.L7]/5.07" office:value-type="float" office:value="0.118540433925049" calcext:value-type="float">
+      <text:p>0.118540433925049</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.M7]/5.07" office:value-type="float" office:value="0.0867850098619329" calcext:value-type="float">
+      <text:p>0.0867850098619329</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.N7]/5.07" office:value-type="float" office:value="0.0512820512820513" calcext:value-type="float">
+      <text:p>0.0512820512820513</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.O7]/5.07" office:value-type="float" office:value="0.029585798816568" calcext:value-type="float">
+      <text:p>0.029585798816568</text:p>
+     </table:table-cell>
+    </table:table-row>
    </table:table>
    <table:table table:name="Sheet3" table:style-name="ta1">
     <table:table-column table:style-name="co1" table:number-columns-repeated="15" table:default-cell-style-name="Default"/>
@@ -743,6 +780,42 @@
      </table:table-cell>
      <table:table-cell office:value-type="float" office:value="0.258" calcext:value-type="float">
       <text:p>0.258</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="ro1">
+     <table:table-cell table:number-columns-repeated="4"/>
+     <table:table-cell table:formula="of:=[.E7]/5.07" office:value-type="float" office:value="1" calcext:value-type="float">
+      <text:p>1</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.F7]/5.07" office:value-type="float" office:value="0.974358974358974" calcext:value-type="float">
+      <text:p>0.974358974358974</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.G7]/5.07" office:value-type="float" office:value="0.887573964497041" calcext:value-type="float">
+      <text:p>0.887573964497041</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.H7]/5.07" office:value-type="float" office:value="0.796844181459566" calcext:value-type="float">
+      <text:p>0.796844181459566</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.I7]/5.07" office:value-type="float" office:value="0.603550295857988" calcext:value-type="float">
+      <text:p>0.603550295857988</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.J7]/5.07" office:value-type="float" office:value="0.506903353057199" calcext:value-type="float">
+      <text:p>0.506903353057199</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.K7]/5.07" office:value-type="float" office:value="0.368836291913215" calcext:value-type="float">
+      <text:p>0.368836291913215</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.L7]/5.07" office:value-type="float" office:value="0.26232741617357" calcext:value-type="float">
+      <text:p>0.26232741617357</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.M7]/5.07" office:value-type="float" office:value="0.190335305719921" calcext:value-type="float">
+      <text:p>0.190335305719921</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.N7]/5.07" office:value-type="float" office:value="0.101183431952663" calcext:value-type="float">
+      <text:p>0.101183431952663</text:p>
+     </table:table-cell>
+     <table:table-cell table:formula="of:=[.O7]/5.07" office:value-type="float" office:value="0.050887573964497" calcext:value-type="float">
+      <text:p>0.050887573964497</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
