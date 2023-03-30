@@ -7,7 +7,7 @@ import math
 Kb = 1.38 * 10**(-23)           # J/K
 e = 1.6 * 10**-19               # C
 KbTe = 0.026                    # V (T = 300K)
-epsilon_0 = 8.85*10**-12        # F/m
+epsilon_0 = 8.85*(10**-12)      # F/m
 h = 6.62 * 10**-34              # J*s
 h_cortado = h / (2 * math.pi)   # J*s
 m_0 = 9.11 * 10**-31             # Kg
@@ -137,10 +137,52 @@ def form_sigma():
     print("(sigma = N * e^2 * tau)/m*")
 
 
+def form_Lp(_Dp, _tauP):
+    DoForm()
+    print("Lp = sqrt(Dp * tau P)")
+    return (_Dp * _tauP)**(1/2)
+
+
+def form_Ln(_Dn, _tauN):
+    DoForm()
+    print("Ln = sqrt(Dn * tau N)")
+    return (_Dn * _tauN)**(1/2)
+
+
+# Lista 3 - Questao 3
+def form_Beta_Transitor(_Dp, _Na, _Lne, _Beta, _l, _Lp, _Dne):
+    print("{cosh{1/Lp} + ([(Dne Nd Lp)/(Dp Na Lne)]*senh{1/Lp}) - 1}^1")
+    print("Nd = [Dp Na Lne (1 + 1/Beta - cosh(l/Lp))]/(senh[l/Lp] Dne Lp)")
+    return ((_Dp * _Na * _Lne)*(1 + (1/_Beta) - math.cosh(_l/_Lp)))/(math.sinh(_l/_Lp) * _Dne * _Lp)
+
+
+def form_Alpha_Transistor(_Dp, _Na, _Lne, _Beta, _l, _Lp, _Dne, _Nd):
+    print("{cosh{1/Lp} + ([(Dne Nd Lp)/(Dp Na Lne)]*senh{1/Lp})}^1")
+    return (math.cosh(_l/_Lp) + (((_Dne * _Nd * _Lp)/(_Dp * _Na * _Lne)) * math.sinh(_l/_Lp)))**(-1)
+
+
+# Lista 3 - Questao 4
+def form_Tensao_Critica(_Nd, _a, _elemento):
+    print("Vc = e Nd  a**2 / 2 epsilon")
+    return (e * _Nd * _a**2) / (2 * _elemento.epsilon)
+
+
+def form_Condutancia_Canal(_Nd, _a, _elemento, _L, _D):
+    print("G_0 = 2 e Nd mu_n D a / L")
+    print(e)
+    print(_Nd)
+    print(_elemento.ue*1E-4)
+    print(_a)
+    print(_L)
+
+    return (2 * e * _Nd * (_elemento.ue*1E-4) * _D * _a) / _L
+
+
 # Resolvedores de problemas
 
-
 # Energia de Fermi
+
+
 def Solve_E_f():
     print("Insira a concentracao em cm^-3")
     _N = float(input())
@@ -201,22 +243,95 @@ def Solve_V_x(_I, _A, _N):
     FimDoPrograma()
 
 
+def SolvePnpGain():
+    print("Qual elemento do transistor?")
+    print("1 - Ge")
+    print("2 - Si")
+    print("3 - GaAs")
+    userInput = int(input())
+    _elemento = 0
+    match userInput:
+        case 1:
+            _elemento = Ge
+        case 2:
+            _elemento = Si
+        case 3:
+            _elemento = GaAs
+        case _:
+            EscolhaInvalida()
+    print("Qual a espessura da base em micrometro?")
+    _l = float(input())
+    _l = _l * 1E-6
+    print("Qual a dopagem do emissor? em cm^-3?")
+    _dopagem = float(input())
+    _dopagem = _dopagem * 1E6
+    print("Quais os tempos de recombinacao de buracos, e eletrons nesta ordem em microsegundo?")
+    _tauP = float(input())
+    _tauN = float(input())
+    _tauP = _tauP * 1E-6
+    _tauN = _tauN * 1E-6
+    print("Qual o ganho Beta (Ic/Ie)?")
+    _B = float(input())
+    _Ln = form_Ln(_elemento.Dn * 1E-4, _tauN)
+    _Lp = form_Lp(_elemento.Dp * 1E-4, _tauP)
+    _Nd = form_Beta_Transitor(_elemento.Dp * 1E-4,
+                              _dopagem, _Ln, _B, _l, _Lp, _elemento.Dn * 1E-4)
+    print(_Nd, "m^-3")
+    print("Beta = alpha / (alpha-1)")
+    _alpha = _Nd = form_Alpha_Transistor(_elemento.Dp * 1E-4,
+                                         _dopagem, _Ln, _B, _l, _Lp, _elemento.Dn * 1E-4, _Nd)
+    print(_alpha)
+    FimDoPrograma()
+
+
+def SolveCanalJFET():
+    print("Qual elemento do transistor?")
+    print("1 - Ge")
+    print("2 - Si")
+    print("3 - GaAs")
+    userInput = int(input())
+    _elemento = 0
+    match userInput:
+        case 1:
+            _elemento = Ge
+        case 2:
+            _elemento = Si
+        case 3:
+            _elemento = GaAs
+        case _:
+            EscolhaInvalida()
+    print("Qual o Na e Nd em cm^-3?")
+    _Na = float(input()) * 1E6
+    _Nd = float(input()) * 1E6
+    print("Meia largura do canal(a) em micrometro?")
+    _a = float(input()) * 1E-6
+    print("Comprimento do canal(L) em micrometro?")
+    _L = float(input()) * 1E-6
+    print("Profundidade do canal(D) em milimetros?")
+    _D = float(input()) * 1E-3
+    print("Supondo que Vo = 0 temos... :")
+    _Vc = form_Tensao_Critica(_Nd, _a, _elemento)
+    print("Tensao critica: " + str(_Vc) + " V")
+    _G = form_Condutancia_Canal(_Nd, _a, _elemento,  _L, _D)
+    print("Condutancia do canal: " + str(_G) + " S")
+
+
 # Inicio do programa
-
-
 print("0 - Sair")
-print("1 - E_f: Energia de Fermi")
-print("2 - V_f: Velocidade de Fermi")
-print("3 - V_d: Velocidade de Deriva")
+# print("1 - E_f: Energia de Fermi")
+# print("2 - V_f: Velocidade de Fermi")
+# print("3 - V_d: Velocidade de Deriva")
+print("1 - Dopagem da base de transistor PNP e ganho de corrente em configuracao base comum")
+print("2 - A tensao critica, condutancia do canal, valores de Vd e Id")
 print("Que grandeza voce quer?")
 userInput = int(input())
 match userInput:
     case 0:
         FimDoPrograma()
     case 1:
-        Solve_E_f()
+        SolvePnpGain()
     case 2:
-        Solve_V_f(0, 0)
+        SolveCanalJFET()
     case 3:
         Solve_V_x(0, 0, 0)
     case _:
