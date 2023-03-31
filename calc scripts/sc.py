@@ -169,15 +169,18 @@ def form_Tensao_Critica(_Nd, _a, _elemento):
 
 def form_Condutancia_Canal(_Nd, _a, _elemento, _L, _D):
     print("G_0 = 2 e Nd mu_n D a / L")
-    print(e)
-    print(_Nd)
-    print(_elemento.ue*1E-4)
-    print(_a)
-    print(_L)
-
     return (2 * e * _Nd * (_elemento.ue*1E-4) * _D * _a) / _L
 
 
+def form_Condutancia_Canal(_Nd, _a, _elemento, _L, _D):
+    print("G_0 = 2 e Nd mu_n D a / L")
+    return (2 * e * _Nd * (_elemento.ue*1E-4) * _D * _a) / _L
+
+
+def form_IdSat(_G0, _Vc, _Vd, _Vp):
+    print(
+        "|Id_sat| = G_0 * Vc [(Vd/Vc) + (2/3)*(-Vp/Vc)^(3/2) - (2/3)((Vd-Vp)/Vc)^(3/2)]")
+    return _G0 * _Vc * ((_Vd / _Vc) + (2/3)*((-_Vp/_Vc)**(3/2)) - (2/3)*(((_Vd - _Vp) / _Vc)**(3/2)))
 # Resolvedores de problemas
 
 # Energia de Fermi
@@ -312,8 +315,16 @@ def SolveCanalJFET():
     print("Supondo que Vo = 0 temos... :")
     _Vc = form_Tensao_Critica(_Nd, _a, _elemento)
     print("Tensao critica: " + str(_Vc) + " V")
-    _G = form_Condutancia_Canal(_Nd, _a, _elemento,  _L, _D)
-    print("Condutancia do canal: " + str(_G) + " S")
+    _G0 = form_Condutancia_Canal(_Nd, _a, _elemento,  _L, _D)
+    print("Condutancia do canal: " + str(_G0) + " S")
+    print("Qual o Vp para saturacao?")
+    _Vp = float(input())
+    print("Vd = Vc + Vp")
+    _Vd = _Vc + _Vp
+    print("Vd = " + str(_Vd) + " V")
+    _Idsat = form_IdSat(_G0, _Vc, _Vd, _Vp)
+    print("Idsat = " + str(_Idsat) + " A")
+    print("Idsat = " + str(_Idsat*1E3) + " mA")
 
 
 # Inicio do programa
