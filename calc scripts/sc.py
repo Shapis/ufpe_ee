@@ -181,6 +181,24 @@ def form_IdSat(_G0, _Vc, _Vd, _Vp):
     print(
         "|Id_sat| = G_0 * Vc [(Vd/Vc) + (2/3)*(-Vp/Vc)^(3/2) - (2/3)((Vd-Vp)/Vc)^(3/2)]")
     return _G0 * _Vc * ((_Vd / _Vc) + (2/3)*((-_Vp/_Vc)**(3/2)) - (2/3)*(((_Vd - _Vp) / _Vc)**(3/2)))
+
+
+def form_TensaoCriticaCasoReal(_Na, _elemento, _ei, _d, _D, _Qox):
+    print("Vc = ((Qd - Qox) / Ci) + 2phi_F = phi_ms")
+
+    print(
+        "2phiF = 2 (KbT / e) * ln (Na/ni)")
+    _phiFtimesTwo = 2 * KbTe * math.log(_Na / (_elemento.ni * 1E6))
+    print("Qd = 2 * (E_s * e * Na * phiF)^2 *A")
+    Qd = 2 * ((_elemento.epsilon * e * _Na * (_phiFtimesTwo/2))
+              ** (1/2))
+    print("Ci = Ei * A / d")
+    _Ci = ((_ei * epsilon_0) / _d)
+    print("((Qd - Qox) / Ci) + 2phiF + phiMs")
+    _phims = -1.1
+    return [((Qd - _Qox) / _Ci) + _phiFtimesTwo + _phims, _Ci, _phiFtimesTwo/2]
+
+
 # Resolvedores de problemas
 
 # Energia de Fermi
@@ -304,7 +322,7 @@ def SolveCanalJFET():
         case _:
             EscolhaInvalida()
     print("Qual o Na e Nd em cm^-3?")
-    _Na = float(input()) * 1E6
+    # _Na = float(input()) * 1E6
     _Nd = float(input()) * 1E6
     print("Meia largura do canal(a) em micrometro?")
     _a = float(input()) * 1E-6
@@ -325,6 +343,89 @@ def SolveCanalJFET():
     _Idsat = form_IdSat(_G0, _Vc, _Vd, _Vp)
     print("Idsat = " + str(_Idsat) + " A")
     print("Idsat = " + str(_Idsat*1E3) + " mA")
+    print("Para tensoes maior que Vsat a corrente continua Vsat")
+    FimDoPrograma()
+
+
+def SolveTransistorMOSFET():
+    print("Qual o Na em cm^-3?")
+    _Na = float(input()) * 1E6
+    print("Qual espessura da camada de oxido em nanometro?")
+    _Espessura = float(input()) * 1E-9
+    print("Qual a carga por unidade da area de interface? em C/cm^2")
+    _densidadeQ = float(input()) * 1E4
+    print("Qual comprimento em micrometro?")
+    _L = float(input()) * 1E-6
+    print("Qual profundidade em micrometro?")
+    _D = float(input()) * 1E-6
+    print("Qual a constante de permissividade eletrica para o oxido?")
+    _EOxido = float(input())
+    print("E qual o semicondutor?")
+    print("1 - Ge")
+    print("2 - Si")
+    print("3 - GaAs")
+    userInput = int(input())
+    _elemento = 0
+    match userInput:
+        case 1:
+            _elemento = Ge
+        case 2:
+            _elemento = Si
+        case 3:
+            _elemento = GaAs
+        case _:
+            EscolhaInvalida()
+    sols = form_TensaoCriticaCasoReal(
+        _Na, _elemento, _EOxido, _Espessura, _D, _densidadeQ)
+    tccr = sols[0]
+    _phiF = sols[2]
+    print("Tensao critica caso real: " + str(tccr) + " V")
+    print("Insira o Vp para achar a corrente de saturacao")
+    _Vp = float(input())
+    print("Vsat = Vp - Vc")
+    _VSat = _Vp - tccr
+    print("VSat = " + str(_VSat) + " V")
+    _Ci = sols[1]
+    _Ci = _Ci * _D*_L
+    print("Isat = un Ci Vsat^2 / 2 L^2")
+
+    _Isat = ((_elemento.ue*1E-4) * _Ci * (_VSat**2)) / (2 * _L**2)
+    print("Isat = " + str(_Isat) + " A")
+
+    print("Na condicao de inversao: l = ((4 Es PhiF)/(e Na))^(1/2)")
+    _l = (((4 * _elemento.epsilon * _phiF) / (e * _Na))**(1/2))
+    print("l = " + str(_l) + " m")
+    print("C = A / ((d/ei + l/es))")
+    _C = (_D*_L)/((_Espessura/(_EOxido*epsilon_0))+(_l / _elemento.epsilon))
+    print("C = " + str(_C) + " F")
+    print("C = " + str(_C*1E12) + " pF")
+    FimDoPrograma()
+
+
+def SolveTransistorPnp():
+    print("Qual elemento do transistor?")
+    print("1 - Ge")
+    print("2 - Si")
+    print("3 - GaAs")
+    userInput = int(input())
+    _elemento = 0
+    match userInput:
+        case 1:
+            _elemento = Ge
+        case 2:
+            _elemento = Si
+        case 3:
+            _elemento = GaAs
+        case _:
+            EscolhaInvalida()
+    print("Qual o Vbb?")
+    _Vbb = float(input())
+    print("Qual o Vcc?")
+    _Vcc = float(input())
+    print("Qual o R_L?")
+    _Rl = float(input())
+    print("Para achar o Rb e Vbe, insira o Ib em microampere")
+    _Ib = float(input()) * 1E-6
 
 
 # Inicio do programa
@@ -334,6 +435,7 @@ print("0 - Sair")
 # print("3 - V_d: Velocidade de Deriva")
 print("1 - Dopagem da base de transistor PNP e ganho de corrente em configuracao base comum")
 print("2 - A tensao critica, condutancia do canal, valores de Vd e Id")
+print("3 - A tensao critica MOSFET no caso real, Corrente de saturacao, capacitancia total da regiao do canal na condicao de inversao")
 print("Que grandeza voce quer?")
 userInput = int(input())
 match userInput:
@@ -344,7 +446,9 @@ match userInput:
     case 2:
         SolveCanalJFET()
     case 3:
-        Solve_V_x(0, 0, 0)
+        SolveTransistorMOSFET()
+    case 4:
+        SolveTransistorPnp()
     case _:
         EscolhaInvalida()
 
