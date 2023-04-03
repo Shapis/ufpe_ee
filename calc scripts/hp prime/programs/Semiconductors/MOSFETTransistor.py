@@ -1,4 +1,4 @@
-# PYTHON EXPORT PNPJFETGAIN()
+# PYTHON EXPORT MOSFETTransistor()
 
 import math
 
@@ -114,62 +114,66 @@ def SelectElemento():
 
 # Equacoes do formulario
 
-def form_Lp(_Dp, _tauP):
+def form_TensaoCriticaCasoReal(_Na, _elemento, _ei, _d, _D, _Qox):
     DoForm()
-    print("Lp = sqrt(Dp * tau P)")
-    return (_Dp * _tauP)**(1/2)
+    print("Vc = ((Qd - Qox) / Ci) + 2phi_F = phi_ms")
 
-
-def form_Ln(_Dn, _tauN):
-    DoForm()
-    print("Ln = sqrt(Dn * tau N)")
-    return (_Dn * _tauN)**(1/2)
-
-
-def form_Beta_Transitor(_Dp, _Na, _Lne, _Beta, _l, _Lp, _Dne):
-    DoForm()
-    print("{cosh{1/Lp} + ([(Dne Nd Lp)/(Dp Na Lne)]*senh{1/Lp}) - 1}^1")
-    IsolaVars("Nd")
-    print("Nd = [Dp Na Lne (1 + 1/Beta - cosh(l/Lp))]/(senh[l/Lp] Dne Lp)")
-    return ((_Dp * _Na * _Lne)*(1 + (1/_Beta) - math.cosh(_l/_Lp)))/(math.sinh(_l/_Lp) * _Dne * _Lp)
-
-
-def form_Alpha_Transistor(_Dp, _Na, _Lne, _Beta, _l, _Lp, _Dne, _Nd):
-    DoForm()
-    print("alpha = {cosh{1/Lp} + ([(Dne Nd Lp)/(Dp Na Lne)]*senh{1/Lp})}^1")
-    return (math.cosh(_l/_Lp) + (((_Dne * _Nd * _Lp)/(_Dp * _Na * _Lne)) * math.sinh(_l/_Lp)))**(-1)
+    print(
+        "2phiF = 2 (KbT / e) * ln (Na/ni)")
+    _phiFtimesTwo = 2 * KbTe * math.log(_Na / (_elemento.ni * 1E6))
+    print("Qd = 2 * (E_s * e * Na * phiF)^2 *A")
+    Qd = 2 * ((_elemento.epsilon * e * _Na * (_phiFtimesTwo/2))
+              ** (1/2))
+    print("Ci = Ei * A / d")
+    _Ci = ((_ei * epsilon_0) / _d)
+    print("((Qd - Qox) / Ci) + 2phiF + phiMs")
+    _phims = -1.1
+    return [((Qd - _Qox) / _Ci) + _phiFtimesTwo + _phims, _Ci, _phiFtimesTwo/2]
 
 # Lista 3 Questao 3
 
 
-def SolvePnpGain():
+def SolveMOSFETTransistor():
+    print("Qual o Na em cm^-3?")
+    _Na = float(input()) * 1E6
+    print("Qual espessura da camada de oxido em nanometro?")
+    _Espessura = float(input()) * 1E-9
+    print("Qual a carga por unidade da area de interface? em C/cm^2")
+    _densidadeQ = float(input()) * 1E4
+    print("Qual comprimento em micrometro?")
+    _L = float(input()) * 1E-6
+    print("Qual profundidade em micrometro?")
+    _D = float(input()) * 1E-6
+    print("Qual a constante de permissividade eletrica para o oxido?")
+    _EOxido = float(input())
     _elemento = SelectElemento()
-    print("Qual a espessura da base em micrometro?")
-    _l = float(input())
-    _l = _l * 1E-6
-    print("Qual a dopagem do emissor? em cm^-3?")
-    _dopagem = float(input())
-    _dopagem = _dopagem * 1E6
-    print("Quais os tempos de recombinacao de buracos, e eletrons nesta ordem em microsegundo?")
-    _tauP = float(input())
-    _tauN = float(input())
-    _tauP = _tauP * 1E-6
-    _tauN = _tauN * 1E-6
-    print("Qual o ganho Beta (Ic/Ie)?")
-    _B = float(input())
-    _Ln = form_Ln(_elemento.Dn * 1E-4, _tauN)
-    _Lp = form_Lp(_elemento.Dp * 1E-4, _tauP)
-    _Nd = form_Beta_Transitor(_elemento.Dp * 1E-4,
-                              _dopagem, _Ln, _B, _l, _Lp, _elemento.Dn * 1E-4)
-    print("Nd = ", _Nd, "m^-3")
+    sols = form_TensaoCriticaCasoReal(
+        _Na, _elemento, _EOxido, _Espessura, _D, _densidadeQ)
+    tccr = sols[0]
+    _phiF = sols[2]
+    print("Tensao critica caso real: " + str(tccr) + " V")
+    print("Insira o Vp para achar a corrente de saturacao")
+    _Vp = float(input())
+    print("Vsat = Vp - Vc")
+    _VSat = _Vp - tccr
+    print("VSat = " + str(_VSat) + " V")
+    _Ci = sols[1]
+    _Ci = _Ci * _D*_L
+    print("Isat = un Ci Vsat^2 / 2 L^2")
 
-    _alpha = _Nd = form_Alpha_Transistor(_elemento.Dp * 1E-4,
-                                         _dopagem, _Ln, _B, _l, _Lp, _elemento.Dn * 1E-4, _Nd)
-    print("Beta = alpha / (1-alpha)")
-    print("alpha = ", _alpha)
+    _Isat = ((_elemento.ue*1E-4) * _Ci * (_VSat**2)) / (2 * _L**2)
+    print("Isat = " + str(_Isat) + " A")
+    print("Isat = " + str(_Isat*1E3) + " mA")
+    print("Na condicao de inversao: l = ((4 Es PhiF)/(e Na))^(1/2)")
+    _l = (((4 * _elemento.epsilon * _phiF) / (e * _Na))**(1/2))
+    print("l = " + str(_l) + " m")
+    print("C = A / ((d/ei + l/es))")
+    _C = (_D*_L)/((_Espessura/(_EOxido*epsilon_0))+(_l / _elemento.epsilon))
+    print("C = " + str(_C) + " F")
+    print("C = " + str(_C*1E12) + " pF")
     FimDoPrograma()
 
 
-SolvePnpGain()
+SolveMOSFETTransistor()
 
 # END
