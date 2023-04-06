@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.3)  5 APR 2023 22:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.3)  6 APR 2023 00:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -666,24 +666,24 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 ) (./relatorio5.aux)
 \openout1 = `relatorio5.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -740,20 +740,20 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (/usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-brazil.trsl
 File: translations-basic-dictionary-brazil.trsl (brazil translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `brazil'. on input line 50.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `brazil'. on input line 51.
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
-Package hyperref Info: Link coloring OFF on input line 50.
+Package hyperref Info: Link coloring OFF on input line 51.
 (./relatorio5.out) (./relatorio5.out)
 \@outlinefile=\write4
 \openout4 = `relatorio5.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./relatorio5.toc)
@@ -761,24 +761,24 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout5 = `relatorio5.toc'.
 
 
-Underfull \hbox (badness 5696) in paragraph at lines 63--64
+Underfull \hbox (badness 5696) in paragraph at lines 68--69
 []\OT1/cmr/m/n/12 Todos ar-qui-vos uti-li-za-dos para criar este
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 \OT1/cmr/m/n/12 re-lat^^Sorio, e o re-la-to-rio em si est~ao em:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 []$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
  []
 
-<images/circuito.png, id=133, 365.86688pt x 185.19188pt>
+<images/circuito.png, id=138, 365.86688pt x 185.19188pt>
 File: images/circuito.png Graphic file (type png)
 <use images/circuito.png>
-Package pdftex.def Info: images/circuito.png  used on input line 75.
+Package pdftex.def Info: images/circuito.png  used on input line 85.
 (pdftex.def)             Requested size: 257.61894pt x 130.40486pt.
 
 Underfull \vbox (badness 6725) has occurred while \output is active []
@@ -787,12 +787,12 @@ Underfull \vbox (badness 6725) has occurred while \output is active []
 
 
  <./images/circuito.png (PNG copy)>]
-Underfull \hbox (badness 1264) in paragraph at lines 143--144
+Underfull \hbox (badness 1264) in paragraph at lines 172--173
 []\OT1/cmr/m/n/12 Agora va-mos re-a-li-zar o es-ca-lo-na-mento para
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 189--190
+Underfull \hbox (badness 1264) in paragraph at lines 230--231
 []\OT1/cmr/m/n/12 Agora va-mos re-a-li-zar o es-ca-lo-na-mento para
  []
 
@@ -800,42 +800,42 @@ Underfull \hbox (badness 1264) in paragraph at lines 189--190
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.210 \end{equation}
+l.256 \end{equation}
                      [2]
-<images/bodegain.png, id=169, 481.8pt x 361.35pt>
+<images/bodegain.png, id=174, 481.8pt x 361.35pt>
 File: images/bodegain.png Graphic file (type png)
 <use images/bodegain.png>
-Package pdftex.def Info: images/bodegain.png  used on input line 230.
+Package pdftex.def Info: images/bodegain.png  used on input line 282.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
 
 Underfull \vbox (badness 2326) has occurred while \output is active []
 
-<images/bodegainH1.png, id=171, 481.8pt x 361.35pt>
+<images/bodegainH1.png, id=176, 481.8pt x 361.35pt>
 File: images/bodegainH1.png Graphic file (type png)
 <use images/bodegainH1.png>
-Package pdftex.def Info: images/bodegainH1.png  used on input line 285.
+Package pdftex.def Info: images/bodegainH1.png  used on input line 355.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.290 
+l.361 
        [3 <./images/bodegain.png> <./images/bodegainH1.png>]
-<images/bodegainH2.png, id=185, 481.8pt x 361.35pt>
+<images/bodegainH2.png, id=190, 481.8pt x 361.35pt>
 File: images/bodegainH2.png Graphic file (type png)
 <use images/bodegainH2.png>
-Package pdftex.def Info: images/bodegainH2.png  used on input line 297.
+Package pdftex.def Info: images/bodegainH2.png  used on input line 371.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
-<images/bodegainHtotal.png, id=186, 481.8pt x 361.35pt>
+<images/bodegainHtotal.png, id=191, 481.8pt x 361.35pt>
 File: images/bodegainHtotal.png Graphic file (type png)
 <use images/bodegainHtotal.png>
-Package pdftex.def Info: images/bodegainHtotal.png  used on input line 307.
+Package pdftex.def Info: images/bodegainHtotal.png  used on input line 384.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
 
 Underfull \vbox (badness 6641) has occurred while \output is active []
 
 
-Overfull \hbox (4.24974pt too wide) in paragraph at lines 329--341
+Overfull \hbox (4.24974pt too wide) in paragraph at lines 417--429
  [] 
  []
 
@@ -843,61 +843,57 @@ Overfull \hbox (4.24974pt too wide) in paragraph at lines 329--341
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.344 \newpage
+l.434 \newpage
                [4 <./images/bodegainH2.png> <./images/bodegainHtotal.png>]
-<images/hsfiltro1.png, id=194, 789.70032pt x 88.83188pt>
+<images/hsfiltro1.png, id=199, 789.70032pt x 88.83188pt>
 File: images/hsfiltro1.png Graphic file (type png)
 <use images/hsfiltro1.png>
-Package pdftex.def Info: images/hsfiltro1.png  used on input line 357.
+Package pdftex.def Info: images/hsfiltro1.png  used on input line 453.
 (pdftex.def)             Requested size: 257.61894pt x 28.97844pt.
-<images/zoomH1.png, id=195, 759.58781pt x 596.2275pt>
+<images/zoomH1.png, id=200, 759.58781pt x 596.2275pt>
 File: images/zoomH1.png Graphic file (type png)
 <use images/zoomH1.png>
-Package pdftex.def Info: images/zoomH1.png  used on input line 363.
+Package pdftex.def Info: images/zoomH1.png  used on input line 460.
 (pdftex.def)             Requested size: 257.61894pt x 202.2143pt.
 
-Underfull \hbox (badness 1590) in paragraph at lines 367--368
-[]\OT1/cmr/m/n/12 Daqui ti-ra-mos uma fre-quen-cia de corte de
+Underfull \hbox (badness 1590) in paragraph at lines 465--466
+[]\OT1/cmr/m/n/12 Daqui ti-ra-mos uma frequ^encia de corte de
  []
 
-<images/hsfiltro2.png, id=196, 789.70032pt x 132.495pt>
+<images/hsfiltro2.png, id=201, 789.70032pt x 132.495pt>
 File: images/hsfiltro2.png Graphic file (type png)
 <use images/hsfiltro2.png>
-Package pdftex.def Info: images/hsfiltro2.png  used on input line 374.
+Package pdftex.def Info: images/hsfiltro2.png  used on input line 475.
 (pdftex.def)             Requested size: 257.61894pt x 43.22209pt.
-<images/zoomH2.png, id=197, 792.71156pt x 601.4972pt>
+<images/zoomH2.png, id=202, 792.71156pt x 601.4972pt>
 File: images/zoomH2.png Graphic file (type png)
 <use images/zoomH2.png>
-Package pdftex.def Info: images/zoomH2.png  used on input line 380.
+Package pdftex.def Info: images/zoomH2.png  used on input line 482.
 (pdftex.def)             Requested size: 257.61894pt x 195.4751pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 384--385
-[]\OT1/cmr/m/n/12 Daqui ti-ra-mos uma fre-quen-cia de corte de
+Underfull \hbox (badness 1590) in paragraph at lines 487--488
+[]\OT1/cmr/m/n/12 Daqui ti-ra-mos uma frequ^encia de corte de
  []
 
 
 Underfull \vbox (badness 1490) has occurred while \output is active []
 
-<images/hsfiltrototal.png, id=198, 534.49687pt x 152.06813pt>
+<images/hsfiltrototal.png, id=203, 534.49687pt x 152.06813pt>
 File: images/hsfiltrototal.png Graphic file (type png)
 <use images/hsfiltrototal.png>
-Package pdftex.def Info: images/hsfiltrototal.png  used on input line 392.
+Package pdftex.def Info: images/hsfiltrototal.png  used on input line 498.
 (pdftex.def)             Requested size: 257.61894pt x 73.29584pt.
-<images/zoomHtotal.png, id=199, 803.25093pt x 588.69937pt>
+<images/zoomHtotal.png, id=204, 803.25093pt x 588.69937pt>
 File: images/zoomHtotal.png Graphic file (type png)
 <use images/zoomHtotal.png>
-Package pdftex.def Info: images/zoomHtotal.png  used on input line 398.
+Package pdftex.def Info: images/zoomHtotal.png  used on input line 505.
 (pdftex.def)             Requested size: 257.61894pt x 188.80983pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 1590) in paragraph at lines 402--403
-[]\OT1/cmr/m/n/12 Daqui ti-ra-mos uma fre-quen-cia de corte de
+Underfull \hbox (badness 1590) in paragraph at lines 510--511
+[]\OT1/cmr/m/n/12 Daqui ti-ra-mos uma frequ^encia de corte de
  []
 
 
@@ -907,24 +903,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.406 
-       [5 <./images/hsfiltro1.png (PNG copy)> <./images/zoomH1.png (PNG copy)> <./images/hsfiltro2.png (PNG copy)> <./images/zoomH2.png (PNG copy)> <./images/hsfiltrototal.png (PNG copy)>]
-Underfull \hbox (badness 1286) in paragraph at lines 409--410
-[]\OT1/cmr/m/n/12 Observamos um ga-nho uni-ta-rio, que ocorre
+l.516 
+       [5 <./images/hsfiltro1.png (PNG copy)> <./images/zoomH1.png (PNG copy)> <./images/hsfiltro2.png (PNG copy)> <./images/zoomH2.png (PNG copy)> <./images/hsfiltrototal.png (PNG copy)> <./images/zoomHtotal.png (PNG copy)>]
+Underfull \hbox (badness 1286) in paragraph at lines 521--522
+[]\OT1/cmr/m/n/12 Observamos um ga-nho unit^^Sario, que ocorre
  []
 
-<images/magnitudepontosreais.png, id=208, 481.8pt x 361.35pt>
+<images/magnitudepontosreais.png, id=214, 481.8pt x 361.35pt>
 File: images/magnitudepontosreais.png Graphic file (type png)
 <use images/magnitudepontosreais.png>
-Package pdftex.def Info: images/magnitudepontosreais.png  used on input line 433.
+Package pdftex.def Info: images/magnitudepontosreais.png  used on input line 553.
 (pdftex.def)             Requested size: 257.61894pt x 193.21834pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.441 \newpage
-               [6 <./images/zoomHtotal.png (PNG copy)> <./images/magnitudepontosreais.png>]
-Underfull \hbox (badness 5345) in paragraph at lines 446--447
+Underfull \hbox (badness 5345) in paragraph at lines 572--573
 []\OT1/cmr/m/n/12 Conseguimos com su-cesso fa-zer a an^^Salise
  []
 
@@ -932,26 +923,24 @@ Underfull \hbox (badness 5345) in paragraph at lines 446--447
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.458 \end{document}
-                     [7
-
-] (./relatorio5.aux)
+l.590 \end{document}
+                     [6 <./images/magnitudepontosreais.png>] (./relatorio5.aux)
 Package rerunfilecheck Info: File `relatorio5.out' has not changed.
-(rerunfilecheck)             Checksum: 3B8B3D963A36823EAB450FA25DD71444;3558.
+(rerunfilecheck)             Checksum: FECEDB8AB7659B7322FF23E2FECD927B;3817.
  ) 
 Here is how much of TeX's memory you used:
- 53639 strings out of 476025
- 1382820 string characters out of 5796533
- 2134512 words of memory out of 5000000
- 73381 multiletter control sequences out of 15000+600000
+ 53643 strings out of 476025
+ 1382866 string characters out of 5796533
+ 2134510 words of memory out of 5000000
+ 73384 multiletter control sequences out of 15000+600000
  521219 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,9n,118p,796b,908s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on relatorio5.pdf (7 pages, 552551 bytes).
+Output written on relatorio5.pdf (6 pages, 553164 bytes).
 PDF statistics:
  282 PDF objects out of 1000 (max. 8388607)
- 231 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 232 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -31,6 +31,7 @@
 \usepackage{adjustbox}
 \usepackage{indentfirst}
 
+
 \pgfplotsset{compat=newest}
 \graphicspath{ {./images/} }
 %  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
@@ -56,19 +57,28 @@
 \newpage
 
 
+
+
 \section{Introdução}
+
 
 Neste relatório, vamos discutir filtros de Butterworth, em particular, vamos projetar, montar e testar um filtro de Butterworth ativo passa-baixa de quarta ordem.
 
+
 Todos arquivos utilizados para criar este relatório, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/5th semester/Circuits II/}
+
 
 \section{Análise preliminar}
 
+
 Utilizarei o Maxima para fazer a análise teórica do circuito antes de montá-lo fisicamente.
+
 
 Após terminar as análises compararei os resultados obtidos nas análises numéricas e em laboratório para verificar sua coerência.
 
+
 \subsection{O circuito}
+
 
 \begin{figure}[h]
     \centering
@@ -76,11 +86,16 @@ Após terminar as análises compararei os resultados obtidos nas análises numé
     \caption{Filtro ativo Butterworth de segunda ordem.}
 \end{figure}
 
+
 \pagebreak
+
 
 \subsection{Maxima}
 
-Podemos realizar a análise do circuito utilizando analise nodal.
+
+Podemos realizar a análise do circuito utilizando análise nodal.
+
+
 
 
 \begin{equation}
@@ -90,13 +105,17 @@ Podemos realizar a análise do circuito utilizando analise nodal.
     \end{aligned}
 \end{equation}
 
+
 Resolvendo simbolicamente no Maxima obtemos o seguinte:
+
 
 \begin{equation}
     \frac{\frac{1}{C_1 C_2 R^2}}{s^2 + \frac{2s}{C_1 R} + \frac{1}{C_1 C_2 R^2}}
 \end{equation}
 
-Daqui vemos que temos um circuito passa-baixa com os seguintes parametros:
+
+Daqui vemos que temos um circuito passa-baixa com os seguintes parâmetros:
+
 
 \begin{equation}
     \begin{aligned}
@@ -105,9 +124,12 @@ Daqui vemos que temos um circuito passa-baixa com os seguintes parametros:
     \end{aligned}
 \end{equation}
 
-E ja que estamos tratando de um filtro Butterworth de quarta ordem, precisamos analisar as projecoes das raizes dos seus polos no eixo real.
 
-No caso, so observaremos as do segundo quadrante, ja que as suas projecoes serao iguais as das raizes que se encontram no terceiro quadrante.
+E já que estamos tratando de um filtro Butterworth de quarta ordem, precisamos analisar as projeções das raízes dos seus pólos no eixo real.
+
+
+No caso, só observamos as do segundo quadrante, já que as suas projeções são iguais às das raízes que se encontram no terceiro quadrante.
+
 
 \begin{equation}
     \begin{aligned}
@@ -116,11 +138,15 @@ No caso, so observaremos as do segundo quadrante, ja que as suas projecoes serao
     \end{aligned}
 \end{equation}
 
-Com esta informacao podemos projetar os filtros prototipos que utilizaremos em serie para obter nosso filtro de quarta ordem.
+
+Com esta informação podemos projetar os filtros protótipos que utilizaremos em série para obter nosso filtro de quarta ordem.
+
 
 \subsubsection{Filtro 1}
 
+
 Neste filtro chamaremos seus resistores de $R_1$ seus capacitores de $C_1$ e $C_2$.
+
 
 \begin{equation}
     \begin{aligned}
@@ -130,7 +156,9 @@ Neste filtro chamaremos seus resistores de $R_1$ seus capacitores de $C_1$ e $C_
     \end{aligned}
 \end{equation}
 
-Resolvendo para essas equacoes teremos:
+
+Resolvendo para essas equações teremos:
+
 
 \begin{equation}
     \begin{aligned}
@@ -140,9 +168,12 @@ Resolvendo para essas equacoes teremos:
     \end{aligned}
 \end{equation}
 
-Agora vamos realizar o escalonamento para $50Hz$, ja que o nosso circuito prototipo foi projetado para $1Hz$.
 
-Utilizaremos as seguintes equacoes de escalonamento:
+Agora vamos realizar o escalonamento para $50Hz$, já que o nosso circuito protótipo foi projetado para $1Hz$.
+
+
+Utilizaremos as seguintes equaçoes de escalonamento:
+
 
 \begin{equation}
     \begin{aligned}
@@ -151,9 +182,12 @@ Utilizaremos as seguintes equacoes de escalonamento:
     \end{aligned}
 \end{equation}
 
-Com $k_f = 50$ para escalonarmos a frequencia central para $50Hz$ e escolheremos um valor de $k_m = 8.3 * 10^4$ para utilizarmos apenas um unico resistor com valor comercial.
 
-Entao obteremos os seguintes componentes que serao usados para montar o filtro:
+Com $k_f = 50$ para escalonarmos a frequência central para $50Hz$ e escolhemos um valor de $k_m = 8.3 * 10^4$ para utilizarmos apenas um único resistor com valor comercial.
+
+
+Então obteremos os seguintes componentes que serão usados para montar o filtro:
+
 
 \begin{equation}
     \begin{aligned}
@@ -164,9 +198,13 @@ Entao obteremos os seguintes componentes que serao usados para montar o filtro:
 \end{equation}
 
 
+
+
 \subsubsection{Filtro 2}
 
+
 Neste filtro chamaremos seus resistores de $R_2$ seus capacitores de $C_3$ e $C_4$.
+
 
 \begin{equation}
     \begin{aligned}
@@ -176,7 +214,9 @@ Neste filtro chamaremos seus resistores de $R_2$ seus capacitores de $C_3$ e $C_
     \end{aligned}
 \end{equation}
 
-Resolvendo para essas equacoes teremos:
+
+Resolvendo para essas equações teremos:
+
 
 \begin{equation}
     \begin{aligned}
@@ -186,9 +226,12 @@ Resolvendo para essas equacoes teremos:
     \end{aligned}
 \end{equation}
 
-Agora vamos realizar o escalonamento para $50Hz$, ja que o nosso circuito prototipo foi projetado para $1Hz$.
 
-Utilizaremos as seguintes equacoes de escalonamento:
+Agora vamos realizar o escalonamento para $50Hz$, já que o nosso circuito protótipo foi projetado para $1Hz$.
+
+
+Utilizaremos as seguintes equaçoes de escalonamento:
+
 
 \begin{equation}
     \begin{aligned}
@@ -197,9 +240,12 @@ Utilizaremos as seguintes equacoes de escalonamento:
     \end{aligned}
 \end{equation}
 
-Com $k_f = 50$ para escalonarmos a frequencia central para $50Hz$ e escolheremos um valor de $k_m = 6.2 * 10^4$ para utilizarmos apenas um unico resistor com valor comercial.
 
-Entao obteremos os seguintes componentes que serao usados para montar o filtro:
+Com $k_f = 50$ para escalonarmos a frequência central para $50Hz$ e escolhemos um valor de $k_m = 6.2 * 10^4$ para utilizarmos apenas um único resistor com valor comercial.
+
+
+Então obteremos os seguintes componentes que serão usados para montar o filtro:
+
 
 \begin{equation}
     \begin{aligned}
@@ -209,9 +255,12 @@ Entao obteremos os seguintes componentes que serao usados para montar o filtro:
     \end{aligned}
 \end{equation}
 
+
 \subsubsection{Filtro combinado}
 
-Podemos entao combinar os dois filtros de Butterworth de segunda ordem que projetamos em serie para obter um filtro de quarta ordem com a seguinte funcao de transferencia:
+
+Podemos então combinar os dois filtros de Butterworth de segunda ordem que projetamos em série para obter um filtro de quarta ordem com a seguinte função de transferência:
+
 
 \begin{equation}
     \begin{aligned}
@@ -223,7 +272,10 @@ Podemos entao combinar os dois filtros de Butterworth de segunda ordem que proje
 \end{equation}
 
 
-\subsubsection{Grafico de Bode}
+
+
+\subsubsection{Gráfico de Bode}
+
 
 \begin{figure}[h]
     \centering
@@ -231,28 +283,41 @@ Podemos entao combinar os dois filtros de Butterworth de segunda ordem que proje
     \caption{Magnitude de H(s) do filtro.}
 \end{figure}
 
+
 Temos $80dB$ de perda em $500Hz$ e $160dB$ de perda em $5000Hz$.
 
-Cada filtro de Butterworth tem $40dB$ de perda por decada. Como temos dois em serie, perdemos $80dB$ por decada.
 
-Em outras palavras. temos $20dB$ de perda por polo por decada. Como temos 4 polos, perdemos $80dB$ por decada.
+Cada filtro de Butterworth tem $40dB$ de perda por década. Como temos dois em série, perdemos $80dB$ por década.
 
-Entao o que observamos eh coerente.
+
+Em outras palavras, temos $20dB$ de perda por polo por década. Como temos 4 polos, perdemos $80dB$ por década.
+
+
+Então o que observamos é coerente.
+
 
 \pagebreak
+
 
 \section{Medições em laboratório}
 
 
-\subsection{Os Circuitos}
+
+
+\subsection{Os filtros}
+
 
 Inicialmente farei as medições dos componentes a serem usados.
 
-Apos isso farei um breve teste em cada um dos filtros de segunda ordem individualmente.
+
+Após isso farei um breve teste em cada um dos filtros de segunda ordem individualmente.
+
 
 Por fim, combinarei os dois filtros no nosso filtro de quarta  ordem que queremos analisar.
 
+
 \subsection{Tabela de componentes}
+
 
 \subsubsection*{Filtro 1}
 \begin{equation}
@@ -264,6 +329,7 @@ Por fim, combinarei os dois filtros no nosso filtro de quarta  ordem que queremo
     \end{aligned}
 \end{equation}
 
+
 \subsubsection*{Filtro 2}
 \begin{equation}
     \begin{aligned}
@@ -274,11 +340,15 @@ Por fim, combinarei os dois filtros no nosso filtro de quarta  ordem que queremo
     \end{aligned}
 \end{equation}
 
-\subsection{Graficos de Bode dos filtros reais}
 
-Substitui os valores reais no Maxima para obter graficos de Bode dos filtros reais. Para observar o comportamento real esperado.
+\subsection{Gráficos de Bode dos filtros reais}
+
+
+Substitui os valores reais no Maxima para obter gráficos de Bode dos filtros reais. Para observar o comportamento real esperado.
+
 
 \subsubsection{Filtro 1}
+
 
 \begin{figure}[h]
     \centering
@@ -286,42 +356,60 @@ Substitui os valores reais no Maxima para obter graficos de Bode dos filtros rea
     \caption{Magnitude de H(s) do filtro 1.}
 \end{figure}
 
-Notemos que ha um ganho consideravel antes de comecar a filtrar frequencias altas.
 
-Achamos uma frequencia de corte de $72Hz$.
+Notamos que há um ganho considerável antes de começar a filtrar frequências altas.
+
+
+Achamos uma frequência de corte de $71Hz$.
+
 
 \subsubsection{Filtro 2}
 
-\begin{figure}[h]
+
+\begin{figure}[htbp!]
     \centering
     \includegraphics[width=1\columnwidth]{images/bodegainH2.png}
     \caption{Magnitude de H(s) do filtro 2.}
 \end{figure}
 
-Achamos uma frequencia de corte de $54Hz$.
+
+Achamos uma frequência de corte de $36Hz$.
+
 
 \subsubsection{Filtro total}
 
-\begin{figure}[h]
+
+\begin{figure}[htbp!]
     \centering
     \includegraphics[width=1\columnwidth]{images/bodegainHtotal.png}
     \caption{Magnitude de H(s) do filtro total.}
 \end{figure}
 
-Achamos uma frequencia de corte de $59Hz$.
+
+Achamos uma frequência de corte de $50Hz$.
+
+
 
 
 \pagebreak
 
 
 
-\subsection{Comportamento na frequencia}
 
-Em frequencias baixas constatamos que o ganho permanecia 1. E achamos sua frequencia de corte de fato em 59Hz. Como esperavamos da analise numerica com os valores reais.
 
-Notamos tambem que ha um pequeno ganho antes de atingirmos a frequencia de corte. Este comportamento pode ser observado no grafico de Bode do filtro 1 que fizemos acima na secao (3.3.1).
 
-As fotos do osciloscopio se encontram na pasta do relatorio em "images/osciloscopio/*".
+\subsection{Comportamento na frequência}
+
+
+Em frequências baixas constatamos que o ganho permanecia 1. E achamos sua frequência de corte de fato em 59Hz. Como esperávamos da análise numérica com os valores reais.
+
+
+Notamos também que há um pequeno ganho antes de atingirmos a frequência de corte. Este comportamento pode ser observado no gráfico de Bode do filtro 1 que fizemos acima na seção (3.3.1).
+
+
+As fotos do osciloscópio se encontram na pasta do relatório em "images/osciloscopio/*".
+
+
 
 
 \subsection{Resultados das medidas}
@@ -341,16 +429,24 @@ As fotos do osciloscopio se encontram na pasta do relatorio em "images/oscilosco
 \end{center}
 
 
+
+
 \newpage
+
+
 
 
 \section{Pós-laboratorial}
 
-As tabelas estao na secao 3.2 e 3.5.
 
-\subsection{Funcao transferencia de todos filtros envolvidos.}
+As tabelas estão na seção 3.2 e 3.5.
+
+
+\subsection{Função transferência de todos filtros envolvidos.}
+
 
 \subsubsection{Filtro 1}
+
 
 \begin{figure}[h]
     \centering
@@ -358,16 +454,21 @@ As tabelas estao na secao 3.2 e 3.5.
     \caption{H(s) do filtro 1 com valores reais.}
 \end{figure}
 
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\columnwidth]{images/zoomH1.png}
-    \caption{Zoom do grafico de Bode do filtro 1 com valores reais.}
+    \caption{Zoom do gráfico de Bode do filtro 1 com valores reais.}
 \end{figure}
 
-Daqui tiramos uma frequencia de corte de $71.1Hz$ a partir do grafico de Bode desta funcao.
+
+Daqui tiramos uma frequência de corte de $71.1Hz$ a partir do gráfico de Bode desta função.
+
+
 
 
 \subsubsection{Filtro 2}
+
 
 \begin{figure}[h]
     \centering
@@ -375,43 +476,58 @@ Daqui tiramos uma frequencia de corte de $71.1Hz$ a partir do grafico de Bode de
     \caption{H(s) do filtro 2 com valores reais.}
 \end{figure}
 
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\columnwidth]{images/zoomH2.png}
-    \caption{Zoom do grafico de Bode do filtro 2 com valores reais.}
+    \caption{Zoom do gráfico de Bode do filtro 2 com valores reais.}
 \end{figure}
 
-Daqui tiramos uma frequencia de corte de $35.9Hz$ a partir do grafico de Bode desta funcao.
+
+Daqui tiramos uma frequência de corte de $35.9Hz$ a partir do gráfico de Bode desta função.
+
+
 
 
 \pagebreak
 \subsubsection{Filtro total}
 
-\begin{figure}[h]
+
+\begin{figure}[htbp!]
     \centering
     \includegraphics[width=1\columnwidth]{images/hsfiltrototal.png}
     \caption{H(s) do filtro total com valores reais.}
 \end{figure}
 
-\begin{figure}[h]
+
+\begin{figure}[htbp!]
     \centering
     \includegraphics[width=1\columnwidth]{images/zoomHtotal.png}
-    \caption{Zoom do grafico de Bode do filtro total com valores reais.}
+    \caption{Zoom do gráfico de Bode do filtro total com valores reais.}
 \end{figure}
 
-Daqui tiramos uma frequencia de corte de $50.5Hz$ a partir do grafico de Bode desta funcao.
+
+Daqui tiramos uma frequência de corte de $50.5Hz$ a partir do gráfico de Bode desta função.
+
+
 
 
 \pagebreak
 
-\subsection{Ganho do filtro}
-
-Observamos um ganho unitario, que ocorre quando $s = jw$ com $w$ tendendo a $0$.
-
-Que eh o resultado esperado para filtro passa-baixa.
-
 
 \subsection{Ganho do filtro}
+
+
+Observamos um ganho unitário, que ocorre quando $s = jw$ com $w$ tendendo a $0$.
+
+
+Que é o resultado esperado para filtro passa-baixa.
+
+
+
+
+\subsection{Tabela de magnitudes}
+
 
 \begin{center}
     \begin{tabular}{ |c|c|c|c| }
@@ -428,31 +544,47 @@ Que eh o resultado esperado para filtro passa-baixa.
     \end{tabular}
 \end{center}
 
+
+\subsection{Dados achado e gráfico de Bode}
+
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\columnwidth]{images/magnitudepontosreais.png}
-    \caption{Grafico da curva esperada pelos pontos encontrados.}
+    \caption{Gráfico da curva esperada pelos pontos encontrados.}
 \end{figure}
 
-Ha uma discrepancia, que ja haviamos detectado. Em 4.1.3 vimos que a frequencia de corte esperada com os valores reais dos componentes eh de $50.5Hz$, e a que encontramos experimentalmente foi de $59Hz$.
 
-Eu nao tenho certeza de pro que houve essa discrepancia. Creio que seja por conta de erro de medicao dos valores dos componentes.
+Há uma discrepância, que já havíamos detectado. Em 4.1.3 vimos que a frequência de corte esperada com os valores reais dos componentes eh de $50.5Hz$, e a que encontramos experimentalmente foi de $59Hz$.
+
+
+Eu não tenho certeza de por que houve essa discrepancia. Creio que seja por conta de erro de medição dos valores dos componentes.
+
 
 \newpage
 
 
+
+
 \section{Conclusões}
+
 
 Conseguimos com sucesso fazer a análise numérica pelo Maxima, e comparamos os resultados com os obtidos experimentalmente.
 
+
 Nos resultados práticos, a magnitude da função transferência e as frequências de corte foram coerentes com os resultados esperados.
 
-Porem, houve o erro evidenciado em 4.3, de que a frequencia de corte esperada pelos valores de componentes medidos era de $50.5Hz$, e a que de fato achamos foi de $59Hz$.
 
-Creio que por conta de erro de medicao dos valores dos componentes.
+Porém, houve o erro evidenciado em 4.3, de que a frequência de corte esperada pelos valores de componentes medidos era de $50.5Hz$, e a que de fato achamos foi de $59Hz$.
+
+
+Creio que por conta de erro de medição dos valores dos componentes.
+
 
 Os gráficos que geramos a partir dos resultados experimentais foram coerentes com os gráficos gerados numericamente.
 
+
 Em suma creio que tivemos sucesso em nos familiarizar com as ferramentas de análise de circuitos elétricos numéricos.
+
 
 \end{document}

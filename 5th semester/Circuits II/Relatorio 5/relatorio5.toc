@@ -6,21 +6,22 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Filtro 1}{}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Filtro 2}{}{subsubsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Filtro combinado}{}{subsubsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}Grafico de Bode}{}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.4}Gráfico de Bode}{}{subsubsection.2.2.4}%
 \contentsline {section}{\numberline {3}Medições em laboratório}{}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Os Circuitos}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Os filtros}{}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Tabela de componentes}{}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Graficos de Bode dos filtros reais}{}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Gráficos de Bode dos filtros reais}{}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Filtro 1}{}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Filtro 2}{}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Filtro total}{}{subsubsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.4}Comportamento na frequencia}{}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.4}Comportamento na frequência}{}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Resultados das medidas}{}{subsection.3.5}%
 \contentsline {section}{\numberline {4}Pós-laboratorial}{}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Funcao transferencia de todos filtros envolvidos.}{}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Função transferência de todos filtros envolvidos.}{}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Filtro 1}{}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}Filtro 2}{}{subsubsection.4.1.2}%
 \contentsline {subsubsection}{\numberline {4.1.3}Filtro total}{}{subsubsection.4.1.3}%
 \contentsline {subsection}{\numberline {4.2}Ganho do filtro}{}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Ganho do filtro}{}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}Tabela de magnitudes}{}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Dados achado e gráfico de Bode}{}{subsection.4.4}%
 \contentsline {section}{\numberline {5}Conclusões}{}{section.5}%
