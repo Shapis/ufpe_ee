@@ -30,8 +30,8 @@ class Elemento:
     ub = 0                      # Mobilidade de buracos cm^2 / V*s
     Dn = 0                      # Coeficiente de difusao cm^2 / s
     Dp = 0                      # Coeficiente de difusao cm^2 / s
-    me = 0                      # Massa efetiva de elétrons (me*/mo)
-    mc = 0                      # Massa efetiva de elétrons (mc*/mo)
+    me = 0                      # Massa efetiva de eletrons (me*/mo)
+    mc = 0                      # Massa efetiva de eletrons (mc*/mo)
     mb = 0                      # Massa efetiva de buracos (mb*/mo)
     mv = 0                      # Massa efetiva de buracos (mv*/mo)
 
@@ -117,46 +117,58 @@ def SelectElemento():
 
 def FotodiodoLaser():
     _elemento = SelectElemento()
-    _area = float(input("Area (cm²): "))
+    print()
+    _area = float(input("Area (cm^2): "))
+    print()
     _area = _area*1E-4
-    _intensidade = float(input("Intensidade do laser (W/cm²): "))
+    _intensidade = float(input("Intensidade do laser (W/cm^2): "))
+    print()
     _intensidade = _intensidade*1E4
     _lambda = float(input("Comprimento de onda (nm): "))
+    print()
     _lambda = _lambda*1E-9
-    _Is = float(input("Corrente de saturação reversa (pA): "))
+    _Is = float(input("Corrente de saturaçao reversa (pA): "))
+    print()
     _Is = _Is*1E-12
-    _n = float(input("Eficiência (%): "))
+    _n = float(input("Eficiencia (%): "))
+    print()
     _n = _n*1E-2
 
     _P_L = _intensidade*_area
     _I_L = _n*e*_P_L*_lambda/(h*c)
-    print("a) A fotocorrente gerada.\nP_L = Io.A =", _intensidade, ".", _area, "=", _P_L,"W")
+    print("a) A fotocorrente gerada.\nP_L = Io.A =",
+          _intensidade, ".", _area, "=", _P_L, "W")
     print("I_L = n.e.P_L.lambda/h.c =", _I_L, "(A)")
-    
+
     print("\nb) A responsividade do fotodiodo para este comprimento de onda.")
     print("r = I_L/P_L =", _I_L/_P_L, "(A/W)")
-    
+
     print("\nc) A corrente de escuro.")
     print("Ie = Is(e^(eV/KbT) - 1), com V=0, Ie = Is.(1-1) = 0")
-    
+
     print("\nd) A corrente de escuro se o fotodiodo for polarizado reversamente.")
-    _tensaoReversa = float(input("Tensão reversa (V): "))
+    _tensaoReversa = float(input("Tensao reversa (V): "))
+    print()
     _Ie = _Is*(math.exp(-_tensaoReversa/KbTe) - 1)
-    print("Ie = Is(e^(eV/KbT) - 1), com V =", -_tensaoReversa, ", Ie =", _Ie, "(A)")
-    
+    print("Ie = Is(e^(eV/KbT) - 1), com V =", -
+          _tensaoReversa, ", Ie =", _Ie, "(A)")
+
     print("\ne)Supondo agora que este diodo seja utilizado para detectar a luz de um laser de (?) (Lambda = (?)).")
     _lambda_2 = float(input("Comprimento de onda do novo laser (um):"))
+    print()
     _lambda_2 = _lambda_2*1E-6
     _lambda_c = h*c/_elemento.E_Gap
     print("Lambda_c = h.c/Eg =", _lambda_c, "(m)")
-    
+
     print("\nQual a fotocorrente gerada para este comprimento de onda?")
-    if _lambda_2>_lambda_c:
-        print("A fotocorrente é nula já que o Lambda do novo laser é maior que o Lambda_c")
+    if _lambda_2 > _lambda_c:
+        print("A fotocorrente e nula ja que o Lambda do novo laser e maior que o Lambda_c")
     else:
         _I_L = _I_L*_lambda_2/_lambda
         print("I_L = n.e.P_L.lambda/h.c")
-        print("A fotocorrente para este comprimento de onda é", _I_L)
+        print("A fotocorrente para este comprimento de onda e", _I_L)
+
+
 FotodiodoLaser()
 
 # END

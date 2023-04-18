@@ -29,8 +29,8 @@ class Elemento:
     ub = 0                      # Mobilidade de buracos cm^2 / V*s
     Dn = 0                      # Coeficiente de difusao cm^2 / s
     Dp = 0                      # Coeficiente de difusao cm^2 / s
-    me = 0                      # Massa efetiva de elétrons (me*/mo)
-    mc = 0                      # Massa efetiva de elétrons (mc*/mo)
+    me = 0                      # Massa efetiva de eletrons (me*/mo)
+    mc = 0                      # Massa efetiva de eletrons (mc*/mo)
     mb = 0                      # Massa efetiva de buracos (mb*/mo)
     mv = 0                      # Massa efetiva de buracos (mv*/mo)
 
@@ -113,84 +113,97 @@ def SelectElemento():
 
 # Lista 4 Questao 9
 
+
 def FotoDiodos():
-    print("a) Obtenha Vca, Icc e Is de cada dispositivo à temperatura ambiente.")
-    
-    print("do Formulário:")
+    print("a) Obtenha Vca, Icc e Is de cada dispositivo a temperatura ambiente.")
+
+    print("do Formulario:")
     print("I = Is(e^(Vca.e/KbT) - 1) - I_L, onde I_L = Icc")
     print("Fazendo I = 0 e isolando Is")
     print("Is = Icc/(e^(Vca.e/KbT) - 1)")
     print()
-    
+
     Vca1 = float(input("Vca do LS222 (V): "))
+    print()
     Icc1 = float(input("Icc do LS222 (mA): "))
+    print()
     Is1 = Icc1/(math.exp(Vca1/KbTe) - 1)
     print("Is do LS222 (pA): ", round(Is1*10**9, 2))
     print()
     Vca2 = float(input("Vca do LS223 (V): "))
+    print()
     Icc2 = float(input("Icc do LS223 (mA): "))
+    print()
     Is2 = Icc2/(math.exp(Vca2/KbTe) - 1)
     print("Is do LS223 (pA): ", round(Is2*10**9, 2))
     print()
-    
-    print("b) Escolher um conjunto para operar como fotodetetor e outro para célula solar")
-    R={}
-    V={}
-    I={}
+
+    print("b) Escolher um conjunto para operar como fotodetetor e outro para celula solar")
+    R = {}
+    V = {}
+    I = {}
     for i in range(3):
-        R[i] = int(input("Resistência: "))
-    j=0
-    maiorI=0
-    R_L=0
+        R[i] = int(input("Resistencia: "))
+        print()
+    j = 0
+    maiorI = 0
+    R_L = 0
     print()
     print("fotodiodo LS222:")
     for i in range(6):
-        if i==3:
-            j=i
+        if i == 3:
+            j = i
             print()
             print("fotodiodo LS223:")
-        print("Para a resistência de ", R[i-j], "ohms")
-        V[i] = float(input("Tensão (V): "))
+        print("Para a resistencia de ", R[i-j], "ohms")
+        V[i] = float(input("Tensao (V): "))
+        print()
         I[i] = float(input("Corrente (mA): "))
-        if I[i]>maiorI:
-            maiorI=I[i]
+        print()
+        if I[i] > maiorI:
+            maiorI = I[i]
             index = i
-            if index<3:
+            if index < 3:
                 diodo = "LS222"
             else:
                 diodo = "LS223"
             R_L = R[i-j]
-    j=0
-    maiorP=0
+    j = 0
+    maiorP = 0
     print("fotodiodo LS222:")
     for i in range(6):
-        if i==3:
-            j=i
+        if i == 3:
+            j = i
             print()
             print("fotodiodo LS223:")
         print("R_L = ", R[i-j])
         P = V[i]*I[i]
-        if P>maiorP:
+        if P > maiorP:
             maiorP = P
             index = i
-            if index<3:
+            if index < 3:
                 diode = "LS222"
             else:
                 diode = "LS223"
             R_l = R[i-j]
-        print("Potência: P = ", V[i], "(V).", I[i], "(mA)=", round(P, 3), "mW")
+        print("Potencia: P = ", V[i], "(V).", I[i], "(mA)=", round(P, 3), "mW")
     print()
-    print("Para a célula solar, que tem o objetivo de gerar energia para uma dada potência luminosa, queremos a maior potência no ponto de operação. Logo, podemos escolher o fotodiodo ", diode, "e o resistor de carga de ", R_l, "ohms")
+    print("Para a celula solar, que tem o objetivo de gerar energia para uma dada potencia luminosa, queremos a maior potencia no ponto de operaçao. Logo, podemos escolher o fotodiodo ",
+          diode, "e o resistor de carga de ", R_l, "ohms")
     print()
-    print("Para o fotodetetor, cujo objetivo é obter um maior sinal de corrente para uma dada iluminação, escolhe-se:")
+    print("Para o fotodetetor, cujo objetivo e obter um maior sinal de corrente para uma dada iluminaçao, escolhe-se:")
     print("R_L =", R_L, "e o dispositivo", diodo)
     print()
     print("c)", maiorI)
     print()
-    if diode=="LS222":
-        print("d) P =", maiorP, ", FF = (Vm.Im)/(Icc.Vca) = P/(Icc.Vca) =", maiorP, "/(", Vca1, ".", Icc1, ") =", maiorP/(Vca1*Icc1))
+    if diode == "LS222":
+        print("d) P =", maiorP, ", FF = (Vm.Im)/(Icc.Vca) = P/(Icc.Vca) =",
+              maiorP, "/(", Vca1, ".", Icc1, ") =", maiorP/(Vca1*Icc1))
     else:
-        print("d) P =", maiorP, "(mW), FF = (Vm.Im)/(Icc.Vca) = P/(Icc.Vca) =", maiorP, "/(", Vca2, ".", Icc2, ") =", round(maiorP/(Vca2*Icc2), 3))
+        print("d) P =", maiorP, "(mW), FF = (Vm.Im)/(Icc.Vca) = P/(Icc.Vca) =",
+              maiorP, "/(", Vca2, ".", Icc2, ") =", round(maiorP/(Vca2*Icc2), 3))
+
+
 FotoDiodos()
 
 # END

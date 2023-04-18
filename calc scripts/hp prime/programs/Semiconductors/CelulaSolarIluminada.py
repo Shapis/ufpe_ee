@@ -142,14 +142,23 @@ def form_Is(I_L, Is):
 def SolveCelulaSolarIluminada():
     # Entrada de dados
     _elemento = SelectElemento()
+    print()
     _Area = float(input("Area em cm^2: "))
+    print()
     _Na = float(input("Na, concentracao de aceitadores em cm^-3: "))
+    print()
     _Nd = float(input("Nd, concentracao de doadores em cm^-3: "))
+    print()
     _tauP = float(input("tau P em microsegundos: "))
+    print()
     _tauN = float(input("tau N em microsegundos: "))
+    print()
     _FF = float(input("FF: "))
+    print()
     _lux = float(input("Iluminada com intensidade em W/cm^2: "))
+    print()
     _IL = float(input("Corrente I_L produzida em mA: "))
+    print()
 
     _lux = _lux * 1E4
     _Area = _Area * 1E-4

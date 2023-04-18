@@ -143,8 +143,11 @@ def SolveLaserDiodo():
     # Entrada de dados
     _elemento = SelectElemento()
     _I = float(input("Insira a corrente de operacao em A: "))
+    print()
     _n = float(input("Insira a eficiencia n de conversao em %: "))
+    print()
     _W = float(input("Insira a potencia de entrada em mW: "))
+    print()
 
     _W = _W * 10**-3
     _n = _n / 100

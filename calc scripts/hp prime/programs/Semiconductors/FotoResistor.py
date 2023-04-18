@@ -127,13 +127,21 @@ def form_Condutividade(_elemento, _Nd, _Np):
 def SolveFotoResistor():
     # Entrada de dados
     _elemento = SelectElemento()
+    print()
     _Nd = float(input("Qual o Nd em cm^-3: "))
+    print()
     _Np = float(input("Qual o Np em cm^-3? Se nao foi dado eh 0 : "))
+    print()
     _Tau_r = float(input("Qual o Tau_r em s: "))
+    print()
     _Area = float(input("Qual a area em cm^2: "))
+    print()
     _L = float(input("Qual o comprimento em micrometro: "))
+    print()
     _V = float(input("Qual a tensao aplicada em Volts: "))
+    print()
     _G = float(input("Qual a taxa de geracao de portadores em cm^-3 s^-1: "))
+    print()
 
     # Conversoes para SI
     _L = _L * 10**-6

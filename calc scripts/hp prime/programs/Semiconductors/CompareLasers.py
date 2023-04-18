@@ -122,10 +122,14 @@ def SelectElemento():
 def SolveCompareLasers():
     # Entrada de dados
     _eficiencia1 = float(input("Qual a eficiencia do laser 1 em %: "))
+    print()
     _eficiencia2 = float(input("Qual a eficiencia do laser 2 em %: "))
+    print()
     print("Leia o grafico e identifique a sensibilidade relativa de cada laser")
     _sensibilidade1 = float(input("Qual a sensibilidade do laser 1 em %: "))
+    print()
     _sensibilidade2 = float(input("Qual a sensibilidade do laser 2 em %: "))
+    print()
 
     print("n1 = PL1 / Pele -> Pele = PL1 / (n_olho1 * n_led1)")
     print("n2 = PL2 / Pele -> Pele = PL2 / (n_olho2 * n_led2)")

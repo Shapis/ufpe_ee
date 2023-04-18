@@ -123,27 +123,32 @@ def form_Is(I_L, V_CA):
 
 # Lista 4 Questao 2
 
+
 def SolveCelulaSolar():
-    print("Item a) caso em série")
+    print("Item a) caso em serie")
     _VCA1 = float(input("V_CA1 em Volt: "))
-    _IL1 = float(input("I_L1 em Ampére: "))
+    print()
+    _IL1 = float(input("I_L1 em Ampere: "))
+    print()
     _VCA2 = float(input("V_CA2 em Volt: "))
-    _IL2 = float(input("I_L2 em Ampére: "))
+    print()
+    _IL2 = float(input("I_L2 em Ampere: "))
+    print()
 
     I_s1 = form_Is(_IL1, _VCA1)
     I_s2 = form_Is(_IL2, _VCA2)
-    print("I_s1 = " , I_s1 , "A")
-    print("I_s2 = " , I_s2 , "A")
-    
-    if I_s1<=I_s2:
+    print("I_s1 = ", I_s1, "A")
+    print("I_s2 = ", I_s2, "A")
+
+    if I_s1 <= I_s2:
         Icc = -_IL1
     else:
         Icc = -_IL2
-    
+
     V = _VCA1 + _VCA2
     P1 = V*Icc
-    
-    print("Icc = " , round(Icc, 2) , "A")
+
+    print("Icc = ", round(Icc, 2), "A")
     print("V = ", round(V, 2), "V")
     print("P = ", round(P1, 2), "W")
 
@@ -158,12 +163,15 @@ def SolveCelulaSolar():
     print("V =", round(V, 3), "V")
     P2 = -V*I
     print("P =", round(P2, 3), "W")
-    
-    print("Item c) conclusão")
-    if P1<P2:
-        print("Como ", round(-P1, 3), ">", round(-P2, 3), ", a conexão em série é melhor, pois concede mais energia.")
+
+    print("Item c) conclusao")
+    if P1 < P2:
+        print("Como ", round(-P1, 3), ">", round(-P2, 3),
+              ", a conexao em serie eh melhor, pois concede mais energia.")
     else:
-        print("Como ", round(-P2, 3), ">", round(-P1, 3), ", a conexão em paralelo é melhor, pois concede mais energia.")
-        
+        print("Como ", round(-P2, 3), ">", round(-P1, 3),
+              ", a conexao em paralelo eh melhor, pois concede mais energia.")
+
+
 SolveCelulaSolar()
 # END
