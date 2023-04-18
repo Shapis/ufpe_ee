@@ -1,4 +1,4 @@
-# PYTHON EXPORT FotoResistor()
+# PYTHON EXPORT CompareLasers()
 
 import math
 
@@ -115,74 +115,31 @@ def SelectElemento():
 
 # Equacoes do formulario
 
-def form_Condutividade(_elemento, _Nd, _Np):
-    DoForm()
-    print("sigma = Nd*e*un + Np*e*up")
-    return (_Nd * e * _elemento.ue*1E-4 + _Np * e * _elemento.ub*1E-4)
+
+# Lista 4 Questao 4
 
 
-# Lista 4 Questao 3
-
-
-def SolveFotoResistor():
+def SolveCompareLasers():
     # Entrada de dados
-    _elemento = SelectElemento()
-    _Nd = float(input("Qual o Nd em cm^-3: "))
-    _Np = float(input("Qual o Np em cm^-3? Se nao foi dado eh 0 : "))
-    _Tau_r = float(input("Qual o Tau_r em s: "))
-    _Area = float(input("Qual a area em cm^2: "))
-    _L = float(input("Qual o comprimento em micrometro: "))
-    _V = float(input("Qual a tensao aplicada em Volts: "))
-    _G = float(input("Qual a taxa de geracao de portadores em cm^-3 s^-1: "))
+    _eficiencia1 = float(input("Qual a eficiencia do laser 1 em %: "))
+    _eficiencia2 = float(input("Qual a eficiencia do laser 2 em %: "))
+    print("Leia o grafico e identifique a sensibilidade relativa de cada laser")
+    _sensibilidade1 = float(input("Qual a sensibilidade do laser 1 em %: "))
+    _sensibilidade2 = float(input("Qual a sensibilidade do laser 2 em %: "))
 
-    # Conversoes para SI
-    _L = _L * 10**-6
-    _Nd = _Nd * 10**6
-    _Area = _Area * 10**-4
-    _G = _G * 10**6
+    print("n1 = PL1 / Pele -> Pele = PL1 / (n_olho1 * n_led1)")
+    print("n2 = PL2 / Pele -> Pele = PL2 / (n_olho2 * n_led2)")
 
-    print("\nItem a) Corrente de escuro")
-    _condutividade = form_Condutividade(_elemento, _Nd, _Np)
+    PL1 = 1 / (_eficiencia1 * _sensibilidade1)
+    PL2 = 1 / (_eficiencia2 * _sensibilidade2)
 
-    print("I = V/R")
-    print("R = L/(A*sigma)")
-    print("Condutividade = ", _condutividade, " omega^-1")
-    _I = _V/(_L/(_Area*_condutividade))
-    print("Corrente I: ", _I * 10**6, " mA")
+    print("PL2 = ", (PL1/PL2), "PL1")
 
-    print("\nItem b) Concentracao de portadores em excesso")
-
-    print("Taxao de geracao g = Numero de portadores / Tempo")
-    print("Das equacoes adicionais: N_excesso = g * Tau_r")
-    Nexcess = _G * _Tau_r
-    print("N_excesso = ", Nexcess, " m^-3")
-
-    print("\nItem c) Fotocondutividade")
-
-    print("deltaSigma = g * Tau_r * e * (un + up)")
-    _fotoCondutividade = _G * _Tau_r * e * \
-        (_elemento.ue + _elemento.ub) * 1E-4
-    print("Fotocondutividade = ", _fotoCondutividade, " omega^-1 m^-1")
-
-    print("\nItem d) Fotocorrente")
-    print("deltaI = V / deltaR = V * A * deltaSigma / L")
-    _fotoCorrente = _V * _Area * _fotoCondutividade / _L
-    print("Fotocorrente = ", _fotoCorrente * 1000, " mA")
-
-    print("\nItem e) Ganho do dispositivo")
-
-    DoForm()
-    print("Ganho = deltaI / (e g b d l) = deltaI / (e g A L)")
-    _ganho = _fotoCorrente / (e * _G * _Area * _L)
-    print("Ganho = ", _ganho)
-
-    print("\nItem e) Comprimento onda de corte do material")
-
-    print("lambda_c = h * c / E_gap")
-    _lambda_c = (h * c) / _elemento.E_Gap
-
-    print("lambda_c = ", _lambda_c * 1E6, " micrometros")
+    if PL1 < PL2:
+        print("O laser 1 eh mais brilhante para o olho humano")
+    else:
+        print("O laser 2 eh mais brilhante para o olho humano")
 
 
-SolveFotoResistor()
+SolveCompareLasers()
 # END

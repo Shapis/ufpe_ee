@@ -1,4 +1,4 @@
-# PYTHON EXPORT FotoResistor()
+# PYTHON EXPORT LaserDiodo()
 
 import math
 
@@ -115,74 +115,58 @@ def SelectElemento():
 
 # Equacoes do formulario
 
-def form_Condutividade(_elemento, _Nd, _Np):
+def form_Lp(_Dp, _tauP):
     DoForm()
-    print("sigma = Nd*e*un + Np*e*up")
-    return (_Nd * e * _elemento.ue*1E-4 + _Np * e * _elemento.ub*1E-4)
+    print("Lp = sqrt(Dp * tau P)")
+    return (_Dp * _tauP)**(1/2)
 
 
-# Lista 4 Questao 3
+def form_Ln(_Dn, _tauN):
+    DoForm()
+    print("Ln = sqrt(Dn * tau N)")
+    return (_Dn * _tauN)**(1/2)
 
 
-def SolveFotoResistor():
+def form_Is(I_L, Is):
+    DoForm()
+    print("I = Is(e^(eV/KbT) - 1) - I_L = 0")
+    IsolaVars("V")
+    print("e^(eV/KbT) = (I_L/Is) + 1")
+    print("V = 0.026 * ln((I_L/Is) + 1)")
+    return (KbTe * math.log((I_L / Is) + 1))
+
+
+# Lista 4 Questao 6
+
+
+def SolveLaserDiodo():
     # Entrada de dados
     _elemento = SelectElemento()
-    _Nd = float(input("Qual o Nd em cm^-3: "))
-    _Np = float(input("Qual o Np em cm^-3? Se nao foi dado eh 0 : "))
-    _Tau_r = float(input("Qual o Tau_r em s: "))
-    _Area = float(input("Qual a area em cm^2: "))
-    _L = float(input("Qual o comprimento em micrometro: "))
-    _V = float(input("Qual a tensao aplicada em Volts: "))
-    _G = float(input("Qual a taxa de geracao de portadores em cm^-3 s^-1: "))
+    _I = float(input("Insira a corrente de operacao em A: "))
+    _n = float(input("Insira a eficiencia n de conversao em %: "))
+    _W = float(input("Insira a potencia de entrada em mW: "))
 
-    # Conversoes para SI
-    _L = _L * 10**-6
-    _Nd = _Nd * 10**6
-    _Area = _Area * 10**-4
-    _G = _G * 10**6
+    _W = _W * 10**-3
+    _n = _n / 100
 
-    print("\nItem a) Corrente de escuro")
-    _condutividade = form_Condutividade(_elemento, _Nd, _Np)
-
-    print("I = V/R")
-    print("R = L/(A*sigma)")
-    print("Condutividade = ", _condutividade, " omega^-1")
-    _I = _V/(_L/(_Area*_condutividade))
-    print("Corrente I: ", _I * 10**6, " mA")
-
-    print("\nItem b) Concentracao de portadores em excesso")
-
-    print("Taxao de geracao g = Numero de portadores / Tempo")
-    print("Das equacoes adicionais: N_excesso = g * Tau_r")
-    Nexcess = _G * _Tau_r
-    print("N_excesso = ", Nexcess, " m^-3")
-
-    print("\nItem c) Fotocondutividade")
-
-    print("deltaSigma = g * Tau_r * e * (un + up)")
-    _fotoCondutividade = _G * _Tau_r * e * \
-        (_elemento.ue + _elemento.ub) * 1E-4
-    print("Fotocondutividade = ", _fotoCondutividade, " omega^-1 m^-1")
-
-    print("\nItem d) Fotocorrente")
-    print("deltaI = V / deltaR = V * A * deltaSigma / L")
-    _fotoCorrente = _V * _Area * _fotoCondutividade / _L
-    print("Fotocorrente = ", _fotoCorrente * 1000, " mA")
-
-    print("\nItem e) Ganho do dispositivo")
-
+    # Calculos
+    print("Item a) Resistencia em Serie R")
     DoForm()
-    print("Ganho = deltaI / (e g b d l) = deltaI / (e g A L)")
-    _ganho = _fotoCorrente / (e * _G * _Area * _L)
-    print("Ganho = ", _ganho)
+    print("n = Psaida / Pentrada")
+    print("PL = Pele / n")
+    _PL = _W / _n
+    print("A corrente de entrada P_L eh: ", _PL, "W")
+    print("P = VI, V = P/I")
+    _V = _PL / _I
+    print("A tensao de entrada V eh: ", _V, "V")
 
-    print("\nItem e) Comprimento onda de corte do material")
+    print("")
+    print("Utilize a equacao dada pelo enunciado.")
+    print("No caso especifico de V = Eg/q + I Rs...")
+    _Rs = (_V - (_elemento.E_Gap / e)) / _I
 
-    print("lambda_c = h * c / E_gap")
-    _lambda_c = (h * c) / _elemento.E_Gap
-
-    print("lambda_c = ", _lambda_c * 1E6, " micrometros")
+    print("A resistencia em serie eh: ", _Rs, "Ohms")
 
 
-SolveFotoResistor()
+SolveLaserDiodo()
 # END
