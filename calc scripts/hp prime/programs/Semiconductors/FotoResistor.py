@@ -156,7 +156,7 @@ def SolveFotoResistor():
     print("R = L/(A*sigma)")
     print("Condutividade = ", _condutividade, " omega^-1")
     _I = _V/(_L/(_Area*_condutividade))
-    print("Corrente I: ", _I * 10**6, " mA")
+    print("Corrente I: ", _I*1E3, " mA")
 
     print("\nItem b) Concentracao de portadores em excesso")
 

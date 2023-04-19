@@ -188,10 +188,10 @@ def FotoDiodos():
             R_l = R[i-j]
         print("Potencia: P = ", V[i], "(V).", I[i], "(mA)=", round(P, 3), "mW")
     print()
-    print("Para a celula solar, que tem o objetivo de gerar energia para uma dada potencia luminosa, queremos a maior potencia no ponto de operaçao. Logo, podemos escolher o fotodiodo ",
+    print("Para a celula solar, que tem o objetivo de gerar energia para uma dada potencia luminosa, queremos a maior potencia no ponto de operacao. Logo, podemos escolher o fotodiodo ",
           diode, "e o resistor de carga de ", R_l, "ohms")
     print()
-    print("Para o fotodetetor, cujo objetivo e obter um maior sinal de corrente para uma dada iluminaçao, escolhe-se:")
+    print("Para o fotodetetor, cujo objetivo e obter um maior sinal de corrente para uma dada iluminacao, escolhe-se:")
     print("R_L =", R_L, "e o dispositivo", diodo)
     print()
     print("c)", maiorI)

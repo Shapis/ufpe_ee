@@ -127,7 +127,7 @@ def FotodiodoLaser():
     _lambda = float(input("Comprimento de onda (nm): "))
     print()
     _lambda = _lambda*1E-9
-    _Is = float(input("Corrente de saturaçao reversa (pA): "))
+    _Is = float(input("Corrente de saturacao reversa (pA): "))
     print()
     _Is = _Is*1E-12
     _n = float(input("Eficiencia (%): "))
