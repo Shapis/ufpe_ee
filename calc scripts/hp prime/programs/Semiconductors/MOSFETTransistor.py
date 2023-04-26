@@ -76,11 +76,6 @@ GaAs.Dp = 10
 # Funcoes auxilares
 
 
-def FimDoPrograma():
-    print("Fim do programa")
-    quit()
-
-
 def EscolhaInvalida():
     print("Escolha invalida, saindo do programa...")
     quit()
@@ -171,7 +166,6 @@ def SolveMOSFETTransistor():
     _C = (_D*_L)/((_Espessura/(_EOxido*epsilon_0))+(_l / _elemento.epsilon))
     print("C = " + str(_C) + " F")
     print("C = " + str(_C*1E12) + " pF")
-    FimDoPrograma()
 
 
 SolveMOSFETTransistor()
