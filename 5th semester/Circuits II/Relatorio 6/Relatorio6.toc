@@ -1,0 +1,12 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Análise preliminar}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}O circuito}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Maxima}{}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Medições em laboratório}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}O quadripolo}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Tabela de componentes}{}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Resultados das medidas}{}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Parâmetros \emph {Z}}{}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Com resistência de entrada}{}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Conclusões}{}{section.4}%
