@@ -1,0 +1,28 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Análise preliminar}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}O circuito}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Maxima}{}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Quadripolo \emph {A}}{}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Quadripolo \emph {B}}{}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Parámetros "y" do quadripolo \emph {B}}{}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Impedância de entrada com carga}{}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Parâmetros \emph {a} do quadripolo em cascata}{}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}Equações parâmetro \emph {a} em cascata}{}{subsubsection.2.2.6}%
+\contentsline {section}{\numberline {3}Medições em laboratório}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Quadripolo A}{}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Tabela de medidas}{}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Resultados das medidas}{}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Parâmetros \emph {z}}{}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Impedância de entrada com carga}{}{subsubsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.2}Quadripolo B}{}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Tabela de medidas}{}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Resultados das medidas}{}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Parâmetros \emph {y}}{}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Impedância de entrada com carga}{}{subsubsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3}Quadripolo em cascata}{}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Tabela de medidas}{}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Resultados das medidas}{}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Parâmetros \emph {a}}{}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Impedância de entrada com carga}{}{subsubsection.3.3.4}%
+\contentsline {section}{\numberline {4}Conclusões}{}{section.4}%
