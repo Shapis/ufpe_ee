@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.10)  4 MAY 2023 13:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.10)  5 MAY 2023 16:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/hpsilva/Documents/ufpe_ee/5th semester/Electromagnetic Measurements/Relatorio Projeto/Relatorio7.tex"
-(/home/hpsilva/Documents/ufpe_ee/5th semester/Electromagnetic Measurements/Relatorio Projeto/Relatorio7.tex
+**"/home/hpsilva/Documents/ufpe_ee/5th semester/Electromagnetic Measurements/Relatorio Projeto/Relatorio.tex"
+(/home/hpsilva/Documents/ufpe_ee/5th semester/Electromagnetic Measurements/Relatorio Projeto/Relatorio.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -663,8 +663,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip58
 ) (/usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
-) (./Relatorio7.aux)
-\openout1 = `Relatorio7.aux'.
+) (./Relatorio.aux)
+\openout1 = `Relatorio.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
@@ -745,9 +745,9 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
 Package hyperref Info: Link coloring OFF on input line 50.
-(./Relatorio7.out) (./Relatorio7.out)
+(./Relatorio.out) (./Relatorio.out)
 \@outlinefile=\write4
-\openout4 = `Relatorio7.out'.
+\openout4 = `Relatorio.out'.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -756,14 +756,14 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./Relatorio7.toc
+) (./Relatorio.toc
 Underfull \hbox (badness 2653) in paragraph at lines 8--8
  [][] [][]\OT1/cmr/m/n/12 Par^^Sametros "y"do qua-dri- 
  []
 
 )
 \tf@toc=\write5
-\openout5 = `Relatorio7.toc'.
+\openout5 = `Relatorio.toc'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 62--63
@@ -773,23 +773,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 <images/circuito.png, id=143, 668.4975pt x 480.79625pt>
 File: images/circuito.png Graphic file (type png)
 <use images/circuito.png>
-Package pdftex.def Info: images/circuito.png  used on input line 73.
+Package pdftex.def Info: images/circuito.png  used on input line 70.
 (pdftex.def)             Requested size: 257.61894pt x 185.28687pt.
 
-Underfull \hbox (badness 1755) in paragraph at lines 83--84
+Underfull \hbox (badness 1755) in paragraph at lines 80--81
 []\OT1/cmr/m/n/12 Podemos re-a-li-zar a an^^Salise dos qua-dri-po-los
  []
 
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 91.
+(amsmath)                 on input line 88.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./images/circuito.png>]
-Overfull \hbox (63.45163pt too wide) detected at line 124
+Overfull \hbox (63.45163pt too wide) detected at line 121
 [][][][][]
  []
 
@@ -797,9 +797,9 @@ Overfull \hbox (63.45163pt too wide) detected at line 124
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.245 \end{equation}
+l.242 \end{equation}
                      [2]
-Underfull \hbox (badness 1087) in paragraph at lines 396--397
+Underfull \hbox (badness 1087) in paragraph at lines 393--394
 []\OT1/cmr/m/n/12 E as-sim po-de-mos mon-tar as equa^^Xc~oes para
  []
 
@@ -807,14 +807,14 @@ Underfull \hbox (badness 1087) in paragraph at lines 396--397
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.399 \begin{equation}
+l.396 \begin{equation}
                        [3]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.566 M
+l.563 M
        as vou prosseguir a análise, mesmo com os parâmetros \emph{a} incoe... [4]
-Underfull \hbox (badness 5345) in paragraph at lines 599--600
+Underfull \hbox (badness 5345) in paragraph at lines 596--597
 []\OT1/cmr/m/n/12 Conseguimos com su-cesso fa-zer a an^^Salise
  []
 
@@ -822,23 +822,23 @@ Underfull \hbox (badness 5345) in paragraph at lines 599--600
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.618 \end{document}
+l.615 \end{document}
                      [5
 
-] (./Relatorio7.aux)
-Package rerunfilecheck Info: File `Relatorio7.out' has not changed.
+] (./Relatorio.aux)
+Package rerunfilecheck Info: File `Relatorio.out' has not changed.
 (rerunfilecheck)             Checksum: 8C85C8F647A3768904982603FBF4BA44;4497.
  ) 
 Here is how much of TeX's memory you used:
- 53587 strings out of 476025
- 1381436 string characters out of 5796532
- 2141520 words of memory out of 5000000
- 73326 multiletter control sequences out of 15000+600000
+ 53585 strings out of 476025
+ 1381383 string characters out of 5796532
+ 2141515 words of memory out of 5000000
+ 73324 multiletter control sequences out of 15000+600000
  522626 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,10n,118p,819b,914s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 117i,10n,118p,818b,914s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Relatorio7.pdf (5 pages, 167566 bytes).
+Output written on Relatorio.pdf (5 pages, 167253 bytes).
 PDF statistics:
  291 PDF objects out of 1000 (max. 8388607)
  255 compressed objects within 3 object streams

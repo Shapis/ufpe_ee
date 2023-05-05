@@ -1,8 +1,8 @@
 PWD /home/hpsilva/Documents/ufpe_ee/5th semester/Electromagnetic Measurements/Relatorio Projeto
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/hpsilva/Documents/ufpe_ee/5th semester/Electromagnetic Measurements/Relatorio Projeto/Relatorio7.tex
-OUTPUT Relatorio7.log
+INPUT /home/hpsilva/Documents/ufpe_ee/5th semester/Electromagnetic Measurements/Relatorio Projeto/Relatorio.tex
+OUTPUT Relatorio.log
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
@@ -1108,10 +1108,10 @@ INPUT /usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
-INPUT ./Relatorio7.aux
-INPUT Relatorio7.aux
-INPUT Relatorio7.aux
-OUTPUT Relatorio7.aux
+INPUT ./Relatorio.aux
+INPUT Relatorio.aux
+INPUT Relatorio.aux
+OUTPUT Relatorio.aux
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1136,18 +1136,18 @@ INPUT /usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary
 INPUT /usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-brazil.trsl
 INPUT /usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-brazil.trsl
 INPUT /usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-brazil.trsl
-INPUT ./Relatorio7.out
-INPUT Relatorio7.out
-INPUT ./Relatorio7.out
-INPUT Relatorio7.out
-INPUT ./Relatorio7.out
-INPUT Relatorio7.out
-INPUT ./Relatorio7.out
-INPUT Relatorio7.out
-OUTPUT Relatorio7.pdf
-INPUT ./Relatorio7.out
-INPUT ./Relatorio7.out
-OUTPUT Relatorio7.out
+INPUT ./Relatorio.out
+INPUT Relatorio.out
+INPUT ./Relatorio.out
+INPUT Relatorio.out
+INPUT ./Relatorio.out
+INPUT Relatorio.out
+INPUT ./Relatorio.out
+INPUT Relatorio.out
+OUTPUT Relatorio.pdf
+INPUT ./Relatorio.out
+INPUT ./Relatorio.out
+OUTPUT Relatorio.out
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -1170,9 +1170,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./Relatorio7.toc
-INPUT Relatorio7.toc
-INPUT Relatorio7.toc
+INPUT ./Relatorio.toc
+INPUT Relatorio.toc
+INPUT Relatorio.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -1192,7 +1192,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
-OUTPUT Relatorio7.toc
+OUTPUT Relatorio.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./images/circuito.png
@@ -1204,9 +1204,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT Relatorio7.aux
-INPUT ./Relatorio7.out
-INPUT ./Relatorio7.out
+INPUT Relatorio.aux
+INPUT ./Relatorio.out
+INPUT ./Relatorio.out
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
