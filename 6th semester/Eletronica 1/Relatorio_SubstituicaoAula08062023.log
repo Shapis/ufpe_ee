@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.10)  10 JUN 2023 08:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.10)  11 JUN 2023 07:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -745,18 +745,18 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
 Package hyperref Info: Link coloring OFF on input line 50.
+(./Relatorio_SubstituicaoAula08062023.out) (./Relatorio_SubstituicaoAula08062023.out)
 \@outlinefile=\write4
 \openout4 = `Relatorio_SubstituicaoAula08062023.out'.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-No file Relatorio_SubstituicaoAula08062023.toc.
+) (./Relatorio_SubstituicaoAula08062023.toc)
 \tf@toc=\write5
 \openout5 = `Relatorio_SubstituicaoAula08062023.toc'.
 
@@ -776,115 +776,105 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
  []
 
 
-LaTeX Warning: File `images/quadripoloa.png' not found on input line 90.
+Underfull \hbox (badness 6708) in paragraph at lines 64--64
+[]\OT1/cmr/bx/n/17.28 Amplificadores Ope-ra-ci-o-
+ []
 
 
-/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorio_SubstituicaoAula08062023.tex:90: Package pdftex.def Error: File `images/quadripoloa.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.90 ...dth=1\columnwidth]{images/quadripoloa.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Underfull \hbox (badness 1448) in paragraph at lines 70--70
+[]\OT1/cmr/bx/n/14.4 Ganho de Tens~ao de Ma-lha
+ []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: File `images/quadripolob.png' not found on input line 97.
-
-
-/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorio_SubstituicaoAula08062023.tex:97: Package pdftex.def Error: File `images/quadripolob.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.97 ...dth=1\columnwidth]{images/quadripolob.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2426) has occurred while \output is active []
 
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 1755) in paragraph at lines 110--111
-[]\OT1/cmr/m/n/12 Podemos re-a-li-zar a an^^Salise dos qua-dri-po-los
- []
-
-
-Package amsmath Warning: Foreign command \over;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 118.
-
-
-Overfull \hbox (63.45163pt too wide) detected at line 151
-[][][][][]
+Underfull \hbox (badness 3439) in paragraph at lines 102--102
+[]\OT1/cmr/bx/n/17.28 Amplificador Ope-ra-ci-o-nal
  []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.197 \begin{equation}
-                       [2]
+l.110 \subsection
+                 {Impedância de Entrada Infinita} [2{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.348 \end{equation}
-                     [3]
-Underfull \hbox (badness 1087) in paragraph at lines 423--424
-[]\OT1/cmr/m/n/12 E as-sim po-de-mos mon-tar as equa^^Xc~oes para
+l.141 \newpage
+               [3]
+<images/opamp_inversor.png, id=179, 548.0475pt x 347.2975pt>
+File: images/opamp_inversor.png Graphic file (type png)
+<use images/opamp_inversor.png>
+Package pdftex.def Info: images/opamp_inversor.png  used on input line 153.
+(pdftex.def)             Requested size: 257.61894pt x 163.25633pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.199     \item A
+                 tenuação de Sinais: O amplificador inversor também pode ... [4 <./images/opamp_inversor.png>]
+<images/opamp_naoinversor.png, id=193, 529.98pt x 273.02pt>
+File: images/opamp_naoinversor.png Graphic file (type png)
+<use images/opamp_naoinversor.png>
+Package pdftex.def Info: images/opamp_naoinversor.png  used on input line 215.
+(pdftex.def)             Requested size: 257.61894pt x 132.71448pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.229 \end{equation}
+                     [5 <./images/opamp_naoinversor.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
+[]\OT1/cmr/bx/n/14.4 Aplica^^Xc~oes do Am-pli-fi-ca-dor
+ []
+
+
+Underfull \hbox (badness 2080) in paragraph at lines 267--268
+[]\OT1/cmr/m/n/12 O am-pli-fi-ca-dor n~ao in-ver-sor ^^Se um com-po-
  []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.511 
-       [4]
-Underfull \hbox (badness 5345) in paragraph at lines 626--627
-[]\OT1/cmr/m/n/12 Conseguimos com su-cesso fa-zer a an^^Salise
+l.269 \newpage
+               [6]
+Underfull \hbox (badness 1308) in paragraph at lines 273--274
+[]\OT1/cmr/m/n/12 O am-pli-fi-ca-dor so-ma-dor, tamb^^Sem co-nhe-cido
  []
 
+<images/opamp_somador.png, id=208, 821.0675pt x 517.935pt>
+File: images/opamp_somador.png Graphic file (type png)
+<use images/opamp_somador.png>
+Package pdftex.def Info: images/opamp_somador.png  used on input line 279.
+(pdftex.def)             Requested size: 257.61894pt x 162.50233pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.645 \end{document}
-                     [5] (./Relatorio_SubstituicaoAula08062023.aux)
-
-Package rerunfilecheck Warning: File `Relatorio_SubstituicaoAula08062023.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Relatorio_SubstituicaoAula08062023.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  C79C1F8D124B13CD2F04A11C8407D76E;4507.
+l.320 \end{document}
+                     [7 <./images/opamp_somador.png>] (./Relatorio_SubstituicaoAula08062023.aux)
+Package rerunfilecheck Info: File `Relatorio_SubstituicaoAula08062023.out' has not changed.
+(rerunfilecheck)             Checksum: 97F163E00E06894DA6EAC29EE9341167;5409.
  ) 
 Here is how much of TeX's memory you used:
- 53625 strings out of 476025
- 1383017 string characters out of 5796532
- 2135420 words of memory out of 5000000
- 73353 multiletter control sequences out of 15000+600000
- 522626 words of font info for 71 fonts, out of 8000000 for 9000
+ 53571 strings out of 476025
+ 1381690 string characters out of 5796532
+ 2136647 words of memory out of 5000000
+ 73333 multiletter control sequences out of 15000+600000
+ 521556 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,10n,118p,809b,910s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Relatorio_SubstituicaoAula08062023.pdf (5 pages, 147074 bytes).
+ 117i,8n,118p,809b,970s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Relatorio_SubstituicaoAula08062023.pdf (7 pages, 207711 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 68 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 277 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 268 words of extra memory for PDF output out of 10000 (max. 10000000)
 

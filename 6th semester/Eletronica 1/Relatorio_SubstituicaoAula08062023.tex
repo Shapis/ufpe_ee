@@ -43,8 +43,8 @@
 {}
 }
 \newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
-\title{Relatorio de substituicao da aula de 08/06/2023}
-\author{Henrique da Silva \\ hpsilva@proton.me}
+\title{Estudo dirigido sobre Amplificadores Operacionais}
+\author{Henrique da Silva \\ henrique.pedro@ufpe.br}
 \date{\today}
 \pgfplotsset{width = 10cm, compat = 1.9}
 \begin{document}
@@ -59,586 +59,261 @@
 
 Neste relatório, vamos discutir amplificadores operacionais, e algumas configuracoes uteis de circuitos que utilizam amp ops.
 
-Todos arquivos utilizados para criar este relatório, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/5th semester/Circuits II/}
+Todos arquivos utilizados para criar este relatório, e o relatorio em si estão em:  \url{https://github.com/Shapis/ufpe_ee/tree/main/6th semester}
+
+\section{Amplificadores Operacionais}
+
+Os amplificadores operacionais (Amps Op) são dispositivos eletrônicos que amplificam um sinal de entrada diferencial. Eles são amplamente utilizados em circuitos eletrônicos devido às suas excelentes características de amplificação, alta impedância de entrada e baixa impedância de saída.
+
+Os amplificadores operacionais possuem diversas características e propriedades que os tornam componentes essenciais em projetos eletrônicos. Vamos explorar algumas das características mais importantes.
+
+\subsection{Ganho de Tensão de Malha Aberta}
+
+O ganho de tensão de malha aberta é uma das características fundamentais dos amplificadores operacionais. Representado por Aol, esse parâmetro indica a magnitude do ganho de tensão quando não há realimentação externa no amplificador. Idealmente, um amplificador operacional ideal possui um ganho de tensão de malha aberta infinito. No entanto, na prática, esse valor é bastante elevado, geralmente da ordem de $10^5$ a $10^6$.
+
+\subsection{Impedância de Entrada}
+
+A impedância de entrada de um amplificador operacional é uma medida da resistência que ele apresenta aos sinais de entrada. Idealmente, um amplificador operacional tem uma impedância de entrada infinita, o que significa que não há corrente de entrada fluindo para o amplificador, resultando em uma carga desprezível para a fonte de sinal. Essa alta impedância de entrada garante que o amplificador não influencie significativamente o circuito de entrada.
+
+\subsection{Impedância de Saída}
+
+A impedância de saída é a resistência que o amplificador operacional apresenta ao circuito externo conectado a sua saída. Idealmente, um amplificador operacional tem uma impedância de saída zero, o que significa que ele pode fornecer corrente de saída sem restrições e sem queda de tensão significativa. No entanto, na prática, a impedância de saída é baixa, mas não exatamente zero.
+
+\subsection{CMRR (Rejeição de Modo Comum)}
+
+A rejeição de modo comum é uma medida da capacidade do amplificador operacional de rejeitar sinais de entrada que são comuns a ambas as entradas (modo comum), como ruídos indesejados ou interferências. O CMRR é expresso em decibéis (dB) e representa a relação entre o ganho diferencial (ganho para sinais de entrada diferenciais) e o ganho de modo comum (ganho para sinais de entrada comuns).
+
+\subsection{Resposta em Frequência}
+
+A resposta em frequência de um amplificador operacional indica como o ganho do amplificador varia em função da frequência do sinal de entrada. Idealmente, um amplificador operacional possui uma resposta em frequência plana, ou seja, mantém um ganho constante em uma faixa ampla de frequências. No entanto, na prática, a resposta em frequência pode ser limitada por fatores como capacitâncias internas, eletroquímica dos componentes e características do projeto.
+
+\subsection{Largura de Banda}
+
+A largura de banda é a faixa de frequência na qual o amplificador operacional possui um ganho de tensão de malha aberta dentro de um limite especificado. É comum definir a largura de banda como a frequência na qual o ganho de tensão de malha aberta cai em 3 dB em relação ao seu valor máximo. É importante considerar a largura de banda ao projetar circuitos com amplificadores operacionais para garantir que a resposta em frequência seja adequada às necessidades do sistema.
+
+\subsection{Taxa de Subida}
+
+A taxa de subida é uma medida da velocidade com que o amplificador operacional pode responder a mudanças rápidas nos sinais de entrada. É expressa em volts por microssegundo (V/µs) e representa a variação máxima permitida na tensão de saída por unidade de tempo. A taxa de subida está relacionada à capacidade do amplificador operacional de acompanhar sinais de entrada de alta frequência.
+
+\subsection{Corrente de Bias}
+
+A corrente de bias é a corrente contínua necessária para operar o amplificador operacional. É a corrente que flui pelas entradas do amplificador quando não há sinal de entrada aplicado. A corrente de bias pode afetar o consumo de energia e a estabilidade do amplificador operacional.
+
+\section{Amplificador Operacional Ideal}
+
+O Amplificador Operacional Ideal é um modelo teórico usado como referência para entender o comportamento dos amplificadores operacionais na teoria. Embora os amplificadores operacionais reais não possam atingir todas as características ideais, o modelo ideal é útil para análises e projetos de circuitos, fornecendo uma base para compreender as funcionalidades desejáveis do amplificador.
+
+\subsection{Ganho de Tensão Infinito}
+
+No modelo ideal, o amplificador operacional possui um ganho de tensão de malha aberta infinito. Isso significa que qualquer diferença de tensão aplicada às entradas do amplificador resultará em uma tensão de saída infinitamente amplificada. O ganho de tensão infinito é uma característica desejável, pois permite que o amplificador amplifique com precisão os sinais de entrada.
+
+\subsection{Impedância de Entrada Infinita}
+
+O amplificador operacional ideal possui uma impedância de entrada infinita, o que significa que nenhum fluxo de corrente ocorre nas entradas do amplificador. Isso é desejável porque evita a carga do sinal de entrada, garantindo que o amplificador não afete significativamente o circuito de entrada.
+
+\subsection{Impedância de Saída Nula}
+
+O amplificador operacional ideal possui uma impedância de saída nula, o que significa que pode fornecer corrente de saída sem restrições e sem queda de tensão significativa. Essa característica permite a conexão eficiente de cargas externas ao amplificador sem causar distorção ou perda de sinal.
+
+\subsection{Resposta em Frequência Infinita}
+
+O amplificador operacional ideal tem uma resposta em frequência infinita, o que significa que pode amplificar sinais em uma faixa de frequência ilimitada. Isso permite a amplificação precisa de sinais de alta frequência sem atenuação ou distorção significativa. No entanto, na prática, os amplificadores operacionais reais têm uma largura de banda limitada devido a limitações físicas.
+
+\subsection{Rejeição de Modo Comum Infinita}
+
+O amplificador operacional ideal possui uma rejeição de modo comum infinita, o que significa que ele é capaz de rejeitar completamente sinais de entrada comuns a ambas as entradas (ruído comum). Isso resulta em uma amplificação precisa apenas dos sinais diferenciais desejados, eliminando interferências indesejadas.
+
+\subsection{Taxa de Subida Infinita}
+
+No modelo ideal, o amplificador operacional tem uma taxa de subida infinita, o que significa que é capaz de responder instantaneamente a mudanças rápidas nos sinais de entrada. Essa característica é essencial para amplificar sinais de alta frequência e variações rápidas sem distorção.
+
+\subsection{Alimentação Simétrica}
+
+O amplificador operacional ideal é alimentado com uma fonte de alimentação simétrica, o que significa que as tensões de alimentação positiva e negativa são iguais em magnitude e opostas em polaridade. Isso permite que o amplificador opere em uma faixa de tensão simétrica em relação ao terra, facilitando o projeto e a operação de circuitos.
+
+\subsection{Limitações do Modelo Ideal}
+
+É importante ressaltar que o modelo ideal do amplificador operacional não reflete as características dos amplificadores operacionais reais. Amplificadores operacionais reais possuem limitações, como ganho finito, impedância de entrada não infinita, impedância de saída não nula, resposta em frequência limitada, rejeição de modo comum limitada e slew rate finito. Portanto, ao projetar circuitos com amplificadores operacionais reais, é necessário levar em consideração essas limitações e selecionar amplificadores que atendam aos requisitos específicos da aplicação.
+
+Embora o amplificador operacional ideal seja um modelo teórico, sua utilização é valiosa para analisar circuitos e entender os princípios básicos de funcionamento dos amplificadores operacionais. A partir dessa base teórica, podem ser desenvolvidos modelos mais realistas para simular e projetar circuitos que levem em conta as características dos amplificadores operacionais reais.
 
 
+\newpage
+
+\section{Amplificador Inversor}
+
+O amplificador inversor é um dos circuitos mais comuns e básicos que utiliza um amplificador operacional. Ele amplifica um sinal de entrada diferencialmente, produzindo um sinal de saída que é uma versão invertida em relação ao sinal de entrada. O amplificador inversor é amplamente utilizado em aplicações de amplificação de sinais, ganho de tensão e processamento de sinais.
 
 
-\section{Análise preliminar}
-
-
-
-
-Utilizarei o Maxima para fazer a análise teórica do circuito antes de montá-lo fisicamente.
-
-
-Após terminar as análises compararei os resultados obtidos nas análises numéricas e em laboratório para verificar sua coerência.
-
-
-
-
-\subsection{Os circuitos}
-
-
-Vamos utilizar dois circuitos em cascata, o quadripolo "A" e o quadripolo "B", ambos puramente resistivos e representados abaixo.
-
-
+\subsection{O Circuito}
 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\columnwidth]{images/quadripoloa.png}
-    \caption{Quadripolo "A" puramente resistivo.}
+    \includegraphics[width=1\columnwidth]{images/opamp_inversor.png}
+    \caption{Amplificador operacional em configuracao inversora.}
 \end{figure}
 
+
+\subsection{Princípio de Funcionamento}
+
+
+
+O circuito do amplificador inversor consiste em um amplificador operacional e dois resistores: um resistor de entrada $R_i$ conectado à entrada do amplificador e um resistor de realimentação $R_f$ conectado entre a saída do amplificador e a entrada inversora. O sinal de entrada é aplicado ao terminal não inversor do amplificador operacional, enquanto a saída é medida no terminal inversor.
+
+O amplificador operacional ideal possui uma impedância de entrada infinita, o que significa que nenhuma corrente flui para a entrada. Assumindo isso, a corrente que flui através do resistor de realimentação é igual à corrente que flui através do resistor de entrada. Isso ocorre porque não há caminho para a corrente entrar no terminal inversor do amplificador operacional.
+
+Usando a lei de Ohm, podemos determinar a relação entre o sinal de entrada $V_i$, o resistor de entrada $R_i$, o sinal de saída $V_o$ e o resistor de realimentação $R_f$. A tensão na entrada inversora do amplificador operacional é virtualmente igual à tensão na entrada não inversora devido às altas impedâncias envolvidas. Portanto, podemos escrever a seguinte equação:
+
+\begin{equation}
+    V_i = R_i I_i
+\end{equation}
+
+onde $I_i$ é a corrente que flui através do resistor de entrada. Essa corrente também é igual à corrente que flui através do resistor de realimentação, uma vez que não há corrente que entra no terminal inversor do amplificador operacional ideal. Portanto, podemos escrever:
+
+\begin{equation}
+    I_i = \frac{V_o - V_i}{R_f}
+\end{equation}
+
+Substituindo a equação (2) na equação (1), obtemos:
+
+\begin{equation}
+    V_i = R_i I_i \frac{V_o - V_i}{R_f}
+\end{equation}
+
+Reorganizando a equação, encontramos a relação entre o sinal de saída e o sinal de entrada:
+
+\begin{equation}
+    V_o = - \frac{R_f}{R_i} V_i
+\end{equation}
+
+Essa equação indica que o amplificador inversor produz uma saída que é uma versão amplificada e invertida do sinal de entrada. O fator de amplificação é determinado pela relação entre os resistores de realimentação e de entrada (Rf/Rin). O sinal de saída é polarizado de maneira oposta ao sinal de entrada.
+
+\subsection{Aplicações do Amplificador Inversor}
+
+O amplificador inversor é amplamente utilizado em várias aplicações devido à sua capacidade de amplificar sinais e fornecer ganho de tensão. Algumas das principais aplicações incluem:
+
+\begin{itemize}
+    \item Amplificação de Sinais: O amplificador inversor é usado para amplificar sinais de baixa amplitude, proporcionando ganho de tensão. Isso é útil em aplicações de áudio, instrumentação, comunicações e muitos outros sistemas em que os sinais precisam ser amplificados para posterior processamento ou transmissão.
+    \item Conversão de Impedância: O amplificador inversor pode ser usado para converter a impedância de entrada de um circuito, permitindo a interface entre diferentes dispositivos ou estágios de amplificação. Isso é especialmente útil quando a impedância de saída de uma fonte de sinal não é compatível com a impedância de entrada do próximo estágio do circuito.
+    \item Atenuação de Sinais: O amplificador inversor também pode ser usado para atenuar sinais. Isso é alcançado selecionando a relação adequada entre os resistores de realimentação e de entrada, resultando em um fator de amplificação menor que 1.
+    \item Circuitos de Controle: O amplificador inversor é usado em circuitos de controle e realimentação, onde o sinal de saída é comparado com um sinal de referência para ajustar e estabilizar sistemas. Essa configuração é amplamente utilizada em amplificadores de potência, sistemas de controle de temperatura, sistemas de controle de velocidade e muito mais.
+    \item Circuitos de Filtro: O amplificador inversor pode ser usado em circuitos de filtro ativo para amplificar e filtrar sinais em determinadas faixas de frequência. A combinação de componentes passivos, como resistores e capacitores, com o amplificador inversor permite a criação de filtros de alta qualidade e precisão.
+\end{itemize}
+
+Essas são apenas algumas das aplicações do amplificador inversor. Sua simplicidade, versatilidade e capacidade de fornecer ganho de tensão tornam-no um componente fundamental em muitos circuitos e sistemas eletrônicos.
+
+\newpage
+\section{Amplificador Não Inversor}
+
+O amplificador não inversor é outro circuito comumente utilizado que utiliza um amplificador operacional para amplificar um sinal de entrada. Ao contrário do amplificador inversor, o amplificador não inversor produz uma saída que tem a mesma polaridade que o sinal de entrada. Ele fornece ganho de tensão positivo e é amplamente utilizado em aplicações que requerem amplificação precisa e não requerem inversão de fase do sinal.
+
+\subsection{O Circuito}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\columnwidth]{images/quadripolob.png}
-    \caption{Quadripolo "B" puramente resistivo.}
+    \includegraphics[width=1\columnwidth]{images/opamp_naoinversor.png}
+    \caption{Amplificador operacional em configuracao nao inversora.}
 \end{figure}
 
+\subsection{Princípio de Funcionamento}
 
+O circuito do amplificador não inversor também consiste em um amplificador operacional e dois resistores: um resistor de entrada $R_1$ conectado entre a saida inversora e o terra, e um resistor de realimentação $R_f$ conectado entre a saída do amplificador e a entrada inversora. O sinal de entrada é aplicado ao terminal não inversor do amplificador operacional, enquanto a saída é medida no $V_o$.
 
+Assumindo que o amplificador operacional ideal possui uma impedância de entrada infinita, a corrente que flui através do resistor de realimentação é igual à corrente que flui através do resistor $R_1$. Como a corrente não flui para o terminal inversor do amplificador operacional.
 
-\pagebreak
-\subsection{Maxima}
-
-
-
-
-Podemos realizar a análise dos quadripolos acima utilizando análise nodal.
-
-
-\subsubsection{Quadripolo \emph{A}}
-
+Aplicando a lei de Ohm, podemos determinar a relação entre o sinal de entrada $V_i$, o resistor $R_1$, o sinal de saída $V_o$ e o resistor de realimentação $R_f$. A tensão na entrada não inversora do amplificador operacional é virtualmente igual à tensão na entrada inversora, devido às altas impedâncias envolvidas. Portanto, podemos escrever a seguinte equação:
 
 \begin{equation}
-    \begin{aligned}
-         & {{V_{1}-{\it Va}}\over{R_{1}}}+{{V_{1}}\over{R_{2}}}-I_{1}=0                              \\
-         & {{{\it Va}-V_{2}}\over{R_{1}}}+{{{\it Va}-V_{1}}\over{R_{1}}}+{{ {\it Va}}\over{R_{2}}}=0 \\
-         & {{V_{2}-{\it Va}}\over{R_{1}}}+{{V_{2}}\over{R_{3}}}-I_{2}=0
-    \end{aligned}
+    V_i = V_n = V_p,
 \end{equation}
 
+onde $V_p$ é a tensão na entrada não inversora e $V_n$ é a tensão na entrada inversora.
 
-\subsubsection{Quadripolo \emph{B}}
-
+Considerando a relação de corrente entre o resistor $R_1$ e o resistor de realimentação $R_f$, temos:
 
 \begin{equation}
-    \begin{aligned}
-         & {{V_{1}-{\it Vb}}\over{R_{2}}}+{{V_{1}-{\it Va}}\over{R_{1}}}+{{ V_{1}}\over{R_{2}}}-I_{1}=0       \\
-         & {{{\it Va}-{\it Vb}}\over{R_{3}}}+{{{\it Va}-V_{1}}\over{R_{1}}}+{{ {\it Va}}\over{R_{2}}}-I_{2}=0 \\
-         & {{{\it Vb}-{\it Va}}\over{R_{3}}}+{{{\it Vb}-V_{1}}\over{R_{2}}}+{{ {\it Vb}}\over{R_{1}}}+I_{2}=0 \\
-         & V_{2}={\it Va}-{\it Vb}
-    \end{aligned}
+    \frac{V_i}{R_1} = I_1 = I_o
 \end{equation}
 
+onde $I_i$ é a corrente que flui através do resistor $R_1$ e $I_o$ é a corrente que flui através do resistor de realimentação.
 
-\subsubsection{Parámetros "y" do quadripolo \emph{B}}
-
-
-Resolvendo as quatro equações acima para $I_1$, $I_2$, $V_1$ e $V_2$ obtemos:
-
+Aplicando a lei de Ohm novamente, podemos escrever a seguinte equação:
 
 \begin{equation}
-    \begin{aligned}
-         & I_{1}={{-R_{2}\,V_{2}+R_{1}\,V_{2}+\left(R_{2}+3\,R_{1}\right)\, V_{1}}\over{2\,R_{1}\,R_{2}}}                                                                \\
-         & I_{2}=-{{R_{2}\,\left(-R_{3}\,V_{2}-2\,R_{1}\,V_{2}\right)-R_{1}\, R_{3}\,V_{2}+\left(R_{2}\,R_{3}-R_{1}\,R_{3}\right)\,V_{1}}\over{2\, R_{1}\,R_{2}\,R_{3}}} \\
-         & {\it Va}={{V_{2}+V_{1}}\over{2}}                                                                                                                              \\
-         & {\it Vb}={{V_{1}-V_{2}}\over{2}}
-    \end{aligned}
+    V_o = V_n + R_f I_1 = V_i + R_f I_1 = V_1 (1 + \frac{R_f}{R_1})
 \end{equation}
 
-
-Com estes em mãos podemos calcular a solução simbólica dos parâmetros \emph{y}.
-
-
-Fazendo $V_2 = 0$:
-
+Assim obtemos o seguinte ganho:
 
 \begin{equation}
-    \begin{aligned}
-         & y11 = {{R_{2}+3\,R_{1}}\over{2\,R_{1}\,R_{2}}}                    \\
-         & y21 = -{{R_{2}\,R_{3}-R_{1}\,R_{3}}\over{2\,R_{1}\,R_{2}\,R_{3}}}
-    \end{aligned}
+    G_o = \frac{V_o}{V_i} = 1 + \frac{R_f}{R_1}
 \end{equation}
 
+Essa equação indica que o amplificador não inversor produz uma saída que é uma versão amplificada e não invertida do sinal de entrada. O fator de amplificação é determinado pela relação entre os resistores de realimentação e de entrada $1 + \frac{R_f}{R_1}$. O sinal de saída é polarizado da mesma maneira que o sinal de entrada.
 
-Fazendo $V_1 = 0$
+\subsection{Aplicações do Amplificador Não Inversor}
 
+O amplificador não inversor é amplamente utilizado em várias aplicações que requerem amplificação de sinal e ganho de tensão sem inversão de polaridade. Algumas das principais aplicações incluem:
 
-\begin{equation}
-    \begin{aligned}
-         & y12 = {{R_{1}\,V_{2}-R_{2}\,V_{2}}\over{2\,R_{1}\,R_{2}\,V_{2}}}                                                      \\
-         & y22 = -{{R_{2}\,\left(-R_{3}\,V_{2}-2\,R_{1}\,V_{2}\right)-R_{1}\,R_{3}\, V_{2}}\over{2\,R_{1}\,R_{2}\,R_{3}\,V_{2}}}
-    \end{aligned}
-\end{equation}
+\begin{itemize}
+    \item Amplificação de Sinais: O amplificador não inversor é usado para amplificar sinais de baixa amplitude, fornecendo um ganho de tensão positivo. Isso é útil em aplicações onde um sinal precisa ser amplificado sem alterar sua polaridade.
+    \item Buffer de Sinal: O amplificador não inversor também é usado como um buffer de sinal para isolar circuitos de alta impedância de circuitos de baixa impedância. Ele evita a carga do sinal de entrada e fornece uma fonte de baixa impedância para alimentar outros dispositivos ou estágios de amplificação.
+    \item Amplificador de Instrumentação: O amplificador não inversor é comumente usado em aplicações de amplificação de instrumentação, onde a precisão e a fidelidade do sinal são essenciais. Ele é usado para amplificar e isolar sinais de sensores, como termopares, pontes de Wheatstone e sensores de pressão, antes de serem processados por outros circuitos.
+    \item Amplificação de Áudio: O amplificador não inversor é usado em amplificadores de áudio para amplificar o sinal de entrada de uma fonte de áudio, como um tocador de música ou um microfone. Ele fornece um ganho de tensão positivo e garante uma reprodução fiel do sinal de áudio sem inversão de fase.
+    \item Circuitos de Controle: O amplificador não inversor é usado em circuitos de controle onde um sinal de referência é comparado com o sinal de saída para ajustar e estabilizar sistemas. Ele é usado em controladores PID (Proporcional-Integral-Derivativo), sistemas de controle de temperatura, sistemas de controle de velocidade e muito mais.
+\end{itemize}
 
+O amplificador não inversor é um componente versátil e amplamente utilizado em muitas aplicações eletrônicas. Sua capacidade de fornecer ganho de tensão sem inversão de polaridade o torna uma escolha popular em projetos que exigem amplificação de sinal e processamento de sinal preciso.
 
-E para conseguir a solução numérica, basta substituir $R_1$, $R_2$, e $R_3$ pelos valores dos resistores que desejamos.
+\newpage
 
+\section{Amplificador Somador}
 
-No caso:
+O amplificador somador, também conhecido como amplificador operacional somador, é um circuito que permite combinar múltiplos sinais de entrada em um único sinal de saída. Ele realiza a função matemática de somar as tensões de entrada ponderadas por coeficientes de ponderação definidos pelos resistores utilizados no circuito. O amplificador somador é amplamente utilizado em aplicações onde é necessário combinar sinais de diferentes fontes e realizar operações de soma ou subtração ponderada.
 
+\subsection{O Circuito}
 
-\begin{equation}
-    \begin{aligned}
-         & R_1 = 8.2k \varOmega \\
-         & R_2 = 47k \varOmega  \\
-         & R_3 = 82k \varOmega  \\
-    \end{aligned}
-\end{equation}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/opamp_somador.png}
+    \caption{Amplificador operacional em configuracao somadora.}
+\end{figure}
 
+\subsection{Princípio de Funcionamento}
 
-Que nos dá os seguintes parâmetros \emph{y}:
+O circuito do amplificador somador é composto por um amplificador operacional e vários resistores. Cada sinal de entrada é conectado a um resistor individual, e todas as junções dos resistores são conectadas ao terminal inversor do amplificador operacional. O terminal não inversor é conectado ao terra.
 
+O princípio de funcionamento do amplificador somador é baseado na propriedade do amplificador operacional ideal de ter uma impedância de entrada infinita. Isso significa que nenhum sinal de corrente flui para o terminal inversor, e, portanto, todas as correntes de entrada fluem apenas através dos resistores conectados às entradas.
 
-\begin{equation}
-    \begin{aligned}
-         & y11 = 9.289050337311884 \times 10^{-5}  \\
-         & y12 = -5.033731188375714 \times 10^{-5} \\
-         & y21 = -5.033731188375714 \times 10^{-5} \\
-         & y22 = 8.38090295796575 \times 10^{-5}   \\
-    \end{aligned}
-\end{equation}
+A corrente de entrada em cada resistor é determinada pela lei de Ohm e é proporcional à tensão de entrada dividida pela resistência correspondente. Portanto, a corrente total que flui para o terminal inversor do amplificador operacional é a soma das correntes individuais ponderadas. Isso resulta em uma tensão de saída que é a soma das tensões de entrada ponderadas.
 
+Por exemplo, considerando um amplificador somador com três entradas (V1, V2 e V3) e três resistores (R1, R2 e R3), a corrente total que flui para o terminal inversor é dada por:
 
-\subsubsection{Impedância de  entrada com carga}
+Iin = (V1 / R1) + (V2 / R2) + (V3 / R3).
 
+Essa corrente também é igual à corrente que flui através do resistor de realimentação (Rf), uma vez que não há corrente que entra no terminal inversor do amplificador operacional ideal. Portanto, podemos escrever:
 
-Aqui introduziremos uma carga $Z_L = 2k \varOmega$ na saída do quadripolo \emph{B}, e analisaremos o que ocorre com sua impedância de entrada. Ou seja. Com $\frac{V_1}{I_1}.$
+Iin = (Vout - Vn) / Rf,
 
+onde Vn é a tensão no terminal inversor do amplificador operacional, que é virtualmente igual a zero devido às altas impedâncias envolvidas.
 
-\begin{equation}
-    \begin{aligned}
-         & I_1 = 9.2890 10^{-5} V_1 + -5.0337 10^{-5} V_2 \\
-         & I_2 = -5.0337 10^{-5} V_1 + 8.3809 10^{-5} V_2 \\
-    \end{aligned}
-\end{equation}
+Ao igualar as duas equações acima, podemos determinar a relação entre as tensões de entrada e a tensão de saída:
 
+Vout = - [(Rf / R1) * V1 + (Rf / R2) * V2 + (Rf / R3) * V3].
 
-E aqui conectamos a carga $Z_L$ a saída do quadripolo fazendo $V_2 = -I_2 Z_L$:
+Essa equação mostra que o amplificador somador produz uma saída que é a soma ponderada das tensões de entrada. Os coeficientes de ponderação são determinados pela relação entre os resistores de realimentação e os resistores de entrada.
 
-
-\begin{equation}
-    \begin{aligned}
-         & I_1 = 9.2890 10^{-5} V_1 + -5.0337 10^{-5}  (-2000 I_2) \\
-         & I_2 = -5.0337 10^{-5} V_1 + 8.3809 10^{-5} (-2000 I_2)  \\
-    \end{aligned}
-\end{equation}
-
-
-\paragraph*{}
-\paragraph*{}
-\paragraph*{}
-\paragraph*{}
-Daqui resolvemos para $V_1$, $V_2$ e $I_2$ e obtemos a impedância de entrada com a carga:
-
-
-\begin{equation}
-    \frac{V_1}{I_1} = 11293.0154298157 \varOmega
-\end{equation}
-
-
-\subsubsection{Parâmetros \emph{a} do quadripolo em cascata}
-
-
-A análise do quadripolo \emph{A} foi realizada no relatório 6. Então pegarei os seus parâmetros \emph{z} previamente obtidos para realizar a análise do quadripolo em cascata.
-
-
-\begin{equation}
-    \begin{aligned}
-         & z_{11} = 21343.61254363896 \\
-         & z_{12} = 15333.99250307293 \\
-         & z_{21} = 15333.99250307293 \\
-         & z_{22} = 23826.62255647245 \\
-    \end{aligned}
-\end{equation}
-
-
-Podemos convertê-los para parâmetros \emph{a} do quadripolo $"A"$ com as seguintes operações:
-
-
-
-
-\begin{equation}
-    \begin{aligned}
-         & a_{11} = \frac{z_{11}}{z_{21}} = 1.391914893617021      \\
-         & a_{12} = \frac{\varDelta z}{z_{21}} = 17830.63829787234 \\
-         & a_{21} = \frac{1}{z_{21}} = 6.521458777285825 * 10^-5   \\
-         & a_{22} = \frac{z_{22}}{z_{21}} = 1.553843368039837
-    \end{aligned}
-\end{equation}
-
-
-E convertemos os parâmetros \emph{y} do quadripolo $"B"$ da seguinte forma:
-
-
-\begin{equation}
-    \begin{aligned}
-         & a_{11} = -\frac{y_{22}}{y_{21}} = 1.664948453608247              \\
-         & a_{12} = -\frac{1}{y_{21}} = 19865.9793814433                    \\
-         & a_{21} = -\frac{\varDelta y}{y_{21}} = 1.043205880622088 * 10^-4 \\
-         & a_{22} = -\frac{y_{11}}{y_{21}} = 1.845360824742268
-    \end{aligned}
-\end{equation}
-
-
-Agora para achar os parâmetros \emph{a} do quadripolo em cascata, basta fazer a multiplicação matricial dos parâmetros \emph{a} de cada quadripolo.
-
-
-E isto nos dará os seguintes resultados para parâmetro \emph{a} do quadripolo em cascata:
-
-
-\begin{equation}
-    \begin{aligned}
-         & a_{11} = 4.177569222440531       \\
-         & a_{12} = 60555.71397236235       \\
-         & a_{21} = 2.706767809755985*10^-4 \\
-         & a_{22} = 4.162953335231222
-    \end{aligned}
-\end{equation}
-
-
-\subsubsection{Equações parâmetro \emph{a} em cascata}
-
-
-Agora que temos os parâmetros \emph{a} do quadripolo em cascata, podemos escrever as equações que relacionam as tensões e correntes de entrada e saída do quadripolo em cascata.
-
-
-\begin{equation}
-    \begin{aligned}
-         & V_1 = a_{11} V_2 - a_{12} I_2 \\
-         & I_1 = a_{21} V_2 - a_{22} I_2 \\
-    \end{aligned}
-\end{equation}
-
-
-Substituindo pelos valores achados temos:
-
-
-\begin{equation}
-    \begin{aligned}
-         & V_1 = 4.1775 V_2 - 60555.71 I_2    \\
-         & I_1 = 2.7 * 10^-4 * V_2 - 4.16 I_2 \\
-    \end{aligned}
-\end{equation}
-
-
-Para achar a impedância de entrada com uma carga resistiva de $2k \varOmega$ fazemos novamente  $V_2 = -I_2 Z_L$:
-
-
-\begin{equation}
-    \begin{aligned}
-         & V_1 = 4.1775 V_2 - 60555.71 (-2000 I_2)    \\
-         & I_1 = 2.7 * 10^-4 * V_2 - 4.16 (-2000 I_2) \\
-    \end{aligned}
-\end{equation}
-
-
-E resolvemos para $V_1$, $V_2$, e $I_2$.
-
-
-Com isto em mãos temos:
-
-
-\begin{equation}
-    \frac{V_1}{I_1} = 14648.46021387691 \varOmega
-\end{equation}
-
-
-
-
-\section{Medições em laboratório}
-
-
-Inicialmente farei as medições dos componentes a serem usados.
-
-
-Após isso montarei os circuitos e realizei as medições de tensão e corrente de ambos quadripolos e da conexão em cascata, com estes obterei os parâmetros \emph{z} do quadripolo A e os parâmetros \emph{y} do quadripolo B, e parâmetros \emph{a} do quadripolo em cascata.
-
-
-E por fim, medir a impedância total do circuito para confirmar que os resultados que obtive são coerentes
-
-
-
-
-\subsection{Quadripolo A}
-
-
-\subsubsection{Tabela de medidas}
-\begin{equation}
-    \begin{aligned}
-        R_{11} & = 8.22k \varOmega  \\
-        R_{12} & = 8.217k \varOmega \\
-        R_{21} & = 46.53k \varOmega \\
-        R_{22} & = 46.34k \varOmega \\
-        R_{3}  & = 82.05k \varOmega \\
-        Z_L    & = 1.9475 \varOmega
-    \end{aligned}
-\end{equation}
-
-
-\subsubsection{Resultados das medidas}
-
-
-\begin{center}
-    \begin{tabular}{ |c|c|c| }
-        \hline
-        $V_1$ & $0.643 V$     & $1.0082 V$    \\
-        $V_2$ & $1.005 V$     & $0.7215 V$    \\
-        $I_1$ & $0$           & $47.33 \mu A$ \\
-        $I_2$ & $42.18 \mu A$ & $0$           \\
-        \hline
-    \end{tabular}
-\end{center}
-
-
-\subsubsection{Parâmetros \emph{z}}
-
-
-Para $I_1 = 0$:
-
-
-\begin{equation}
-    \begin{aligned}
-         & z_{12} = \frac{V_1}{I_2} =  15244.19156 \varOmega \\
-         & z_{22} = \frac{V_2}{I_2} = 23826.458037 \varOmega \\
-    \end{aligned}
-\end{equation}
-
-
-Para $I_2 = 0$:
-
-
-\begin{equation}
-    \begin{aligned}
-         & z_{11} = \frac{V_1}{I_1} = 21301.5001056 \varOmega \\
-         & z_{21} = \frac{V_2}{I_1} = 15244.0312698 \varOmega
-    \end{aligned}
-\end{equation}
-
-
-E assim podemos montar as equações para parâmetro \emph{z}:
-
-
-\begin{equation}
-    \begin{aligned}
-         & V_1 = 21301.5 I_1 + 15244.19 I_2  \\
-         & V_2 = 15244.03 I_1 + 23826.45 I_2 \\
-    \end{aligned}
-\end{equation}
-
-
-\subsubsection{Impedância de entrada com carga}
-
-
-Novamente podemos substituir $I_2 = -I_1 Z_L$ que nos dá:
-
-
-\begin{equation}
-    \begin{aligned}
-         & Z_{numerico} = 11547.1061332794 \varOmega \\
-         & Z_{experimental} = 12204 \varOmega
-    \end{aligned}
-\end{equation}
-
-
-Observamos que o valor da impedância obtido numericamente a partir dos parâmetros \emph{z} é bastante próximo do valor obtido experimentalmente.
-
-
-
-
-\subsection{Quadripolo B}
-
-
-\subsubsection{Tabela de medidas}
-\begin{equation}
-    \begin{aligned}
-        R_{11} & = 8.188k \varOmega \\
-        R_{12} & = 8.188k \varOmega \\
-        R_{21} & = 46.05k \varOmega \\
-        R_{22} & = 46.92k \varOmega \\
-        R_{23} & = 46.79k \varOmega \\
-        R_{3}  & = 81.74k \varOmega \\
-        Z_L    & = 1.9475 \varOmega
-    \end{aligned}
-\end{equation}
-
-
-\subsubsection{Resultados das medidas}
-
-
-\begin{center}
-    \begin{tabular}{ |c|c|c| }
-        \hline
-        $V_1$ & $0 V$          & $1.0036 V$     \\
-        $V_2$ & $1.003 V$      & $0 V$          \\
-        $I_1$ & $0.12 \mu$     & $162.62 \mu A$ \\
-        $I_2$ & $153.66 \mu A$ & $0.13 \mu$     \\
-        \hline
-    \end{tabular}
-\end{center}
-
-
-\subsubsection{Parâmetros \emph{y}}
-
-
-Para $V_1 = 0$:
-
-
-\begin{equation}
-    \begin{aligned}
-         & y_{12} = \frac{I_1}{V_2} =  -1.19641077 * 10^-7 \sigma \\
-         & y_{22} = \frac{I_2}{V_2} = 1.53 * 10^-4 \sigma         \\
-    \end{aligned}
-\end{equation}
-
-
-Para $V_2 = 0$:
-
-
-\begin{equation}
-    \begin{aligned}
-         & y_{11} = \frac{I_1}{V_1} = 1.62 * 10^-4 \sigma  \\
-         & y_{21} = \frac{I_2}{V_1} = -1.29 * 10^-7 \sigma
-    \end{aligned}
-\end{equation}
-
-
-Observo que os resultados não estão coerentes com as análises teóricas. Creio que o problema foi na medição das correntes. As medições estavam flutuando dependendo do momento que as fiz. E não tenho certeza do por quê.
-
-
-Mas vou prosseguir a análise, mesmo com os parâmetros \emph{y} incoerentes.
-
-
-\begin{equation}
-    \begin{aligned}
-         & I_1 = 1.62 * 10^-4 * V_1 -1.19641077 * 10^-7 V_2 \\
-         & I_2 = -1.29 * 10^-7 *  V_1 + 1.53 * 10^-4 V_2    \\
-    \end{aligned}
-\end{equation}
-
-
-\subsubsection{Impedância de entrada com carga}
-
-
-Novamente podemos substituir $I_2 = -I_1 Z_L$ que nos dá:
-
-
-\begin{equation}
-    \begin{aligned}
-         & Z_{numerico} = 6172.838067895077 \varOmega \\
-         & Z_{experimental} = 7000 \varOmega
-    \end{aligned}
-\end{equation}
-
-
-Estou deveras confuso de por que os resultados foram próximos. Quando os parametros \emph{y} numericos e experimentais estavam tão distantes. Coincidência? Ou interpretei mal o resultado numérico e experimental?
-
-
-\subsection{Quadripolo em cascata}
-
-
-\subsubsection{Tabela de medidas}
-
-
-Utilizaremos os mesmos componentes  dos quadripolos A e B, logo serão as mesmas respectivas tabelas listadas acima.
-
-
-\subsubsection{Resultados das medidas}
-
-
-\begin{center}
-    \begin{tabular}{ |c|c|c| }
-        \hline
-        $V_1$ & $1.003V$   & $1.003 V$     \\
-        $V_2$ & $0.2982 V$ & $0 V$         \\
-        $I_1$ & $65.8 \mu$ & $74.06 \mu A$ \\
-        $I_2$ & $0$        & $0.1 \mu$     \\
-        \hline
-    \end{tabular}
-\end{center}
-
-
-\subsubsection{Parâmetros \emph{a}}
-
-
-Para $V_2 = 0$:
-
-
-\begin{equation}
-    \begin{aligned}
-         & a_{12} = -\frac{V_1}{I_2} =  1 * 10^8 \varOmega \\
-         & a_{22} = \frac{I_1}{I_2} = 740.6                \\
-    \end{aligned}
-\end{equation}
-
-
-Para $I_2 = 0$:
-
-
-\begin{equation}
-    \begin{aligned}
-         & a_{11} = \frac{V_1}{V_2} = 3.36351441985         \\
-         & a_{21} = \frac{I_1}{V_2} = 2.2 * 10^-4 \varOmega
-    \end{aligned}
-\end{equation}
-
-
-Novamente observo que os resultados não estão coerentes com as análises teóricas. Creio que o problema foi na medição das correntes. As medições estavam flutuando dependendo do momento que as fiz. E não tenho certeza do por quê.
-
-
-Mas vou prosseguir a análise, mesmo com os parâmetros \emph{a} incoerentes.
-
-
-\begin{equation}
-    \begin{aligned}
-         & V_1 = 3.36351441985 * V_2 -  10^8 I_2 \\
-         & I_1 = 2.2 * 10^-4 *  V_2 + 740.6  I_2 \\
-    \end{aligned}
-\end{equation}
-
-
-\subsubsection{Impedância de entrada com carga}
-
-
-Novamente podemos substituir $I_2 = -I_1 Z_L$ que nos dá:
-
-
-\begin{equation}
-    \begin{aligned}
-         & Z_{numerico} = -135090.0570605898 \varOmega \\
-         & Z_{experimental} = 13683 \varOmega
-    \end{aligned}
-\end{equation}
-
-
-O resultado numérico com os parâmetros \emph{a} obtidos foi bastante incoerente. Creio que por erros de medição das correntes do circuito. Mas o resultado experimental foi bastante próximo do esperado.
-
-
-
-
-\section{Conclusões}
-
-
-Conseguimos com sucesso fazer a análise numérica pelo Maxima, e comparamos os resultados com os obtidos experimentalmente.
-
-
-
-
-Nos resultados práticos, obtivemos parâmetros $Z$ bastante similares aos obtidos numericamente.
-
-
-Porém para os parâmetros $y$ e $a$ eles foram incoerentes. Imagino que houve algum erro no quadripolo $B$, que propagou-se para o quadripolo em cascata.
-
-
-As impedâncias de entrada com a carga $Z_L$ experimentais foram coerentes com a análise numérica em todos casos.
-
-
-Em suma creio que conseguimos entender melhor como fazer análise de quadripolos, apesar de ter errado nas medições das correntes do quadripolo $B$, e não ter identificado o erro a tempo de corrigi-lo.
-
+% \begin{center}
+%     \begin{tabular}{ |c|c|c| }
+%         \hline
+%         $V_1$ & $0.643 V$     & $1.0082 V$    \\
+%         $V_2$ & $1.005 V$     & $0.7215 V$    \\
+%         $I_1$ & $0$           & $47.33 \mu A$ \\
+%         $I_2$ & $42.18 \mu A$ & $0$           \\
+%         \hline
+%     \end{tabular}
+% \end{center}
 
 
 

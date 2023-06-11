@@ -1,28 +1,31 @@
 \babel@toc {brazil}{}\relax 
 \contentsline {section}{\numberline {1}Introdução}{}{section.1}%
-\contentsline {section}{\numberline {2}Análise preliminar}{}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Os circuitos}{}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Maxima}{}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Quadripolo \emph {A}}{}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Quadripolo \emph {B}}{}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Parámetros "y" do quadripolo \emph {B}}{}{subsubsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}Impedância de entrada com carga}{}{subsubsection.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}Parâmetros \emph {a} do quadripolo em cascata}{}{subsubsection.2.2.5}%
-\contentsline {subsubsection}{\numberline {2.2.6}Equações parâmetro \emph {a} em cascata}{}{subsubsection.2.2.6}%
-\contentsline {section}{\numberline {3}Medições em laboratório}{}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Quadripolo A}{}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Tabela de medidas}{}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Resultados das medidas}{}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Parâmetros \emph {z}}{}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.4}Impedância de entrada com carga}{}{subsubsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.2}Quadripolo B}{}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Tabela de medidas}{}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Resultados das medidas}{}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Parâmetros \emph {y}}{}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Impedância de entrada com carga}{}{subsubsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.3}Quadripolo em cascata}{}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Tabela de medidas}{}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Resultados das medidas}{}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Parâmetros \emph {a}}{}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Impedância de entrada com carga}{}{subsubsection.3.3.4}%
-\contentsline {section}{\numberline {4}Conclusões}{}{section.4}%
+\contentsline {section}{\numberline {2}Amplificadores Operacionais}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Ganho de Tensão de Malha Aberta}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Impedância de Entrada}{}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Impedância de Saída}{}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}CMRR (Rejeição de Modo Comum)}{}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Resposta em Frequência}{}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Largura de Banda}{}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Taxa de Subida}{}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Corrente de Bias}{}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Amplificador Operacional Ideal}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Ganho de Tensão Infinito}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Impedância de Entrada Infinita}{}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Impedância de Saída Nula}{}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Resposta em Frequência Infinita}{}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Rejeição de Modo Comum Infinita}{}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Taxa de Subida Infinita}{}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Alimentação Simétrica}{}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Limitações do Modelo Ideal}{}{subsection.3.8}%
+\contentsline {section}{\numberline {4}Amplificador Inversor}{}{section.4}%
+\contentsline {subsection}{\numberline {4.1}O Circuito}{}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Princípio de Funcionamento}{}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Aplicações do Amplificador Inversor}{}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Amplificador Não Inversor}{}{section.5}%
+\contentsline {subsection}{\numberline {5.1}O Circuito}{}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Princípio de Funcionamento}{}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Aplicações do Amplificador Não Inversor}{}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Amplificador Somador}{}{section.6}%
+\contentsline {subsection}{\numberline {6.1}O Circuito}{}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Princípio de Funcionamento}{}{subsection.6.2}%
