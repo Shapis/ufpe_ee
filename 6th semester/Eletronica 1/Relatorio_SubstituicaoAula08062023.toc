@@ -29,3 +29,13 @@
 \contentsline {section}{\numberline {6}Amplificador Somador}{}{section.6}%
 \contentsline {subsection}{\numberline {6.1}O Circuito}{}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Princípio de Funcionamento}{}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Aplicações do Amplificador Somador}{}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Amplificador Diferencial}{}{section.7}%
+\contentsline {subsection}{\numberline {7.1}O Circuito}{}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Princípio de Funcionamento}{}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Equações}{}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Aplicações do Amplificador Operacional Diferencial}{}{section.8}%
+\contentsline {section}{\numberline {9}Amplificadores Operacionais em Cascata}{}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Benefícios dos Circuitos em Cascata}{}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Exemplos de Circuitos em Cascata}{}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Conclusão}{}{section.10}%

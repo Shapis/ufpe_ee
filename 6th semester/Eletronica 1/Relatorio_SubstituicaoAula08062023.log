@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.10)  11 JUN 2023 07:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.10)  11 JUN 2023 08:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -760,39 +760,41 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `Relatorio_SubstituicaoAula08062023.toc'.
 
-
-Underfull \hbox (badness 5696) in paragraph at lines 62--63
-[]\OT1/cmr/m/n/12 Todos ar-qui-vos uti-li-za-dos para criar este
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
-\OT1/cmr/m/n/12 re-lat^^Sorio, e o re-la-to-rio em si est~ao em:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
-[]$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
- []
-
-
-Underfull \hbox (badness 6708) in paragraph at lines 64--64
-[]\OT1/cmr/bx/n/17.28 Amplificadores Ope-ra-ci-o-
- []
-
-
-Underfull \hbox (badness 1448) in paragraph at lines 70--70
-[]\OT1/cmr/bx/n/14.4 Ganho de Tens~ao de Ma-lha
- []
-
-
-Underfull \vbox (badness 2426) has occurred while \output is active []
-
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 3439) in paragraph at lines 102--102
+Underfull \hbox (badness 5696) in paragraph at lines 64--65
+[]\OT1/cmr/m/n/12 Todos ar-qui-vos uti-li-za-dos para criar este
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+\OT1/cmr/m/n/12 re-lat^^Sorio, e o re-la-to-rio em si est~ao em:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+[]$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
+ []
+
+
+Underfull \hbox (badness 6708) in paragraph at lines 67--67
+[]\OT1/cmr/bx/n/17.28 Amplificadores Ope-ra-ci-o-
+ []
+
+
+Underfull \hbox (badness 1448) in paragraph at lines 76--76
+[]\OT1/cmr/bx/n/14.4 Ganho de Tens~ao de Ma-lha
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.116 
+       [2]
+Underfull \hbox (badness 3439) in paragraph at lines 124--124
 []\OT1/cmr/bx/n/17.28 Amplificador Ope-ra-ci-o-nal
  []
 
@@ -800,81 +802,157 @@ Underfull \hbox (badness 3439) in paragraph at lines 102--102
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.110 \subsection
-                 {Impedância de Entrada Infinita} [2{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.141 \newpage
-               [3]
-<images/opamp_inversor.png, id=179, 548.0475pt x 347.2975pt>
+l.176 
+       [3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<images/opamp_inversor.png, id=231, 548.0475pt x 347.2975pt>
 File: images/opamp_inversor.png Graphic file (type png)
 <use images/opamp_inversor.png>
-Package pdftex.def Info: images/opamp_inversor.png  used on input line 153.
+Package pdftex.def Info: images/opamp_inversor.png  used on input line 201.
 (pdftex.def)             Requested size: 257.61894pt x 163.25633pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.199     \item A
-                 tenuação de Sinais: O amplificador inversor também pode ... [4 <./images/opamp_inversor.png>]
-<images/opamp_naoinversor.png, id=193, 529.98pt x 273.02pt>
-File: images/opamp_naoinversor.png Graphic file (type png)
-<use images/opamp_naoinversor.png>
-Package pdftex.def Info: images/opamp_naoinversor.png  used on input line 215.
-(pdftex.def)             Requested size: 257.61894pt x 132.71448pt.
+Underfull \hbox (badness 1087) in paragraph at lines 202--202
+[]\OT1/cmr/m/n/12 Figura 1: []Amplificador ope-ra-ci-o-nal em con-fi-
+ []
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.229 \end{equation}
-                     [5 <./images/opamp_naoinversor.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 255--255
+l.222 
+       [4 <./images/opamp_inversor.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.274 \newpage
+               [5]
+<images/opamp_naoinversor.png, id=248, 529.98pt x 273.02pt>
+File: images/opamp_naoinversor.png Graphic file (type png)
+<use images/opamp_naoinversor.png>
+Package pdftex.def Info: images/opamp_naoinversor.png  used on input line 286.
+(pdftex.def)             Requested size: 257.61894pt x 132.71448pt.
+
+Underfull \hbox (badness 1087) in paragraph at lines 287--287
+[]\OT1/cmr/m/n/12 Figura 2: []Amplificador ope-ra-ci-o-nal em con-fi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
 []\OT1/cmr/bx/n/14.4 Aplica^^Xc~oes do Am-pli-fi-ca-dor
  []
 
 
-Underfull \hbox (badness 2080) in paragraph at lines 267--268
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.351     \item A
+                 mplificação de Áudio: O amplificador não inversor é us... [6 <./images/opamp_naoinversor.png>]
+Underfull \hbox (badness 2080) in paragraph at lines 356--357
 []\OT1/cmr/m/n/12 O am-pli-fi-ca-dor n~ao in-ver-sor ^^Se um com-po-
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.269 \newpage
-               [6]
-Underfull \hbox (badness 1308) in paragraph at lines 273--274
+Underfull \hbox (badness 1308) in paragraph at lines 365--366
 []\OT1/cmr/m/n/12 O am-pli-fi-ca-dor so-ma-dor, tamb^^Sem co-nhe-cido
  []
 
-<images/opamp_somador.png, id=208, 821.0675pt x 517.935pt>
+<images/opamp_somador.png, id=260, 821.0675pt x 517.935pt>
 File: images/opamp_somador.png Graphic file (type png)
 <use images/opamp_somador.png>
-Package pdftex.def Info: images/opamp_somador.png  used on input line 279.
+Package pdftex.def Info: images/opamp_somador.png  used on input line 373.
 (pdftex.def)             Requested size: 257.61894pt x 162.50233pt.
+
+Underfull \hbox (badness 1087) in paragraph at lines 374--374
+[]\OT1/cmr/m/n/12 Figura 3: []Amplificador ope-ra-ci-o-nal em con-fi-
+ []
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.320 \end{document}
-                     [7 <./images/opamp_somador.png>] (./Relatorio_SubstituicaoAula08062023.aux)
+l.388 
+       [7 <./images/opamp_somador.png>]
+Underfull \hbox (badness 2277) in paragraph at lines 434--435
+[]\OT1/cmr/m/n/12 O am-pli-fi-ca-dor so-ma-dor ^^Se um com-po-nente
+ []
+
+
+Underfull \hbox (badness 2556) in paragraph at lines 434--435
+\OT1/cmr/m/n/12 e re-a-li-zar opera^^Xc~oes ma-tem^^Saticas pon-de-ra-das.
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.437 \newpage
+               [8]
+<images/opamp_diferencial.png, id=273, 1020.81375pt x 618.31pt>
+File: images/opamp_diferencial.png Graphic file (type png)
+<use images/opamp_diferencial.png>
+Package pdftex.def Info: images/opamp_diferencial.png  used on input line 451.
+(pdftex.def)             Requested size: 257.61894pt x 156.03949pt.
+
+Underfull \hbox (badness 1087) in paragraph at lines 452--452
+[]\OT1/cmr/m/n/12 Figura 4: []Amplificador ope-ra-ci-o-nal em con-fi-
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.537     \item F
+                 iltro de Rejeição de Ruído Comum: O amplificador operaci... [9 <./images/opamp_diferencial.png>]
+Underfull \hbox (badness 6708) in paragraph at lines 549--549
+[]\OT1/cmr/bx/n/17.28 Amplificadores Ope-ra-ci-o-
+ []
+
+
+Underfull \hbox (badness 1043) in paragraph at lines 555--556
+\OT1/cmr/m/n/12 cata, os si-nais de en-trada pas-sam por v^^Sarios
+ []
+
+
+Underfull \hbox (badness 2894) in paragraph at lines 558--558
+[]\OT1/cmr/bx/n/14.4 Benef^^S^^Pcios dos Cir-cui-tos em
+ []
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 568--569
+\OT1/cmr/m/n/12 te-gra^^Xc~ao e di-fe-ren-cia^^Xc~ao. Isso ^^Se poss^^S^^Pvel
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.569 \end{itemize}
+                    [10]
+Underfull \hbox (badness 2181) in paragraph at lines 582--583
+[]\OT1/cmr/m/n/12 Osciladores: Os os-ci-la-do-res s~ao cir-cui-tos
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.619 \end{document}
+                     [11] (./Relatorio_SubstituicaoAula08062023.aux)
 Package rerunfilecheck Info: File `Relatorio_SubstituicaoAula08062023.out' has not changed.
-(rerunfilecheck)             Checksum: 97F163E00E06894DA6EAC29EE9341167;5409.
+(rerunfilecheck)             Checksum: A8552F543424A21F25325F9430635156;7357.
  ) 
 Here is how much of TeX's memory you used:
- 53571 strings out of 476025
- 1381690 string characters out of 5796532
- 2136647 words of memory out of 5000000
- 73333 multiletter control sequences out of 15000+600000
+ 53608 strings out of 476025
+ 1382296 string characters out of 5796532
+ 2133653 words of memory out of 5000000
+ 73349 multiletter control sequences out of 15000+600000
  521556 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,8n,118p,809b,970s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Relatorio_SubstituicaoAula08062023.pdf (7 pages, 207711 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Relatorio_SubstituicaoAula08062023.pdf (11 pages, 275251 bytes).
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 44 named destinations out of 1000 (max. 500000)
- 268 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 362 PDF objects out of 1000 (max. 8388607)
+ 313 compressed objects within 4 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 353 words of extra memory for PDF output out of 10000 (max. 10000000)
 
