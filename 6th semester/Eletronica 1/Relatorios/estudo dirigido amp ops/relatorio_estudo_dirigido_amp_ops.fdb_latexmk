@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1686482881 "/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorio_SubstituicaoAula08062023.tex" "Relatorio_SubstituicaoAula08062023.pdf" "Relatorio_SubstituicaoAula08062023" 1686482881 0
-  "/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorio_SubstituicaoAula08062023.tex" 1686482879 36248 8001f701f416b928e8ab66e51484ddc2 ""
+["pdflatex"] 1686483001 "/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorios/estudo dirigido amp ops/relatorio_estudo_dirigido_amp_ops.tex" "relatorio_estudo_dirigido_amp_ops.pdf" "relatorio_estudo_dirigido_amp_ops" 1686483002 0
+  "/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorios/estudo dirigido amp ops/relatorio_estudo_dirigido_amp_ops.tex" 1686483000 36248 8001f701f416b928e8ab66e51484ddc2 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1686171558 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1686171558 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1686171558 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -250,18 +250,18 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1686171558 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1686382907 4493604 868eb9f183785b6f5cdd229f8b5ca0e9 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1686382902 8204101 919503ce77e48f3ef03ffcce06e7623b ""
-  "Relatorio_SubstituicaoAula08062023.aux" 1686482881 6489 302eea797b32700bf5d1b583e3de7c9d "pdflatex"
-  "Relatorio_SubstituicaoAula08062023.out" 1686482881 7357 a8552f543424a21f25325f9430635156 "pdflatex"
-  "Relatorio_SubstituicaoAula08062023.tex" 1686482879 36248 8001f701f416b928e8ab66e51484ddc2 ""
-  "Relatorio_SubstituicaoAula08062023.toc" 1686482881 3529 04ff244689fa96a0bbf14b004a791f19 "pdflatex"
   "images/opamp_diferencial.png" 1686480415 56341 6dbdda414c1fb8bb5c72e79b0e4d71e5 ""
   "images/opamp_inversor.png" 1686412713 32077 ffa51378eec4650ec11c5bbc7b360c97 ""
   "images/opamp_naoinversor.png" 1686414501 19615 710ec4269e11a322888500bdde940974 ""
   "images/opamp_somador.png" 1686478973 32554 2edb549f063e4ea6492a9c4faf856a5c ""
+  "relatorio_estudo_dirigido_amp_ops.aux" 1686483002 6489 302eea797b32700bf5d1b583e3de7c9d "pdflatex"
+  "relatorio_estudo_dirigido_amp_ops.out" 1686483002 7357 a8552f543424a21f25325f9430635156 "pdflatex"
+  "relatorio_estudo_dirigido_amp_ops.tex" 1686483000 36248 8001f701f416b928e8ab66e51484ddc2 ""
+  "relatorio_estudo_dirigido_amp_ops.toc" 1686483002 3529 04ff244689fa96a0bbf14b004a791f19 "pdflatex"
   (generated)
-  "Relatorio_SubstituicaoAula08062023.aux"
-  "Relatorio_SubstituicaoAula08062023.log"
-  "Relatorio_SubstituicaoAula08062023.out"
-  "Relatorio_SubstituicaoAula08062023.pdf"
-  "Relatorio_SubstituicaoAula08062023.toc"
+  "relatorio_estudo_dirigido_amp_ops.aux"
+  "relatorio_estudo_dirigido_amp_ops.log"
+  "relatorio_estudo_dirigido_amp_ops.out"
+  "relatorio_estudo_dirigido_amp_ops.pdf"
+  "relatorio_estudo_dirigido_amp_ops.toc"
   (rewritten before read)

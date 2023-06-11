@@ -1,8 +1,8 @@
-PWD /home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1
+PWD /home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorios/estudo dirigido amp ops
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorio_SubstituicaoAula08062023.tex
-OUTPUT Relatorio_SubstituicaoAula08062023.log
+INPUT /home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorios/estudo dirigido amp ops/relatorio_estudo_dirigido_amp_ops.tex
+OUTPUT relatorio_estudo_dirigido_amp_ops.log
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
@@ -1108,10 +1108,10 @@ INPUT /usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
-INPUT ./Relatorio_SubstituicaoAula08062023.aux
-INPUT Relatorio_SubstituicaoAula08062023.aux
-INPUT Relatorio_SubstituicaoAula08062023.aux
-OUTPUT Relatorio_SubstituicaoAula08062023.aux
+INPUT ./relatorio_estudo_dirigido_amp_ops.aux
+INPUT relatorio_estudo_dirigido_amp_ops.aux
+INPUT relatorio_estudo_dirigido_amp_ops.aux
+OUTPUT relatorio_estudo_dirigido_amp_ops.aux
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1136,18 +1136,18 @@ INPUT /usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary
 INPUT /usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-brazil.trsl
 INPUT /usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-brazil.trsl
 INPUT /usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-brazil.trsl
-INPUT ./Relatorio_SubstituicaoAula08062023.out
-INPUT Relatorio_SubstituicaoAula08062023.out
-INPUT ./Relatorio_SubstituicaoAula08062023.out
-INPUT Relatorio_SubstituicaoAula08062023.out
-INPUT ./Relatorio_SubstituicaoAula08062023.out
-INPUT Relatorio_SubstituicaoAula08062023.out
-INPUT ./Relatorio_SubstituicaoAula08062023.out
-INPUT Relatorio_SubstituicaoAula08062023.out
-OUTPUT Relatorio_SubstituicaoAula08062023.pdf
-INPUT ./Relatorio_SubstituicaoAula08062023.out
-INPUT ./Relatorio_SubstituicaoAula08062023.out
-OUTPUT Relatorio_SubstituicaoAula08062023.out
+INPUT ./relatorio_estudo_dirigido_amp_ops.out
+INPUT relatorio_estudo_dirigido_amp_ops.out
+INPUT ./relatorio_estudo_dirigido_amp_ops.out
+INPUT relatorio_estudo_dirigido_amp_ops.out
+INPUT ./relatorio_estudo_dirigido_amp_ops.out
+INPUT relatorio_estudo_dirigido_amp_ops.out
+INPUT ./relatorio_estudo_dirigido_amp_ops.out
+INPUT relatorio_estudo_dirigido_amp_ops.out
+OUTPUT relatorio_estudo_dirigido_amp_ops.pdf
+INPUT ./relatorio_estudo_dirigido_amp_ops.out
+INPUT ./relatorio_estudo_dirigido_amp_ops.out
+OUTPUT relatorio_estudo_dirigido_amp_ops.out
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -1170,9 +1170,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./Relatorio_SubstituicaoAula08062023.toc
-INPUT Relatorio_SubstituicaoAula08062023.toc
-INPUT Relatorio_SubstituicaoAula08062023.toc
+INPUT ./relatorio_estudo_dirigido_amp_ops.toc
+INPUT relatorio_estudo_dirigido_amp_ops.toc
+INPUT relatorio_estudo_dirigido_amp_ops.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -1191,7 +1191,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT Relatorio_SubstituicaoAula08062023.toc
+OUTPUT relatorio_estudo_dirigido_amp_ops.toc
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
@@ -1217,9 +1217,9 @@ INPUT ./images/opamp_diferencial.png
 INPUT images/opamp_diferencial.png
 INPUT ./images/opamp_diferencial.png
 INPUT ./images/opamp_diferencial.png
-INPUT Relatorio_SubstituicaoAula08062023.aux
-INPUT ./Relatorio_SubstituicaoAula08062023.out
-INPUT ./Relatorio_SubstituicaoAula08062023.out
+INPUT relatorio_estudo_dirigido_amp_ops.aux
+INPUT ./relatorio_estudo_dirigido_amp_ops.out
+INPUT ./relatorio_estudo_dirigido_amp_ops.out
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb

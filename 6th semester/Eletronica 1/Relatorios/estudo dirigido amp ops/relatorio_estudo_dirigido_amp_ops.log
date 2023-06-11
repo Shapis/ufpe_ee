@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.10)  11 JUN 2023 08:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.10)  11 JUN 2023 08:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorio_SubstituicaoAula08062023.tex"
-(/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorio_SubstituicaoAula08062023.tex
+**"/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorios/estudo dirigido amp ops/relatorio_estudo_dirigido_amp_ops.tex"
+(/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorios/estudo dirigido amp ops/relatorio_estudo_dirigido_amp_ops.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -663,8 +663,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip58
 ) (/usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
-) (./Relatorio_SubstituicaoAula08062023.aux)
-\openout1 = `Relatorio_SubstituicaoAula08062023.aux'.
+) (./relatorio_estudo_dirigido_amp_ops.aux)
+\openout1 = `relatorio_estudo_dirigido_amp_ops.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
@@ -745,9 +745,9 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
 Package hyperref Info: Link coloring OFF on input line 50.
-(./Relatorio_SubstituicaoAula08062023.out) (./Relatorio_SubstituicaoAula08062023.out)
+(./relatorio_estudo_dirigido_amp_ops.out) (./relatorio_estudo_dirigido_amp_ops.out)
 \@outlinefile=\write4
-\openout4 = `Relatorio_SubstituicaoAula08062023.out'.
+\openout4 = `relatorio_estudo_dirigido_amp_ops.out'.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -756,9 +756,9 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./Relatorio_SubstituicaoAula08062023.toc)
+) (./relatorio_estudo_dirigido_amp_ops.toc)
 \tf@toc=\write5
-\openout5 = `Relatorio_SubstituicaoAula08062023.toc'.
+\openout5 = `relatorio_estudo_dirigido_amp_ops.toc'.
 
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -936,20 +936,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
 <to be read again> 
                    \relax 
 l.619 \end{document}
-                     [11] (./Relatorio_SubstituicaoAula08062023.aux)
-Package rerunfilecheck Info: File `Relatorio_SubstituicaoAula08062023.out' has not changed.
+                     [11] (./relatorio_estudo_dirigido_amp_ops.aux)
+Package rerunfilecheck Info: File `relatorio_estudo_dirigido_amp_ops.out' has not changed.
 (rerunfilecheck)             Checksum: A8552F543424A21F25325F9430635156;7357.
  ) 
 Here is how much of TeX's memory you used:
  53608 strings out of 476025
- 1382296 string characters out of 5796532
- 2133653 words of memory out of 5000000
+ 1382380 string characters out of 5796532
+ 2133648 words of memory out of 5000000
  73349 multiletter control sequences out of 15000+600000
  521556 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,8n,118p,809b,970s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,8n,118p,843b,970s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Relatorio_SubstituicaoAula08062023.pdf (11 pages, 275249 bytes).
+Output written on relatorio_estudo_dirigido_amp_ops.pdf (11 pages, 275249 bytes).
 PDF statistics:
  362 PDF objects out of 1000 (max. 8388607)
  313 compressed objects within 4 object streams
