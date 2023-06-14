@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import sympy as smp
 from sympy import *
 
@@ -19,7 +20,6 @@ smp.pprint(eq2)
 print("Equacao 3:")
 smp.pprint(eq3)
 print("")
-
 
 sols = smp.solve([eq1, eq2, eq3], [Va, Vc, Vo])
 
@@ -67,29 +67,76 @@ print("")
 # Hjw = Hjw.subs({K: R2/R1, wc: A*wp/(1+K)})
 
 print("Valor absoluto de Hjw:")
-smp.pprint(smp.Abs(Hjw))
+Hjw_abs = smp.Abs(Hjw)
+smp.pprint(Hjw_abs)
 print("")
 
 
 print("Exemplo 1:")
-print("Para R1 = 4.7E4 ohms, R2 = 2.2E5 ohms, wp = 2E1 pi e A = 1E5\n")
+print("Para R1 = 4.7E3 ohms, R2 = 2.2E4 ohms, wp = 2E1 pi e A = 1E5\n")
 
-eqK1 = eqK.subs({R1: 4.7E4, R2: 2.2E5})
-smp.pprint(eqK1)
-# smp.pprint(eqK1.evalf())
-
+eqK1 = eqK.subs({R1: 4.7E3, R2: 2.2E4})
 K1 = smp.solve(eqK1, K)[0]
+smp.pprint(eqK1)
+print("")
 
 eqwc1 = eqwc.subs({A: 1E5, wp: 20 * smp.pi, K: K1}).evalf()
-
-# smp.pprint(eqwc1)
-
 wc1 = smp.solve(eqwc1, wc)[0]
+smp.pprint(eqwc1)
+print("")
 
-Hjw1 = -(K1 * wc1) / (I * w + wc1)
+print("Valores absolutos para w = [0.5, 1, 2, 4, 10, 20, 40]*wc:")
 
-# smp.pprint(Hjw1)
+ex1interval = [0.02, 0.01, 0.05, 0.2, 0.5, 1, 2, 4, 10, 20, 40]
+ex1Vals = []
 
-# smp.pprint(eqHjw)
+for val in ex1interval:
+    temp = Hjw_abs.subs({w: wc1 * val, wc: wc1, K: K1})
+    ex1Vals.append(temp)
+    print('para freq:', round(((val*wc1)/(2*smp.pi)).evalf(), 2),
+          '\ttemos:', round(temp, 2))
 
-# eqHjw1 = eqHjw.Eq(Hjw, -K1)
+print("")
+
+print("Exemplo 2:")
+print("Para R1 = 4.7E3 ohms, R2 = 5.6E5 ohms, wp = 2E1 pi e A = 1E5\n")
+
+eqK2 = eqK.subs({R1: 4.7E3, R2: 5.6E5})
+K2 = smp.solve(eqK2, K)[0]
+smp.pprint(eqK2)
+print("")
+
+eqwc2 = eqwc.subs({A: 1E5, wp: 20 * smp.pi, K: K2}).evalf()
+wc2 = smp.solve(eqwc2, wc)[0]
+smp.pprint(eqwc2)
+print("")
+
+ex2interval = [0.5, 1, 5, 20, 50, 200, 500, 1000]
+ex2Vals = []
+
+for val in ex2interval:
+    temp = Hjw_abs.subs({w: wc2 * val, wc: wc2, K: K2})
+    ex2Vals.append(temp)
+    print('para freq:', round(((val*wc2)/(2*smp.pi)).evalf(), 2),
+          '\ttemos:', round(temp, 2))
+print("")
+
+
+# Plotando os graficos
+
+frequencias_plot = [i for i in range(1, 100000, 100)]
+
+plotH1 = [Hjw_abs.subs({w: i, wc: wc1, K: K1}) for i in frequencias_plot]
+plotH2 = [Hjw_abs.subs({w: i, wc: wc2, K: K2}) for i in frequencias_plot]
+
+fig, ax = plt.subplots()
+
+ax.plot(frequencias_plot, plotH1, color='blue', label='Exemplo 1')
+ax.plot(frequencias_plot, plotH2, color='orange', label='Exemplo 2')
+ax.legend(['Exemplo 1', 'Exemplo 2'])
+plt.xlabel('w rad/s')
+plt.ylabel('|H(jw)|')
+plt.title('Magnitude de H(jw)')
+
+
+plt.show()
