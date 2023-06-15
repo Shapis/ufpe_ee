@@ -87,7 +87,9 @@ print("")
 
 print("Valores absolutos para w = [0.5, 1, 2, 4, 10, 20, 40]*wc:")
 
-ex1interval = [0.02, 0.01, 0.05, 0.2, 0.5, 1, 2, 4, 10, 20, 40]
+# ex1interval = [0.02, 0.01, 0.05, 0.2, 0.5, 1, 2, 4, 10, 20, 40]
+ex1interval = [0.5, 1, 2, 4, 10, 20, 40]
+
 ex1Vals = []
 
 for val in ex1interval:
