@@ -11,6 +11,11 @@ Vo, Vi, Va, Vc, R1, R2, Rp, Cp, A, w, j, Hjw, wp, wc, K = smp.symbols(
 eq1 = smp.Eq((Va - Vi)/R1 + (Va - Vo)/R2 + Va/(Rp + (1/(j * w * Cp))), 0)
 eq2 = smp.Eq(Va * ((1/(j * w * Cp)))/(((1/(j * w * Cp))) + Rp), -Vc)
 eq3 = smp.Eq(A * Vc, Vo)
+# print('Equacoes em latex:')
+# smp.pprint(smp.latex(eq1))
+# smp.pprint(smp.latex(eq2))
+# smp.pprint(smp.latex(eq3))
+# print("")
 
 print("Equações do circuito:")
 print("Equacao 1:")
@@ -25,6 +30,8 @@ sols = smp.solve([eq1, eq2, eq3], [Va, Vc, Vo])
 
 print("Soluçao para Vo:")
 smp.pprint(sols[Vo])
+# print("")
+# smp.pprint(smp.latex(sols[Vo]))
 print("")
 
 print("Aqui fazemos a seguinte simplificacao:")
@@ -34,6 +41,7 @@ Vo = (-A * R2 * Vi)/((Rp*(R1 + R2))*j*w*Cp + A*R1)
 
 print("Equacao de Vo simplificada:")
 smp.pprint(Vo)
+# smp.pprint(smp.latex(Vo))
 print("")
 
 eqHjw = smp.Eq(Hjw, Vo/Vi)
@@ -52,7 +60,6 @@ smp.pprint(eqHjw)
 
 print("")
 
-
 eqwp = smp.Eq(wp, 1/(Rp*Cp))
 smp.pprint(eqwp)
 
@@ -69,6 +76,7 @@ print("")
 print("Valor absoluto de Hjw:")
 Hjw_abs = smp.Abs(Hjw)
 smp.pprint(Hjw_abs)
+# smp.pprint(smp.latex(Hjw_abs))
 print("")
 
 
@@ -142,3 +150,7 @@ plt.title('Magnitude de H(jw)')
 
 
 plt.show()
+
+# Medicoes na pratica
+
+# Exemplo1
