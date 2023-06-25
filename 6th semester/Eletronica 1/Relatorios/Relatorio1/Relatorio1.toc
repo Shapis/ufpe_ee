@@ -27,3 +27,5 @@
 \contentsline {subsubsection}{\numberline {4.2.2}Gráfico de Bode}{}{subsubsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.3}Gráfico de Bode de ambos circuitos.}{}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Conclusões}{}{section.5}%
+\contentsline {section}{\numberline {6}Apêndice}{}{section.6}%
+\contentsline {section}{\numberline {7}Anexos}{}{section.7}%

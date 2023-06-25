@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.22)  22 JUN 2023 16:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.22)  25 JUN 2023 15:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -670,27 +670,51 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box79
 \@float@everytoks=\toks54
 \@floatcapt=\box80
-) (./Relatorio1.aux)
+) (/usr/share/texmf-dist/tex/latex/pythonhighlight/pythonhighlight.sty
+Package: pythonhighlight 2017/02/09 python code highlighting; provided by Olivier Verdier <olivier.verdier@gmail.com>
+ (/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count343
+\lst@gtempboxa=\box81
+\lst@token=\toks55
+\lst@length=\count344
+\lst@currlwidth=\dimen329
+\lst@column=\count345
+\lst@pos=\count346
+\lst@lostspace=\dimen330
+\lst@width=\dimen331
+\lst@newlines=\count347
+\lst@lineno=\count348
+\lst@maxwidth=\dimen332
+ (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count349
+\lst@skipnumbers=\count350
+\lst@framebox=\box82
+) (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+) (./Relatorio1.aux (./Sections/apendice.aux) (./Sections/anexo.aux))
 \openout1 = `Relatorio1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -713,14 +737,14 @@ LaTeX Font Info:    ... okay on input line 51.
 * \headsep=25.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=48.0pt
+* \marginparwidth=85.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
-* \@twocolumntrue
+* \@twocolumnfalse
 * \@twosidetrue
 * \@mparswitchtrue
 * \@reversemarginfalse
@@ -728,17 +752,17 @@ LaTeX Font Info:    ... okay on input line 51.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count343
-\scratchdimen=\dimen329
-\scratchbox=\box81
-\nofMPsegments=\count344
-\nofMParguments=\count345
-\everyMPshowfont=\toks55
-\MPscratchCnt=\count346
-\MPscratchDim=\dimen330
-\MPnumerator=\count347
-\makeMPintoPDFobject=\count348
-\everyMPtoPDFconversion=\toks56
+\scratchcounter=\count351
+\scratchdimen=\dimen333
+\scratchbox=\box83
+\nofMPsegments=\count352
+\nofMParguments=\count353
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count354
+\MPscratchDim=\dimen334
+\MPnumerator=\count355
+\makeMPintoPDFobject=\count356
+\everyMPtoPDFconversion=\toks57
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -747,253 +771,322 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (/usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-brazil.trsl
 File: translations-basic-dictionary-brazil.trsl (brazil translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `brazil'. on input line 51.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `brazil'. on input line 53.
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
-Package hyperref Info: Link coloring OFF on input line 51.
+Package hyperref Info: Link coloring OFF on input line 53.
 (./Relatorio1.out) (./Relatorio1.out)
 \@outlinefile=\write4
 \openout4 = `Relatorio1.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
+\c@lstlisting=\count357
+LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./Relatorio1.toc)
 \tf@toc=\write5
 \openout5 = `Relatorio1.toc'.
 
+ [1
 
-Underfull \hbox (badness 5696) in paragraph at lines 66--67
-[]\OT1/cmr/m/n/12 Todos ar-qui-vos uti-li-za-dos para criar este
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
-\OT1/cmr/m/n/12 re-lat^^Sorio, e o re-la-to-rio em si est~ao em:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
-[]$\OT1/cmtt/m/n/12 https : / / github . com / Shapis / ufpe _ ee / tree /
- []
-
-
-Underfull \hbox (badness 1102) in paragraph at lines 69--70
-[]\OT1/cmr/m/n/12 O c^^Sodigo uti-li-zado para a an^^Salise num^^Serica
- []
-
-<images/circuito.png, id=148, 1204.5pt x 541.02126pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Sections/Intro.tex) (./Sections/preliminar.tex
+<images/circuito.png, id=167, 1204.5pt x 541.02126pt>
 File: images/circuito.png Graphic file (type png)
 <use images/circuito.png>
-Package pdftex.def Info: images/circuito.png  used on input line 86.
-(pdftex.def)             Requested size: 257.61894pt x 115.71466pt.
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+Package pdftex.def Info: images/circuito.png  used on input line 11.
+(pdftex.def)             Requested size: 525.23788pt x 235.92847pt.
 
-
-
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.16 \newpage
+              [2
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.91 \newpage
+l.16 \newpage
               <./images/circuito.png>]
-Overfull \hbox (40.91298pt too wide) detected at line 113
-[][][]\OMS/cmsy/m/n/12 ^^@[]
- []
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.238 \newpage
-               [2]
-<images/plot_bode.png, id=183, 1273.75874pt x 946.53625pt>
+l.110 \end{equation}
+                     [3]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.163 \newpage
+               [4]
+<images/plot_bode.png, id=199, 1273.75874pt x 946.53625pt>
 File: images/plot_bode.png Graphic file (type png)
 <use images/plot_bode.png>
-Package pdftex.def Info: images/plot_bode.png  used on input line 246.
-(pdftex.def)             Requested size: 257.61894pt x 191.427pt.
-<images/circuitoreal.jpeg, id=184, 1604.99625pt x 902.37125pt>
-File: images/circuitoreal.jpeg Graphic file (type jpg)
-<use images/circuitoreal.jpeg>
-Package pdftex.def Info: images/circuitoreal.jpeg  used on input line 262.
-(pdftex.def)             Requested size: 257.61894pt x 144.83673pt.
-<images/valores1.png, id=185, 1024.82875pt x 483.8075pt>
-File: images/valores1.png Graphic file (type png)
-<use images/valores1.png>
-Package pdftex.def Info: images/valores1.png  used on input line 292.
-(pdftex.def)             Requested size: 257.61894pt x 121.61598pt.
-<images/exemplo1_meio_fc.png, id=186, 803.0pt x 504.88625pt>
-File: images/exemplo1_meio_fc.png Graphic file (type png)
-<use images/exemplo1_meio_fc.png>
-Package pdftex.def Info: images/exemplo1_meio_fc.png  used on input line 302.
-(pdftex.def)             Requested size: 257.61894pt x 161.9829pt.
+Package pdftex.def Info: images/plot_bode.png  used on input line 171.
+(pdftex.def)             Requested size: 525.23788pt x 390.3066pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.305 
-       [3
+l.176 \newpage
+               [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.305 
-      
+l.176 \newpage
+               <./images/plot_bode.png>]) (./Sections/medicoes.tex
+<images/circuitoreal.jpeg, id=205, 1604.99625pt x 902.37125pt>
+File: images/circuitoreal.jpeg Graphic file (type jpg)
+<use images/circuitoreal.jpeg>
+Package pdftex.def Info: images/circuitoreal.jpeg  used on input line 10.
+(pdftex.def)             Requested size: 525.23788pt x 295.305pt.
+<images/valores1.png, id=206, 1024.82875pt x 483.8075pt>
+File: images/valores1.png Graphic file (type png)
+<use images/valores1.png>
+Package pdftex.def Info: images/valores1.png  used on input line 40.
+(pdftex.def)             Requested size: 525.23788pt x 247.95663pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 
+      [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.305 
-      
+l.43 
+      <./images/circuitoreal.jpeg>]
+<images/exemplo1_meio_fc.png, id=212, 803.0pt x 504.88625pt>
+File: images/exemplo1_meio_fc.png Graphic file (type png)
+<use images/exemplo1_meio_fc.png>
+Package pdftex.def Info: images/exemplo1_meio_fc.png  used on input line 50.
+(pdftex.def)             Requested size: 525.23788pt x 330.26762pt.
+<images/exemplo1_10_fc.png, id=213, 803.0pt x 504.88625pt>
+File: images/exemplo1_10_fc.png Graphic file (type png)
+<use images/exemplo1_10_fc.png>
+Package pdftex.def Info: images/exemplo1_10_fc.png  used on input line 57.
+(pdftex.def)             Requested size: 525.23788pt x 330.26762pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.60 
+      [7
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.305 
-       <./images/plot_bode.png> <./images/circuitoreal.jpeg> <./images/valores1.png>]
-<images/exemplo1_10_fc.png, id=196, 803.0pt x 504.88625pt>
-File: images/exemplo1_10_fc.png Graphic file (type png)
-<use images/exemplo1_10_fc.png>
-Package pdftex.def Info: images/exemplo1_10_fc.png  used on input line 309.
-(pdftex.def)             Requested size: 257.61894pt x 161.9829pt.
-<images/exemplo1_20_fc.png, id=197, 803.0pt x 504.88625pt>
-File: images/exemplo1_20_fc.png Graphic file (type png)
-<use images/exemplo1_20_fc.png>
-Package pdftex.def Info: images/exemplo1_20_fc.png  used on input line 316.
-(pdftex.def)             Requested size: 257.61894pt x 161.9829pt.
-<images/valores2.png, id=198, 1023.825pt x 510.90875pt>
-File: images/valores2.png Graphic file (type png)
-<use images/valores2.png>
-Package pdftex.def Info: images/valores2.png  used on input line 347.
-(pdftex.def)             Requested size: 257.61894pt x 128.55322pt.
-<images/exemplo2_meio_fc.png, id=199, 803.0pt x 504.88625pt>
-File: images/exemplo2_meio_fc.png Graphic file (type png)
-<use images/exemplo2_meio_fc.png>
-Package pdftex.def Info: images/exemplo2_meio_fc.png  used on input line 357.
-(pdftex.def)             Requested size: 257.61894pt x 161.9829pt.
-<images/exemplo2_50_fc.png, id=200, 803.0pt x 504.88625pt>
-File: images/exemplo2_50_fc.png Graphic file (type png)
-<use images/exemplo2_50_fc.png>
-Package pdftex.def Info: images/exemplo2_50_fc.png  used on input line 364.
-(pdftex.def)             Requested size: 257.61894pt x 161.9829pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/exemplo2_500_fc.png, id=201, 803.0pt x 504.88625pt>
-File: images/exemplo2_500_fc.png Graphic file (type png)
-<use images/exemplo2_500_fc.png>
-Package pdftex.def Info: images/exemplo2_500_fc.png  used on input line 371.
-(pdftex.def)             Requested size: 257.61894pt x 161.9829pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.376 \newpage
-               [4
+l.60 
+     
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.376 \newpage
-              
+l.60 
+      <./images/valores1.png> <./images/exemplo1_meio_fc.png (PNG copy)>]
+<images/exemplo1_20_fc.png, id=221, 803.0pt x 504.88625pt>
+File: images/exemplo1_20_fc.png Graphic file (type png)
+<use images/exemplo1_20_fc.png>
+Package pdftex.def Info: images/exemplo1_20_fc.png  used on input line 64.
+(pdftex.def)             Requested size: 525.23788pt x 330.26762pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.67 \newpage
+              [8
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.376 \newpage
-              
+l.67 \newpage
+             
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.376 \newpage
-              
+l.67 \newpage
+              <./images/exemplo1_10_fc.png (PNG copy)> <./images/exemplo1_20_fc.png (PNG copy)>]
+<images/valores2.png, id=227, 1023.825pt x 510.90875pt>
+File: images/valores2.png Graphic file (type png)
+<use images/valores2.png>
+Package pdftex.def Info: images/valores2.png  used on input line 95.
+(pdftex.def)             Requested size: 525.23788pt x 262.10359pt.
+<images/exemplo2_meio_fc.png, id=228, 803.0pt x 504.88625pt>
+File: images/exemplo2_meio_fc.png Graphic file (type png)
+<use images/exemplo2_meio_fc.png>
+Package pdftex.def Info: images/exemplo2_meio_fc.png  used on input line 105.
+(pdftex.def)             Requested size: 525.23788pt x 330.26762pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/exemplo2_50_fc.png, id=229, 803.0pt x 504.88625pt>
+File: images/exemplo2_50_fc.png Graphic file (type png)
+<use images/exemplo2_50_fc.png>
+Package pdftex.def Info: images/exemplo2_50_fc.png  used on input line 112.
+(pdftex.def)             Requested size: 525.23788pt x 330.26762pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/exemplo2_500_fc.png, id=230, 803.0pt x 504.88625pt>
+File: images/exemplo2_500_fc.png Graphic file (type png)
+<use images/exemplo2_500_fc.png>
+Package pdftex.def Info: images/exemplo2_500_fc.png  used on input line 119.
+(pdftex.def)             Requested size: 525.23788pt x 330.26762pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.124 \newpage
+               [9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.376 \newpage
-              
+l.124 \newpage
+               <./images/valores2.png>]) (./Sections/posanalise.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2 \section
+            {Análise dos resultados} [10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.376 \newpage
-               <./images/exemplo1_meio_fc.png (PNG copy)> <./images/exemplo1_10_fc.png (PNG copy)> <./images/exemplo1_20_fc.png (PNG copy)> <./images/valores2.png> <./images/exemplo2_meio_fc.png (PNG copy)>]
-<images/bode1.png, id=212, 1188.44pt x 883.3pt>
-File: images/bode1.png Graphic file (type png)
-<use images/bode1.png>
-Package pdftex.def Info: images/bode1.png  used on input line 410.
-(pdftex.def)             Requested size: 257.61894pt x 191.46925pt.
-<images/bode2.png, id=213, 1188.44pt x 883.3pt>
-File: images/bode2.png Graphic file (type png)
-<use images/bode2.png>
-Package pdftex.def Info: images/bode2.png  used on input line 440.
-(pdftex.def)             Requested size: 257.61894pt x 191.46925pt.
-<images/bodeboth.png, id=214, 1188.44pt x 883.3pt>
-File: images/bodeboth.png Graphic file (type png)
-<use images/bodeboth.png>
-Package pdftex.def Info: images/bodeboth.png  used on input line 454.
-(pdftex.def)             Requested size: 257.61894pt x 191.46925pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.457 
-       [5
+l.2 \section
+            {Análise dos resultados}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.457 
-      
+l.2 \section
+            {Análise dos resultados} <./images/exemplo2_meio_fc.png (PNG copy)> <./images/exemplo2_50_fc.png (PNG copy)>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2 \section
+            {Análise dos resultados} [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.457 
-      
+l.2 \section
+            {Análise dos resultados} <./images/exemplo2_500_fc.png (PNG copy)>]
+<images/bode1.png, id=246, 1188.44pt x 883.3pt>
+File: images/bode1.png Graphic file (type png)
+<use images/bode1.png>
+Package pdftex.def Info: images/bode1.png  used on input line 33.
+(pdftex.def)             Requested size: 525.23788pt x 390.39188pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.37 \newpage
+              [12
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.457 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.457 
-       <./images/exemplo2_50_fc.png (PNG copy)> <./images/exemplo2_500_fc.png (PNG copy)> <./images/bode1.png> <./images/bode2.png>]
-Underfull \hbox (badness 5345) in paragraph at lines 462--463
-[]\OT1/cmr/m/n/12 Conseguimos com su-cesso fa-zer a an^^Salise
- []
+l.37 \newpage
+              <./images/bode1.png>]
+<images/bode2.png, id=253, 1188.44pt x 883.3pt>
+File: images/bode2.png Graphic file (type png)
+<use images/bode2.png>
+Package pdftex.def Info: images/bode2.png  used on input line 63.
+(pdftex.def)             Requested size: 525.23788pt x 390.39188pt.
+<images/bodeboth.png, id=254, 1188.44pt x 883.3pt>
+File: images/bodeboth.png Graphic file (type png)
+<use images/bodeboth.png>
+Package pdftex.def Info: images/bodeboth.png  used on input line 77.
+(pdftex.def)             Requested size: 525.23788pt x 390.39188pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.472 \end{document}
-                     [6
+l.80 
+      [13
+pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.80 
+      <./images/bode2.png>]) (./Sections/conclusoes.tex)
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.73 \include{Sections/apendice.tex}
+                                     [14
 pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.472 \end{document}
-                    
+l.73 \include{Sections/apendice.tex}
+                                     <./images/bodeboth.png>]
+\openout2 = `Sections/apendice.aux'.
 
- <./images/bodeboth.png>] (./Relatorio1.aux)
+ (./Sections/apendice.tex (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 6.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.66     print(
+               "") [15
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.129     ex2interval 
+                      = [0.5, 1, 5, 20, 50, 200, 500, 1000] [16])
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.73 \include{Sections/apendice.tex}
+                                     [17]
+\openout2 = `Sections/anexo.aux'.
+
+ (./Sections/anexo.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.66     freqs2,
+                 2*dB(vout2/vin2)) [18
+
+
+
+])
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.75 \include{Sections/anexo.tex}
+                                  [19] (./Relatorio1.aux (./Sections/apendice.aux) (./Sections/anexo.aux))
 Package rerunfilecheck Info: File `Relatorio1.out' has not changed.
-(rerunfilecheck)             Checksum: 0FCED07A8CC875A7A2F649D0BC43375B;4169.
+(rerunfilecheck)             Checksum: 940CBDCEBCD2AFC2A94D64408D0193BA;4330.
  ) 
 Here is how much of TeX's memory you used:
- 53726 strings out of 476025
- 1384463 string characters out of 5796532
- 2135874 words of memory out of 5000000
- 73459 multiletter control sequences out of 15000+600000
- 521566 words of font info for 68 fonts, out of 8000000 for 9000
+ 56440 strings out of 476025
+ 1420677 string characters out of 5796532
+ 2860578 words of memory out of 5000000
+ 75869 multiletter control sequences out of 15000+600000
+ 521903 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,10n,118p,807b,906s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Relatorio1.pdf (6 pages, 761280 bytes).
+ 117i,10n,118p,807b,2962s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Relatorio1.pdf (19 pages, 826875 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
- 239 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 307 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 659 PDF objects out of 1000 (max. 8388607)
+ 585 compressed objects within 6 object streams
+ 309 named destinations out of 1000 (max. 500000)
+ 323 words of extra memory for PDF output out of 10000 (max. 10000000)
 
