@@ -1,0 +1,78 @@
+\documentclass[12pt,twoside, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage[americanvoltages,fulldiodes,siunitx]{circuitikz}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\usepackage{ifthen}
+\usepackage{adjustbox}
+\usepackage[section]{placeins}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{pythonhighlight}
+
+
+\pgfplotsset{compat=newest}
+\graphicspath{ {./images/} }
+%  #1 color - optional #2 x_0 #3 y_0 #4 x_f #5 y_f #6 name - optional  #7 true if adding lines to axis
+\newcommand{\drawvector} [9] [color=cyan] {
+\draw[line width=1.5pt,#1,-stealth](axis cs: #2, #3)--(axis cs: #4, #5) node[anchor=south west]{$#6$};
+\ifthenelse{\equal{#7}{true}}{
+\draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: #4, 0) node[anchor= north west]{$#8$};
+\draw[line width=1pt,#1, dashed](axis cs: #4, #5)--(axis cs: 0, #5) node[anchor=south east]{$#9$};
+}
+{}
+}
+\newcommand\deriv[2]{\frac{\mathrm d #1}{\mathrm d #2}}
+\pgfplotsset{width = 10cm, compat = 1.9}
+
+\begin{document}
+\title{Primeiro Relatório de Lab de Eletronica 1}
+\author{Henrique da Silva \\ henrique.pedro@ufpe.br}
+\date{\today}
+
+\maketitle
+\pagenumbering{gobble}
+\tableofcontents
+\newpage
+
+
+
+\input{Sections/intro}
+
+\input{Sections/preliminar}
+
+\input{Sections/medicoes}
+
+\input{Sections/posanalise}
+
+\input{Sections/conclusoes.tex}
+
+\include{Sections/apendice.tex}
+
+\include{Sections/anexo.tex}
+
+
+\end{document}
