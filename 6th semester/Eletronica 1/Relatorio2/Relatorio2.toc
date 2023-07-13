@@ -3,29 +3,9 @@
 \contentsline {section}{\numberline {2}Análise preliminar}{}{section.2}%
 \contentsline {subsection}{\numberline {2.1}O circuito}{}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Análise simbólica}{}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Análise numérica}{}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Circuito 1}{}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Circuito 2}{}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Gráfico dos exemplos}{}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.2.1}Estado 1: Polarizacao direta}{}{subsubsection.2.2.1}%
 \contentsline {section}{\numberline {3}Medições em laboratório}{}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Circuito 1}{}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Valores dos componentes}{}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Frequência de corte}{}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Valores medidos}{}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.4}Fotos do osciloscópio}{}{subsubsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.2}Circuito 2}{}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Valores dos componentes}{}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Frequência de corte}{}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Valores medidos}{}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Fotos do osciloscópio}{}{subsubsection.3.2.4}%
 \contentsline {section}{\numberline {4}Análise dos resultados}{}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Circuito 1}{}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Ajuste de curva}{}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Gráfico de Bode}{}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Circuito 2}{}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Ajuste de curva}{}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Gráfico de Bode}{}{subsubsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.3}Gráfico de Bode de ambos circuitos.}{}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Conclusões}{}{section.5}%
 \contentsline {section}{\numberline {6}Apêndice}{}{section.6}%
 \contentsline {section}{\numberline {7}Anexos}{}{section.7}%

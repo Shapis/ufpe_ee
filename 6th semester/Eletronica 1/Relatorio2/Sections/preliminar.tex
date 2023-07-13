@@ -1,177 +1,127 @@
 \section{Análise preliminar}
 
-Utilizarei a biblioteca \emph{sympy} do \emph{Python} para fazer a análise simbólica e numérica do circuito antes de montá-lo fisicamente.
-
-Após terminar as análises compararei os resultados obtidos nas análises numéricas e em laboratório para verificar sua coerência.
+Na análise teórica, considera-se o comportamento não linear do diodo e a capacidade de armazenamento do capacitor. Determina-se as equações que descrevem a relação entre a tensão de entrada e a tensão de saída do circuito, levando em conta os parâmetros do diodo e do capacitor. Com essas equações permite-se compreender como o circuito "grampeia" a tensão mínima em 0 V e como a forma e amplitude da onda de entrada afetam a tensão de saída.
 
 \subsection{O circuito}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\columnwidth]{images/circuito.png}
-    \caption{Circuito com amp op em configuração inversora.}
+    \includegraphics[width=1\columnwidth]{images/o_circuito.png}
+    \caption{Circuito com diodo em configuração de grampeador.}
 \end{figure}
-
 
 \newpage
 \subsection{Análise simbólica}
 
+Faz-se a análise de cada estado do diodo separadamente, inicia-se com o diodo polarizado diretamente, e depois com este polarizado reversamente.
 
-Podemos realizar a análise do circuito utilizando análise nodal.
-
-
-\begin{equation}
-    \begin{aligned}
-        0       & = \frac{V_{a}}{R_{p} + \frac{1}{C_{p} j w}} + \frac{V_{a} - V_{o}}{R_{2}} + \frac{V_{a} - V_{i}}{R_{1}} \\
-        - V_{c} & = \frac{V_{a}}{C_{p} j w \left(R_{p} + \frac{1}{C_{p} j w}\right)}                                      \\
-        V_{o}   & = A V_{c}
-    \end{aligned}
-\end{equation}
-
-
-Resolvendo as equações para $V_o$ obtemos que $V_o$ é dado por:
-
-
-\begin{equation}
-    - \frac{A R_{2} V_{i}}{A R_{1} + C_{p} R_{1} R_{2} j w + C_{p} R_{1} R_{p} j w + C_{p} R_{2} R_{p} j w
-        + R_{1} + R_{2}}
-\end{equation}
-
-
-Aqui fazemos a seguinte simplificação $R_p >> R_1$ , $R_p >> R_2$, e $A >> 1$:
-
-
-\begin{equation}
-    V_o = - \frac{A R_{2} V_{i}}{A R_{1} + C_{p} R_{p} j w \left(R_{1} + R_{2}\right)}
-\end{equation}
-
-
-Com esta simplificação fazemos $\frac{V_o}{V_i}$ para obter a função transferência $H\left(jw\right)$:
-
-
-\begin{equation}
-    H\left(jw\right) = - \frac{A R_{2}}{A R_{1} + C_{p} R_{p} j w \left(R_{1} + R_{2}\right)}
-\end{equation}
-
-
-Agora podemos reorganiza-la no formato de um filtro passa-baixa para achar o ganho $K$, e a frequência de corte $w_c$:
-
-
-\begin{equation}
-    \begin{aligned}
-        H(jw) & = - \frac{K w_c}{jw + w_c} \\
-        w_p   & = \frac{1}{R_p C_p}        \\
-        K     & = \frac{R_2}{R_1}          \\
-        w_c   & = \frac{A w_p}{1 + K}
-    \end{aligned}
-\end{equation}
-
-
-Podemos também achar o valor absoluto de $H(jw)$:
-
-
-\begin{equation}
-    \lvert H(jw) \rvert = \frac{\left|{K w_{c}}\right|}{\sqrt{w^{2} + w_{c}^{2}}}
-\end{equation}
-
-
-\subsection{Análise numérica}
-
-
-Aqui utilizaremos as equações (5) e (6) para implementar o circuito discutido acima com dois conjuntos de valores, os conjuntos diferem apenas em seu $R_2$
-
-
-Para ambos circuitos utilizaremos os seguintes valores:
-
-
-\begin{equation}
-    \begin{aligned}
-        R_1 & = 4.7k \varOmega \\
-        w_p & = 2 \pi 1k rad/s \\
-        A   & = 10^5
-    \end{aligned}
-\end{equation}
-
-
-\subsubsection{Circuito 1}
-
-
-Neste utilizaremos o valor  $R_2 = 22k$:
-
-
-Isto nos dá:
-
-
-\begin{equation}
-    \begin{aligned}
-        K   & = 4.68                     \\
-        w_c & = 1.10 \times 10^{6} rad/s
-    \end{aligned}
-\end{equation}
-
-
-\begin{center}
-    \begin{tabular}{ |c|c|c| }
-        \hline
-        freq rad/s & freq Hz         & $\lvert H(jw) \rvert$ \\
-        $0.5 w_c$  & $88014.98 Hz$   & 4.19                  \\
-        $w_c$      & $176029.96 Hz$  & 3.31                  \\
-        $2 w_c$    & $352059.93 Hz$  & 2.09                  \\
-        $4 w_c$    & $704119.85 Hz$  & 1.14                  \\
-        $10 w_c$   & $1760299.63 Hz$ & 0.47                  \\
-        $20 w_c$   & $3520599.25 Hz$ & 0.23                  \\
-        $40 w_c$   & $7041198.50 Hz$ & 0.12                  \\
-        \hline
-    \end{tabular}
-\end{center}
-
-
-\subsubsection{Circuito 2}
-
-
-Neste utilizaremos o valor  $R_2 = 560k$:
-
-
-Isto nos dá:
-
-
-\begin{equation}
-    \begin{aligned}
-        K   & = 119.15      \\
-        w_c & = 52295 rad/s
-    \end{aligned}
-\end{equation}
-
-
-\begin{center}
-    \begin{tabular}{ |c|c|c| }
-        \hline
-        freq rad/s & freq Hz      & $\lvert H(jw) \rvert$ \\
-        $0.5 w_c$  & $4161.50 Hz$ & 106.57                \\
-        $w_c$      & $8323 Hz$    & 84.25                 \\
-        $5 w_c$    & $41615 Hz$   & 23.37                 \\
-        $20 w_c$   & $166460 Hz$  & 5.95                  \\
-        $50 w_c$   & $416150 Hz$  & 2.38                  \\
-        $200 w_c$  & $1664600 Hz$ & 0.60                  \\
-        $500 w_c$  & $4161501 Hz$ & 0.24                  \\
-        $1000 w_c$ & $8323003 Hz$ & 0.12                  \\
-        \hline
-    \end{tabular}
-\end{center}
-
-
-\newpage
-
-
-\subsubsection{Gráfico dos exemplos}
-
+\subsubsection{Estado 1: Polarizacao direta}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\columnwidth]{images/plot_bode.png}
-    \caption{Gráfico da magnitude pela frequência dos exemplos 1 e 2.}
+    \includegraphics[width=1\columnwidth]{images/o_circuito_direto.png}
+    \caption{Circuito grampeador de tensao em configuração de polarizacao direta.}
 \end{figure}
 
+Atinge-se este estado quando o diodo esta "ligado".
 
-\newpage
+Neste caso tem-se restricoes
+
+\begin{equation}
+    \begin{aligned}
+         & I_d > 0      \\
+         & V_d = V_{D0}
+    \end{aligned}
+\end{equation}
+
+Aplica-se a lei de Kirchhoff para o no $V_o$.
+
+\begin{equation}
+    \frac{V_o}{R} + \frac{V_o - ( - V_{D0})}{R_m} + C \deriv{V_c}{t} = 0
+\end{equation}
+
+Observa-se que:
+
+\begin{equation}
+    V_c = V_o - V_i
+\end{equation}
+
+\begin{equation}
+    \deriv{V_c}{t} + \left( \frac{1}{R_m} + \frac{1}{R} \right) \frac{V_o}{C} = - \frac{V_{D0}}{R_m C}
+\end{equation}
+
+Rearranjando a equação:
+
+\begin{equation}
+    \deriv{V_c}{t} + \left( \frac{1}{R_m} + \frac{1}{R}\right) \frac{V_o}{C} = - \frac{V_{D0}}{R_m C}
+\end{equation}
+
+Como $V_c = V_o - V_i$: obtem-se:
+
+\begin{equation}
+    \label{eq:diff_eq1}
+    \deriv{V_o}{t} + \frac{1}{C} \left(\frac{1}{R_m} + \frac{1}{R} \right) V_o = \deriv{V_i}{t} - \frac{V_{D0}}{R_m C}
+\end{equation}
+\\
+A condicao inicial para  $V_o$ em funcao $V_{C0} = v(t=0)$ eh $V_o(0) = V_{C0} + V_i$.\\
+
+Nesta pratica, faz-se duas premissas:
+
+\begin{itemize}
+    \item $R_m \ll R$. \\
+    \item  $V_i$ eh uma onda quadrada de amplitude $\pm V_m$ e periodo $T_s$.
+\end{itemize}
+
+Da primeira premissa obtem-se:
+
+\begin{equation}
+    \frac{1}{R_m} + \frac{1}{R} \approx \frac{1}{R_m}
+\end{equation}
+
+E da segunda premissa, entre as transicoes entre $\pm V_m$ tem-se:
+
+\begin{equation}
+    \deriv{V_i}{t} = 0
+\end{equation}
+
+Pode-se entao simplificar a equacao \ref{eq:diff_eq1} como:
+
+\begin{equation}
+    \label{eq:diff_eq_estado1}
+    \deriv{V_o}{t} + \frac{V_o}{R_m C}= - -\frac{V_{D0}}{R_m C}
+\end{equation}
+
+Com condicao inicial: $V_o(t = 0^{+}) = V_{C0} \pm V_m$.
+
+\hfill
+
+Tem-se solucao da equacao diferencial \ref{eq:diff_eq_estado1} como a soma da solucao particular e da solucao homogenea como:
+
+\begin{equation}
+    \tag*{Parte homogenea}
+    \deriv{V_{oH}}{t} + \deriv{V_{oH}}{R_m C} = 0
+\end{equation}
+
+\begin{equation}
+    \tag*{Solucao generica}
+    V_{oH}(t) = K e^{-\frac{t}{R_m C}}
+\end{equation}
+
+Com $K$ determinado pelas condicoes iniciais.
+
+Por substituicao determina-se que uma solucao particular pode ser obitda por:
+
+\begin{equation}
+    V_{oP}(t) = - V_{D0}
+\end{equation}
+
+Assim tem-se como solucao completa:
+
+\begin{equation}
+    \tag*{Solucao completa}
+    \label{eq:solucao_completa1}
+    V_o(t) = K e^{-\frac{t}{R_m C}} - V_{D0}
+\end{equation}
+
+
 
