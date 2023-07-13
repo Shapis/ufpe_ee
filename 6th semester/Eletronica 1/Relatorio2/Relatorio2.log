@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.28)  12 JUL 2023 23:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.28)  13 JUL 2023 20:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -795,7 +795,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Sections/Intro.tex) (./Sections/preliminar.tex
-<images/o_circuito.png, id=67, 531.9875pt x 327.2225pt>
+<images/o_circuito.png, id=72, 531.9875pt x 327.2225pt>
 File: images/o_circuito.png Graphic file (type png)
 <use images/o_circuito.png>
 Package pdftex.def Info: images/o_circuito.png  used on input line 9.
@@ -811,16 +811,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has
                                                   \__shipout_drop_firstpage_...
 l.13 \newpage
               <./images/o_circuito.png>]
-<images/o_circuito_direto.png, id=76, 1296.845pt x 369.38pt>
+<images/o_circuito_direto.png, id=81, 1296.845pt x 369.38pt>
 File: images/o_circuito_direto.png Graphic file (type png)
 <use images/o_circuito_direto.png>
 Package pdftex.def Info: images/o_circuito_direto.png  used on input line 22.
 (pdftex.def)             Requested size: 525.23788pt x 149.60371pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--67
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
@@ -836,22 +831,52 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.79 \end{equation}
-                   {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/o_circuito_direto.png>]) (./Sections/medicoes.tex) (./Sections/posanalise.tex) (./Sections/conclusoes.tex)
+                   {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/o_circuito_direto.png>]
+<images/o_circuito_reverso.png, id=103, 1730.465pt x 513.92pt>
+File: images/o_circuito_reverso.png Graphic file (type png)
+<use images/o_circuito_reverso.png>
+Package pdftex.def Info: images/o_circuito_reverso.png  used on input line 161.
+(pdftex.def)             Requested size: 525.23788pt x 155.98863pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.178 O
+       bserva-se que $V_r = - R_{ic} = - R C \deriv{V_c}{t}$, e a equação ... [4
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.178 O
+       bserva-se que $V_r = - R_{ic} = - R C \deriv{V_c}{t}$, e a equação ...
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.178 O
+       bserva-se que $V_r = - R_{ic} = - R C \deriv{V_c}{t}$, e a equação ...
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.178 O
+       bserva-se que $V_r = - R_{ic} = - R C \deriv{V_c}{t}$, e a equação ...]) (./Sections/medicoes.tex) (./Sections/posanalise.tex) (./Sections/conclusoes.tex)
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.73 \include{Sections/apendice.tex}
-                                     [4
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.10}) has been already used, duplicate ignored
+                                     [5
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.73 \include{Sections/apendice.tex}
-                                    
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.10}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
+                                     <./images/o_circuito_reverso.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
 l.73 \include{Sections/apendice.tex}
-                                    ]
+                                     [6]
 \openout2 = `Sections/apendice.aux'.
 
  (./Sections/apendice.tex (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -864,7 +889,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
 <to be read again> 
                    \relax 
 l.66     print(
-               "") [5
+               "") [7
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -874,12 +899,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
 <to be read again> 
                    \relax 
 l.129     ex2interval 
-                      = [0.5, 1, 5, 20, 50, 200, 500, 1000] [6])
+                      = [0.5, 1, 5, 20, 50, 200, 500, 1000] [8])
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.73 \include{Sections/apendice.tex}
-                                     [7]
+                                     [9]
 \openout2 = `Sections/anexo.aux'.
 
  (./Sections/anexo.tex
@@ -887,7 +912,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
 <to be read again> 
                    \relax 
 l.66     freqs2,
-                 2*dB(vout2/vin2)) [8
+                 2*dB(vout2/vin2)) [10
 
 
 
@@ -896,23 +921,23 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
 <to be read again> 
                    \relax 
 l.75 \include{Sections/anexo.tex}
-                                  [9] (./Relatorio2.aux (./Sections/apendice.aux) (./Sections/anexo.aux))
+                                  [11] (./Relatorio2.aux (./Sections/apendice.aux) (./Sections/anexo.aux))
 Package rerunfilecheck Info: File `Relatorio2.out' has not changed.
-(rerunfilecheck)             Checksum: A557C9CD04897104C82895ED354A9935;1306.
+(rerunfilecheck)             Checksum: A3A8408D052CC8FC4823650229EA3379;1528.
  ) 
 Here is how much of TeX's memory you used:
- 56317 strings out of 476025
- 1417898 string characters out of 5796532
- 2859674 words of memory out of 5000000
- 75789 multiletter control sequences out of 15000+600000
+ 56341 strings out of 476025
+ 1418357 string characters out of 5796532
+ 2859900 words of memory out of 5000000
+ 75800 multiletter control sequences out of 15000+600000
  521893 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,7n,118p,796b,2962s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Relatorio2.pdf (9 pages, 287296 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Relatorio2.pdf (11 pages, 342233 bytes).
 PDF statistics:
- 500 PDF objects out of 1000 (max. 8388607)
- 452 compressed objects within 5 object streams
- 278 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 534 PDF objects out of 1000 (max. 8388607)
+ 480 compressed objects within 5 object streams
+ 290 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

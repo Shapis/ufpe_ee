@@ -4,6 +4,7 @@
 \contentsline {subsection}{\numberline {2.1}O circuito}{}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Análise simbólica}{}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Estado 1: Polarizacao direta}{}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Estado 2: Polarizacao reversa}{}{subsubsection.2.2.2}%
 \contentsline {section}{\numberline {3}Medições em laboratório}{}{section.3}%
 \contentsline {section}{\numberline {4}Análise dos resultados}{}{section.4}%
 \contentsline {section}{\numberline {5}Conclusões}{}{section.5}%

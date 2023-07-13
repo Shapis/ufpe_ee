@@ -1270,6 +1270,11 @@ INPUT ./images/o_circuito_direto.png
 INPUT ./images/o_circuito_direto.png
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT ./images/o_circuito_reverso.png
+INPUT ./images/o_circuito_reverso.png
+INPUT images/o_circuito_reverso.png
+INPUT ./images/o_circuito_reverso.png
+INPUT ./images/o_circuito_reverso.png
 INPUT ./Sections/medicoes.tex
 INPUT ./Sections/medicoes.tex
 INPUT ./Sections/medicoes.tex
@@ -1331,6 +1336,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
