@@ -19,15 +19,15 @@
 \contentsline {subsection}{\numberline {3.2}Componentes}{}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Exemplo 1}{}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Gráfico de Vo(t)}{}{subsubsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.4}Mínimos e máximos.}{}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Exemplo 2}{}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Gráfico de Vo(t)}{}{subsubsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.6}Mínimos e máximos.}{}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.3.2}Mínimos e máximos.}{}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}Exemplo 2}{}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Gráfico de Vo(t)}{}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Mínimos e máximos.}{}{subsubsection.3.4.2}%
 \contentsline {section}{\numberline {4}Análise dos resultados}{}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Exemplo 1}{}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Gráficos}{}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}Mínimos e máximos}{}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Exemplo 1}{}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Exemplo 2}{}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Gráficos}{}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}Mínimos e máximos}{}{subsubsection.4.2.2}%
 \contentsline {section}{\numberline {5}Conclusões}{}{section.5}%

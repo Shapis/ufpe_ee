@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.28)  14 JUL 2023 00:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.28)  14 JUL 2023 12:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -838,30 +838,26 @@ File: images/o_circuito_reverso.png Graphic file (type png)
 Package pdftex.def Info: images/o_circuito_reverso.png  used on input line 161.
 (pdftex.def)             Requested size: 525.23788pt x 155.98863pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.178 O
-       bserva-se que $V_r = - R_{ic} = - R C \deriv{V_c}{t}$, e a equação ... [4
+l.164 
+       [4
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.178 O
-       bserva-se que $V_r = - R_{ic} = - R C \deriv{V_c}{t}$, e a equação ...
+l.164 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.178 O
-       bserva-se que $V_r = - R_{ic} = - R C \deriv{V_c}{t}$, e a equação ...
+l.164 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.178 O
-       bserva-se que $V_r = - R_{ic} = - R C \deriv{V_c}{t}$, e a equação ...]
+l.164 
+      ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -977,54 +973,48 @@ File: images/minmax_ex1.png Graphic file (type png)
 <use images/minmax_ex1.png>
 Package pdftex.def Info: images/minmax_ex1.png  used on input line 41.
 (pdftex.def)             Requested size: 262.61894pt x 58.1774pt.
-<images/exemplo2.png, id=293, 803.0pt x 504.88625pt>
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.45 \newpage
+              [10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.45 \newpage
+             
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.45 \newpage
+              <./images/exemplo1.png (PNG copy)> <./images/minmax_ex1.png>]
+<images/exemplo2.png, id=300, 803.0pt x 504.88625pt>
 File: images/exemplo2.png Graphic file (type png)
 <use images/exemplo2.png>
-Package pdftex.def Info: images/exemplo2.png  used on input line 54.
+Package pdftex.def Info: images/exemplo2.png  used on input line 56.
 (pdftex.def)             Requested size: 367.6649pt x 231.17194pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/minmax_ex2.png, id=294, 699.61375pt x 105.39375pt>
+<images/minmax_ex2.png, id=301, 699.61375pt x 105.39375pt>
 File: images/minmax_ex2.png Graphic file (type png)
 <use images/minmax_ex2.png>
-Package pdftex.def Info: images/minmax_ex2.png  used on input line 63.
+Package pdftex.def Info: images/minmax_ex2.png  used on input line 65.
 (pdftex.def)             Requested size: 262.61894pt x 39.56274pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 ) (./Sections/posanalise.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \section
-            {Análise dos resultados} [10
-pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1 \section
-            {Análise dos resultados}
-pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1 \section
-            {Análise dos resultados} <./images/exemplo1.png (PNG copy)> <./images/minmax_ex1.png>]
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.21 \subsubsection
-                   {Gráficos} [11
+l.16 
+      [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.21 \subsubsection
-                   {Gráficos}
+l.16 
+     
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.21 \subsubsection
-                   {Gráficos} <./images/exemplo2.png (PNG copy)> <./images/minmax_ex2.png>]) (./Sections/conclusoes.tex)
+l.16 
+      <./images/exemplo2.png (PNG copy)> <./images/minmax_ex2.png>]) (./Sections/conclusoes.tex)
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1055,18 +1045,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has be
 l.73 \include{Sections/apendice.tex}
                                      [14] (./Relatorio2.aux (./Sections/apendice.aux))
 Package rerunfilecheck Info: File `Relatorio2.out' has not changed.
-(rerunfilecheck)             Checksum: 8CAD6495E0142EC757664B5D7D500D79;4573.
+(rerunfilecheck)             Checksum: ABA570183FB855807B66D5AE3948460C;4593.
  ) 
 Here is how much of TeX's memory you used:
  56081 strings out of 476025
- 1416301 string characters out of 5796532
- 2735494 words of memory out of 5000000
+ 1416321 string characters out of 5796532
+ 2735508 words of memory out of 5000000
  75654 multiletter control sequences out of 15000+600000
  522190 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,7n,118p,925b,2960s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on Relatorio2.pdf (14 pages, 608295 bytes).
+Output written on Relatorio2.pdf (14 pages, 608133 bytes).
 PDF statistics:
  525 PDF objects out of 1000 (max. 8388607)
  452 compressed objects within 5 object streams
