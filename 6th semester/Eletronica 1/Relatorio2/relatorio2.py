@@ -25,8 +25,8 @@ def updateEqs(Vm, V_C0, V_D0, R_m, C, t, R):
 
 # Exemplo 2
 
-# R = float("inf")
-R = 4.7E3
+R = float("inf")
+# R = 4.7E3
 Vm = 5
 
 # Dados
@@ -39,7 +39,7 @@ Ts = 500E-6
 step = 1E-7
 temp = 0
 
-intervalos_tempo = np.arange(0, 4*Ts + step, step)
+intervalos_tempo = np.arange(0, 10*Ts + step, step)
 valores_de_Vo = []
 valores_de_Vc = []
 
@@ -76,10 +76,10 @@ fig, ax = plt.subplots()
 
 ax.plot(intervalos_tempo, plotH1, color='blue', label='Exemplo 1')
 ax.plot(intervalos_tempo, plotH2, color='orange', label='Exemplo 2')
-ax.legend(['Exemplo 1', 'Exemplo 2'])
-plt.xlabel('w rad/s')
-plt.ylabel('|H(jw)|')
-plt.title('Magnitude de H(jw)')
+ax.legend(['Vo', 'Vc'])
+plt.xlabel('Tempo (s)')
+plt.ylabel('Tensão (V)')
+plt.title('Gráfico de $V_o(t)$ no intervalo de 0 a 10*Ts')
 plt.show()
 
 

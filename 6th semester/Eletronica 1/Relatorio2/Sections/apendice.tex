@@ -1,163 +1,97 @@
 \section{Apêndice}
+\label{ap:apendice}
 
-Abaixo se encontra o código utilizado para a análise simbólica e numérica do circuito.
+% Abaixo se encontra o código utilizado para a análise simbólica e numérica do circuito.
+
+Abaixo se encontra o código utilizado para a análise numérica do circuito.
 
 \begin{python}
     import matplotlib.pyplot as plt
     import sympy as smp
     from sympy import *
+    import numpy as np
 
-    # Definindo as variaveis simbolicas
-    Vo, Vi, Va, Vc, R1, R2, Rp, Cp, A, w, j, Hjw, wp, wc, K = smp.symbols(
-    'V_o V_i V_a V_c R_1 R_2 R_p C_p A w j H_jw w_p, w_c, K', real=True)
+    # j = smp.symbols('j', imaginary=True)
 
-    # Analise nodal do circuito
-
-    eq1 = smp.Eq((Va - Vi)/R1 + (Va - Vo)/R2 + Va/(Rp + (1/(j * w * Cp))), 0)
-    eq2 = smp.Eq(Va * ((1/(j * w * Cp)))/(((1/(j * w * Cp))) + Rp), -Vc)
-    eq3 = smp.Eq(A * Vc, Vo)
-    # print('Equacoes em latex:')
-    # smp.pprint(smp.latex(eq1))
-    # smp.pprint(smp.latex(eq2))
-    # smp.pprint(smp.latex(eq3))
-    # print("")
-
-    print("Equacoes do circuito:")
-    print("Equacao 1:")
-    smp.pprint(eq1)
-    print("Equacao 2:")
-    smp.pprint(eq2)
-    print("Equacao 3:")
-    smp.pprint(eq3)
-    print("")
-
-    sols = smp.solve([eq1, eq2, eq3], [Va, Vc, Vo])
-
-    print("Solucao para Vo:")
-    smp.pprint(sols[Vo])
-    # print("")
-    # smp.pprint(smp.latex(sols[Vo]))
-    print("")
-
-    print("Aqui fazemos a seguinte simplificacao:")
-    print("Rp >> R1 , Rp >> R2, e A >> 1")
-
-    Vo = (-A * R2 * Vi)/((Rp*(R1 + R2))*j*w*Cp + A*R1)
-
-    print("Equacao de Vo simplificada:")
-    smp.pprint(Vo)
-    # smp.pprint(smp.latex(Vo))
-    print("")
-
-    eqHjw = smp.Eq(Hjw, Vo/Vi)
-
-    print("Equacao de Hjw:")
-    smp.pprint(eqHjw)
-    print("")
-
-    print("Resolvendo a equacao Hjw e colocando no formato canonico da um fitro passa baixa (-K wp / (jw + wp)) obtemos o seguinte:")
-
-    eqHjw = smp.Eq(Hjw, -(K * wc) / (I * w + wc))
-
-    Hjw = -(K * wc) / (I * w + wc)
-
-    smp.pprint(eqHjw)
-
-    print("")
-
-    eqwp = smp.Eq(wp, 1/(Rp*Cp))
-    smp.pprint(eqwp)
-
-    eqK = smp.Eq(K, R2/R1)
-    smp.pprint(eqK)
-
-    eqwc = smp.Eq(wc, (A*wp)/(1 + K))
-    smp.pprint(eqwc)
-
-    print("")
-
-    # Hjw = Hjw.subs({K: R2/R1, wc: A*wp/(1+K)})
-
-    print("Valor absoluto de Hjw:")
-    Hjw_abs = smp.Abs(Hjw)
-    smp.pprint(Hjw_abs)
-    # smp.pprint(smp.latex(Hjw_abs))
-    print("")
+    # Vo, Vi, Vm, V_C0, V_D0, R_m, C, t, R, Vc = smp.symbols(
+    #     'V_o V_i V_m V_C0 V_D0 R_m C t R V_c', real=True)
 
 
-    print("Exemplo 1:")
-    print("Para R1 = 4.7E3 ohms, R2 = 2.2E4 ohms, wp = 2E1 pi e A = 1E5\n")
+    def updateEqs(Vm, V_C0, V_D0, R_m, C, t, R):
+    Vo1 = ((V_C0 + Vm + V_D0) * np.exp(-t/(R_m * C))) - V_D0
+    Vc1 = (V_C0 + Vm + V_D0) * np.exp(-t/(R_m * C)) - Vm - V_D0
+    Vo2 = (V_C0 + Vm) * np.exp(-t/(R * C))
+    Vc2 = (V_C0 + Vm) * np.exp(-t/(R * C)) - Vm
+    return Vo1, Vc1, Vo2, Vc2
 
-    eqK1 = eqK.subs({R1: 4.7E3, R2: 2.2E4})
-    K1 = smp.solve(eqK1, K)[0]
-    smp.pprint(eqK1)
-    print("")
 
-    eqwc1 = eqwc.subs({A: 1E5, wp: 20 * smp.pi, K: K1}).evalf()
-    wc1 = smp.solve(eqwc1, wc)[0]
-    smp.pprint(eqwc1)
-    print("")
+    # Vo1, Vc1, Vo2, Vc2 = updateEqs(Vm, V_C0, V_D0, R_m, C, t, R)
 
-    print("Valores absolutos para w = [0.5, 1, 2, 4, 10, 20, 40]*wc:")
 
-    # ex1interval = [0.02, 0.01, 0.05, 0.2, 0.5, 1, 2, 4, 10, 20, 40]
-    ex1interval = [0.5, 1, 2, 4, 10, 20, 40]
+    # estado 1: Vm + Vc0 < - Vd0
+    # estado 2: Vm + Vc0 > - Vd0
 
-    ex1Vals = []
+    # Exemplo 2
 
-    for val in ex1interval:
-    temp = Hjw_abs.subs({w: wc1 * val, wc: wc1, K: K1})
-    ex1Vals.append(temp)
-    print('para freq:', round(((val*wc1)/(2*smp.pi)).evalf(), 2),
-    '\ttemos:', round(temp, 2))
+    R = float("inf")
+    # R = 4.7E3
+    Vm = 5
 
-    print("")
+    # Dados
+    V_D0 = 0.5
+    C = 100E-9
+    R_m = 330
+    V_C0 = 0
 
-    print("Exemplo 2:")
-    print("Para R1 = 4.7E3 ohms, R2 = 5.6E5 ohms, wp = 2E1 pi e A = 1E5\n")
+    Ts = 500E-6
+    step = 1E-7
+    temp = 0
 
-    eqK2 = eqK.subs({R1: 4.7E3, R2: 5.6E5})
-    K2 = smp.solve(eqK2, K)[0]
-    smp.pprint(eqK2)
-    print("")
+    intervalos_tempo = np.arange(0, 10*Ts + step, step)
+    valores_de_Vo = []
+    valores_de_Vc = []
 
-    eqwc2 = eqwc.subs({A: 1E5, wp: 20 * smp.pi, K: K2}).evalf()
-    wc2 = smp.solve(eqwc2, wc)[0]
-    smp.pprint(eqwc2)
-    print("")
+    for t in intervalos_tempo:
+    temp += step
+    if temp >= Ts/2:
+    Vm = -Vm
+    temp = 0
 
-    ex2interval = [0.5, 1, 5, 20, 50, 200, 500, 1000]
-    ex2Vals = []
+    Vo1, Vc1, Vo2, Vc2 = updateEqs(Vm, V_C0, V_D0, R_m, C, step, R)
 
-    for val in ex2interval:
-    temp = Hjw_abs.subs({w: wc2 * val, wc: wc2, K: K2})
-    ex2Vals.append(temp)
-    print('para freq:', round(((val*wc2)/(2*smp.pi)).evalf(), 2),
-    '\ttemos:', round(temp, 2))
-    print("")
+    if (Vm + V_C0) < -V_D0:  # estado 1
+    Vo = Vo1
+    Vc = Vc1
+    else:                   # estado 2
+    Vo = Vo2
+    Vc = Vc2
 
+    valores_de_Vo.append(Vo)
+    valores_de_Vc.append(Vc)
+    V_C0 = Vc
+
+
+    # smp.pprint(Vo)
 
     # Plotando os graficos
 
-    frequencias_plot = [i for i in range(1, 100000, 100)]
 
-    plotH1 = [Hjw_abs.subs({w: i, wc: wc1, K: K1}) for i in frequencias_plot]
-    plotH2 = [Hjw_abs.subs({w: i, wc: wc2, K: K2}) for i in frequencias_plot]
+    plotH1 = valores_de_Vo
+    plotH2 = valores_de_Vc
+
 
     fig, ax = plt.subplots()
 
-    ax.plot(frequencias_plot, plotH1, color='blue', label='Exemplo 1')
-    ax.plot(frequencias_plot, plotH2, color='orange', label='Exemplo 2')
-    ax.legend(['Exemplo 1', 'Exemplo 2'])
-    plt.xlabel('w rad/s')
-    plt.ylabel('|H(jw)|')
-    plt.title('Magnitude de H(jw)')
-
-
+    ax.plot(intervalos_tempo, plotH1, color='blue', label='Exemplo 1')
+    ax.plot(intervalos_tempo, plotH2, color='orange', label='Exemplo 2')
+    ax.legend(['Vo', 'Vc'])
+    plt.xlabel('Tempo (s)')
+    plt.ylabel('Tensao (V)')
+    plt.title('Grazfico de $V_o(t)$ no intervalo de 0 a 10*Ts')
     plt.show()
 
-    # Medicoes na pratica
 
-    # Exemplo1
+    print(min(valores_de_Vo))
+    print(max(valores_de_Vo))
 
 \end{python}

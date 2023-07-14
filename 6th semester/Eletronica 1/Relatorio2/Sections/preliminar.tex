@@ -15,7 +15,7 @@ Na análise teórica, considera-se o comportamento não linear do diodo e a capa
 
 A análise é conduzida, examinando-se cada estado do diodo separadamente. O processo tem início com o diodo polarizado diretamente, seguido pelo diodo polarizado reversamente.
 
-\subsubsection{Estado 1: Polarizacao direta}
+\subsubsection{Estado 1: Polarização direta}
 
 \begin{figure}[h]
     \centering
@@ -153,7 +153,7 @@ Logo:
 Com base nisso, as equações que regem as tensões $V_c$ (Equação \ref{eq:vc_estado1}) e $V_o$ (Equação \ref{eq:vo_estado1}) no estado 1 são obtidas.
 
 
-\subsubsection{Estado 2: Polarizacao reversa}
+\subsubsection{Estado 2: Polarização reversa}
 
 
 \begin{figure}[h]
@@ -204,7 +204,6 @@ A condição inicial é $V_o(t=0^{+}) = \pm V_m + V_{C0}$.
 Portanto, a solução para $V_o$ é:
 
 \begin{equation}
-    \label{eq:vo_estado2}
     V_o(t) = (\pm V_m + V_{C0}) e^{\frac{-t}{R C}}
 \end{equation}
 
@@ -219,3 +218,132 @@ Dessa forma, obtém-se a constante de tempo $\tau_2 = R C$.
 
 Como $R_m \ll R$, pode-se observar que $\tau_1 \ll \tau_2$.
 
+Considerando a restrição do estado 2, tem-se que:
+
+\begin{equation}
+    V_D = -V_i - V_c < - V_{D0}
+\end{equation}
+
+Logo:
+
+\begin{equation}
+    V_i + V_c > - V_{D0}
+\end{equation}
+
+Isso nos leva a concluir que o comportamento nesse estado é aproximadamente:
+
+\begin{equation}
+    \label{eq:vo_estado2}
+    V_o(t) = (\pm V_m + V_{C0}) e^{\frac{-t}{R C}}
+\end{equation}
+
+O circuito estará nesse estado se:
+
+\begin{equation}
+    V_i + V_c > - V_{D0}
+\end{equation}
+
+Dessa forma, são estabelecidas as duas equações que regem esse estado, representadas por \ref{eq:vc_estado2} e \ref{eq:vo_estado2}.
+
+\subsection{Análise numérica}
+
+Utilizando as equações \ref{eq:vo_estado1}, \ref{eq:vc_estado1}, \ref{eq:vc_estado2} e \ref{eq:vo_estado2}, foi desenvolvida uma simulação do comportamento do circuito em Python. O código correspondente está apresentado no apêndice \ref{ap:apendice}.
+
+No código, as equações que regem o circuito são alteradas de acordo com o estado da tensão de entrada. Em seguida, é feita uma iteração ao longo de um intervalo de tempo especificado, com os resultados sendo armazenados em listas. Isso permite gerar gráficos que ilustram o comportamento do capacitor e a saída do circuito ao longo do tempo. Essa abordagem permite uma análise mais detalhada e visual do circuito em diferentes condições e configurações.
+
+Com base nisso, foram analisados dois circuitos que possuem os mesmos valores de capacitância ($C = 100 nF$), resistência de carga reversa ($R_m = 330 \Omega$) e tensão de ruptura do diodo ($V_D = 0.5V$). Esses circuitos foram submetidos a uma entrada no formato de onda quadrada, com amplitude de $\pm 5 V$ e período de $0.5$ segundos.
+
+A única diferença entre os exemplos é o valor da resistência ($R$).
+
+
+\subsection{Exemplo 1}
+
+Neste exemplo, o circuito utiliza um resistor $R$ com resistência infinita, ou seja um circuito aberto. Assume-se que o capacitor está inicialmente descarregado e que a tensão de entrada $V_i$ começa com um valor de $5$V.
+
+\subsubsection{Regime permanente}
+
+Para obter as expressões para $V_o(t)$, faz-se a análise do comportamento do circuito quando $t$ tende ao infinito em cada estado.
+
+\begin{equation}
+    \tag*{Estado 1}
+    V_o = - V_{D0}
+\end{equation}
+
+\begin{equation}
+    \tag*{Estado 2}
+    V_o = V_{C0} + V_m
+\end{equation}
+
+\subsubsection{Mínimos e máximos.}
+
+Esses valores foram obtidos por meio de análise numérica e são apresentados na Tabela \ref{eq:ex1_minmax}.
+
+\begin{equation}
+    \label{eq:ex1_minmax}
+    \begin{aligned}
+        Minimo = -0.5 V \\
+        Maximo = 9.5 V
+    \end{aligned}
+\end{equation}
+
+\subsubsection{Gráfico}
+
+\begin{figure}[h]
+    \label{fig:ex1_numerico}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/grafico_exemplo1.png}
+    \caption{Gráfico que representa as curvas de tensão de saída $V_o$ e do capacitor $V_c$ do Exemplo 1.}
+\end{figure}
+
+O circuito em análise funciona como um grampeador de tensão, limitando a amplitude da tensão de saída mínima a um valor pré-determinado, independentemente das variações na tensão de entrada.
+
+\subsection{Exemplo 2}
+
+Neste exemplo, o circuito utiliza um resistor $R$ com resistência $4.7K \Omega$. Assume-se que o capacitor está inicialmente descarregado e que a tensão de entrada $V_i$ começa com um valor de $5$V.
+
+\subsubsection{Regime permanente}
+
+Para obter as expressões para $V_o(t)$, faz-se a análise do comportamento do circuito quando $t$ tende ao infinito em cada estado.
+
+\begin{equation}
+    \tag*{Estado 1}
+    V_o = - V_{D0}
+\end{equation}
+
+\begin{equation}
+    \tag*{Estado 2}
+    V_o = 0
+\end{equation}
+
+\subsubsection{Mínimos e máximos}
+
+Esses valores foram obtidos por meio de análise numérica e são apresentados na Tabela \ref{eq:ex2_minmax1} e \ref{eq:ex2_minmax2}.
+
+\begin{equation}
+    \label{eq:ex2_minmax1}
+    \tag*{Estado 1}
+    \begin{aligned}
+        Minimo = -4.41 V \\
+        Maximo = -0.55 V
+    \end{aligned}
+\end{equation}
+
+\begin{equation}
+    \label{eq:ex2_minmax2}
+    \tag*{Estado 2}
+    \begin{aligned}
+        Minimo = 5.58 V \\
+        Maximo = 9.5 V
+    \end{aligned}
+\end{equation}
+
+\subsubsection{Gráfico}
+
+\begin{figure}[h]
+    \label{fig:ex2_numerico}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/grafico_exemplo2.png}
+    \caption{Gráfico que representa as curvas de tensão de saída $V_o$ e do capacitor $V_c$ do Exemplo 2.}
+\end{figure}
+
+O circuito em questão não se comporta como um grampeador de tensão, pois não limita a tensão mínima a zero, o que significa que a tensão de saída pode atingir valores negativos ou permanecer em níveis não desejados durante certas condições de operação.
