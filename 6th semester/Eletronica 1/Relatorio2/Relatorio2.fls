@@ -1289,6 +1289,11 @@ INPUT Sections/medicoes.tex
 INPUT ./Sections/medicoes.tex
 INPUT ./Sections/medicoes.tex
 INPUT Sections/medicoes.tex
+INPUT ./images/circuito_montado.png
+INPUT ./images/circuito_montado.png
+INPUT images/circuito_montado.png
+INPUT ./images/circuito_montado.png
+INPUT ./images/circuito_montado.png
 INPUT ./images/buffer_corrente.png
 INPUT ./images/buffer_corrente.png
 INPUT images/buffer_corrente.png
