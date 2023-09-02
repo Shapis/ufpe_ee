@@ -26,10 +26,5 @@
 \contentsline {subsubsection}{\numberline {3.2.4}$V_{R5} (t)$}{}{subsubsection.3.2.4}%
 \contentsline {section}{\numberline {4}Análise dos resultados}{}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Exemplo 1}{}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Gráficos}{}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Mínimos e máximos}{}{subsubsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.2}Exemplo 2}{}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Gráficos}{}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Mínimos e máximos}{}{subsubsection.4.2.2}%
 \contentsline {section}{\numberline {5}Conclusões}{}{section.5}%
-\contentsline {section}{\numberline {6}Apêndice}{}{section.6}%
