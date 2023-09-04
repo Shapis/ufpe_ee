@@ -3,8 +3,8 @@ import sympy as smp
 from sympy import *
 
 # Definindo as variáveis simbólicas
-Vi, R1, R2, R3, Rc, Re, Vcc, Vee, Vb, Ve, Vc, Ib, Ic, Ie, Beta, Rpi, gm, Vbe, Vo = smp.symbols(
-    'V_i R_1 R_2 R_3 R_c R_e Vcc Vee V_b V_e V_c I_b I_c I_e Beta Rpi gm V_be V_o', real=True)
+Vi, R1, R2,  Rc, Re, Vcc, Vee, Vb, Ve, Vc, Ib, Ic, Ie, Beta, Rpi, gm, Vbe, Vo = smp.symbols(
+    'V_i R_1 R_2 R_c R_e Vcc Vee V_b V_e V_c I_b I_c I_e Beta Rpi gm V_be V_o', real=True)
 
 # Equações para grandes sinais
 

@@ -13,6 +13,10 @@
 \contentsline {subsubsection}{\numberline {2.2.5}Tensão de Thevenin}{}{subsubsection.2.2.5}%
 \contentsline {subsubsection}{\numberline {2.2.6}Constante de proporcionalidade}{}{subsubsection.2.2.6}%
 \contentsline {subsection}{\numberline {2.3}Projeto do circuito}{}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Componentes}{}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Aproximações para valores comerciais}{}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Tensão para grandes sinais}{}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Tensão para pequenos sinais}{}{subsubsection.2.3.4}%
 \contentsline {section}{\numberline {3}Medições em laboratório}{}{section.3}%
 \contentsline {section}{\numberline {4}Análise dos resultados}{}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Exemplo 1}{}{subsection.4.1}%

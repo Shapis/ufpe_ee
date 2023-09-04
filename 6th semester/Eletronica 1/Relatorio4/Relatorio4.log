@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.27)  3 SEP 2023 20:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.27)  3 SEP 2023 22:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -795,12 +795,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Sections/Intro.tex) (./Sections/preliminar.tex
-<images/o_circuito.png, id=112, 661.47125pt x 559.08875pt>
+<images/o_circuito.png, id=132, 661.47125pt x 559.08875pt>
 File: images/o_circuito.png Graphic file (type png)
 <use images/o_circuito.png>
 Package pdftex.def Info: images/o_circuito.png  used on input line 7.
 (pdftex.def)             Requested size: 262.61894pt x 221.96799pt.
-<images/modelo_grandes_sinais.png, id=115, 521.95pt x 347.2975pt>
+<images/modelo_grandes_sinais.png, id=135, 521.95pt x 347.2975pt>
 File: images/modelo_grandes_sinais.png Graphic file (type png)
 <use images/modelo_grandes_sinais.png>
 Package pdftex.def Info: images/modelo_grandes_sinais.png  used on input line 19.
@@ -819,7 +819,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has
                                                   \__shipout_drop_firstpage_...
 l.23 
       <./images/o_circuito.png>]
-<images/circuitos_grandes_sinais.png, id=124, 576.65437pt x 615.0478pt>
+<images/circuitos_grandes_sinais.png, id=144, 576.65437pt x 615.0478pt>
 File: images/circuitos_grandes_sinais.png Graphic file (type png)
 <use images/circuitos_grandes_sinais.png>
 Package pdftex.def Info: images/circuitos_grandes_sinais.png  used on input line 28.
@@ -840,37 +840,37 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has
                                                   \__shipout_drop_firstpage_...
 l.64 A
       s equações foram resolvidas utilizando a biblioteca Sympy, e o códi... <./images/modelo_grandes_sinais.png> <./images/circuitos_grandes_sinais.png>]
-<images/Ve.png, id=137, 1880.02374pt x 263.98625pt>
+<images/Ve.png, id=157, 1880.02374pt x 263.98625pt>
 File: images/Ve.png Graphic file (type png)
 <use images/Ve.png>
 Package pdftex.def Info: images/Ve.png  used on input line 68.
 (pdftex.def)             Requested size: 367.6649pt x 51.62413pt.
-<images/Vb.png, id=138, 1592.95125pt x 128.48pt>
+<images/Vb.png, id=158, 1592.95125pt x 128.48pt>
 File: images/Vb.png Graphic file (type png)
 <use images/Vb.png>
 Package pdftex.def Info: images/Vb.png  used on input line 74.
 (pdftex.def)             Requested size: 367.6649pt x 29.65367pt.
-<images/Vc.png, id=139, 1884.03876pt x 226.8475pt>
+<images/Vc.png, id=159, 1884.03876pt x 226.8475pt>
 File: images/Vc.png Graphic file (type png)
 <use images/Vc.png>
 Package pdftex.def Info: images/Vc.png  used on input line 80.
 (pdftex.def)             Requested size: 367.6649pt x 44.26796pt.
-<images/Ie.png, id=140, 1580.90625pt x 129.48375pt>
+<images/Ie.png, id=160, 1580.90625pt x 129.48375pt>
 File: images/Ie.png Graphic file (type png)
 <use images/Ie.png>
 Package pdftex.def Info: images/Ie.png  used on input line 86.
 (pdftex.def)             Requested size: 367.6649pt x 30.11255pt.
-<images/Ib.png, id=141, 1096.095pt x 130.4875pt>
+<images/Ib.png, id=161, 1096.095pt x 130.4875pt>
 File: images/Ib.png Graphic file (type png)
 <use images/Ib.png>
 Package pdftex.def Info: images/Ib.png  used on input line 92.
 (pdftex.def)             Requested size: 367.6649pt x 43.76982pt.
-<images/Ic.png, id=142, 1096.095pt x 130.4875pt>
+<images/Ic.png, id=162, 1096.095pt x 130.4875pt>
 File: images/Ic.png Graphic file (type png)
 <use images/Ic.png>
 Package pdftex.def Info: images/Ic.png  used on input line 98.
 (pdftex.def)             Requested size: 367.6649pt x 43.76982pt.
-<images/circuito_pequenos_sinais.png, id=143, 963.6pt x 437.38406pt>
+<images/circuito_pequenos_sinais.png, id=163, 963.6pt x 437.38406pt>
 File: images/circuito_pequenos_sinais.png Graphic file (type png)
 <use images/circuito_pequenos_sinais.png>
 Package pdftex.def Info: images/circuito_pequenos_sinais.png  used on input line 108.
@@ -914,49 +914,54 @@ l.112
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.168 \begin{equation}
-                       [5
+l.167 
+       [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.168 \begin{equation}
-                       <./images/circuito_pequenos_sinais.png>]) (./Sections/medicoes.tex
+l.167 
+       <./images/circuito_pequenos_sinais.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.236 
+       [6]) (./Sections/medicoes.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \newpage
-             [6]) (./Sections/posanalise.tex
+             [7]) (./Sections/posanalise.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \newpage
-             [7]
+             [8]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.73 \end{center}
-                  [8{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) (./Sections/conclusoes.tex)
+                  [9{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) (./Sections/conclusoes.tex)
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.78 \end{document}
-                    [9] (./Relatorio4.aux)
+                    [10] (./Relatorio4.aux)
 Package rerunfilecheck Info: File `Relatorio4.out' has not changed.
-(rerunfilecheck)             Checksum: C4097A0CCF43842F32D6FBC9B65B251A;3204.
+(rerunfilecheck)             Checksum: C7B1B557398E0BC9A837810D0701A388;4015.
  ) 
 Here is how much of TeX's memory you used:
- 55138 strings out of 476025
- 1405274 string characters out of 5796532
- 2145217 words of memory out of 5000000
- 74855 multiletter control sequences out of 15000+600000
+ 55149 strings out of 476025
+ 1405468 string characters out of 5796532
+ 2149222 words of memory out of 5000000
+ 74860 multiletter control sequences out of 15000+600000
  521903 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,10n,118p,796b,963s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Relatorio4.pdf (9 pages, 333039 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Relatorio4.pdf (10 pages, 345029 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 199 compressed objects within 2 object streams
- 43 named destinations out of 1000 (max. 500000)
- 215 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 286 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 247 words of extra memory for PDF output out of 10000 (max. 10000000)
 

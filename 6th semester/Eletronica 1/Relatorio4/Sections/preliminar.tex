@@ -163,7 +163,11 @@ Ao considerar $K = V_{th} / V_i$ e $V_{th} = V_o$, podemos afirmar que K é igua
 
 \subsection{Projeto do circuito}
 
-Obtivemos $n_1 = n_2 = n_3 = n_4 = 1$. Assumindo que $V_{BE0} = 0.7 V$, $\beta = 350$, e $n V_r = 40 mV$, atendendo os requesitos calcula-se:
+Para projetar o circuito, é necessário atender aos requisitos especificados no projeto e utilizar números $n$ derivados da combinação dos \emph{CPFs} dos integrantes da equipe. No caso da equipe, todos os valores de $n$ foram $n_1 = n_2 = n_3 = n_4 = 1$. Assumindo valores como $V_{BE0} = 0,7 V$, $\beta = 350$, e $n V_r = 40 mV$, ao atender aos requisitos, é possível calcular os componentes, tensões e correntes esperadas no circuito.
+
+\subsubsection{Componentes}
+
+Utilizando os requisitos especificados no projeto, procede-se ao cálculo dos componentes do circuito. Esses componentes são determinados com base nas restrições e critérios estabelecidos, garantindo que o circuito atenda aos parâmetros desejados e funcione conforme o previsto.
 
 \begin{equation}
     \begin{aligned}
@@ -187,17 +191,50 @@ Obtivemos $n_1 = n_2 = n_3 = n_4 = 1$. Assumindo que $V_{BE0} = 0.7 V$, $\beta =
     \end{aligned}
 \end{equation}
 
-Neste ponto, são feitas as seguintes aproximações para os valores dos resistores, considerando as opções disponíveis no mercado de componentes eletrônicos.
+\subsubsection{Aproximações para valores comerciais}
+
+Neste ponto do projeto, são realizadas as seguintes aproximações para os valores dos resistores, considerando as opções disponíveis no mercado de componentes eletrônicos.
 
 \begin{center}
     \begin{tabular}{ |c|c|c| }
         \hline
-        Medidas & Experimental & Numerico   \\
-        $T$     & $510.62 ms$  & $515.8 ms$ \\
-        $k$     & $0.5$        & $0.501$    \\
-        $V_1$   & $4.31V$      & $4.313V$   \\
-        $V_2$   & $5.4V$       & $5.39V$    \\
-        $I_L$   & $12.95mA$    & $12.95mA$  \\
+        Componente & Teorico            & Comercial        \\
+        $R_1$      & $11k \varOmega$    & $12k \varOmega$  \\
+        $R_2$      & $2.25 k \varOmega$ & $2.2k \varOmega$ \\
+        $R_c$      & $500 \varOmega$    & $470 \varOmega$  \\
+        $R_e$      & $167 \varOmega$    & $180 \varOmega$  \\
         \hline
     \end{tabular}
 \end{center}
+
+\subsubsection{Tensão para grandes sinais}
+
+Ao empregarmos os valores comerciais disponíveis, desvendamos os seguintes dados referentes às tensões e correntes de polarização que percorrem o circuito.
+
+
+\begin{equation}
+    \begin{aligned}
+         & V_b = -5.57 V         \\
+         & V_c = 3.5 V           \\
+         & V_e = -6.27 V         \\
+         & I_b = -2.7* 10^{-5} A \\
+         & I_c = 10 mA           \\
+         & I_e = 10 mA           \\
+    \end{aligned}
+\end{equation}
+
+Obtem-se $V_{Rc}$ e $V_{Re}$ utilizando a lei de Ohm sobre os resistores $R_c$ e $R_e$.
+
+\begin{equation}
+    \begin{aligned}
+         & V_{Rc} = 4.7 V \\
+         & V_{Re} = 1.8 V
+    \end{aligned}
+\end{equation}
+
+Ao alinharmos os valores das resistências com os disponíveis no mercado, constatamos que as correntes de polarização sofrem variações significativas. Essas oscilações acabam por comprometer a consecução dos requisitos previamente estipulados, desencadeando desafios adicionais no contexto do projeto do circuito.
+
+Para contornar esse desafio, é imperativo efetuar uma modificação na resistência $R_2$, com o objetivo de amplificar a corrente $I_e$. Essa medida se faz indispensável para garantir o cumprimento dos requisitos de desempenho do circuito, pois apenas assim será possível alcançar os valores ideais de tensão e corrente de polarização necessários para o correto funcionamento do sistema.
+
+
+\subsubsection{Tensão para pequenos sinais}
