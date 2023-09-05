@@ -1,0 +1,93 @@
+\section{Partições em dispositivos android}
+\label{particoes}
+
+Para compreendermos como destruir dados em dispositivos Android, é crucial entendermos como os dados são armazenados. Nesse contexto, empreenderemos uma análise do particionamento de um dispositivo Android.
+
+É importante ressaltar que o particionamento de um dispositivo Android pode variar de acordo com o fabricante e o modelo do aparelho.
+
+\subsection{Bootloader}
+
+O bootloader é um software de baixo nível que é executado antes do sistema operacional e é responsável por inicializar o hardware do dispositivo e carregar o kernel do sistema operacional na memória. Ele também fornece uma interface para o usuário ou desenvolvedor selecionar diferentes modos de inicialização, como inicialização normal, modo de recuperação ou modo de bootloader (fastboot).
+
+Abaixo, encontra-se uma lista das suas funções:
+
+\begin{itemize}
+    \item Inicialização de Hardware: Quando você liga o seu dispositivo Android, o bootloader é o primeiro software que é executado. Ele inicializa e verifica os componentes de hardware, como a CPU, a memória e os periféricos, garantindo que eles estejam em um estado adequado para o funcionamento do dispositivo.
+    \item Seleção do Modo de Inicialização: O bootloader fornece uma interface para o usuário ou desenvolvedor selecionar diferentes modos de inicialização, como inicialização normal, modo de recuperação ou modo de bootloader (fastboot). Essa flexibilidade permite que os usuários recuperem seus dispositivos, instalem firmware personalizado ou realizem diagnósticos.
+    \item Verificação e Autenticação: O bootloader verifica as assinaturas digitais do kernel e de outras imagens de inicialização críticas antes de carregá-las na memória. Esse processo de verificação garante que o software sendo carregado seja autêntico e não tenha sido adulterado, aumentando a segurança do dispositivo.
+    \item Carregamento do Kernel: Após verificar a integridade do kernel, o bootloader o carrega na memória e transfere o controle para o kernel. O kernel é o núcleo do sistema operacional Android e é responsável por gerenciar os recursos de hardware e executar aplicativos de usuário.
+    \item Modo de Recuperação: Em casos de problemas de software ou atualizações, o bootloader também pode facilitar a instalação de imagens de recuperação oficiais ou personalizadas. O modo de recuperação permite que os usuários realizem várias tarefas, como aplicar atualizações de software, apagar dados ou restaurar o dispositivo para as configurações de fábrica.
+    \item Desbloqueio do Bootloader: Alguns dispositivos Android permitem que os usuários desbloqueiem o bootloader, o que lhes concede a capacidade de instalar ROMs personalizadas, obter acesso mais profundo ao sistema e modificar o software do dispositivo. O desbloqueio do bootloader geralmente anula a garantia do dispositivo e pode apresentar riscos de segurança.
+\end{itemize}
+
+
+\subsection{Imagem de recuperação (Recovery)}
+\label{recovery}
+
+A recuperação em um dispositivo Android é um ambiente independente e minimalista que é separado do sistema operacional Android principal. Normalmente, é acessado por meio de uma combinação de botões de hardware durante o processo de inicialização do dispositivo.
+
+As funcoes disponibilizadas pela imagem de recuperação variam mas em geral incluem:
+
+\begin{itemize}
+    \item Recuperação do Sistema: O papel principal da recuperação em um telefone Android é auxiliar na recuperação do sistema. Ela fornece ferramentas e opções para corrigir diversos problemas que podem surgir durante a operação normal do dispositivo, como falhas de software, travamentos ou problemas de inicialização.
+    \item Atualizações de Software: A recuperação é usada para aplicar atualizações e patches de sistema oficiais. Quando uma nova atualização de software está disponível, o dispositivo pode inicializar na recuperação para instalar a atualização. Isso garante que a atualização seja aplicada corretamente e pode reverter para a versão anterior em caso de problemas.
+    \item Restauração de Fábrica: A recuperação permite que os usuários realizem uma restauração de fábrica, que apaga todos os dados e configurações do usuário, retornando o dispositivo ao seu estado original. Isso pode ser útil para solucionar problemas persistentes ou preparar o dispositivo para a revenda.
+    \item Backup e Restauração: Algumas recuperações personalizadas oferecem opções para criar e restaurar backups do dispositivo. Isso é especialmente útil para usuários que desejam fazer backup de seus dados antes de realizar alterações significativas no software do dispositivo.
+    \item Instalação de ROMs Personalizadas: Usuários avançados frequentemente usam recuperações personalizadas para instalar ROMs personalizadas, que são versões modificadas do sistema operacional Android. Isso permite personalização além do que está disponível no software original.
+\end{itemize}
+
+Além disso, como veremos na discussão sobre a recuperação de dispositivos, existem dois tipos de recuperação disponíveis para a maioria dos dispositivos Android, e estas são:
+
+\begin{itemize}
+    \item Recuperação de Fábrica: Este é o ambiente de recuperação que vem pré-instalado na maioria dos dispositivos Android. Ele fornece funções básicas para atualizações do sistema, restaurações de fábrica e limpeza de partições de cache.
+    \item Recuperação Personalizada: Muitos usuários instalam ambientes de recuperação personalizados, como TWRP (Team Win Recovery Project) ou CWM (ClockworkMod Recovery). Essas recuperações personalizadas oferecem recursos adicionais e flexibilidade, como a instalação de ROMs personalizadas, criação de backups e opções avançadas de solução de problemas.
+\end{itemize}
+
+
+\subsection{Kernel}
+
+Dispositivos a android utilizam o \emph{Linux Kernel}, que eh um \emph{kernel} de codigo aberto e livre, que eh conhecido pela sua estabilidade e confiabilidade, este permite que fabricantes facam alteracoes a ele para adicionar funcionalidades especificas ao seu dispositivo.
+
+O kernel tem como funcoes:
+
+\begin{itemize}
+    \item Abstração de Hardware: O kernel Linux atua como uma ponte entre o sistema operacional Android e o hardware do dispositivo. Ele fornece uma interface padronizada para interagir com vários componentes de hardware, como a CPU, memória, tela, dispositivos de entrada e muito mais. Essa abstração permite que o Android seja executado em uma ampla variedade de plataformas de hardware.
+    \item Gerenciamento de Processos: O kernel é responsável por gerenciar processos e threads no sistema Android. Ele aloca recursos do sistema, agenda tarefas e garante que várias aplicações possam ser executadas simultaneamente sem interferir umas nas outras.
+    \item Drivers de Dispositivos: O Linux possui uma vasta coleção de drivers de dispositivos, que são essenciais para habilitar a comunicação entre o sistema operacional e periféricos de hardware, como câmeras, sensores, Wi-Fi, Bluetooth e muito mais. Esses drivers são frequentemente integrados ao kernel Android.
+    \item Segurança: O kernel Linux aplica mecanismos de segurança, como permissões de usuário e grupo, para proteger a integridade e a confidencialidade de dados e processos no dispositivo. Ele desempenha um papel crucial no modelo de segurança do Android.
+    \item Gerenciamento de Energia: O gerenciamento eficiente de energia é vital para dispositivos móveis. O kernel auxilia na regulamentação da frequência da CPU, controla os despertares do dispositivo e gerencia recursos de economia de energia para otimizar a vida útil da bateria.
+    \item Suporte a Sistemas de Arquivos: O kernel Linux suporta vários sistemas de arquivos, incluindo ext4, F2FS e outros, que são usados para armazenar e gerenciar dados em dispositivos Android.
+    \item Rede: Ele gerencia conexões de rede e protocolos de comunicação, possibilitando a conectividade com a Internet e funcionalidades relacionadas a redes no Android.
+\end{itemize}
+
+\subsection{Partição de sistema}
+
+O sistema operacional Android é acomodado nesta partição. Essa partição é montada como somente leitura \emph{(read-only)}, com o propósito fundamental de salvaguardar a integridade do sistema operacional. Nela residem os pilares do Android, servindo como a base sólida que sustenta todo o funcionamento do dispositivo. Essa abordagem somente leitura impede modificações acidentais ou não autorizadas, assegurando que o sistema principal permaneça estável e confiável ao longo do tempo.
+
+\subsection{Vendor Partition}
+
+A "Vendor Partition" abriga arquivos e drivers proprietários, fornecidos pelo fabricante do dispositivo, que desempenham o papel de garantir o funcionamento adequado e eficiente do hardware do dispositivo. Esses componentes exclusivos, desenvolvidos pela fabricante, são vitais para permitir que o dispositivo opere com desempenho máximo e compatibilidade otimizada.
+
+\subsection{Partição de Dados}
+\label{particao_de_dados}
+
+A Partição de Dados é o espaço onde sao armazenados os dados do usuário e informações relacionadas aos aplicativos, bem como vídeos e preferências pessoais. Comumente, esta partição é a de maior dimensão no dispositivo.
+
+De forma geral, quando o objetivo é a destruição ou recuperação de dados, esta é a partição na qual direcionaremos nossos esforços.
+
+\subsection{Partição de Cache}
+
+Dados temporários do sistema e de aplicativos encontram moradia neste local específico com a finalidade de aprimorar o desempenho geral do sistema. Esta partição serve como uma espécie de depósito para informações transitórias, como caches, arquivos temporários e outros dados efêmeros, que são usados para acelerar o funcionamento do dispositivo Android.
+
+A capacidade de armazenar temporariamente esses dados na partição proporciona um ganho de eficiência notável, pois permite que o sistema acesse informações frequentemente utilizadas de maneira mais rápida e sem a necessidade de processamento repetitivo. No entanto, ao longo do tempo, esses dados temporários podem se acumular, ocupando espaço precioso no dispositivo e, em alguns casos, até mesmo causar problemas de desempenho.
+
+Para solucionar essas questões e liberar espaço, os dados temporários podem ser apagados dessa partição. É uma medida que pode ser tomada para resolver problemas específicos, otimizar o espaço de armazenamento e, em alguns casos, melhorar o desempenho geral do dispositivo Android. Portanto, essa partição desempenha um papel importante na manutenção e no gerenciamento eficiente do sistema Android.
+
+\subsection{Partições Diversas}
+
+Em alguns dispositivos, é possível encontrar partições adicionais, cada uma com propósitos variados e específicos. Essas partições podem incluir, por exemplo, o firmware do modem, o firmware de rádio e outras que desempenham funções especializadas. A existência e a finalidade dessas partições costumam estar intimamente relacionadas com o hardware e o fabricante do dispositivo em questão.
+
+
+
+
+

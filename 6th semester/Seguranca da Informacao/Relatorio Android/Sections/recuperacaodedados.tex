@@ -1,0 +1,21 @@
+\newpage
+
+\section{Recuperação de dados}
+
+Muito do processo é similar ao que foi abordado na destruição de dados. Nesta etapa, nosso objetivo é recuperar informações cruciais, e para isso, precisamos identificar as partições presentes no dispositivo e empregar ferramentas de recuperação de dados especializadas, como o renomado "foremost" e o versátil "photorec".
+
+O primeiro passo consiste em realizar a cópia do conteúdo das partições para o nosso computador. Essa tarefa pode ser executada utilizando a ferramenta "dd" para transferir as partições relevantes para o sistema local.
+
+Com as partições agora disponíveis em nosso computador, podemos utilizar as capacidades do "foremost" e do "photorec" para realizar uma busca minuciosa por dados perdidos ou excluídos. Essas ferramentas possuem algoritmos avançados de recuperação que podem varrer as partições copiadas em busca de arquivos e informações.
+
+Entretanto, é importante notar que dispositivos mais recentes geralmente possuem criptografia de dados robusta, o que torna a recuperação de informações um desafio considerável. Nesses cenários, é possível explorar a opção de utilizar o "adb" para tentar acessar o dispositivo Android e, assim, tentar recuperar os dados protegidos pela criptografia. Vale ressaltar que essa abordagem pode ser mais complexa.
+
+\section{Recuperação do dispositivo}
+
+Após da destruição de dados, é importante destacar que é possível restaurar o funcionamento do dispositivo. Para realizar essa restauração, basta utilizar a ferramenta "adb" para instalar uma nova imagem do sistema no dispositivo. Geralmente, essa imagem está disponível para download no site oficial do fabricante do dispositivo.
+
+No entanto, é importante notar que alguns fabricantes não disponibilizam essas imagens de sistema, o que pode tornar o processo de restauração do dispositivo mais complexo. Em tais situações, é viável recorrer a ferramentas alternativas, como o "fastboot", que permite a instalação de uma nova imagem do sistema diretamente no dispositivo.
+
+Há também fabricantes, como a Samsung, que oferecem ferramentas específicas, como o "Odin", para facilitar o processo de restauração. O "Odin" possibilita ao usuário a instalação de uma nova imagem do sistema, incluindo a imagem de recuperação do sistema e o bootloader, tornando a restauração completa e abrangente.
+
+Portanto, a restauração do dispositivo após a destruição de dados pode variar de acordo com o fabricante e a disponibilidade de ferramentas específicas, mas em geral, é um procedimento factível com as ferramentas adequadas.
