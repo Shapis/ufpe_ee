@@ -1,0 +1,75 @@
+\newpage
+
+\section{Análise dos resultados}
+
+Os principais resultados obtidos a partir das medições e simulações realizadas no experimento foram analisados, incluindo comparações com os resultados numéricos e as conclusões relevantes.
+
+\subsection{Exemplo 1}
+
+No Exemplo 1, obtemos o $V_{D0}$ medindo as tensões sobre $R_5$ e $V_o$ no caso em que o LED está ligado, ou seja:
+
+\begin{equation}
+    V_{D0} = V_{om2} - V_{R5m2} = 9.22V - 7.14V = 2.08V
+\end{equation}
+
+Utilizando os valores de $V_{m1}$, $V_{m2}$ e o novo $V_{D0}$, procedemos ao recálculo dos seguintes parâmetros:
+
+\begin{itemize}
+    \item $T = 515.8 ms$
+    \item $k = 0.501$
+    \item $V_1 = 4.313V$
+    \item $V_2 = 5.39V$
+    \item $I_L = 12.95mA$
+\end{itemize}
+
+Com esses dados em mãos, é possível realizar uma comparação com os valores obtidos experimentalmente:
+
+\begin{center}
+    \begin{tabular}{ |c|c|c| }
+        \hline
+        Medidas & Experimental & Numerico   \\
+        $T$     & $510.62 ms$  & $515.8 ms$ \\
+        $k$     & $0.5$        & $0.501$    \\
+        $V_1$   & $4.31V$      & $4.313V$   \\
+        $V_2$   & $5.4V$       & $5.39V$    \\
+        $I_L$   & $12.95mA$    & $12.95mA$  \\
+        \hline
+    \end{tabular}
+\end{center}
+
+Ao analisar os resultados, é notável que os valores obtidos após o recálculo se aproximam consideravelmente dos valores obtidos por meio de experimentação prática. Essa proximidade indica que a montagem do circuito foi executada de forma consistente e precisa, demonstrando a integridade das medições realizadas.
+
+\subsection{Exemplo 2}
+
+No Exemplo 1, obtemos o $V_{D0}$ medindo as tensões sobre $R_5$ e $V_o$ no caso em que o LED está ligado, ou seja:
+
+\begin{equation}
+    V_{D0} = V_{om2} - V_{R5m2} = 9.23V - 7.22V = 2.01V
+\end{equation}
+
+Utilizando os valores de $V_{m1}$, $V_{m2}$ e o novo $V_{D0}$, procedemos ao recálculo dos seguintes parâmetros:
+
+\begin{itemize}
+    \item $T = 6.6 ms$
+    \item $k = 0.398$
+    \item $V_1 = 1.38 V$
+    \item $V_2 = 7.12 V$
+    \item $I_L = 13.1mA$
+\end{itemize}
+
+Com esses dados em mãos, é possível realizar uma comparação com os valores obtidos experimentalmente:
+
+\begin{center}
+    \begin{tabular}{ |c|c|c| }
+        \hline
+        Medidas & Experimental & Numerico \\
+        $T$     & $7.4422 ms$  & $6.6 ms$ \\
+        $k$     & $0.39$       & $0.398$  \\
+        $V_1$   & $1.35V$      & $1.38$   \\
+        $V_2$   & $7.14V$      & $7.12$   \\
+        $I_L$   & $13.1mA$     & $13.1mA$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+Ao analisar os resultados, é notável que os valores obtidos após o recálculo se aproximam consideravelmente dos valores obtidos por meio de experimentação prática. Essa proximidade indica que a montagem do circuito foi executada de forma consistente e precisa, demonstrando a integridade das medições realizadas.
