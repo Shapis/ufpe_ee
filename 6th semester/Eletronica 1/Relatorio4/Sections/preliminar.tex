@@ -142,6 +142,7 @@ Para analisar a resistência de entrada, foi realizada uma solução numérica p
 \end{equation}
 
 \subsubsection{Resistência de Thevenin}
+\label{sec:resistencia_thevenin}
 
 Ao anular as fontes de tensão independentes, a tensão através de $R_{\pi}$ se torna zero, o que faz com que $V_{be0}$ seja igual a zero, desativando assim a fonte de corrente dependente.
 
@@ -149,6 +150,7 @@ Isso leva à conclusão de que a resistência de Thévenin é igual a $R_c$
 .
 
 \subsubsection{Tensão de Thevenin}
+\label{sec:tensao_thevenin}
 
 Analisa-se a tensao que esta sendo aplicada sobre $R_c$ e com isso obtemos que $V_{th} = V_o = V_c$.
 
@@ -157,6 +159,7 @@ Analisa-se a tensao que esta sendo aplicada sobre $R_c$ e com isso obtemos que $
 Ao considerar $K = V_{th} / V_i$ e $V_{th} = V_o$, podemos afirmar que K é igual ao ganho de tensão que calculamos anteriormente.
 
 \begin{equation}
+    \label{eq:K}
     K = A = - gm R_c
 \end{equation}
 
@@ -209,7 +212,7 @@ Neste ponto do projeto, são realizadas as seguintes aproximações para os valo
 
 \subsubsection{Tensão para grandes sinais}
 
-Ao empregarmos os valores comerciais disponíveis, desvendamos os seguintes dados referentes às tensões e correntes de polarização que percorrem o circuito.
+Ao empregarmos os valores comerciais disponíveis, obtem-se os seguintes dados referentes às tensões e correntes de polarização que percorrem o circuito.
 
 
 \begin{equation}
@@ -236,5 +239,38 @@ Ao alinharmos os valores das resistências com os disponíveis no mercado, const
 
 Para contornar esse desafio, é imperativo efetuar uma modificação na resistência $R_2$, com o objetivo de amplificar a corrente $I_e$. Essa medida se faz indispensável para garantir o cumprimento dos requisitos de desempenho do circuito, pois apenas assim será possível alcançar os valores ideais de tensão e corrente de polarização necessários para o correto funcionamento do sistema.
 
-
 \subsubsection{Tensão para pequenos sinais}
+
+Como visto nas subseções \ref{sec:resistencia_thevenin} e \ref{sec:tensao_thevenin}, tem-se que:
+
+
+\begin{equation}
+    \begin{aligned}
+         & V_{th} = V_{c} = -4.5 V      \\
+         & R_{th} = R_c = 470 \varOmega
+    \end{aligned}
+\end{equation}
+
+Para determinar a constante de proporcionalidade, representada por $K$, empregamos a equação \ref{eq:K}. E utiliza-se a relação:
+
+\begin{equation}
+    gm = \frac{I_c}{n V_t}
+\end{equation}
+
+A partir destas, podemos calcular $K$ como sendo igual a $-117.5$.
+
+Creio que este $K$ ficou distante do esperado $-150$, pois o valor de $I_c$ achado de $10mA$ ficou diferente do esperado de $12mA$.
+
+Se tivesse sido usado $I_c = 12mA$, teríamos $K = -141$.
+
+Com isto temos uma onda de saida sem carga de
+
+\begin{equation}
+    V_o = K V_i
+\end{equation}
+
+Para um $V_i$ de $V_{pp}$ $50mV$ temos:
+
+\begin{equation}
+    V_o = -117.5 * 50mV = -5.875V
+\end{equation}

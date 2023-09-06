@@ -18,7 +18,14 @@
 \contentsline {subsubsection}{\numberline {2.3.3}Tensão para grandes sinais}{}{subsubsection.2.3.3}%
 \contentsline {subsubsection}{\numberline {2.3.4}Tensão para pequenos sinais}{}{subsubsection.2.3.4}%
 \contentsline {section}{\numberline {3}Medições em laboratório}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Componentes}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Medições de grandes sinais}{}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Medições de pequenos sinais}{}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}$V_{be}$}{}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}$V_{o}$}{}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}$V_{o}$}{}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}$V_{L}$}{}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Tensões sobre potenciometro e $R_L$}{}{subsubsection.3.3.5}%
 \contentsline {section}{\numberline {4}Análise dos resultados}{}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Exemplo 1}{}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Exemplo 2}{}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.1}Calculo do ganho $\beta $}{}{subsection.4.1}%
 \contentsline {section}{\numberline {5}Conclusões}{}{section.5}%
