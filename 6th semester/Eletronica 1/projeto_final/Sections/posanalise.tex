@@ -1,2 +1,36 @@
-
 \section{Análise dos resultados}
+
+Analisamos a saída $V_L$ do conversor que havíamos projetado com o intuito de estar no intervalo entre $-7V$ e $7V$. Observamos que as saídas medidas reais estão entre $-7.16V$ e $6.75V$. Aqui fazemos a análise de como esses valores se comparam com os valores esperados.
+
+Lembra-se de que as saídas calculadas na fundamentação teórica esperavam um valor de $5V$ na saída do pino do Arduino. O que medimos na realidade foi $4.75V$. Levaremos isso em consideração na análise.
+
+Observando a equação \ref{eq:VL}, vemos que seu máximo ocorre quando $d_{10}$ está ligado, e todos os outros \emph{bits} estão desligados. Neste caso, a tensão máxima de saída é dada pela seguinte equação:
+
+\begin{equation}
+    VL_{max} = \frac{2.5 R_{11} R_{13}}{R_{10} R_{12}} V_{10} = \frac{2.5 \ 14.86k \ 990}{22.1k \ 1179} \ 4.75 = 6.7V
+\end{equation}
+
+Já a tensão mínima é alcançada quando se ligam os bits entre $d_0$ e $d_9$ e se desliga $d_{10}$.
+
+E obtém-se da seguinte forma:
+
+\begin{equation}
+    VL_{min} = - R_{13} \sum_{i=0}^{3} \frac{V_i}{R_i} - \frac{R_{13}}{R_{12}} \left( 1 + \frac{R_{11}}{R_{10} }\right)  R_{eq} \sum_{i=4}^{9} \frac{V_i}{R_i} = -6.757V
+\end{equation}
+
+Disto, podemos fazer a comparação entre os valores esperados e os valores medidos, e obtemos a seguinte tabela:
+
+\begin{center}
+    \begin{tabular}{c|c|c}
+        \label{tab:comparacao}
+                   & Teórico   & Real     \\
+        $VL_{max}$ & $6.7V$    & $6.75V$  \\
+        $VL_{min}$ & $-6.757V$ & $-7.16V$
+    \end{tabular}
+\end{center}
+
+Observa-se que os valores estão próximos. Um dos requisitos era que a saída real estivesse com erro de no máximo $1\%$ em relação à saída teórica, e obtivemos os seguintes erros: para $V_{L_{min}}$ o erro foi de $6\%$ e para $V_{L_{max}}$, o erro foi de $0.8\%$.
+
+
+
+

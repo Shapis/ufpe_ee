@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.27)  29 SEP 2023 13:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.27)  29 SEP 2023 15:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -694,7 +694,7 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
-) (./projeto.aux)
+) (./projeto.aux (./Sections/apendice.aux))
 \openout1 = `projeto.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
@@ -795,7 +795,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Sections/Intro.tex) (./Sections/preliminar.tex
-<images/circuito.jpeg, id=62, 563.10374pt x 349.305pt>
+<images/circuito.jpeg, id=87, 563.10374pt x 349.305pt>
 File: images/circuito.jpeg Graphic file (type jpg)
 <use images/circuito.jpeg>
 Package pdftex.def Info: images/circuito.jpeg  used on input line 15.
@@ -819,34 +819,185 @@ l.94 \end{equation}
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.5 
+l.4 
      [4]
+<images/circuito_montado.jpeg, id=132, 1208.515pt x 1606.0pt>
+File: images/circuito_montado.jpeg Graphic file (type jpg)
+<use images/circuito_montado.jpeg>
+Package pdftex.def Info: images/circuito_montado.jpeg  used on input line 7.
+(pdftex.def)             Requested size: 183.83646pt x 244.29588pt.
+<images/circuito_e_osciloscopio.jpeg, id=133, 1208.515pt x 1606.0pt>
+File: images/circuito_e_osciloscopio.jpeg Graphic file (type jpg)
+<use images/circuito_e_osciloscopio.jpeg>
+Package pdftex.def Info: images/circuito_e_osciloscopio.jpeg  used on input line 13.
+(pdftex.def)             Requested size: 183.83646pt x 244.29588pt.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.7 \newpage
-             [5]) (./Sections/posanalise.tex) (./Sections/conclusoes.tex)
+l.17 \newpage
+              [5
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \newpage
+             
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.17 \newpage
+              <./images/circuito_montado.jpeg> <./images/circuito_e_osciloscopio.jpeg>]
+<images/tabela_componentes.jpeg, id=139, 216.05719pt x 267.24844pt>
+File: images/tabela_componentes.jpeg Graphic file (type jpg)
+<use images/tabela_componentes.jpeg>
+Package pdftex.def Info: images/tabela_componentes.jpeg  used on input line 25.
+(pdftex.def)             Requested size: 183.83646pt x 227.40283pt.
+<images/senoide_2.png, id=140, 803.0pt x 504.88625pt>
+File: images/senoide_2.png Graphic file (type png)
+<use images/senoide_2.png>
+Package pdftex.def Info: images/senoide_2.png  used on input line 35.
+(pdftex.def)             Requested size: 262.61894pt x 165.1261pt.
+<images/senoide_1.png, id=141, 803.0pt x 504.88625pt>
+File: images/senoide_1.png Graphic file (type png)
+<use images/senoide_1.png>
+Package pdftex.def Info: images/senoide_1.png  used on input line 50.
+(pdftex.def)             Requested size: 262.61894pt x 165.1261pt.
+
+Underfull \vbox (badness 4832) has occurred while \output is active []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.78 \end{document}
-                    [6] (./projeto.aux)
+l.53 
+      [6
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.53 
+     
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.53 
+      <./images/tabela_componentes.jpeg> <./images/senoide_2.png (PNG copy)>]
+<images/senoide_0.png, id=148, 803.0pt x 504.88625pt>
+File: images/senoide_0.png Graphic file (type png)
+<use images/senoide_0.png>
+Package pdftex.def Info: images/senoide_0.png  used on input line 65.
+(pdftex.def)             Requested size: 262.61894pt x 165.1261pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.78 \newpage
+              [7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.78 \newpage
+             
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.78 \newpage
+              <./images/senoide_1.png (PNG copy)> <./images/senoide_0.png (PNG copy)>]
+<images/triangular_2.png, id=158, 803.0pt x 504.88625pt>
+File: images/triangular_2.png Graphic file (type png)
+<use images/triangular_2.png>
+Package pdftex.def Info: images/triangular_2.png  used on input line 86.
+(pdftex.def)             Requested size: 262.61894pt x 165.1261pt.
+<images/triangular_1.png, id=159, 803.0pt x 504.88625pt>
+File: images/triangular_1.png Graphic file (type png)
+<use images/triangular_1.png>
+Package pdftex.def Info: images/triangular_1.png  used on input line 101.
+(pdftex.def)             Requested size: 262.61894pt x 165.1261pt.
+<images/triangular_0.png, id=160, 803.0pt x 504.88625pt>
+File: images/triangular_0.png Graphic file (type png)
+<use images/triangular_0.png>
+Package pdftex.def Info: images/triangular_0.png  used on input line 116.
+(pdftex.def)             Requested size: 262.61894pt x 165.1261pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.119 
+       [8
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.119 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.119 
+       <./images/triangular_2.png (PNG copy)> <./images/triangular_1.png (PNG copy)>]
+<images/VM_segundo_laboratorio.png, id=168, 803.0pt x 504.88625pt>
+File: images/VM_segundo_laboratorio.png Graphic file (type png)
+<use images/VM_segundo_laboratorio.png>
+Package pdftex.def Info: images/VM_segundo_laboratorio.png  used on input line 135.
+(pdftex.def)             Requested size: 262.61894pt x 165.1261pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.141 \newpage
+               [9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.141 \newpage
+              
+pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.141 \newpage
+               <./images/triangular_0.png (PNG copy)> <./images/VM_segundo_laboratorio.png (PNG copy)>]) (./Sections/posanalise.tex) (./Sections/conclusoes.tex)
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.73 \include{Sections/apendice.tex}
+                                     [10]
+\openout2 = `Sections/apendice.aux'.
+
+ (./Sections/apendice.tex (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 14.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.71 \end{python}
+                  [11
+
+])
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.73 \include{Sections/apendice.tex}
+                                     [12] (./projeto.aux (./Sections/apendice.aux))
 Package rerunfilecheck Info: File `projeto.out' has not changed.
-(rerunfilecheck)             Checksum: 434803619BF3E4E2017895DE1F4B1885;1165.
+(rerunfilecheck)             Checksum: 1EE7C50811499EC0B957DA6089F1FCAD;1925.
  ) 
 Here is how much of TeX's memory you used:
- 55015 strings out of 476025
- 1402671 string characters out of 5796532
- 2146989 words of memory out of 5000000
- 74761 multiletter control sequences out of 15000+600000
- 521566 words of font info for 68 fonts, out of 8000000 for 9000
+ 56112 strings out of 476025
+ 1415819 string characters out of 5796532
+ 2898772 words of memory out of 5000000
+ 75707 multiletter control sequences out of 15000+600000
+ 521903 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,8n,118p,796b,908s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on projeto.pdf (6 pages, 181092 bytes).
+ 117i,8n,118p,796b,1684s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on projeto.pdf (12 pages, 900599 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 90 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 389 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
+ 153 named destinations out of 1000 (max. 500000)
+ 180 words of extra memory for PDF output out of 10000 (max. 10000000)
 

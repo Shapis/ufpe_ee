@@ -29,3 +29,4 @@
 \contentsline {section}{\numberline {4}Análise dos resultados}{}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Calculo do ganho $\beta $}{}{subsection.4.1}%
 \contentsline {section}{\numberline {5}Conclusões}{}{section.5}%
+\contentsline {section}{\numberline {6}Apêndice}{}{section.6}%

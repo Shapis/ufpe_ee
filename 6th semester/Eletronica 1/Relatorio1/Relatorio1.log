@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.22)  25 JUN 2023 15:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.27)  28 SEP 2023 20:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorios/Relatorio1/Relatorio1.tex"
-(/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorios/Relatorio1/Relatorio1.tex
+**"/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorio1/Relatorio1.tex"
+(/home/hpsilva/Documents/ufpe_ee/6th semester/Eletronica 1/Relatorio1/Relatorio1.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -1076,12 +1076,12 @@ Package rerunfilecheck Info: File `Relatorio1.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  56440 strings out of 476025
- 1420677 string characters out of 5796532
+ 1420644 string characters out of 5796532
  2860578 words of memory out of 5000000
  75869 multiletter control sequences out of 15000+600000
  521903 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,10n,118p,807b,2962s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,10n,118p,796b,2962s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
 Output written on Relatorio1.pdf (19 pages, 826875 bytes).
 PDF statistics:
