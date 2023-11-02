@@ -1,0 +1,15 @@
+SUBDESIGN pulso_to_clock
+(
+	pulso : INPUT;
+	clk_out : OUTPUT;
+)
+VARIABLE
+    aux : tff;
+
+BEGIN 
+    aux.t = VCC;
+	 aux.clk = pulso;
+	 
+	 clk_out = aux;
+        
+END;

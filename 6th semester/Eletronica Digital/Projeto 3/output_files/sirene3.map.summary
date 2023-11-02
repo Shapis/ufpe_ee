@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Sep 13 11:52:07 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : sirene3
+Top-level Entity Name : buzzer_controlavel
+Family : Cyclone IV E
+Total logic elements : 1,898
+    Total combinational functions : 1,889
+    Dedicated logic registers : 1,028
+Total registers : 1028
+Total pins : 33
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

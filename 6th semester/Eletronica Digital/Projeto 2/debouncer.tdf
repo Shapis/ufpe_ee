@@ -1,0 +1,33 @@
+INCLUDE "contador.inc";
+
+SUBDESIGN debouncer
+(
+  button : INPUT;
+  clock : INPUT;
+  result : OUTPUT;
+)
+VARIABLE 
+ff[2..0] : dff;
+count : contador WITH (overflow = 9);
+divisor : contador WITH (overflow = 50000);
+
+BEGIN
+     divisor.clock = clock;
+     
+     ff[].clk = divisor.clk_out;
+    ff[0].d = !button;
+     ff[1].d = ff[0].q;
+     ff[2].d = ff[1].q;
+     
+     count.clr = ff[0] $ ff[1];
+     
+     IF count.clk_out == 0 THEN
+        count.clock = divisor.clk_out;
+     END IF;
+     
+     IF count.clk_out == 1 THEN
+        ff[2].clk = divisor.clk_out;
+     END IF;
+     
+     result = !ff[2].q;
+END;

@@ -1,0 +1,52 @@
+TITLE "Song StarWars 25MHz- Modelo Estrutural";
+INCLUDE "song_starwars_25MHz/temporizador.inc";
+INCLUDE "song_starwars_25MHz/divisor_clock.inc";
+INCLUDE "song_starwars_25MHz/controlador.inc";
+
+CONSTANT clk_FPGA = 25000000; -- 25MHz
+
+--constantes temporizador
+CONSTANT t_max= 4000;--4000ms
+CONSTANT overflow_t = 100000000; --para 25MHz
+CONSTANT n_bits_t= LOG2(overflow_t);
+
+--constantes divisor de clock
+CONSTANT freq_min	= 100;
+CONSTANT overflow_f = CEIL(clk_FPGA DIV freq_min);
+CONSTANT n_bits_f= LOG2(overflow_f);
+
+--inicio do projeto
+SUBDESIGN song_starwars_25MHz(
+	clock				:  INPUT; --entrada 25MHz padrão 1x
+	stop				:	INPUT = GND; -- precedente a play,ALTO reinicia e mantem a fsm no estado 0
+	play				:	INPUT; --ALTO , libera (play) a fsm, BAIXO mantem (pause) a fsm no estado atual
+	playing			:	OUTPUT; --flag 1 indica que a música está em execução	
+	buzzer			:  OUTPUT;--saida freq desejada 
+)
+VARIABLE
+	--instância do temporizador
+	temp 			: temporizador WITH (n_bits_t=n_bits_t); 
+	--instância do divisor de clock
+	div_clock 	: divisor_clock WITH (n_bits_f=n_bits_f);
+	--instância do controlador
+	control		: controlador WITH (n_bits_t=n_bits_t, n_bits_f=n_bits_f);
+BEGIN	
+	--mapeamento de portas do controlador
+	control.clk_in			=	clock; --clock principal
+	control.stop			=	stop; --cntrl de reprodução
+	control.play			=	play;--cntrl de reprodução
+	control.duracao		=	temp.q;
+	
+	--mapeamento de portas do divisor de clock
+	div_clock.clk_in		=	control.clk_out;
+	div_clock.overflow[]	=	control.freq_out[];
+	--mapeamento de portas do temporizador
+	temp.clk_in				=	clock; --clock principal
+	temp.disparo			=	control.disparo;
+	temp.overflow[]		=	control.temp_out[];
+	
+	--saídas do projeto top-level
+	buzzer = div_clock.clk_out;
+	playing	=	control.playing; --flag 1 indica que a música está em execução
+END;
+	

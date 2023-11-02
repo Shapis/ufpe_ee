@@ -1,0 +1,15 @@
+SUBDESIGN mute_buzzer
+(
+    frequencia_musica : INPUT;
+	 enable : INPUT;
+    buzzer : OUTPUT;
+)
+
+
+BEGIN
+
+	IF enable == VCC THEN
+		buzzer = frequencia_musica;
+	END IF;
+
+END;

@@ -1,0 +1,29 @@
+SUBDESIGN sorteador
+(
+    clock : INPUT;
+    button : INPUT;
+    d1[4..1] : OUTPUT;
+	 d2[4..1] : OUTPUT;
+)
+VARIABLE
+dezena[4..1] : dff;
+unidade[4..1] : dff = 1;
+
+BEGIN
+unidade.clk = clock;
+
+IF unidade < 9 THEN
+	unidade = unidade + 1;
+ELSE
+	unidade = 0;
+	dezena = dezena + 1;
+END IF;
+
+IF dezena == 6 & unidade == 1 THEN
+	dezena = 0;
+	unidade = 1;
+END IF;
+
+d1 = dezena;
+d2 = unidade;
+END;

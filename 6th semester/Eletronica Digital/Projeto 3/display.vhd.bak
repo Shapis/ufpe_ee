@@ -1,0 +1,16 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.pkg_buzzer.ALL;
+
+ENTITY display IS
+	PORT (
+		stop, play_pause : IN std_logic;
+		 : OUT std_logic_vector (1 TO 4)
+		);
+END display;
+
+ARCHITECTURE estrutural OF display IS
+	
+BEGIN
+	
+END estrutural;

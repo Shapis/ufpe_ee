@@ -1,0 +1,166 @@
+-- Arquivo: lcd_controller.tdf
+-- Descrição: Exemplo de controlador de LCD 16x2
+-- Autor: Malki-çedheq Benjamim
+-- Data: 22/07/2023
+TITLE "lcd_controler";
+PARAMETERS (
+    clk_freq       = 50,    --clock principal em MHz
+    display_lines  = B"1",  --número de linhas do display (0 = uma linha, 1 = duas linhas)
+    character_font = B"0",  --fonte (0 = 5x8 pontos, 1 = 5x10 pontos)
+    display_on_off = B"1",  --display on/off (0 = off, 1 = on)
+    cursor         = B"0",  --cursor on/off (0 = off, 1 = on)
+    blink          = B"0",  --blink on/off (0 = off, 1 = on)
+    inc_dec        = B"1",  --incremento/decremento (0 = decremento, 1 = incremento)
+    shift          = B"0"   --shift on/off (0 = off, 1 = on)
+);
+SUBDESIGN lcd_controler (
+	 clk        	: INPUT;  --clock principal
+    reset_n    	: INPUT;  --ativo-baixo, reinicializa o LCD
+    lcd_enable 	: INPUT;  --retem os dados no controlador LCD
+    lcd_bus[9..0] : INPUT;  --(9) rs (8) rw (7..0) dado char
+    busy       	: OUTPUT; --feedback do controlador (1)ocupado/(0)disponível
+    rw, rs, e  	: OUTPUT; --leitura/escrita, instrução/dado, habilita LCD ativo-alto
+    lcd_data[7..0]: OUTPUT; --sinal de dado (char) para o LCD 
+)
+VARIABLE	
+	busy, rw, rs, e, lcd_data[7..0] : DFF;
+
+	clk_count[22..1]: DFF; --instância de registrador para contagem LOG2(50000*50)~22bits
+	
+	estado: MACHINE --instância de máquina de estados
+				WITH STATES (
+					 ENERGIZACAO,
+					 INICIALIZACAO,
+					 PRONTO,
+					 ENVIAR
+				);
+BEGIN
+
+	DEFAULTS
+		busy = VCC;
+	END DEFAULTS;
+	
+	busy.clk = clk;
+	rw.clk = clk;
+	rs.clk = clk;
+	e.clk = clk;
+	lcd_data[7..0].clk = clk;
+	
+	clk_count[].clk = clk; --sincronização do registrador com o clk de entrada
+	estado.clk = clk; 	--sincronização da fsm com o clk de entrada
+	
+	IF (reset_n == B"0") THEN --força reinicialização da fsm
+		estado = ENERGIZACAO;
+	END IF;
+	
+	CASE estado IS --avalia os estados da fsm
+			
+		WHEN ENERGIZACAO => -- espera 50ms para garantir a energização do LCD
+			busy = B"1";
+			IF (clk_count[].q < (50000 * clk_freq)-1) THEN    --espera 50 ms <-> contagem LOG2(50000*50)~22bits
+				clk_count[].d = clk_count[].q + 1;
+				estado = ENERGIZACAO;
+			ELSE                                       --energização completa
+				clk_count[].d = 0;
+				rs = B"0";
+				rw = B"0";
+				lcd_data[] = B"00110000"; --8-bits 1L*16 5*8 function_set
+				estado = INICIALIZACAO;
+			END IF;
+			 
+		WHEN INICIALIZACAO => --sequência de inicialização do display LCD 
+			busy = B"1"; --LCD ocupado
+			clk_count[].d = clk_count[].q + 1;
+			
+			IF (clk_count[].q < (10 * clk_freq)-1) THEN       --function set
+				lcd_data[] = (B"0011", display_lines, character_font, B"00");
+				e = B"1"; --habilita o LCD (executa o comando)
+				estado = INICIALIZACAO;
+				
+			ELSIF (clk_count[].q < (60 * clk_freq)-1) THEN    --espera 50 us
+				lcd_data[] = B"00000000"; --nenhuma nova instrução, apenas aguarda
+				e = B"0"; --desabilita o LCD
+				estado = INICIALIZACAO;
+				
+			ELSIF (clk_count[].q < (70 * clk_freq)-1) THEN    --display on/off control
+				lcd_data[] = (B"00001", display_on_off, cursor, blink);
+				e = B"1"; --habilita o LCD (executa o comando)
+				estado = INICIALIZACAO;
+				
+			ELSIF (clk_count[].q < (120 * clk_freq)-1) THEN   --espera 50 us
+				lcd_data[] = B"00000000";
+				e = B"0";
+				estado = INICIALIZACAO;
+				
+			ELSIF (clk_count[].q < (130 * clk_freq)-1) THEN   --display clear
+				lcd_data[] = B"00000001";
+				e = B"1"; --habilita o LCD (executa o comando)
+				estado = INICIALIZACAO;
+				
+			ELSIF (clk_count[].q < (2130 * clk_freq)-1) THEN  --espera 2 ms
+				lcd_data[] = B"00000000";
+				e = B"0";
+				estado = INICIALIZACAO;
+				
+			ELSIF (clk_count[].q < (2140 * clk_freq)-1) THEN  --entry mode set
+				lcd_data[] = (B"000001", inc_dec, shift);
+				e = B"1"; --habilita o LCD (executa o comando)
+				estado = INICIALIZACAO;
+				
+			ELSIF (clk_count[].q < (2200 * clk_freq)-1) THEN  --espera 60 us
+				lcd_data[] = B"00000000";
+				e = B"0";
+				estado = INICIALIZACAO;
+				
+			ELSE                                       --inicialização finalizada
+				clk_count[].d = 0;
+				busy = B"0";
+				estado = PRONTO;
+				
+			END IF;			
+
+			
+		WHEN PRONTO => --aguarda o sinal de habilitação e então trava na instrução
+			clk_count[].d = 0;
+			IF (lcd_enable == B"1") THEN
+				busy = B"1";
+				rs = lcd_bus[9];
+				rw = lcd_bus[8];
+				lcd_data[] = lcd_bus[7..0];							
+				estado = ENVIAR;
+			ELSE				
+				busy = B"0";
+				rs = B"0";
+				rw = B"0";
+				lcd_data[] = B"00000000";				
+				estado = PRONTO;
+			END IF;		
+					
+		WHEN ENVIAR => --envia instrução para o LCD
+			busy = B"1"; --LCD ocupado
+			
+			--necessário manter os dados nas saídas durante o envio
+			rs.d = rs.q;
+			rw.d = rw.q;			
+			lcd_data[].d = lcd_data[].q;
+			
+			IF (clk_count[].q < (50 * clk_freq)-1) THEN      --espera 50 us
+				IF (clk_count[].q < clk_freq) THEN            --enable negativo
+					e = B"0"; --desabilita o LCD
+				ELSIF (clk_count[].q < (14 * clk_freq)-1) THEN  --enable positivo em metade do ciclo (25us)
+					e = B"1"; --habilita o LCD (executa o comando)
+				ELSIF (clk_count[].q < (27 * clk_freq)-1) THEN  --enable negativo na outra metade do ciclo (25us)
+					e = B"0"; --desabilita o LCD
+				END IF;
+				clk_count[].d = clk_count[].q + 1;
+				estado = ENVIAR;
+			ELSE
+				clk_count[].d = 0;	
+				estado = PRONTO;
+			END IF;	
+			
+		WHEN OTHERS =>  
+			clk_count[].d = 0;
+			estado = ENERGIZACAO;
+	END CASE;
+END;

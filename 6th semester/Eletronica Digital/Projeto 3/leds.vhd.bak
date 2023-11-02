@@ -1,0 +1,18 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.pkg_buzzer.ALL;
+
+ENTITY LED IS
+	PORT (
+		stop, play_pause, skip : IN std_logic;
+		led1, led2, led3, led4 : OUT std_logic);
+END LED;
+
+ARCHITECTURE estrutural OF LED IS
+	
+BEGIN
+	led1 <= not stop;
+	led2 <= not play_pause
+	led3 <= play_pause
+	led4 <= not (not stop and not play_pause and play_pause)
+END estrutural;

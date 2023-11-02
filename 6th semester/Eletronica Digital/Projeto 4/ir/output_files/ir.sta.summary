@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clock'
+Slack : -7.328
+TNS   : -1031.887
+
+Type  : Slow 1200mV 85C Model Setup 'Mp3:inst4|skip'
+Slack : -2.309
+TNS   : -2.309
+
+Type  : Slow 1200mV 85C Model Setup 'Mp3:inst4|estado_atual'
+Slack : -1.301
+TNS   : -4.147
+
+Type  : Slow 1200mV 85C Model Hold 'clock'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Mp3:inst4|estado_atual'
+Slack : 0.571
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Mp3:inst4|skip'
+Slack : 0.575
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -501.145
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Mp3:inst4|skip'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Mp3:inst4|estado_atual'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clock'
+Slack : -6.593
+TNS   : -941.491
+
+Type  : Slow 1200mV 0C Model Setup 'Mp3:inst4|skip'
+Slack : -1.997
+TNS   : -1.997
+
+Type  : Slow 1200mV 0C Model Setup 'Mp3:inst4|estado_atual'
+Slack : -1.165
+TNS   : -3.936
+
+Type  : Slow 1200mV 0C Model Hold 'clock'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Mp3:inst4|skip'
+Slack : 0.552
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Mp3:inst4|estado_atual'
+Slack : 0.574
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -501.145
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Mp3:inst4|skip'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Mp3:inst4|estado_atual'
+Slack : 0.219
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clock'
+Slack : -2.563
+TNS   : -265.711
+
+Type  : Fast 1200mV 0C Model Setup 'Mp3:inst4|skip'
+Slack : -0.481
+TNS   : -0.481
+
+Type  : Fast 1200mV 0C Model Setup 'Mp3:inst4|estado_atual'
+Slack : -0.107
+TNS   : -0.189
+
+Type  : Fast 1200mV 0C Model Hold 'Mp3:inst4|skip'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Mp3:inst4|estado_atual'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -359.943
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Mp3:inst4|skip'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Mp3:inst4|estado_atual'
+Slack : 0.358
+TNS   : 0.000
+
+------------------------------------------------------------

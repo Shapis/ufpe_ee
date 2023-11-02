@@ -1,0 +1,93 @@
+INCLUDE "contador_grande.inc";
+INCLUDE "contador.inc";
+INCLUDE "lfsr.inc";
+INCLUDE "pulso_to_clock";
+INCLUDE "contador_crescente.inc";
+
+SUBDESIGN varia_display
+(
+     clock : INPUT;
+     pulso : INPUT;
+     d_atual[4..1] : INPUT;
+     u_atual[4..1] : INPUT;
+     button2 : INPUT;
+	  pause : INPUT;
+     d_display[4..1] : OUTPUT;
+     u_display[4..1] : OUTPUT;
+	  d_final[4..1] : OUTPUT;
+	  u_final[4..1] : OUTPUT;
+     led : OUTPUT;
+)
+VARIABLE
+    freq2hz : contador WITH (overflow = 12500000); 
+	 freq5hz : contador WITH (overflow = 5000000);
+    contador6 : contador_crescente WITH (min_cnt = 0, max_cnt = 6);
+	 contador15 : contador_crescente WITH (min_cnt = 0, max_cnt = 15);
+    count : contador_crescente WITH (min_cnt = 0, max_cnt = 2); -- controle da maquina de estados
+    spin : lfsr;
+	 toggle_frequencia : tff;
+	 estado: MACHINE WITH STATES (
+					 antes_do_sorteio,
+					 durante_o_sorteio,
+					 depois_do_sorteio
+				);
+
+BEGIN 
+		toggle_frequencia.t = VCC;
+		toggle_frequencia.clk = button2;
+		led = !pause;
+		
+		IF toggle_frequencia == GND THEN
+			spin.clock = freq2hz.clk_out;
+		ELSE 
+			spin.clock = freq5hz.clk_out;
+		END IF;
+		
+		estado.clk = clock; -- Sincronizacao da maquina de estados
+
+	  CASE estado IS
+			WHEN antes_do_sorteio =>
+				IF count.q[] == 0 THEN
+						IF pause == GND THEN
+							count.clk = pulso;
+						END IF;
+
+					d_display[] = B"0000";
+					u_display[] = B"0000";
+				   d_final = B"0000";
+				   u_final = B"0000";
+					estado = antes_do_sorteio;
+				ELSE 
+					estado = durante_o_sorteio;
+				END IF;
+			WHEN durante_o_sorteio =>
+				IF count.q == 1 THEN
+					d_final[] = B"0000";
+				   u_final[] = B"0000";
+			      spin.seed[] = u_atual[];
+					IF pause == GND THEN
+						freq5hz.clock = clock;
+						freq2hz.clock = clock;
+					END IF;
+						contador6.clk = freq2hz.clk_out;
+						contador15.clk = freq5hz.clk_out;
+					IF toggle_frequencia == GND THEN
+						count.clk = contador6.tc;
+					ELSE 
+						count.clk = contador15.tc;
+					END IF;
+					d_display[] = spin.dezena[];
+					u_display[] = spin.unidade[];
+					estado = durante_o_sorteio;
+				ELSE 
+					estado = depois_do_sorteio;
+				END IF;
+			WHEN depois_do_sorteio =>
+			IF count.q[] == 2 THEN
+					d_final[] = d_atual[];
+				   u_final[] = u_atual[];
+		         d_display[] = d_atual[];
+               u_display[] = u_atual[];
+				END IF;
+		END CASE;
+END;

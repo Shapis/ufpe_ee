@@ -1,0 +1,53 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+ENTITY divisor_clock IS
+	PORT (Clkin_p : IN std_logic;
+			Clkout_p: OUT std_logic);		
+END divisor_clock;
+ARCHITECTURE pulso_periodico OF divisor_clock IS
+	CONSTANT NumPulsos_c : integer := 4;
+	CONSTANT Overflow_c : integer := NumPulsos_c-1;
+BEGIN
+	PROCESS(Clkin_p)
+		VARIABLE Cnt_v : integer RANGE 0 TO Overflow_c;
+	BEGIN
+		IF rising_edge(Clkin_p) THEN
+			IF Cnt_v = Overflow_c THEN
+				Cnt_v := 0; --reinicia
+			ELSE
+				Cnt_v := Cnt_v + 1;--incrementa				
+			END IF;
+		END IF;
+		IF Cnt_v = Overflow_c THEN
+			Clkout_p <= '1';--pulso
+		ELSE
+			Clkout_p <= '0';
+		END IF;
+	END PROCESS;
+END pulso_periodico;
+
+ARCHITECTURE clock OF divisor_clock IS
+	CONSTANT NumPulsos_c : integer := 4;
+	CONSTANT Overflow_c : integer := NumPulsos_c-1;
+	SIGNAL Toggle_s : std_logic := '0';
+BEGIN
+	PROCESS(Clkin_p)
+		VARIABLE Cnt_v : integer RANGE 0 TO Overflow_c;
+	BEGIN
+		IF rising_edge(Clkin_p) THEN
+			IF Cnt_v = Overflow_c THEN
+				Cnt_v := 0; --reinicia
+				Toggle_s <= not Toggle_s; --alterna	
+			ELSE
+				Cnt_v := Cnt_v + 1; --incrementa
+				Toggle_s <= Toggle_s;				
+			END IF;
+		END IF;
+	END PROCESS;	
+	Clkout_p <= Toggle_s;
+END clock;
+
+CONFIGURATION main OF divisor_clock IS
+	--FOR clock END FOR;
+	FOR pulso_periodico END FOR;
+END CONFIGURATION;

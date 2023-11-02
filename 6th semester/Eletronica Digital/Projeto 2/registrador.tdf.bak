@@ -1,0 +1,20 @@
+INCLUDE "contador.inc";
+INCLUDE 
+
+SUBDESIGN registrador
+(
+	button1 : INPUT;
+	button2 : INPUT;
+	button3 : INPUT;
+	clock : INPUT;
+	atual[3..1][][4..1] : OUTPUT;
+	tipo : OUTPUT;
+)
+VARIABLE
+divisor : contador WITH (overflow = 125000000); -- frequencia 0.2Hz
+
+
+
+BEGIN
+	
+END;

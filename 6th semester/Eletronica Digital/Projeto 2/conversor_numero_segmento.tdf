@@ -1,0 +1,23 @@
+SUBDESIGN conversor_numero_segmento
+(
+    numero[4..1]: INPUT;
+	 segmentos[6..0]: OUTPUT;
+)
+
+BEGIN
+
+TABLE
+	numero[] => segmentos[];
+	B"0000" => B"1000000";
+	B"0001" => B"1111001";
+	B"0010" => B"0100100";
+	B"0011" => B"0110000";
+	B"0100" => B"0011001";
+	B"0101" => B"0010010";
+	B"0110" => B"0000010";
+	B"0111" => B"1111000";
+	B"1000" => B"0000000";
+	B"1001" => B"0010000";
+END TABLE;
+
+END;

@@ -1,0 +1,15 @@
+SUBDESIGN contador
+(
+    clock : INPUT;
+	 key[1] : INPUT;
+	 led[2] : OUTPUT;
+)
+VARIABLE
+temp : tff;
+
+BEGIN 
+	temp.clk = key[1];
+	temp.t = VCC;
+	led[2] = temp.q;
+END;
+

@@ -1,0 +1,20 @@
+INCLUDE "debouncer.inc";
+
+SUBDESIGN teste
+(
+    clock : INPUT;
+	 key[1] : INPUT;
+	 led[2] : OUTPUT;
+)
+VARIABLE
+temp : tff;
+deb : debouncer;
+
+BEGIN
+	deb.clock = clock;
+	deb.button = key[1];
+	temp.clk = deb.result;
+	temp.t = VCC;
+	led[2] = temp.q;
+END;
+

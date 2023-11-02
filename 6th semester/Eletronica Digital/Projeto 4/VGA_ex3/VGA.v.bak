@@ -1,0 +1,159 @@
+/*
+Autor: Malki-çedheq Benjamim
+Disciplina: Eletrônica Digital 1A
+Descrição:
+Principio de interface VGA, ex. sinal para teste de cores e sincronização v/h
+Conecte a interface VGA da placa de desenvolvimento a um monitor/tv,
+são utilizadas as chaves/botões key1 e key2, da seguinte forma:
+
+key1 key2  resultado esperado no monitor
+ 0    0	  barra de cores horizontal	
+ 0    1    barra de cores vertical
+ 1    0    tabuleiro colorido
+ 1    1    tabuleiro colorido (invertido)
+
+ 
+Referências: 
+	https://mundoprojetado.com.br/como-funciona-o-vga/
+	http://fpgaparatodos.com.br/2011/10/26/vga-para-fpga/
+	https://forum.digikey.com/t/vga-controller-vhdl/12794
+*/
+module VGA(
+   clock,
+   key,
+   vga_r, vga_g, vga_b,
+   hsync,
+   vsync
+);
+	input  clock;     	//50MHz clock de entrada do sistema
+	input  [2:1] key;  	//conexão com chaves/botes da placa
+	output vga_r, vga_g, vga_b;    //Saída de dados VGA
+	output  hsync;     	//Sinal para sincronização horizontal VGA
+	output  vsync;     	//Sinal para sincronização vertical VGA
+		
+	wire [2:0] disp_RGB;  //net para condução dos dados VGA a saída RGB
+
+	reg [9:0] hcount;     //Contador de varredura de linha VGA
+	reg [9:0]   vcount;   //Contador de varredura de coluna VGA
+	reg [2:0]   data;     //registrador para dados VGA
+	reg [2:0]  h_dat;     //registrador para posição horizontal
+	reg [2:0]   v_dat;    //registrador para posição vertical
+
+	reg   flag;
+	wire  hcount_ov; 	//flag de estouro do contador horizontal
+	wire  vcount_ov; 	//flag de estouro do contador vertical
+	wire  dat_act;
+	wire  hsync; 		//condução de saída de horizontal vertical
+	wire  vsync; 		//condução de saída de sincronização vertical
+	reg   vga_clk; 	//clock do VGA
+
+	//Tabela de parâmetros de temporizaçãoo de varredura de linha e coluna VGA
+	parameter hsync_end   = 10'd95,
+		hdat_begin  = 10'd143,
+		hdat_end  = 10'd783,
+		hpixel_end  = 10'd799,
+		vsync_end  = 10'd1,
+		vdat_begin  = 10'd34,
+		vdat_end  = 10'd514,
+		vline_end  = 10'd524;
+
+
+	always @(posedge clock)
+	begin
+		vga_clk = ~vga_clk;
+	end
+
+	//************************VGA hsync*******************************
+	//varredura de linha    
+	always @(posedge vga_clk)
+	begin
+		if (hcount_ov)
+			hcount <= 10'd0;
+		else
+			hcount <= hcount + 10'd1;
+		end
+	assign hcount_ov = (hcount == hpixel_end);
+
+	//************************VGA vsync*******************************
+	//varredura de coluna -----------------------
+	always @(posedge vga_clk)
+	begin
+		if (hcount_ov)
+		begin
+			if (vcount_ov)
+			vcount <= 10'd0;
+		else
+			vcount <= vcount + 10'd1;
+		end
+	end
+	assign  vcount_ov = (vcount == vline_end);
+	//--------------------------------------------
+
+	//************************VGA saídas*******************************
+	// atribuição dos sinais as respectivas saídas
+	assign dat_act = ((hcount >= hdat_begin) && (hcount < hdat_end)) && ((vcount >= vdat_begin) && (vcount < vdat_end));
+	assign hsync = (hcount > hsync_end);
+	assign vsync = (vcount > vsync_end);
+	assign disp_RGB = (dat_act) ?  data : 3'h00;     
+	assign vga_r = disp_RGB[0];
+	assign vga_g = disp_RGB[1];
+	assign vga_b = disp_RGB[2];
+	//--------------------------------------------
+
+	//************************VGA EXIBIÇÃO*******************************
+
+	// Lógica para escolha do que será exibido na tela
+	always @(posedge vga_clk)
+	L1 : begin
+		case(key[2:1])
+			2'd0: data <= h_dat;      // exibe barra de cores horizontal
+			2'd1: data <= v_dat;      // exibe barra de cores vertical
+			2'd2: data <= (v_dat ^ h_dat); //exibe tabuleiro colorido
+			2'd3: data <= (v_dat ~^ h_dat); //exibe tabuleiro colorido (invertido)
+		endcase
+	end
+
+	//Lógica para gerar barras de cores horizontais
+	always @(posedge vga_clk)  
+	L2: begin
+
+		if(hcount < 223)
+			v_dat <= 3'h7;   //Branco 
+		else if(hcount < 303)
+			v_dat <= 3'h6;   //Ciano
+		else if(hcount < 383)
+			v_dat <= 3'h5;   //Magenta
+		else if(hcount < 463)
+			v_dat <= 3'h4;   //Azul Real
+		else if(hcount < 543)
+			v_dat <= 3'h3;   //Amarelo
+		else if(hcount < 623)
+			v_dat <= 3'h2;   //Verde
+		else if(hcount < 703)
+			v_dat <= 3'h1;   //Vermelho
+		else 
+			v_dat <= 3'h0;   //Preto
+	end
+
+	//Lógica para gerar barras de cores verticais
+	always @(posedge vga_clk)
+	L3: begin
+		if(vcount < 94)
+			h_dat <= 3'h7;   //Branco
+		else if(vcount < 154)
+			h_dat <= 3'h6;   //Ciano
+		else if(vcount < 214) 
+			h_dat <= 3'h5;   //Magenta
+		else if(vcount < 274)
+			h_dat <= 3'h4;   //Azul Real
+		else if(vcount < 334)
+			h_dat <= 3'h3;   //Amarelo
+		else if(vcount < 394)
+			h_dat <= 3'h2;   //Verde
+		else if(vcount < 454)
+			h_dat <= 3'h1;   //Vermelho
+		else 
+			h_dat <= 3'h0;   //Preto
+	end
+
+endmodule

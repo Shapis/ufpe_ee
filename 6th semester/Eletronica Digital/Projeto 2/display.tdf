@@ -1,0 +1,140 @@
+INCLUDE "conversor_numero_segmento.inc";
+INCLUDE "varia_display.inc";
+INCLUDE "detector_sorteios.inc";
+INCLUDE "contador.inc";
+INCLUDE "contador_crescente.inc";
+
+SUBDESIGN display
+(
+    count[3..0]: INPUT;
+	 clock : INPUT;
+	 d1[4..1]: INPUT;
+	 d2[6..1][4..1]: INPUT;
+	 d3[6..1][4..1]: INPUT;
+	 button2 : INPUT;
+	 pause : INPUT;
+	 dig[4..1]: OUTPUT;
+	 seg[6..0]: OUTPUT;
+	 led : OUTPUT;
+	 unidades_final[6..1][4..1] : OUTPUT;
+	 dezenas_final[6..1][4..1] : OUTPUT;
+
+)
+VARIABLE
+convd1 : conversor_numero_segmento;
+convd2 : conversor_numero_segmento;
+convd3 : conversor_numero_segmento;
+varia[6..1] : varia_display;
+check_pulso : tff;
+detector : detector_sorteios;
+freq1562hz : contador WITH (overflow = 16000);
+divisor4 : contador_crescente WITH (min_cnt = 0, max_cnt = 3);
+
+
+BEGIN
+DEFAULTS
+	dig[] = VCC;
+END DEFAULTS;
+
+led = varia[1].led;
+
+freq1562hz.clock = clock;
+divisor4.clk = freq1562hz.clk_out;
+
+unidades_final[][] = varia[].u_final[];
+dezenas_final[][] = varia[].d_final[];
+
+varia[].button2 = button2;
+varia[].pause = GND;
+
+detector.d[][] = d2[][];
+detector.u[][] = d3[][];
+
+check_pulso.t = VCC;
+check_pulso.clk = detector.pulso[2];
+
+varia[].clock = clock;
+
+-- led = !(varia[1].led OR varia[2].led OR varia[3].led OR varia[4].led OR varia[5].led OR varia[6].led);
+varia[].d_atual[] = d2[][];
+varia[].u_atual[] = d3[][];
+
+CASE d1[] IS
+	WHEN 1 => 
+		varia[1].pulso = detector.pulso[1];
+		varia[2].pulso = detector.pulso[2];
+		varia[3].pulso = detector.pulso[3];
+		varia[4].pulso = detector.pulso[4];
+		varia[5].pulso = detector.pulso[5];
+		varia[6].pulso = detector.pulso[6];
+		convd1.numero[] = 1;
+		convd2.numero[] = varia[1].d_display[];
+		convd3.numero[] = varia[1].u_display[];
+	WHEN 2 => 
+		varia[1].pulso = detector.pulso[1];
+		varia[2].pulso = detector.pulso[2];
+		varia[3].pulso = detector.pulso[3];
+		varia[4].pulso = detector.pulso[4];
+		varia[5].pulso = detector.pulso[5];
+		varia[6].pulso = detector.pulso[6];
+		convd1.numero[] = 2;
+		convd2.numero[] = varia[2].d_display[];
+		convd3.numero[] = varia[2].u_display[];
+	WHEN 3 => 
+		varia[1].pulso = detector.pulso[1];
+		varia[2].pulso = detector.pulso[2];
+		varia[3].pulso = detector.pulso[3];
+		varia[4].pulso = detector.pulso[4];
+		varia[5].pulso = detector.pulso[5];
+		varia[6].pulso = detector.pulso[6];
+		convd1.numero[] = 3;
+		convd2.numero[] = varia[3].d_display[];
+		convd3.numero[] = varia[3].u_display[];
+	WHEN 4 => 
+		varia[1].pulso = detector.pulso[1];
+		varia[2].pulso = detector.pulso[2];
+		varia[3].pulso = detector.pulso[3];
+		varia[4].pulso = detector.pulso[4];
+		varia[5].pulso = detector.pulso[5];
+		varia[6].pulso = detector.pulso[6];
+		convd1.numero[] = 4;
+		convd2.numero[] = varia[4].d_display[];
+		convd3.numero[] = varia[4].u_display[];
+	WHEN 5 => 
+		varia[1].pulso = detector.pulso[1];
+		varia[2].pulso = detector.pulso[2];
+		varia[3].pulso = detector.pulso[3];
+		varia[4].pulso = detector.pulso[4];
+		varia[5].pulso = detector.pulso[5];
+		varia[6].pulso = detector.pulso[6];
+		convd1.numero[] = 5;
+		convd2.numero[] = varia[5].d_display[];
+		convd3.numero[] = varia[5].u_display[];
+	WHEN 6 =>
+		varia[1].pulso = detector.pulso[1];
+		varia[2].pulso = detector.pulso[2];
+		varia[3].pulso = detector.pulso[3];
+		varia[4].pulso = detector.pulso[4];
+		varia[5].pulso = detector.pulso[5];
+		varia[6].pulso = detector.pulso[6];
+		convd1.numero[] = 6;
+		convd2.numero[] = varia[6].d_display[];
+		convd3.numero[] = varia[6].u_display[];
+END CASE;
+
+
+CASE divisor4.q IS
+		WHEN 0 => dig[4] = GND;
+		WHEN 1 => dig[3] = GND;
+		WHEN 2 => dig[2] = GND;
+		WHEN 3 => dig[1] = GND;
+END CASE;
+
+CASE divisor4.q IS
+		WHEN 0 => seg[] = convd1.segmentos[];
+		WHEN 1 => seg[] = B"0111111";
+		WHEN 2 => seg[] = convd2.segmentos[];
+		WHEN 3 => seg[] = convd3.segmentos[];
+END CASE;
+
+END;

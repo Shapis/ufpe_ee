@@ -1,0 +1,32 @@
+TITLE "Divisor de Clock";
+
+PARAMETERS
+(
+	n_bits_f = 26  --valor padrão
+); 
+SUBDESIGN divisor_clock(
+	clk_in					 : INPUT;
+	overflow[n_bits_f..0] : INPUT;
+	clk_out					 : OUTPUT;
+)
+VARIABLE
+	cnt[n_bits_f..0] 	: DFF;
+	alternador 			: TFF;
+BEGIN
+	DEFAULTS
+		clk_out = GND;
+	END DEFAULTS;
+	
+	cnt[].clk		=	clk_in;
+	alternador.clk	=	clk_in;
+	
+	IF cnt[] < overflow[] THEN
+		cnt[].d = cnt[]+1;
+		alternador.t = GND;
+	ELSE
+		alternador.t = VCC;
+	END IF;
+	
+	clk_out = alternador;
+END;
+	

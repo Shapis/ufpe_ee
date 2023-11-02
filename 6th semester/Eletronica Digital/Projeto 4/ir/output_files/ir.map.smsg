@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at SEG_D_verilog.v(60): always construct contains both blocking and non-blocking assignments File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 60

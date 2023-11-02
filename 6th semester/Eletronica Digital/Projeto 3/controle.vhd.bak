@@ -1,0 +1,16 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.pkg_buzzer.ALL;
+
+ENTITY controle IS
+	PORT (
+		key1, key2, key3 : IN std_logic;
+		botao1, botao2, botao3 : OUT std_logic;
+	);
+END controle;
+
+ARCHITECTURE estrutural OF controle IS
+	
+BEGIN
+	
+END estrutural;

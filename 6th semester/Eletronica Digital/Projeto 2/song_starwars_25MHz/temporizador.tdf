@@ -1,0 +1,36 @@
+% Nos monoestáveis sem rearme quando a entrada de disparo é ativada 
+ inicia um pulso de largura predefinida de duração igual a atraso.  
+ Um monoestável sem rearme ignora novos disparo enquanto a saída 
+ ainda estiver ativa, ou seja, enquanto não completar período 
+ de tempo de atraso referente a temporização
+%
+TITLE "Temporizador disparável";
+
+PARAMETERS
+(
+	n_bits_t = 26  --valor padrão
+); 
+SUBDESIGN temporizador
+(
+   clk_in					: INPUT;
+	disparo 					: INPUT;
+	overflow[n_bits_t..0]: INPUT;
+   q : OUTPUT;
+)
+VARIABLE
+    cnt[n_bits_t..0] : DFF;	 
+BEGIN
+	DEFAULTS
+		q = GND;
+	END DEFAULTS;
+	
+	cnt[].clk = clk_in;
+	IF disparo & cnt[].q == 0 THEN
+	  cnt[].d = overflow[];
+	ELSIF cnt[].q == 0 THEN 
+	  cnt[].d = 0;
+	ELSE 
+	  cnt[].d = cnt[].q - 1;
+	END IF;
+	q = cnt[].q != 0;
+END;

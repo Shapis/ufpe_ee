@@ -1,0 +1,29 @@
+INCLUDE "contador_crescente.inc";
+
+SUBDESIGN varia_display
+(
+    clock : INPUT;
+	 d_atual[4..1] : INPUT;
+	 u_atual[4..1] : INPUT;
+	 button2 : INPUT;
+	 d_display[4..1] : OUTPUT;
+	 u_display[4..1] : OUTPUT;
+	 
+)
+VARIABLE
+	divisor : contador WITH (overflow = 25000000); -- frequencia de 1Hz
+	count : contador_crescente WITH (min_cnt = 0, max_cnt = 1);
+	conta3 : contador_crescente WITH (min_cnt = 0, max_cnt = 2);
+
+BEGIN
+	IF count.q[] == 0 THEN
+		count.clk = clock;
+	ELSIF count.q[] == 1 THEN
+		divisor.clock = clock;
+		conta3.clk = divisor.clk_out;
+		d_display[] = d_atual[];
+		u_display[] = u_tual[];
+		count.clk = conta3.tc;
+	END IF;
+		
+END;

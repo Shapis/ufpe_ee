@@ -1,0 +1,273 @@
+-- Arquivo: lcd_logic.tdf
+-- Descrição: Exemplo de lógica controle para interface LCD 16x2
+-- Autor: Malki-çedheq Benjamim
+-- Data: 22/07/2023
+TITLE "lcd_logic";
+INCLUDE "conversor_binario4_binario8.inc";
+INCLUDE "registrador.inc";--registrador de pedro
+
+
+SUBDESIGN lcd_logic (
+	d[6..1][4..1]  : INPUT;
+	u[6..1][4..1]  : INPUT;
+	clk      		: INPUT;  --clock principal			
+	lcd_busy 		: INPUT;  --feedback do controlador (1)ocupado/(0)disponível		
+	key[4..1]		: INPUT;  --botões
+	lcd_e 			: OUTPUT; --retem os dados no controlador LCD
+	lcd_bar[9..0]	: OUTPUT; --(9) rs (8) rw (7..0) dado char
+)
+VARIABLE
+	lcd_enable 					: DFF;
+	lcd_bus[9..0] 				: DFF;
+	L1[127..0], L2[127..0] 	: NODE;
+	conv_d[6..1][4..1] : conversor_binario4_binario8;--seis números precisam ser convertidos 
+	conv_u[6..1][4..1] : conversor_binario4_binario8;
+	reg : registrador;--do INCLUDE do registrador
+	
+	char_cnt: MACHINE --instância de máquina de estados
+					WITH STATES (
+						 char_00, char_01, char_02, char_03,
+						 char_04, char_05, char_06, char_07,
+						 char_08, char_09, char_10, char_11,
+						 char_12, char_13, char_14, char_15,
+						 char_16, char_17, char_18, char_19,
+						 char_20, char_21, char_22, char_23,
+						 char_24, char_25, char_26, char_27,
+						 char_28, char_29, char_30, char_31,
+						 char_32, char_33, char_34						 
+					);
+BEGIN
+	--atribuição contínua das saídas registradas
+	lcd_enable.clk = clk;
+	lcd_e = lcd_enable.q;
+	
+	lcd_bus[].clk = clk;
+	lcd_bar[] = lcd_bus[].q;
+	
+	L1[127..96] = B"00100000_00100000_00100000_00100000";
+	L1[31..0] = B"00100000_00100000_00100000_00100000";
+	L2[127..96] = B"00100000_00100000_00100000_00100000";
+	L2[31..0] = B"00100000_00100000_00100000_00100000";
+
+	
+	conv_d[1][].binario4 = d[1][];
+	conv_u[1][].binario4 = u[1][];
+	
+	conv_d[2][].binario4 = d[2][];
+	conv_u[2][].binario4 = u[2][];
+	
+	conv_d[3][].binario4 = d[3][];
+	conv_u[3][].binario4 = u[3][];
+	
+	conv_d[4][].binario4 = d[4][];
+	conv_u[4][].binario4 = u[4][];
+	
+	conv_d[5][].binario4 = d[5][];
+	conv_u[5][].binario4 = u[5][];
+	
+	conv_d[6][].binario4 = d[6][];
+	conv_u[6][].binario4 = u[6][];
+	
+	
+	IF (d[1][] != B"0000") & (u[1][] != B"0000") THEN--se a posição é 1 e a unidade e dezena não é zero
+		L1[95..88] = conv_d[1][].binario8;--recebe a dezena do primeiro numero
+		L1[87..80] = conv_u[1][].binario8;--recebe a unidade do primeiro numero 
+		L1[79..72] = B"00101101";--hífen
+	ELSE
+		L1[95..72] = B"00000000_00000000_00101101";
+	END IF;
+	
+	IF (reg.d[2][] != B"0000") & (reg.u[2][] != B"0000") THEN--se a posição é 2 e a unidade não é zero
+		L1[71..64] = conv_d[2][].binario8;--recebe a dezena do segundo numero
+		L1[63..56] = conv_u[2][].binario8;--recebe a unidade do segundo numero 
+		L1[55..48] = B"00101101";--hífen
+	ELSE
+		L1[71..48] = B"00000000_00000000_00101101";
+	END IF;
+	
+	IF (reg.d[3][] != B"0000") & (reg.u[3][] != B"0000") THEN--se a posição é 3 e a unidade não é zero
+		L1[47..40] = conv_d[3][].binario8;--recebe a dezena do terceiro numero
+		L1[39..32] = conv_u[3][].binario8;--recebe a unidade do terceiro numero 
+	ELSE
+		L1[47..32] = B"00000000_00000000";
+	END IF;
+	
+	
+	
+	
+	IF (reg.d[4][] != B"0000") & (reg.u[4][] != B"0000") THEN--se a posição é 1 e a unidade não é zero
+		L2[95..88] = conv_d[4][].binario8;--recebe a dezena do primeiro numero
+		L2[87..80] = conv_u[4][].binario8;--recebe a unidade do primeiro numero 
+		L2[79..72] = B"00101101";--hífen
+	ELSE
+		L2[95..72] = B"00000000_00000000_00101101";
+	END IF;
+	
+	IF (reg.d[5][] != B"0000") & (reg.u[5][] != B"0000") THEN--se a posição é 2 e a unidade não é zero
+		L2[71..64] = conv_d[5][].binario8;--recebe a dezena do segundo numero
+		L2[63..56] = conv_u[5][].binario8;--recebe a unidade do segundo numero 
+		L2[55..48] = B"00101101";--hífen
+	ELSE
+		L2[71..48] = B"00000000_00000000_00101101";
+	END IF;
+	
+	IF (reg.d[6][] != B"0000") & (reg.u[6][] != B"0000") THEN--se a posição é 3 e a unidade não é zero
+		L2[47..40] = conv_d[6][].binario8;--recebe a dezena do terceiro numero
+		L2[39..32] = conv_u[6][].binario8;--recebe a unidade do terceiro numero 
+	ELSE
+		L2[47..32] = B"00000000_00000000";
+	END IF;
+
+	--sincronização da fsm
+	char_cnt.clk = clk;
+	
+	IF (lcd_busy == B"0" AND lcd_enable == B"0") THEN
+	  lcd_enable.d = B"1"; --habilita o LCD
+	
+		CASE char_cnt IS --verifica contador de caractere
+			 WHEN char_00  => 
+				lcd_bus[].d = (B"00", B"10000000"); --instrução para linha 1
+				char_cnt = char_01;
+				
+			 WHEN char_01  => 
+				lcd_bus[].d = (B"10", L1[127..120]); --primeiro caractere da linha 1
+				char_cnt = char_02;
+				
+			 WHEN char_02  => 
+				lcd_bus[].d = (B"10", L1[119..112]);
+				char_cnt = char_03;
+				
+			 WHEN char_03  => 
+				lcd_bus[].d = (B"10", L1[111..104]);
+				char_cnt = char_04;
+				
+			 WHEN char_04  => 
+				lcd_bus[].d = (B"10", L1[103..96]);
+				char_cnt = char_05;
+				
+			 WHEN char_05  => 
+				lcd_bus[].d = (B"10", L1[95..88]);
+				char_cnt = char_06;
+				
+			 WHEN char_06  => 
+				lcd_bus[].d = (B"10", L1[87..80]);
+				char_cnt = char_07;
+				
+			 WHEN char_07  => 
+				lcd_bus[].d = (B"10", L1[79..72]);
+				char_cnt = char_08;
+				
+			 WHEN char_08  => 
+				lcd_bus[].d = (B"10", L1[71..64]);
+				char_cnt = char_09;
+				
+			 WHEN char_09  => 
+				lcd_bus[].d = (B"10", L1[63..56]);
+				char_cnt = char_10;
+				
+			 WHEN char_10 => 
+				lcd_bus[].d = (B"10", L1[55..48]);
+				char_cnt = char_11;
+				
+			 WHEN char_11 => 
+				lcd_bus[].d = (B"10", L1[47..40]);
+				char_cnt = char_12;
+				
+			 WHEN char_12 => 
+				lcd_bus[].d = (B"10", L1[39..32]);
+				char_cnt = char_13;
+			 
+			 WHEN char_13 => 
+				lcd_bus[].d = (B"10", L1[31..24]);
+				char_cnt = char_14;
+				
+			 WHEN char_14 => 
+				lcd_bus[].d = (B"10", L1[23..16]);
+				char_cnt = char_15;
+				
+			 WHEN char_15 => 
+				lcd_bus[].d = (B"10", L1[15..8]);
+				char_cnt = char_16;
+				
+			 WHEN char_16 => 
+				lcd_bus[].d = (B"10", L1[7..0]); --último caractere da linha 1
+				char_cnt = char_17;
+				
+			 WHEN char_17 => 
+				lcd_bus[].d = (B"00", B"11000000"); --instrução para linha 2
+				char_cnt = char_18;
+				
+			 WHEN char_18 => 
+				lcd_bus[].d = (B"10", L2[127..120]); --primeiro caractere da linha 2
+				char_cnt = char_19;
+				
+			 WHEN char_19 => 
+				lcd_bus[].d = (B"10", L2[119..112]);
+				char_cnt = char_20;
+				
+			 WHEN char_20 => 
+				lcd_bus[] = (B"10", L2[111..104]);
+				char_cnt = char_21;
+				
+			 WHEN char_21 => 
+				lcd_bus[] = (B"10", L2[103..96]);
+				char_cnt = char_22;
+				
+			 WHEN char_22 => 
+				lcd_bus[].d = (B"10", L2[95..88]);
+				char_cnt = char_23;
+				
+			 WHEN char_23 => 
+				lcd_bus[].d = (B"10", L2[87..80]);
+				char_cnt = char_24;
+				
+			 WHEN char_24 => 
+				lcd_bus[].d = (B"10", L2[79..72]);
+				char_cnt = char_25;
+				
+			 WHEN char_25 => 
+				lcd_bus[].d = (B"10", L2[71..64]);
+				char_cnt = char_26;
+				
+			 WHEN char_26 => 
+				lcd_bus[].d = (B"10", L2[63..56]);
+				char_cnt = char_27;
+				
+			 WHEN char_27 => 
+				lcd_bus[].d = (B"10", L2[55..48]);
+				char_cnt = char_28;
+				
+			 WHEN char_28 => 
+				lcd_bus[].d = (B"10", L2[47..40]);
+				char_cnt = char_29;
+				
+			 WHEN char_29 => 
+				lcd_bus[].d = (B"10", L2[39..32]);
+				char_cnt = char_30;
+				
+			 WHEN char_30 => 
+				lcd_bus[].d = (B"10", L2[31..24]);
+				char_cnt = char_31;
+				
+			 WHEN char_31 => 
+				lcd_bus[].d = (B"10", L2[23..16]);
+				char_cnt = char_32;
+				
+			 WHEN char_32 => 
+				lcd_bus[].d = (B"10", L2[15..8]);
+				char_cnt = char_33;
+				
+			 WHEN char_33 => 
+				lcd_bus[].d = (B"10", L2[7..0]);--último caractere da linha 2		
+				char_cnt = char_00;
+
+			 WHEN OTHERS => 
+				lcd_enable.d = B"0"; --desabilita o LCD
+				char_cnt = char_00;
+		END CASE;
+
+		ELSE
+	  lcd_enable.d = B"0"; --desabilita o LCD
+	END IF;
+	
+END;

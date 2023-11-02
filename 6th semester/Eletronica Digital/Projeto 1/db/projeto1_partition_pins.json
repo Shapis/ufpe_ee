@@ -1,0 +1,77 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "beep",
+					"strict" : false
+				},
+				{
+					"name" : "SEG0",
+					"strict" : false
+				},
+				{
+					"name" : "SEG3",
+					"strict" : false
+				},
+				{
+					"name" : "SEG4",
+					"strict" : false
+				},
+				{
+					"name" : "SEG5",
+					"strict" : false
+				},
+				{
+					"name" : "SEG6",
+					"strict" : false
+				},
+				{
+					"name" : "SEG1",
+					"strict" : false
+				},
+				{
+					"name" : "SEG2",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "KEY4",
+					"strict" : false
+				},
+				{
+					"name" : "KEY3",
+					"strict" : false
+				},
+				{
+					"name" : "KEY2",
+					"strict" : false
+				},
+				{
+					"name" : "KEY1",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

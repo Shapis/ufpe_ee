@@ -1,0 +1,30 @@
+INCLUDE "debouncer.inc";
+
+SUBDESIGN controle
+(
+	clock : INPUT;
+	btn1in : INPUT;
+	btn2in : INPUT;
+	btn3in : INPUT;
+	btn1out : OUTPUT;
+	btn2out : OUTPUT;
+	btn3out : OUTPUT;
+)
+
+VARIABLE
+debounc1 : debouncer;
+debounc2 : debouncer;
+debounc3 : debouncer; 
+
+
+BEGIN
+	debounc1.clock = clock;
+	debounc1.button = btn1in;
+	btn1out = debounc1.result;
+	debounc2.clock = clock;
+	debounc2.button = btn2in;
+	btn2out = debounc2.result;
+	debounc3.clock = clock;
+	debounc3.button = btn3in;
+	btn3out = debounc3.result;
+END;

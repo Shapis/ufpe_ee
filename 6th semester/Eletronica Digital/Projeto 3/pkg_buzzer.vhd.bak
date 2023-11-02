@@ -1,0 +1,16 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+PACKAGE pkg_buzzer IS
+
+COMPONENT divisor_clock
+	PORT (Clkin_p : IN std_logic;
+			Clkout_p: OUT std_logic);		
+END COMPONENT;
+
+COMPONENT temporizador IS
+PORT ( Clk_p, Disparo_p, nRst_p :IN BIT;
+		 Overflow_p : IN BIT_VECTOR;	
+		 Q_p :OUT BIT );
+END COMPONENT;
+
+END PACKAGE pk_buzzer;

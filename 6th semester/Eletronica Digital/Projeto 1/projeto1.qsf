@@ -1,0 +1,121 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 22:05:14  June 22, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		projeto1_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY projeto1
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:05:14  JUNE 22, 2023"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_location_assignment PIN_88 -to KEY1
+set_location_assignment PIN_89 -to KEY2
+set_location_assignment PIN_90 -to KEY3
+set_location_assignment PIN_91 -to KEY4
+set_location_assignment PIN_23 -to FPGA_CLK
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity contador1 -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity contador1 -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity contador1 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity contador1 -section_id Top
+set_location_assignment PIN_87 -to LED[1]
+set_location_assignment PIN_86 -to LED[2]
+set_location_assignment PIN_85 -to LED[3]
+set_location_assignment PIN_84 -to LED[4]
+set_global_assignment -name BDF_FILE projeto1.bdf
+set_global_assignment -name BDF_FILE contador.bdf
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name BDF_FILE divisor1.bdf
+set_global_assignment -name BDF_FILE divisor8.bdf
+set_global_assignment -name BDF_FILE divisor16.bdf
+set_location_assignment PIN_110 -to beep
+set_global_assignment -name BDF_FILE freq_440hz.bdf
+set_global_assignment -name BDF_FILE freq_1hz.bdf
+set_global_assignment -name BDF_FILE freq_523hz.bdf
+set_global_assignment -name BDF_FILE freq_622hz.bdf
+set_global_assignment -name BDF_FILE contador_sync_8bits.bdf
+set_global_assignment -name BDF_FILE freq_740hz.bdf
+set_global_assignment -name BDF_FILE freq_880hz.bdf
+set_global_assignment -name BDF_FILE freq_1046hz.bdf
+set_global_assignment -name BDF_FILE freq_1760hz.bdf
+set_global_assignment -name BDF_FILE freq_2hz.bdf
+set_global_assignment -name BDF_FILE testes.bdf
+set_global_assignment -name BDF_FILE pulso.bdf
+set_global_assignment -name BDF_FILE chave_led_buzzer.bdf
+set_global_assignment -name BDF_FILE key_debouncer.bdf
+set_global_assignment -name BDF_FILE contador_sync_decresc_mod10.bdf
+set_global_assignment -name BDF_FILE registrador.bdf
+set_global_assignment -name BDF_FILE comparador.bdf
+set_global_assignment -name BDF_FILE multiplicador1.bdf
+set_global_assignment -name BDF_FILE buffer_1bit.bdf
+set_global_assignment -name BDF_FILE banco_de_registradores.bdf
+set_global_assignment -name BDF_FILE binary_to_decimal.bdf
+set_global_assignment -name BDF_FILE chave_4bits.bdf
+set_global_assignment -name BDF_FILE OR16.bdf
+set_global_assignment -name BDF_FILE prioridade.bdf
+set_global_assignment -name BDF_FILE NOR_5.bdf
+set_location_assignment PIN_133 -to dig1
+set_location_assignment PIN_121 -to seg1
+set_location_assignment PIN_125 -to seg2
+set_location_assignment PIN_135 -to DIG2
+set_location_assignment PIN_136 -to DIG3
+set_location_assignment PIN_137 -to DIG4
+set_location_assignment PIN_128 -to SEG0
+set_location_assignment PIN_129 -to SEG3
+set_location_assignment PIN_132 -to SEG4
+set_location_assignment PIN_126 -to SEG5
+set_location_assignment PIN_124 -to SEG6
+set_location_assignment PIN_127 -to SEG7
+set_global_assignment -name BDF_FILE d7seg.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name BDF_FILE count10.bdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

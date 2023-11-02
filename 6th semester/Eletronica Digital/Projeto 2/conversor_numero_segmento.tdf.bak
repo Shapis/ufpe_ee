@@ -1,0 +1,17 @@
+SUBDESIGN display
+(
+    numero[4..1]: INPUT;
+	 segmentos[2..1}: OUTPUT;
+)
+
+BEGIN
+
+TABLE
+	numero[] => segmentos[];
+	B"00" => B"0000000";
+	B"01" => B"1111001";
+	B"10" => B"0100100";
+	B"11" => B"0110000";
+END TABLE;
+
+END;

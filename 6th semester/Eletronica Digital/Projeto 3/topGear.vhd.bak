@@ -1,0 +1,660 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+ENTITY topGear IS
+PORT ( 	Clk_out, Disparo  : OUT std_logic := '0';
+			Temp_out, Freq_out : OUT std_logic_vector (27 DOWNTO 0);	
+			Clk_in, Duracao, Stop_in, Play_in : IN std_logic
+		);
+END topGear;
+ARCHITECTURE bhv OF topGear IS
+  -- Subprograma para aplicar o tempo e frequencia
+  --para atribuição de saídas nos estados
+  PROCEDURE nota (CONSTANT ov_f : IN integer;
+						CONSTANT ov_t : IN integer ) IS
+  BEGIN
+		Temp_out <= std_logic_vector(to_unsigned(ov_t,Temp_out'LENGTH)); --define a duração	proxima nota			
+		Freq_out <= std_logic_vector(to_unsigned(ov_f,Freq_out'LENGTH)); --define a frequência nota atual
+		Disparo <= '1';  --dispara o temp a próxima nota	
+  END nota;
+	--clock principal da placa
+	CONSTANT clk_FPGA : integer := 50000000; --50MHz
+	--overflow para frequencias (50MHz)
+	CONSTANT C4 : integer := 47802;
+	
+	CONSTANT B0 	: integer := 50000000/31
+	CONSTANT C1 	: integer := 50000000/33
+	CONSTANT DB1	: integer := 50000000/35
+	CONSTANT D1		: integer := 50000000/37
+	CONSTANT EB1	: integer := 50000000/39
+	CONSTANT E1		: integer := 50000000/41
+	CONSTANT F1 	: integer := 50000000/44
+	CONSTANT GB1 	: integer := 50000000/46
+	CONSTANT G1		: integer := 50000000/49
+	CONSTANT AB1	: integer := 50000000/52
+	CONSTANT A1		: integer := 50000000/55
+	CONSTANT BB1	: integer := 50000000/58
+	CONSTANT B1		: integer := 50000000/62
+	CONSTANT C2		: integer := 50000000/65
+	CONSTANT DB2	: integer := 50000000/69
+	CONSTANT D2		: integer := 50000000/73
+	CONSTANT EB2	: integer := 50000000/78
+	CONSTANT E2		: integer := 50000000/82
+	CONSTANT F2		: integer := 50000000/87
+	CONSTANT GB2 	: integer := 50000000/93
+	CONSTANT G2		: integer := 50000000/98
+	CONSTANT AB2	: integer := 50000000/104
+	CONSTANT A2		: integer := 50000000/110
+	CONSTANT BB2	: integer := 50000000/117
+	CONSTANT B2		: integer := 50000000/123
+	CONSTANT C3 	: integer := 50000000/131
+	CONSTANT DB3 	: integer := 50000000/139
+	CONSTANT D3  	: integer := 50000000/147
+	CONSTANT EB3 	: integer := 50000000/156
+	CONSTANT E3 	: integer := 50000000/165
+	CONSTANT F3 	: integer := 50000000/175
+	CONSTANT GB3 	: integer := 50000000/185
+	CONSTANT G3  	: integer := 50000000/196
+	CONSTANT AB3 	: integer := 50000000/208
+	CONSTANT A3 	: integer := 50000000/220
+	CONSTANT BB3 	: integer := 50000000/233
+	CONSTANT B3 	: integer := 50000000/247
+	CONSTANT C4 	: integer := 50000000/262
+	CONSTANT DB4 	: integer := 50000000/277
+	CONSTANT D4 	: integer := 50000000/294
+	CONSTANT EB4 	: integer := 50000000/311
+	CONSTANT E4 	: integer := 50000000/330
+	CONSTANT F4 	: integer := 50000000/349
+	CONSTANT GB4	: integer := 50000000/370
+	CONSTANT G4 	: integer := 50000000/392
+	CONSTANT AB4	: integer := 50000000/415
+	CONSTANT A4 	: integer := 50000000/440
+	CONSTANT BB4 	: integer := 50000000/466
+	CONSTANT B4 	: integer := 50000000/494
+	CONSTANT C5 	: integer := 50000000/523
+	CONSTANT DB5	: integer := 50000000/554
+	CONSTANT D5 	: integer := 50000000/587
+	CONSTANT EB5	: integer := 50000000/622
+	CONSTANT E5 	: integer := 50000000/659
+	CONSTANT F5 	: integer := 50000000/698
+	CONSTANT GB5 	: integer := 50000000/740
+	CONSTANT G5 	: integer := 50000000/784
+	CONSTANT AB5 	: integer := 50000000/831
+	CONSTANT A5 	: integer := 50000000/880
+	CONSTANT BB5	: integer := 50000000/932
+	CONSTANT B5 	: integer := 50000000/988
+	CONSTANT C6 	: integer := 50000000/1047
+	CONSTANT DB6 	: integer := 50000000/1109
+	CONSTANT D6 	: integer := 50000000/1175
+	CONSTANT EB6 	: integer := 50000000/1245
+	CONSTANT E6 	: integer := 50000000/1319
+	CONSTANT F6 	: integer := 50000000/1397
+	CONSTANT GB6 	: integer := 50000000/1480
+	CONSTANT G6 	: integer := 50000000/1568
+	CONSTANT AB6	: integer := 50000000/1661
+	CONSTANT A6 	: integer := 50000000/1760
+	CONSTANT BB6	: integer := 50000000/1865
+	CONSTANT B6 	: integer := 50000000/1976
+	CONSTANT C7 	: integer := 50000000/2093
+	CONSTANT DB7	: integer := 50000000/2217
+	CONSTANT D7 	: integer := 50000000/2349
+	CONSTANT EB7	: integer := 50000000/2489
+	CONSTANT E7 	: integer := 50000000/2637
+	CONSTANT F7 	: integer := 50000000/2794
+	CONSTANT GB7	: integer := 50000000/2960
+	CONSTANT G7 	: integer := 50000000/3136
+	CONSTANT AB7	: integer := 50000000/3322
+	CONSTANT A7 	: integer := 50000000/3520
+	CONSTANT BB7	: integer := 50000000/3729
+	CONSTANT B7 	: integer := 50000000/3951
+	CONSTANT C8 	: integer := 50000000/4186
+	CONSTANT DB8 	: integer := 50000000/4435
+	CONSTANT D8 	: integer := 50000000/4699
+	CONSTANT EB8 	: integer := 50000000/4978
+	
+	--overflow para tempos (50MHz)
+	-- BPM igual a 60 implica que t1, 1 batida, representa 1 seg
+	-- BPM igual a 120 implica que t1, 1 batida, representa 0.5 seg
+	CONSTANT BPM : integer := 136; --batidas por minuto
+	CONSTANT BPS : integer := BPM / 60; --batidas por segundo
+	CONSTANT ov_t4 : integer := (4 * clk_FPGA) / BPS; --overflow 4 batidas
+	CONSTANT ov_t2 : integer := (2 * clk_FPGA) / BPS; --overflow 2 batidas
+	CONSTANT ov_t1 : integer := clk_FPGA / BPS; --overflow 1 batida
+	CONSTANT ov_t1_2 : integer := (clk_FPGA / 2) / BPS; --overflow 1/2 batidas
+	CONSTANT ov_t1_4	: integer := (clk_FPGA / 4) / BPS; --overflow 1/4 batidas
+	
+	--FSM Declaração de estados 
+	TYPE estados IS (s0, s1, s2, s3, s4 ,s5 ,s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31, s32, s33, s34, s35, s36, s37, s38, s39, s40, s41, s42, s43, s44 ,s45 ,s46, s47, s48, s49, s50, s51, s52, s53, s54 ,s55 ,s56, s57, s58, s59, s60, s61, s62, s63, s64 ,s65 ,s66, s67, s68, s69, s70, s71, s72, s73, s74 ,s75 ,s76, s77, s78, s79);
+	SIGNAL estado_atual: estados;
+	SIGNAL proximo_estado: estados;
+BEGIN
+	--Lógica para controle do estado atual
+	L1: PROCESS(Clk_in)
+	BEGIN
+		IF rising_edge(Clk_in) THEN 
+			estado_atual <= proximo_estado;
+		END IF;
+	END PROCESS L1;
+	--Lógica para próximo estado
+	L2: PROCESS (estado_atual, Duracao)
+	BEGIN
+		CASE estado_atual IS
+			WHEN s0 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s1;
+					ELSE proximo_estado <= s0;
+					END IF;
+				END IF;
+			WHEN s1 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s2;
+					ELSE proximo_estado <= s1;					
+					END IF;
+				END IF;	
+			WHEN s2 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s3;					
+					ELSE proximo_estado <= s2;
+					END IF;	
+				END IF;
+			WHEN s3 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s4;					
+					ELSE proximo_estado <= s3;
+					END IF;	
+				END IF;
+			WHEN s4 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s5;					
+					ELSE proximo_estado <= s4;
+					END IF;	
+				END IF;
+			WHEN s5 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s6;					
+					ELSE proximo_estado <= s5;
+					END IF;	
+				END IF;
+			WHEN s6 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s7;					
+					ELSE proximo_estado <= s6;
+					END IF;	
+				END IF;
+			WHEN s7 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s8;					
+					ELSE proximo_estado <= s7;
+					END IF;	
+				END IF;
+			WHEN s8 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s9;					
+					ELSE proximo_estado <= s8;
+					END IF;	
+				END IF;
+			WHEN s9 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s10;					
+					ELSE proximo_estado <= s9;
+					END IF;
+				END IF;
+			WHEN s10 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s11;
+					ELSE proximo_estado <= s10;
+					END IF;
+				END IF;
+			WHEN s11 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s12;
+					ELSE proximo_estado <= s11;					
+					END IF;
+				END IF;	
+			WHEN s12 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s13;					
+					ELSE proximo_estado <= s12;
+					END IF;	
+				END IF;
+			WHEN s13 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s14;					
+					ELSE proximo_estado <= s13;
+					END IF;	
+				END IF;
+			WHEN s14 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s15;					
+					ELSE proximo_estado <= s14;
+					END IF;	
+				END IF;
+			WHEN s15 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s16;					
+					ELSE proximo_estado <= s15;
+					END IF;	
+				END IF;
+			WHEN s16 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s17;					
+					ELSE proximo_estado <= s16;
+					END IF;	
+				END IF;
+			WHEN s17 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s18;					
+					ELSE proximo_estado <= s17;
+					END IF;	
+				END IF;
+			WHEN s18 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s19;					
+					ELSE proximo_estado <= s18;
+					END IF;	
+				END IF;
+			WHEN s19 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s20;					
+					ELSE proximo_estado <= s19;
+					END IF;
+				END IF;
+			WHEN s20 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s21;
+					ELSE proximo_estado <= s20;
+					END IF;
+				END IF;
+			WHEN s21 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s22;
+					ELSE proximo_estado <= s21;					
+					END IF;
+				END IF;	
+			WHEN s22 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s23;					
+					ELSE proximo_estado <= s22;
+					END IF;	
+				END IF;
+			WHEN s23 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s24;					
+					ELSE proximo_estado <= s23;
+					END IF;	
+				END IF;
+			WHEN s24 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s25;					
+					ELSE proximo_estado <= s24;
+					END IF;	
+				END IF;
+			WHEN s25 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s26;					
+					ELSE proximo_estado <= s25;
+					END IF;	
+				END IF;
+			WHEN s26 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s27;					
+					ELSE proximo_estado <= s26;
+					END IF;	
+				END IF;
+			WHEN s27 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s28;					
+					ELSE proximo_estado <= s27;
+					END IF;	
+				END IF;
+			WHEN s28 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s29;					
+					ELSE proximo_estado <= s28;
+					END IF;	
+				END IF;
+			WHEN s29 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s30;					
+					ELSE proximo_estado <= s29;
+					END IF;
+				END IF;
+			WHEN s30 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s31;
+					ELSE proximo_estado <= s30;
+					END IF;
+				END IF;
+			WHEN s31 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s32;
+					ELSE proximo_estado <= s31;					
+					END IF;
+				END IF;	
+			WHEN s32 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s33;					
+					ELSE proximo_estado <= s32;
+					END IF;	
+				END IF;
+			WHEN s33 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s34;					
+					ELSE proximo_estado <= s33;
+					END IF;	
+				END IF;
+			WHEN s34 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s35;					
+					ELSE proximo_estado <= s34;
+					END IF;	
+				END IF;
+			WHEN s35 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s36;					
+					ELSE proximo_estado <= s35;
+					END IF;	
+				END IF;
+			WHEN s36 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s37;					
+					ELSE proximo_estado <= s36;
+					END IF;	
+				END IF;
+			WHEN s37 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s38;					
+					ELSE proximo_estado <= s37;
+					END IF;	
+				END IF;
+			WHEN s38 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s39;					
+					ELSE proximo_estado <= s38;
+					END IF;	
+				END IF;
+			WHEN s39 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s40;					
+					ELSE proximo_estado <= s39;
+					END IF;
+				END IF;
+			WHEN s40 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s41;					
+					ELSE proximo_estado <= s40;
+					END IF;
+				END IF;
+			WHEN s41 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s1;					
+					ELSE proximo_estado <= s41;
+					END IF;
+				END IF;
+			WHEN s42 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s43;					
+					ELSE proximo_estado <= s42;
+					END IF;	
+				END IF;
+			WHEN s43 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s44;					
+					ELSE proximo_estado <= s43;
+					END IF;	
+				END IF;
+			WHEN s44 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s45;					
+					ELSE proximo_estado <= s44;
+					END IF;	
+				END IF;
+			WHEN s45 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s46;					
+					ELSE proximo_estado <= s45;
+					END IF;	
+				END IF;
+			WHEN s46 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s47;					
+					ELSE proximo_estado <= s46;
+					END IF;	
+				END IF;
+			WHEN s47 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s48;					
+					ELSE proximo_estado <= s47;
+					END IF;	
+				END IF;
+			WHEN s48 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s49;					
+					ELSE proximo_estado <= s48;
+					END IF;	
+				END IF;
+			WHEN s49 =>
+				IF (Stop_in = '1') THEN
+					proximo_estado <= s0;
+				ELSE
+					IF (Duracao = '0' and Play_in = '1') THEN
+						proximo_estado <= s1;					
+					ELSE proximo_estado <= s49;
+					END IF;
+				END IF;
+			WHEN OTHERS =>
+				--recupera de estado inválido
+				proximo_estado <= s0; --reinicia
+		END CASE;
+	END PROCESS L2;
+	--Lógica para saída da FSM
+	L3: PROCESS (Clk_in, estado_atual)
+	BEGIN
+		IF rising_edge(Clk_in) THEN
+			CASE estado_atual IS 
+				WHEN s0 => nota(0, ov_t2); --s0 apenas inicia a prox nota
+				WHEN s1 => nota(C4, ov_t1_2);
+				WHEN s2 => nota(EB4, ov_t1_2);
+				WHEN s3 => nota(G4, ov_t1_2);
+				WHEN s4 => nota(C5, ov_t1_2);
+				WHEN s5 => nota(EB5, ov_t1_2);
+				WHEN s6 => nota(G5, ov_t1_2);
+				WHEN s7 => nota(C6, ov_t1_2);
+				WHEN s8 => nota(EB6, ov_t1_2);
+				WHEN s9 => nota(G7, ov_t1);
+				WHEN s10 => nota(EB6, ov_t1_2);
+				WHEN s11 => nota(C6, ov_t1_2);
+				WHEN s12 => nota(G5, ov_t1_2);
+				WHEN s13 => nota(EB5, ov_t1_2);
+				WHEN s14 => nota(C5, ov_t1);
+				WHEN s15 => nota(G4, ov_t1_2);
+				WHEN s16 => nota(EB4, ov_t1_2);
+				WHEN s17 => nota(EB4, ov_t1_2);
+				WHEN s18 => nota(G4, ov_t1_2);
+				WHEN s19 => nota(BB4, ov_t1);
+				WHEN s20 => nota(EB5, ov_t1_2);
+				WHEN s21 => nota(G5, ov_t1_2);
+				WHEN s22 => nota(BB5, ov_t1_2);
+				WHEN s23 => nota(EB6, ov_t1_2);
+				WHEN s24 => nota(G6, ov_t1_2);
+				WHEN s25 => nota(BB7, ov_t1_2);
+				WHEN s26 => nota(G6, ov_t1_2);
+				WHEN s27 => nota(EB6, ov_t1_2);
+				WHEN s28 => nota(BB5, ov_t1_2);
+				WHEN s29 => nota(G5, ov_t1_2);
+				WHEN s30 => nota(EB5, ov_t1);
+				WHEN s31 => nota(EB4, ov_t1_2);
+				WHEN s32 => nota(G4, ov_t1_2);
+				WHEN s33 => nota(BB3, ov_t1_2);
+				WHEN s34 => nota(D4, ov_t1_2);
+				WHEN s35 => nota(F4, ov_t1);
+				WHEN s36 => nota(BB4, ov_t1_2);
+				WHEN s37 => nota(D5, ov_t1_2);
+				WHEN s38 => nota(F5, ov_t1_2);
+				WHEN s39 => nota(BB5, ov_t1_2);
+				WHEN s40 => nota(D6, ov_t2);
+				WHEN s41 => nota(F7, ov_t1);
+				WHEN s42 => nota(D6, ov_t1_2);
+				WHEN s43 => nota(BB5, ov_t1_2);
+				WHEN s44 => nota(F5, ov_t1_2);
+				WHEN s45 => nota(D5, ov_t1_2);
+				WHEN s46 => nota(BB4, ov_t1_2);
+				WHEN s47 => nota(F4, ov_t1_2);
+				WHEN s48 => nota(D4, ov_t1_2);
+				WHEN s49 => nota(C4, ov_t1);
+--Não é necessário WHEN OTHERS pois
+--o controle é feito no processo L2
+			END CASE;
+		END IF;
+	END PROCESS L3;
+	
+	--Atribuição contínua
+	Clk_out <= Duracao AND Clk_in;
+END bhv;

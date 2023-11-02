@@ -1,0 +1,16 @@
+module leds(ent,saida);
+	input reg [7:0] ent;
+	output reg [3:0] saida;
+	
+	always@(ent)
+	begin
+		case(ent)
+			8'b00: saida = 4'b0111;  //acende primeiro led
+			8'b01: saida = 4'b1011;  //acende segundo led
+			8'b10: saida = 4'b1101;  //acende terceiro led
+			8'b11: saida = 4'b0110;  //acende quarto led
+		endcase
+	end
+
+
+endmodule

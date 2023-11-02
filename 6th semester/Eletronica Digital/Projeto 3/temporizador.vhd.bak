@@ -1,0 +1,24 @@
+ENTITY temporizador IS
+PORT ( Clk_p, Disparo_p, nRst_p :IN BIT;
+		 Q_p :OUT BIT );
+END temporizador;
+ARCHITECTURE sem_rearme OF temporizador IS
+	CONSTANT NumPulsos_c: integer := 4;
+BEGIN
+	PROCESS (Clk_p, nRst_p)
+		VARIABLE Cnt_v : INTEGER RANGE 0 TO NumPulsos_c;
+	BEGIN --reset assíncrono
+		IF nRst_p = '0' THEN Cnt_v := 0; 
+		ELSIF (Clk_p'EVENT AND Clk_p = '1' ) THEN
+			IF Disparo_p = '1' AND Cnt_v = 0 THEN
+				Cnt_v := NumPulsos_c; --carrega o temp.
+			ELSIF Cnt_v = 0 THEN Cnt_v := 0;--retem
+			ELSE Cnt_v := Cnt_v - 1; --decrementa
+			END IF;
+		END IF;
+		--nível alto durante o período de contagem
+		IF Cnt_v /= 0 THEN Q_p <= '1';
+		ELSE Q_p <= '0';
+		END IF;
+	END PROCESS;
+END sem_rearme;

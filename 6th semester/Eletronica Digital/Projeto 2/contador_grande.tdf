@@ -1,0 +1,33 @@
+PARAMETERS ( min_cnt = 1, max_cnt = 6);
+
+CONSTANT n = CEIL(LOG2(max_cnt));
+
+SUBDESIGN contador_grande
+(
+	clk : INPUT;
+	clr : INPUT = GND;
+	load : INPUT = GND;
+	ena : INPUT = VCC;
+	d[n..1] : INPUT = GND;
+	q[n..1] : OUTPUT;
+	tc : OUTPUT;
+)
+VARIABLE
+	cnt[n..1] : DFF;
+	aux : NODE;
+BEGIN
+	cnt[].clk = clk;
+	IF load == VCC THEN cnt[].d = d[];
+	ELSIF clr == VCC THEN cnt[].d = min_cnt;
+	ELSIF (cnt[].q < max_cnt) & ena THEN
+		aux = GND;
+		cnt[].d = cnt[].q + 1;
+	ELSIF (cnt[].q >= max_cnt) & ena THEN
+		aux = VCC;
+		cnt[].d = min_cnt;
+	ELSE
+		cnt[].d = cnt[].q;
+	END IF;
+	tc = aux;
+	q[] = cnt[];
+END;

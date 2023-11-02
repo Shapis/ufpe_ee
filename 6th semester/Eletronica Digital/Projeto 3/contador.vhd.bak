@@ -1,0 +1,31 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+
+ENTITY divisor_clock IS
+	PORT (clock, enable, clear 	: IN std_logic;
+			overflow 					: IN std_logic_vector (3 DOWNTO 0);
+			contagem						: OUT std_logic := '0');		
+END divisor_clock;
+
+ARCHITECTURE clock OF divisor_clock IS
+	SIGNAL cnt : integer := 0;
+BEGIN
+	PROCESS(clock)
+	BEGIN
+		IF rising_edge(clock) THEN
+			IF clear = '1' THEN
+				cnt <= 0; --reinicia
+			ELSIF enable = '1' THEN
+				IF cnt = to_integer(unsigned(Overflow)) THEN
+					cnt <= 0; --reinicia
+				ELSE
+					cnt <= cnt + 1; --incrementa
+				END IF;
+			ELSE
+				cnt <= cnt; --mantém
+			END IF;
+		END IF;
+	END PROCESS;	
+	contagem <= std_logic_vector(to_unsigned(cnt, 4));
+END clock;

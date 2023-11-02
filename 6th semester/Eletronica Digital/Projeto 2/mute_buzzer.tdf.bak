@@ -1,0 +1,6 @@
+SUBDESIGN 
+(
+    enable1 : INPUT;
+	 enable2 : INPUT = VCC;
+    buzzer : OUTPUT;
+)

@@ -1,0 +1,18 @@
+SUBDESIGN debouncer
+(
+  button : INPUT;
+  result : INPUT;
+  clock : INPUT;
+)
+VARIABLE
+ff[2..0] = dff;
+
+BEGIN
+	 ff[].clk = clock
+    ff[0].d = button;
+	 ff[1].d = ff[0].q;
+	 
+	 
+	 
+	 
+END;

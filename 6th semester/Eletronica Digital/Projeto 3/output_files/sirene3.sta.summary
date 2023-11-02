@@ -1,0 +1,449 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clock'
+Slack : -8.211
+TNS   : -5228.567
+
+Type  : Slow 1200mV 85C Model Setup 'mp3:inst|musica_atual.m3'
+Slack : -2.561
+TNS   : -4.867
+
+Type  : Slow 1200mV 85C Model Setup 'mp3:inst|musica_atual.m2'
+Slack : -2.297
+TNS   : -4.474
+
+Type  : Slow 1200mV 85C Model Setup 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : -2.229
+TNS   : -22.321
+
+Type  : Slow 1200mV 85C Model Setup 'controle:inst4|debouncer:debouncer3|result'
+Slack : -1.510
+TNS   : -6.633
+
+Type  : Slow 1200mV 85C Model Setup 'mp3:inst|musica_atual.m5'
+Slack : -1.201
+TNS   : -2.252
+
+Type  : Slow 1200mV 85C Model Setup 'mp3:inst|musica_atual.m4'
+Slack : -0.882
+TNS   : -1.539
+
+Type  : Slow 1200mV 85C Model Setup 'controle:inst4|debouncer:debouncer4|result'
+Slack : -0.429
+TNS   : -0.429
+
+Type  : Slow 1200mV 85C Model Setup 'mp3:inst|musica_atual.m1'
+Slack : -0.355
+TNS   : -0.644
+
+Type  : Slow 1200mV 85C Model Setup 'display:inst5|divisor_clock:alterna_display|toggle'
+Slack : -0.028
+TNS   : -0.028
+
+Type  : Slow 1200mV 85C Model Setup 'controle:inst4|debouncer:debouncer2|result'
+Slack : 0.114
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'mp3:inst|musica_atual.m1'
+Slack : -0.358
+TNS   : -0.619
+
+Type  : Slow 1200mV 85C Model Hold 'mp3:inst|musica_atual.m4'
+Slack : 0.059
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'mp3:inst|musica_atual.m5'
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock'
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'display:inst5|divisor_clock:alterna_display|toggle'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'controle:inst4|debouncer:debouncer2|result'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'controle:inst4|debouncer:debouncer4|result'
+Slack : 0.908
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'controle:inst4|debouncer:debouncer3|result'
+Slack : 1.041
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'mp3:inst|musica_atual.m3'
+Slack : 1.327
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'mp3:inst|musica_atual.m2'
+Slack : 1.333
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'controle:inst4|debouncer:debouncer2|result'
+Slack : -0.962
+TNS   : -0.962
+
+Type  : Slow 1200mV 85C Model Recovery 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : 0.078
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : 0.272
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'controle:inst4|debouncer:debouncer2|result'
+Slack : 1.460
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -1495.948
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : -1.487
+TNS   : -22.305
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'controle:inst4|debouncer:debouncer3|result'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'display:inst5|divisor_clock:alterna_display|toggle'
+Slack : -1.487
+TNS   : -2.974
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'controle:inst4|debouncer:debouncer2|result'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'controle:inst4|debouncer:debouncer4|result'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mp3:inst|musica_atual.m3'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mp3:inst|musica_atual.m1'
+Slack : 0.364
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mp3:inst|musica_atual.m5'
+Slack : 0.424
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mp3:inst|musica_atual.m4'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mp3:inst|musica_atual.m2'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clock'
+Slack : -7.408
+TNS   : -4850.102
+
+Type  : Slow 1200mV 0C Model Setup 'mp3:inst|musica_atual.m3'
+Slack : -2.527
+TNS   : -4.834
+
+Type  : Slow 1200mV 0C Model Setup 'mp3:inst|musica_atual.m2'
+Slack : -2.276
+TNS   : -4.378
+
+Type  : Slow 1200mV 0C Model Setup 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : -1.989
+TNS   : -19.531
+
+Type  : Slow 1200mV 0C Model Setup 'controle:inst4|debouncer:debouncer3|result'
+Slack : -1.410
+TNS   : -6.061
+
+Type  : Slow 1200mV 0C Model Setup 'mp3:inst|musica_atual.m5'
+Slack : -1.201
+TNS   : -2.186
+
+Type  : Slow 1200mV 0C Model Setup 'mp3:inst|musica_atual.m4'
+Slack : -0.950
+TNS   : -1.577
+
+Type  : Slow 1200mV 0C Model Setup 'controle:inst4|debouncer:debouncer4|result'
+Slack : -0.310
+TNS   : -0.310
+
+Type  : Slow 1200mV 0C Model Setup 'mp3:inst|musica_atual.m1'
+Slack : -0.256
+TNS   : -0.412
+
+Type  : Slow 1200mV 0C Model Setup 'display:inst5|divisor_clock:alterna_display|toggle'
+Slack : 0.067
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'controle:inst4|debouncer:debouncer2|result'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'mp3:inst|musica_atual.m1'
+Slack : -0.479
+TNS   : -0.863
+
+Type  : Slow 1200mV 0C Model Hold 'mp3:inst|musica_atual.m4'
+Slack : 0.035
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'mp3:inst|musica_atual.m5'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'display:inst5|divisor_clock:alterna_display|toggle'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'controle:inst4|debouncer:debouncer2|result'
+Slack : 0.447
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'controle:inst4|debouncer:debouncer4|result'
+Slack : 0.832
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'controle:inst4|debouncer:debouncer3|result'
+Slack : 1.113
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'mp3:inst|musica_atual.m2'
+Slack : 1.180
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'mp3:inst|musica_atual.m3'
+Slack : 1.192
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'controle:inst4|debouncer:debouncer2|result'
+Slack : -0.864
+TNS   : -0.864
+
+Type  : Slow 1200mV 0C Model Recovery 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : 0.133
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'controle:inst4|debouncer:debouncer2|result'
+Slack : 1.323
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -1495.948
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : -1.487
+TNS   : -22.305
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'controle:inst4|debouncer:debouncer3|result'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'display:inst5|divisor_clock:alterna_display|toggle'
+Slack : -1.487
+TNS   : -2.974
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'controle:inst4|debouncer:debouncer2|result'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'controle:inst4|debouncer:debouncer4|result'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mp3:inst|musica_atual.m3'
+Slack : 0.162
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mp3:inst|musica_atual.m1'
+Slack : 0.172
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mp3:inst|musica_atual.m5'
+Slack : 0.281
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mp3:inst|musica_atual.m2'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mp3:inst|musica_atual.m4'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clock'
+Slack : -3.058
+TNS   : -1710.762
+
+Type  : Fast 1200mV 0C Model Setup 'controle:inst4|debouncer:debouncer3|result'
+Slack : -0.637
+TNS   : -2.141
+
+Type  : Fast 1200mV 0C Model Setup 'mp3:inst|musica_atual.m3'
+Slack : -0.608
+TNS   : -0.925
+
+Type  : Fast 1200mV 0C Model Setup 'mp3:inst|musica_atual.m2'
+Slack : -0.417
+TNS   : -0.686
+
+Type  : Fast 1200mV 0C Model Setup 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : -0.358
+TNS   : -2.531
+
+Type  : Fast 1200mV 0C Model Setup 'mp3:inst|musica_atual.m1'
+Slack : -0.034
+TNS   : -0.034
+
+Type  : Fast 1200mV 0C Model Setup 'mp3:inst|musica_atual.m5'
+Slack : 0.045
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'mp3:inst|musica_atual.m4'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'controle:inst4|debouncer:debouncer4|result'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'display:inst5|divisor_clock:alterna_display|toggle'
+Slack : 0.551
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'controle:inst4|debouncer:debouncer2|result'
+Slack : 0.624
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'mp3:inst|musica_atual.m4'
+Slack : -0.224
+TNS   : -0.326
+
+Type  : Fast 1200mV 0C Model Hold 'mp3:inst|musica_atual.m5'
+Slack : -0.030
+TNS   : -0.030
+
+Type  : Fast 1200mV 0C Model Hold 'clock'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'display:inst5|divisor_clock:alterna_display|toggle'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'controle:inst4|debouncer:debouncer2|result'
+Slack : 0.206
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'mp3:inst|musica_atual.m1'
+Slack : 0.218
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'controle:inst4|debouncer:debouncer3|result'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'controle:inst4|debouncer:debouncer4|result'
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'mp3:inst|musica_atual.m2'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'mp3:inst|musica_atual.m3'
+Slack : 0.451
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'controle:inst4|debouncer:debouncer2|result'
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : 0.447
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'controle:inst4|debouncer:debouncer2|result'
+Slack : 0.561
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -1078.790
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'display:inst5|divisor_clock:clock_10Hz|toggle'
+Slack : -1.000
+TNS   : -15.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'controle:inst4|debouncer:debouncer3|result'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'display:inst5|divisor_clock:alterna_display|toggle'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'controle:inst4|debouncer:debouncer2|result'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'controle:inst4|debouncer:debouncer4|result'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mp3:inst|musica_atual.m4'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mp3:inst|musica_atual.m1'
+Slack : 0.283
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mp3:inst|musica_atual.m2'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mp3:inst|musica_atual.m3'
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mp3:inst|musica_atual.m5'
+Slack : 0.318
+TNS   : 0.000
+
+------------------------------------------------------------

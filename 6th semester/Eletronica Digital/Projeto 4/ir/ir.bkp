@@ -1,0 +1,232 @@
+//Display the pressed number key on the nixie tube
+
+module IR(clk,rst_n,IR,led_cs,led_db);
+
+  input   clk;
+  input   rst_n;
+  input   IR;
+  output [3:0] led_cs;
+  output [7:0] led_db;
+ 
+  reg [3:0] led_cs;
+  reg [7:0] led_db;
+ 
+  reg [7:0] led1,led2,led3,led4;
+  reg [15:0] irda_data;    // save irda data,than send to 7 segment led
+  reg [31:0] get_data;     // use for saving 32 bytes irda data
+  reg [5:0]  data_cnt;     // 32 bytes irda data counter
+  reg [2:0]  cs,ns;
+  reg error_flag;          // 32 bytes data During the data error flag
+
+  //----------------------------------------------------------------------------
+  reg irda_reg0;       //To avoid metastability and avoid driving multiple registers, this one is not used。
+  reg irda_reg1;       //This can only be used, the following program represents the state of irda
+  reg irda_reg2;       //In order to determine the edge of irda, hit the register again, the following program represents the previous state of irda
+  wire irda_neg_pulse; //Determine the falling edge of irda
+  wire irda_pos_pulse; //Determine the rising edge of irda
+  wire irda_chang;     //The transition edge of irda
+  
+  reg[15:0] cnt_scan;//Sweep frequency counter
+   
+  always @ (posedge clk) //在此采用跟随寄存器
+    if(!rst_n)
+      begin
+        irda_reg0 <= 1'b0;
+        irda_reg1 <= 1'b0;
+        irda_reg2 <= 1'b0;
+      end
+    else
+      begin
+        led_cs <= 4'b0000; //Follow register is used here
+        irda_reg0 <= IR;
+        irda_reg1 <= irda_reg0;
+        irda_reg2 <= irda_reg1;
+      end
+     
+  assign irda_chang = irda_neg_pulse | irda_pos_pulse;  //IR received signal changes, rising or falling
+  assign irda_neg_pulse = irda_reg2 & (~irda_reg1);  //IR receive signal irda falling edge
+  assign irda_pos_pulse = (~irda_reg2) & irda_reg1;      //IR receive signal irda rising edge
+
+
+  reg [10:0] counter;  //Frequency division 1750 times
+  reg [8:0]  counter2; //Count the number of points after frequency division
+  wire check_9ms;  // check leader 9ms time
+  wire check_4ms;  // check leader 4.5ms time
+  wire low;        // check  data="0" time
+  wire high;       // check  data="1" time
+ 
+  //----------------------------------------------------------------------------
+  //Divided by 1750 counts
+  always @ (posedge clk)
+    if (!rst_n)
+      counter <= 11'd0;
+    else if (irda_chang)  //When the irda level jumps, it starts counting again
+      counter <= 11'd0;
+    else if (counter == 11'd1750)
+      counter <= 11'd0;
+    else
+      counter <= counter + 1'b1;
+  
+  //---------------------------------------------------------------------------- 
+  always @ (posedge clk)
+    if (!rst_n)
+      counter2 <= 9'd0;
+    else if (irda_chang)  //When the irda level jumps, it starts counting points again.
+      counter2 <= 9'd0;
+    else if (counter == 11'd1750)
+      counter2 <= counter2 +1'b1;
+  
+
+  assign check_9ms = ((217 < counter2) & (counter2 < 297)); 
+  //257 In order to increase stability, take a certain range
+  assign check_4ms = ((88 < counter2) & (counter2 < 168));  //128
+  assign low  = ((6 < counter2) & (counter2 < 26));         // 16
+  assign high = ((38 < counter2) & (counter2 < 58));        // 48
+
+  //----------------------------------------------------------------------------
+  // generate statemachine state machine
+    parameter IDLE       = 3'b000, //initial state
+              LEADER_9   = 3'b001, //9ms
+              LEADER_4   = 3'b010, //4ms
+              DATA_STATE = 3'b100; //transfer data
+ 
+  always @ (posedge clk)
+    if (!rst_n)
+      cs <= IDLE;
+    else
+      cs <= ns; //status bit
+     
+  always @ ( * )
+    case (cs)
+      IDLE:
+        if (~irda_reg1)
+          ns = LEADER_9;
+        else
+          ns = IDLE;
+   
+      LEADER_9:
+        if (irda_pos_pulse)   //leader 9ms check
+          begin
+            if (check_9ms)
+              ns = LEADER_4;
+            else
+              ns = IDLE;
+          end
+        else  //Complete if---else---; prevent the generation of latch
+          ns =LEADER_9;
+   
+      LEADER_4:
+        if (irda_neg_pulse)  // leader 4.5ms check
+          begin
+            if (check_4ms)
+              ns = DATA_STATE;
+            else
+              ns = IDLE;
+          end
+        else
+          ns = LEADER_4;
+   
+      DATA_STATE:
+        if ((data_cnt == 6'd32) & irda_reg2 & irda_reg1)
+          ns = IDLE;
+        else if (error_flag)
+          ns = IDLE;
+        else
+          ns = DATA_STATE;
+      default:
+        ns = IDLE;
+    endcase
+
+  //The output in the state machine is described by a sequential circuit
+  always @ (posedge clk)
+    if (!rst_n)
+      begin
+        data_cnt <= 6'd0;
+        get_data <= 32'd0;
+        error_flag <= 1'b0;
+      end
+  
+    else if (cs == IDLE)
+      begin
+        data_cnt <= 6'd0;
+        get_data <= 32'd0;
+        error_flag <= 1'b0;
+      end
+  
+    else if (cs == DATA_STATE)
+      begin
+        if (irda_pos_pulse)  // low 0.56ms check
+          begin
+            if (!low)  //error
+              error_flag <= 1'b1;
+          end
+        else if (irda_neg_pulse)  //check 0.56ms/1.68ms data 0/1
+          begin
+            if (low)
+              get_data[0] <= 1'b0;
+            else if (high)
+              get_data[0] <= 1'b1;
+            else
+              error_flag <= 1'b1;
+             
+            get_data[31:1] <= get_data[30:0];
+            data_cnt <= data_cnt + 1'b1;
+          end
+      end
+
+  always @ (posedge clk)
+    if (!rst_n)
+      irda_data <= 16'd0;
+    else if ((data_cnt ==6'd32) & irda_reg1)
+  begin
+   led1 <= get_data[7:0];  //Data complement
+   led2 <= get_data[15:8]; //data code
+   led3 <= get_data[23:16];//User code
+   led4 <= get_data[31:24];
+  end
+ 
+//Display the keys pressed on the remote control on the digital tube
+always@(led2) 
+begin
+	case(led2)
+	
+	    //Display 0 to 9 on the nixie tube
+        8'b01101000: //Code value of remote control board 0
+			led_db=8'b1100_0000;  //show 0
+
+		8'b00110000: //Code value of remote control board 1
+			led_db=8'b1111_1001;  //show 1
+
+		8'b00011000: //Code value of remote control board 2
+			led_db=8'b1010_0100;  //show 2
+
+		8'b01111010: //Code value of remote control board 3
+			led_db=8'b1011_0000;  //show 3
+
+		8'b00010000: //Code value of remote control board 4
+			led_db=8'b1001_1001;  //show 4
+
+		8'b00111000: //Code value of remote control board 5
+			led_db=8'b1001_0010;  //show 5
+
+		8'b01011010: //Code value of remote control board 6
+			led_db=8'b1000_0010;  //show 6
+
+		8'b01000010: //Code value of remote control board 7
+			led_db=8'b1111_1000;  //show 7
+
+		8'b01001010: //Code value of remote control board 8
+			led_db=8'b1000_0000;  //show 8
+
+		8'b01010010: //Code value of remote control board 9
+			led_db=8'b1001_0000;  //show 9
+			
+	  //When no key is pressed, display F
+	   default: led_db=8'b1000_1110;
+
+	 endcase
+end
+
+endmodule 
+
+

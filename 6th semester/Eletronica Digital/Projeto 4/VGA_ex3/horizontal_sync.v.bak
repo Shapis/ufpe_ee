@@ -1,0 +1,70 @@
+/*
+Autor: Malki-çedheq Benjamim
+Disciplina: Eletrônica Digital 1A
+Descrição:
+Principio de interface VGA, ex. sinal para teste de cores e sincronização v/h
+Conecte a interface VGA da placa de desenvolvimento a um monitor/tv,
+são utilizadas as chaves/botões key1 e key2, da seguinte forma:
+
+key1 key2  resultado esperado no monitor
+ 0    0	  barra de cores horizontal	
+ 0    1    barra de cores vertical
+ 1    0    tabuleiro colorido
+ 1    1    tabuleiro colorido (invertido)
+
+ 
+Referências: 
+	https://mundoprojetado.com.br/como-funciona-o-vga/
+	http://fpgaparatodos.com.br/2011/10/26/vga-para-fpga/
+	https://forum.digikey.com/t/vga-controller-vhdl/12794
+*/
+module VGA(
+   clock,
+   hsync,
+);
+	input  clock;     	//50MHz clock de entrada do sistema
+	output  hsync;     	//Sinal para sincronização horizontal VGA
+	output dat_act_h;		//flag auxiliar para ativação de pixels
+		
+	reg [9:0] hcount;     //Contador de varredura de linha VGA
+	reg [2:0] data;     //registrador para dados VGA
+	reg [2:0] h_dat;     //registrador para posição horizontal
+
+	wire  hcount_ov; 	//flag de estouro do contador horizontal
+	wire  hsync; 		//condução de saída de horizontal vertical
+	wire  dat_act_h;  //condução para flag auxiliar para ativação de pixels
+	reg   vga_clk; 	//clock do VGA
+
+	//Tabela de parâmetros de temporização de varredura de linha e coluna VGA
+	parameter hsync_end  = 10'd95;
+	parameter hdat_begin = 10'd143;
+	parameter hdat_end   = 10'd783;
+	parameter hpixel_end = 10'd799; //resolução horizontal da tela
+
+
+	always @(posedge clock)
+	begin
+		vga_clk = ~vga_clk;
+	end
+
+	//************************VGA hsync*******************************
+	//varredura horizontal de pixels    
+	always @(posedge vga_clk)
+	begin
+		if (hcount_ov)
+			hcount <= 10'd0;
+		else
+			hcount <= hcount + 10'd1;
+		end
+	assign hcount_ov = (hcount == hpixel_end);
+
+
+	//************************VGA saídas*******************************
+	// atribuição dos sinais as respectivas saídas
+	assign dat_act_h = ((hcount >= hdat_begin) && (hcount < hdat_end));
+	assign hsync = (hcount > hsync_end);
+
+	//--------------------------------------------
+	
+
+endmodule

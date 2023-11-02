@@ -1,0 +1,86 @@
+# Reading pref.tcl
+# do sirene3_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {sirene3.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:46:01 on Feb 08,2022
+# vcom -reportprogress 300 -93 -work work sirene3.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity hard_block
+# -- Compiling architecture structure of hard_block
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity temporizador
+# -- Compiling architecture structure of temporizador
+# End time: 14:46:03 on Feb 08,2022, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# 
+vsim work.temporizador
+# vsim work.temporizador 
+# Start time: 14:46:18 on Feb 08,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.temporizador(structure)
+# Loading work.hard_block(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 15030 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+add wave -position insertpoint  \
+sim:/temporizador/Clk \
+sim:/temporizador/Disparo \
+sim:/temporizador/Overflow \
+sim:/temporizador/Q
+force -freeze sim:/temporizador/Overflow 000000000000000000000000100 0
+# Value length (27) does not equal array index length (28).
+# ** UI-Msg: (vsim-4011) Invalid force value: 000000000000000000000000100 0.
+# 
+force -freeze sim:/temporizador/Disparo 0 0
+force -freeze sim:/temporizador/Clk 1 0, 0 {50 ps} -r 100
+run
+force -freeze sim:/temporizador/Overflow 0000000000000000000000000100 0
+run
+run
+run
+force -freeze sim:/temporizador/Disparo 1 0
+run
+force -freeze sim:/temporizador/Disparo 0 0
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+force -freeze sim:/temporizador/Clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/temporizador/Disparo 0 0
+force -freeze sim:/temporizador/Overflow 0000000000000000000000000100 0
+run
+run
+# End time: 14:50:42 on Feb 08,2022, Elapsed time: 0:04:24
+# Errors: 0, Warnings: 0

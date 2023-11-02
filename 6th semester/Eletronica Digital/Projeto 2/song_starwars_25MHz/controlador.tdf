@@ -1,0 +1,635 @@
+TITLE "Controlador";
+CONSTANT clk_FPGA = 25000000; --clk padrão 1x
+
+--overflow para frequencias (25MHz)
+CONSTANT C3  = 47802; --523Hz (C3 ou Dó3)
+CONSTANT D3  = 42590; --587Hz (D3 ou Ré3)
+CONSTANT E3  = 37937; --659Hz (E3 ou Mi3)
+CONSTANT F3  = 35817; --698Hz (F3 ou Fá3)
+CONSTANT G3  = 31888; --784Hz (G3 ou Sol3)
+CONSTANT Ab3 = 30085; --831Hz (Ab3 ou Láb3)
+CONSTANT A3  = 28410; --880Hz (A3 ou Lá4)
+CONSTANT Bb3 = 26025; --932Hz (Bb3 ou Si3)
+CONSTANT C4  = 23901; --1046Hz (C4 ou Dó4)
+CONSTANT Db4 = 22543; --1175Hz (Db4 ou Réb4)
+CONSTANT D4  = 21277; --1175Hz (D4 ou Ré4)
+CONSTANT Eb4 = 20097; --1318Hz (Eb4 ou Mib4)
+CONSTANT E4  = 18969; --1318Hz (E4 ou Mi4)
+CONSTANT F4  = 17896; --1397Hz (F4 ou Fá4)
+CONSTANT G4  = 15645; --1598Hz (G4 ou Sol4)
+
+--overflow para tempos (25MHz)
+CONSTANT BPM = 100;
+CONSTANT BPS = CEIL(BPM DIV 60); 
+CONSTANT SEMIBREVE 		= CEIL((4 * clk_FPGA) DIV BPS);
+CONSTANT MINIMA 			= CEIL((2 * clk_FPGA) DIV BPS);
+CONSTANT SEMINIMA 		= CEIL(clk_FPGA DIV BPS); 
+CONSTANT COLCHEIA	 		= CEIL((clk_FPGA DIV 2) DIV BPS);
+CONSTANT COLCHEIA_QUIALTERA = CEIL((clk_FPGA DIV 3) DIV BPS);
+CONSTANT SEMICOLCHEIA	= CEIL((clk_FPGA DIV 4) DIV BPS);
+
+
+PARAMETERS
+(
+	n_bits_t = LOG2(SEMIBREVE), --valor padrão
+	n_bits_f = LOG2(C3) --valor padrão
+); 
+SUBDESIGN controlador
+(	
+	clk_in	: INPUT; --clock principal
+	duracao 	: INPUT = GND; --resposta do temporizador
+	disparo 	: OUTPUT; --dispara o temporizador
+	temp_out[n_bits_t..0] : OUTPUT;--duracao desejada
+	clk_out	: OUTPUT; --saída modulada
+	freq_out[n_bits_f..0] : OUTPUT;--frequencia desejada
+	stop, play: INPUT;--pause = play 0
+	playing : OUTPUT; --flag 1 indica que a música está em execução
+)
+VARIABLE
+	playing : DFF;
+	--sequencia os sons
+	song : MACHINE	WITH STATES ( 
+						START, --ponto de stop
+						s0,--pausa inicial
+						s1, s2, s3, s4, s5, s6, s7, s8,s9,
+						s10, s11, s12, s13, s14, s15, s16, s17, s18, s19,
+						s20, s21, s22, s23, s24, s25, s26, s27, s28, s29,
+						s30, s31, s32, s33, s34, s35, s36, s37, s38, s39,
+						s40, s41, s42, s43, s44, s45, s46, s47, s48, s49,
+						s50, s51, s52, s53, s54, s55, s56, s57, s58, s59,
+						s60, s61, s62, s63, s64, s65, s66, s67, s68, s69,
+						s70, s71, s72, s73, s74, s75, s76, s77, s78, s79,
+						s80, s81, s82, s83, s84, s85, s86, s87, s88, s89,
+						s90, s91
+				);		
+BEGIN
+	DEFAULTS --valores de inicialização
+		disparo = GND;
+		clk_out = GND;
+	END DEFAULTS;
+	playing.clk = clk_in; --clock do reg 
+	song.clk = clk_in; --clock da fsm song
+	song.reset = stop;
+	CASE song IS
+		WHEN START =>
+			clk_out = GND; --silencio
+			temp_out[] = SEMIBREVE; --duração do estado START
+			freq_out[] = C3; --frequência do estado START
+			playing = GND;
+			IF (play) THEN song = s0; playing = VCC;
+			ELSE song = START; playing = GND;
+			END IF;
+		WHEN s0 => --estado de inicialização (sem som)
+			freq_out[] = 0; clk_out = GND; --silencio enquanto temp
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC; --duração da prox nota e dispara o temp
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s0; playing = GND;
+			ELSIF !duracao THEN disparo = GND; song = s1; playing = VCC; END IF; --muda estado apos temp
+		WHEN s1 =>
+			freq_out[] = C3; clk_out = duracao AND clk_in; --gera freq enquanto temp
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC; --duração da prox nota e dispara o temp	
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s1; playing = GND;	 		
+			ELSIF !duracao THEN disparo = GND; song = s2; playing = VCC; END IF; --muda estado apos temp
+		WHEN s2 => 	
+			freq_out[] = C3; clk_out = duracao AND clk_in; 
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;	
+			ELSIF (!play) THEN song = s2; playing = GND;	
+			ELSIF !duracao THEN disparo = GND;	song = s3; playing = VCC; END IF;
+		WHEN s3 => 	
+			freq_out[] = C3; clk_out = duracao AND clk_in; 			
+			temp_out[] = MINIMA; disparo = VCC;		
+			IF (stop) THEN song = START;
+			ELSIF (!play) THEN song = s3; playing = GND;	
+			ELSIF !duracao THEN disparo = GND;	song = s4; playing = VCC; END IF;
+		WHEN s4 => 
+			freq_out[] = F3; clk_out = duracao AND clk_in; 	
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START;
+			ELSIF (!play) THEN song = s4; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s5; playing = VCC; END IF;	
+		WHEN s5 => 	
+			freq_out[] = C4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s5; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s6; playing = VCC; END IF;
+		WHEN s6 => 	
+			freq_out[] = Bb3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START;
+			ELSIF (!play) THEN song = s6; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s7; playing = VCC; END IF;	
+		WHEN s7 => 	
+			freq_out[] = A3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s7; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s8; playing = VCC; END IF;
+		WHEN s8 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s8; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s9; playing = VCC; END IF;
+		WHEN s9 => 	
+			freq_out[] = F4; clk_out = duracao AND clk_in;
+			temp_out[] = SEMINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s9; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s10;  playing = VCC; END IF;
+		WHEN s10 => 	
+			freq_out[] = C4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s10; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s11;  playing = VCC; END IF;
+		WHEN s11 => 	
+			freq_out[] = Bb3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s11; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s12;  playing = VCC; END IF;
+		WHEN s12 => 	
+			freq_out[] = A3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s12; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s13;  playing = VCC; END IF;
+		WHEN s13 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s13; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s14;  playing = VCC; END IF;
+		WHEN s14 => 	
+			freq_out[] = F4; clk_out = duracao AND clk_in;
+			temp_out[] = SEMINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s14; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s15;  playing = VCC; END IF;
+		WHEN s15 => 	
+			freq_out[] = C4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s15; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s16;  playing = VCC; END IF;
+		WHEN s16 => 	
+			freq_out[] = Bb3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s16; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s17;  playing = VCC; END IF;
+		WHEN s17 => 	
+			freq_out[] = A3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s17; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s18;  playing = VCC; END IF;
+		WHEN s18 => 	
+			freq_out[] = Bb3; clk_out = duracao AND clk_in;
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s18; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s19;  playing = VCC; END IF;
+		WHEN s19 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = SEMINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s19; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s20;  playing = VCC; END IF;
+		WHEN s20 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s20; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s21;  playing = VCC; END IF;
+		WHEN s21 =>
+			freq_out[] = C3; clk_out = duracao AND clk_in; --gera freq enquanto temp
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s21; playing = GND; --duração da prox nota e dispara o temp				
+			ELSIF !duracao THEN disparo = GND; song = s22;  playing = VCC; END IF; --muda estado apos temp
+		WHEN s22 => 	
+			freq_out[] = C3; clk_out = duracao AND clk_in; 
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s22; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s23;  playing = VCC; END IF;
+		WHEN s23 => 	
+			freq_out[] = C3; clk_out = duracao AND clk_in; 			
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s23; playing = GND;			
+			ELSIF !duracao THEN disparo = GND;	song = s24;  playing = VCC; END IF;
+		WHEN s24 => 
+			freq_out[] = F3; clk_out = duracao AND clk_in; 	
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s24; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s25; playing = VCC;  END IF;	
+		WHEN s25 => 	
+			freq_out[] = C4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s25; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s26;  playing = VCC; END IF;
+		WHEN s26 => 	
+			freq_out[] = Bb3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s26; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s27;  playing = VCC; END IF;	
+		WHEN s27 => 	
+			freq_out[] = A3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s27; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s28;  playing = VCC; END IF;
+		WHEN s28 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s28; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s29;  playing = VCC; END IF;
+		WHEN s29 => 	
+			freq_out[] = F4; clk_out = duracao AND clk_in;
+			temp_out[] = SEMINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s29; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s30;  playing = VCC; END IF;
+		WHEN s30 => 	
+			freq_out[] = C4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s30; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s31;  playing = VCC; END IF;
+		WHEN s31 => 	
+			freq_out[] = Bb3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s31; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s32;  playing = VCC; END IF;
+		WHEN s32 => 	
+			freq_out[] = A3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s32; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s33;  playing = VCC; END IF;
+		WHEN s33 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s33; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s34;  playing = VCC; END IF;
+		WHEN s34 => 	
+			freq_out[] = F4; clk_out = duracao AND clk_in;
+			temp_out[] = SEMINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s34; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s35;  playing = VCC; END IF;
+		WHEN s35 => 	
+			freq_out[] = C4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s35; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s36;  playing = VCC; END IF;
+		WHEN s36 => 	
+			freq_out[] = Bb3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s36; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s37;  playing = VCC; END IF;
+		WHEN s37 => 	
+			freq_out[] = A3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s37; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s38;  playing = VCC; END IF;
+		WHEN s38 => 	
+			freq_out[] = Bb3; clk_out = duracao AND clk_in;
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s38; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s39;  playing = VCC; END IF;
+		WHEN s39 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = SEMINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s39; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s40;  playing = VCC; END IF;
+		WHEN s40 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s40; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s41;  playing = VCC; END IF;			
+		WHEN s41 => 	
+			freq_out[] = C3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s41; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s42;  playing = VCC; END IF;			
+		WHEN s42 => 	
+			freq_out[] = C3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s42; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s43;  playing = VCC; END IF;			
+		WHEN s43 => 	
+			freq_out[] = C3; clk_out = duracao AND clk_in;
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s43; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s44;  playing = VCC; END IF;	
+		WHEN s44 => 	
+			freq_out[] = D3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s44; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s45;  playing = VCC; END IF;
+		WHEN s45 => 	
+			freq_out[] = Bb3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s45; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s46;  playing = VCC; END IF;
+		WHEN s46 => 	
+			freq_out[] = A3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s46; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s47;  playing = VCC; END IF;
+		WHEN s47 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s47; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s48;  playing = VCC; END IF;
+		WHEN s48 => 	
+			freq_out[] = F3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s48; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s49;  playing = VCC; END IF;
+		WHEN s49 => 	
+			freq_out[] = F3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s49; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s50;  playing = VCC; END IF;
+		WHEN s50 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s50; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s51;  playing = VCC; END IF;		
+		WHEN s51 => 	
+			freq_out[] = A3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s51; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s52;  playing = VCC; END IF;
+		WHEN s52 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s52; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s53;  playing = VCC; END IF;
+		WHEN s53 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s53; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s54;  playing = VCC; END IF;
+		WHEN s54 => 	
+			freq_out[] = D3; clk_out = duracao AND clk_in;
+			temp_out[] = SEMINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s54; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s55;  playing = VCC; END IF;
+		WHEN s55 => 	
+			freq_out[] = E3; clk_out = duracao AND clk_in;
+			temp_out[] = SEMINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s55; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s56;  playing = VCC; END IF;
+		WHEN s56 => 	
+			freq_out[] = C3; clk_out = duracao AND clk_in;
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s56; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s57;  playing = VCC; END IF;
+		WHEN s57 => 	
+			freq_out[] = D3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s57; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s58;  playing = VCC; END IF;
+		WHEN s58 => 	
+			freq_out[] = Bb3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s58; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s59;  playing = VCC; END IF;
+		WHEN s59 => 	
+			freq_out[] = A3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s59; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s60;  playing = VCC; END IF;			
+		WHEN s60 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s60; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s61;  playing = VCC; END IF;
+		WHEN s61 => 	
+			freq_out[] = F3; clk_out = duracao AND clk_in;
+			temp_out[] = SEMINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s61; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s62;  playing = VCC; END IF;
+		WHEN s62 => 	
+			freq_out[] = C4; clk_out = duracao AND clk_in;
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s62; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s63;  playing = VCC; END IF;
+		WHEN s63 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s63; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s64;  playing = VCC; END IF;
+		WHEN s64 => 	
+			freq_out[] = D3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s64; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s65;  playing = VCC; END IF;
+		WHEN s65 => 	
+			freq_out[] = Bb3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s65; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s66;  playing = VCC; END IF;
+		WHEN s66 => 	
+			freq_out[] = A3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s66; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s67;  playing = VCC; END IF;
+		WHEN s67 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s67; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s68;  playing = VCC; END IF;
+		WHEN s68 => 	
+			freq_out[] = F3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s68; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s69;  playing = VCC; END IF;
+		WHEN s69 => 	
+			freq_out[] = F3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s69; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s70;  playing = VCC; END IF;
+		WHEN s70 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s70; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s71;  playing = VCC; END IF;
+		WHEN s71 => 	
+			freq_out[] = A3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s71; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s72;  playing = VCC; END IF;
+		WHEN s72 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s72; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s73;  playing = VCC; END IF;
+		WHEN s73 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s73; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s74;  playing = VCC; END IF;
+		WHEN s74 => 	
+			freq_out[] = D3; clk_out = duracao AND clk_in;
+			temp_out[] = SEMINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s71; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s75;  playing = VCC; END IF;
+		WHEN s75 => 	
+			freq_out[] = E3; clk_out = duracao AND clk_in;
+			temp_out[] = SEMINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s75; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s76;  playing = VCC; END IF;
+		WHEN s76=> 	
+			freq_out[] = C4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s76; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s77;  playing = VCC; END IF;
+		WHEN s77 => 	
+			freq_out[] = F4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s77; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s78;  playing = VCC; END IF;
+		WHEN s78 => 	
+			freq_out[] = F4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s78; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s79;  playing = VCC; END IF;
+		WHEN s79 => 	
+			freq_out[] = Eb4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s79; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s80;  playing = VCC; END IF;
+		WHEN s80 => 	
+			freq_out[] = Db4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s80; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s81;  playing = VCC; END IF;
+		WHEN s81 => 	
+			freq_out[] = Db4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s81; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s82;  playing = VCC; END IF;	
+		WHEN s82 => 	
+			freq_out[] = C4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s82; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s83;  playing = VCC; END IF;	
+		WHEN s83 => 	
+			freq_out[] = Bb3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s83; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s84;  playing = VCC; END IF;	
+		WHEN s84 => 	
+			freq_out[] = Bb3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s84; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s85;  playing = VCC; END IF;	
+		WHEN s85 => 	
+			freq_out[] = Ab3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s85; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s86;  playing = VCC; END IF;	
+		WHEN s86 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s86; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s87;  playing = VCC; END IF;	
+		WHEN s87 => 	
+			freq_out[] = G3; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s87; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s88;  playing = VCC; END IF;	
+		WHEN s88 => 	
+			freq_out[] = F3; clk_out = duracao AND clk_in;
+			temp_out[] = SEMIBREVE; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s88; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s89;  playing = VCC; END IF;	
+		WHEN s89 => 	
+			freq_out[] = C4; clk_out = duracao AND clk_in;
+			temp_out[] = MINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s89; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s90;  playing = VCC; END IF;	
+		WHEN s90 => 	
+			freq_out[] = C4; clk_out = duracao AND clk_in;
+			temp_out[] = SEMINIMA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s90; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s91;  playing = VCC; END IF;				
+		WHEN s91 => 	
+			freq_out[] = C4; clk_out = duracao AND clk_in;
+			temp_out[] = COLCHEIA_QUIALTERA; disparo = VCC;
+			IF (stop) THEN song = START; playing = GND;
+			ELSIF (!play) THEN song = s91; playing = GND;
+			ELSIF !duracao THEN disparo = GND;	song = s1;  playing = VCC; END IF;
+	END CASE;
+END;

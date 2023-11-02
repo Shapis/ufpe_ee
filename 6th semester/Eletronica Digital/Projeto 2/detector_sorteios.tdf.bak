@@ -1,0 +1,132 @@
+-- Arquivo: lcd_logic.tdf
+-- Descrição: Exemplo de lógica controle para interface LCD 16x2
+-- Autor: Malki-çedheq Benjamim
+-- Data: 22/07/2023
+TITLE "lcd_logic";
+INCLUDE "conversor_binario4_binario8.inc";
+
+
+SUBDESIGN detector_sorteios (
+	d[6..1][4..1]  : INPUT;
+	u[6..1][4..1]  : INPUT;
+	clk      		: INPUT;  --clock principal	
+	pulso[6..1] : OUTPUT;
+)
+VARIABLE
+	conv_d[6..1] : conversor_binario4_binario8;--seis números precisam ser convertidos 
+	conv_u[6..1] : conversor_binario4_binario8;
+	FLAG[6..1] : NODE;
+
+BEGIN
+	IF (d[1][] != B"0000") # (u[1][] != B"0000") THEN--se a posição é 1 e a unidade e dezena não é zero
+		FLAG[1] = VCC;
+	ELSE
+		FLAG[1] = GND;
+	END IF;
+	
+	IF (d[2][] != B"0000") # (u[2][] != B"0000") THEN--se a posição é 2 e a unidade não é zero
+		FLAG[2] = VCC;
+	ELSE
+		FLAG[2] = GND;
+	END IF;
+	
+	IF (d[3][] != B"0000") # (u[3][] != B"0000") THEN--se a posição é 3 e a unidade não é zero
+		FLAG[3] = VCC;
+	ELSE
+		L1[47..32] = B"00110000_00110000";
+		FLAG[3] = GND;
+	END IF;
+	
+	IF (d[4][] != B"0000") # (u[4][] != B"0000") THEN--se a posição é 1 e a unidade não é zero
+		FLAG[4] = VCC;
+	ELSE
+		FLAG[4] = GND;
+	END IF;
+	
+	IF (d[5][] != B"0000") # (u[5][] != B"0000") THEN--se a posição é 2 e a unidade não é zero
+		FLAG[5] = VCC;
+	ELSE
+		FLAG[5] = GND;
+	END IF;
+	
+	IF (d[6][] != B"0000") # (u[6][] != B"0000") THEN--se a posição é 3 e a unidade não é zero
+		FLAG[6] = VCC;
+	ELSE
+		FLAG[6] = GND;
+	END IF;
+	
+	TABLE
+		FLAG[] => qnt_sorteio[];
+		B"000000" => B"000";
+		B"000001" => B"001";
+		B"000010" => B"001";
+		B"000011" => B"010";
+		B"000100" => B"001";
+		B"000101" => B"010";
+		B"000110" => B"010";
+		B"000111" => B"011";
+		B"001000" => B"001";
+		B"001001" => B"010";
+		B"001010" => B"010";
+		B"001011" => B"011";
+		B"001100" => B"010";
+		B"001101" => B"011";
+		B"001110" => B"011";
+		B"001111" => B"100";
+		B"010000" => B"001";
+		B"010001" => B"010";
+		B"010010" => B"010";
+		B"010011" => B"011";
+		B"010100" => B"010";
+		B"010101" => B"011";
+		B"010110" => B"011";
+		B"010111" => B"100";
+		B"011000" => B"010";
+		B"011001" => B"011";
+		B"011010" => B"011";
+		B"011011" => B"100";
+		B"011100" => B"011";
+		B"011101" => B"100";
+		B"011110" => B"100";
+		B"011111" => B"101";
+		B"100000" => B"001";
+		B"100001" => B"010";
+		B"100010" => B"010";
+		B"100011" => B"011";
+		B"100100" => B"010";
+		B"100101" => B"011";
+		B"100110" => B"100";
+		B"100111" => B"100";
+		B"101000" => B"010";
+		B"101001" => B"011";
+		B"101010" => B"011";
+		B"101011" => B"100";
+		B"101100" => B"011";
+		B"101101" => B"100";
+		B"101110" => B"100";
+		B"101111" => B"101";
+		B"110000" => B"010";
+		B"110001" => B"011";
+		B"110010" => B"011";
+		B"110011" => B"100";
+		B"110100" => B"011";
+		B"110101" => B"100";
+		B"110110" => B"100";
+		B"110111" => B"101";
+		B"111000" => B"011";
+		B"111001" => B"100";
+		B"111010" => B"100";
+		B"111011" => B"101";
+		B"111100" => B"100";
+		B"111101" => B"101";
+		B"111110" => B"101";
+		B"111111" => B"110";
+	END TABLE;
+	
+	pulsos[] = FLAG[];
+	
+	IF qnt_sorteio[] == 6 THEN
+		song = VCC;
+	END IF;
+	
+END;

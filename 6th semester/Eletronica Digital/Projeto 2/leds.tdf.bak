@@ -1,0 +1,17 @@
+SUBDESIGN leds
+(
+    clock : INPUT;
+	 n : OUTPUT;
+)
+VARIABLE
+	count : contador_crescente WITH(min_cnt = 0, max_cnt = 6)
+
+BEGIN
+count.clk = clock;
+
+IF count[] < max_cnt THEN
+	count[].d = count[] + 1
+END IF;
+
+n = count[];
+END;

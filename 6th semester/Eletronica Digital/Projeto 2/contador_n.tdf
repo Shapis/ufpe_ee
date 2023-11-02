@@ -1,0 +1,31 @@
+PARAMETERS(    
+    overflow = 25000000,
+	 reset = 0
+);
+
+SUBDESIGN contador_n
+(
+    clk_in : INPUT;
+	 clr : INPUT = VCC;
+    q[CEIL(LOG2(overflow))..1] : OUTPUT;
+    clk_out : OUTPUT;
+)
+VARIABLE
+	count[CEIL(LOG2(overflow))..1]: dff;
+	alt : tff;
+
+BEGIN
+    count[].clk = clk_in;
+    alt.clk = clk_in;
+	 q[] = count[];
+    clk_out = alt;
+	 
+	 IF clr == GND THEN
+		count[].d = 0;
+    ELSIF count[].q < overflow THEN
+        count[].d = count[] + 1; 
+    ELSE
+        count[].d = reset;
+        alt.t = VCC;
+    END IF;
+END;

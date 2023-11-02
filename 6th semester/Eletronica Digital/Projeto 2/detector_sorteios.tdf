@@ -1,0 +1,60 @@
+-- Arquivo: lcd_logic.tdf
+-- Descrição: Exemplo de lógica controle para interface LCD 16x2
+-- Autor: Malki-çedheq Benjamim
+-- Data: 22/07/2023
+TITLE "lcd_logic";
+INCLUDE "conversor_binario4_binario8.inc";
+
+
+SUBDESIGN detector_sorteios (
+	d[6..1][4..1]  : INPUT;
+	u[6..1][4..1]  : INPUT;
+	clk      		: INPUT;  --clock principal	
+	pulso[6..1] : OUTPUT;
+)
+VARIABLE
+	conv_d[6..1] : conversor_binario4_binario8;--seis números precisam ser convertidos 
+	conv_u[6..1] : conversor_binario4_binario8;
+	FLAG[6..1] : NODE;
+
+BEGIN
+	IF (d[1][] != B"0000") # (u[1][] != B"0000") THEN--se a posição é 1 e a unidade e dezena não é zero
+		FLAG[1] = VCC;
+	ELSE
+		FLAG[1] = GND;
+	END IF;
+	
+	IF (d[2][] != B"0000") # (u[2][] != B"0000") THEN--se a posição é 2 e a unidade não é zero
+		FLAG[2] = VCC;
+	ELSE
+		FLAG[2] = GND;
+	END IF;
+	
+	IF (d[3][] != B"0000") # (u[3][] != B"0000") THEN--se a posição é 3 e a unidade não é zero
+		FLAG[3] = VCC;
+	ELSE
+		FLAG[3] = GND;
+	END IF;
+	
+	IF (d[4][] != B"0000") # (u[4][] != B"0000") THEN--se a posição é 1 e a unidade não é zero
+		FLAG[4] = VCC;
+	ELSE
+		FLAG[4] = GND;
+	END IF;
+	
+	IF (d[5][] != B"0000") # (u[5][] != B"0000") THEN--se a posição é 2 e a unidade não é zero
+		FLAG[5] = VCC;
+	ELSE
+		FLAG[5] = GND;
+	END IF;
+	
+	IF (d[6][] != B"0000") # (u[6][] != B"0000") THEN--se a posição é 3 e a unidade não é zero
+		FLAG[6] = VCC;
+	ELSE
+		FLAG[6] = GND;
+	END IF;
+	
+	pulso[] = FLAG[];
+
+	
+END;

@@ -1,0 +1,798 @@
+Analysis & Synthesis report for ir
+Thu Sep 21 15:33:04 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |top_entity|ir_verilog:inst|estado_atual
+  9. State Machine - |top_entity|Mp3:inst4|Over_The_Rainbow:contro|prox_estado
+ 10. State Machine - |top_entity|Mp3:inst4|Over_The_Rainbow:contro|estado
+ 11. State Machine - |top_entity|Mp3:inst4|Fur_Elise:control|prox_estado
+ 12. State Machine - |top_entity|Mp3:inst4|Fur_Elise:control|estado
+ 13. State Machine - |top_entity|I2C_READ_verilog:inst2|estado
+ 14. State Machine - |top_entity|I2C_READ_verilog:inst2|cnt
+ 15. User-Specified and Inferred Latches
+ 16. Registers Removed During Synthesis
+ 17. Removed Registers Triggering Further Register Optimizations
+ 18. General Register Statistics
+ 19. Inverted Register Statistics
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Port Connectivity Checks: "Mp3:inst4|Over_The_Rainbow:contro"
+ 22. Port Connectivity Checks: "Mp3:inst4|Fur_Elise:control"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Sep 21 15:33:04 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; ir                                          ;
+; Top-level Entity Name              ; top_entity                                  ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 650                                         ;
+;     Total combinational functions  ; 583                                         ;
+;     Dedicated logic registers      ; 336                                         ;
+; Total registers                    ; 336                                         ;
+; Total pins                         ; 23                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                            ; top_entity         ; ir                 ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------+
+; ir_verilog.v                     ; yes             ; User Verilog HDL File              ; /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/ir_verilog.v        ;         ;
+; top_entity.bdf                   ; yes             ; User Block Diagram/Schematic File  ; /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/top_entity.bdf      ;         ;
+; output_files/leds.v              ; yes             ; User Verilog HDL File              ; /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/output_files/leds.v ;         ;
+; I2C_READ_verilog.v               ; yes             ; User Verilog HDL File              ; /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/I2C_READ_verilog.v  ;         ;
+; SEG_D_verilog.v                  ; yes             ; User Verilog HDL File              ; /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v     ;         ;
+; Mp3.v                            ; yes             ; User Verilog HDL File              ; /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v               ;         ;
+; divisor_clock.v                  ; yes             ; User Verilog HDL File              ; /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/divisor_clock.v     ;         ;
+; temporizador.v                   ; yes             ; User Verilog HDL File              ; /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/temporizador.v      ;         ;
+; Fur_Elise.v                      ; yes             ; User Verilog HDL File              ; /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Fur_Elise.v         ;         ;
+; Over_The_Rainbow.v               ; yes             ; User Verilog HDL File              ; /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Over_The_Rainbow.v  ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 650         ;
+;                                             ;             ;
+; Total combinational functions               ; 583         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 231         ;
+;     -- 3 input functions                    ; 165         ;
+;     -- <=2 input functions                  ; 187         ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 445         ;
+;     -- arithmetic mode                      ; 138         ;
+;                                             ;             ;
+; Total registers                             ; 336         ;
+;     -- Dedicated logic registers            ; 336         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 23          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 335         ;
+; Total fan-out                               ; 2782        ;
+; Average fan-out                             ; 2.88        ;
++---------------------------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                          ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name      ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+------------------+--------------+
+; |top_entity                     ; 583 (1)             ; 336 (0)                   ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |top_entity                                   ; top_entity       ; work         ;
+;    |I2C_READ_verilog:inst2|     ; 120 (120)           ; 62 (62)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_entity|I2C_READ_verilog:inst2            ; I2C_READ_verilog ; work         ;
+;    |Mp3:inst4|                  ; 287 (73)            ; 197 (6)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_entity|Mp3:inst4                         ; Mp3              ; work         ;
+;       |Fur_Elise:control|       ; 60 (60)             ; 84 (84)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_entity|Mp3:inst4|Fur_Elise:control       ; Fur_Elise        ; work         ;
+;       |Over_The_Rainbow:contro| ; 44 (44)             ; 50 (50)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_entity|Mp3:inst4|Over_The_Rainbow:contro ; Over_The_Rainbow ; work         ;
+;       |divisor_clock:div_clk|   ; 51 (51)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_entity|Mp3:inst4|divisor_clock:div_clk   ; divisor_clock    ; work         ;
+;       |temporizador:temp|       ; 59 (59)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_entity|Mp3:inst4|temporizador:temp       ; temporizador     ; work         ;
+;    |SEG_D_verilog:inst3|        ; 77 (77)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_entity|SEG_D_verilog:inst3               ; SEG_D_verilog    ; work         ;
+;    |ir_verilog:inst|            ; 98 (98)             ; 58 (58)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_entity|ir_verilog:inst                   ; ir_verilog       ; work         ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_entity|ir_verilog:inst|estado_atual                                                                              ;
++---------------------------+-------------------------+-------------------------+---------------------------+---------------------------+
+; Name                      ; estado_atual.IDLE_STATE ; estado_atual.DATA_STATE ; estado_atual.ATRASO_450us ; estado_atual.ATRASO_900us ;
++---------------------------+-------------------------+-------------------------+---------------------------+---------------------------+
+; estado_atual.IDLE_STATE   ; 0                       ; 0                       ; 0                         ; 0                         ;
+; estado_atual.ATRASO_900us ; 1                       ; 0                       ; 0                         ; 1                         ;
+; estado_atual.ATRASO_450us ; 1                       ; 0                       ; 1                         ; 0                         ;
+; estado_atual.DATA_STATE   ; 1                       ; 1                       ; 0                         ; 0                         ;
++---------------------------+-------------------------+-------------------------+---------------------------+---------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_entity|Mp3:inst4|Over_The_Rainbow:contro|prox_estado                                                                                                                                                                                                                                                                                                                                                                                               ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+; Name            ; prox_estado.s24 ; prox_estado.s23 ; prox_estado.s22 ; prox_estado.s21 ; prox_estado.s20 ; prox_estado.s19 ; prox_estado.s18 ; prox_estado.s17 ; prox_estado.s16 ; prox_estado.s15 ; prox_estado.s14 ; prox_estado.s13 ; prox_estado.s12 ; prox_estado.s11 ; prox_estado.s10 ; prox_estado.s9 ; prox_estado.s8 ; prox_estado.s7 ; prox_estado.s6 ; prox_estado.s5 ; prox_estado.s4 ; prox_estado.s3 ; prox_estado.s2 ; prox_estado.s1 ; prox_estado.s0 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+; prox_estado.s0  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ;
+; prox_estado.s1  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 1              ;
+; prox_estado.s2  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 1              ;
+; prox_estado.s3  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 1              ;
+; prox_estado.s4  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s5  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s6  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s7  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s8  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s9  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s10 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s11 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s12 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s13 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s14 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s15 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s16 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s17 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s18 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s19 ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s20 ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s21 ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s22 ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s23 ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s24 ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_entity|Mp3:inst4|Over_The_Rainbow:contro|estado                                                                                                                                                                                                                                                                  ;
++------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; Name       ; estado.s24 ; estado.s23 ; estado.s22 ; estado.s21 ; estado.s20 ; estado.s19 ; estado.s18 ; estado.s17 ; estado.s16 ; estado.s15 ; estado.s14 ; estado.s13 ; estado.s12 ; estado.s11 ; estado.s10 ; estado.s9 ; estado.s8 ; estado.s7 ; estado.s6 ; estado.s5 ; estado.s4 ; estado.s3 ; estado.s2 ; estado.s1 ; estado.s0 ;
++------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; estado.s0  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ;
+; estado.s1  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 1         ;
+; estado.s2  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 1         ;
+; estado.s3  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 1         ;
+; estado.s4  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s5  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s6  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s7  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s8  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s9  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s10 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s11 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s12 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s13 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s14 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s15 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s16 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s17 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s18 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s19 ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s20 ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s21 ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s22 ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s23 ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s24 ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
++------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_entity|Mp3:inst4|Fur_Elise:control|prox_estado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+; Name            ; prox_estado.s41 ; prox_estado.s40 ; prox_estado.s39 ; prox_estado.s38 ; prox_estado.s37 ; prox_estado.s36 ; prox_estado.s35 ; prox_estado.s34 ; prox_estado.s33 ; prox_estado.s32 ; prox_estado.s31 ; prox_estado.s30 ; prox_estado.s29 ; prox_estado.s28 ; prox_estado.s27 ; prox_estado.s26 ; prox_estado.s25 ; prox_estado.s24 ; prox_estado.s23 ; prox_estado.s22 ; prox_estado.s21 ; prox_estado.s20 ; prox_estado.s19 ; prox_estado.s18 ; prox_estado.s17 ; prox_estado.s16 ; prox_estado.s15 ; prox_estado.s14 ; prox_estado.s13 ; prox_estado.s12 ; prox_estado.s11 ; prox_estado.s10 ; prox_estado.s9 ; prox_estado.s8 ; prox_estado.s7 ; prox_estado.s6 ; prox_estado.s5 ; prox_estado.s4 ; prox_estado.s3 ; prox_estado.s2 ; prox_estado.s1 ; prox_estado.s0 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+; prox_estado.s0  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ;
+; prox_estado.s1  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 1              ;
+; prox_estado.s2  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 1              ;
+; prox_estado.s3  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 1              ;
+; prox_estado.s4  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s5  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s6  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s7  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s8  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s9  ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s10 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s11 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s12 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s13 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s14 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s15 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s16 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s17 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s18 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s19 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s20 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s21 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s22 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s23 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s24 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s25 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s26 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s27 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s28 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s29 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s30 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s31 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s32 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s33 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s34 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s35 ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s36 ; 0               ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s37 ; 0               ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s38 ; 0               ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s39 ; 0               ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s40 ; 0               ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; prox_estado.s41 ; 1               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_entity|Mp3:inst4|Fur_Elise:control|estado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
++------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; Name       ; estado.s41 ; estado.s40 ; estado.s39 ; estado.s38 ; estado.s37 ; estado.s36 ; estado.s35 ; estado.s34 ; estado.s33 ; estado.s32 ; estado.s31 ; estado.s30 ; estado.s29 ; estado.s28 ; estado.s27 ; estado.s26 ; estado.s25 ; estado.s24 ; estado.s23 ; estado.s22 ; estado.s21 ; estado.s20 ; estado.s19 ; estado.s18 ; estado.s17 ; estado.s16 ; estado.s15 ; estado.s14 ; estado.s13 ; estado.s12 ; estado.s11 ; estado.s10 ; estado.s9 ; estado.s8 ; estado.s7 ; estado.s6 ; estado.s5 ; estado.s4 ; estado.s3 ; estado.s2 ; estado.s1 ; estado.s0 ;
++------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; estado.s0  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ;
+; estado.s1  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 1         ;
+; estado.s2  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 1         ;
+; estado.s3  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 1         ;
+; estado.s4  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s5  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s6  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s7  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s8  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s9  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s10 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s11 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s12 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s13 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s14 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s15 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s16 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s17 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s18 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s19 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s20 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s21 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s22 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s23 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s24 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s25 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s26 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s27 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s28 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s29 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s30 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s31 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s32 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s33 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s34 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s35 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s36 ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s37 ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s38 ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s39 ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s40 ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; estado.s41 ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
++------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_entity|I2C_READ_verilog:inst2|estado                                                                                          ;
++----------------+-------------+-------------+-------------+--------------+-------------+--------------+-------------+----------------+--------------+
+; Name           ; estado.IDLE ; estado.STOP ; estado.NACK ; estado.READ2 ; estado.ACK2 ; estado.READ1 ; estado.ACK1 ; estado.ADDRESS ; estado.START ;
++----------------+-------------+-------------+-------------+--------------+-------------+--------------+-------------+----------------+--------------+
+; estado.IDLE    ; 0           ; 0           ; 0           ; 0            ; 0           ; 0            ; 0           ; 0              ; 0            ;
+; estado.START   ; 1           ; 0           ; 0           ; 0            ; 0           ; 0            ; 0           ; 0              ; 1            ;
+; estado.ADDRESS ; 1           ; 0           ; 0           ; 0            ; 0           ; 0            ; 0           ; 1              ; 0            ;
+; estado.ACK1    ; 1           ; 0           ; 0           ; 0            ; 0           ; 0            ; 1           ; 0              ; 0            ;
+; estado.READ1   ; 1           ; 0           ; 0           ; 0            ; 0           ; 1            ; 0           ; 0              ; 0            ;
+; estado.ACK2    ; 1           ; 0           ; 0           ; 0            ; 1           ; 0            ; 0           ; 0              ; 0            ;
+; estado.READ2   ; 1           ; 0           ; 0           ; 1            ; 0           ; 0            ; 0           ; 0              ; 0            ;
+; estado.NACK    ; 1           ; 0           ; 1           ; 0            ; 0           ; 0            ; 0           ; 0              ; 0            ;
+; estado.STOP    ; 1           ; 1           ; 0           ; 0            ; 0           ; 0            ; 0           ; 0              ; 0            ;
++----------------+-------------+-------------+-------------+--------------+-------------+--------------+-------------+----------------+--------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |top_entity|I2C_READ_verilog:inst2|cnt    ;
++---------+---------+---------+---------+---------+---------+
+; Name    ; cnt.000 ; cnt.011 ; cnt.010 ; cnt.001 ; cnt.100 ;
++---------+---------+---------+---------+---------+---------+
+; cnt.100 ; 0       ; 0       ; 0       ; 0       ; 0       ;
+; cnt.001 ; 0       ; 0       ; 0       ; 1       ; 1       ;
+; cnt.010 ; 0       ; 0       ; 1       ; 0       ; 1       ;
+; cnt.011 ; 0       ; 1       ; 0       ; 0       ; 1       ;
+; cnt.000 ; 1       ; 0       ; 0       ; 0       ; 1       ;
++---------+---------+---------+---------+---------+---------+
+
+
++------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                  ;
++----------------------------------------------------+------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal    ; Free of Timing Hazards ;
++----------------------------------------------------+------------------------+------------------------+
+; Mp3:inst4|musica1play                              ; Mp3:inst4|estado_atual ; yes                    ;
+; Mp3:inst4|musica1stop                              ; Mp3:inst4|estado_atual ; yes                    ;
+; Mp3:inst4|musica2stop                              ; Mp3:inst4|estado_atual ; yes                    ;
+; Mp3:inst4|musica2play                              ; Mp3:inst4|estado_atual ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                        ;                        ;
++----------------------------------------------------+------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                               ;
++-------------------------------------------------+------------------------------------------------+
+; Register name                                   ; Reason for Removal                             ;
++-------------------------------------------------+------------------------------------------------+
+; leds:inst1|saida[2]                             ; Stuck at GND due to stuck port data_in         ;
+; leds:inst1|saida[3]                             ; Stuck at VCC due to stuck port data_in         ;
+; I2C_READ_verilog:inst2|addr_reg[1..3,5,6]       ; Stuck at GND due to stuck port data_in         ;
+; leds:inst1|saida[1]                             ; Merged with leds:inst1|saida[4]                ;
+; I2C_READ_verilog:inst2|addr_reg[4,7]            ; Merged with I2C_READ_verilog:inst2|addr_reg[0] ;
+; leds:inst1|saida[4]                             ; Stuck at VCC due to stuck port data_in         ;
+; I2C_READ_verilog:inst2|cnt.100                  ; Lost fanout                                    ;
+; Mp3:inst4|Over_The_Rainbow:contro|prox_estado~2 ; Lost fanout                                    ;
+; Mp3:inst4|Over_The_Rainbow:contro|prox_estado~3 ; Lost fanout                                    ;
+; Mp3:inst4|Over_The_Rainbow:contro|prox_estado~4 ; Lost fanout                                    ;
+; Mp3:inst4|Over_The_Rainbow:contro|prox_estado~5 ; Lost fanout                                    ;
+; Mp3:inst4|Over_The_Rainbow:contro|prox_estado~6 ; Lost fanout                                    ;
+; Mp3:inst4|Over_The_Rainbow:contro|estado~2      ; Lost fanout                                    ;
+; Mp3:inst4|Over_The_Rainbow:contro|estado~3      ; Lost fanout                                    ;
+; Mp3:inst4|Over_The_Rainbow:contro|estado~4      ; Lost fanout                                    ;
+; Mp3:inst4|Over_The_Rainbow:contro|estado~5      ; Lost fanout                                    ;
+; Mp3:inst4|Over_The_Rainbow:contro|estado~6      ; Lost fanout                                    ;
+; Mp3:inst4|Fur_Elise:control|prox_estado~2       ; Lost fanout                                    ;
+; Mp3:inst4|Fur_Elise:control|prox_estado~3       ; Lost fanout                                    ;
+; Mp3:inst4|Fur_Elise:control|prox_estado~4       ; Lost fanout                                    ;
+; Mp3:inst4|Fur_Elise:control|prox_estado~5       ; Lost fanout                                    ;
+; Mp3:inst4|Fur_Elise:control|prox_estado~6       ; Lost fanout                                    ;
+; Mp3:inst4|Fur_Elise:control|prox_estado~7       ; Lost fanout                                    ;
+; Mp3:inst4|Fur_Elise:control|estado~2            ; Lost fanout                                    ;
+; Mp3:inst4|Fur_Elise:control|estado~3            ; Lost fanout                                    ;
+; Mp3:inst4|Fur_Elise:control|estado~4            ; Lost fanout                                    ;
+; Mp3:inst4|Fur_Elise:control|estado~5            ; Lost fanout                                    ;
+; Mp3:inst4|Fur_Elise:control|estado~6            ; Lost fanout                                    ;
+; Mp3:inst4|Fur_Elise:control|estado~7            ; Lost fanout                                    ;
+; I2C_READ_verilog:inst2|estado~14                ; Lost fanout                                    ;
+; I2C_READ_verilog:inst2|cnt~4                    ; Lost fanout                                    ;
+; I2C_READ_verilog:inst2|cnt~5                    ; Lost fanout                                    ;
+; I2C_READ_verilog:inst2|timer_cnt[0]             ; Merged with I2C_READ_verilog:inst2|scl_cnt[0]  ;
+; I2C_READ_verilog:inst2|timer_cnt[1]             ; Merged with I2C_READ_verilog:inst2|scl_cnt[1]  ;
+; Total Number of Removed Registers = 39          ;                                                ;
++-------------------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                              ;
++---------------------+---------------------------+----------------------------------------+
+; Register name       ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------------+---------------------------+----------------------------------------+
+; leds:inst1|saida[2] ; Stuck at GND              ; leds:inst1|saida[3]                    ;
+;                     ; due to stuck port data_in ;                                        ;
++---------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 336   ;
+; Number of registers using Synchronous Clear  ; 119   ;
+; Number of registers using Synchronous Load   ; 28    ;
+; Number of registers using Asynchronous Clear ; 81    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 34    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; I2C_READ_verilog:inst2|sda_r           ; 6       ;
+; I2C_READ_verilog:inst2|sda_link        ; 2       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |top_entity|Mp3:inst4|temporizador:temp|cnt[16] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |top_entity|Mp3:inst4|temporizador:temp|cnt[7]  ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |top_entity|Mp3:inst4|temporizador:temp|cnt[17] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_entity|ir_verilog:inst|comando[1]          ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top_entity|ir_verilog:inst|cnt2[8]             ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |top_entity|ir_verilog:inst|cnt1[0]             ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |top_entity|ir_verilog:inst|data_cnt[4]         ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |top_entity|I2C_READ_verilog:inst2|data_cnt[3]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mp3:inst4|Over_The_Rainbow:contro"                                                     ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Clk_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mp3:inst4|Fur_Elise:control"                                                           ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Clk_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 23                          ;
+; cycloneiii_ff         ; 336                         ;
+;     CLR               ; 77                          ;
+;     ENA               ; 15                          ;
+;     ENA CLR           ; 4                           ;
+;     ENA SCLR          ; 15                          ;
+;     SCLR              ; 104                         ;
+;     SLD               ; 28                          ;
+;     plain             ; 93                          ;
+; cycloneiii_io_obuf    ; 1                           ;
+; cycloneiii_lcell_comb ; 589                         ;
+;     arith             ; 138                         ;
+;         2 data inputs ; 123                         ;
+;         3 data inputs ; 15                          ;
+;     normal            ; 451                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 52                          ;
+;         3 data inputs ; 150                         ;
+;         4 data inputs ; 231                         ;
+;                       ;                             ;
+; Max LUT depth         ; 8.30                        ;
+; Average LUT depth     ; 3.65                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Sep 21 15:32:58 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ir -c ir
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ir_verilog.v
+    Info (12023): Found entity 1: ir_verilog File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/ir_verilog.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file vga_interface_topo.bdf
+    Info (12023): Found entity 1: vga_interface_topo
+Info (12021): Found 1 design units, including 1 entities, in source file VGA_interface.v
+    Info (12023): Found entity 1: VGA_interface File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/VGA_interface.v Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file vertical_sync.v
+    Info (12023): Found entity 1: vertical_sync File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/vertical_sync.v Line: 46
+Info (12021): Found 1 design units, including 1 entities, in source file pixel_generator.v
+    Info (12023): Found entity 1: pixel_generator File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/pixel_generator.v Line: 48
+Info (12021): Found 1 design units, including 1 entities, in source file horizontal_sync.v
+    Info (12023): Found entity 1: horizontal_sync File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/horizontal_sync.v Line: 46
+Info (12021): Found 1 design units, including 1 entities, in source file top_entity.bdf
+    Info (12023): Found entity 1: top_entity
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/leds.v
+    Info (12023): Found entity 1: leds File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/output_files/leds.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file I2C_READ_verilog.v
+    Info (12023): Found entity 1: I2C_READ_verilog File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/I2C_READ_verilog.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file SEG_D_verilog.v
+    Info (12023): Found entity 1: SEG_D_verilog File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file LM75A_7SEG_verilog.v
+    Info (12023): Found entity 1: LM75A_7SEG_verilog File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/LM75A_7SEG_verilog.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Mp3.v
+    Info (12023): Found entity 1: Mp3 File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file divisor_clock.v
+    Info (12023): Found entity 1: divisor_clock File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/divisor_clock.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file temporizador.v
+    Info (12023): Found entity 1: temporizador File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/temporizador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Fur_Elise.v
+    Info (12023): Found entity 1: Fur_Elise File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Fur_Elise.v Line: 1
+Warning (10274): Verilog HDL macro warning at Over_The_Rainbow.v(46): overriding existing definition for macro "BPM", which was defined in "Fur_Elise.v", line 48 File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Over_The_Rainbow.v Line: 46
+Warning (10274): Verilog HDL macro warning at Over_The_Rainbow.v(48): overriding existing definition for macro "BPS", which was defined in "Fur_Elise.v", line 50 File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Over_The_Rainbow.v Line: 48
+Warning (10274): Verilog HDL macro warning at Over_The_Rainbow.v(56): overriding existing definition for macro "ov_t4", which was defined in "Fur_Elise.v", line 60 File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Over_The_Rainbow.v Line: 56
+Warning (10274): Verilog HDL macro warning at Over_The_Rainbow.v(57): overriding existing definition for macro "ov_t2", which was defined in "Fur_Elise.v", line 61 File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Over_The_Rainbow.v Line: 57
+Warning (10274): Verilog HDL macro warning at Over_The_Rainbow.v(58): overriding existing definition for macro "ov_t1", which was defined in "Fur_Elise.v", line 62 File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Over_The_Rainbow.v Line: 58
+Warning (10274): Verilog HDL macro warning at Over_The_Rainbow.v(59): overriding existing definition for macro "ov_t1_2", which was defined in "Fur_Elise.v", line 63 File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Over_The_Rainbow.v Line: 59
+Warning (10274): Verilog HDL macro warning at Over_The_Rainbow.v(60): overriding existing definition for macro "ov_t1_4", which was defined in "Fur_Elise.v", line 64 File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Over_The_Rainbow.v Line: 60
+Info (12021): Found 1 design units, including 1 entities, in source file Over_The_Rainbow.v
+    Info (12023): Found entity 1: Over_The_Rainbow File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Over_The_Rainbow.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file driver_monitor.v
+    Info (12023): Found entity 1: driver_monitor File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/driver_monitor.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Mp3.v(47): created implicit net for "musica1_1" File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 47
+Warning (10236): Verilog HDL Implicit Net warning at Mp3.v(48): created implicit net for "musica1_2" File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at Mp3.v(49): created implicit net for "musica2_1" File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at Mp3.v(50): created implicit net for "musica2_2" File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 50
+Info (12127): Elaborating entity "top_entity" for the top level hierarchy
+Info (12128): Elaborating entity "I2C_READ_verilog" for hierarchy "I2C_READ_verilog:inst2"
+Info (12128): Elaborating entity "Mp3" for hierarchy "Mp3:inst4"
+Warning (10230): Verilog HDL assignment warning at Mp3.v(47): truncated value with size 128 to match size of target (1) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 47
+Warning (10230): Verilog HDL assignment warning at Mp3.v(48): truncated value with size 128 to match size of target (1) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 48
+Warning (10230): Verilog HDL assignment warning at Mp3.v(49): truncated value with size 128 to match size of target (1) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 49
+Warning (10230): Verilog HDL assignment warning at Mp3.v(50): truncated value with size 128 to match size of target (1) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 50
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(193): variable "play_pause" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 193
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(194): variable "stop" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 194
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(195): variable "musica1t2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 195
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(196): variable "musica1t3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 196
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(197): variable "musica1t5" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 197
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(198): variable "musica1_1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 198
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(199): variable "musica1_2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 199
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(203): variable "play_pause" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 203
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(204): variable "stop" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 204
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(205): variable "musica2t2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 205
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(206): variable "musica2t3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 206
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(207): variable "musica2t5" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 207
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(208): variable "musica2_1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 208
+Warning (10235): Verilog HDL Always Construct warning at Mp3.v(209): variable "musica2_2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 209
+Warning (10240): Verilog HDL Always Construct warning at Mp3.v(189): inferring latch(es) for variable "musica2play", which holds its previous value in one or more paths through the always construct File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 189
+Warning (10240): Verilog HDL Always Construct warning at Mp3.v(189): inferring latch(es) for variable "musica2stop", which holds its previous value in one or more paths through the always construct File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 189
+Warning (10240): Verilog HDL Always Construct warning at Mp3.v(189): inferring latch(es) for variable "musica1play", which holds its previous value in one or more paths through the always construct File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 189
+Warning (10240): Verilog HDL Always Construct warning at Mp3.v(189): inferring latch(es) for variable "musica1stop", which holds its previous value in one or more paths through the always construct File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 189
+Info (10041): Inferred latch for "musica1stop" at Mp3.v(189) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 189
+Info (10041): Inferred latch for "musica1play" at Mp3.v(189) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 189
+Info (10041): Inferred latch for "musica2stop" at Mp3.v(189) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 189
+Info (10041): Inferred latch for "musica2play" at Mp3.v(189) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 189
+Info (12128): Elaborating entity "temporizador" for hierarchy "Mp3:inst4|temporizador:temp" File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 56
+Info (12128): Elaborating entity "divisor_clock" for hierarchy "Mp3:inst4|divisor_clock:div_clk" File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 61
+Info (12128): Elaborating entity "Fur_Elise" for hierarchy "Mp3:inst4|Fur_Elise:control" File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 158
+Info (12128): Elaborating entity "Over_The_Rainbow" for hierarchy "Mp3:inst4|Over_The_Rainbow:contro" File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/Mp3.v Line: 168
+Info (12128): Elaborating entity "ir_verilog" for hierarchy "ir_verilog:inst"
+Warning (10036): Verilog HDL or VHDL warning at ir_verilog.v(25): object "c_endereco" assigned a value but never read File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/ir_verilog.v Line: 25
+Warning (10036): Verilog HDL or VHDL warning at ir_verilog.v(25): object "endereco" assigned a value but never read File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/ir_verilog.v Line: 25
+Warning (10036): Verilog HDL or VHDL warning at ir_verilog.v(25): object "c_comando" assigned a value but never read File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/ir_verilog.v Line: 25
+Info (12128): Elaborating entity "SEG_D_verilog" for hierarchy "SEG_D_verilog:inst3"
+Warning (10230): Verilog HDL assignment warning at SEG_D_verilog.v(69): truncated value with size 7 to match size of target (4) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 69
+Warning (10230): Verilog HDL assignment warning at SEG_D_verilog.v(70): truncated value with size 7 to match size of target (4) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 70
+Warning (10230): Verilog HDL assignment warning at SEG_D_verilog.v(71): truncated value with size 7 to match size of target (4) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 71
+Warning (10230): Verilog HDL assignment warning at SEG_D_verilog.v(72): truncated value with size 7 to match size of target (4) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 72
+Warning (10230): Verilog HDL assignment warning at SEG_D_verilog.v(73): truncated value with size 7 to match size of target (4) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 73
+Warning (10230): Verilog HDL assignment warning at SEG_D_verilog.v(74): truncated value with size 7 to match size of target (4) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 74
+Warning (10230): Verilog HDL assignment warning at SEG_D_verilog.v(75): truncated value with size 7 to match size of target (4) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 75
+Warning (10230): Verilog HDL assignment warning at SEG_D_verilog.v(76): truncated value with size 7 to match size of target (4) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 76
+Warning (10230): Verilog HDL assignment warning at SEG_D_verilog.v(77): truncated value with size 7 to match size of target (4) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 77
+Warning (10230): Verilog HDL assignment warning at SEG_D_verilog.v(78): truncated value with size 7 to match size of target (4) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 78
+Warning (10230): Verilog HDL assignment warning at SEG_D_verilog.v(79): truncated value with size 7 to match size of target (4) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 79
+Warning (10230): Verilog HDL assignment warning at SEG_D_verilog.v(80): truncated value with size 7 to match size of target (4) File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/SEG_D_verilog.v Line: 80
+Info (12128): Elaborating entity "leds" for hierarchy "leds:inst1"
+Info (13000): Registers with preset signals will power-up high File: /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/I2C_READ_verilog.v Line: 11
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led[4]" is stuck at VCC
+    Warning (13410): Pin "led[3]" is stuck at VCC
+    Warning (13410): Pin "led[2]" is stuck at GND
+    Warning (13410): Pin "led[1]" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 26 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored 24 assignments for entity "vga_interface_topo" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity vga_interface_topo -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity vga_interface_topo -section_id Top was ignored
+Info (144001): Generated suppressed messages file /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/output_files/ir.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 674 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 651 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 78 warnings
+    Info: Peak virtual memory: 487 megabytes
+    Info: Processing ended: Thu Sep 21 15:33:04 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:16
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/hpsilva/Documents/ufpe_eletronica_digital/Projeto 4/ir/output_files/ir.map.smsg.
+
+

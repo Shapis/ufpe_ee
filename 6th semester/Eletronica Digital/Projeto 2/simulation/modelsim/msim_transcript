@@ -1,0 +1,28 @@
+# Reading pref.tcl
+# do projeto2_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying D:/intelFPGA_lite/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {projeto2.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:04:15 on Aug 05,2023
+# vcom -reportprogress 300 -93 -work work projeto2.vho 
+# -- Loading package STANDARD
+# init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/pedro/OneDrive/Área de Trabalho/ufpe_eletronica_digital/Projeto 2/simulation/modelsim/gate_work/_lib.qdb): unable to open database file
+# mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+# ** Fatal: (vcom-9) Problem while writing token file "C:/Users/pedro/OneDrive/Área de Trabalho/ufpe_eletronica_digital/Projeto 2/simulation/modelsim/gate_work/_temp/vcomcqjmbg".
+# ** Note: projeto2.vho(30): VHDL Compiler exiting
+# End time: 23:04:15 on Aug 05,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: D:/intelFPGA_lite/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./projeto2_run_msim_gate_vhdl.do line 8
+# D:/intelFPGA_lite/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {projeto2.vho}"
