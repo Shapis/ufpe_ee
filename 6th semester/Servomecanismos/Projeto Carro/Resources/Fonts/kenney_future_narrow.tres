@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://dy4fvce65chtr"]
+
+[ext_resource type="FontFile" uid="uid://bijrrimh3wxqv" path="res://Assets/Fonts/kfn_40.ttf" id="1_348tq"]
+
+[resource]
+base_font = ExtResource("1_348tq")

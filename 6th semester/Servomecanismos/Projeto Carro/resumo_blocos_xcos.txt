@@ -1,0 +1,28 @@
+Omega esq/dir : função de transferencia para cada roda. 20/peso/(0.5s+1)
+
+aceleracao esq/dir : derivada da velocidade para cada roda.
+
+somatorio_Vr : soma das velocidades da roda direita e da roda esquerda para encontrar a velocidade linear do robo.
+
+diferenca_das_velocidades : diferença entre Vd e Ve para encontrar o angulo do carrinho.
+
+integral_Xcentral : ao integrar a saída do somatorio_Vr*cos é dado a posição X central do carrinho.
+
+integral_Ycentral : ao integrar somatorio_Vr*sen é dado a posicao Y central do carrinho.
+
+somatorio_Xrodaesquerda : ao fazer Px_central - (a distancia central até a roda do carrinho)*sen(theta) é obtida a posiçãox
+da roda esquerda.
+
+somatorio_Xrodadireita : ao fazer Px_central + (a distancia central até a roda do carrinho)*sen(theta) é obtida a posiçãox
+da roda direita.
+
+somatorio_Xdirecao : ao somar Px + cos(theta) é obtido um pontinho a frente do carrinho que mostra sua direção.
+
+somatorio_Yrodaesquerda : ao fazer Py_central - (a distancia central até a roda do carrinho)*cos(theta) é obtida a posiçãoy
+da roda esquerda.
+
+somatorio_Yrodadireita : ao fazer Py_central + (a distancia central até a roda do carrinho)*cos(theta) é obtida a posiçãoy
+da roda direita.
+
+somatorio_Ydirecao : ao somar Py + sen(theta) é obtido um pontinho a frente do carrinho que mostra sua direção.
+
