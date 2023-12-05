@@ -1,27 +1,53 @@
 \section{Análise dos resultados}
 
-Os principais resultados obtidos a partir das medições e simulações realizadas no experimento foram analisados, incluindo comparações com os resultados numéricos e as conclusões relevantes.
+Na análise, foca-se nas frequências de corte para compreender a importância de cada capacitor em sua determinação. Isso permite não apenas quantificar a influência de cada componente, mas também compreender a complexa interação entre eles.
 
-\subsection{Calculo do ganho $\beta$}
+\subsection{Frequências de corte}
 
-Calcula-se o $I_c$ a partir de:
+Para o circuito com seus componentes inciais temos a seguinte frequência de corte:
 
-\begin{equation}
-    I_c = \frac{V_{rc}}{R_c} = \frac{5.87}{470} = 12.5 mA
-\end{equation}
-
-Com isto calcula-se o $I_e$:
+\subsubsection{Circuito original}
 
 \begin{equation}
-    I_e = \frac{(V_e - V_{ee})}{R_e} = \frac{(-5.7 - (-8.006))}{178.4} = 12.9 mA
+    F_L = 880 Hz
 \end{equation}
 
-E temos $I_b$ = $I_e$ - $I_c$ = $0.04 mA$.
-
-E por fim o $\beta$:
+\subsubsection{Circuito com $C_1$ 10 vezes menor}
 
 \begin{equation}
-    \beta = \frac{I_c}{I_b} = \frac{12.5}{0.04} = 31.25
+    F_L = 1.1 kHz
 \end{equation}
 
-Acredito que a medição do parâmetro $\beta$ não tenha sido precisa o suficiente, e suspeito que a fonte do problema esteja centralizada na aferição de $V_{rc}$.
+\subsubsection{Circuito com $C_1$ 10 vezes maior}
+
+\begin{equation}
+    F_L = 880 Hz
+\end{equation}
+
+\subsubsection{Circuito com $C_2$ 10 vezes menor}
+
+\begin{equation}
+    F_L = 8.3 kHz
+\end{equation}
+
+\subsubsection{Circuito com $C_2$ 10 vezes maior}
+
+\begin{equation}
+    F_L = 480 Hz
+\end{equation}
+
+\subsubsection{Circuito com $C_3$ 10 vezes menor}
+
+\begin{equation}
+    F_L = 999 Hz
+\end{equation}
+
+\subsubsection{Circuito com $C_3$ 10 vezes maior}
+
+\begin{equation}
+    F_L = 870 Hz
+\end{equation}
+
+\subsection{Capacitor dominante}
+
+Ao dispor dessas frequências, torna-se evidente que o capacitor $C_2$ desempenha um papel proeminente e determinante nas características de corte do circuito. Sua influência preponderante sugere que as propriedades específicas desse componente exercem um impacto significativo na resposta do circuito em diferentes faixas de frequência.
