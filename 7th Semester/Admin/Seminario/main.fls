@@ -1629,6 +1629,9 @@ INPUT logos/ufpe.png
 INPUT ./logos/ufpe.png
 INPUT ./logos/ufpe.png
 INPUT logos/ufpe.png
+INPUT ./logos/ufpe.png
+INPUT ./logos/ufpe.png
+INPUT logos/ufpe.png
 OUTPUT main.nav
 OUTPUT main.toc
 OUTPUT main.snm

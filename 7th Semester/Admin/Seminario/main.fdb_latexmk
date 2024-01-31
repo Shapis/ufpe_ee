@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1706603045 "main.xdv" "main.pdf" "main" 1706603045 0
-  "main.xdv" 1706603045 74272 9dab46262e486d9c3ba105c991c75f3b "xelatex"
+["xdvipdfmx"] 1706689063 "main.xdv" "main.pdf" "main" 1706689063 0
+  "main.xdv" 1706689063 77204 db79e8a7f86f0c0bb769bf50408f385a "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1706603044 "/home/hpsilva/Documents/ufpe_ee/7th Semester/Admin/Seminario/main.tex" "main.xdv" "main" 1706603045 0
-  "/home/hpsilva/Documents/ufpe_ee/7th Semester/Admin/Seminario/main.tex" 1706603043 7201 e79273755baa15c0685016a4cafbd430 ""
+["xelatex"] 1706689062 "/home/hpsilva/Documents/ufpe_ee/7th Semester/Admin/Seminario/main.tex" "main.xdv" "main" 1706689063 0
+  "/home/hpsilva/Documents/ufpe_ee/7th Semester/Admin/Seminario/main.tex" 1706689060 7363 30d38b3601f5f19047f5133b93ea6c98 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1704400182 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1704400182 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1704400182 1004 54797486969f23fa377b128694d548df ""
@@ -228,11 +228,11 @@
   "beamerinnerthemeSimplePlusAIC.sty" 1706600075 4266 0d478c8c0f0edb72538f778cafb5776e ""
   "beamerthemeSimplePlusAIC.sty" 1706600075 175 c516fa9c4f73c8b029dfa3036dfde8f5 ""
   "logos/ufpe.png" 1706600075 53455 6a84258bd7c6b296269976732f6c3b7b ""
-  "main.aux" 1706603045 7729 8d632d3142380af4500e4239cf6f7711 "xelatex"
-  "main.nav" 1706603045 3711 3eff8f50ec691615667f47166512fcbf "xelatex"
-  "main.out" 1706603045 2106 1d553a30c13bfbcea2de3ec4eadd5ad2 "xelatex"
-  "main.tex" 1706603043 7201 e79273755baa15c0685016a4cafbd430 ""
-  "main.toc" 1706603045 783 212fa0c130877b2df5abfbcc4fce1cb2 "xelatex"
+  "main.aux" 1706689063 7966 248e383956aee66d72ce0c3f50c1ca43 "xelatex"
+  "main.nav" 1706689063 3818 04ef5ff19d36bec67d1430d35b0f9db6 "xelatex"
+  "main.out" 1706689063 2149 4fd9f63aba5fb6d8d08a077eb6f06464 "xelatex"
+  "main.tex" 1706689060 7363 30d38b3601f5f19047f5133b93ea6c98 ""
+  "main.toc" 1706689063 790 f52b49570e23dee80d7764d5bf90ec59 "xelatex"
   (generated)
   "main.aux"
   "main.log"
