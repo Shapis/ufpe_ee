@@ -4,15 +4,23 @@ import librosa
 import numpy as np
 from scipy.fftpack import fft, ifft
 import soundfile as sf
-from scipy.signal import butter, lfilter, spectrogram
+from scipy.signal import butter, lfilter, spectrogram, iirdesign
+
 
 mpl.use("GTK3Agg")
 
-y, fs = librosa.load("/home/hpsilva/Music/RingOfFire.wav")
+# y, fs = librosa.load("/home/hpsilva/Music/RingOfFire.wav")
+# y, fs = librosa.load("/home/hpsilva/Music/low.wav")
+y, fs = librosa.load("/home/hpsilva/Music/EnjoyTheSilence.wav")
+# y, fs = librosa.load("/home/hpsilva/Music/HouseOfTheRisingSun.wav")
+# y, fs = librosa.load("/home/hpsilva/Music/jump.wav")
 
 
 # Frequência de corte
-fc = round(5000 * 3.6 * 6.28)
+fc = round(4000)
+
+# Design high-pass filter
+b, a = butter(25, fc / (fs / 2), btype="high")
 
 
 def gerar_filtro_passa_alta(tamanho_fft, frequencia_corte):
@@ -22,15 +30,16 @@ def gerar_filtro_passa_alta(tamanho_fft, frequencia_corte):
 
 
 tamanho_fft = len(y)
-fpa = gerar_filtro_passa_alta(tamanho_fft, fc)
+# fpa = gerar_filtro_passa_alta(tamanho_fft, fc)
 
 Y = fft(y)
 
-Y = Y * fpa * fpa[::-1]
+# Y = Y * fpa * fpa[::-1]
 
-y_filtered = ifft(Y).real
+# y_filtered = ifft(Y).real
 
-# y_filtered = 2.0 / len(y) * np.abs(ifft(Y)[: len(y) // 2])
+y_filtered = lfilter(b, a, y)
+
 
 # Plot original and filtered signals
 plt.figure(figsize=(10, 6))
@@ -73,5 +82,4 @@ print(abs(y_filtered))
 
 
 sf.write("original.wav", y, fs)
-sf.write("filtered.wav", y_filtered.real * 15, fs)
-sf.write("transformado.wav", Y.real, fs)
+sf.write("filtered.wav", y_filtered.real * 4, fs)
