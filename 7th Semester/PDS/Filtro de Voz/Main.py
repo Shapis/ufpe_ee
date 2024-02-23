@@ -2,28 +2,19 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.fftpack import fft, ifft
-import soundfile as sf
 from scipy.signal import butter, lfilter, spectrogram, cheby1, cheby2
-
+from LeitorEscritor import LeitorEscritor
+from Filtro import Filtro, TipoDeFiltro, MetodoDeFiltro
 
 mpl.use("GTK3Agg")
-y, fs = sf.read("/home/hpsilva/Music/Sobrepos.wav")
-# y, fs = librosa.load("/home/hpsilva/Music/RingOfFire.wav")
-# y, fs = librosa.load("/home/hpsilva/Music/low.wav")
-# y, fs = librosa.load("/home/hpsilva/Music/EnjoyTheSilence.wav")
-# y, fs = librosa.load("/home/hpsilva/Music/HouseOfTheRisingSun.wav")
-# y, fs = librosa.load("/home/hpsilva/Music/jump.wav")
 
-# left_channel = y[:, 0]
-# right_channel = y[:, 1]
+leitor = LeitorEscritor("Sobrepos.wav")
 
-# y = (left_channel + right_channel) / 2
+y, fs = leitor.sinal
 
-# Frequência de corte
-fc = round(4000)
+filtro = Filtro(fs)
 
-# Design high-pass filter
-b, a = butter(25, fc / (fs / 2), btype="high")
+b, a = filtro.filtro
 
 
 # def gerar_filtro_passa_alta(tamanho_fft, frequencia_corte):
@@ -80,5 +71,5 @@ plt.ylabel("Frequency (Hz)")
 plt.tight_layout()
 plt.show()
 
-sf.write("output/original.wav", y, fs)
-sf.write("output/filtered.wav", y_filtered.real, fs)
+leitor.write_signal("filtrado.wav", y_filtered, fs)
+leitor.write_signal("original.wav", y, fs)
