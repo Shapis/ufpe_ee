@@ -12,9 +12,13 @@ leitor = LeitorEscritor("Sobrepos.wav")
 
 y, fs = leitor.sinal
 
-filtro = Filtro(fs)
+filtro = Filtro(fs, len(y))
 
 b, a = filtro.filtro
+
+plt.figure(figsize=(10, 6))
+plt.plot(b, label="b")
+plt.show()
 
 
 # def gerar_filtro_passa_alta(tamanho_fft, frequencia_corte):
