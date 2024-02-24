@@ -1,10 +1,32 @@
 import time
 import paho.mqtt.client as mqtt
+import threading
+from clp import CLP
+
 
 client = mqtt.Client()
 
 # Configura o nivel de qos.
 qos = 1
+
+meuCLP = CLP("CLP 1")
+
+
+def checarInstrumentos():
+    while True:
+        time.sleep(2)
+        print("Checando instrumentos...")
+        enviar_dados()
+
+
+thread = threading.Thread(target=checarInstrumentos)
+thread.start()
+
+
+def enviar_dados():
+    for instrumento in meuCLP.instrumentos:
+        client.publish(instrumento.topico, instrumento.valor, qos)
+    pass
 
 
 # Lida com mensagens recebidas.
