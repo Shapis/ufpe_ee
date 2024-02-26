@@ -7,14 +7,14 @@ from clp import CLP
 client = mqtt.Client()
 
 # Configura o nivel de qos.
-qos = 1
+qos = 2
 
-meuCLP = CLP("CLP 1")
+meuCLP = CLP("CLP_1")
 
 
 def checarInstrumentos():
     while True:
-        time.sleep(2)
+        time.sleep(5)
         print("Checando instrumentos...")
         enviar_dados()
 
@@ -25,7 +25,7 @@ thread.start()
 
 def enviar_dados():
     for instrumento in meuCLP.instrumentos:
-        client.publish(instrumento.topico, instrumento.valor, qos)
+        client.publish("instrumentos/" + instrumento.nome, instrumento.lerMedida(), qos)
     pass
 
 
@@ -58,8 +58,8 @@ topico5 = "aparelhos/termometros"
 client.subscribe("instrumentos/#", qos)
 
 
-client.publish(topic, payload, qos)
+# client.publish(topic, payload, qos)
 
-client.publish(topic, "abcasdsa", qos)
+# client.publish(topic, "abcasdsa", qos)
 
 client.loop_forever()
