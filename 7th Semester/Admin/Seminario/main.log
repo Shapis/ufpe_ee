@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2024.2.7)  1 MAR 2024 14:17
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2024.2.7)  1 MAR 2024 15:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -954,20 +954,36 @@ LaTeX Font Info:    Font shape `TU/Epilogue(0)/m/n' will be
  [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/Epilogue(0)/m/it' will be
-(Font)              scaled to size 9.85492pt on input line 71.
+(Font)              scaled to size 9.85492pt on input line 89.
 LaTeX Font Info:    Font shape `TU/Epilogue(0)/m/it' will be
-(Font)              scaled to size 7.19995pt on input line 71.
+(Font)              scaled to size 7.19995pt on input line 89.
 LaTeX Font Info:    Font shape `TU/Epilogue(0)/m/it' will be
-(Font)              scaled to size 5.39996pt on input line 71.
+(Font)              scaled to size 5.39996pt on input line 89.
+LaTeX Font Info:    Font shape `TU/Epilogue(0)/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 89.
+LaTeX Font Info:    Font shape `TU/Epilogue(0)/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 89.
+LaTeX Font Info:    Font shape `TU/Epilogue(0)/m/n' will be
+(Font)              scaled to size 4.49997pt on input line 89.
+LaTeX Font Info:    Font shape `TU/Epilogue(0)/m/it' will be
+(Font)              scaled to size 8.99994pt on input line 89.
+LaTeX Font Info:    Font shape `TU/Epilogue(0)/m/it' will be
+(Font)              scaled to size 6.29996pt on input line 89.
+LaTeX Font Info:    Font shape `TU/Epilogue(0)/m/it' will be
+(Font)              scaled to size 4.49997pt on input line 89.
+LaTeX Font Info:    Font shape `TU/Epilogue(0)/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 89.
+LaTeX Font Info:    Font shape `TU/Epilogue(0)/m/it' will be
+(Font)              scaled to size 8.09995pt on input line 89.
 File: logos/ufpe.png Graphic file (type bmp)
 <logos/ufpe.png>
  [3
@@ -1039,15 +1055,15 @@ File: logos/ufpe.png Graphic file (type bmp)
 
  (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B7B2BFE890C28995ECACE4FD83A544FF;2286.
+(rerunfilecheck)             Checksum: 487994B5A2C23F07533359DBC3D501BB;2286.
  ) 
 Here is how much of TeX's memory you used:
- 29353 strings out of 476683
- 629879 string characters out of 5809791
- 1851018 words of memory out of 5000000
- 48990 multiletter control sequences out of 15000+600000
- 517495 words of font info for 76 fonts, out of 8000000 for 9000
+ 29463 strings out of 476683
+ 633217 string characters out of 5809791
+ 1853018 words of memory out of 5000000
+ 49079 multiletter control sequences out of 15000+600000
+ 520835 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,13n,122p,504b,805s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (14 pages, 74348 bytes).
+Output written on main.xdv (14 pages, 81824 bytes).
