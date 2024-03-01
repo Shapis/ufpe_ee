@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1709312288 "main.xdv" "main.pdf" "main" 1709312288 0
-  "main.xdv" 1709312288 73976 48d90ee6af058200c07836718473c742 "xelatex"
+["xdvipdfmx"] 1709313444 "main.xdv" "main.pdf" "main" 1709313444 0
+  "main.xdv" 1709313444 74348 19b30e30719c65c90385b75d30f63858 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1709312287 "/home/hpsilva/Documents/ufpe_ee/7th Semester/Admin/Seminario/main.tex" "main.xdv" "main" 1709312288 0
-  "/home/hpsilva/Documents/ufpe_ee/7th Semester/Admin/Seminario/main.tex" 1709312286 7368 710bb6686b13913d898441fa4515dfc4 ""
+["xelatex"] 1709313443 "/home/hpsilva/Documents/ufpe_ee/7th Semester/Admin/Seminario/main.tex" "main.xdv" "main" 1709313444 0
+  "/home/hpsilva/Documents/ufpe_ee/7th Semester/Admin/Seminario/main.tex" 1709313442 7396 8743def6a94b79ad23bd2b72e71dd72b ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1704400182 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1704400182 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1704400182 1004 54797486969f23fa377b128694d548df ""
@@ -228,11 +228,11 @@
   "beamerinnerthemeSimplePlusAIC.sty" 1707328393 4266 0d478c8c0f0edb72538f778cafb5776e ""
   "beamerthemeSimplePlusAIC.sty" 1707328393 175 c516fa9c4f73c8b029dfa3036dfde8f5 ""
   "logos/ufpe.png" 1707328393 53455 6a84258bd7c6b296269976732f6c3b7b ""
-  "main.aux" 1709312288 7750 a316a780507f44914955c0863d24e49f "xelatex"
-  "main.nav" 1709312288 3725 bf12ae0ccda7e044c8c593477ee4b8cb "xelatex"
-  "main.out" 1709312288 2149 4fd9f63aba5fb6d8d08a077eb6f06464 "xelatex"
-  "main.tex" 1709312286 7368 710bb6686b13913d898441fa4515dfc4 ""
-  "main.toc" 1709312288 790 f52b49570e23dee80d7764d5bf90ec59 "xelatex"
+  "main.aux" 1709313444 7828 933466ac1e20b0b817453dbc6bbdaa00 "xelatex"
+  "main.nav" 1709313444 3777 869bff3774395564dbf14a5d9e5d3e34 "xelatex"
+  "main.out" 1709313444 2286 b7b2bfe890c28995ecace4fd83a544ff "xelatex"
+  "main.tex" 1709313442 7396 8743def6a94b79ad23bd2b72e71dd72b ""
+  "main.toc" 1709313444 816 5f92aee53119943187885b0fbc8d5728 "xelatex"
   (generated)
   "main.aux"
   "main.log"

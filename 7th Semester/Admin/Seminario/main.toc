@@ -3,7 +3,7 @@
 \beamer@sectionintoc {2}{Estilos de Liderança}{4}{0}{2}
 \beamer@sectionintoc {3}{Atributos do Líder Eficaz}{5}{0}{3}
 \beamer@sectionintoc {4}{Desafios da Liderança}{6}{0}{4}
-\beamer@sectionintoc {5}{Liderança Situacional}{7}{0}{5}
+\beamer@sectionintoc {5}{Proposições inferidas da abordagem situacional}{7}{0}{5}
 \beamer@sectionintoc {6}{Habilidades de Liderança}{8}{0}{6}
 \beamer@sectionintoc {7}{Ética na Liderança}{9}{0}{7}
 \beamer@sectionintoc {8}{Liderança e Motivação}{10}{0}{8}
