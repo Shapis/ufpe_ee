@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1706689063 "main.xdv" "main.pdf" "main" 1706689063 0
-  "main.xdv" 1706689063 77204 db79e8a7f86f0c0bb769bf50408f385a "xelatex"
+["xdvipdfmx"] 1709312288 "main.xdv" "main.pdf" "main" 1709312288 0
+  "main.xdv" 1709312288 73976 48d90ee6af058200c07836718473c742 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1706689062 "/home/hpsilva/Documents/ufpe_ee/7th Semester/Admin/Seminario/main.tex" "main.xdv" "main" 1706689063 0
-  "/home/hpsilva/Documents/ufpe_ee/7th Semester/Admin/Seminario/main.tex" 1706689060 7363 30d38b3601f5f19047f5133b93ea6c98 ""
+["xelatex"] 1709312287 "/home/hpsilva/Documents/ufpe_ee/7th Semester/Admin/Seminario/main.tex" "main.xdv" "main" 1709312288 0
+  "/home/hpsilva/Documents/ufpe_ee/7th Semester/Admin/Seminario/main.tex" 1709312286 7368 710bb6686b13913d898441fa4515dfc4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1704400182 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1704400182 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1704400182 1004 54797486969f23fa377b128694d548df ""
@@ -222,17 +222,17 @@
   "/usr/share/texmf-dist/tex/latex/url/url.sty" 1704400182 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1704400182 56148 51a9a8571c07b9921892ae11063ae853 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1704400182 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1706188321 11045111 81ec27ba5ee1f7103bccfe25a38e05cd ""
-  "beamercolorthemeSimplePlusAIC.sty" 1706600075 1025 b83a2804d156a81c12c15752bf90ba17 ""
-  "beamerfontthemeSimplePlusAIC.sty" 1706600075 1004 590a2e32948bfebf3769072907aa7fd8 ""
-  "beamerinnerthemeSimplePlusAIC.sty" 1706600075 4266 0d478c8c0f0edb72538f778cafb5776e ""
-  "beamerthemeSimplePlusAIC.sty" 1706600075 175 c516fa9c4f73c8b029dfa3036dfde8f5 ""
-  "logos/ufpe.png" 1706600075 53455 6a84258bd7c6b296269976732f6c3b7b ""
-  "main.aux" 1706689063 7966 248e383956aee66d72ce0c3f50c1ca43 "xelatex"
-  "main.nav" 1706689063 3818 04ef5ff19d36bec67d1430d35b0f9db6 "xelatex"
-  "main.out" 1706689063 2149 4fd9f63aba5fb6d8d08a077eb6f06464 "xelatex"
-  "main.tex" 1706689060 7363 30d38b3601f5f19047f5133b93ea6c98 ""
-  "main.toc" 1706689063 790 f52b49570e23dee80d7764d5bf90ec59 "xelatex"
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1707327704 11045148 82fde0e94acf556f64f6da6e6b6b92ba ""
+  "beamercolorthemeSimplePlusAIC.sty" 1707328393 1025 b83a2804d156a81c12c15752bf90ba17 ""
+  "beamerfontthemeSimplePlusAIC.sty" 1707328393 1004 590a2e32948bfebf3769072907aa7fd8 ""
+  "beamerinnerthemeSimplePlusAIC.sty" 1707328393 4266 0d478c8c0f0edb72538f778cafb5776e ""
+  "beamerthemeSimplePlusAIC.sty" 1707328393 175 c516fa9c4f73c8b029dfa3036dfde8f5 ""
+  "logos/ufpe.png" 1707328393 53455 6a84258bd7c6b296269976732f6c3b7b ""
+  "main.aux" 1709312288 7750 a316a780507f44914955c0863d24e49f "xelatex"
+  "main.nav" 1709312288 3725 bf12ae0ccda7e044c8c593477ee4b8cb "xelatex"
+  "main.out" 1709312288 2149 4fd9f63aba5fb6d8d08a077eb6f06464 "xelatex"
+  "main.tex" 1709312286 7368 710bb6686b13913d898441fa4515dfc4 ""
+  "main.toc" 1709312288 790 f52b49570e23dee80d7764d5bf90ec59 "xelatex"
   (generated)
   "main.aux"
   "main.log"
