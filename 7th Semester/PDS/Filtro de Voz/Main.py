@@ -12,27 +12,25 @@ leitor = LeitorEscritor("Sobrepos.wav")
 
 y, fs = leitor.sinal
 
-filtro = Filtro(fs, len(y))
+fc = 5000
 
-b, a = filtro.filtro
+# filtro = Filtro(fs, len(y))
 
-plt.figure(figsize=(10, 6))
-plt.plot(b, label="b")
-plt.show()
+b, a = butter(25, fc / (fs / 2), btype="high")
 
 
-# def gerar_filtro_passa_alta(tamanho_fft, frequencia_corte):
-#     coeficientes = np.zeros(tamanho_fft)
-#     coeficientes[frequencia_corte:] = 1
-#     return coeficientes
+def gerar_filtro_passa_alta(tamanho_fft, frequencia_corte):
+    coeficientes = np.zeros(tamanho_fft)
+    coeficientes[frequencia_corte:] = 1
+    return coeficientes
 
 
-# tamanho_fft = len(y)
-# fpa = gerar_filtro_passa_alta(tamanho_fft, fc)
+tamanho_fft = len(y)
+fpa = gerar_filtro_passa_alta(tamanho_fft, 47500)
 
-# Y = fft(y)
+Y = fft(y)
 
-# Y = Y * fpa * fpa[::-1]
+Y = Y * fpa * fpa[::-1]
 
 # y_filtered = ifft(Y).real
 

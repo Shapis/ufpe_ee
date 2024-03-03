@@ -1,0 +1,136 @@
+\section{Análise preliminar}
+
+Na análise preliminar, utiliza-se LTSPICE em adição à análise de circuitos e parâmetros h para encontrar analiticamente os valores de \emph{A, $A_f$, $\beta$, $R_i$, $R_{if}$, $R_o$ e $R_{o f}$}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{Images/o_circuito.png}
+    \caption{Circuito em análise.}
+\end{figure}
+
+\subsection{$A_f$}
+
+Monta-se o circuito no LTSpice e faz-se que $A_f = \frac{V_o}{V_i}$. O que nos dá $A_f = 4$.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{Images/circuito_ltspice.jpeg}
+    \caption{Circuito no LTSpice.}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{Images/circuito_ltspice_ganho.jpeg}
+    \caption{Ganho do circuito no LTSpice.}
+\end{figure}
+
+\subsection{$\beta$}
+
+Faz-se cálculo do parâmetro $h_{12}$ para encontrar o $\beta$ da seguinte maneira:
+
+\begin{equation}
+    \begin{aligned}
+         & \beta = h_{12} = \frac{V_1}{V_2} | I_1 = 0                                    \\
+         & \beta = \frac{R_1 i_2}{\left( R_1 + R_2 \right) i_2} = \frac{10}{110} = 0.091
+    \end{aligned}
+\end{equation}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{Images/realimentacao_beta.png}
+    \caption{Circuito de realimentação.}
+\end{figure}
+
+\subsection{$A$}
+
+Tem-se a seguinte relação entre $A$ e o $A_f$ e $\beta$ previamente calculados:
+
+\begin{equation}
+    \begin{aligned}
+         & A_f = \frac{A}{1 + A\beta}           \\
+         & A = \frac{A_f}{1 - A_f \beta} = 6.28
+    \end{aligned}
+\end{equation}
+
+\subsection*{$R_if$ e $R_i$}
+
+A partir do valores achados para $\beta$ e $A$
+
+
+
+
+
+\subsubsection{Corrente nos transistores}
+
+\begin{center}
+    \begin{tabular}{ |c|c| }
+        \hline
+        Corrente & Medida        \\
+        $I_{C1}$ & $23.2 \mu A$  \\
+        $I_{B1}$ & $0.232 \mu A$ \\
+        $I_{E1}$ & $23.2 \mu A$  \\
+        $I_{C2}$ & $2.36 mA$     \\
+        $I_{B2}$ & $23.4 \mu A$  \\
+        $I_{E2}$ & $2.36 mA$     \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Análise de pequenos sinais}
+
+Com os valores da análise de grandes sinais calculados, podemos realizar a análise de pequenos sinais.
+
+\subsubsection{Calculando parâmetros}
+
+Para obter os ganhos globais e as impedâncias do circuito precisamos obter os parâmetros $g_m$, $r_{\pi}$, e $\beta$ de cada transistor. Para isso, utilizamos as seguintes equações:
+
+\begin{equation}
+    \begin{aligned}
+        g_m     & = \frac{I_C}{V_T}   \\
+        r_{\pi} & = \frac{\beta}{g_m} \\
+        \beta   & = \frac{I_C}{I_B}
+    \end{aligned}
+\end{equation}
+
+E obtemos os seguintes valores:
+
+\begin{center}
+    \begin{tabular}{ |c|c| }
+        \hline
+        Parâmetro   & Valor               \\
+        $g_{m1}$    & $9.27 * 10^{-4}$    \\
+        $g_{m2}$    & $9.36 * 10^{-2}$    \\
+        $\beta_1$   & $100$               \\
+        $\beta_2$   & $100$               \\
+        $r_{\pi 1}$ & $108 k \varOmega  $ \\
+        $r_{\pi 2}$ & $1.07 k \varOmega$  \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection{Impedâncias e ganhos}
+
+Com os parâmetros calculados, podemos obter as impedâncias e ganhos do circuito. Para isso, utilizamos as seguintes equações:
+
+\begin{equation}
+    \begin{aligned}
+        R_{inB_1} & = r_{\pi 1} + (\beta + 1) r_{pi2} \\
+        R_{in}    & = R_1 // R_2 // R_{inB_1}         \\
+        R_{out}   & = R_C // R_L                      \\
+        A_v       & = \frac{-gm R_{out}}{2}
+    \end{aligned}
+\end{equation}
+
+E obtemos os seguintes valores:
+
+\begin{center}
+    \begin{tabular}{ |c|c| }
+        \hline
+        Parâmetro   & Valor              \\
+        $R_{inB_1}$ & $216 k \varOmega$  \\
+        $R_{in}$    & $3.15 k \varOmega$ \\
+        $R_{out}$   & $1.1k \varOmega$   \\
+        $A_v$       & $-51.47$           \\
+        \hline
+    \end{tabular}
+\end{center}

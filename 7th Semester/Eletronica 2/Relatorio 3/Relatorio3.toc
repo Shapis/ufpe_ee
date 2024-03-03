@@ -1,0 +1,24 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{}{section.1}%
+\contentsline {section}{\numberline {2}Análise preliminar}{}{section.2}%
+\contentsline {subsection}{\numberline {2.1}$A_f$}{}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}$\beta $}{}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}$A$}{}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Corrente nos transistores}{}{subsubsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.4}Análise de pequenos sinais}{}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Calculando parâmetros}{}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Impedâncias e ganhos}{}{subsubsection.2.4.2}%
+\contentsline {section}{\numberline {3}Medições em laboratório}{}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Tabela de componentes}{}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Medidas sob diferentes condições}{}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Análise dos resultados}{}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Frequências de corte}{}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Circuito original}{}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Circuito com $C_1$ 10 vezes menor}{}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Circuito com $C_1$ 10 vezes maior}{}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Circuito com $C_2$ 10 vezes menor}{}{subsubsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}Circuito com $C_2$ 10 vezes maior}{}{subsubsection.4.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.6}Circuito com $C_3$ 10 vezes menor}{}{subsubsection.4.1.6}%
+\contentsline {subsubsection}{\numberline {4.1.7}Circuito com $C_3$ 10 vezes maior}{}{subsubsection.4.1.7}%
+\contentsline {subsection}{\numberline {4.2}Capacitor dominante}{}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Conclusões}{}{section.5}%
