@@ -1,0 +1,965 @@
+[
+    {
+        "id": "ca8254764eaad08d",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e0dd22e3e57f9ea1",
+        "type": "mqtt in",
+        "z": "ca8254764eaad08d",
+        "name": "Ar condicionado sala",
+        "topic": "aparelhos/arcondicionado/sala",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "53fca777adb9ba8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "040a3f85f9ee6cf9"
+            ]
+        ]
+    },
+    {
+        "id": "91916a3ccf3f0be7",
+        "type": "mqtt in",
+        "z": "ca8254764eaad08d",
+        "name": "Temperatura Sala",
+        "topic": "instrumentos/termometro/sala",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "53fca777adb9ba8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 80,
+        "wires": [
+            [
+                "9a72f41032c458e6",
+                "a97921d10e6b3163",
+                "04f7aa627d11e9b5"
+            ]
+        ]
+    },
+    {
+        "id": "9a72f41032c458e6",
+        "type": "ui_gauge",
+        "z": "ca8254764eaad08d",
+        "name": "",
+        "group": "cda11e372c96dc1c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura da sala",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "40",
+        "colors": [
+            "#008fb3",
+            "#32e600",
+            "#cb3a3a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 480,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "040a3f85f9ee6cf9",
+        "type": "ui_switch",
+        "z": "ca8254764eaad08d",
+        "name": "",
+        "label": "Ar condicionado sala",
+        "tooltip": "",
+        "group": "9b5c41388c0faab1",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-snowflake-o fa-3x",
+        "oncolor": "blue",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-snowflake-o fa-3x",
+        "offcolor": "gray",
+        "animate": false,
+        "className": "",
+        "x": 480,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "660721d539dba90d",
+        "type": "mqtt out",
+        "z": "ca8254764eaad08d",
+        "name": "",
+        "topic": "aparelhos/arcondicionado/sala",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "53fca777adb9ba8c",
+        "x": 770,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "1cef83d6048b993d",
+        "type": "mqtt in",
+        "z": "ca8254764eaad08d",
+        "name": "Ar condicionado Quarto",
+        "topic": "aparelhos/arcondicionado/quarto",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "53fca777adb9ba8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 420,
+        "wires": [
+            [
+                "5341db1d26803fda"
+            ]
+        ]
+    },
+    {
+        "id": "b6a2acd7d4681528",
+        "type": "mqtt in",
+        "z": "ca8254764eaad08d",
+        "name": "Temperatura Quarto",
+        "topic": "instrumentos/termometro/quarto",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "53fca777adb9ba8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 340,
+        "wires": [
+            [
+                "79b615f766e01ff4",
+                "973d7026ad2d1c3f",
+                "94707bf68a756ad2"
+            ]
+        ]
+    },
+    {
+        "id": "79b615f766e01ff4",
+        "type": "ui_gauge",
+        "z": "ca8254764eaad08d",
+        "name": "",
+        "group": "cda11e372c96dc1c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura do quarto",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "40",
+        "colors": [
+            "#008fb3",
+            "#32e600",
+            "#cb3a3a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 480,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "e3a9cfc9591f14d4",
+        "type": "mqtt out",
+        "z": "ca8254764eaad08d",
+        "name": "",
+        "topic": "aparelhos/arcondicionado/quarto",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "53fca777adb9ba8c",
+        "x": 780,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7b1a34b8344e66cb",
+        "type": "mqtt in",
+        "z": "ca8254764eaad08d",
+        "name": "Sensor de Presença",
+        "topic": "aparelhos/presenca",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "53fca777adb9ba8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 500,
+        "wires": [
+            [
+                "feb8bad303eac090",
+                "c57ffd211b83c31c",
+                "3efb086fe885ccb5"
+            ]
+        ]
+    },
+    {
+        "id": "62a1061a7e9a2b03",
+        "type": "ui_switch",
+        "z": "ca8254764eaad08d",
+        "name": "",
+        "label": "Fechadura",
+        "tooltip": "",
+        "group": "37ee3947f8ca58bb",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-unlock-alt  fa-3x",
+        "oncolor": "green",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-lock fa-3x",
+        "offcolor": "red",
+        "animate": false,
+        "className": "",
+        "x": 910,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "feb8bad303eac090",
+        "type": "mqtt out",
+        "z": "ca8254764eaad08d",
+        "name": "Porta",
+        "topic": "aparelhos/fechadura/porta",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "53fca777adb9ba8c",
+        "x": 430,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ca2e5bcfce00799c",
+        "type": "mqtt in",
+        "z": "ca8254764eaad08d",
+        "name": "Lâmpada",
+        "topic": "aparelhos/luminaria/exterior",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "53fca777adb9ba8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 840,
+        "wires": [
+            [
+                "8f3a5ac6ee0be011",
+                "68e89d0ce222bb9d"
+            ]
+        ]
+    },
+    {
+        "id": "52afa52558f54cae",
+        "type": "ui_switch",
+        "z": "ca8254764eaad08d",
+        "name": "Lâmpada ligada?",
+        "label": "Lâmpada ligada?",
+        "tooltip": "",
+        "group": "63f056b8e5e1dd53",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-lightbulb-o fa-3x",
+        "oncolor": "yellow",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-lightbulb-o fa-3x",
+        "offcolor": "gray",
+        "animate": false,
+        "className": "",
+        "x": 610,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "737a26fe0ee72bce",
+        "type": "mqtt out",
+        "z": "ca8254764eaad08d",
+        "name": "Lâmpada",
+        "topic": "aparelhos/luminaria/exterior",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "53fca777adb9ba8c",
+        "x": 700,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b3a1649af416e695",
+        "type": "ui_switch",
+        "z": "ca8254764eaad08d",
+        "name": "Ligar Lâmpada",
+        "label": "Ligar lâmpada",
+        "tooltip": "",
+        "group": "63f056b8e5e1dd53",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 200,
+        "y": 720,
+        "wires": [
+            [
+                "6ed4b0677cd521d2",
+                "8dbe168a61df4b09"
+            ]
+        ]
+    },
+    {
+        "id": "8f3a5ac6ee0be011",
+        "type": "change",
+        "z": "ca8254764eaad08d",
+        "name": "Lâmpada ligada",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "ligar",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 820,
+        "wires": [
+            [
+                "52afa52558f54cae"
+            ]
+        ]
+    },
+    {
+        "id": "68e89d0ce222bb9d",
+        "type": "change",
+        "z": "ca8254764eaad08d",
+        "name": "Lâmpada desligada",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "desligar",
+                "fromt": "str",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 860,
+        "wires": [
+            [
+                "52afa52558f54cae"
+            ]
+        ]
+    },
+    {
+        "id": "c84ed194dfe8b835",
+        "type": "mqtt in",
+        "z": "ca8254764eaad08d",
+        "name": "",
+        "topic": "aparelhos/fechadura/porta",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "53fca777adb9ba8c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 630,
+        "y": 500,
+        "wires": [
+            [
+                "62a1061a7e9a2b03"
+            ]
+        ]
+    },
+    {
+        "id": "5341db1d26803fda",
+        "type": "ui_switch",
+        "z": "ca8254764eaad08d",
+        "name": "",
+        "label": "Ar condicionado quarto",
+        "tooltip": "",
+        "group": "9b5c41388c0faab1",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-snowflake-o fa-3x",
+        "oncolor": "blue",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-snowflake-o fa-3x",
+        "offcolor": "gray",
+        "animate": false,
+        "className": "",
+        "x": 490,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ed4b0677cd521d2",
+        "type": "change",
+        "z": "ca8254764eaad08d",
+        "name": "Lâmpada ligada",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "ligar",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 700,
+        "wires": [
+            [
+                "737a26fe0ee72bce"
+            ]
+        ]
+    },
+    {
+        "id": "8dbe168a61df4b09",
+        "type": "change",
+        "z": "ca8254764eaad08d",
+        "name": "Lâmpada desligada",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "desligar",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 740,
+        "wires": [
+            [
+                "737a26fe0ee72bce"
+            ]
+        ]
+    },
+    {
+        "id": "973d7026ad2d1c3f",
+        "type": "function",
+        "z": "ca8254764eaad08d",
+        "name": "Lógica ar condicionado",
+        "func": "let temperatura = flow.get(\"tempQuarto\", msg.payload)\nif (msg.payload <= temperatura) {\n    let texto = false\n    msg.payload = {};\n    msg.payload = texto\n    return msg;\n}\nif (msg.payload >= temperatura) {\n    let texto = true\n    msg.payload = {};\n    msg.payload = texto\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 300,
+        "wires": [
+            [
+                "e3a9cfc9591f14d4"
+            ]
+        ]
+    },
+    {
+        "id": "a97921d10e6b3163",
+        "type": "function",
+        "z": "ca8254764eaad08d",
+        "name": "Lógica ar condicionado",
+        "func": "let temperatura = flow.get(\"temp\")\nif (msg.payload <= temperatura) {\n    let texto = false\n    msg.payload = {};\n    msg.payload = texto\n    return msg;\n}\nif (msg.payload >= temperatura) {\n    let texto = true\n    msg.payload = {};\n    msg.payload = texto\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 40,
+        "wires": [
+            [
+                "660721d539dba90d"
+            ]
+        ]
+    },
+    {
+        "id": "3efb086fe885ccb5",
+        "type": "change",
+        "z": "ca8254764eaad08d",
+        "name": "Sensor ativado",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 580,
+        "wires": [
+            [
+                "737a26fe0ee72bce"
+            ]
+        ]
+    },
+    {
+        "id": "c57ffd211b83c31c",
+        "type": "change",
+        "z": "ca8254764eaad08d",
+        "name": "Sensor desativado",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 620,
+        "wires": [
+            [
+                "737a26fe0ee72bce"
+            ]
+        ]
+    },
+    {
+        "id": "8621bcd8db5d1449",
+        "type": "function",
+        "z": "ca8254764eaad08d",
+        "name": "function 50",
+        "func": "flow.set(\"temp\", msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2cad8ad4c9071996",
+        "type": "ui_numeric",
+        "z": "ca8254764eaad08d",
+        "name": "",
+        "label": "Temperatura desejada sala",
+        "tooltip": "",
+        "group": "9b5c41388c0faab1",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "16",
+        "max": "30",
+        "step": 1,
+        "className": "",
+        "x": 240,
+        "y": 960,
+        "wires": [
+            [
+                "8621bcd8db5d1449"
+            ]
+        ]
+    },
+    {
+        "id": "c1365e113980bf01",
+        "type": "function",
+        "z": "ca8254764eaad08d",
+        "name": "function 51",
+        "func": "flow.set(\"tempQuarto\", msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "70e1bf47d5d56673",
+        "type": "ui_numeric",
+        "z": "ca8254764eaad08d",
+        "name": "",
+        "label": "Temperatura desejada quarto",
+        "tooltip": "",
+        "group": "9b5c41388c0faab1",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": "16",
+        "max": "30",
+        "step": 1,
+        "className": "",
+        "x": 240,
+        "y": 1020,
+        "wires": [
+            [
+                "c1365e113980bf01"
+            ]
+        ]
+    },
+    {
+        "id": "e74b0ba3d8658bee",
+        "type": "inject",
+        "z": "ca8254764eaad08d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "30",
+        "payloadType": "num",
+        "x": 290,
+        "y": 920,
+        "wires": [
+            [
+                "8621bcd8db5d1449"
+            ]
+        ]
+    },
+    {
+        "id": "79338dbac0997286",
+        "type": "inject",
+        "z": "ca8254764eaad08d",
+        "name": "16 (desligar) ",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "16",
+        "payloadType": "str",
+        "x": 230,
+        "y": 220,
+        "wires": [
+            [
+                "973d7026ad2d1c3f",
+                "a97921d10e6b3163"
+            ]
+        ]
+    },
+    {
+        "id": "13fa5f282bdc09b5",
+        "type": "inject",
+        "z": "ca8254764eaad08d",
+        "name": "30 (ligar)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "30",
+        "payloadType": "str",
+        "x": 220,
+        "y": 280,
+        "wires": [
+            [
+                "973d7026ad2d1c3f",
+                "a97921d10e6b3163"
+            ]
+        ]
+    },
+    {
+        "id": "04f7aa627d11e9b5",
+        "type": "debug",
+        "z": "ca8254764eaad08d",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "94707bf68a756ad2",
+        "type": "debug",
+        "z": "ca8254764eaad08d",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "53fca777adb9ba8c",
+        "type": "mqtt-broker",
+        "name": "broker.emqx.io",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "cda11e372c96dc1c",
+        "type": "ui_group",
+        "name": "Climatização",
+        "tab": "00ae9f51e4ba0ea5",
+        "order": 2,
+        "disp": true,
+        "width": 7,
+        "collapse": false
+    },
+    {
+        "id": "9b5c41388c0faab1",
+        "type": "ui_group",
+        "name": "Refrigeração",
+        "tab": "117df15b8fcd05a0",
+        "order": 2,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "37ee3947f8ca58bb",
+        "type": "ui_group",
+        "name": "Rede Elétrica",
+        "tab": "00ae9f51e4ba0ea5",
+        "order": 1,
+        "disp": true,
+        "width": 7,
+        "collapse": false
+    },
+    {
+        "id": "63f056b8e5e1dd53",
+        "type": "ui_group",
+        "name": "Lâmpada",
+        "tab": "117df15b8fcd05a0",
+        "order": 1,
+        "disp": true,
+        "width": 4,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "00ae9f51e4ba0ea5",
+        "type": "ui_tab",
+        "name": "Geral",
+        "icon": "fa-university fa-3x",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "117df15b8fcd05a0",
+        "type": "ui_tab",
+        "name": "Iluminação/refrigeração",
+        "icon": "fa-lightbulb fa-2x",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
