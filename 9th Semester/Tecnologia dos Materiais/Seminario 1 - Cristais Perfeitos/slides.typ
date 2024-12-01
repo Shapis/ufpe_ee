@@ -33,11 +33,8 @@
 == Johannes Kepler
 
 #quote(attribution: [Kepler, 1611])[
-  Each single plant has a single animating principle of its own, since each instance of a pl"medium",
-  title-color: blue.darken(60%),
-  toc: true,
-  count: false,urd, and therefore the shapes of snowflakes are by no means to be deduced from the operation of soul in the same way as with plants.
-]
+  Each single plant has a single animating principle of its own, since each instance of a plant exists separately, and there is no cause to wonder that each should be equipped with its own peculiar shape. But to imagine an individual soul for each and any starlet of snow is utterly absurd, and therefore the shapes of snowflakes are by no means to be deduced from the operation of soul in the same way as with plants.
+  ]
 
 #fonte[@kepler]
 
@@ -62,8 +59,6 @@
 #quote(attribution: [Wilson Bentley, 1925])[  
 Under the microscope, I found that snowflakes were miracles of beauty; and it seemed a shame that this beauty should not be seen and appreciated by others. Every crystal was a masterpiece of design and no one design was ever repeated. When a snowflake melted, that design was forever lost. Just that much beauty was gone, without leaving any record behind.
 ]
-
-#fonte["Eu vi em um sonho"]
 
 ==   Ukichiro Nakaya
 
