@@ -381,7 +381,7 @@ Neste experimento, busca-se recriar cristais de sal utilizando princípios apren
 #fonte[@crystalverse]
 
   #figure(
-  image("salt_crystal.jpg", width: 100%),
+  image("salt_crystal.jpg", width: 60%),
   caption: [
     Cristal de cloreto de sódio.
   ],
@@ -389,7 +389,7 @@ Neste experimento, busca-se recriar cristais de sal utilizando princípios apren
  <fig:crystal0>
 
    #figure(
-  image("salt1.jpg", width: 100%),
+  image("salt1.jpg", width: 60%),
   caption: [
     Criando a solução.
   ],
@@ -397,7 +397,7 @@ Neste experimento, busca-se recriar cristais de sal utilizando princípios apren
  <fig:crystal1>
 
     #figure(
-  image("salt2.jpg", width: 100%),
+  image("salt2.jpg", width: 60%),
   caption: [
     Solução criada.
   ],
@@ -405,7 +405,7 @@ Neste experimento, busca-se recriar cristais de sal utilizando princípios apren
  <fig:crystal2>
 
      #figure(
-  image("salt3.jpg", width: 100%),
+  image("salt3.jpg", width: 60%),
   caption: [
     Gerando uma semente.
   ],
@@ -413,7 +413,7 @@ Neste experimento, busca-se recriar cristais de sal utilizando princípios apren
  <fig:crystal3>
 
  #figure(
-  image("salt4.jpg", width: 100%),
+  image("salt4.jpg", width: 60%),
   caption: [
     Sementes formadas.
   ],
@@ -421,7 +421,7 @@ Neste experimento, busca-se recriar cristais de sal utilizando princípios apren
  <fig:crystal4>
 
   #figure(
-  image("salt5.jpg", width: 100%),
+  image("salt5.jpg", width: 60%),
   caption: [
     Gerando cristais a partir das sementes.
   ],
@@ -429,7 +429,7 @@ Neste experimento, busca-se recriar cristais de sal utilizando princípios apren
  <fig:crystal5>
 
  #figure(
-  image("salt6.jpg", width: 100%),
+  image("salt6.jpg", width: 60%),
   caption: [
     Cristais formados.
   ],
@@ -477,7 +477,7 @@ Neste experimento, busca-se recriar cristais de sal utilizando princípios apren
 == Lasers
 
   #figure(
-  image("lasers.png", width: 100%),
+  image("lasers.png", width: 60%),
   caption: [
     Láseres são outro exemplo que utilizam propriedades de cristais para serem fabricados.
   ],
