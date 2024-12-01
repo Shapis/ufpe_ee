@@ -216,8 +216,6 @@ Os cristais podem ser classificados com base em sua simetria:
 
 #fonte[@callister]
 
-#fonte[@yt_aula12]
-
 == Propriedades Associadas à Simetria
 
 1. *Anisotropia*: Propriedades variam com a direção.
@@ -229,6 +227,8 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
 #fonte[@callister]
 
 #fonte[@yt_aula12]
+
+#fonte[@steve]
 
 == Pontos Cristalográficos
 
@@ -331,10 +331,54 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
 )
  <fig:policristais3>
 
+== Piezoeletricidade
+
+             #figure(
+  image("piezo1.png", width: 50%),
+)
+ <fig:piezo1>
+
+              #figure(
+  image("piezo2.png", width: 50%),
+)
+ <fig:piezo2>
+
+              #figure(
+  image("piezo3.png", width: 60%),
+)
+ <fig:piezo3>
+
+               #figure(
+  image("piezo4.png", width: 45%),
+)
+ <fig:piezo3>
+
+
+               #figure(
+  image("piezo5.png", width: 45%),
+)
+ <fig:piezo5>
+
+                #figure(
+  image("piezo6.png", width: 45%),
+)
+ <fig:piezo6>
+
+                 #figure(
+  image("piezo7.png", width: 45%),
+)
+ <fig:piezo7>
+
+
+
 
 = Manufatura
 
 == Criando Um Cristal de Sal
+
+Neste experimento, busca-se recriar cristais de sal utilizando princípios aprendidos, com materiais facilmente encontrados em casa. O objetivo é demonstrar como fatores como temperatura, concentração e tempo influenciam a cristalização, permitindo uma compreensão prática do processo de formação de cristais.
+
+#fonte[@crystalverse]
 
   #figure(
   image("salt_crystal.jpg", width: 100%),
@@ -394,16 +438,30 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
 
  = Normas
 
-== Códigos das Normas
+    == ISO 9001:2015
 
     - ISO 9001:2015 (Gestão da Qualidade)
     Um padrão internacional que define requisitos para a implementação de um sistema de gestão da qualidade eficaz. Ele é usado para garantir consistência, melhorar processos e aumentar a satisfação do cliente em organizações de diversos setores.
 
+     #fonte[@iso9001]
+
+     ==  ASTM E1941-18
+
     - ASTM E1941-18 (Guias para Materiais Cristalinos)
     Um guia técnico publicado pela ASTM que aborda práticas e métodos padronizados para a caracterização de materiais cristalinos. Inclui recomendações para medições, análises e validação de propriedades cristalográficas.
 
+    #fonte[@astm]
+
+    == ISO 17274:2016
+
     - ISO 17274:2016 (Determinando a Estrutura Cristalina)
     Especifica métodos para determinar a estrutura cristalina de materiais utilizando técnicas como difração de raios X. É aplicado na análise de materiais para fins de pesquisa e controle de qualidade.
+
+    #fonte[@iso17274]
+
+ 
+
+  
 
  = Aplicações
 
@@ -434,6 +492,7 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
   ],
 )
  <fig:crystal6>
+ 
 
  = Bibliografia
 
