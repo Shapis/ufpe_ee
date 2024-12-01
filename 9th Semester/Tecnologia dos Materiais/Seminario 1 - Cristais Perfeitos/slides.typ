@@ -6,9 +6,8 @@
 #show: slides.with(
   title: "Cristal Ideal e Propriedades Cristalinas",
   subtitle: "Tecnologia dos Materiais 2024.2",
-  date: "27.11.2024",
-  authors: ("Henrique da Silva"),
-  
+  date: "01.12.2024",
+  authors: ("Aluno: Henrique Pedro da Silva\nProfessor: Edval J. P. Santos, PhD\nRepositório: https://github.com/shapis/ufpe_ee/"),
   ratio: 16/9,
   layout: "medium",
   title-color: blue.darken(60%),
@@ -27,7 +26,6 @@
   )
 }
 
-#set quote(block: true)
 #set align(start + horizon)
 
 = Contexto Histórico 
@@ -35,7 +33,10 @@
 == Johannes Kepler
 
 #quote(attribution: [Kepler, 1611])[
-  Each single plant has a single animating principle of its own, since each instance of a plant exists separately, and there is no cause to wonder that each should be equipped with its own peculiar shape. But to imagine an individual soul for each and any starlet of snow is utterly absurd, and therefore the shapes of snowflakes are by no means to be deduced from the operation of soul in the same way as with plants.
+  Each single plant has a single animating principle of its own, since each instance of a pl"medium",
+  title-color: blue.darken(60%),
+  toc: true,
+  count: false,urd, and therefore the shapes of snowflakes are by no means to be deduced from the operation of soul in the same way as with plants.
 ]
 
 #fonte[@kepler]
@@ -108,10 +109,12 @@ Exemplos de redes:
 
 #fonte[@callister]
 
+#fonte[@yt_aula10]
+
 == Modelo de esfera rígida e célula unitária
 
 #figure(
-  image("modelo_esfera_rigida.png", width: 80%),
+  image("modelo_esfera_rigida.png", width: 100%),
   caption: [
     Modelo de esfera rígida e célula unitária.
   ],
@@ -122,7 +125,7 @@ Exemplos de redes:
 == Cubica de Faces Centradas (CFC)
  
 #figure(
-  image("cfc1.png", width: 80%),
+  image("cfc1.png", width: 100%),
   caption: [
     Cálculo de parâmetro de rede CFC.
   ],
@@ -130,7 +133,7 @@ Exemplos de redes:
  <fig:cfc1>
 
  #figure(
-  image("cfc2.png", width: 80%),
+  image("cfc2.png", width: 100%),
   caption: [
     Cálculo de número de átomos, FEA e número de coordenação.
   ],
@@ -140,7 +143,7 @@ Exemplos de redes:
  == Cúbica de Corpo Centrado. (CCC)
 
  #figure(
-  image("ccc1.png", width: 80%),
+  image("ccc1.png", width: 100%),
   caption: [
     Cálculo de parâmetro de rede CCC.
   ],
@@ -148,7 +151,7 @@ Exemplos de redes:
  <fig:ccc1>
 
  #figure(
-  image("ccc2.png", width: 80%),
+  image("ccc2.png", width: 100%),
   caption: [
     Cálculo de parâmetro de rede CCC.
   ],
@@ -156,7 +159,7 @@ Exemplos de redes:
  <fig:ccc2>
 
  #figure(
-  image("ccc3.png", width: 80%),
+  image("ccc3.png", width: 100%),
   caption: [
     Cálculo de número de átomos, FEA e número de coordenação.
   ],
@@ -173,11 +176,39 @@ Exemplos de redes:
 )
  <fig:ccc1>
 
+
+  #figure(
+  image("massa_especifica1.png", width: 100%),
+  caption: [
+    Cálculo da massa específica.
+  ],
+)
+ <fig:massa_especifica1>
+
+   #figure(
+  image("massa_especifica2.png", width: 100%),
+  caption: [
+    Cálculo da massa específica do cobre.
+  ],
+)
+ <fig:massa_especifica2>
+
+   #figure(
+  image("massa_especifica3.png", width: 100%),
+  caption: [
+    Cálculo da massa específica do cobre.
+  ],
+)
+ <fig:massa_especifica3>
+
+
 == Propriedades do Arranjo
 
 - *Regularidade no espaço tridimensional*  
 - *Definem propriedades mecânicas, ópticas e térmicas do material*  
 - *Influenciam a densidade do material*
+
+#fonte[@callister]
 
 = Simetrias do Cristal
 
@@ -187,7 +218,10 @@ Os cristais podem ser classificados com base em sua simetria:
 - *Grupos pontuais*: Rotação, reflexão e inversão.  
 - *Grupos espaciais*: Combinação de translações e simetrias pontuais.
 
-*Exemplo:* Grupo cúbico possui simetrias rotacionais de 90°.
+
+#fonte[@callister]
+
+#fonte[@yt_aula12]
 
 == Propriedades Associadas à Simetria
 
@@ -197,12 +231,118 @@ Os cristais podem ser classificados com base em sua simetria:
 
 O conhecimento das simetrias ajuda a prever propriedades físicas e químicas dos cristais.
 
+#fonte[@callister]
+
+#fonte[@yt_aula12]
+
+== Pontos Cristalográficos
+
+   #figure(
+  image("pontos_cristalograficos1.png", width: 100%),
+)
+ <fig:pontos_cristalograficos1>
+
+    #figure(
+  image("pontos_cristalograficos2.png", width: 100%),
+)
+ <fig:pontos_cristalograficos2>
+
+     #figure(
+  image("pontos_cristalograficos3.png", width: 100%),
+)
+ <fig:pontos_cristalograficos3>
+
+      #figure(
+  image("pontos_cristalograficos4.png", width: 100%),
+)
+ <fig:pontos_cristalograficos4>
+
+       #figure(
+  image("pontos_cristalograficos5.png", width: 100%),
+)
+ <fig:pontos_cristalograficos5>
+
+ == Direções Cristalográficas.
+
+        #figure(
+  image("direcoes_cristalograficas1.png", width: 100%),
+)
+ <fig:direcoes_cristalograficas1>
+
+         #figure(
+  image("direcoes_cristalograficas2.png", width: 100%),
+)
+ <fig:direcoes_cristalograficas2>
+
+        #figure(
+  image("direcoes_cristalograficas3.png", width: 100%),
+)
+ <fig:direcoes_cristalograficas3>
+
+== Planos Cristalográficos
+
+        #figure(
+  image("planos_cristalograficos1.png", width: 100%),
+)
+ <fig:planos_cristalograficos1>
+
+         #figure(
+  image("planos_cristalograficos2.png", width: 100%),
+)
+ <fig:planos_cristalograficos2>
+
+         #figure(
+  image("planos_cristalograficos3.png", width: 100%),
+)
+ <fig:planos_cristalograficos3>
+
+         #figure(
+  image("planos_cristalograficos4.png", width: 100%),
+)
+ <fig:planos_cristalograficos4>
+
+ == Densidade Linear e Planar
+
+         #figure(
+  image("densidade1.png", width: 100%),
+)
+ <fig:densidade1>
+
+          #figure(
+  image("densidade2.png", width: 100%),
+)
+ <fig:densidade2>
+
+
+          #figure(
+  image("densidade3.png", width: 100%),
+)
+ <fig:densidade3>
+
+== Policristais
+
+          #figure(
+  image("policristais1.png", width: 100%),
+)
+ <fig:policristais1>
+
+           #figure(
+  image("policristais2.png", width: 100%),
+)
+ <fig:policristais2>
+
+            #figure(
+  image("policristais3.png", width: 100%),
+)
+ <fig:policristais3>
+
+
 = Manufatura
 
 == Criando Um Cristal de Sal
 
   #figure(
-  image("salt_crystal.jpg", width: 80%),
+  image("salt_crystal.jpg", width: 100%),
   caption: [
     Cristal de cloreto de sódio.
   ],
@@ -210,7 +350,7 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
  <fig:crystal0>
 
    #figure(
-  image("salt1.jpg", width: 80%),
+  image("salt1.jpg", width: 100%),
   caption: [
     Criando a solução.
   ],
@@ -218,7 +358,7 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
  <fig:crystal1>
 
     #figure(
-  image("salt2.jpg", width: 80%),
+  image("salt2.jpg", width: 100%),
   caption: [
     Solução criada.
   ],
@@ -226,7 +366,7 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
  <fig:crystal2>
 
      #figure(
-  image("salt3.jpg", width: 80%),
+  image("salt3.jpg", width: 100%),
   caption: [
     Gerando uma semente.
   ],
@@ -234,7 +374,7 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
  <fig:crystal3>
 
  #figure(
-  image("salt4.jpg", width: 80%),
+  image("salt4.jpg", width: 100%),
   caption: [
     Sementes formadas.
   ],
@@ -242,7 +382,7 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
  <fig:crystal4>
 
   #figure(
-  image("salt5.jpg", width: 80%),
+  image("salt5.jpg", width: 100%),
   caption: [
     Gerando cristais a partir das sementes.
   ],
@@ -250,7 +390,7 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
  <fig:crystal5>
 
  #figure(
-  image("salt6.jpg", width: 80%),
+  image("salt6.jpg", width: 100%),
   caption: [
     Cristais formados.
   ],
@@ -275,7 +415,7 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
  == Marcapasso
 
   #figure(
-  image("marcapasso.jpg", width: 80%),
+  image("marcapasso.jpg", width: 100%),
   caption: [
     Utiliza-se a propriedade da piezoeletricidade na manufatura de marcapassos. 
   ],
@@ -284,7 +424,7 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
 == Lasers
 
   #figure(
-  image("lasers.png", width: 80%),
+  image("lasers.png", width: 100%),
   caption: [
     Láseres são outro exemplo que utilizam propriedades de cristais para serem fabricados.
   ],
@@ -293,7 +433,7 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
  == Semicondutores
 
  #figure(
-  image("silicon_doping.svg", width: 80%),
+  image("silicon_doping.svg", width: 100%),
   caption: [
     Exemplo de dopagem de semicondutores.
   ],
