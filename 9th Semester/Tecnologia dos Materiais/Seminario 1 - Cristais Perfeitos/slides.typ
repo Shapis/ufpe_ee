@@ -6,7 +6,7 @@
 #show: slides.with(
   title: "Cristal Ideal e Propriedades Cristalinas",
   subtitle: "Tecnologia dos Materiais 2024.2",
-  date: "01.12.2024",
+  date: "04.12.2024",
   authors: ("Aluno: Henrique Pedro da Silva\nProfessor: Edval J. P. Santos, PhD\nRepositório: https://github.com/shapis/ufpe_ee/"),
   ratio: 16/9,
   layout: "medium",
@@ -130,7 +130,7 @@ Exemplos de redes:
  #figure(
   image("cfc2.png", width: 100%),
   caption: [
-    Cálculo de número de átomos, FEA e número de coordenação.
+    Cálculo de número de átomos, FEA = 0.74 e número de coordenação = 12.
   ],
 )
  <fig:cfc2>
@@ -171,6 +171,8 @@ Exemplos de redes:
 )
  <fig:ccc1>
 
+
+== Massa Específica
 
   #figure(
   image("massa_especifica1.png", width: 100%),
@@ -215,6 +217,10 @@ Os cristais podem ser classificados com base em sua simetria:
 
 
 #fonte[@callister]
+
+#fonte[@yt_aula12]
+
+#fonte[@steve]
 
 == Propriedades Associadas à Simetria
 
@@ -334,38 +340,55 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
 == Piezoeletricidade
 
              #figure(
-  image("piezo1.png", width: 50%),
+  image("piezo1.png", width: 45%),
+    caption: [
+    Representação molecular de Óxido de Silício com simetria sendo demonstrada.
+  ],
 )
  <fig:piezo1>
 
               #figure(
-  image("piezo2.png", width: 50%),
+  image("piezo2.png", width: 45%),
+    caption: [
+    Representação molecular de Óxido de Silício com simetria sendo demonstrada.
+  ],
 )
  <fig:piezo2>
 
               #figure(
-  image("piezo3.png", width: 60%),
+  image("piezo3.png", width: 45%),
+    caption: [
+    Representação molecular de Óxido de Silício (Quartzo) com simetria hexagonal demonstrada.
+  ],
 )
  <fig:piezo3>
 
                #figure(
   image("piezo4.png", width: 45%),
+    caption: [
+Latas representando os átomos de oxigênio e silício e sua simetria hexagonal no óxido de silício.  ],
 )
  <fig:piezo3>
 
 
                #figure(
   image("piezo5.png", width: 45%),
+    caption: [
+Representação do centro de carga positiva da estrutura.  ],
 )
  <fig:piezo5>
 
                 #figure(
   image("piezo6.png", width: 45%),
+    caption: [
+Representação do centro de carga positiva deslocado da estrutura comprimida.  ],
 )
  <fig:piezo6>
 
                  #figure(
   image("piezo7.png", width: 45%),
+    caption: [
+Estrutura com oxigênio e silício que não haveria deslocamento de carga por compressão.],
 )
  <fig:piezo7>
 
@@ -376,7 +399,7 @@ O conhecimento das simetrias ajuda a prever propriedades físicas e químicas do
 
 == Criando Um Cristal de Sal
 
-Neste experimento, busca-se recriar cristais de sal utilizando princípios aprendidos, com materiais facilmente encontrados em casa. O objetivo é demonstrar como fatores como temperatura, concentração e tempo influenciam a cristalização, permitindo uma compreensão prática do processo de formação de cristais.
+Neste experimento, busca-se recriar cristais de sal, com materiais facilmente encontrados em casa. O objetivo é demonstrar como fatores como temperatura, concentração e tempo influenciam a cristalização, permitindo uma compreensão prática do processo de formação de cristais.
 
 #fonte[@crystalverse]
 
@@ -408,14 +431,6 @@ Neste experimento, busca-se recriar cristais de sal utilizando princípios apren
   image("salt3.jpg", width: 60%),
   caption: [
     Gerando uma semente.
-  ],
-)
- <fig:crystal3>
-
- #figure(
-  image("salt4.jpg", width: 60%),
-  caption: [
-    Sementes formadas.
   ],
 )
  <fig:crystal4>
