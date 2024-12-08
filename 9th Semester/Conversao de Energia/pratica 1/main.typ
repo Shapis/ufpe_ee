@@ -65,7 +65,7 @@ Valores simulação:
 
 No cenário em que a carga é máxima, a corrente no regulador é de 1A, valor limite do componente, portanto, torna-se necessário o uso de dissipador.
 
-== Valor de ondulação de tensão em C1 e C2 de modo que o valor mínimo da tensão de ondulação esteja acima do valor mínimo determinado no item anterior. Para isso, considere que a carga na saída do circuito é máxima. Calcule as capacitâncias desses componentes
+== Valor de ondulação de tensão em C1 e C2
 
 $ "Ripple Rejection = 56dB" \ 
 "Ripple_in" = 0.0015 * 10 ^ { 2.8} = 94.64% $
@@ -125,11 +125,29 @@ I_"D,pico" approx  14.68 A $
 
 == Simulação do circuito em LTSpice
 
+#figure(
+  image("images/simulacao.jpeg", width: 100%),
+  caption: [
+    Circuito a ser simulado em LTSpice.
+  ],
+)
+ <fig:simulacao>
+
 
 
 = Medições em Laboratório
 
 Na etapa de medição experimental, serão realizados testes práticos no circuito para avaliar seu desempenho em condições reais de operação. Utilizando instrumentos de medição como multímetros e osciloscópios, serão verificadas grandezas como tensões, correntes e formas de onda em pontos específicos do circuito. Essas medições permitirão obter uma visão detalhada do comportamento do sistema e dos parâmetros que influenciam sua performance, garantindo uma análise consistente de seu funcionamento prático.  
+
+#figure(
+  image("images/foto_circuito.jpeg", width: 100%),
+  caption: [
+    Foto do circuito montado em laboratório
+  ],
+)
+ <fig:foto_do_circuito>
+
+
 
 == Tabela de componentes
 
