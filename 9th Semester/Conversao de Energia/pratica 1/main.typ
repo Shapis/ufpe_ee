@@ -9,7 +9,6 @@
   authors: (
     "Bruno França Guimarães",
     "Henrique Pedro da Silva",
-
   ),
   school-logo: image("images/Brasao_da_UFPE.png"), // Replace with [] to remove the school logo
   // company-logo: image("images/company.svg"),

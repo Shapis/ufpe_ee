@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "AAuYh4LOaok=",
+  "success": true,
+  "projectFilePath": "/home/hpsilva/Documents/ufpe_ee/6th semester/Servomecanismos/Projeto Carro/Servocarro.csproj",
+  "expectedPackageFiles": [
+    "/home/hpsilva/.nuget/packages/godot.sourcegenerators/4.1.1/godot.sourcegenerators.4.1.1.nupkg.sha512",
+    "/home/hpsilva/.nuget/packages/godotsharp/4.1.1/godotsharp.4.1.1.nupkg.sha512",
+    "/home/hpsilva/.nuget/packages/godotsharpeditor/4.1.1/godotsharpeditor.4.1.1.nupkg.sha512",
+    "/home/hpsilva/.nuget/packages/microsoft.netcore.app.ref/6.0.36/microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "/home/hpsilva/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}
