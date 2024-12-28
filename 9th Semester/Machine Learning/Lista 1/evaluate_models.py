@@ -1,4 +1,3 @@
-import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
@@ -27,7 +26,6 @@ def evaluate_models(data):
 
     # Calculate the accuracy of the model
     accuracy = accuracy_score(y_test, y_pred)
-    print(f"Accuracy: {accuracy:.2f}")
 
     # Add a column of ones to the feature matrix for the intercept term
     X_train_b = np.c_[np.ones((X_train.shape[0], 1)), X_train]
