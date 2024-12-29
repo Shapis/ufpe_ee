@@ -131,7 +131,7 @@ Os resultados obtidos das métricas de acurácia e MSE para o classificador baye
 
 #set align(start + top)
 
-=== Matriz Confusão:
+=== Matriz Confusão
 $ mat(
   204, 3;
   0, 193;

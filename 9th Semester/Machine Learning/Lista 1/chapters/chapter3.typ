@@ -62,7 +62,7 @@ Os resultados obtidos das métricas de acurácia e MSE para o classificador do m
 
 #set align(start + top)
 
-=== Matriz Confusão:
+=== Matriz confusão
 $ mat(
   204, 3;
   0, 193;
