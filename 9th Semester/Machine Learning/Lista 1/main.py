@@ -1,53 +1,38 @@
 import pandas as pd
 import naive_bayes_classifier as nbc
 from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import GaussianNB
-from sklearn.metrics import accuracy_score
-import numpy as np
-from sklearn.metrics import confusion_matrix
+import model_evaluator as me
+import least_squares as ls
 
-
-# Replace 'your_file.csv' with the path to your CSV file
+# Substitua 'your_file.csv' pelo caminho do seu arquivo CSV
 file_path = "dataset_ml20241212.csv"
 
-# Read the CSV file
+# Lê o arquivo CSV e carrega os dados
 data = pd.read_csv(file_path)
 
-# Display the first few rows of the dataframe
-# print(data.head())
-
-# Call the function with the data
-# ! Criado para ter um padrao de comparacao.
-# em.evaluate_models(data)
-
-# Example usage:
-
-# Assuming the last column is the target variable
+# Separa as variáveis independentes (x) e a variável dependente (y)
 x = data.iloc[:, :-1].values
 y = data.iloc[:, -1].values
 
-# Split the data into training and testing sets
+# Divide os dados em conjuntos de treinamento (80%) e teste (20%)
 x_train, x_test, y_train, y_test = train_test_split(
     x, y, test_size=0.2, random_state=42
 )
 
+# Treina o classificador Bayes
 classificador_bayes = nbc.NaiveBayesClassifier()
 classificador_bayes.fit(x_train, y_train)
-y_prediction = classificador_bayes.predict(x_test)
+y_prediction_bayes = classificador_bayes.predict(x_test)
 
-# Calculate the accuracy of the model
-accuracy = accuracy_score(y_test, y_prediction)
-print(f"Accuracy: {accuracy:.2f}")
+# Avalia o desempenho do classificador Bayes
+model_eval_bayes = me.ModelEvaluator(y_test, y_prediction_bayes)
+bayes_results = model_eval_bayes.evaluate_model("Bayes")
 
-# Calculate the mean squared error (MSE)
-mse = np.mean((y_test - y_prediction) ** 2)
-print(f"Mean Squared Error: {mse:.2f}")
+# Treina o modelo de Mínimos Quadrados
+classificador_least_squares = ls.LeastSquares()
+classificador_least_squares.fit(x_train, y_train)
+y_prediction_ls = classificador_least_squares.predict(x_test)
 
-# Calculate the standard deviation of the prediction errors
-std_dev = np.std(y_test - y_prediction)
-print(f"Standard Deviation: {std_dev:.2f}")
-
-# Calculate the confusion matrix
-conf_matrix = confusion_matrix(y_test, y_prediction)
-print("Confusion Matrix:")
-print(conf_matrix)
+# Avalia o desempenho do modelo de Mínimos Quadrados
+model_eval_ls = me.ModelEvaluator(y_test, y_prediction_ls)
+ls_results = model_eval_ls.evaluate_model("Minimos Quadrados")
