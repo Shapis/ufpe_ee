@@ -144,10 +144,96 @@ Controle na fonte eh proativo, no meio eh defensivo, no trabalhador eh *--alguma
 == Controle no trabalhador
 
 - Higiene e seguranca pessoal
-- Equipamentos pessois, EPIs.
-
-#pagebreak()
+- Equipamentos pessoais, EPIs.
 
 
+= Gases pressurizados
 
+Perigo Oxigenio > Hidrogenio
+
+Os tanques precisam de capacete de protecao e eles precisam estar amarrados.
+
+Neste contexto toxico e venonoso sao sinonimos.
+
+= Primeiros socorros
+
+O mais importante eh a sua propria seguranca.
+
+= Normas Regulamentadoras (NR)
+
+
+SMT: Finalizade fiscalizar, pode multar, notificar, embargar obra.
+
+== NR 3 - Embargo ou interdicao
+
+Embargo eh so para obra. 
+
+Interdicao eh para a empresa ou um equipamento ou setor.
+
+= NR4 SESMT
+
+Todas normas tem objetivo de assegurar a seguranca do trabalhador
+
+SESMT nao eh obrigatorio, depende do grau de risco e numero de funcionarios.
+
+= NR5 Comissao interna de prevencao de acidentes CIPA
+
+Promover e preservar a seguranca e saude do trabalhador.
+
+Eh uma comicao composta por funcionarios leigos.
+
+Nem toda empresa precisa ter CIPA, depende do numero de funcionarios e grau de risco.
+
+= NR6 EPI
+
+Equipamentos de protecao individual.
+
+Necessita de certificado de aprovacao pelo MTE
+
+A recomendacao do epi deve ser feita por ordem de prioridade SESMT > CIPA > EMPREGADOR.
+
+= NR7 PCMSO Programa de controle medio de saude ocupacional.
+
+Toda empresa eh obrigada a ter PCMSO 
+
+Promocao de saude. ex. capanhas de vacinacao, anti-tabagismo etc.
+
+= NR8 Edificacoes
+
+
+= NR9 PPRA Programa de prevencao de riscos ambientais
+
+Toda empresa precisa ter PPRA.
+
+Planejamento anual com metas e prioridades.
+
+= IR0
+
+Tudo que faco deve ser regido por normas
+
+== Analise de Risco
+
+Em geral quem trabalha com eletricidade se acidenta com riscos nao eletricos. Como transporte, riscos mecanicos. etc.
+
+== Medidas de Controle - Protecao Coletiva
+
+Prioridade: Desenergizacao eletrica ou tenao segura.
+
+Isolacao de partes vivas, barreiras, sinalizacao.
+
+Bloqueio de religamento automatico
+
+Aterramento.
+
+== Medidas de Controle - Protecao Individual
+
+EPIs: Capacete, luvas, oculos, protetor auricular, cinto de seguranca, protetor facial, etc.
+
+= NR11 Transporte, movimentacao, armazenagem e manuseio de materiais
+
+= NR12 Maquinas e Equipamentos
+
+A atividade que mais mutila trabalhadores eh trabalhos envolvendo maquinas.
+
+Delimitacao, piso limpo, ligada so com operador  no local, disancia minima entre maquinas 0.6 metros.
 
