@@ -6,7 +6,7 @@
 #show: slides.with(
   title: "Condutividade elétrica e potencial eletroquímico.",
   subtitle: "Tecnologia dos Materiais 2024.2",
-  date: "20.02.2025",
+  date: "07.03.2025",
   authors: ("Aluno: Henrique Pedro da Silva\nProfessor: Edval J. P. Santos, PhD\nRepositório: https://github.com/shapis/ufpe_ee/"),
   ratio: 16/9,
   layout: "medium",
