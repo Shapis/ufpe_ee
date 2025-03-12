@@ -9,21 +9,7 @@
   set page(
     numbering: "1",
     number-align: center,
-    footer: locate(loc => {
-      // Omit page number on the first page
-      let page-number = counter(page).at(loc).at(0);
-      if page-number > 1 {
-        line(length: 100%, stroke: 0.5pt)
-        v(-2pt)
-        text(size: 12pt, weight: "regular")[
-          #footer-text
-          #h(1fr)
-          #page-number
-          #h(1fr)
-          #academic-year
-        ]
-      }
-    })
+    
   )
   set text(font: "Linux Libertine", lang: "pt", size: 13pt)
   set heading(numbering: "1.1")
@@ -149,7 +135,7 @@
   pagebreak()
 
   // Table of contents.
-  outline(depth: 3, indent: true)
+ 
 
   // pagebreak()
 

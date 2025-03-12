@@ -237,3 +237,44 @@ A atividade que mais mutila trabalhadores eh trabalhos envolvendo maquinas.
 
 Delimitacao, piso limpo, ligada so com operador  no local, disancia minima entre maquinas 0.6 metros.
 
+= NR 13 Caldeiras e vasos de pressurizados
+
+Caldeiras sao maquinas para produzir vapor.
+
+O que define a categoria da caldeira eh o volume e a pressao. PV
+
+1kf/cm^2 aproximadamente 1 bar aprox 1 atm.
+
+Categoria A > B > C
+
+A agua eh liquida incompreensivel, entao nao explode.
+
+P em kilopascal e  V em metro cubico.
+
+A NR de vasos de pressao nao se aplica a cilindros transportaveis, destinados a ocupacao humana camara de combustao ou vazos que facam parte integrantes de maquinas e dutos e tubulacoes para conducao de fluidos.
+
+== Prevencao em caldeirs e vasos de pressao
+
+Precisa de manometro, valvula de alivio seguranca, controle de nivel de agua dentro dos tubos, ou seja um injetor de agua indepedente.
+
+Pressao maxima de trabalho admissivel PMTA.
+
+Central de gas precisa estar isolada.
+
+= NR 14 Fornos
+
+Sistema que detecta a chama no lado do Fornos
+
+A seguranca no forno eh feita controlando o nivel de agua.
+
+= NR 15 Atividades e operacoes insalubres
+
+Grupo 1 com laudo tecnico de seguranca por eng de seguranca ou medico trabalho.
+
+Grupo 2 com laudo tecnico.
+
+Benzeno eh cancerigeno e tem na gasolina.
+
+= NR 16 Atividades e operacoes perigosas
+
+liquidos inflamavel ponto de fulgor < 60C

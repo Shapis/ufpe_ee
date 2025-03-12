@@ -6,7 +6,7 @@
 #show: slides.with(
   title: "Fotocondutividade",
   subtitle: "Tecnologia dos Materiais 2024.2",
-  date: "08.03.2025",
+  date: "12.03.2025",
   authors: ("Aluno: Henrique Pedro da Silva\nProfessor: Edval J. P. Santos, PhD\nRepositório: https://github.com/shapis/ufpe_ee/"),
   ratio: 16/9,
   layout: "medium",
@@ -156,11 +156,138 @@ A descoberta de Smith também motivou estudos sobre os semicondutores, levando a
 
 = Formalismo Matemático
 
-== Equacoeess
+== Considerações Iniciais
 
-alguma considerada
+Semicondutores possuem uma estrutura de bandas eletrônicas definida pelas propriedades cristalinas. A distribuição de energia dos elétrons é regida pelo nível de Fermi e a temperatura. A zero absoluto, todos os elétrons estão abaixo do nível de Fermi; em temperaturas maiores, seguem a distribuição de Fermi-Dirac.
 
-#fonte[@willoughby]
+#fonte[@wikicarriergen]
+
+== Distribuição de Fermi-Dirac
+
+#figure(
+  image("fermi-dirac.png", width: 40%),
+  caption: [
+    Para um sistema de férmions idênticos em equilíbrio termodinâmico, o número médio de férmions em um estado de partícula única ii é dado pela distribuição de Fermi-Dirac (F-D). Onde $k_B$​ é a constante de Boltzmann, T é a temperatura absoluta, $ε_i$​ é a energia do estado de partícula única i e μ é o potencial químico total.
+  ],
+)
+
+#fonte[@wikicarriergen]
+ 
+ == Semicondutores Intrínsecos
+
+ Em semicondutores não dopados, o nível de Fermi fica na lacuna entre a banda de valência (quase cheia) e a banda de condução (quase vazia). Elétrons na banda de valência não são móveis, impedindo a condução elétrica.
+
+ #fonte[@wikicarriergen]
+
+== Geração de portadores
+
+ Se um elétron ganha energia suficiente, ele salta para a banda de condução, deixando uma lacuna que age como uma partícula carregada. A geração de portadores ocorre quando elétrons sobem de banda, e a recombinação acontece quando retornam, preenchendo lacunas.
+
+ #fonte[@wikicarriergen]
+
+== Relação entre geração e recombinação
+
+Geração e recombinação ocorrem constantemente em semicondutores, tanto opticamente quanto termicamente. Em equilíbrio térmico, ambas se equilibram, mantendo a densidade de portadores constante. A ocupação dos estados de energia segue a estatística de Fermi-Dirac.
+
+ #fonte[@wikicarriergen]
+
+== Relação entre geração e recombinação
+
+Geração e recombinação ocorrem constantemente em semicondutores, tanto opticamente quanto termicamente. Em equilíbrio térmico, ambas se equilibram, mantendo a densidade de portadores constante. A ocupação dos estados de energia segue a estatística de Fermi-Dirac.
+
+== O equilíbrio tende a ser mantido
+
+O produto das densidades de elétrons e lacunas (n e p) é uma constante em equilíbrio($n_o p_o = n_i^2$​), mantida pela recombinação e geração em taxas iguais. Quando há um excesso de portadores ($n p > n_i^2$​), a taxa de recombinação supera a de geração, retornando o sistema ao equilíbrio. Da mesma forma, quando há um déficit de portadores ($n p < n_i^2$​), a geração excede a recombinação, restaurando o equilíbrio.
+
+ #fonte[@wikicarriergen]
+
+ == Geração de portadores
+
+ Quando a luz interage com um material, ela pode ser absorvida (gerando um par de portadores livres ou um éxiton) ou pode estimular um evento de recombinação. O fóton gerado tem propriedades semelhantes ao que causou o evento. A absorção é o processo ativo em fotodiodos, células solares e outros fotodetectores semicondutores, enquanto a emissão estimulada é o princípio de funcionamento dos diodos laser.
+
+Além da excitação por luz, portadores em semicondutores também podem ser gerados por um campo elétrico externo, como em LEDs e transistores.
+
+Quando a luz com energia suficiente atinge um semicondutor, ela pode excitar elétrons através da banda proibida, gerando portadores adicionais e reduzindo temporariamente a resistência elétrica do material. Esse aumento da condutividade na presença de luz é chamado fotocondutividade.  
+
+== Mecanismos de recombinação
+
+A recombinação de portadores pode ocorrer através de múltiplos canais de relaxação. Os principais são a recombinação de banda a banda, a recombinação assistida por armadilhas Shockley–Read–Hall (SRH), a recombinação Auger e a recombinação de superfície. 
+
+Esses canais de decaimento podem ser divididos em radiativos e não radiativos. Os não radiativos ocorrem quando a energia excessiva é convertida em calor pela emissão de fônons após o tempo de vida médio $tau_{n r}$.
+
+Nos radiativos, pelo menos parte da energia é liberada na forma de emissão de luz ou luminescência após um tempo de vida radiativo $tau_{n r}$.
+
+#fonte[@wikicarriergen]
+
+#figure(
+  image("recombinacao.png", width: 100%),
+  caption: [
+    O tempo de vida dos portadores $tau$ é obtido a partir da taxa de ambos os tipos de eventos.
+  ],
+)
+
+#fonte[@wikicarriergen]
+
+== Armadilha profunda ou radiativos
+
+A distinção entre armadilhas rasas e profundas é baseada na proximidade das armadilhas de elétrons à banda de condução e das lacunas à banda de valência. Armadilhas rasas têm uma diferença menor que a energia térmica $k_B T$, enquanto armadilhas profundas têm uma diferença maior. Armadilhas rasas são mais fáceis de esvaziar e, por isso, costumam ser menos prejudiciais ao desempenho de dispositivos optoeletrônicos.
+
+
+== Modelo SRH
+
+No modelo SRH, quatro coisas podem acontecer envolvendo níveis de armadilha:
+
+1. Um elétron na banda de condução pode ser aprisionado em um estado intrabanda.
+
+2. Um elétron pode ser emitido na banda de condução a partir de um nível de armadilha.
+
+3. Uma lacuna na banda de valência pode ser capturada por uma armadilha. Isso é análogo a uma armadilha preenchida liberando um elétron na banda de valência.
+    
+4. Uma lacuna capturada pode ser liberada na banda de valência, análoga à captura de um elétron da banda de valência.
+
+#fonte[@wikicarriergen]
+
+== Shockley–Read–Hall
+
+#figure(
+  image("shockley.png", width: 60%),
+  caption: [
+    Expressão de Shockley-Read-Hall para a recombinação assistida por armadilhas.
+  ],
+)
+
+#fonte[@wikicarriergen]
+
+== Recombinação Auger
+
+Na recombinação Auger, a energia é transferida para um terceiro portador, excitando-o a um nível de energia mais alto sem mudar de banda. Após a interação, esse portador normalmente perde energia em vibrações térmicas. Esse processo, que envolve três partículas, é significativo apenas em condições de não equilíbrio, quando a densidade de portadores é alta. O efeito Auger não é facilmente produzido, pois a terceira partícula deve iniciar o processo em um estado instável de alta energia.
+
+#fonte[@wikicarriergen]
+
+== Equação de recombinação Auger
+
+#figure(
+  image("shockley.png", width: 60%),
+  caption: [
+    O mecanismo que causa a queda da eficiência dos LEDs foi identificado em 2007 como recombinação Auger.
+  ],
+)
+
+
+
+#fonte[@wikicarriergen]
+
+== Recombinação de superfície
+
+A recombinação assistida por armadilhas na superfície de um semicondutor é chamada de recombinação de superfície, ocorrendo devido a ligações não saturadas. É caracterizada pela velocidade de recombinação superficial, que depende da densidade de defeitos. Em células solares, pode ser o principal mecanismo de recombinação. Para minimizá-la, utilizam-se camadas de material transparente com larga banda proibida e técnicas de passivação.
+
+#fonte[@wikicarriergen]
+
+== Recombinação Langevin
+
+A recombinação de superfície em semicondutores ocorre devido a ligações não saturadas e é caracterizada pela velocidade de recombinação superficial. Em células solares, pode ser o principal mecanismo de recombinação. Para minimizá-la, utilizam-se camadas transparentes com larga banda proibida e técnicas de passivação.
+
+#fonte[@wikicarriergen]
 
 = Manufatura
 
@@ -207,7 +334,7 @@ Os materiais semicondutores usados em LDRs são geralmente sulfeto de cádmio (C
 
 #fonte[@cds]
 
-== Diagrama do LDR
+== Diagrama do LDR (Light-Dependent Resistor)
 
 #figure(
   image("ScreenHunter49.png", width: 40%),
