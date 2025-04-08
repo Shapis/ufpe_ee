@@ -1,4 +1,29 @@
 #include <Arduino.h>
+#include <WiFi.h>
+#include <WiFiClientSecure.h>
+#include "soc/soc.h"
+#include "soc/rtc_cntl_reg.h"
+#include "esp_camera.h"
+#include <UniversalTelegramBot.h>
+#include <ArduinoJson.h>
+
+const char *ssid = "VIVO-102 2.4 GHz";
+const char *password = "semfio23";
+
+// Initialize Telegram BOT
+String BOTtoken = "8036201674:AAGkCYeghu842uG-X_wzfkckQti13OTQjNk"; // your Bot Token (Get from Botfather)
+
+// Use @myidbot to find out the chat ID of an individual or a group
+// Also note that you need to click "start" on a bot before it can
+// message you
+String CHAT_ID = "7823442679";
+
+WiFiClientSecure clientTCP;
+UniversalTelegramBot bot(BOTtoken, clientTCP);
+
+// Checks for new messages every 1 second.
+int botRequestDelay = 1000;
+unsigned long lastTimeBotRan;
 
 //**********************************************************************************
 /*
@@ -18,6 +43,22 @@ void setup()
 {
   Serial.begin(9600);
   pinMode(digitalPin, INPUT); // Digital pin 13 is set to input mode
+
+  // Connect to Wi-Fi
+  WiFi.mode(WIFI_STA);
+  Serial.println();
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+  WiFi.begin(ssid, password);
+  clientTCP.setCACert(TELEGRAM_CERTIFICATE_ROOT); // Add root certificate for api.telegram.org
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    Serial.print(".");
+    delay(500);
+  }
+  Serial.println();
+  Serial.print("IP Address: ");
+  Serial.println(WiFi.localIP());
 }
 
 // In loop()，the digitalRead()function is used to obtain the digital value,
@@ -30,17 +71,19 @@ void loop()
   int digitalVal = digitalRead(digitalPin); // Read digital signal;
   int adcVal = analogRead(PIN_ANALOG_IN);
   int dacVal = map(adcVal, 0, 4095, 0, 255);
-  double voltage =adcVal / 4095.0 * 3.3;
+  double voltage = adcVal / 4095.0 * 3.3;
   Serial.printf("digitalVal: %d, \t ADC Val: %d, \t DAC Val: %d, \t Voltage: %.2fV\n", digitalVal, adcVal, dacVal, voltage);
   if (digitalVal == 1)
   {
     Serial.println("  Normal");
+    bot.sendMessage(CHAT_ID, "Nivel Abaixo do Limite", "");
   }
   else
   {
     Serial.println("  Exceeding");
+    bot.sendMessage(CHAT_ID, "Nivel Acima do Limite", "");
   }
-  delay(100); // Delay time 100 ms
+  delay(1000); // Delay time 1000 ms
 }
 //**********************************************************************************
 
