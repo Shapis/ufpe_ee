@@ -22,7 +22,7 @@ sdr.center_freq = 99.1e6  # Hz
 sdr.gain = "auto"  # set gain to automatic
 
 # ...
-sdr.sample_rate = 2.4e6  # Hz
+sdr.sample_rate = 250e3  # Hz
 # ...
 
 fft_size = 512
