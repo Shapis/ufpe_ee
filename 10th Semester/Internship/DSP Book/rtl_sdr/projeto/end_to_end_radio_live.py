@@ -25,6 +25,8 @@ x = sdr.read_samples(
     fft_size * num_rows
 )  # get all the samples we need for the spectrogram
 
+print(x[0], len(x))
+
 # Add the following code right after the "Acquiring a Signal" section
 
 from scipy.io import wavfile

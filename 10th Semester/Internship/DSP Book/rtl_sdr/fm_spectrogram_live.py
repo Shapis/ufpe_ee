@@ -17,7 +17,7 @@ def maximize_plot():
 
 sdr = RtlSdr()
 
-sdr.center_freq = 99.1e6  # Hz
+sdr.center_freq = 99.9e6  # Hz
 
 sdr.gain = "auto"  # set gain to automatic
 
