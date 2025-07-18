@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 # Read in signal
 # x = np.fromfile("/home/hpsilva/Downloads/fm_rds_250k_1Msamples.iq", dtype=np.complex64)
 sample_rate = 250e3
-center_freq = 99.1e6
+center_freq = 97.0e6
+tempo_sample = 10  # seconds of samples to acquire
 
 sdr = RtlSdr()
 
@@ -19,7 +20,7 @@ sdr.sample_rate = sample_rate  # Hz
 # ...
 
 fft_size = 512
-num_rows = 5000
+num_rows = tempo_sample * 500
 x = sdr.read_samples(2048)  # get rid of initial empty samples
 x = sdr.read_samples(
     fft_size * num_rows
@@ -152,6 +153,9 @@ bits = (np.real(x) > 0).astype(int)  # 1's and 0's
 # Differential decoding, so that it doesn't matter whether our BPSK was 180 degrees rotated without us realizing it
 bits = (bits[1:] - bits[0:-1]) % 2
 bits = bits.astype(np.uint8)  # for decoder
+
+print(bits[:100])  # print first 100 bits
+
 
 # Constants
 syndrome = [383, 14, 303, 663, 748]
@@ -297,113 +301,3 @@ for i in range(len(bits)):
                     )
                 blocks_counter = 0
                 wrong_blocks_counter = 0
-
-                # Annex F of RBDS Standard Table F.1 (North America) and Table F.2 (Europe)
-#              Europe                   North America
-pty_table = [
-    ["Undefined", "Undefined"],
-    ["News", "News"],
-    ["Current Affairs", "Information"],
-    ["Information", "Sports"],
-    ["Sport", "Talk"],
-    ["Education", "Rock"],
-    ["Drama", "Classic Rock"],
-    ["Culture", "Adult Hits"],
-    ["Science", "Soft Rock"],
-    ["Varied", "Top 40"],
-    ["Pop Music", "Country"],
-    ["Rock Music", "Oldies"],
-    ["Easy Listening", "Soft"],
-    ["Light Classical", "Nostalgia"],
-    ["Serious Classical", "Jazz"],
-    ["Other Music", "Classical"],
-    ["Weather", "Rhythm & Blues"],
-    ["Finance", "Soft Rhythm & Blues"],
-    ["Children’s Programmes", "Language"],
-    ["Social Affairs", "Religious Music"],
-    ["Religion", "Religious Talk"],
-    ["Phone-In", "Personality"],
-    ["Travel", "Public"],
-    ["Leisure", "College"],
-    ["Jazz Music", "Spanish Talk"],
-    ["Country Music", "Spanish Music"],
-    ["National Music", "Hip Hop"],
-    ["Oldies Music", "Unassigned"],
-    ["Folk Music", "Unassigned"],
-    ["Documentary", "Weather"],
-    ["Alarm Test", "Emergency Test"],
-    ["Alarm", "Emergency"],
-]
-pty_locale = 1  # set to 0 for Europe which will use first column instead
-
-# page 72, Annex D, table D.2 in the standard
-coverage_area_codes = [
-    "Local",
-    "International",
-    "National",
-    "Supra-regional",
-    "Regional 1",
-    "Regional 2",
-    "Regional 3",
-    "Regional 4",
-    "Regional 5",
-    "Regional 6",
-    "Regional 7",
-    "Regional 8",
-    "Regional 9",
-    "Regional 10",
-    "Regional 11",
-    "Regional 12",
-]
-
-radiotext_AB_flag = 0
-radiotext = [" "] * 65
-first_time = True
-for group in bytes_out:
-    group_0 = group[1] | (group[0] << 8)
-    group_1 = group[3] | (group[2] << 8)
-    group_2 = group[5] | (group[4] << 8)
-    group_3 = group[7] | (group[6] << 8)
-
-    group_type = (
-        group_1 >> 12
-    ) & 0xF  # here is what each one means, e.g. RT is radiotext which is the only one we decode here: ["BASIC", "PIN/SL", "RT", "AID", "CT", "TDC", "IH", "RP", "TMC", "EWS", "___", "___", "___", "___", "EON", "___"]
-    AB = (group_1 >> 11) & 0x1  # b if 1, a if 0
-
-    # print("group_type:", group_type) # this is essentially message type, i only see type 0 and 2 in my recording
-    # print("AB:", AB)
-
-    program_identification = group_0  # "PI"
-
-    program_type = (group_1 >> 5) & 0x1F  # "PTY"
-    pty = pty_table[program_type][pty_locale]
-
-    pi_area_coverage = (program_identification >> 8) & 0xF
-    coverage_area = coverage_area_codes[pi_area_coverage]
-
-    pi_program_reference_number = program_identification & 0xFF  # just an int
-
-    if first_time:
-        print("PTY:", pty)
-        print("program:", pi_program_reference_number)
-        print("coverage_area:", coverage_area)
-        first_time = False
-
-    if group_type == 2:
-        # when the A/B flag is toggled, flush your current radiotext
-        if radiotext_AB_flag != ((group_1 >> 4) & 0x01):
-            radiotext = [" "] * 65
-        radiotext_AB_flag = (group_1 >> 4) & 0x01
-        text_segment_address_code = group_1 & 0x0F
-        if AB:
-            radiotext[text_segment_address_code * 2] = chr((group_3 >> 8) & 0xFF)
-            radiotext[text_segment_address_code * 2 + 1] = chr(group_3 & 0xFF)
-        else:
-            radiotext[text_segment_address_code * 4] = chr((group_2 >> 8) & 0xFF)
-            radiotext[text_segment_address_code * 4 + 1] = chr(group_2 & 0xFF)
-            radiotext[text_segment_address_code * 4 + 2] = chr((group_3 >> 8) & 0xFF)
-            radiotext[text_segment_address_code * 4 + 3] = chr(group_3 & 0xFF)
-        print("".join(radiotext))
-    else:
-        pass
-        # print("unsupported group_type:", group_type)
