@@ -1,4 +1,9 @@
 is_global = true
+build_property.GodotDisabledSourceGenerators = 
+build_property.GodotProjectDir = /home/hpsilva/Documents/ufpe_ee/6th semester/Servomecanismos/Projeto Carro/
+build_property.GodotProjectDirBase64 = L2hvbWUvaHBzaWx2YS9Eb2N1bWVudHMvdWZwZV9lZS82dGggc2VtZXN0ZXIvU2Vydm9tZWNhbmlzbW9zL1Byb2pldG8gQ2Fycm8v
+build_property.GodotSourceGenerators = 
+build_property.IsGodotToolsProject = 
 build_property.TargetFramework = net6.0
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v6.0
