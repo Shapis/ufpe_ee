@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Servocarro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d223419bfee7a6b7483c67fd1a5622454ba60047")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c099e1041ee6b730e3e1b4473da013b440bb8d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Servocarro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Servocarro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
